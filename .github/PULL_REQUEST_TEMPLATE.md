@@ -13,4 +13,4 @@ Describe the change and the reason for it.
 - [ ] I have reviewed `CONTRIBUTING.md`.
 - [ ] If this contains copyrighted code or documentation, the maintainer has confirmed that the contributor agreement requirements are satisfied **before merge**.
 
-> The CLA document in this starter is a draft. Do not presume that opening a pull request itself grants commercial sublicensing rights.
+> Before merge, the maintainer must verify a signed [Contributor License Agreement](../CONTRIBUTOR-LICENSE-AGREEMENT.md) when applicable. Opening a pull request does not itself grant commercial sublicensing rights.

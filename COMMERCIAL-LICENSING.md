@@ -19,9 +19,9 @@ A company's unrelated revenue does not alone transform genuinely separate noncom
 
 ## How to obtain permission
 
-Contact **[COMMERCIAL_CONTACT_EMAIL]** with:
+Start by opening a [public licensing inquiry](https://github.com/VincentChuWaiChow/CloudDialect/issues/new). Share **only non-confidential basic information** there. After initial contact, agree a separate private channel for the following contracting details:
 
-- Legal company name and product/service description.
+- Legal company name and non-confidential product/service description.
 - Whether the use is SaaS, on-prem distribution, mobile, API, OEM or consulting.
 - Customer/tenant scope and proposed deployment/redistribution model.
 - Expected annual product revenue and desired fee model, if available.
@@ -39,4 +39,7 @@ The commercial agreement must require credit to the Framework and its legal copy
 
 ## Template and authority
 
-[COMMERCIAL-AGREEMENT-DRAFT.md](COMMERCIAL-AGREEMENT-DRAFT.md) is a negotiation aid, **not an offer, a signed contract or a self-executing license**. Only an authorized representative of [LEGAL_COPYRIGHT_HOLDER] may approve grants.
+[COMMERCIAL-AGREEMENT-TEMPLATE.md](COMMERCIAL-AGREEMENT-TEMPLATE.md) is the standard form for negotiating terms; it is **not an offer, a signed contract or a self-executing license**. Only Vincent Chu Wai Chow or a duly authorized representative may execute commercial license grants.
+## Confidentiality
+
+GitHub issues are public. Do not post nonpublic revenue, contracts, customer lists, personal contact addresses or other sensitive information. The project does not publish the Licensor's personal email address.

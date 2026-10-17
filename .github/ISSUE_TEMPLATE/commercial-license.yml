@@ -1,0 +1,34 @@
+name: Commercial licensing inquiry
+description: Start a public inquiry about CloudDialect commercial licensing (no confidential information)
+title: "[Commercial Licensing] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This issue is public. Do not include an email address, nonpublic financial figures, contracts, personal information, customer information or other confidential details.** A private channel can be agreed with the maintainer later. Posting an issue does not authorize commercial use.
+  - type: input
+    id: organization
+    attributes:
+      label: Organization or project name (public)
+      placeholder: "Organization or project"
+    validations:
+      required: true
+  - type: dropdown
+    id: use
+    attributes:
+      label: Intended commercial use
+      options:
+        - SaaS / hosted product
+        - Application / API / packaged product
+        - OEM / reseller / white-label
+        - Consulting / other
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Non-confidential description
+      description: Describe the intended use briefly without proprietary details.
+    validations:
+      required: true

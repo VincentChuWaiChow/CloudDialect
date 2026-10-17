@@ -1,12 +1,7 @@
 # Third-party notices and license inventory
 
-Complete the software-bill-of-materials/license review before applying the proposed community and commercial terms to the entire framework.
+No third-party source-code components are currently identified in this repository's foundation materials. This statement is **not** a legal clearance or audit of any future implementation or dependencies.
 
-| Component | Version | Source | License / SPDX | Obligation | Cleared for proposed distribution? |
-|---|---|---|---|---|---|
-| [EXAMPLE_DEPENDENCY] | [VERSION] | [UPSTREAM_URL] | [LICENSE] | [NOTICE / SOURCE / PATENT / OTHER] | [YES/NO/REVIEW] |
+Before adding a dependency, example, generated asset or vendored file, maintainers must verify its origin, applicable license, compatibility with the CloudDialect dual-licensing model, and any notices, source obligations or attribution duties. Record those details here.
 
-- Do not apply your license to software you do not own or control.
-- Keep required third-party copyright notices, source-offer obligations and other license documentation intact.
-- Review copied snippets, vendored dependencies, fonts, assets, generated code and external contributors, not just package manifests.
-- License compatibility and distributions (including statically linked combinations) need legal review; do not assume that a copyleft package can be relicensed as proprietary.
+Third-party material remains governed by its own license. CloudDialect's Community License does not relicense or extinguish rights held by others.

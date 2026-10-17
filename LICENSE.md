@@ -1,14 +1,14 @@
-# CloudDialect Community License 1.0 — DRAFT FOR LEGAL REVIEW
+# CloudDialect Community License 1.0
 
-**NOT FOR PUBLICATION WITHOUT LEGAL REVIEW.** This is proposed original source-available license language, not a standardized or OSI-approved license. Replace all bracketed placeholders and obtain advice from qualified counsel before publishing it as operative license terms.
+**Source-available license; not an OSI-approved open-source license.** This license grants limited community permissions and does not authorize commercial use. Obtain independent legal advice about its interpretation or enforceability where appropriate.
 
-Copyright © 2026 [LEGAL_COPYRIGHT_HOLDER]. All rights reserved except as expressly licensed below.
+Copyright © 2026 Vincent Chu Wai Chow. All rights reserved except as expressly licensed below.
 
-**Effective for**: versions of CloudDialect identified by [LEGAL_COPYRIGHT_HOLDER] as subject to this Community License.
+**Effective date:** October 17, 2026. **Covered material:** versions of CloudDialect distributed by the Licensor with a copy of this license or an explicit reference to it. Versions released under other licenses are governed by their respective terms.
 
 ## 1. Definitions
 
-- **Licensor** means [LEGAL_COPYRIGHT_HOLDER], which represents that it controls the rights necessary to make this grant.
+- **Licensor** means Vincent Chu Wai Chow, which represents that it controls the rights necessary to make this grant.
 - **Framework** means the source files, binaries, packages, examples and other material expressly identified as covered by this license, excluding separately licensed third-party components.
 - **You** means the individual or legal entity exercising rights under this license.
 - **Product or Service** means an application, tool, website, API, integration, hosted service, package, developer product or other offering into which the Framework is incorporated or for which the Framework is materially used to develop, deploy, operate, deliver or maintain the offering.
@@ -22,7 +22,7 @@ Subject to compliance with this license, the Licensor grants You a worldwide, no
 
 ## 3. Commercial Use requires a separate written license
 
-**No Commercial Use is authorized under this Community License.** Before commencing Commercial Use, You must obtain a separately executed commercial license from the Licensor and meet the payment requirements of that agreement. Contact [COMMERCIAL_CONTACT_EMAIL].
+**No Commercial Use is authorized under this Community License.** Before commencing Commercial Use, You must obtain a separately executed commercial license from the Licensor and meet the payment requirements of that agreement. For inquiries, open a public [Commercial Licensing inquiry](https://github.com/VincentChuWaiChow/CloudDialect/issues/new) containing no confidential details. A private contracting channel may be arranged separately.
 
 A quotation, informal communication, credit to the author, donation, purchase-order submission, or payment without an executed agreement does not create or extend commercial rights. A commercial license may define covered entities, products, versions, deployment scope, distribution, fees, royalties, attribution, support, warranties and sublicensing.
 
@@ -54,8 +54,8 @@ To the maximum extent permitted by applicable law, the Framework is provided **A
 
 ## 10. Governing terms
 
-This license governs only Community Use; separately executed commercial agreements control their expressly defined commercial scope. An unenforceable provision should not invalidate the remaining provisions to the extent applicable law permits. The intended governing law and dispute forum are **[GOVERNING_LAW_AND_FORUM — COUNSEL TO COMPLETE]**.
+This license governs only Community Use; separately executed commercial agreements control their expressly defined commercial scope. An unenforceable provision should not invalidate the remaining provisions to the extent applicable law permits. This license does not designate a governing law or exclusive dispute forum; applicable law determines those questions.
 
 ### Required repository notice
 
-Copyright © 2026 [LEGAL_COPYRIGHT_HOLDER]. CloudDialect is source-available under the CloudDialect Community License 1.0 for qualifying Community Use only. Commercial Use requires a separate paid license. See LICENSE.md and COMMERCIAL-LICENSING.md.
+Copyright © 2026 Vincent Chu Wai Chow. CloudDialect is source-available under the CloudDialect Community License 1.0 for qualifying Community Use only. Commercial Use requires a separate paid license. See LICENSE.md and COMMERCIAL-LICENSING.md.

@@ -10,4 +10,4 @@ The community software license **does not automatically grant trademark or brand
 
 ## Asset status
 
-This is a generated visual concept, not a verified registered trademark or final brand clearance. Before launch, run trademark/name and similarity checks in relevant jurisdictions, confirm any asset licensing obligations and document approval of the final brand owner. Colors and visual style are illustrative.
+This is a generated visual concept, not a verified registered trademark or final brand clearance. Before launch, run trademark/name and similarity checks in relevant jurisdictions, confirm any asset licensing obligations and maintain evidence of brand ownership and name clearance before launching a commercial brand program. Colors and visual style are illustrative.

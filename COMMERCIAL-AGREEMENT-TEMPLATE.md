@@ -1,10 +1,10 @@
-# Framework Commercial License Agreement — TERM-SHEET DRAFT
+# CloudDialect Commercial License Agreement — Standard Form
 
-**Not a license grant. Not ready for signature without qualified legal review.** This is a term-sheet starter, not a substitute for a professionally reviewed commercial software license agreement.
+**Agreement form, not a self-executing license.** This form becomes binding only when all required commercial details are completed, the parties accept the final negotiated terms, both parties execute it, and applicable payment conditions are satisfied. A copy posted in this repository does not grant commercial rights.
 
 ## Parties and scope
 
-- **Licensor:** [LEGAL_COPYRIGHT_HOLDER], [LEGAL_ENTITY_ADDRESS]
+- **Licensor:** Vincent Chu Wai Chow (individual). Service/contact particulars to be exchanged privately in the executed agreement.
 - **Licensee:** [CUSTOMER_LEGAL_ENTITY], [CUSTOMER_ADDRESS]
 - **Covered Framework and versions:** CloudDialect, [VERSION_SCOPE]
 - **Covered revenue-generating products:** [PRODUCT_NAMES_AND_DESCRIPTIONS]
@@ -18,7 +18,7 @@ On execution by both parties and satisfaction of the agreed initial payment cond
 
 ## Fees and royalty accounting
 
-Choose and define one or more terms rather than leaving alternatives open:
+The executed agreement **must select and complete at least one applicable fee arrangement**. No placeholder constitutes an agreed amount:
 
 - Annual flat fee: [AMOUNT, CURRENCY, DUE_DATE]
 - Per-product / per-tenant fee: [DEFINITION AND RATE]
@@ -32,11 +32,11 @@ Choose and define one or more terms rather than leaving alternatives open:
 
 Licensee must:
 
-1. Include this statement in an About/Legal/Acknowledgments page or customer-accessible product documentation: `Uses CloudDialect, © 2026 [LEGAL_COPYRIGHT_HOLDER], under commercial license. [PROJECT_WEBSITE_URL]`.
+1. Include this statement in an About/Legal/Acknowledgments page or customer-accessible product documentation: `Uses CloudDialect, © 2026 Vincent Chu Wai Chow, under commercial license. https://github.com/VincentChuWaiChow/CloudDialect`.
 2. Preserve license and copyright notices in distribution artifacts and appropriate documentation.
 3. Avoid claims of Licensor endorsement or partnership unless separately authorized.
 
-The agreement should specify a reasonable correction period, placement approval, localization and exceptions for legal or security constraints.
+The executed agreement may specify a reasonable correction period and accessibility or localization adjustments, but must not eliminate the attribution requirement without the Licensor's explicit written amendment.
 
 ## Other terms to negotiate
 

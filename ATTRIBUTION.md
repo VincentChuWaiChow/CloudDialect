@@ -12,8 +12,8 @@ A **signed commercial agreement is required regardless of attribution**. The def
 2. Preservation of the applicable copyright and licensing notices in software distributions.
 3. Accurate attribution without suggesting certification, sponsorship or endorsement.
 
-> This product uses CloudDialect, © 2026 [LEGAL_COPYRIGHT_HOLDER]. Used under commercial license. [PROJECT_WEBSITE_URL]
+> This product uses CloudDialect, © 2026 Vincent Chu Wai Chow. Used under commercial license. https://github.com/VincentChuWaiChow/CloudDialect
 
-Do not require a permanent third-party logo within customers' main UI unless your commercial contract specifically negotiates that. Enterprise customers may require control over branding; user-visible credit in documentation usually introduces less adoption friction. This example is a policy proposal, **not an additional community license term**.
+Do not require a permanent third-party logo within customers' main UI unless your commercial contract specifically negotiates that. Enterprise customers may require control over branding; user-visible credit in documentation usually introduces less adoption friction. This attribution guidance does not independently grant commercial rights. The executed commercial agreement establishes binding placement requirements.
 
 Using trademarks or logos is not automatically authorized by an attribution obligation.

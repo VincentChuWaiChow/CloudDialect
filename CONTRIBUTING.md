@@ -4,14 +4,14 @@ We welcome bug reports, documentation suggestions, and proposed code improvement
 
 ## Before submitting copyrighted work
 
-This framework is **dual-licensed**, which means the project must have sufficient permission to distribute accepted contributions both under the Community License and under separate paid commercial agreements.
+This framework is **dual-licensed**, which requires the project to hold sufficient permission to distribute accepted contributions both under the Community License and under separate paid commercial agreements.
 
 - **Issues, bug reports and proposals:** welcome; do not include code copied from third-party projects unless you have permission.
-- **Documentation or code pull requests:** do not submit substantive copyrighted contributions until the maintainers have accepted a separately signed contributor agreement approved by counsel.
+- **Documentation or code pull requests:** do not submit substantive copyrighted contributions until the maintainers have accepted a separately signed contributor agreement accepted by the maintainer.
 - **Employee-created contributions:** contributors may need employer authorization to grant the requested rights.
 - **Third-party imports:** declare all third-party dependencies, licenses and source origins; do not submit GPL/AGPL code for relicensing without an explicit compatible legal basis.
 
-Submitting a pull request **does not automatically transfer copyright** and a Git DCO sign-off **does not by itself give the maintainer broad proprietary relicensing rights**. See [CLA-DRAFT.md](CLA-DRAFT.md), which must be reviewed and operationalized before outside code contributions are accepted.
+Submitting a pull request **does not automatically transfer copyright** and a Git DCO sign-off **does not by itself give the maintainer broad proprietary relicensing rights**. See [CONTRIBUTOR-LICENSE-AGREEMENT.md](CONTRIBUTOR-LICENSE-AGREEMENT.md). The maintainer must verify a signed agreement and any employer authorization before merging substantive contributions.
 
 ## Engineering expectations
 
