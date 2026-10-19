@@ -63,7 +63,7 @@ class ContractsScaffoldTests(unittest.TestCase):
         for name, dependency in dependencies.items():
             version = dependency if isinstance(dependency, str) else dependency["version"]
             with self.subTest(dependency=name):
-                matches = [p for p in packages if p["name"] == name and p["version"] == version[1:]]
+                matches = [p for p in packages if p["name"] == name and p["version"].split("+")[0] == version[1:]]
                 self.assertEqual(len(matches), 1)
                 self.assertEqual(matches[0]["source"], "registry+https://github.com/rust-lang/crates.io-index")
                 self.assertRegex(matches[0]["checksum"], r"^[0-9a-f]{64}$")

@@ -2,17 +2,112 @@
   "title": "Task 1 contracts crate scaffold",
   "slug": "contracts-scaffold",
   "created_at": "2026-10-19T14:22:00Z",
-  "updated_at": "2026-10-19T14:22:00Z",
-  "status": "executing",
+  "updated_at": "2026-10-19T14:29:47.665526+00:00",
+  "status": "waiting_for_approval",
   "mode": "delegated",
   "baseline_ref": "0b9bf5f",
   "risk_level": "medium",
-  "eval_contract": {"level": "inline", "path": "plan.md", "status": "ready"},
-  "approval": {"required": true, "granted": true, "notes": "User requested task 1 implementation and PR; sandbox approval is separate."},
-  "delegation": {"native_agent_available": true, "native_agent_planned": true, "native_agent_used": false, "agent_count": 0, "wave_count": 0, "no_delegation_reason": "", "notes": "Max 3 cumulative runs, 2 waves, 1 repair, 90 minutes."},
+  "eval_contract": {
+    "level": "inline",
+    "path": "plan.md",
+    "status": "checked"
+  },
+  "approval": {
+    "required": true,
+    "granted": null,
+    "notes": "Implementation/PR requested by user; CONTRIBUTING.md pre-submission rights/accepted-agreement confirmation pending asynchronous answer. Local implementation authorized; remote publication held."
+  },
+  "delegation": {
+    "native_agent_available": true,
+    "native_agent_planned": true,
+    "native_agent_used": true,
+    "agent_count": 2,
+    "wave_count": 2,
+    "no_delegation_reason": "",
+    "notes": "2 cumulative read-only runs, 2 waves, 0 follow-ups, 1 formatting repair, within 90-minute elapsed limit. No effective model/effort introspection."
+  },
   "packets": [
-    {"id": "01-spec-review", "status": "pending", "owner": "read-only-agent", "write_scope": [], "result_path": "results/01-spec-review.md"},
-    {"id": "02-final-review", "status": "pending", "owner": "read-only-agent", "write_scope": [], "result_path": "results/02-final-review.md"}
+    {
+      "id": "01-spec-review",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/01-spec-review.md"
+    },
+    {
+      "id": "02-final-review",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/02-final-review.md"
+    }
   ],
-  "verification": {"status": "pending", "checks": []}
+  "verification": {
+    "status": "local-pass-publication-pending",
+    "checks": [
+      {
+        "name": "structural RED",
+        "command": "python3 -m unittest discover -s tests -p test_contracts_scaffold.py -v",
+        "required": true,
+        "status": "pass",
+        "evidence": "7 intended failures before crate creation; exit 1; checkpoint 649ab92"
+      },
+      {
+        "name": "structural GREEN",
+        "command": "python3 -m unittest discover -s tests -p test_contracts_scaffold.py -v",
+        "required": true,
+        "status": "pass",
+        "evidence": "7/7 passed, exit 0"
+      },
+      {
+        "name": "locked cargo check",
+        "command": "cargo check --manifest-path crates/clouddialect-contracts/Cargo.toml --locked",
+        "required": true,
+        "status": "pass",
+        "evidence": "Finished dev profile, exit 0"
+      },
+      {
+        "name": "frozen cargo test",
+        "command": "cargo test --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen",
+        "required": true,
+        "status": "pass",
+        "evidence": "all targets pass, 0 Rust tests, exit 0"
+      },
+      {
+        "name": "formatting",
+        "command": "cargo fmt --manifest-path crates/clouddialect-contracts/Cargo.toml --check",
+        "required": true,
+        "status": "pass",
+        "evidence": "exit 0 after rustfmt final-newline repair; initial exit 1"
+      },
+      {
+        "name": "clippy",
+        "command": "cargo clippy --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen --all-targets -- -D warnings",
+        "required": true,
+        "status": "pass",
+        "evidence": "exit 0"
+      },
+      {
+        "name": "library-only metadata",
+        "command": "cargo metadata --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen --no-deps --format-version 1",
+        "required": true,
+        "status": "pass",
+        "evidence": "only lib and conformance test targets, publish disabled; exit 0"
+      },
+      {
+        "name": "independent review",
+        "command": "native scaffold_final_review source inspection",
+        "required": true,
+        "status": "pass",
+        "evidence": "PASS, no code blockers; contributor gate pending"
+      },
+      {
+        "name": "PR publication",
+        "command": "push task branch; gh pr create; remote SHA and PR head/base query",
+        "required": true,
+        "status": "pending",
+        "evidence": "Held until contributor confirmation"
+      }
+    ]
+  }
 }

@@ -11,3 +11,5 @@ vendor/
 dist/
 build/
 coverage/
+target/
+__pycache__/

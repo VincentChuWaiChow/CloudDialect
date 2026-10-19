@@ -32,7 +32,9 @@ Medium: first Rust dependency graph and external PR, but no runtime behavior.
 User explicitly authorized task 1 implementation and a PR, including necessary checkpoint commits/push.
 Sandbox approval is separate; request it for Git metadata writes/network as required.
 Stop for material API/license incompatibility, unrelated changes, failed verification or ambiguous writes.
-Contributor agreement confirmation remains a maintainer pre-merge requirement, not assumed satisfied.
+CONTRIBUTING.md also gates substantive PR submission on an accepted contributor agreement.
+An asynchronous question requests rights-owning maintainer or accepted-agreement confirmation;
+continue local work but do not publish the PR until answered. Do not assume legal authority from GitHub ADMIN.
 
 ## Mode
 Delegated; Ultracode is the sole coordinator. Agent-teams supplies native routing;
