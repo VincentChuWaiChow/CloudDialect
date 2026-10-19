@@ -21,4 +21,4 @@ GitHub ADMIN is not proof of rights ownership. Unknown contributor status blocks
 ## Verification run
 Source inspection by native sidecar; parent corroborated against repository documents.
 ## Open questions
-User confirmation requested asynchronously; pending.
+Resolved after review: user explicitly confirmed "I am the rights-owning maintainer."

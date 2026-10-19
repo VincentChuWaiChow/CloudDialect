@@ -20,4 +20,4 @@ Strict TOML-1.0-only acceptance is unproven and outside scaffold scope. Later Bo
 Independent source/diff/registry-cache inspection only; no Cargo commands or external writes by reviewer.
 Parent owns all build/test evidence and reruns integrated checks before committing.
 ## Open questions
-Contributor / rights-holder confirmation remains pending.
+Resolved after review: user explicitly confirmed rights-owning maintainer status before publication.

@@ -33,8 +33,9 @@ User explicitly authorized task 1 implementation and a PR, including necessary c
 Sandbox approval is separate; request it for Git metadata writes/network as required.
 Stop for material API/license incompatibility, unrelated changes, failed verification or ambiguous writes.
 CONTRIBUTING.md also gates substantive PR submission on an accepted contributor agreement.
-An asynchronous question requests rights-owning maintainer or accepted-agreement confirmation;
-continue local work but do not publish the PR until answered. Do not assume legal authority from GitHub ADMIN.
+The user answered the asynchronous question: "I am the rights-owning maintainer."
+This explicit confirmation resolves the submission gate for this implementation;
+GitHub ADMIN was not used as proof of copyright ownership.
 
 ## Mode
 Delegated; Ultracode is the sole coordinator. Agent-teams supplies native routing;

@@ -22,11 +22,15 @@ Library manifest/lockfile, four public empty module stubs, documented empty libr
 empty conformance integration target, seven structural graders, target/cache ignores, dependency
 notices, task 1 checkbox, and workflow evidence. No later task source or unrelated files changed.
 ## Verification still needed
-Remote PR proof after contributor confirmation; local required graders and independent review passed.
+None for task 1 implementation and PR creation. Parent rechecks the final evidence-only closeout
+commit's remote SHA/PR metadata after pushing; implementation source is unchanged.
 ## Remaining risks
 Scaffold proves build/layout only, not JSON Schema compliance or runtime offline safety.
 Source shows `boon::UrlLoader::load` returns `serde_json::Value`, not schema bytes; `Compiler`
 uses `use_loader` after construction. Reconcile those later task-8/design assumptions before coding them.
 TOML's transitive parser/writer versions carry spec-1.1.0 tags; the direct crate's tag alone does
 not establish rejection of TOML 1.1 syntax. Actual parser conformance remains for manifest tasks.
-Contributor status is still unconfirmed; no PR publication until that question is answered.
+Contributor gate resolved by explicit user confirmation of rights-owning maintainer status.
+PR #1 is OPEN against `master`; the creation head matched local/remote SHA
+`e492af7c4618a2c28a50b5838d929a1da797222b`. Socket checks were partly pending at creation;
+this is not an assertion of CI success, release readiness, deployment or package publication.
