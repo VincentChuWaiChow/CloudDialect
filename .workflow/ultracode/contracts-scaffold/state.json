@@ -1,0 +1,18 @@
+{
+  "title": "Task 1 contracts crate scaffold",
+  "slug": "contracts-scaffold",
+  "created_at": "2026-10-19T14:22:00Z",
+  "updated_at": "2026-10-19T14:22:00Z",
+  "status": "executing",
+  "mode": "delegated",
+  "baseline_ref": "0b9bf5f",
+  "risk_level": "medium",
+  "eval_contract": {"level": "inline", "path": "plan.md", "status": "ready"},
+  "approval": {"required": true, "granted": true, "notes": "User requested task 1 implementation and PR; sandbox approval is separate."},
+  "delegation": {"native_agent_available": true, "native_agent_planned": true, "native_agent_used": false, "agent_count": 0, "wave_count": 0, "no_delegation_reason": "", "notes": "Max 3 cumulative runs, 2 waves, 1 repair, 90 minutes."},
+  "packets": [
+    {"id": "01-spec-review", "status": "pending", "owner": "read-only-agent", "write_scope": [], "result_path": "results/01-spec-review.md"},
+    {"id": "02-final-review", "status": "pending", "owner": "read-only-agent", "write_scope": [], "result_path": "results/02-final-review.md"}
+  ],
+  "verification": {"status": "pending", "checks": []}
+}
