@@ -11,4 +11,3 @@ test verification_does_not_mutate_the_document_or_candidate ... ok
 test malformed_values_and_unapproved_algorithm_spellings_fail_closed ... ok
 
 test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
-

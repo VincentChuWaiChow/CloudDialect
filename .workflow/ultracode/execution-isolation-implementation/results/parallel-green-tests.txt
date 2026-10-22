@@ -363,4 +363,3 @@ test src/documents/verification.rs - documents::verification::BehavioralResult (
 test src/errors/phase.rs - errors::phase::StructuralResult (line 26) - compile fail ... ok
 
 test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
-

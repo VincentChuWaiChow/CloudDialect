@@ -12,4 +12,3 @@ test reserved_exact_case_and_family_variants_warn_verbatim_without_failing_struc
 test malformed_prefixes_fail_on_closed_open_and_minor_projection_roots ... ok
 
 test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.63s
-

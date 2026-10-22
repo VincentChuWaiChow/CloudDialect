@@ -1,6 +1,6 @@
 # Extension / local manifest / artifact hash wave — 2026-10-22
 
-**Bounded implementation verified; publication receipt follows separately.** Baseline e1e43d98fe2137b7d63643ba2b1762bdfca71cfc, integrated GREEN bc974f08cb47026fd0bf97cd8c92581a43cf8289. Owner approved three additional sidecars (23cumulative): two disjoint write workers and final readonly review, all completed. Max4concurrent including parent, no recursion/followup dispatches, original90-minute window15:26:28–16:56:28UTC. No review repair required (0/1used). Parent owns extensions/shared exports/Git; native model/effort and runtime isolation remain UNVERIFIED.
+**Bounded implementation verified; publication receipt follows separately.** Baseline e1e43d98fe2137b7d63643ba2b1762bdfca71cfc, integrated GREEN bc974f08cb47026fd0bf97cd8c92581a43cf8289. Owner approved three additional sidecars (23cumulative): two disjoint write workers and final readonly review, all completed. Max4concurrent including parent, no recursion/followup dispatches, original90-minute window15:26:28–16:56:28UTC. No code-review repair required; the sole consolidated repair was consumed by evidence packaging (1/1used). Parent owns extensions/shared exports/Git; native model/effort and runtime isolation remain UNVERIFIED.
 
 ## Bounded implementation and phase boundaries
 
@@ -31,6 +31,9 @@ All checkpoints are on the active feature branch, not borrowed/squashed history.
 - Fresh instrumented full test suite, actual LLVM objects/profiles and exact source filtering. Raw emitted line total1014/1052 includes source-local unit tests; fresh loader LCOV identifies17covered inline test lines, giving corrected **997/1035=96.33% production lines**. Test-copy aliases/dependencies/unmapped DTOs excluded. Private mandatory helper is test-included, not counted as registered production enforcement; no branch/full-spec/native/MSRV claim. Source-local test correction is based on fresh exact LCOV DA records, not blindly copied historical lists. See `results/parallel-production-coverage.json` and raw LCOV/view.
 - Final native readonly reviewer23 found **no actionable findings** in the14-path source diff at frozen bc974f0. Verified source matched review SHA; inspected recorded checks but did not independently rerun tests, write files, use network or perform native probes. External semantic/fidelity checks, private mandatory integration and catalog/registry round-trips remain outside the tranche. No independent runtime qualification inferred.
 - Scoped source/frozen/metadata/link/JSON/whitespace preservation checks and normal feature-branch publication are recorded in the closeout artifacts/independent `/tmp` receipt. No full-goal completion or gate closure follows.
+
+### Evidence-packaging correction before publication
+Initial working-tree whitespace checks did not include new untracked log files. Staged checking then caught trailing blank lines/ANSI whitespace in saved terminal output; a separately queued documentation commit nevertheless ran after that failure (c53d029). This sequencing error was not ignored or called PASS. One corrective evidence commit normalizes only repository log presentations, with exact originals copied to `/tmp` and original/presentation SHA-256 pairs in `parallel-evidence-manifest.json`. Whole baseline-range whitespace, frozen source hashes, evidence receipts and current metadata are rechecked before push. Rust source/review SHA and passing behavior remain unchanged. No second review or native qualification is claimed.
 
 ## Remaining original objective
 

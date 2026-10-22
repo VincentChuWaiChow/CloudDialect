@@ -10,4 +10,3 @@ test registry_membership_payloads_and_ownership_claims_cannot_clear_blockers ...
 test unknown_declaration_without_payload_is_structurally_valid_but_separately_blocked ... ok
 
 test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
-

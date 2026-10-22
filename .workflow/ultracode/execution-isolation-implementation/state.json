@@ -1480,7 +1480,7 @@
     "recursion": 0,
     "followup_dispatches": 0,
     "repair_limit": 1,
-    "repairs_consumed": 0,
+    "repairs_consumed": 1,
     "deadline": "2026-10-22T16:56:28Z"
   },
   "ai_rule_location_correction": {
@@ -1665,7 +1665,7 @@
     "followups": 0,
     "recursion": 0,
     "repair_limit": 1,
-    "repairs_consumed": 0,
+    "repairs_consumed": 1,
     "no_native_probes_releases": true,
     "eval": "extension-manifest-hash-eval.md",
     "green_checkpoint": "bc974f08cb47026fd0bf97cd8c92581a43cf8289",
@@ -1674,7 +1674,8 @@
       "covered": 997,
       "percent": 96.32850241545894
     },
-    "elapsed_minutes_at_verification": 35.912431133333335
+    "elapsed_minutes_at_verification": 35.912431133333335,
+    "repair_note": "One evidence-packaging correction: staged diff caught raw terminal EOF/ANSI whitespace missed while untracked; docs commit erroneously followed failed check. Before push, normalize saved presentations, retain exact raw/tmp SHA receipts, recheck whole baseline range. No Rust source/review findings or behavioral repair."
   },
   "extension_manifest_hash_delivery": {
     "status": "source verified; immutable publication proof is external to self-referential commit",
