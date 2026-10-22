@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-10-22T12:19:22.970710+00:00",
+  "code_authority": "User approved remaining Spec 1 prerequisite implementation",
+  "G_VERSION": {
+    "status": "owner-stated initial MVP versions approved",
+    "actor": "user reply in current conversation",
+    "at": "2026-10-22T11:38:48.198065+00:00",
+    "statement": "initial project from scratch; current examples are first MVP versions",
+    "versions": {
+      "document_format": "1.0.0",
+      "catalog": "1.0.0",
+      "crate_api": "0.1.0"
+    },
+    "provenance": "User publication-history attestation, not independent proof of external registry/release state",
+    "scope": "Version-bearing Spec 1 implementation only; no BG-01 or Spec 2 gate closure"
+  },
+  "G_DEPS": {
+    "serde_json_raw_value": "explicitly approved, exact pin unchanged, raw_value=[] adds no dependency",
+    "crypto_version_crates": "Explicit user approval of sha2=0.11.1/sha3=0.12.0/semver=1.0.28, features, Rust>=1.88, numeric-overflow/Cargo-range profile. Graph downloaded/checksums/licenses inventoried; runtime helpers unimplemented."
+  },
+  "G_TOOLS": "Frozen tests/check/fmt/Clippy run with isolated cache; matching LLVM tools in /tmp",
+  "G_NATIVE": "No disposable sandbox/probe approval; plans only"
+}

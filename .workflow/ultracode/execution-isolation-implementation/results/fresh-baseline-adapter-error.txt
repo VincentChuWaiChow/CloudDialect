@@ -1,0 +1,149 @@
+Existing checker unchanged; RUN redirected to temporary copy of historical baseline with head set to this run baseline. Source/doc/graph checks and input hashes unchanged. New files checked separately.
+PASS: 10 requirement groups, 104 atomic criteria, 6 threats, 5 open decisions, 10 design elements, 21 tasks, 3 parent waves; actual leaf depth 6 disclosed; baseline preserved
+test_consistent_but_cyclic_graph_rejected (test_check_spec.SpecGraderTests.test_consistent_but_cyclic_graph_rejected) ... ERROR
+test_dropped_dependency_edge_rejected (test_check_spec.SpecGraderTests.test_dropped_dependency_edge_rejected) ... ERROR
+test_false_evidence_status_rejected (test_check_spec.SpecGraderTests.test_false_evidence_status_rejected) ... ERROR
+test_false_implementation_completion_rejected (test_check_spec.SpecGraderTests.test_false_implementation_completion_rejected) ... ERROR
+test_missing_document_rejected (test_check_spec.SpecGraderTests.test_missing_document_rejected) ... ERROR
+test_missing_shall_rejected (test_check_spec.SpecGraderTests.test_missing_shall_rejected) ... ERROR
+test_orphan_design_rejected (test_check_spec.SpecGraderTests.test_orphan_design_rejected) ... ERROR
+test_parallel_file_collision_rejected (test_check_spec.SpecGraderTests.test_parallel_file_collision_rejected) ... ERROR
+test_valid_documents_pass (test_check_spec.SpecGraderTests.test_valid_documents_pass) ... ERROR
+
+======================================================================
+ERROR: test_consistent_but_cyclic_graph_rejected (test_check_spec.SpecGraderTests.test_consistent_but_cyclic_graph_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/test_check_spec.py", line 64, in test_consistent_but_cyclic_graph_rejected
+    self.reject()
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/test_check_spec.py", line 35, in reject
+    check_spec.main()
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/check_spec.py", line 24, in main
+    require(path.is_file(), f"missing {path.relative_to(ROOT)}")
+                                       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 682, in relative_to
+    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+ValueError: '/tmp/clouddialect-doc-baseline-iwget2ee/tmp1r0pydj4/requirements.md' is not in the subpath of '/home/raishin/projects/CloudDialect'
+
+======================================================================
+ERROR: test_dropped_dependency_edge_rejected (test_check_spec.SpecGraderTests.test_dropped_dependency_edge_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/test_check_spec.py", line 59, in test_dropped_dependency_edge_rejected
+    self.reject()
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/test_check_spec.py", line 35, in reject
+    check_spec.main()
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/check_spec.py", line 24, in main
+    require(path.is_file(), f"missing {path.relative_to(ROOT)}")
+                                       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 682, in relative_to
+    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+ValueError: '/tmp/clouddialect-doc-baseline-iwget2ee/tmp5p9ykkfy/requirements.md' is not in the subpath of '/home/raishin/projects/CloudDialect'
+
+======================================================================
+ERROR: test_false_evidence_status_rejected (test_check_spec.SpecGraderTests.test_false_evidence_status_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/test_check_spec.py", line 51, in test_false_evidence_status_rejected
+    self.reject()
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/test_check_spec.py", line 35, in reject
+    check_spec.main()
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/check_spec.py", line 24, in main
+    require(path.is_file(), f"missing {path.relative_to(ROOT)}")
+                                       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 682, in relative_to
+    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+ValueError: '/tmp/clouddialect-doc-baseline-iwget2ee/tmpwrko3d2v/requirements.md' is not in the subpath of '/home/raishin/projects/CloudDialect'
+
+======================================================================
+ERROR: test_false_implementation_completion_rejected (test_check_spec.SpecGraderTests.test_false_implementation_completion_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/test_check_spec.py", line 72, in test_false_implementation_completion_rejected
+    self.reject()
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/test_check_spec.py", line 35, in reject
+    check_spec.main()
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/check_spec.py", line 24, in main
+    require(path.is_file(), f"missing {path.relative_to(ROOT)}")
+                                       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 682, in relative_to
+    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+ValueError: '/tmp/clouddialect-doc-baseline-iwget2ee/tmpl_w_9qol/requirements.md' is not in the subpath of '/home/raishin/projects/CloudDialect'
+
+======================================================================
+ERROR: test_missing_document_rejected (test_check_spec.SpecGraderTests.test_missing_document_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/test_check_spec.py", line 43, in test_missing_document_rejected
+    self.reject()
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/test_check_spec.py", line 35, in reject
+    check_spec.main()
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/check_spec.py", line 24, in main
+    require(path.is_file(), f"missing {path.relative_to(ROOT)}")
+                                       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 682, in relative_to
+    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+ValueError: '/tmp/clouddialect-doc-baseline-iwget2ee/tmp1jpxeego/requirements.md' is not in the subpath of '/home/raishin/projects/CloudDialect'
+
+======================================================================
+ERROR: test_missing_shall_rejected (test_check_spec.SpecGraderTests.test_missing_shall_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/test_check_spec.py", line 47, in test_missing_shall_rejected
+    self.reject()
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/test_check_spec.py", line 35, in reject
+    check_spec.main()
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/check_spec.py", line 24, in main
+    require(path.is_file(), f"missing {path.relative_to(ROOT)}")
+                                       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 682, in relative_to
+    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+ValueError: '/tmp/clouddialect-doc-baseline-iwget2ee/tmphosj_m4k/requirements.md' is not in the subpath of '/home/raishin/projects/CloudDialect'
+
+======================================================================
+ERROR: test_orphan_design_rejected (test_check_spec.SpecGraderTests.test_orphan_design_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/test_check_spec.py", line 55, in test_orphan_design_rejected
+    self.reject()
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/test_check_spec.py", line 35, in reject
+    check_spec.main()
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/check_spec.py", line 24, in main
+    require(path.is_file(), f"missing {path.relative_to(ROOT)}")
+                                       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 682, in relative_to
+    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+ValueError: '/tmp/clouddialect-doc-baseline-iwget2ee/tmpejez9_m6/requirements.md' is not in the subpath of '/home/raishin/projects/CloudDialect'
+
+======================================================================
+ERROR: test_parallel_file_collision_rejected (test_check_spec.SpecGraderTests.test_parallel_file_collision_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/test_check_spec.py", line 68, in test_parallel_file_collision_rejected
+    self.reject()
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/test_check_spec.py", line 35, in reject
+    check_spec.main()
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/check_spec.py", line 24, in main
+    require(path.is_file(), f"missing {path.relative_to(ROOT)}")
+                                       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 682, in relative_to
+    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+ValueError: '/tmp/clouddialect-doc-baseline-iwget2ee/tmp1933hx8a/requirements.md' is not in the subpath of '/home/raishin/projects/CloudDialect'
+
+======================================================================
+ERROR: test_valid_documents_pass (test_check_spec.SpecGraderTests.test_valid_documents_pass)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/test_check_spec.py", line 39, in test_valid_documents_pass
+    check_spec.main()
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/check_spec.py", line 24, in main
+    require(path.is_file(), f"missing {path.relative_to(ROOT)}")
+                                       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 682, in relative_to
+    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+ValueError: '/tmp/clouddialect-doc-baseline-iwget2ee/tmpjv81ju8n/requirements.md' is not in the subpath of '/home/raishin/projects/CloudDialect'
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.020s
+
+FAILED (errors=9)

@@ -1,0 +1,54 @@
+{
+  "compiler": "rustc 1.99.1 LLVM 23.1.1",
+  "tool_version": "compiler-matched LLVM 23.1.1",
+  "instrumentation": "-Cinstrument-coverage",
+  "production_scope": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/",
+  "emitted_production_files": [],
+  "emitted_production_lines": 0,
+  "coverage_threshold_percent": 80,
+  "production_coverage_percent": null,
+  "status": "UNVERIFIED: no instrumented production mappings emitted for the derive-only type modules; do not claim 80% or count test/dependency lines",
+  "test_file_coverage": [
+    {
+      "lines": {
+        "count": 157,
+        "covered": 157,
+        "percent": 100
+      },
+      "functions": {
+        "count": 9,
+        "covered": 9,
+        "percent": 100
+      },
+      "instantiations": {
+        "count": 9,
+        "covered": 9,
+        "percent": 100
+      },
+      "regions": {
+        "count": 225,
+        "covered": 225,
+        "notcovered": 0,
+        "percent": 100
+      },
+      "branches": {
+        "count": 0,
+        "covered": 0,
+        "notcovered": 0,
+        "percent": 0
+      },
+      "mcdc": {
+        "count": 0,
+        "covered": 0,
+        "notcovered": 0,
+        "percent": 0
+      }
+    }
+  ],
+  "raw_export_includes_tests_dependencies": true,
+  "notes": [
+    "The initial report/export source list did not yield production mappings and showed dependency/test totals. Those totals are NOT production coverage.",
+    "No manual validation/acceptance functions added simply to create a coverage denominator. Serializer behavior is exercised by eight integration tests and compile-time separation by two doctests.",
+    "Broader algorithm/full runtime coverage remains required and unverified."
+  ]
+}

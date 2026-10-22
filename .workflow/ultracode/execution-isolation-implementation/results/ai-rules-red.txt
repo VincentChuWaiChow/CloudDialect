@@ -1,0 +1,69 @@
+test_every_entrypoint_is_a_relative_symlink_to_the_same_rule (test_ai_rules.AiRulesTests.test_every_entrypoint_is_a_relative_symlink_to_the_same_rule) ...
+  test_every_entrypoint_is_a_relative_symlink_to_the_same_rule (test_ai_rules.AiRulesTests.test_every_entrypoint_is_a_relative_symlink_to_the_same_rule) (entrypoint='AGENTS.md') ... FAIL
+  test_every_entrypoint_is_a_relative_symlink_to_the_same_rule (test_ai_rules.AiRulesTests.test_every_entrypoint_is_a_relative_symlink_to_the_same_rule) (entrypoint='CLAUDE.md') ... FAIL
+  test_every_entrypoint_is_a_relative_symlink_to_the_same_rule (test_ai_rules.AiRulesTests.test_every_entrypoint_is_a_relative_symlink_to_the_same_rule) (entrypoint='GEMINI.md') ... FAIL
+  test_every_entrypoint_is_a_relative_symlink_to_the_same_rule (test_ai_rules.AiRulesTests.test_every_entrypoint_is_a_relative_symlink_to_the_same_rule) (entrypoint='.github/copilot-instructions.md') ... FAIL
+  test_every_entrypoint_is_a_relative_symlink_to_the_same_rule (test_ai_rules.AiRulesTests.test_every_entrypoint_is_a_relative_symlink_to_the_same_rule) (entrypoint='.kiro/steering/engineering.md') ... FAIL
+  test_every_entrypoint_is_a_relative_symlink_to_the_same_rule (test_ai_rules.AiRulesTests.test_every_entrypoint_is_a_relative_symlink_to_the_same_rule) (entrypoint='.cursor/rules/engineering.mdc') ... FAIL
+test_one_canonical_rule_defines_domain_ownership_and_safety (test_ai_rules.AiRulesTests.test_one_canonical_rule_defines_domain_ownership_and_safety) ... FAIL
+
+======================================================================
+FAIL: test_every_entrypoint_is_a_relative_symlink_to_the_same_rule (test_ai_rules.AiRulesTests.test_every_entrypoint_is_a_relative_symlink_to_the_same_rule) (entrypoint='AGENTS.md')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/tests/test_ai_rules.py", line 36, in test_every_entrypoint_is_a_relative_symlink_to_the_same_rule
+    self.assertTrue(path.is_symlink(), f"{entrypoint} must not duplicate the rule")
+AssertionError: False is not true : AGENTS.md must not duplicate the rule
+
+======================================================================
+FAIL: test_every_entrypoint_is_a_relative_symlink_to_the_same_rule (test_ai_rules.AiRulesTests.test_every_entrypoint_is_a_relative_symlink_to_the_same_rule) (entrypoint='CLAUDE.md')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/tests/test_ai_rules.py", line 36, in test_every_entrypoint_is_a_relative_symlink_to_the_same_rule
+    self.assertTrue(path.is_symlink(), f"{entrypoint} must not duplicate the rule")
+AssertionError: False is not true : CLAUDE.md must not duplicate the rule
+
+======================================================================
+FAIL: test_every_entrypoint_is_a_relative_symlink_to_the_same_rule (test_ai_rules.AiRulesTests.test_every_entrypoint_is_a_relative_symlink_to_the_same_rule) (entrypoint='GEMINI.md')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/tests/test_ai_rules.py", line 36, in test_every_entrypoint_is_a_relative_symlink_to_the_same_rule
+    self.assertTrue(path.is_symlink(), f"{entrypoint} must not duplicate the rule")
+AssertionError: False is not true : GEMINI.md must not duplicate the rule
+
+======================================================================
+FAIL: test_every_entrypoint_is_a_relative_symlink_to_the_same_rule (test_ai_rules.AiRulesTests.test_every_entrypoint_is_a_relative_symlink_to_the_same_rule) (entrypoint='.github/copilot-instructions.md')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/tests/test_ai_rules.py", line 36, in test_every_entrypoint_is_a_relative_symlink_to_the_same_rule
+    self.assertTrue(path.is_symlink(), f"{entrypoint} must not duplicate the rule")
+AssertionError: False is not true : .github/copilot-instructions.md must not duplicate the rule
+
+======================================================================
+FAIL: test_every_entrypoint_is_a_relative_symlink_to_the_same_rule (test_ai_rules.AiRulesTests.test_every_entrypoint_is_a_relative_symlink_to_the_same_rule) (entrypoint='.kiro/steering/engineering.md')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/tests/test_ai_rules.py", line 36, in test_every_entrypoint_is_a_relative_symlink_to_the_same_rule
+    self.assertTrue(path.is_symlink(), f"{entrypoint} must not duplicate the rule")
+AssertionError: False is not true : .kiro/steering/engineering.md must not duplicate the rule
+
+======================================================================
+FAIL: test_every_entrypoint_is_a_relative_symlink_to_the_same_rule (test_ai_rules.AiRulesTests.test_every_entrypoint_is_a_relative_symlink_to_the_same_rule) (entrypoint='.cursor/rules/engineering.mdc')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/tests/test_ai_rules.py", line 36, in test_every_entrypoint_is_a_relative_symlink_to_the_same_rule
+    self.assertTrue(path.is_symlink(), f"{entrypoint} must not duplicate the rule")
+AssertionError: False is not true : .cursor/rules/engineering.mdc must not duplicate the rule
+
+======================================================================
+FAIL: test_one_canonical_rule_defines_domain_ownership_and_safety (test_ai_rules.AiRulesTests.test_one_canonical_rule_defines_domain_ownership_and_safety)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/tests/test_ai_rules.py", line 21, in test_one_canonical_rule_defines_domain_ownership_and_safety
+    self.assertTrue(CANONICAL.is_file(), "canonical repository AI rule missing")
+AssertionError: False is not true : canonical repository AI rule missing
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+FAILED (failures=7)

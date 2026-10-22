@@ -1,0 +1,14 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+error[E0432]: unresolved imports `clouddialect_contracts::ContentHash`, `clouddialect_contracts::DocumentKind`, `clouddialect_contracts::DocumentRef`, `clouddialect_contracts::DocumentStore`, `clouddialect_contracts::StoredDocument`
+ --> tests/reference_contracts.rs:2:5
+  |
+2 |     ContentHash, DocumentKind, DocumentRef, DocumentStore, ErrorCategory, StoredDocument,
+  |     ^^^^^^^^^^^  ^^^^^^^^^^^^  ^^^^^^^^^^^  ^^^^^^^^^^^^^                 ^^^^^^^^^^^^^^ no `StoredDocument` in the root
+  |     |            |             |            |
+  |     |            |             |            no `DocumentStore` in the root
+  |     |            |             no `DocumentRef` in the root
+  |     |            no `DocumentKind` in the root
+  |     no `ContentHash` in the root
+
+For more information about this error, try `rustc --explain E0432`.
+error: could not compile `clouddialect-contracts` (test "reference_contracts") due to 1 previous error

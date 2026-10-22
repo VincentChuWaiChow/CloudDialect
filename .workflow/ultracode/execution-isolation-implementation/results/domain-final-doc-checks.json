@@ -1,0 +1,13 @@
+{
+  "P0_content_cases": 8,
+  "P0_old_cases_excluded": [
+    "docs-only draft banner, now superseded by approvals",
+    "docs-only source hash/checkmark scope, now superseded by authorized implementation"
+  ],
+  "json_files_parsed": 43,
+  "workflow_python_syntax": "PASS",
+  "local_link_failures": [],
+  "research_preserved": true,
+  "production_changes_since_static_review": false,
+  "native_qualification": "UNVERIFIED; not authorized"
+}

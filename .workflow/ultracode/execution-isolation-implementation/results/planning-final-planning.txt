@@ -1,0 +1,12 @@
+test_all_units_have_acyclic_matching_prerequisites (__main__.ImplementationPlanningTests.test_all_units_have_acyclic_matching_prerequisites) ... ok
+test_approval_and_pinned_source_are_not_runtime_proof (__main__.ImplementationPlanningTests.test_approval_and_pinned_source_are_not_runtime_proof) ... ok
+test_canonical_task_coverage (__main__.ImplementationPlanningTests.test_canonical_task_coverage) ... ok
+test_concrete_units_have_bounded_scope_and_checks (__main__.ImplementationPlanningTests.test_concrete_units_have_bounded_scope_and_checks) ... ok
+test_first_slice_stays_narrow (__main__.ImplementationPlanningTests.test_first_slice_stays_narrow) ... ok
+test_fixture_filter_is_not_libtest_name_filter (__main__.ImplementationPlanningTests.test_fixture_filter_is_not_libtest_name_filter) ... ok
+test_preserves_unowned_files (__main__.ImplementationPlanningTests.test_preserves_unowned_files) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.004s
+
+OK

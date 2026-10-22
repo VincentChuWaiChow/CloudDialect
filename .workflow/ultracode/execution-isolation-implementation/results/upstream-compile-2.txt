@@ -1,0 +1,23 @@
+error[E0432]: unresolved imports `clouddialect_contracts::errors::StructuralResult`, `clouddialect_contracts::errors::SemanticResult`, `clouddialect_contracts::errors::BehavioralResult`, `clouddialect_contracts::errors::BehavioralOutcome`, `clouddialect_contracts::errors::ValidatorError`, `clouddialect_contracts::errors::BlockingGap`
+ --> /home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation-implementation/results/upstream-exports.rs:1:38
+  |
+1 | ...ts::errors::{StructuralResult, SemanticResult, BehavioralResult, BehavioralOutcome, ValidatorError, BlockingGap};
+  |                 ^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^  ^^^^^^^^^^^ no `BlockingGap` in `errors`
+  |                 |                 |               |                 |                  |
+  |                 |                 |               |                 |                  no `ValidatorError` in `errors`
+  |                 |                 |               |                 no `BehavioralOutcome` in `errors`
+  |                 |                 |               no `BehavioralResult` in `errors`
+  |                 |                 no `SemanticResult` in `errors`
+  |                 no `StructuralResult` in `errors`
+
+error[E0432]: unresolved import `clouddialect_contracts::schema::CatalogUrlLoader`
+ --> /home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation-implementation/results/upstream-exports.rs:2:5
+  |
+2 | use clouddialect_contracts::schema::CatalogUrlLoader;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^----------------
+  |                                     |
+  |                                     no `CatalogUrlLoader` in `schema`
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0432`.

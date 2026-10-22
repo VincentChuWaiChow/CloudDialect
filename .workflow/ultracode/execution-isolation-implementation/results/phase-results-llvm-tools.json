@@ -1,0 +1,25 @@
+{
+  "archive_sha256": "8429c5117debfb45c22cf2f97712ef00e0e94976c96cf92f661974a458ca7e84",
+  "source": "https://static.rust-lang.org/dist/2026-10-15/llvm-tools-1.99.1-x86_64-unknown-linux-gnu.tar.xz",
+  "matches_installed_manifest": true,
+  "source_manifest": "/home/raishin/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/multirust-channel-manifest.toml",
+  "selected": [
+    {
+      "member": "llvm-tools-1.99.1-x86_64-unknown-linux-gnu/llvm-tools-preview/lib/rustlib/x86_64-unknown-linux-gnu/bin/llvm-profdata",
+      "path": "/tmp/clouddialect-phase-llvm-tools/llvm-profdata",
+      "size": 630576
+    },
+    {
+      "member": "llvm-tools-1.99.1-x86_64-unknown-linux-gnu/llvm-tools-preview/lib/rustlib/x86_64-unknown-linux-gnu/lib/libLLVM.so.23.1-rust-1.99.1-stable",
+      "path": "/tmp/clouddialect-phase-llvm-tools/libLLVM.so.23.1-rust-1.99.1-stable",
+      "size": 208167760
+    },
+    {
+      "member": "llvm-tools-1.99.1-x86_64-unknown-linux-gnu/llvm-tools-preview/lib/rustlib/x86_64-unknown-linux-gnu/bin/llvm-cov",
+      "path": "/tmp/clouddialect-phase-llvm-tools/llvm-cov",
+      "size": 619712
+    }
+  ],
+  "global_install": false,
+  "initial_setup_failure": "Conservative 200MB per-member extraction bound rejected the 208167760-byte libLLVM. Inspected exact checksum-bound tar metadata, extracted only three named regular files with 250MB bound; no install scripts or symlinks executed."
+}

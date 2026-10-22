@@ -1,0 +1,17 @@
+{
+  "declared_unit_nodes": 28,
+  "maximum_declared_unit_depth": 16,
+  "deepest_units": [
+    "3.7"
+  ],
+  "parent_stages": 3,
+  "not_a_depth_three_claim": true,
+  "non_dispatch_containers": [
+    "3.2",
+    "3.7"
+  ],
+  "canonical_tasks_2_to_26_covered": true,
+  "graph_acyclic": true,
+  "implementation_authorized": false,
+  "plan_sha256": "3ec03cf607df91bb39ab64c11d49edfcef50fe8b8aa36cb3ea4c10330d5dd80e"
+}

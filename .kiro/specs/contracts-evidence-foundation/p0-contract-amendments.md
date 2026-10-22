@@ -1,8 +1,8 @@
 # P0 — proposed upstream contract reconciliation
 
-**Status: DRAFT — PENDING OWNER APPROVAL.** Documentation reconciliation authorized on 2026-10-22; no Rust/schema implementation, security mechanism, runtime probe or gate closure is authorized. The crate remains a scaffold. BG-01 and Spec 2 UD-1–UD-5 remain OPEN. All implementation/compatibility evidence is MISSING.
+**Status: planning baseline approved; scoped prerequisite implementation partially delivered.** On 2026-10-22 the user approved P0-A–F for planning, subsequently authorized prerequisite implementation and initial MVP versions, and later requested domain organization plus git commit/push. DTO/schema/inventory evidence now exists; full validators, conformance and downstream compatibility remain unfinished. BG-01 and Spec 2 UD-1–UD-5 remain OPEN. No native probes or releases are authorized.
 
-**Planning approval recorded — 2026-10-22:** the user approved P0-A–F **for subsequent implementation planning only**. The draft/adoption banner does not deny that planning approval: code/probes, publication/version disposition, delivered compatibility and BG-01 closure remain separate. [implementation-plan.md](implementation-plan.md) translates the approved planning baseline into bounded units; none is authorized to execute yet.
+**Approval provenance:** planning, code, exact extension-value preservation/raw_value, first MVP versions and crypto/SemVer dependency/profile decisions were separate user approvals. See [implementation-plan.md](implementation-plan.md) and the [current run report](../../../.workflow/ultracode/execution-isolation-implementation/final-report.md). These approvals are not native qualification, authenticated approval evidence or BG-01 closure.
 
 ## Proposed resolutions for review
 
@@ -15,7 +15,7 @@
 | P0-E reference APIs | `errors/` modules and root re-exports; project-scoped DocumentStore separate from schema catalog; explicit JSON and TOML semantic entrypoints. | 8.3/8.7; tasks 9/13/17 |
 | P0-F compatibility | Record approved format/API/catalog revision and previous publication state before adopting changed required fields. | 6.2/7.2/NFR-3; tasks 23/25 |
 
-## A. Public results — proposed API, not current exports
+## A. Public results — canonical contract, DTO exports delivered
 
 `errors/` owns result/error types; root re-exports the public API. Existing task-9 StructuralResult/SemanticResult/ValidatorError/ValidatorWarning definitions are canonical: both result error vectors use ValidatorError, structural results include warnings. No new execution-error category is added to ValidatorError.
 
@@ -150,7 +150,7 @@ Phase-specific fixture expectations are exact: structural/semantic use pass/fail
 
 ## F. Version and approval gate
 
-Existing 1.0.0 examples are **unreleased proposal notation**, not evidence that no format was published elsewhere. Publication history is UNVERIFIED in P0. Before implementation adoption, owner must verify it and record the target format/API/catalog versions. If a prior format was published, new required capability/binding/configuration fields or string-to-object failure_description changes require a new MAJOR and a migration/compatibility policy; never relabel them a compatible MINOR/PATCH. Legacy MINOR-newer structural warning cannot authorize a declaration whose security semantics the core does not implement. No silent default capabilities or approving conversion for old records.
+The user attests this is an initial project and approves document/catalog **1.0.0** and crate API **0.1.0** as first MVP versions. This is user-provided publication history, not an independent external-publication audit. If prior distribution is later discovered, new required capability/binding/configuration fields or string-to-object failure_description changes require MAJOR/migration review; never relabel them a compatible MINOR/PATCH. Legacy MINOR-newer structural warning cannot authorize a declaration whose security semantics the core does not implement. No silent default capabilities or approving conversion for old records.
 
 Pack/toolchain and document-format versions use full SemVer 2.0.0 syntax, including valid prerelease/build identifiers; compatibility policy separately chooses supported versions. A numeric-only regex must not make a valid manifest pack version unrepresentable in verification. Fixtures include 1.2.3-rc.1, 1.2.3+build.1, 1.2.3-0 and rejection of numeric prerelease 01, leading-zero core versions and empty suffixes. Schema syntax checks do not establish version support or range compatibility.
 

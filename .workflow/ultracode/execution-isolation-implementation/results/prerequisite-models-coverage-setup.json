@@ -1,0 +1,7 @@
+{
+  "profiles_directory": "/tmp/clouddialect-prerequisite-profiles-ns1acrte",
+  "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-phase-coverage-target RUSTFLAGS=-Cinstrument-coverage LLVM_PROFILE_FILE=/tmp/clouddialect-prerequisite-profiles-ns1acrte/%p-%m.profraw cargo test --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen --tests",
+  "exit_code": 0,
+  "target": "/tmp/clouddialect-phase-coverage-target",
+  "compiler_matched_tools": "/tmp/clouddialect-phase-llvm-tools"
+}

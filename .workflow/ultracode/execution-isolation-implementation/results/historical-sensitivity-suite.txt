@@ -1,0 +1,26 @@
+test_consistent_but_cyclic_graph_rejected (__main__.SpecGraderTests.test_consistent_but_cyclic_graph_rejected) ... ok
+test_dropped_dependency_edge_rejected (__main__.SpecGraderTests.test_dropped_dependency_edge_rejected) ... ok
+test_false_evidence_status_rejected (__main__.SpecGraderTests.test_false_evidence_status_rejected) ... ok
+test_false_implementation_completion_rejected (__main__.SpecGraderTests.test_false_implementation_completion_rejected) ... ok
+test_missing_document_rejected (__main__.SpecGraderTests.test_missing_document_rejected) ... ok
+test_missing_shall_rejected (__main__.SpecGraderTests.test_missing_shall_rejected) ... ok
+test_orphan_design_rejected (__main__.SpecGraderTests.test_orphan_design_rejected) ... ok
+test_parallel_file_collision_rejected (__main__.SpecGraderTests.test_parallel_file_collision_rejected) ... ok
+test_valid_documents_pass (__main__.SpecGraderTests.test_valid_documents_pass) ... ERROR
+
+======================================================================
+ERROR: test_valid_documents_pass (__main__.SpecGraderTests.test_valid_documents_pass)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/test_check_spec.py", line 39, in test_valid_documents_pass
+    check_spec.main()
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/check_spec.py", line 115, in main
+    require(all(p.startswith((".kiro/specs/execution-isolation/", ".workflow/ultracode/execution-isolation/")) for p in changed), "no unrelated tracked changes")
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation/check_spec.py", line 17, in require
+    raise SystemExit(f"FAIL: {message}")
+SystemExit: FAIL: no unrelated tracked changes
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.356s
+
+FAILED (errors=1)

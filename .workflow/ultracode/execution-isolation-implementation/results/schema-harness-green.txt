@@ -1,0 +1,15 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.42s
+     Running tests/schema_harness.rs (/tmp/clouddialect-phase-target/debug/deps/schema_harness-6d8e662ec2479448)
+
+running 8 tests
+test resource_lookup_is_exact_not_a_host_prefix_permission ... ok
+test malformed_and_invalid_schema_resources_fail_compilation ... ok
+test malformed_instance_is_a_parse_error_not_validity_false_or_success ... ok
+test real_pinned_engine_accepts_a_valid_instance ... ok
+test unknown_http_and_file_references_use_the_deny_loader ... ok
+test format_assertion_switch_has_actual_positive_and_negative_controls ... ok
+test deliberately_incorrect_instance_is_not_a_passing_control ... ok
+test local_refs_and_explicitly_supplied_external_resources_work ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s

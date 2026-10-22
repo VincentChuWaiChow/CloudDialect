@@ -1,5 +1,8 @@
 # Design Document
 
+**Later publication action approval:** the user explicitly requested git commit and git push for this work. Those actions are now authorized; the earlier no-commit/no-push implementation limit is historical. Native probes, deployment and releases remain unauthorized.
+
+
 ## Current physical domain layout
 User requested domain-first organization on2026-10-22. Document DTO implementation is now private `src/documents/{behavioral_contract,evidence,verification,references,raw_objects}.rs`; `src/validator/mod.rs` preserves every existing public document import as a compatibility facade. Existing `manifest/`, `schema/` and `errors/` remain cohesive domains/support. Historical source paths below describe original task ownership; new edits use the current owner paths. No new public document namespace, aggregate framework, validator behavior or gate approval follows from this move. Shared repository AI guidance is canonical `.ai/rules/engineering.md` with relative client entrypoint symlinks.
 
@@ -693,7 +696,7 @@ Annotated JSON Schema skeleton (key fields with types and constraints):
 
 ### 4.3 Verification Result
 
-**P0-C proposed schema, pending owner/version approval; not implemented or published.** Configuration is a reference to exact immutable secret-free bytes. Artifact bindings and approval/origin strings are untrusted claims until checked against independent trusted context; JSON Schema cannot authenticate them. P0-C specifies semantic checks for digest lengths, unique test IDs, obligation membership, UTC time and matching document references.
+**P0-C initial MVP schema artifact implemented under separate code/version approvals; semantic and authority checks remain unfinished.** Configuration is a reference to exact immutable secret-free bytes. Artifact bindings and approval/origin strings are untrusted claims until checked against independent trusted context; JSON Schema cannot authenticate them. P0-C specifies semantic checks for digest lengths, unique test IDs, obligation membership, UTC time and matching document references.
 
 ```json
 {
@@ -1640,7 +1643,7 @@ crates/
       integration/
 ```
 
-**Public API surface (traits and key types — no implementation):**
+**Target public API surface (DTOs partially delivered; validator traits/algorithms remain unfinished):**
 
 ```rust
 // clouddialect-contracts public API

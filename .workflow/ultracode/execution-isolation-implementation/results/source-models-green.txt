@@ -1,0 +1,14 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.72s
+     Running tests/source_document_models.rs (/tmp/clouddialect-phase-target/debug/deps/source_document_models-7d52335dbe9b71d1)
+
+running 7 tests
+test every_evidence_class_preserves_its_recorded_support ... ok
+test complete_source_contract_round_trips_without_losing_nested_data ... ok
+test source_fidelity_labels_are_closed_and_not_manifest_summaries ... ok
+test extension_values_survive_at_root_and_nested_model_boundaries ... ok
+test typed_data_is_not_mistaken_for_schema_or_behavioral_validation ... ok
+test required_source_fields_and_object_shapes_are_not_fabricated ... ok
+test unknown_assumptions_and_evidence_references_are_distinct_data ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

@@ -1,0 +1,22 @@
+{
+  "RustIntegrationTests": 94,
+  "CompileFailDoctests": 6,
+  "PythonTests": 11,
+  "old_public_api_type_identity_test": "PASSbeforeandafter",
+  "research_hashes_preserved": {
+    "research.md": "dac1b1907059187912cafdb3c9b168ff388ce75099a011a9750b37ff44cbd110",
+    "cloud-transformation-framework-research.pdf": "b2b31aa20cb4aac5f971433c9a33d467c3910e1a50f4da807b93cfdc17b926e5"
+  },
+  "entrypoints": {
+    "AGENTS.md": ".ai/rules/engineering.md",
+    "CLAUDE.md": ".ai/rules/engineering.md",
+    "GEMINI.md": ".ai/rules/engineering.md",
+    ".github/copilot-instructions.md": "../.ai/rules/engineering.md",
+    ".kiro/steering/engineering.md": "../../.ai/rules/engineering.md",
+    ".cursor/rules/engineering.mdc": "../../.ai/rules/engineering.md"
+  },
+  "no_execution_crate": true,
+  "runtime_gates": "OPEN unchanged",
+  "remote_feature_branch_before": "ls-remote --exit-code exit2/no matching ref; no auth/network error",
+  "signing": "existing commit.gpgsign=true retained; noactivegithooksfound"
+}

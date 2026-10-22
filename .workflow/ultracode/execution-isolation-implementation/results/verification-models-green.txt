@@ -1,0 +1,14 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.81s
+     Running tests/verification_models.rs (/tmp/clouddialect-phase-target/debug/deps/verification_models-7a2fac109512a098)
+
+running 7 tests
+test completeness_result_has_only_the_three_non_accepting_outcomes ... ok
+test approval_strings_and_unvalidated_projection_data_do_not_become_authority ... ok
+test projected_tests_and_gap_diagnostics_remain_exact_non_accepting_data ... ok
+test test_outcomes_and_failure_object_shape_match_the_proposed_contract ... ok
+test schema_selector_and_extension_values_survive_verification_round_trip ... ok
+test verification_model_retains_every_binding_and_immutable_reference_field ... ok
+test required_verification_fields_are_not_silently_defaulted ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

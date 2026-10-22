@@ -1,0 +1,203 @@
+.workflow/ultracode/execution-isolation-implementation/results/ai-rules-red.txt:1: trailing whitespace.
++test_every_entrypoint_is_a_relative_symlink_to_the_same_rule (test_ai_rules.AiRulesTests.test_every_entrypoint_is_a_relative_symlink_to_the_same_rule) ...
+.workflow/ultracode/execution-isolation-implementation/results/catalog-index-green.txt:38: new blank line at EOF.
+.workflow/ultracode/execution-isolation-implementation/results/catalog-schemas-green.txt:56: new blank line at EOF.
+.workflow/ultracode/execution-isolation-implementation/results/domain-api-after.txt:9: new blank line at EOF.
+.workflow/ultracode/execution-isolation-implementation/results/domain-api-before.txt:9: new blank line at EOF.
+.workflow/ultracode/execution-isolation-implementation/results/domain-final-all-tests.txt:192: new blank line at EOF.
+.workflow/ultracode/execution-isolation-implementation/results/domain-final-negative-doctests.txt:79: new blank line at EOF.
+.workflow/ultracode/execution-isolation-implementation/results/domain-layout-before.txt:1: trailing whitespace.
++test_document_families_have_cohesive_owned_files (test_domain_layout.DomainLayoutTests.test_document_families_have_cohesive_owned_files) ...
+.workflow/ultracode/execution-isolation-implementation/results/extension-bytes-green.txt:9: new blank line at EOF.
+.workflow/ultracode/execution-isolation-implementation/results/manifest-types-green.txt:21: new blank line at EOF.
+.workflow/ultracode/execution-isolation-implementation/results/p0-design-baseline.txt:29: new blank line at EOF.
+.workflow/ultracode/execution-isolation-implementation/results/p0-design-current.txt:29: new blank line at EOF.
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:19: trailing whitespace.
++  ✅ [PASS] Line 98: WHEN a CloudDialect JSON document is validated, THE Validator SHALL resolve all
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:32: trailing whitespace.
++              ... be resolved from the Bundled Schema Catalog, THE Validator
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:68: trailing whitespace.
++  ✅ [PASS] Line 114: THE Schema_Catalog SHALL include a machine-readable index document that: (a) is
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:80: trailing whitespace.
++  ✅ [PASS] Line 128: THE Behavioral_Contract_Schema SHALL require each contract document to declare:
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:128: trailing whitespace.
++  ✅ [PASS] Line 144: THE Behavioral_Contract_Schema SHALL permit recording of behavioral differences
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:144: trailing whitespace.
++              ... unknown extension field still passes structural validation
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:178: trailing whitespace.
++              ... defaulting it implicitly; every evidence record MUST carry
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:192: trailing whitespace.
++  ❌ [FAIL] Line 175: Verification method: Conformance fixture asserting an `inferred` record with an
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:202: trailing whitespace.
++              ...hema SHALL require the `unresolved_assumptions` field to be
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:227: trailing whitespace.
++              ...fication `unknown`, THE Validator SHALL return a structured
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:239: trailing whitespace.
++  ✅ [PASS] Line 200: THE Verification_Result_Schema SHALL require each result document to declare: a
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:276: trailing whitespace.
++              ...chema SHALL require: at least one approver identity, and an
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:288: trailing whitespace.
++              ...ds not defined in the base schema version may be added to a
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:291: trailing whitespace.
++              ...nown extension field passes structural validation under the
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:304: trailing whitespace.
++              ...fact causes the Verifier to report the acceptance result as
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:326: trailing whitespace.
++              ...ifest, requiring at minimum: a pack identifier formatted as
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:340: trailing whitespace.
++  ❌ [FAIL] Line 243: Verification method: Conformance fixture asserting a manifest with an operation
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:363: trailing whitespace.
++              ...Dialect schema-catalog version the pack is compatible with,
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:379: trailing whitespace.
++              ...issing toolchain section fails manifest validation when the
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:404: trailing whitespace.
++  ❌ [FAIL] Line 263: Verification method: Conformance fixture asserting the unsupported operation is
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:413: trailing whitespace.
++  ✅ [PASS] Line 276: THE Framework_Core SHALL define and document three distinct version spaces: (a)
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:450: trailing whitespace.
++              ...dator does not support, THE Validator SHALL return an error
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:515: trailing whitespace.
++  ❌ [FAIL] Line 319: Verification method: Conformance fixture asserting a document at an unsupported
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:549: trailing whitespace.
++              ...f the following: (a) every contract reference in a manifest
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:601: trailing whitespace.
++  ❌ [FAIL] Line 367: Verification method: Catalog completeness review against all `$ref` URIs in all
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:602: trailing whitespace.
++              ...published schemas; end-to-end validation test executed in a
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:663: trailing whitespace.
++  ❌ [FAIL] Line 394: Verification method: Review of extension convention document confirming all six
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:672: trailing whitespace.
++  ❌ [FAIL] Line 397: WHEN a document contains an extension field whose qualified key prefix conforms
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:703: trailing whitespace.
++              ...ecognized mandatory extension produces a blocker result and
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:728: trailing whitespace.
++  ❌ [FAIL] Line 414: Verification method: Review of release artifact confirming the registry file is
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:753: trailing whitespace.
++  ❌ [FAIL] Line 421: Namespace collision between two community extensions using the same prefix from
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:773: trailing whitespace.
++  ❌ [FAIL] Line 425: Extension attempting to override a core verification result field: core outcome
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:787: trailing whitespace.
++  ❌ [FAIL] Line 439: WHEN THE Validator encounters any validation failure — structural, semantic, or
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:800: trailing whitespace.
++  ✅ [PASS] Line 443: THE Validator SHALL NOT silently accept, silently ignore, or partially validate
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:803: trailing whitespace.
++  ❌ [FAIL] Line 444: Verification method: Conformance fixture asserting that a document with a known
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:812: trailing whitespace.
++  ❌ [FAIL] Line 447: IF a pack manifest declares a supported operation range that does not cover the
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:813: trailing whitespace.
++              ...source artifact being analyzed, THEN THE Manifest_Validator
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:816: trailing whitespace.
++  ❌ [FAIL] Line 448: Verification method: Integration test with a source artifact using an operation
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:839: trailing whitespace.
++              ...DX JSON format in each release artifact, listing all direct
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:854: trailing whitespace.
++  ❌ [FAIL] Line 470: Verification method: Review of release artifact for signature file; integration
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:864: trailing whitespace.
++              ... with CloudDialect's dual-licensing distribution model, THE
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:866: trailing whitespace.
++  ❌ [FAIL] Line 474: Verification method: Review of dependency screening process documentation; SBOM
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:867: trailing whitespace.
++              ...review confirming no incompatible licenses are present in a
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-baseline.txt:876: trailing whitespace.
++              ...Schema SHALL be expressed in JSON Schema Draft 2020-12 such
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:19: trailing whitespace.
++  ✅ [PASS] Line 100: WHEN a CloudDialect JSON document is validated, THE Validator SHALL resolve all
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:32: trailing whitespace.
++              ... be resolved from the Bundled Schema Catalog, THE Validator
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:68: trailing whitespace.
++  ✅ [PASS] Line 116: THE Schema_Catalog SHALL include a machine-readable index document that: (a) is
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:80: trailing whitespace.
++  ✅ [PASS] Line 130: THE Behavioral_Contract_Schema SHALL require each contract document to declare:
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:128: trailing whitespace.
++  ✅ [PASS] Line 146: THE Behavioral_Contract_Schema SHALL permit recording of behavioral differences
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:144: trailing whitespace.
++              ... unknown extension field still passes structural validation
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:178: trailing whitespace.
++              ... defaulting it implicitly; every evidence record MUST carry
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:192: trailing whitespace.
++  ❌ [FAIL] Line 177: Verification method: Conformance fixture asserting an `inferred` record with an
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:202: trailing whitespace.
++              ...hema SHALL require the `unresolved_assumptions` field to be
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:227: trailing whitespace.
++              ...fication `unknown`, THE Validator SHALL return a structured
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:239: trailing whitespace.
++  ✅ [PASS] Line 202: THE Verification_Result_Schema SHALL require each result document to declare: a
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:288: trailing whitespace.
++              ...ds not defined in the base schema version may be added to a
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:291: trailing whitespace.
++              ...nown extension field passes structural validation under the
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:304: trailing whitespace.
++              ...fact causes the Verifier to report the acceptance result as
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:338: trailing whitespace.
++              ...ifest, requiring at minimum: a pack identifier formatted as
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:352: trailing whitespace.
++  ❌ [FAIL] Line 249: Verification method: Conformance fixture asserting a manifest with an operation
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:375: trailing whitespace.
++              ...Dialect schema-catalog version the pack is compatible with,
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:391: trailing whitespace.
++              ...issing toolchain section fails manifest validation when the
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:416: trailing whitespace.
++  ❌ [FAIL] Line 269: Verification method: Conformance fixture asserting the unsupported operation is
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:437: trailing whitespace.
++  ✅ [PASS] Line 286: THE Framework_Core SHALL define and document three distinct version spaces: (a)
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:474: trailing whitespace.
++              ...dator does not support, THE Validator SHALL return an error
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:539: trailing whitespace.
++  ❌ [FAIL] Line 329: Verification method: Conformance fixture asserting a document at an unsupported
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:613: trailing whitespace.
++              ...ss projection, mismatched/stale verification projection and
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:622: trailing whitespace.
++              ... the P0-E DocumentStore, with trusted explicit DocumentKind
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:624: trailing whitespace.
++  ❌ [FAIL] Line 367: Verification method: JSON/TOML signature consumer tests and store fixtures with
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:649: trailing whitespace.
++  ❌ [FAIL] Line 385: Verification method: Catalog completeness review against all `$ref` URIs in all
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:650: trailing whitespace.
++              ...published schemas; end-to-end validation test executed in a
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:723: trailing whitespace.
++  ❌ [FAIL] Line 416: Verification method: Review of extension convention document confirming all six
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:732: trailing whitespace.
++  ❌ [FAIL] Line 419: WHEN a document contains an extension field whose qualified key prefix conforms
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:763: trailing whitespace.
++              ...ecognized mandatory extension produces a blocker result and
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:788: trailing whitespace.
++  ❌ [FAIL] Line 436: Verification method: Review of release artifact confirming the registry file is
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:813: trailing whitespace.
++  ❌ [FAIL] Line 443: Namespace collision between two community extensions using the same prefix from
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:833: trailing whitespace.
++  ❌ [FAIL] Line 447: Extension attempting to override a core verification result field: core outcome
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:847: trailing whitespace.
++  ❌ [FAIL] Line 461: WHEN THE Validator encounters any validation failure — structural, semantic, or
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:860: trailing whitespace.
++  ✅ [PASS] Line 465: THE Validator SHALL NOT silently accept, silently ignore, or partially validate
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:863: trailing whitespace.
++  ❌ [FAIL] Line 466: Verification method: Conformance fixture asserting that a document with a known
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:872: trailing whitespace.
++  ❌ [FAIL] Line 469: IF a pack manifest declares a supported operation range that does not cover the
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:873: trailing whitespace.
++              ...source artifact being analyzed, THEN THE Manifest_Validator
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:876: trailing whitespace.
++  ❌ [FAIL] Line 470: Verification method: Integration test with a source artifact using an operation
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:899: trailing whitespace.
++              ...DX JSON format in each release artifact, listing all direct
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:914: trailing whitespace.
++  ❌ [FAIL] Line 492: Verification method: Review of release artifact for signature file; integration
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:924: trailing whitespace.
++              ... with CloudDialect's dual-licensing distribution model, THE
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:926: trailing whitespace.
++  ❌ [FAIL] Line 496: Verification method: Review of dependency screening process documentation; SBOM
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:927: trailing whitespace.
++              ...review confirming no incompatible licenses are present in a
+.workflow/ultracode/execution-isolation-implementation/results/p0-requirements-current.txt:936: trailing whitespace.
++              ...Schema SHALL be expressed in JSON Schema Draft 2020-12 such
+.workflow/ultracode/execution-isolation-implementation/results/phase-results-coverage-test.txt:84: new blank line at EOF.
+.workflow/ultracode/execution-isolation-implementation/results/phase-results-full-test.txt:36: new blank line at EOF.
+.workflow/ultracode/execution-isolation-implementation/results/phase-results-green.txt:16: new blank line at EOF.
+.workflow/ultracode/execution-isolation-implementation/results/prerequisite-catalog-coverage-tests.txt:184: new blank line at EOF.
+.workflow/ultracode/execution-isolation-implementation/results/prerequisite-catalog-final-all-tests.txt:185: new blank line at EOF.
+.workflow/ultracode/execution-isolation-implementation/results/references-green.txt:15: new blank line at EOF.
+.workflow/ultracode/execution-isolation-implementation/results/reproducible-document-checks.txt:16: new blank line at EOF.
+.workflow/ultracode/execution-isolation-implementation/results/schema-harness-green.txt:16: new blank line at EOF.
+.workflow/ultracode/execution-isolation-implementation/results/schema-repair-green.txt:31: new blank line at EOF.
+.workflow/ultracode/execution-isolation-implementation/results/source-models-green.txt:15: new blank line at EOF.
+.workflow/ultracode/execution-isolation-implementation/results/verification-models-green.txt:15: new blank line at EOF.

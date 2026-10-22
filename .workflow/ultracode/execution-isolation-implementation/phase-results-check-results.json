@@ -1,0 +1,118 @@
+{
+  "checked_at": "2026-10-22T11:01:45.149804+00:00",
+  "checks": [
+    {
+      "name": "check",
+      "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-phase-target cargo check --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen --all-targets",
+      "exit_code": 0,
+      "status": "pass",
+      "evidence": "results/phase-results-check.txt"
+    },
+    {
+      "name": "fmt",
+      "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-phase-target cargo fmt --manifest-path crates/clouddialect-contracts/Cargo.toml --check",
+      "exit_code": 0,
+      "status": "pass",
+      "evidence": "results/phase-results-fmt.txt"
+    },
+    {
+      "name": "clippy",
+      "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-phase-target cargo clippy --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen --all-targets -- -D warnings",
+      "exit_code": 0,
+      "status": "pass",
+      "evidence": "results/phase-results-clippy.txt"
+    },
+    {
+      "name": "scaffold",
+      "command": "rtk proxy python3 -m unittest discover -s tests -p test_contracts_scaffold.py -v",
+      "exit_code": 0,
+      "status": "pass",
+      "evidence": "results/phase-results-scaffold.txt"
+    },
+    {
+      "name": "p0-docs",
+      "command": "rtk proxy python3 .workflow/ultracode/execution-isolation-implementation/verify-p0.py",
+      "exit_code": 1,
+      "status": "fail",
+      "evidence": "results/phase-results-p0-docs.txt"
+    },
+    {
+      "name": "diff",
+      "command": "rtk proxy git diff --check",
+      "exit_code": 0,
+      "status": "pass",
+      "evidence": "results/phase-results-diff.txt"
+    },
+    {
+      "name": "negative-doctests",
+      "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-phase-target cargo test --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen --doc -- --nocapture",
+      "exit_code": 0,
+      "status": "pass",
+      "evidence": "results/phase-results-negative-doctests.txt"
+    },
+    {
+      "name": "p0-content-only",
+      "command": "rtk proxy python3 .workflow/ultracode/execution-isolation-implementation/verify-p0.py P0DocumentationTests.test_approval_shape_is_not_authentication P0DocumentationTests.test_binding_test_and_digest_shape_negatives P0DocumentationTests.test_capability_and_catalog_contracts P0DocumentationTests.test_draft_status_and_no_gate_closure P0DocumentationTests.test_full_embedded_schemas_and_toml_parse P0DocumentationTests.test_full_semver_boundaries P0DocumentationTests.test_nonpass_failure_object_and_unicode_boundaries P0DocumentationTests.test_schema_kind_and_api_consistency P0DocumentationTests.test_valid_verification_and_required_fields",
+      "exit_code": 0,
+      "status": "pass",
+      "evidence": "results/phase-results-p0-content.txt",
+      "excluded_case": "test_scope_and_existing_task_checkmarks",
+      "why": "Old hash allowlist excludes newly authorized Rust implementation; replacement fresh scope/hash audit required, not silently waived."
+    },
+    {
+      "name": "llvm-coverage-export",
+      "command": "LD_LIBRARY_PATH=/tmp/clouddialect-phase-llvm-tools rtk proxy /tmp/clouddialect-phase-llvm-tools/llvm-cov export /tmp/clouddialect-phase-coverage-target/debug/deps/phase_results-2abe4bdefb6d5c86 -instr-profile=/tmp/clouddialect-phase-profiles/merged.profdata crates/clouddialect-contracts/src/errors/diagnostics.rs crates/clouddialect-contracts/src/errors/phase.rs -summary-only",
+      "exit_code": 0,
+      "status": "pass",
+      "evidence": "results/phase-results-coverage.json",
+      "notes": "Command succeeded, but export includes tests/dependencies; no production mappings emitted. Threshold UNVERIFIED, not pass."
+    },
+    {
+      "name": "production-coverage-threshold",
+      "status": "UNVERIFIED",
+      "evidence": "results/phase-results-coverage-summary.json",
+      "reason": "UNVERIFIED: no instrumented production mappings emitted for the derive-only type modules; do not claim 80% or count test/dependency lines"
+    },
+    {
+      "name": "red-missing-api",
+      "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-phase-target cargo test --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen --test phase_results",
+      "exit_code": 101,
+      "status": "expected_fail",
+      "evidence": "results/phase-results-red.txt",
+      "reason": "E0432/E0425 missing canonical public API after dependency compilation; not setup failure"
+    },
+    {
+      "name": "green-same-target",
+      "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-phase-target cargo test --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen --test phase_results",
+      "exit_code": 0,
+      "status": "pass",
+      "test_count": 8,
+      "evidence": "results/phase-results-green.txt"
+    },
+    {
+      "name": "full-crate-tests",
+      "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-phase-target cargo test --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen",
+      "exit_code": 0,
+      "status": "pass",
+      "integration_test_count": 8,
+      "compile_fail_doctest_count": 2,
+      "empty_preexisting_targets": [
+        "src/lib.rs unit tests",
+        "tests/conformance.rs"
+      ],
+      "evidence": "results/phase-results-full-test.txt"
+    },
+    {
+      "name": "independent-source-review",
+      "status": "pass",
+      "evidence": "results/06-phase-results-review.md",
+      "scope": "unit 1.2 only; reviewer did not independently rerun tests"
+    },
+    {
+      "name": "checkpoint-commits",
+      "status": "skipped",
+      "reason": "No explicit commit action authorization. Local RED/GREEN logs are not checkpoint commits."
+    }
+  ],
+  "overall": "Code/API checks pass; coverage threshold UNVERIFIED; historical P0 docs-only scope check fails as expected for authorized source edits, raw failure preserved. Fresh source scope audit required."
+}

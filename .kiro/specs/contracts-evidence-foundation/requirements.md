@@ -1,5 +1,8 @@
 # Requirements Document
 
+**Later publication action approval:** the user explicitly requested git commit and git push for this work. Those actions are now authorized; the earlier no-commit/no-push implementation limit is historical. Native probes, deployment and releases remain unauthorized.
+
+
 ## Introduction
 
 CloudDialect is a community framework for cloud workload transformation and migration. This document defines the behavioral contract and evidence schemas that form the foundation layer for all CloudDialect transformation activity — Spec 1 of 3 in a sequenced set.
@@ -19,7 +22,7 @@ Every requirement carries one of four evidence status labels reflecting where ea
 - `IMPLEMENTED BUT UNVERIFIED` — an artifact exists but has not been validated against conformance fixtures or integration tests.
 - `VERIFIED WITHIN A DECLARED SCOPE` — passing conformance fixtures and integration tests exist for a stated set of inputs and environments.
 
-All requirements in this document start at `MISSING` because no implementation exists. The status field exists to make gaps visible throughout development.
+The labels below retain the original full-conformance baseline, not a claim that no implementation exists now. Current bounded unit evidence and remaining gaps are recorded in the linked delivery plan/run report; partial artifact delivery does not verify an entire requirement.
 
 ---
 

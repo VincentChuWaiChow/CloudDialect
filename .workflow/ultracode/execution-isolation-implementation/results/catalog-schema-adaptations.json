@@ -1,0 +1,14 @@
+{
+  "baseline": "design.md four embedded JSON schemas plus canonical task6 registry definition",
+  "version_authority": "user initial-MVP declaration: document/catalog1.0.0, crate0.1.0",
+  "adaptations": [
+    "Use same full SemVer grammar without unsupported lookahead; not whitespace guard preserves strict ending across regex engines.",
+    "Enforce stated lowercase UUIDv4, not merely generic UUID format.",
+    "Both obligation-support alternatives explicitly forbid the other key, including the empty-evidence-plus-assumption loophole.",
+    "Apply SemVer syntax to catalog entry versions and registry; registry namespace uses existing ASCII grammar."
+  ],
+  "not_claimed": [
+    "Schema shape does not establish crypto, authority, exact digest lengths or project admission.",
+    "Focused tests are not full conformance fixture delivery or release qualification."
+  ]
+}

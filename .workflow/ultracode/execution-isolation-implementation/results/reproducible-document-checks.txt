@@ -1,0 +1,15 @@
+PASS: 10 requirement groups, 104 atomic criteria, 6 threats, 5 open decisions, 10 design elements, 21 tasks, 3 parent waves; actual leaf depth 6 disclosed; baseline preserved
+test_consistent_but_cyclic_graph_rejected (test_check_spec.SpecGraderTests.test_consistent_but_cyclic_graph_rejected) ... ok
+test_dropped_dependency_edge_rejected (test_check_spec.SpecGraderTests.test_dropped_dependency_edge_rejected) ... ok
+test_false_evidence_status_rejected (test_check_spec.SpecGraderTests.test_false_evidence_status_rejected) ... ok
+test_false_implementation_completion_rejected (test_check_spec.SpecGraderTests.test_false_implementation_completion_rejected) ... ok
+test_missing_document_rejected (test_check_spec.SpecGraderTests.test_missing_document_rejected) ... ok
+test_missing_shall_rejected (test_check_spec.SpecGraderTests.test_missing_shall_rejected) ... ok
+test_orphan_design_rejected (test_check_spec.SpecGraderTests.test_orphan_design_rejected) ... ok
+test_parallel_file_collision_rejected (test_check_spec.SpecGraderTests.test_parallel_file_collision_rejected) ... ok
+test_valid_documents_pass (test_check_spec.SpecGraderTests.test_valid_documents_pass) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.371s
+
+OK

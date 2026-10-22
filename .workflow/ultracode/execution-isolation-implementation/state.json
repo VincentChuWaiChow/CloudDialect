@@ -1,0 +1,740 @@
+{
+  "title": "Execution-isolation implementation",
+  "slug": "execution-isolation-implementation",
+  "created_at": "2026-10-22T07:25:44.090021+00:00",
+  "updated_at": "2026-10-22T12:30:58.121286+00:00",
+  "status": "executing",
+  "mode": "delegated",
+  "baseline_ref": "3b9cb6bd0ee82dbef3b731a35ce68fc778c4906a",
+  "risk_level": "high",
+  "eval_contract": {
+    "level": "full",
+    "path": "eval-contract.md",
+    "status": "checked"
+  },
+  "approval": {
+    "required": true,
+    "granted": false,
+    "notes": "Implementation, initial MVP versions, exact extension feature and three direct pins/profile separately approved; latest user explicitly authorizes domain organization/rules plus git commit/push. No native probes/releases/security-gate closure."
+  },
+  "delegation": {
+    "native_agent_available": true,
+    "native_agent_planned": true,
+    "native_agent_used": true,
+    "agent_count": 12,
+    "wave_count": 7,
+    "no_delegation_reason": "",
+    "notes": "Latest domain/rules/publication request admits two additional bounded sidecars:11layoutmapping and12integrated static review. Twelve cumulative used, zero followups/recursion. Actual inherited model/effort and separate sandbox isolation unverified.",
+    "additional_dispatch_limit": 2,
+    "additional_dispatches_used": 2
+  },
+  "packets": [
+    {
+      "id": "01-isolation-credentials",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/01-isolation-credentials.md"
+    },
+    {
+      "id": "02-persistence-budgets",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/02-persistence-budgets.md"
+    },
+    {
+      "id": "03-integrated-review",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/03-integrated-review.md"
+    },
+    {
+      "id": "04-p0-review",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/04-p0-review.md"
+    },
+    {
+      "id": "05-planning-review",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/05-planning-review.md"
+    },
+    {
+      "id": "06-phase-results-review",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/06-phase-results-review.md"
+    },
+    {
+      "id": "07-model-contract-check",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/07-model-contract-check.md"
+    },
+    {
+      "id": "08-prerequisite-integration-review",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/08-prerequisite-integration-review.md"
+    },
+    {
+      "id": "09-manifest-types",
+      "status": "complete",
+      "owner": "write-capable-agent",
+      "write_scope": [
+        "src/manifest/types.rs",
+        "src/manifest/mod.rs",
+        "tests/manifest_types.rs"
+      ],
+      "result_path": "results/09-manifest-types.md"
+    },
+    {
+      "id": "10-schema-review",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/10-schema-review.md"
+    },
+    {
+      "id": "11-domain-layout",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/11-domain-layout.md"
+    },
+    {
+      "id": "12-domain-integration-review",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/12-domain-integration-review.md"
+    }
+  ],
+  "verification": {
+    "status": "94Rustintegration+6compilefaildoctests,11Python;check/fmt/Clippy PASS;97.06%emittedproductionlines. Historicaldraft/scopegradersnotblanketgreen;fullconformance/nativeunverified",
+    "checks": [
+      {
+        "name": "scaffold",
+        "command": "rtk proxy python3 -m unittest discover -s tests -p test_contracts_scaffold.py -v",
+        "exit_code": 0,
+        "status": "pass",
+        "evidence": "results/scaffold.txt"
+      },
+      {
+        "name": "historical-spec-checker",
+        "command": "rtk proxy python3 .workflow/ultracode/execution-isolation/check_spec.py",
+        "exit_code": 1,
+        "status": "fail",
+        "evidence": "results/historical-spec-checker.txt"
+      },
+      {
+        "name": "historical-sensitivity-suite",
+        "command": "rtk proxy python3 .workflow/ultracode/execution-isolation/test_check_spec.py -v",
+        "exit_code": 1,
+        "status": "fail",
+        "evidence": "results/historical-sensitivity-suite.txt"
+      },
+      {
+        "name": "tracked-diff",
+        "command": "rtk git diff --check",
+        "exit_code": 0,
+        "status": "pass",
+        "evidence": "results/tracked-diff.txt"
+      },
+      {
+        "name": "fresh-baseline-document-checker-and-sensitivity",
+        "command": "rtk proxy bash .workflow/ultracode/execution-isolation-implementation/reproduce-document-checks.sh",
+        "exit_code": 0,
+        "status": "pass",
+        "evidence": "results/reproducible-document-checks.txt",
+        "adapter": "reproduce-document-checks.sh",
+        "scope": "Unchanged historical source/doc/graph checks; baseline head adapted, new drafts checked separately"
+      },
+      {
+        "name": "baseline-preservation",
+        "required": true,
+        "status": "pass",
+        "evidence": "results/final-structure-checks.json"
+      },
+      {
+        "name": "branch-and-baseline",
+        "required": true,
+        "status": "pass",
+        "evidence": "results/final-structure-checks.json"
+      },
+      {
+        "name": "UD-1-isolation.md",
+        "required": true,
+        "status": "pass",
+        "evidence": "results/final-structure-checks.json"
+      },
+      {
+        "name": "UD-2-ipc.md",
+        "required": true,
+        "status": "pass",
+        "evidence": "results/final-structure-checks.json"
+      },
+      {
+        "name": "UD-3-credentials.md",
+        "required": true,
+        "status": "pass",
+        "evidence": "results/final-structure-checks.json"
+      },
+      {
+        "name": "UD-4-persistence.md",
+        "required": true,
+        "status": "pass",
+        "evidence": "results/final-structure-checks.json"
+      },
+      {
+        "name": "UD-5-budgets.md",
+        "required": true,
+        "status": "pass",
+        "evidence": "results/final-structure-checks.json"
+      },
+      {
+        "name": "BG-01-upstream.md",
+        "required": true,
+        "status": "pass",
+        "evidence": "results/final-structure-checks.json"
+      },
+      {
+        "name": "prerequisite-proposal",
+        "required": true,
+        "status": "pass",
+        "evidence": "results/final-structure-checks.json"
+      },
+      {
+        "name": "six-qualification-artifacts",
+        "required": true,
+        "status": "pass",
+        "evidence": "results/final-structure-checks.json"
+      },
+      {
+        "name": "no-invented-budget",
+        "required": true,
+        "status": "pass",
+        "evidence": "results/final-structure-checks.json"
+      },
+      {
+        "name": "new-file-whitespace",
+        "required": true,
+        "status": "pass",
+        "evidence": "results/final-structure-checks.json"
+      },
+      {
+        "name": "local-markdown-links",
+        "required": true,
+        "status": "pass",
+        "evidence": "results/final-structure-checks.json"
+      },
+      {
+        "name": "json-parse",
+        "required": true,
+        "status": "pass",
+        "evidence": "results/final-structure-checks.json"
+      },
+      {
+        "name": "runtime-not-started",
+        "required": true,
+        "status": "pass",
+        "evidence": "results/final-structure-checks.json"
+      },
+      {
+        "name": "new-file-scope",
+        "required": true,
+        "status": "pass",
+        "evidence": "results/final-structure-checks.json"
+      },
+      {
+        "name": "no-staged-changes",
+        "required": true,
+        "status": "pass",
+        "evidence": "results/final-structure-checks.json"
+      },
+      {
+        "name": "tracked-diff-check",
+        "required": true,
+        "status": "pass",
+        "evidence": "results/final-structure-checks.json"
+      },
+      {
+        "name": "native runtime and coverage",
+        "required": true,
+        "status": "skipped",
+        "evidence": "No approved environment or closed gates; user explicitly authorized draft plans only."
+      }
+    ],
+    "current_scope": "Domain-organized prerequisite foundation and sharedrule links; domain-final-check-results.json/domain-coverage-summary.json current",
+    "planning_checks": [
+      {
+        "name": "planning",
+        "command": "rtk proxy python3 .workflow/ultracode/execution-isolation-implementation/verify-planning.py",
+        "exit_code": 0,
+        "status": "pass",
+        "evidence": "results/planning-final-planning.txt"
+      },
+      {
+        "name": "p0",
+        "command": "rtk proxy python3 .workflow/ultracode/execution-isolation-implementation/verify-p0.py",
+        "exit_code": 0,
+        "status": "pass",
+        "evidence": "results/planning-final-p0.txt"
+      },
+      {
+        "name": "scaffold",
+        "command": "rtk proxy python3 -m unittest discover -s tests -p test_contracts_scaffold.py -v",
+        "exit_code": 0,
+        "status": "pass",
+        "evidence": "results/planning-final-scaffold.txt"
+      },
+      {
+        "name": "diff-whitespace",
+        "command": "rtk git diff --check",
+        "exit_code": 0,
+        "status": "pass",
+        "evidence": "results/planning-final-diff-whitespace.txt"
+      }
+    ],
+    "implementation_checks": [
+      {
+        "name": "check",
+        "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-phase-target cargo check --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen --all-targets",
+        "exit_code": 0,
+        "status": "pass",
+        "evidence": "results/phase-results-check.txt"
+      },
+      {
+        "name": "fmt",
+        "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-phase-target cargo fmt --manifest-path crates/clouddialect-contracts/Cargo.toml --check",
+        "exit_code": 0,
+        "status": "pass",
+        "evidence": "results/phase-results-fmt.txt"
+      },
+      {
+        "name": "clippy",
+        "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-phase-target cargo clippy --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen --all-targets -- -D warnings",
+        "exit_code": 0,
+        "status": "pass",
+        "evidence": "results/phase-results-clippy.txt"
+      },
+      {
+        "name": "scaffold",
+        "command": "rtk proxy python3 -m unittest discover -s tests -p test_contracts_scaffold.py -v",
+        "exit_code": 0,
+        "status": "pass",
+        "evidence": "results/phase-results-scaffold.txt"
+      },
+      {
+        "name": "p0-docs",
+        "command": "rtk proxy python3 .workflow/ultracode/execution-isolation-implementation/verify-p0.py",
+        "exit_code": 1,
+        "status": "fail",
+        "evidence": "results/phase-results-p0-docs.txt"
+      },
+      {
+        "name": "diff",
+        "command": "rtk proxy git diff --check",
+        "exit_code": 0,
+        "status": "pass",
+        "evidence": "results/phase-results-diff.txt"
+      },
+      {
+        "name": "negative-doctests",
+        "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-phase-target cargo test --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen --doc -- --nocapture",
+        "exit_code": 0,
+        "status": "pass",
+        "evidence": "results/phase-results-negative-doctests.txt"
+      },
+      {
+        "name": "p0-content-only",
+        "command": "rtk proxy python3 .workflow/ultracode/execution-isolation-implementation/verify-p0.py P0DocumentationTests.test_approval_shape_is_not_authentication P0DocumentationTests.test_binding_test_and_digest_shape_negatives P0DocumentationTests.test_capability_and_catalog_contracts P0DocumentationTests.test_draft_status_and_no_gate_closure P0DocumentationTests.test_full_embedded_schemas_and_toml_parse P0DocumentationTests.test_full_semver_boundaries P0DocumentationTests.test_nonpass_failure_object_and_unicode_boundaries P0DocumentationTests.test_schema_kind_and_api_consistency P0DocumentationTests.test_valid_verification_and_required_fields",
+        "exit_code": 0,
+        "status": "pass",
+        "evidence": "results/phase-results-p0-content.txt",
+        "excluded_case": "test_scope_and_existing_task_checkmarks",
+        "why": "Old hash allowlist excludes newly authorized Rust implementation; replacement fresh scope/hash audit required, not silently waived."
+      },
+      {
+        "name": "llvm-coverage-export",
+        "command": "LD_LIBRARY_PATH=/tmp/clouddialect-phase-llvm-tools rtk proxy /tmp/clouddialect-phase-llvm-tools/llvm-cov export /tmp/clouddialect-phase-coverage-target/debug/deps/phase_results-2abe4bdefb6d5c86 -instr-profile=/tmp/clouddialect-phase-profiles/merged.profdata crates/clouddialect-contracts/src/errors/diagnostics.rs crates/clouddialect-contracts/src/errors/phase.rs -summary-only",
+        "exit_code": 0,
+        "status": "pass",
+        "evidence": "results/phase-results-coverage.json",
+        "notes": "Command succeeded, but export includes tests/dependencies; no production mappings emitted. Threshold UNVERIFIED, not pass."
+      },
+      {
+        "name": "production-coverage-threshold",
+        "status": "UNVERIFIED",
+        "evidence": "results/phase-results-coverage-summary.json",
+        "reason": "UNVERIFIED: no instrumented production mappings emitted for the derive-only type modules; do not claim 80% or count test/dependency lines"
+      },
+      {
+        "name": "red-missing-api",
+        "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-phase-target cargo test --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen --test phase_results",
+        "exit_code": 101,
+        "status": "expected_fail",
+        "evidence": "results/phase-results-red.txt",
+        "reason": "E0432/E0425 missing canonical public API after dependency compilation; not setup failure"
+      },
+      {
+        "name": "green-same-target",
+        "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-phase-target cargo test --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen --test phase_results",
+        "exit_code": 0,
+        "status": "pass",
+        "test_count": 8,
+        "evidence": "results/phase-results-green.txt"
+      },
+      {
+        "name": "full-crate-tests",
+        "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-phase-target cargo test --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen",
+        "exit_code": 0,
+        "status": "pass",
+        "integration_test_count": 8,
+        "compile_fail_doctest_count": 2,
+        "empty_preexisting_targets": [
+          "src/lib.rs unit tests",
+          "tests/conformance.rs"
+        ],
+        "evidence": "results/phase-results-full-test.txt"
+      },
+      {
+        "name": "independent-source-review",
+        "status": "pass",
+        "evidence": "results/06-phase-results-review.md",
+        "scope": "unit 1.2 only; reviewer did not independently rerun tests"
+      },
+      {
+        "name": "checkpoint-commits",
+        "status": "skipped",
+        "reason": "No explicit commit action authorization. Local RED/GREEN logs are not checkpoint commits."
+      }
+    ],
+    "domain_checks": [
+      {
+        "name": "all-tests",
+        "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-phase-target cargo test --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen",
+        "exit_code": 0,
+        "status": "PASS",
+        "evidence": "results/domain-final-all-tests.txt"
+      },
+      {
+        "name": "check",
+        "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-phase-target cargo check --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen --all-targets",
+        "exit_code": 0,
+        "status": "PASS",
+        "evidence": "results/domain-final-check.txt"
+      },
+      {
+        "name": "fmt",
+        "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-phase-target cargo fmt --manifest-path crates/clouddialect-contracts/Cargo.toml --check",
+        "exit_code": 0,
+        "status": "PASS",
+        "evidence": "results/domain-final-fmt.txt"
+      },
+      {
+        "name": "clippy",
+        "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-phase-target cargo clippy --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen --all-targets -- -D warnings",
+        "exit_code": 0,
+        "status": "PASS",
+        "evidence": "results/domain-final-clippy.txt"
+      },
+      {
+        "name": "python",
+        "command": "rtk proxy python3 -m unittest discover -s tests -v",
+        "exit_code": 0,
+        "status": "PASS",
+        "evidence": "results/domain-final-python.txt"
+      },
+      {
+        "name": "negative-doctests",
+        "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-phase-target cargo test --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen --doc -- --nocapture",
+        "exit_code": 0,
+        "status": "PASS",
+        "evidence": "results/domain-final-negative-doctests.txt"
+      },
+      {
+        "name": "diff",
+        "command": "rtk proxy git diff --check",
+        "exit_code": 0,
+        "status": "PASS",
+        "evidence": "results/domain-final-diff.txt"
+      }
+    ],
+    "domain_review": "PASS packet12 bounded static review; no required findings"
+  },
+  "limits": {
+    "cumulative_dispatches": 3,
+    "followups": 0,
+    "repairs": 1,
+    "elapsed_minutes": 60,
+    "historical_scope": "Original preparation-only limits; later approvals/tranches tracked in scoped records"
+  },
+  "repairs_consumed": 1,
+  "followup_turns": 0,
+  "preparation_approval": {
+    "granted": true,
+    "scope": "Recommendations, separate Spec 1 prerequisite plan, qualification drafts only"
+  },
+  "usage_checkpoint": {
+    "goal_meter_tokens": 431075,
+    "goal_meter_elapsed_seconds": 1159,
+    "scope": "Goal tool cumulative meter at final-audit checkpoint; per-agent attribution and billing not observable",
+    "agent_dispatches": 3,
+    "followup_turns": 0,
+    "integration_repairs": 1
+  },
+  "blocked_audit": {
+    "checked_at": "2026-10-22T11:05:19.541417+00:00",
+    "previous_turn": "Progress: DTO/schema/manifest/inventory implementation and explicit approvals",
+    "current_turn": "Progress: domain organization/rules/commit/push request; prerequisite gates persist",
+    "consecutive_goal_turns_with_same_blocker": 0,
+    "branch": "feat/execution-isolation",
+    "open_gates": [
+      "UD-1-isolation.md",
+      "UD-2-ipc.md",
+      "UD-3-credentials.md",
+      "UD-4-persistence.md",
+      "UD-5-budgets.md",
+      "BG-01-upstream.md"
+    ],
+    "upstream_nonstub_modules": [],
+    "approved_limits": null,
+    "environment_approval": null,
+    "latest_authorized_scope": {
+      "granted": true,
+      "scope": "P0-A\u2013F for implementation planning only; plan delivered"
+    },
+    "pending_input": "Physical domain scope clarification pending; resource model reconciliation/native approvals remain distinct",
+    "safe_authorized_work_remaining": true,
+    "why": "Spec1 remaining validators/conformance and new user-directed organization remain; do not mark full goal blocked or complete"
+  },
+  "p0": {
+    "authorized": true,
+    "scope": "Spec 1 documentation reconciliation only",
+    "started_at": "2026-10-22T07:50:28.864091+00:00",
+    "implementation_authorized": false,
+    "owner_contract_approval": false,
+    "additional_dispatch_limit": 1,
+    "additional_repair_limit": 1,
+    "repairs_consumed": 1,
+    "elapsed_limit_minutes": 45,
+    "verification": "10 focused document tests + 7 scaffold tests pass; generic validators still fail; semantic/date/pinned-engine/native checks unverified",
+    "additional_dispatches_used": 1,
+    "review_status": "FAIL with five findings; consolidated parent repair and ten focused tests pass, no independent postrepair signoff",
+    "status": "draft_delivered",
+    "completed_at": "2026-10-22T08:15:02.986122+00:00",
+    "elapsed_seconds": 1474,
+    "report": "p0-report.md",
+    "independent_postrepair_signoff": false,
+    "planning_approval": {
+      "granted": true,
+      "at": "2026-10-22T08:27:37.843252+00:00",
+      "actor": "user in current conversation; no additional owner-role attestation",
+      "scope": "P0-A\u2013F for implementation planning only",
+      "implementation_authorized": false,
+      "gate_closure_authorized": false
+    }
+  },
+  "planning": {
+    "started_at": "2026-10-22T08:27:37.843252+00:00",
+    "elapsed_limit_minutes": 35,
+    "dispatch_limit": 1,
+    "repair_limit": 1,
+    "repairs_consumed": 1,
+    "status": "delivered",
+    "dispatches_used": 1,
+    "review_status": "FAIL with three findings; one consolidated parent repair, seven planning tests + ten P0 + seven scaffold tests pass",
+    "completed_at": "2026-10-22T08:53:04.815973+00:00",
+    "elapsed_seconds": 1527,
+    "report": "planning-report.md",
+    "independent_postrepair_signoff": false,
+    "implementation_authorized": false,
+    "checkpoint_commits_authorized": false,
+    "dependency_provisioning_authorized": false,
+    "native_probes_authorized": false,
+    "agent_dispatches_cumulative": 5,
+    "followup_turns_cumulative": 0,
+    "next_scope": "unit 1.2 only after relevant 1.1 tooling/code preflight; separate approval required"
+  },
+  "implementation": {
+    "unit": "1.2",
+    "status": "source_implemented_and_reviewed_evidence_incomplete",
+    "started_at": "2026-10-22T10:51:40.941169+00:00",
+    "authority": "User asked time to implement tasks, then continue; parent stated interpretation as first prerequisite code slice",
+    "commit_authorized": false,
+    "push_authorized": false,
+    "native_probes_authorized": false,
+    "dispatches_used": 1,
+    "additional_agent_approval": {
+      "granted": true,
+      "actor": "user conversation reply",
+      "scope": "one additional read-only reviewer for this implementation slice",
+      "at": "2026-10-22T10:58:52.007069+00:00"
+    },
+    "repair_limit": 1,
+    "repairs_consumed": 1,
+    "elapsed_limit_minutes": 45,
+    "eval": "phase-results-eval.md",
+    "review_status": "PASS unit 1.2 only; no required findings; read-only review did not rerun tests",
+    "review_report": "results/06-phase-results-review.md",
+    "coverage": "UNVERIFIED numeric threshold; no production mappings for derive-only types",
+    "broader_prerequisite_approval": {
+      "granted": true,
+      "actor": "user conversation reply",
+      "at": "2026-10-22T11:07:47.215736+00:00",
+      "scope": "Remaining Spec 1 prerequisites; TDD; stop at unresolved version/dependency decisions; no commits/probes/pushes/releases"
+    },
+    "repair_notes": "One tooling setup repair: compiler-matched libLLVM exceeded conservative per-file extraction bound; verified exact metadata/hash, extracted only three bounded files. No production-code repair needed.",
+    "completed_tranche_at": "2026-10-22T11:03:38.996981+00:00",
+    "elapsed_seconds": 718,
+    "report": "phase-results-report.md",
+    "checks": "phase-results-check-results.json",
+    "audit": "results/phase-results-final-audit.json",
+    "remaining_evidence": [
+      "numeric production coverage not emitted for derive-only types",
+      "RED/GREEN checkpoint commits not explicitly authorized/created"
+    ],
+    "next_scope": "Remaining Spec 1 prerequisite delivery, beginning with unit 1.3; broader approval requested, no response yet"
+  },
+  "prerequisite_models": {
+    "status": "delivered_partial_goal",
+    "started_at": "2026-10-22T11:07:47.215736+00:00",
+    "units": [
+      "1.3",
+      "1.4",
+      "1.5",
+      "1.6"
+    ],
+    "eval": "prerequisite-models-eval.md",
+    "elapsed_limit_minutes": 90,
+    "repair_limit": 1,
+    "repairs_consumed": 1,
+    "dispatch_limit": 2,
+    "dispatches_used": 2,
+    "additional_sidecar_approval": {
+      "granted": true,
+      "scope": "up to two additional read-only sidecars, no followups/recursion",
+      "at": "2026-10-22T11:13:43.149345+00:00",
+      "actor": "user reply"
+    },
+    "commits_authorized": false,
+    "probes_authorized": false,
+    "review_07": "FAIL literal fidelity; user-approved exact-value/feature repair and regressions pass; review08 bounded PASS",
+    "units_implemented_so_far": [
+      "1.3 references/store DTO contract; not backend isolation",
+      "1.4 exact-value source DTOs",
+      "1.5 verification/nonaccepting DTOs",
+      "1.6 real pinned-engine test helper"
+    ],
+    "extension_contract_gate": {
+      "status": "approved and implemented; exact encoded JSON value bytes only",
+      "actor": "user conversation reply",
+      "at": "2026-10-22T11:32:06.442312+00:00",
+      "scope": "Exact encoded extension JSON value bytes, including escapes/internal whitespace; approve raw_value on existing pinned serde_json. No dependency version/new crate/probe/commit approval."
+    },
+    "repair_phase": "Consolidated review/lint repair: exact-value preservation requires direct raw map decoding (flatten loses raw lexical input), helper shared across 1.4/1.5, and box test harness CompileError. User-approved contract/feature clarification expands exact owned paths; no speculative parser for unrelated behavior.",
+    "review_08": "PASS bounded units and literal-value repair; no required findings; no independently executed tests/coverage",
+    "version_publication_gate": {
+      "status": "owner-stated initial MVP versions approved",
+      "actor": "user reply in current conversation",
+      "at": "2026-10-22T11:38:48.198065+00:00",
+      "statement": "initial project from scratch; current examples are first MVP versions",
+      "versions": {
+        "document_format": "1.0.0",
+        "catalog": "1.0.0",
+        "crate_api": "0.1.0"
+      },
+      "provenance": "User publication-history attestation, not independent proof of external registry/release state",
+      "scope": "Version-bearing Spec 1 implementation only; no BG-01 or Spec 2 gate closure"
+    },
+    "coverage": "39/39 emitted production decoder lines, 7/7 functions; 58/61 regions. Derive-only unmapped fields not assigned a percentage; branch/runtime coverage not claimed.",
+    "completed_at": "2026-10-22T12:26:47.728295+00:00"
+  },
+  "catalog_schemas": {
+    "status": "delivered_with_requirement2_2_gap",
+    "started_at": "2026-10-22T11:46:56.116706+00:00",
+    "units": [
+      "1.7",
+      "1.8",
+      "1.9",
+      "1.10"
+    ],
+    "eval": "catalog-schemas-eval.md",
+    "approval": "User initial-MVP versions confirmed; remaining prerequisite implementation approved",
+    "independent_review": "packet10 FAIL two findings, explicit additional repair approved, both runtime RED/GREEN; no independent postrepair signoff",
+    "dispatches_used": 1,
+    "repair_approval": {
+      "granted": true,
+      "scope": "One additional bounded repair for wrapper minItems and common evidence assumptions, regression tests; resource behavior completeness remains unresolved",
+      "actor": "explicit user reply",
+      "at": "2026-10-22T12:10:39.946570+00:00"
+    },
+    "additional_repairs_consumed": 1,
+    "remaining_gap": "Requirement2.2 per-resource known/unknown behavior completeness needs precise model reconciliation; task2 not complete"
+  },
+  "dependency_approval": {
+    "granted": true,
+    "actor": "explicit user conversation reply",
+    "at": "2026-10-22T12:12:29.469582+00:00",
+    "scope": "sha2=0.11.1 no default features, sha3=0.12.0 no default features, semver=1.0.28 defaultstd; Rust>=1.88; full syntax versus u64 unsupported disposition/Cargo ranges; audited parent manifest/lock/rootnotices and isolated fetch",
+    "proposal": "dependency-proposal.md",
+    "no_commits_probes_releases": true,
+    "status": "admitted:100archivechecksums,11newpackageMIT-optioninventory,oldgraphpreserved"
+  },
+  "ddd_rules_publication": {
+    "status": "locally_verified_pending_remote_receipt",
+    "started_at": "2026-10-22T12:14:06.464942+00:00",
+    "user_request": "Domain-driven file ordering, canonical shared AI rules/symlinks, git commit and git push",
+    "scope_question": "crate-only or repository-wide physical reorganization pending",
+    "dispatch_limit": 2,
+    "dispatches_used": 2,
+    "followup_limit": 0,
+    "repair_limit": 1,
+    "elapsed_limit_minutes": 60,
+    "commits_authorized": true,
+    "push_authorized": true,
+    "probes_releases_authorized": false,
+    "preserve_unrelated": [
+      "research.md",
+      "cloud-transformation-framework-research.pdf"
+    ],
+    "scope": "Contractscrate-only narrow default; no repository-wide spec/research moves",
+    "scope_answer": "pending, safe narrow assumption explicitly stated",
+    "repairs_consumed": 1,
+    "review": "PASS packet12 static comparison; no required findings",
+    "verification": "94integration+6compilefaildoctests,11Python,check/fmt/Clippy,198/204 emittedproductionlines; runtimeclientactivationunverified",
+    "code_commit": "fd8400a6ea50746bb72701f2db4c66191d35a934",
+    "rules_commit": "3926eaca88ea8862743194a214e7da681ccce3b9",
+    "report": "domain-publication-report.md",
+    "signature_identity_verification": "UNVERIFIED: SSH allowedSignersFile absent, signatureblocks present; policy retained",
+    "publication_receipt": "/tmp/clouddialect-publication-receipt.json and conversation after final evidence commit",
+    "repair": "Captured text log trailing whitespace normalized forGit; rawcopies/hashes retained; no production or outcome changes"
+  },
+  "catalog_index": {
+    "status": "verified_inventory_only",
+    "units": [
+      "2.1"
+    ],
+    "tests": 8,
+    "coverage": "See prerequisite-catalog-coverage-summary.json",
+    "snapshot_digest_resolver_authentication": "not implemented"
+  },
+  "current_limits": {
+    "scope": "DDD/rules/publication user request",
+    "elapsed_minutes": 60,
+    "dispatches_total_ceiling": 12,
+    "dispatches_total_used": 12,
+    "followups": 0,
+    "repairs_allowed": 1,
+    "repairs_used": 1
+  }
+}

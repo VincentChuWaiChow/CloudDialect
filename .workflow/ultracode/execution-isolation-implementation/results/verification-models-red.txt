@@ -1,0 +1,38 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+error[E0432]: unresolved imports `clouddialect_contracts::AcceptanceRecord`, `clouddialect_contracts::BehavioralOutcome`, `clouddialect_contracts::BehavioralResult`, `clouddialect_contracts::BlockingGap`, `clouddialect_contracts::FailureDescription`, `clouddialect_contracts::TestOutcome`, `clouddialect_contracts::TestResult`, `clouddialect_contracts::VerificationResult`
+ --> tests/verification_models.rs:2:5
+  |
+2 |     AcceptanceRecord, BehavioralOutcome, BehavioralResult, BlockingGap, DocumentRef,
+  |     ^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^  ^^^^^^^^^^^ no `BlockingGap` in the root
+  |     |                 |                  |
+  |     |                 |                  no `BehavioralResult` in the root
+  |     |                 no `BehavioralOutcome` in the root
+  |     no `AcceptanceRecord` in the root
+3 |     FailureDescription, TestOutcome, TestResult, VerificationResult,
+  |     ^^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^  ^^^^^^^^^^  ^^^^^^^^^^^^^^^^^^ no `VerificationResult` in the root
+  |     |                   |            |
+  |     |                   |            no `TestResult` in the root
+  |     |                   no `TestOutcome` in the root
+  |     no `FailureDescription` in the root
+  |
+help: a similar name exists in the module
+  |
+2 -     AcceptanceRecord, BehavioralOutcome, BehavioralResult, BlockingGap, DocumentRef,
+2 +     AcceptanceRecord, BehavioralNote, BehavioralResult, BlockingGap, DocumentRef,
+  |
+
+error[E0425]: cannot find type `BehavioralResult` in module `clouddialect_contracts::errors`
+   --> tests/verification_models.rs:165:44
+    |
+165 |     let _: clouddialect_contracts::errors::BehavioralResult = result;
+    |                                            ^^^^^^^^^^^^^^^^ not found in `clouddialect_contracts::errors`
+
+error[E0425]: cannot find type `TestOutcome` in module `clouddialect_contracts::errors`
+   --> tests/verification_models.rs:186:44
+    |
+186 |     let _: clouddialect_contracts::errors::TestOutcome = TestOutcome::Pass;
+    |                                            ^^^^^^^^^^^ not found in `clouddialect_contracts::errors`
+
+Some errors have detailed explanations: E0425, E0432.
+For more information about an error, try `rustc --explain E0425`.
+error: could not compile `clouddialect-contracts` (test "verification_models") due to 3 previous errors

@@ -1,0 +1,20 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.51s
+     Running tests/manifest_types.rs (/tmp/clouddialect-manifest-target/debug/deps/manifest_types-29052f32710cbd99)
+
+running 13 tests
+test capability_actions_have_exactly_nine_lowercase_variants ... ok
+test capability_fields_are_required_and_unknown_fields_are_rejected ... ok
+test absent_toolchain_is_representable_for_unsupported_only_packs ... ok
+test deserialization_retains_claims_for_later_validation_not_admission ... ok
+test capabilities_require_both_declared_version_and_explicit_requirement_list ... ok
+test complete_manifest_retains_all_sections_and_unsupported_operation ... ok
+test fidelity_is_closed_and_lowercase ... ok
+test manifest_results_have_only_canonical_local_diagnostic_fields ... ok
+test extensions_preserve_toml_values_but_do_not_populate_capabilities ... ok
+test every_unconditional_core_section_is_required ... ok
+test unknown_core_fields_and_inline_contract_bodies_are_rejected ... ok
+test operation_toolchain_and_contract_entries_require_their_exact_fields ... ok
+test required_nested_core_fields_are_not_defaulted ... ok
+
+test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

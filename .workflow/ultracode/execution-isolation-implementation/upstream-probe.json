@@ -1,0 +1,33 @@
+{
+  "scope": "Direct rustc against actual stub source, not Cargo dependency resolution or full compatibility proof",
+  "results": [
+    {
+      "command": [
+        "rustc",
+        "--edition=2024",
+        "--crate-name",
+        "clouddialect_contracts",
+        "--crate-type",
+        "rlib",
+        "crates/clouddialect-contracts/src/lib.rs",
+        "-o",
+        "/tmp/clouddialect-api-v_h7eh2w/libclouddialect_contracts.rlib"
+      ],
+      "exit_code": 0,
+      "evidence": "results/upstream-compile-1.txt"
+    },
+    {
+      "command": [
+        "rustc",
+        "--edition=2024",
+        "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation-implementation/results/upstream-exports.rs",
+        "--extern",
+        "clouddialect_contracts=/tmp/clouddialect-api-v_h7eh2w/libclouddialect_contracts.rlib",
+        "-o",
+        "/tmp/clouddialect-api-v_h7eh2w/probe"
+      ],
+      "exit_code": 1,
+      "evidence": "results/upstream-compile-2.txt"
+    }
+  ]
+}

@@ -1,0 +1,958 @@
+
+======================================================================
+  REQUIREMENTS VALIDATION REPORT
+  File: /home/raishin/projects/CloudDialect/.kiro/specs/contracts-evidence-foundation/requirements.md
+======================================================================
+
+  ✅ [PASS] Line 96: THE Schema_Catalog SHALL contain a JSON Schema Draft 2020-12 document for each o
+              ...f the following document types: behavioral contract, evidenc
+
+  ❌ [FAIL] Line 97: Verification method: Structural review of catalog contents confirming the presen
+              ...ce of `$schema` and `$id` fields; validation with two indepe
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 98: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 100: WHEN a CloudDialect JSON document is validated, THE Validator SHALL resolve all
+              ...`$ref` and `$schema` URIs exclusively from the Bundled Schem
+
+  ❌ [FAIL] Line 101: Verification method: Conformance fixture asserting that validation succeeds with
+              ... network access disabled.
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 102: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 104: WHEN a CloudDialect JSON document contains a `$ref` or `$schema` URI that cannot
+              ... be resolved from the Bundled Schema Catalog, THE Validator
+       → Compound requirement: 2 SHALLs found — split into separate requirements
+
+  ❌ [FAIL] Line 105: Verification method: Conformance fixture with a document declaring an unresolvab
+              ...le `$ref`, asserting the error message contains the unresolv
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 106: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 108: THE Schema_Catalog SHALL be distributed as part of every CloudDialect release ar
+              ...tifact, with each schema file included at a stable, versione
+
+  ❌ [FAIL] Line 109: Verification method: Release artifact inventory review confirming all schema fil
+              ...es follow the path pattern.
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 110: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 112: WHEN a new schema version is published, THE Schema_Catalog SHALL retain prior sc
+              ...hema versions at their original stable paths for the duratio
+
+  ❌ [FAIL] Line 113: Verification method: Structural review of catalog between consecutive release ar
+              ...tifacts.
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 114: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 116: THE Schema_Catalog SHALL include a machine-readable index document that: (a) is
+              ...itself schema-valid against a schema included in the catalog
+
+  ❌ [FAIL] Line 117: Verification method: Conformance fixture asserting the index validates against i
+              ...ts own schema and lists all expected entries.
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 118: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 130: THE Behavioral_Contract_Schema SHALL require each contract document to declare:
+              ...a document identifier that is unique within the pack it belo
+
+  ❌ [FAIL] Line 131: Verification method: Conformance fixture asserting documents missing any of thes
+              ...e fields fail structural validation.
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 132: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 134: THE Behavioral_Contract_Schema SHALL require each contract document to declare r
+              ...esource dependencies including: identity, permissions requir
+
+  ❌ [FAIL] Line 135: Verification method: Conformance fixture with example operations having non-triv
+              ...ial resource dependencies, including one dependency where re
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 136: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 138: THE Behavioral_Contract_Schema SHALL require that each behavioral obligation wit
+              ...hin a contract carries a `behavioral_fidelity` field drawn f
+
+  ❌ [FAIL] Line 139: Verification method: Conformance fixture asserting values outside the enumerated
+              ... set fail structural validation; fixture includes one exampl
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 140: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 142: THE Behavioral_Contract_Schema SHALL require each behavioral obligation to refer
+              ...ence at least one evidence record or declare its evidence st
+
+  ❌ [FAIL] Line 143: Verification method: Conformance fixture asserting a contract with an obligation
+              ... lacking both an evidence reference and a fully-populated un
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 144: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 146: THE Behavioral_Contract_Schema SHALL permit recording of behavioral differences
+              ...not covered by base schema fields — including service-specif
+
+  ❌ [FAIL] Line 147: Verification method: Conformance fixture demonstrating a contract capturing S3 E
+              ...Tag checksum semantics and a contract capturing Pub/Sub exac
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 148: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 150: THE Behavioral_Contract_Schema SHALL define an extension mechanism by which fiel
+              ...ds not defined in the base schema version declared in the do
+
+  ❌ [FAIL] Line 151: Verification method: Conformance fixture asserting that a document containing an
+              ... unknown extension field still passes structural validation
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 152: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ⚠️  [WARN] Line 154: WHEN a contract document is structurally valid, THE Validator SHALL NOT set a pa
+              ...ss, accepted, or verified flag on any migration candidate tr
+       → Vague term detected: 'sufficient'
+
+  ❌ [FAIL] Line 155: Verification method: Review of validator documentation and behavioral test asser
+              ...ting structural validation does not set a pass, accepted, or
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 156: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 168: THE Evidence_Record_Schema SHALL require each evidence record to declare: a uniq
+              ...ue document identifier, its document-format version, the cla
+
+  ❌ [FAIL] Line 169: Verification method: Conformance fixture asserting documents missing any of thes
+              ...e fields fail structural validation.
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 170: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 172: THE Evidence_Record_Schema SHALL NOT permit omitting the classification field or
+              ... defaulting it implicitly; every evidence record MUST carry
+
+  ❌ [FAIL] Line 173: Verification method: Conformance fixture asserting a record with no classificati
+              ...on field fails structural validation.
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 174: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 176: WHEN an evidence record carries classification `inferred`, THE Evidence_Record_S
+              ...chema SHALL require the `reasoning_chain` field to be presen
+
+  ❌ [FAIL] Line 177: Verification method: Conformance fixture asserting an `inferred` record with an
+              ...absent or empty `reasoning_chain` array fails structural val
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 178: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 180: WHEN an evidence record carries classification `unknown`, THE Evidence_Record_Sc
+              ...hema SHALL require the `unresolved_assumptions` field to be
+
+  ❌ [FAIL] Line 181: Verification method: Conformance fixture asserting an `unknown` record with an a
+              ...bsent or empty `unresolved_assumptions` array fails structur
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 182: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 184: THE Evidence_Record_Schema SHALL define an extension mechanism allowing future p
+              ...rovenance fields to be added without breaking validation; do
+       → Compound requirement: 3 SHALLs found — split into separate requirements
+
+  ❌ [FAIL] Line 185: Verification method: Conformance fixture asserting that a record with a valid ex
+              ...tension field passes structural validation and that the exte
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 186: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 188: WHEN a mandatory behavioral obligation references an evidence record with classi
+              ...fication `unknown`, THE Validator SHALL return a structured
+       → Compound requirement: 2 SHALLs found — split into separate requirements
+
+  ❌ [FAIL] Line 189: Verification method: Integration test asserting the blocking-gap report contains
+              ... the required fields and acceptance is prevented.
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 190: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 202: THE Verification_Result_Schema SHALL require each result document to declare: a
+              ...unique document identifier, its document-format version, the
+
+  ❌ [FAIL] Line 203: Verification method: Conformance fixture asserting documents missing any of thes
+              ...e fields fail structural validation.
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 204: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 206: THE Verification_Result_Schema SHALL require the content hash of the transformat
+              ...ion candidate to be recorded using a hash algorithm name dra
+
+  ❌ [FAIL] Line 207: Verification method: Conformance fixture asserting a result document with a hash
+              ... algorithm name absent from the enumerated list fails struct
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 208: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 210: WHEN any test in a verification run has an outcome other than `pass`, THE Verifi
+              ...cation_Result_Schema SHALL require the result document to re
+
+  ❌ [FAIL] Line 211: Verification method: Conformance fixture asserting a result with a non-passing o
+              ...utcome but missing or empty failure description fails struct
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 212: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 214: WHEN a result document carries an acceptance decision, THE Verification_Result_S
+              ...chema SHALL require: at least one approver identity, a UTC a
+
+  ❌ [FAIL] Line 215: Verification method: Conformance fixture asserting a result carrying an acceptan
+              ...ce decision but missing approver identity or timestamp fails
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 216: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 218: THE Verification_Result_Schema SHALL define an extension mechanism by which fiel
+              ...ds not defined in the base schema version may be added to a
+
+  ❌ [FAIL] Line 219: Verification method: Conformance fixture asserting a result document with an unk
+              ...nown extension field passes structural validation under the
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 220: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 222: WHEN the content hash of an artifact referenced in a verification result does no
+              ...t match the hash recorded in that result at acceptance time,
+       → Compound requirement: 2 SHALLs found — split into separate requirements
+
+  ❌ [FAIL] Line 223: Verification method: Integration test asserting that modifying a referenced arti
+              ...fact causes the Verifier to report the acceptance result as
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 224: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 226: THE Verification_Result_Schema SHALL require the test-identities array to be pre
+              ...sent and contain at least one entry; a result document decla
+       → Compound requirement: 2 SHALLs found — split into separate requirements
+
+  ❌ [FAIL] Line 227: Verification method: Conformance fixture asserting a result document with an emp
+              ...ty or absent test-identities array fails structural validati
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 228: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 230: WHEN a verification document is consumed, THE Semantic_Validator SHALL reject du
+              ...plicate test identities, unmapped obligation identities, inv
+
+  ❌ [FAIL] Line 231: Verification method: Positive and seeded-negative fixtures for P0-C; Spec 2 sepa
+              ...rately compares protected expected context/obligations and a
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 232: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 244: THE Pack_Manifest_Schema SHALL define the required structure for a TOML pack man
+              ...ifest, requiring at minimum: a pack identifier formatted as
+
+  ❌ [FAIL] Line 245: Verification method: Structural review of the manifest schema definition and con
+              ...formance fixture asserting documents missing required fields
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 246: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 248: THE Pack_Manifest_Schema SHALL require the manifest to declare all operations th
+              ...e pack supports, with each operation entry listing: the oper
+
+  ❌ [FAIL] Line 249: Verification method: Conformance fixture asserting a manifest with an operation
+              ...entry missing required fields or containing a `behavioral_fi
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 250: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 252: THE Pack_Manifest_Schema SHALL require the manifest to reference behavioral cont
+              ...racts using a contract-reference entry containing only a doc
+       → Compound requirement: 2 SHALLs found — split into separate requirements
+
+  ❌ [FAIL] Line 253: Verification method: Conformance fixture asserting a manifest containing the bod
+              ...y of a contract document inline (rather than a reference ent
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 254: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 256: THE Pack_Manifest_Schema SHALL require the manifest to declare the minimum Cloud
+              ...Dialect schema-catalog version the pack is compatible with,
+
+  ❌ [FAIL] Line 257: Verification method: Conformance fixture asserting a manifest missing either com
+              ...patibility version field fails manifest validation.
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 258: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 260: THE Pack_Manifest_Schema SHALL require the manifest to declare all toolchain dep
+              ...endencies required to execute the pack, with each entry stat
+       → Compound requirement: 2 SHALLs found — split into separate requirements
+
+  ❌ [FAIL] Line 261: Verification method: Conformance fixture asserting a manifest with an empty or m
+              ...issing toolchain section fails manifest validation when the
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 262: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 264: THE Pack_Manifest_Schema SHALL include an extension section in the manifest, key
+              ...ed under the reserved TOML table name `[x]`, that allows add
+       → Compound requirement: 2 SHALLs found — split into separate requirements
+
+  ❌ [FAIL] Line 265: Verification method: Conformance fixture asserting a manifest with a populated `
+              ...[x]` section passes manifest validation.
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 266: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 268: WHEN a manifest declares an operation with `behavioral_fidelity` value `unsuppor
+              ...ted`, THE Manifest_Validator SHALL accept the manifest and S
+       → Compound requirement: 3 SHALLs found — split into separate requirements
+
+  ❌ [FAIL] Line 269: Verification method: Conformance fixture asserting the unsupported operation is
+              ...present and returned when the full operation list is retriev
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 270: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 272: THE Pack_Manifest_Schema SHALL require the P0-B `[capabilities]` table containin
+              ...g its explicit supported format version and typed requiremen
+
+  ❌ [FAIL] Line 273: Verification method: Fixtures for explicit empty requirements, valid typed requi
+              ...rement, missing/unknown versions/actions/fields, duplicate I
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 274: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 286: THE Framework_Core SHALL define and document three distinct version spaces: (a)
+              ...JSON Schema dialect version (currently Draft 2020-12), (b) d
+
+  ❌ [FAIL] Line 287: Verification method: Review of schema and manifest definitions confirming each v
+              ...ersion space has a distinct field name and documentation.
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 288: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 290: THE Framework_Core SHALL assign each published CloudDialect JSON Schema document
+              ... a document-format version following SemVer 2.0.0 (MAJOR.MIN
+
+  ❌ [FAIL] Line 291: Verification method: Review of version changelog and conformance fixture exercis
+              ...ing a MINOR addition against the prior-version schema.
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 292: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 294: THE Framework_Core SHALL publish a compatibility matrix declaring, for each docu
+              ...ment-format version, the range of validator and pack version
+
+  ❌ [FAIL] Line 295: Verification method: Review of published compatibility matrix confirming version
+              ... ranges are expressed in SemVer range notation.
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 296: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 298: WHEN a document instance declares a document-format version that the active Vali
+              ...dator does not support, THE Validator SHALL return an error
+       → Compound requirement: 2 SHALLs found — split into separate requirements
+
+  ❌ [FAIL] Line 299: Verification method: Conformance fixture asserting a document with an unsupporte
+              ...d document-format version produces an error containing all t
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 300: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 302: THE Framework_Core SHALL assign each CloudDialect document instance a globally u
+              ...nique identifier at creation time using an identifier scheme
+
+  ❌ [FAIL] Line 303: Verification method: Review of identifier specification; integration test assert
+              ...ing no two independently created documents share an identifi
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 304: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 316: THE Framework_Core SHALL publish a written compatibility policy that defines: wh
+              ...at constitutes a breaking change to a schema; what constitut
+
+  ❌ [FAIL] Line 317: Verification method: Review of published compatibility policy document confirmin
+              ...g the 12-month minimum window is stated.
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 318: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 320: WHEN a new MAJOR document-format version is released, THE Framework_Core SHALL p
+              ...rovide a documented migration guide describing how documents
+
+  ❌ [FAIL] Line 321: Verification method: Review of migration guide accompanying any MAJOR version re
+              ...lease.
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 322: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 324: WHEN a validator encounters a document at a MINOR version newer than the validat
+              ...or's supported version within the same MAJOR version, THE Va
+       → Compound requirement: 2 SHALLs found — split into separate requirements
+
+  ❌ [FAIL] Line 325: Verification method: Conformance fixture asserting a document with a MINOR-newer
+              ... version within the same MAJOR is processed without a valida
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 326: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 328: WHEN a validator encounters a document at a MAJOR version it does not support, T
+              ...HE Validator SHALL reject the document with an error respons
+       → Compound requirement: 2 SHALLs found — split into separate requirements
+
+  ❌ [FAIL] Line 329: Verification method: Conformance fixture asserting a document at an unsupported
+              ...MAJOR version produces an error containing all three require
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 330: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 342: THE Framework_Core SHALL formally document the distinction between structural va
+              ...lidation, semantic validation, and behavioral verification i
+
+  ❌ [FAIL] Line 343: Verification method: Review of specification section; conformance fixture assert
+              ...ing each phase returns only its own result type.
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 344: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 346: WHEN structural validation passes, THE Validator interface SHALL NOT expose a `S
+              ...tructuralResult` value that carries a field implying semanti
+
+  ❌ [FAIL] Line 347: Verification method: Review of Validator API surface confirming `StructuralResul
+              ...t` has no semantic or behavioral correctness fields; integra
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 348: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 350: WHEN semantic validation is performed, THE Semantic_Validator SHALL check both o
+              ...f the following through an explicitly injected project-scope
+
+  ❌ [FAIL] Line 351: Verification method: Integration test with a manifest referencing a non-existent
+              ... contract by identifier, asserting a `SemanticResult` contai
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 352: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 354: WHEN behavioral verification is performed, THE Verifier SHALL execute only tests
+              ... whose origin identity is distinct from the software process
+       → Compound requirement: 2 SHALLs found — split into separate requirements
+
+  ❌ [FAIL] Line 355: Verification method: Review of Verifier documentation confirming origin identity
+              ... recording; behavioral test asserting the Verification Resul
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 356: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 358: THE Framework_Core SHALL document that a structurally valid document never, by i
+              ...tself, establishes migration correctness; this statement MUS
+
+  ❌ [FAIL] Line 359: Verification method: Review of schema documentation for each document type confi
+              ...rming the statement is present.
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 360: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 362: THE Framework_Core SHALL keep BehavioralOutcome::Deferred, BehavioralOutcome::Ev
+              ...idenceComplete and BehavioralOutcome::Blocked non-accepting,
+
+  ❌ [FAIL] Line 363: Verification method: API/fixture checks for all three outcomes, empty completene
+              ...ss projection, mismatched/stale verification projection and
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 364: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 366: THE Validator SHALL expose separate JSON and TOML semantic entrypoints receiving
+              ... the P0-E DocumentStore, with trusted explicit DocumentKind
+
+  ❌ [FAIL] Line 367: Verification method: JSON/TOML signature consumer tests and store fixtures with
+              ...exact-version success and all named failure modes; no networ
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 368: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 380: THE Validator SHALL resolve all schema URIs used during document validation excl
+              ...usively from the Bundled Schema Catalog; it SHALL NOT make o
+       → Compound requirement: 2 SHALLs found — split into separate requirements
+
+  ❌ [FAIL] Line 381: Verification method: Conformance fixture asserting validation completes successf
+              ...ully with outbound network access fully disabled.
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 382: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 384: THE Bundled Schema Catalog SHALL contain every schema and sub-schema required to
+              ... validate a behavioral contract, evidence record, verificati
+
+  ❌ [FAIL] Line 385: Verification method: Catalog completeness review against all `$ref` URIs in all
+              ...published schemas; end-to-end validation test executed in a
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 386: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 388: IF a document's declared `$schema` URI cannot be resolved from the Bundled Schem
+              ...a Catalog, THEN THE Validator SHALL return an error identify
+       → Compound requirement: 2 SHALLs found — split into separate requirements
+
+  ❌ [FAIL] Line 389: Verification method: Conformance fixture with a document declaring an unknown `$
+              ...schema` URI, asserting the error message contains the unreso
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 390: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 392: THE Schema_Catalog index (Requirement 1.6) SHALL be the authoritative document m
+              ...apping schema identifiers to catalog-relative file paths; va
+       → Compound requirement: 2 SHALLs found — split into separate requirements
+
+  ❌ [FAIL] Line 393: Verification method: Review of Validator implementation confirming all schema pa
+              ...th lookups use the catalog index; integration test asserting
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 394: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 396: THE Validator SHALL select schema material only from an embedded or explicitly s
+              ...upplied immutable CatalogSnapshot admitted by trusted caller
+
+  ❌ [FAIL] Line 397: Verification method: Embedded/explicit snapshot positive fixtures, tampered/inde
+              ...x/path/meta-schema failures and hostile environment variable
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 398: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 410: THE Framework_Core SHALL publish an extension convention document specifying all
+              ... of the following:
+
+  ❌ [FAIL] Line 411: The namespace prefix grammar: an ASCII letter followed by zero or more ASCII alp
+              ...hanumeric characters or hyphens, minimum total length two ch
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 412: The reserved namespace families: `core`, `core-*`, `cdc`, and `cdc-*`. Reserved-
+              ...prefix matching is case-insensitive: `CORE:`, `Core-Validati
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 413: The list of currently reserved prefixes with concrete examples: `core:`, `core-v
+              ...alidation:`, `cdc:`, `cdc-evidence:`.
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 414: The governance rule that new namespaces within existing reserved families MAY be
+              ... introduced without modifying prefix-validation logic, and t
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 415: The ownership and collision-handling policy: extension namespace ownership SHALL
+              ... be documented in the extension registry; prefixes alone SHA
+       → Compound requirement: 2 SHALLs found — split into separate requirements
+
+  ❌ [FAIL] Line 416: Verification method: Review of extension convention document confirming all six
+              ...elements are present and the reserved-prefix list is consist
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 417: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 419: WHEN a document contains an extension field whose qualified key prefix conforms
+              ...to the documented namespace grammar and is not a reserved pr
+       → Compound requirement: 3 SHALLs found — split into separate requirements
+
+  ❌ [FAIL] Line 420: Verification method: Conformance fixture asserting (a) a document with a valid c
+              ...ommunity extension field passes structural validation, and (
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 421: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 423: WHEN a document contains a field whose qualified key prefix matches a reserved n
+              ...amespace (case-insensitive), THE Validator SHALL surface a w
+       → Compound requirement: 2 SHALLs found — split into separate requirements
+
+  ❌ [FAIL] Line 424: Verification method: Conformance fixture asserting that each of `core:`, `CORE:`
+              ..., `Core-Validation:`, `cdc:`, `CDC:`, and `Cdc-Evidence:` pr
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 425: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 427: IF an extension field is declared as required for behavioral correctness or secu
+              ...rity enforcement in a document (i.e., the document explicitl
+       → Compound requirement: 2 SHALLs found — split into separate requirements
+
+  ❌ [FAIL] Line 428: Verification method: Integration test asserting that a document declaring an unr
+              ...ecognized mandatory extension produces a blocker result and
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 429: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 431: Unknown optional extension fields SHALL NOT silently influence mandatory behavio
+              ...ral obligations, security policies, verifier decisions, or m
+       → Compound requirement: 2 SHALLs found — split into separate requirements
+
+  ❌ [FAIL] Line 432: Verification method: Adversarial fixture containing an extension field that atte
+              ...mpts to override a core verification result field (e.g., `ac
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 433: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 435: THE Framework_Core SHALL publish an extension registry document listing all know
+              ...n community extension namespaces with their claimed owner, p
+       → Compound requirement: 2 SHALLs found — split into separate requirements
+
+  ❌ [FAIL] Line 436: Verification method: Review of release artifact confirming the registry file is
+              ...present; review of at least one registered namespace entry f
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 437: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 439: THE Validator's adversarial conformance suite SHALL include fixtures covering al
+              ...l of the following bypass and edge-case scenarios:
+
+  ❌ [FAIL] Line 440: Reserved namespace impersonation via exact match (e.g., `core:field`).
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 441: Reserved namespace bypass via uppercase (e.g., `CORE:field`, `CDC:field`).
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 442: Reserved namespace bypass via mixed case (e.g., `Core-Validation:field`, `Cdc-Ev
+              ...idence:field`).
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 443: Namespace collision between two community extensions using the same prefix from
+              ...different pack authors.
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 444: Invalid prefix formats: prefix beginning with a digit, prefix containing a space
+              ..., prefix of length one.
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 445: Unknown optional extension round-tripping: field is present, unmodified, and non
+              ...-influencing after round-trip.
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 446: Unknown mandatory extension attempting to unlock acceptance: verifier must block
+              ....
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 447: Extension attempting to override a core verification result field: core outcome
+              ...is unchanged.
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 448: Verification method: All eight fixture classes are present in the adversarial su
+              ...ite; each class includes at least one passing (correctly han
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 449: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 461: WHEN THE Validator encounters any validation failure — structural, semantic, or
+              ...version-related — THE Validator SHALL return an error respon
+       → Compound requirement: 2 SHALLs found — split into separate requirements
+
+  ❌ [FAIL] Line 462: Verification method: Conformance fixture exercising each failure category, inclu
+              ...ding an unparseable document, and asserting all required err
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 463: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 465: THE Validator SHALL NOT silently accept, silently ignore, or partially validate
+              ...any document that fails structural or semantic validation.
+
+  ❌ [FAIL] Line 466: Verification method: Conformance fixture asserting that a document with a known
+              ...structural error is rejected with an error result and no acc
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 467: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 469: IF a pack manifest declares a supported operation range that does not cover the
+              ...source artifact being analyzed, THEN THE Manifest_Validator
+       → Compound requirement: 2 SHALLs found — split into separate requirements
+
+  ❌ [FAIL] Line 470: Verification method: Integration test with a source artifact using an operation
+              ...outside the manifest's declared coverage, asserting the resu
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 471: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 473: WHEN missing mandatory evidence blocks acceptance of a transformation (per Requi
+              ...rement 3.6), THE Validator SHALL return a blocking-gap repor
+       → Compound requirement: 2 SHALLs found — split into separate requirements
+
+  ❌ [FAIL] Line 474: Verification method: Integration test asserting the blocking-gap report contains
+              ... the three required fields and that the transformation canno
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 475: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 487: THE Framework_Core SHALL include a machine-readable SBOM in CycloneDX JSON or SP
+              ...DX JSON format in each release artifact, listing all direct
+
+  ❌ [FAIL] Line 488: Verification method: Review of release artifact confirming the SBOM is present i
+              ...n one of the two required formats and is parseable by a conf
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 489: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 491: THE Framework_Core SHALL include a cryptographic signature over the schema catal
+              ...og release artifact using an asymmetric signing key whose pu
+       → Compound requirement: 2 SHALLs found — split into separate requirements
+
+  ❌ [FAIL] Line 492: Verification method: Review of release artifact for signature file; integration
+              ...test asserting signature verification succeeds on the releas
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 493: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 495: WHEN a dependency in the schema toolchain carries a license that is incompatible
+              ... with CloudDialect's dual-licensing distribution model, THE
+
+  ❌ [FAIL] Line 496: Verification method: Review of dependency screening process documentation; SBOM
+              ...review confirming no incompatible licenses are present in a
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ❌ [FAIL] Line 497: Evidence status: `MISSING`
+       → Missing SHALL keyword — requirement is not imperative
+       → No EARS pattern detected (missing SHALL)
+
+  ✅ [PASS] Line 505: THE Behavioral_Contract_Schema, Evidence_Record_Schema, and Verification_Result_
+              ...Schema SHALL be expressed in JSON Schema Draft 2020-12 such
+
+  ✅ [PASS] Line 509: THE Pack_Manifest_Schema SHALL be expressed in TOML 1.0 compatible syntax such t
+              ...hat any conforming TOML 1.0 parser can read a valid manifest
+
+  ✅ [PASS] Line 515: THE Framework_Core SHALL maintain a traceability table mapping each published sc
+              ...hema field to the requirement in this document that introduc
+
+  ✅ [PASS] Line 519: THE Framework_Core SHALL maintain a requirements traceability matrix linking eac
+              ...h acceptance gate (AC-01, AC-02, AC-07, AC-09) to the requir
+
+  ✅ [PASS] Line 525: THE Framework_Core SHALL NOT change the semantics of a field in an existing MINO
+              ...R release; semantic changes require a MAJOR version incremen
+
+──────────────────────────────────────────────────────────────────────
+  SUMMARY: 228 requirements checked
+    ✅ PASS: 49
+    ⚠️  WARN: 1
+    ❌ FAIL: 178
+
+  ❌ VERDICT: FAIL — fix failed requirements before implementation
+
+======================================================================

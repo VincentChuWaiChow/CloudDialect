@@ -1,0 +1,24 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.88s
+     Running tests/source_document_models.rs (/tmp/clouddialect-phase-target/debug/deps/source_document_models-7d52335dbe9b71d1)
+
+running 1 test
+test encoded_extension_value_bytes_survive_without_reencoding ... FAILED
+
+failures:
+
+---- encoded_extension_value_bytes_survive_without_reencoding stdout ----
+
+thread 'encoded_extension_value_bytes_survive_without_reencoding' (142) panicked at tests/source_document_models.rs:183:5:
+assertion `left == right` failed: extension values were re-encoded: {"id":"contract-1","format_version":"1.0.0","operation_identity":{"call_site":"pkg.upload","wrapper_chain":["outer","inner"],"acme:encoded":{"a":[1,2],"z":"a"}},"inputs":{"metadata":{"acme:encoded":{"a":[1,2],"z":"a"}},"properties":{"payload":{"type":"string"}},"type":"object"},"outputs":{"type":"object"},"side_effects":[{"description":"writes test object","evidence_ref":"evidence-1"}],"resource_dependencies":[{"identity":"test-store","permissions":["write"],"configuration":{"acme:encoded":{"a":[1,2],"z":"a"},"bucket":"test"},"known_behavior":{"ordering":"per-key","consistency":"strong","retry":"bounded","failure":"explicit"},"unresolved_assumptions":[{"assumption_id":"a1","description":"ETag behavior","reason":"not observed"}]}],"obligations":[{"obligation_id":"o1","behavioral_fidelity":"equivalent-within-contract","evidence_refs":["evidence-1"]}],"behavioral_notes":[{"note_type":"boundary","description":"wrapper retains ordering","evidence_ref":"evidence-1"}],"acme:encoded":{"a":[1,2],"z":"a"}}
+  left: 0
+ right: 4
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    encoded_extension_value_bytes_survive_without_reencoding
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 7 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--test source_document_models`

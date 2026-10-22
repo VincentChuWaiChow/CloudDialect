@@ -1,0 +1,71 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.98s
+     Running tests/behavioral_schema.rs (/tmp/clouddialect-phase-target/debug/deps/behavioral_schema-08ddf14d5fbadc28)
+
+running 8 tests
+test community_extensions_are_valid_but_invalid_namespace_spellings_are_not ... FAILED
+test each_obligation_has_exactly_one_nonempty_support_alternative ... FAILED
+test complete_semver_syntax_rejects_leading_zeroes_empty_suffixes_and_whitespace ... FAILED
+test every_required_base_field_is_enforced ... FAILED
+test fidelity_is_closed_without_promoting_structural_success ... FAILED
+test identifiers_are_lowercase_hyphenated_uuid_v4 ... FAILED
+test minimal_contract_and_explicit_schema_selector_validate ... FAILED
+test wrappers_resources_and_open_note_types_keep_their_required_structure ... FAILED
+
+failures:
+
+---- community_extensions_are_valid_but_invalid_namespace_spellings_are_not stdout ----
+
+thread 'community_extensions_are_valid_but_invalid_namespace_spellings_are_not' (230) panicked at tests/behavioral_schema.rs:10:5:
+required behavioral-contract schema is not delivered
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- each_obligation_has_exactly_one_nonempty_support_alternative stdout ----
+
+thread 'each_obligation_has_exactly_one_nonempty_support_alternative' (232) panicked at tests/behavioral_schema.rs:10:5:
+required behavioral-contract schema is not delivered
+
+---- complete_semver_syntax_rejects_leading_zeroes_empty_suffixes_and_whitespace stdout ----
+
+thread 'complete_semver_syntax_rejects_leading_zeroes_empty_suffixes_and_whitespace' (231) panicked at tests/behavioral_schema.rs:10:5:
+required behavioral-contract schema is not delivered
+
+---- every_required_base_field_is_enforced stdout ----
+
+thread 'every_required_base_field_is_enforced' (233) panicked at tests/behavioral_schema.rs:10:5:
+required behavioral-contract schema is not delivered
+
+---- fidelity_is_closed_without_promoting_structural_success stdout ----
+
+thread 'fidelity_is_closed_without_promoting_structural_success' (234) panicked at tests/behavioral_schema.rs:10:5:
+required behavioral-contract schema is not delivered
+
+---- identifiers_are_lowercase_hyphenated_uuid_v4 stdout ----
+
+thread 'identifiers_are_lowercase_hyphenated_uuid_v4' (235) panicked at tests/behavioral_schema.rs:10:5:
+required behavioral-contract schema is not delivered
+
+---- minimal_contract_and_explicit_schema_selector_validate stdout ----
+
+thread 'minimal_contract_and_explicit_schema_selector_validate' (236) panicked at tests/behavioral_schema.rs:10:5:
+required behavioral-contract schema is not delivered
+
+---- wrappers_resources_and_open_note_types_keep_their_required_structure stdout ----
+
+thread 'wrappers_resources_and_open_note_types_keep_their_required_structure' (237) panicked at tests/behavioral_schema.rs:10:5:
+required behavioral-contract schema is not delivered
+
+
+failures:
+    community_extensions_are_valid_but_invalid_namespace_spellings_are_not
+    complete_semver_syntax_rejects_leading_zeroes_empty_suffixes_and_whitespace
+    each_obligation_has_exactly_one_nonempty_support_alternative
+    every_required_base_field_is_enforced
+    fidelity_is_closed_without_promoting_structural_success
+    identifiers_are_lowercase_hyphenated_uuid_v4
+    minimal_contract_and_explicit_schema_selector_validate
+    wrappers_resources_and_open_note_types_keep_their_required_structure
+
+test result: FAILED. 0 passed; 8 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--test behavioral_schema`

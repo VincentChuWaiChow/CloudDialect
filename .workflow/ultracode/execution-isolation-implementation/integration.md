@@ -1,0 +1,32 @@
+# Integration
+
+## Accepted
+Two independent read-only research passes; current Context7 Rust/JSON-RPC and SQLite sidecar lookup; primary-source corroboration. Parent-authored six decision records and six qualification/measurement artifacts, all explicitly non-accepting and unqualified.
+
+## Rejected
+No assumption that a process, CI runner, VM receipt, worker JSON success or signed in-domain runner log proves containment or behavioral acceptance. No invented upstream `Passed` enum, approval, secret material, measured budget, retention duration or runtime fallback.
+
+## Conflicts
+Upstream result design/tasks disagree and code lacks the consumed APIs. Existing documentation checker compares to its historical `ad2b4bd...` baseline, thereby flags pre-existing Spec 3/framework work as unrelated; raw invocation fails unchanged. Fresh-run baseline adaptation passes without changing source checks. Initial adapter used `/tmp`, incompatible with the grader's workspace-relative diagnostic; moved only temporary test location inside this run and reran successfully. Both outputs preserved.
+
+## Decisions
+Preserve requirements/design/tasks and existing workflow. Stop TASK-007 and all runtime work until five owner decisions, actual upstream compatibility and approved probe environment are available. Preparing records is not completing TASK-001–006 owner done criteria.
+
+## Final changes
+Only new spec `decisions/`, `qualification/` and this implementation run directory. Local branch created by scoped Git escalation. No source/dependency/license changes, commits, pushes or deployments.
+After explicit user reply, added `decisions/BG-01-prerequisite-plan.md` mapping the unfinished real Spec 1 dependency closure without modifying or implementing Spec 1.
+
+## Verification still needed
+Independent review completed with one P2 packaging finding. Parent repaired it by preserving/running `reproduce-document-checks.sh` and recording exit 0; no independent post-repair sign-off. Final preservation/JSON/whitespace checks pass in `results/final-structure-checks.json`. Runtime RED/GREEN, >=80% coverage, build/lint/full integrated native qualification and restore/release evidence remain NOT RUN.
+
+## Remaining risks
+No operational security claim is supported. Proposed IPC is intentionally incomplete pending schema/bounds approval. MicroVM/broker/SQLite are comparison candidates, not defaults. Owner response and upstream delivery are required to proceed.
+
+## Authorized P0 integration
+User authorized Spec 1 documentation reconciliation. Parent added the proposed amendment and reconciled the three main Spec 1 documents, without code, catalog, dependencies or gate closure. One new reviewer found five contradictions; consolidated parent repair and 10 focused documentation tests address them, with no independent post-repair sign-off. Generic validators still fail before/after and date-time/pinned-engine/semantic/native checks remain explicitly unverified. Current handoff is `p0-report.md`; earlier preservation results are historical, superseded for the three intentionally edited docs by the P0 baseline audit.
+
+## Implementation-planning integration
+P0-A–F planning approval recorded, without adopting versions or closing BG-01. Added implementation-plan.md: 28 nodes, true declared depth 16, two nondispatch containers, exact five-file first slice. Refreshed pinned Boon API evidence against checksum-matching official archive; inspected only, no install/execution. Rejected unrelated Context7 match; Cargo docs support frozen/target planning. Reviewer FAIL findings repaired in one parent phase: allocated ManifestValidationResult/ManifestOutcome before use, planned harness=false fixture selector with zero-selection nonzero controls, explicit repository-root notice. Seven planning + ten P0 + seven scaffold tests and final preservation audit pass. No independent post-repair sign-off; no runtime, native, release or code delivery claimed. Current handoff supersedes prior preparation/P0 report pointers: planning-report.md.
+
+## First prerequisite implementation
+Implemented only unit 1.2's five named Rust paths after stating the interpretation of the user's implement/continue request. Same integration target: missing-API E0432/E0425 RED after dependency compilation -> eight tests GREEN; two negative doctests E0277 both directions. Check/fmt/Clippy/seven scaffold tests/nine P0 content cases pass. Old full P0 docs-only hash check fails on newly authorized source, retained unchanged; fresh five-path audit passes with 109 unowned hashes preserved. Independent sixth reviewer explicitly approved by user: PASS, no required findings. Coverage tooling ran, but derive-only modules emit no production mappings: >=80% UNVERIFIED, no test/dependency percentage substituted. Six cumulative sidecars/zero followups, no code repair, one bounded tooling setup repair. No commits/probes; all canonical task checkboxes and six gates unchanged. Current handoff phase-results-report.md.

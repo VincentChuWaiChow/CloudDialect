@@ -1,0 +1,460 @@
+{
+  "checked_at": "2026-10-22T10:53:13.369158+00:00",
+  "cargo_fetch_locked_exit": 0,
+  "isolated_home": "/tmp/clouddialect-phase-cargo",
+  "initial_frozen_setup_exit": 101,
+  "initial_failure": "missing boon in isolated cache, not RED",
+  "restricted_fetch_exit": 101,
+  "restricted_failure": "index.crates.io DNS unavailable",
+  "network_escalation": "scoped Cargo fetch of existing committed lock dependencies, approved by tool policy",
+  "lock_sha256": "35dac05db7a50c21391198798f41e75d0387fb19af3fe59d96061c64005cbbb0",
+  "archive_count": 89,
+  "all_archive_checksums_match_lock": true,
+  "packages": [
+    {
+      "name": "ahash",
+      "version": "0.8.12",
+      "sha256": "5a15f179cd60c4584b8a8c596927aadc462e27f2ca70c04e0071964a73ba7a75"
+    },
+    {
+      "name": "aho-corasick",
+      "version": "1.1.5",
+      "sha256": "c982642fa9e8606056828ee9a8505737230110bb1099153c79efe865c59d12ba"
+    },
+    {
+      "name": "appendlist",
+      "version": "1.4.0",
+      "sha256": "e149dc73cd30538307e7ffa2acd3d2221148eaeed4871f246657b1c3eaa1cbd2"
+    },
+    {
+      "name": "base64",
+      "version": "0.22.1",
+      "sha256": "72b3254f16251a8381aa12e40e3c4d2f0199f8c6508fbecb9d91f575e0fbb8c6"
+    },
+    {
+      "name": "boon",
+      "version": "0.6.1",
+      "sha256": "baa187da765010b70370368c49f08244b1ae5cae1d5d33072f76c8cb7112fe3e"
+    },
+    {
+      "name": "borrow-or-share",
+      "version": "0.2.4",
+      "sha256": "dc0b364ead1874514c8c2855ab558056ebfeb775653e7ae45ff72f28f8f3166c"
+    },
+    {
+      "name": "bumpalo",
+      "version": "3.20.3",
+      "sha256": "72f5acc6cb2ba439de613abc23857ec3d78374d8ed5ac84e9d11336e87da8649"
+    },
+    {
+      "name": "cfg-if",
+      "version": "1.0.5",
+      "sha256": "4e7648175b45a9a48536d676f68d918270699102aa8dab5496df06904c914600"
+    },
+    {
+      "name": "displaydoc",
+      "version": "0.2.7",
+      "sha256": "c6232dd377dcc64799954cbd3a9bb882e9cdc1308ccd87b1c098f1fb2eaf82a8"
+    },
+    {
+      "name": "equivalent",
+      "version": "1.0.3",
+      "sha256": "00d174d5400e5e8fd687ad1049e2f578285fa914201b1af7e8b112a4546bd826"
+    },
+    {
+      "name": "fluent-uri",
+      "version": "0.3.2",
+      "sha256": "1918b65d96df47d3591bed19c5cca17e3fa5d0707318e4b5ef2eae01764df7e5"
+    },
+    {
+      "name": "form_urlencoded",
+      "version": "1.2.2",
+      "sha256": "cb4cb245038516f5f85277875cdaa4f7d2c9a0fa0468de06ed190163b1581fcf"
+    },
+    {
+      "name": "futures-core",
+      "version": "0.3.34",
+      "sha256": "92d699e522242e69e3003b94ecc1f960f3a5e015aa7c5d7486e65ad01dd94f5e"
+    },
+    {
+      "name": "futures-task",
+      "version": "0.3.34",
+      "sha256": "cd417de3d1d015fc3bfd2b1ea46dfc7bab72ef86f1cc7cc9c78e728b34a6d1fd"
+    },
+    {
+      "name": "futures-util",
+      "version": "0.3.34",
+      "sha256": "0d50a92467f8ba5dd6e3ee5d4bd04d73ab2e4e1c44474a0674821dfce14b79bc"
+    },
+    {
+      "name": "getrandom",
+      "version": "0.3.4",
+      "sha256": "899def5c37c4fd7b2664648c28120ecec138e4d395b459e5ca34f9cce2dd77fd"
+    },
+    {
+      "name": "getrandom",
+      "version": "0.4.3",
+      "sha256": "300e883d756b2e4ec94e02791f39b04b522276138852cfc41d9fb7e904106099"
+    },
+    {
+      "name": "hashbrown",
+      "version": "0.17.1",
+      "sha256": "ed5909b6e89a2db4456e54cd5f673791d7eca6732202bbf2a9cc504fe2f9b84a"
+    },
+    {
+      "name": "icu_collections",
+      "version": "2.3.0",
+      "sha256": "fa68d21081c4a05d5a901a1c62add574c77048b6a1c67be3b50ce0b60d4ca513"
+    },
+    {
+      "name": "icu_locale_core",
+      "version": "2.3.0",
+      "sha256": "d56e28588da92eee5c3201a6eff33fabdd49b62269c8938d4ff050ce4d900deb"
+    },
+    {
+      "name": "icu_normalizer",
+      "version": "2.3.0",
+      "sha256": "12f9cf5f235641ed274641dd81c3f28d870e276763d0797aeeab72317b1c646f"
+    },
+    {
+      "name": "icu_normalizer_data",
+      "version": "2.3.0",
+      "sha256": "1563da1ed3e0b3bf3d74c9b85917ac9c56464d2f57242270c09c9e752f8021a0"
+    },
+    {
+      "name": "icu_properties",
+      "version": "2.3.0",
+      "sha256": "7e7ca276ad3145661a65914e6daf131ca5120cd3dcee8f8f3214b8875184a148"
+    },
+    {
+      "name": "icu_properties_data",
+      "version": "2.3.0",
+      "sha256": "e590f038c1464a96894fd6d10127e90a8be4509f56ff7ecef851b15cee0b7caa"
+    },
+    {
+      "name": "icu_provider",
+      "version": "2.3.1",
+      "sha256": "d27bbb9d3abbefac45d55f647c9de1d44aafcd1186eb91879afef17c396c3e73"
+    },
+    {
+      "name": "idna",
+      "version": "1.1.0",
+      "sha256": "3b0875f23caa03898994f6ddc501886a45c7d3d62d04d2d90788d47be1b1e4de"
+    },
+    {
+      "name": "idna_adapter",
+      "version": "1.2.2",
+      "sha256": "cb68373c0d6620ef8105e855e7745e18b0d00d3bdb07fb532e434244cdb9a714"
+    },
+    {
+      "name": "include_dir",
+      "version": "0.7.4",
+      "sha256": "923d117408f1e49d914f1a379a309cffe4f18c05cf4e3d12e613a15fc81bd0dd"
+    },
+    {
+      "name": "include_dir_macros",
+      "version": "0.7.4",
+      "sha256": "7cab85a7ed0bd5f0e76d93846e0147172bed2e2d3f859bcc33a8d9699cad1a75"
+    },
+    {
+      "name": "indexmap",
+      "version": "2.14.2",
+      "sha256": "cc4e190f5d26ca7051642629da2c52fc03bde85a03197c99408dcd291734c855"
+    },
+    {
+      "name": "itoa",
+      "version": "1.0.18",
+      "sha256": "8f42a60cbdf9a97f5d2305f08a87dc4e09308d1276d28c869c684d7777685682"
+    },
+    {
+      "name": "js-sys",
+      "version": "0.3.106",
+      "sha256": "7883d941dae510fb2d978fc3fe018c71c9e2892fd38854de3e8b92c2e5ad9cc5"
+    },
+    {
+      "name": "libc",
+      "version": "0.2.191",
+      "sha256": "65cd87c9a6d60536580b316ad985726104730a5151c99845f2490428ef91240a"
+    },
+    {
+      "name": "litemap",
+      "version": "0.8.3",
+      "sha256": "47d9d19d1d6efa0109d2f65ff4c85cddd50bd572e5a00127ab10987290bcefae"
+    },
+    {
+      "name": "memchr",
+      "version": "2.8.3",
+      "sha256": "cf8baf1c55e62ffcace7a9f06f4bd9cd3f0c4beb022d3b367256b91b87513d98"
+    },
+    {
+      "name": "once_cell",
+      "version": "1.21.4",
+      "sha256": "9f7c3e4beb33f85d45ae3e3a1792185706c8e16d043238c593331cc7cd313b50"
+    },
+    {
+      "name": "percent-encoding",
+      "version": "2.3.2",
+      "sha256": "9b4f627cb1b25917193a259e49bdad08f671f8d9708acfd5fe0a8c1455d87220"
+    },
+    {
+      "name": "pin-project-lite",
+      "version": "0.2.17",
+      "sha256": "a89322df9ebe1c1578d689c92318e070967d1042b512afbe49518723f4e6d5cd"
+    },
+    {
+      "name": "potential_utf",
+      "version": "0.1.6",
+      "sha256": "d83eb9bc6d8e5cf568e7a1101d60ee05e81ed50ea106026f3d18deeb046d7661"
+    },
+    {
+      "name": "proc-macro2",
+      "version": "1.0.107",
+      "sha256": "985e7ec9bb745e6ce6535b544d84d6cd6f7ad8bd711c398938ae983b91a766d9"
+    },
+    {
+      "name": "quote",
+      "version": "1.0.47",
+      "sha256": "1fbf4db142a473a8d80c26bbf18454ed458bf8d26c8219c331daecfdbd079001"
+    },
+    {
+      "name": "r-efi",
+      "version": "5.3.0",
+      "sha256": "69cdb34c158ceb288df11e18b4bd39de994f6657d83847bdffdbd7f346754b0f"
+    },
+    {
+      "name": "r-efi",
+      "version": "6.0.0",
+      "sha256": "f8dcc9c7d52a811697d2151c701e0d08956f92b0e24136cf4cf27b57a6a0d9bf"
+    },
+    {
+      "name": "ref-cast",
+      "version": "1.0.27",
+      "sha256": "7e440fb4e4b4147295338efb76001ab9e4efc0e5839df2c47fc5ac2381d365c3"
+    },
+    {
+      "name": "ref-cast-impl",
+      "version": "1.0.27",
+      "sha256": "92ecd8964f8453721699a1ed72037b0db49ce2f5a5138486ee89bed6f67cdf3a"
+    },
+    {
+      "name": "regex",
+      "version": "1.13.1",
+      "sha256": "f020237b6c8eed93db2e2cb53c00c60a8e1bc73da7d073199a1180401450218d"
+    },
+    {
+      "name": "regex-automata",
+      "version": "0.4.18",
+      "sha256": "ad8553b9b26413251cbf30e620595c7a41b3887f03da04579c0e6b0d6a06b4b2"
+    },
+    {
+      "name": "regex-syntax",
+      "version": "0.8.11",
+      "sha256": "d6f6ff9a378485b298a5286656da665ba74413d36db0979633275d2e708145d4"
+    },
+    {
+      "name": "rustversion",
+      "version": "1.0.23",
+      "sha256": "cf54715a573b99ac80df0bc206da022bcd442c974952c7b9720069370852e21f"
+    },
+    {
+      "name": "serde",
+      "version": "1.0.229",
+      "sha256": "4148590afebada386688f18773da617792bf2ef03ffc1e4cbd2b1d45b023e0ba"
+    },
+    {
+      "name": "serde_core",
+      "version": "1.0.229",
+      "sha256": "67dca2c9c51e58a4791a4b1ed58308b39c64224d349a935ab5039aa360942a48"
+    },
+    {
+      "name": "serde_derive",
+      "version": "1.0.229",
+      "sha256": "e7a5d71263a5a7d47b41f6b3f06ba276f10cc18b0931f1799f710578e2309348"
+    },
+    {
+      "name": "serde_json",
+      "version": "1.0.154",
+      "sha256": "e7e9cc8b1b85264074fbcc02a88680c4096b1e47df8f739dceb03bf482f04bd6"
+    },
+    {
+      "name": "serde_spanned",
+      "version": "1.1.2",
+      "sha256": "4e7523beb55eece201a2356bee0bbca0d1ab466c14c07703b2e0ee6d42cb0c2c"
+    },
+    {
+      "name": "slab",
+      "version": "0.4.12",
+      "sha256": "0c790de23124f9ab44544d7ac05d60440adc586479ce501c1d6d7da3cd8c9cf5"
+    },
+    {
+      "name": "smallvec",
+      "version": "1.16.3",
+      "sha256": "5b3dc8af474f516a851ff4bd12db780f948b9250ad37211e4eec0bccea54e01b"
+    },
+    {
+      "name": "stable_deref_trait",
+      "version": "1.2.1",
+      "sha256": "6ce2be8dc25455e1f91df71bfa12ad37d7af1092ae736f3a6cd0e37bc7810596"
+    },
+    {
+      "name": "syn",
+      "version": "2.0.119",
+      "sha256": "872831b642d1a07999a962a351ed35b955ea2cfc8f3862091e2a240a84f17297"
+    },
+    {
+      "name": "syn",
+      "version": "3.0.9",
+      "sha256": "d78c8dee4c7bf0e14673097256fed6142ce9d3b85a408189d07482442145823b"
+    },
+    {
+      "name": "synstructure",
+      "version": "0.14.0",
+      "sha256": "901704edd0dfe137f1987838ee4f259e4e063c31371bdb423f7ae38ec6f77f02"
+    },
+    {
+      "name": "tinystr",
+      "version": "0.8.4",
+      "sha256": "b1e27c91459209c2986af3dcf603a5a74a4368754ce37414f59acc971167f643"
+    },
+    {
+      "name": "toml",
+      "version": "0.9.9+spec-1.0.0",
+      "sha256": "eb5238e643fc34a1d5d7e753e1532a91912d74b63b92b3ea51fde8d1b7bc79dd"
+    },
+    {
+      "name": "toml_datetime",
+      "version": "0.7.5+spec-1.1.0",
+      "sha256": "92e1cfed4a3038bc5a127e35a2d360f145e1f4b971b551a2ba5fd7aedf7e1347"
+    },
+    {
+      "name": "toml_parser",
+      "version": "1.1.5+spec-1.1.0",
+      "sha256": "baa693a8032d7e1cada7d0041e96126df243179ff061456783ac7f12bda4744c"
+    },
+    {
+      "name": "toml_writer",
+      "version": "1.1.3+spec-1.1.0",
+      "sha256": "06bdbd8cfc056b8d2e2e85f29b56a3bdbecb527cef81eb39e3e7b98af4652770"
+    },
+    {
+      "name": "unicode-ident",
+      "version": "1.0.27",
+      "sha256": "a2c754d6c33795a1c324727428e5a7dedb5b06195f9890bdbcba760d3e246563"
+    },
+    {
+      "name": "url",
+      "version": "2.5.8",
+      "sha256": "ff67a8a4397373c3ef660812acab3268222035010ab8680ec4215f38ba3d0eed"
+    },
+    {
+      "name": "utf8_iter",
+      "version": "1.0.4",
+      "sha256": "b6c140620e7ffbb22c2dee59cafe6084a59b5ffc27a8859a5f0d494b5d52b6be"
+    },
+    {
+      "name": "uuid",
+      "version": "1.28.0",
+      "sha256": "7cc1186384beb7dd8eedea376413fd654937285ea6c9cfbb928dc3043ea4b606"
+    },
+    {
+      "name": "version_check",
+      "version": "0.9.5",
+      "sha256": "0b928f33d975fc6ad9f86c8f283853ad26bdd5b10b7f1542aa2fa15e2289105a"
+    },
+    {
+      "name": "wasip2",
+      "version": "1.0.4+wasi-0.2.12",
+      "sha256": "b67efb37e106e55ce722a510d6b5f9c17f083e5fc79afc2badeb12cc313d9487"
+    },
+    {
+      "name": "wasm-bindgen",
+      "version": "0.2.129",
+      "sha256": "9bb54f33acc68fd454578d9820b0bde1a1a3d17aa17bb7b6595806d02886d409"
+    },
+    {
+      "name": "wasm-bindgen-macro",
+      "version": "0.2.129",
+      "sha256": "2e29d0c35b16e224a7eeb5cd2d25e3e1968fbd65604117b44d3b789d00ee8535"
+    },
+    {
+      "name": "wasm-bindgen-macro-support",
+      "version": "0.2.129",
+      "sha256": "6f501a8bc3719dba86ef8ae4728879c08001bea749eb1333ac5b91e040e2a6b7"
+    },
+    {
+      "name": "wasm-bindgen-shared",
+      "version": "0.2.129",
+      "sha256": "23f0c9c52aa7cd7d77769a4cfe2a9adb1b331f489a41d912ce14513d5ab995c6"
+    },
+    {
+      "name": "winnow",
+      "version": "0.7.15",
+      "sha256": "df79d97927682d2fd8adb29682d1140b343be4ac0f08fd68b7765d9c059d3945"
+    },
+    {
+      "name": "winnow",
+      "version": "1.0.4",
+      "sha256": "23b97319f7b8343df12cc98938e5c3eb436064524c8d2b4e30a1d3a36eecdf81"
+    },
+    {
+      "name": "wit-bindgen",
+      "version": "0.57.1",
+      "sha256": "1ebf944e87a7c253233ad6766e082e3cd714b5d03812acc24c318f549614536e"
+    },
+    {
+      "name": "writeable",
+      "version": "0.6.4",
+      "sha256": "3ad82d2a33cdc9674dc7465672f271e096168fcdbe0f799d9e6db8c5892679dc"
+    },
+    {
+      "name": "yoke",
+      "version": "0.8.3",
+      "sha256": "709fe23a0424b6a435d82152b1bd3fdfb0833487d5fa90d05d42762a9891fef5"
+    },
+    {
+      "name": "yoke-derive",
+      "version": "0.8.4",
+      "sha256": "ec8ebde2db3681e8c9980cc27822030e68752690ddfa9473e739aeb4dbde6d71"
+    },
+    {
+      "name": "zerocopy",
+      "version": "0.8.63",
+      "sha256": "e5fe1f8f1b06191a00962174c61aa5005e0bb391a6d80d07e24d115c01a92ed8"
+    },
+    {
+      "name": "zerocopy-derive",
+      "version": "0.8.63",
+      "sha256": "863ad3ac83293fb4d740aedbfdc9240dd8d1a50c1099acd76ce80ce7c7230c7f"
+    },
+    {
+      "name": "zerofrom",
+      "version": "0.1.8",
+      "sha256": "0ec05a11813ea801ff6d75110ad09cd0824ddba17dfe17128ea0d5f68e6c5272"
+    },
+    {
+      "name": "zerofrom-derive",
+      "version": "0.1.8",
+      "sha256": "f75b4683f6c7f45248d4d64056a24298c6281e0993356d7d1b4a1a962ef10d4a"
+    },
+    {
+      "name": "zerotrie",
+      "version": "0.2.5",
+      "sha256": "4ea269c3bd32f0a32c321907a2ae912ba6f4649bb0fc764a15627e99a7095a3f"
+    },
+    {
+      "name": "zerovec",
+      "version": "0.11.8",
+      "sha256": "bb0464e17806c1d976d5cba29399c7f08e516e279e2ba493f63123b5fca67dd8"
+    },
+    {
+      "name": "zerovec-derive",
+      "version": "0.11.6",
+      "sha256": "34df6fc39dbd26ddc9c10e6a2984476e13acce22e64e4487636ef494369225da"
+    },
+    {
+      "name": "zmij",
+      "version": "1.0.23",
+      "sha256": "29666d0abbfad1e3dc4dcf6144730dd3a3ab225bbbdac83319345b1b44ccfc1b"
+    }
+  ]
+}

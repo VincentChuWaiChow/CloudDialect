@@ -1,0 +1,37 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+warning: fields `schemas` and `root` are never read
+  --> tests/support/mod.rs:25:5
+   |
+24 | pub struct SchemaHarness {
+   |            ------------- fields in this struct
+25 |     schemas: Schemas,
+   |     ^^^^^^^
+26 |     root: SchemaIndex,
+   |     ^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: method `validate_json` is never used
+  --> tests/support/mod.rs:46:12
+   |
+29 | impl SchemaHarness {
+   | ------------------ method in this implementation
+...
+46 |     pub fn validate_json(&self, bytes: &[u8]) -> Result<bool, serde_json::Error> {
+   |            ^^^^^^^^^^^^^
+
+warning: `clouddialect-contracts` (test "catalog_index") generated 2 warnings
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.08s
+     Running tests/catalog_index.rs (/tmp/clouddialect-phase-target/debug/deps/catalog_index-a12dfeb334e0669f)
+
+running 8 tests
+test delivered_inventory_contains_all_five_kinds_and_its_own_schema ... ok
+test malformed_and_shape_invalid_index_bytes_are_rejected ... ok
+test missing_material_and_mismatched_schema_id_fail ... ok
+test exact_uri_uniqueness_and_path_aliasing_span_both_lists ... ok
+test supplied_support_material_and_relocated_bytes_need_no_live_paths ... ok
+test application_identity_kind_version_and_directory_must_agree ... ok
+test pinned_engine_compiles_all_bundled_schemas_with_deny_unknown_loader ... ok
+test noncanonical_paths_and_reserved_index_material_are_rejected ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s

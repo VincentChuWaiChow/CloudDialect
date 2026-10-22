@@ -1,0 +1,56 @@
+[
+  {
+    "criterion": "4.1",
+    "line": 202,
+    "status": "PASS",
+    "issues": []
+  },
+  {
+    "criterion": "4.3",
+    "line": 210,
+    "status": "PASS",
+    "issues": []
+  },
+  {
+    "criterion": "4.4",
+    "line": 214,
+    "status": "PASS",
+    "issues": []
+  },
+  {
+    "criterion": "4.8",
+    "line": 230,
+    "status": "PASS",
+    "issues": []
+  },
+  {
+    "criterion": "5.8",
+    "line": 272,
+    "status": "PASS",
+    "issues": []
+  },
+  {
+    "criterion": "8.3",
+    "line": 350,
+    "status": "PASS",
+    "issues": []
+  },
+  {
+    "criterion": "8.6",
+    "line": 362,
+    "status": "PASS",
+    "issues": []
+  },
+  {
+    "criterion": "8.7",
+    "line": 366,
+    "status": "PASS",
+    "issues": []
+  },
+  {
+    "criterion": "9.5",
+    "line": 396,
+    "status": "PASS",
+    "issues": []
+  }
+]

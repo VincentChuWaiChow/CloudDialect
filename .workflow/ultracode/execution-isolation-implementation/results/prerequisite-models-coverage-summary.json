@@ -1,0 +1,132 @@
+{
+  "compiler": "rustc 1.99.1 LLVM23.1.1",
+  "export_command": "LD_LIBRARY_PATH=/tmp/clouddialect-phase-llvm-tools rtk proxy /tmp/clouddialect-phase-llvm-tools/llvm-cov export /tmp/clouddialect-phase-coverage-target/debug/deps/clouddialect_contracts-cff649ac2dbcd03e -object /tmp/clouddialect-phase-coverage-target/debug/deps/source_document_models-2a3f2678635ea822 -object /tmp/clouddialect-phase-coverage-target/debug/deps/reference_contracts-00848392745d9746 -object /tmp/clouddialect-phase-coverage-target/debug/deps/conformance-5fffe9cdaac27e0b -object /tmp/clouddialect-phase-coverage-target/debug/deps/schema_harness-3b99399e2bf51a2e -object /tmp/clouddialect-phase-coverage-target/debug/deps/phase_results-8b29c7efc88d6b44 -object /tmp/clouddialect-phase-coverage-target/debug/deps/verification_models-6d565b7d1931a344 -instr-profile=/tmp/clouddialect-prerequisite-profiles-ns1acrte/merged.profdata -summary-only",
+  "production_files": [
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/validator/raw_objects.rs",
+      "summary": {
+        "lines": {
+          "count": 39,
+          "covered": 39,
+          "percent": 100
+        },
+        "functions": {
+          "count": 7,
+          "covered": 7,
+          "percent": 100
+        },
+        "instantiations": {
+          "count": 75,
+          "covered": 55,
+          "percent": 73.33333333333333
+        },
+        "regions": {
+          "count": 61,
+          "covered": 58,
+          "notcovered": 3,
+          "percent": 95.08196721311475
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    }
+  ],
+  "production_totals": {
+    "lines": {
+      "count": 39,
+      "covered": 39,
+      "percent": 100.0
+    },
+    "functions": {
+      "count": 7,
+      "covered": 7,
+      "percent": 100.0
+    },
+    "regions": {
+      "count": 61,
+      "covered": 58,
+      "percent": 95.08196721311475
+    }
+  },
+  "test_helper_files": [
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/tests/support/mod.rs",
+      "summary": {
+        "lines": {
+          "count": 28,
+          "covered": 28,
+          "percent": 100
+        },
+        "functions": {
+          "count": 4,
+          "covered": 4,
+          "percent": 100
+        },
+        "instantiations": {
+          "count": 4,
+          "covered": 4,
+          "percent": 100
+        },
+        "regions": {
+          "count": 44,
+          "covered": 44,
+          "notcovered": 0,
+          "percent": 100
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    }
+  ],
+  "test_helper_totals": {
+    "lines": {
+      "count": 28,
+      "covered": 28,
+      "percent": 100.0
+    },
+    "functions": {
+      "count": 4,
+      "covered": 4,
+      "percent": 100.0
+    },
+    "regions": {
+      "count": 44,
+      "covered": 44,
+      "percent": 100.0
+    }
+  },
+  "threshold_percent": 80,
+  "threshold_scope": "Emitted production serialization/decoder mappings only; derive-only types without mappings not fabricated. Test/dependency lines excluded. Branch coverage not measured. Not whole-spec/runtime coverage.",
+  "objects": [
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/clouddialect_contracts-cff649ac2dbcd03e",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/source_document_models-2a3f2678635ea822",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/reference_contracts-00848392745d9746",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/conformance-5fffe9cdaac27e0b",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/schema_harness-3b99399e2bf51a2e",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/phase_results-8b29c7efc88d6b44",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/verification_models-6d565b7d1931a344"
+  ],
+  "profiles_count": 26,
+  "audit_correction": "Initial expected executable count was six, but actual authoritative metadata has seven: five integration targets, library unit target, empty conformance target. Corrected to exact target identities.",
+  "production_line_threshold_pass": true
+}

@@ -1,0 +1,28 @@
+
+============================================================
+  Design Document Validation Report
+  File: /home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation-implementation/p0-baseline-docs-9w7y04z8/design.md
+============================================================
+
+  ❌ Section: Context Boundary
+     └─ Missing section matching: Context Boundary
+  ❌ Section: Design Constraints
+     └─ Missing section matching: Design Constraints
+  ✅ Section: Architecture / Building Block View
+  ❌ Section: Runtime Interactions
+     └─ Missing section matching: Runtime Interactions
+  ✅ Section: Data Models
+  ✅ Section: Error Handling & Resilience
+  ❌ Section: Architecture Decisions
+     └─ Missing section matching: Architecture Decisions
+  ✅ Section: Testing Strategy
+  ❌ Component interfaces
+     └─ Architecture section exists but no components found (expected ### Component: Name format)
+  ✅ Mermaid diagrams
+  ❌ Error handling table
+     └─ Table missing resilience columns (timeout/retry/circuit breaker)
+
+────────────────────────────────────────────────────────────
+  Results: 5/11 passed, 6/11 failed
+  Status: ❌ VALIDATION FAILED
+────────────────────────────────────────────────────────────

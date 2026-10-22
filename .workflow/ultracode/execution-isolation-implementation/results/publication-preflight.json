@@ -1,0 +1,17 @@
+{
+  "branch": "feat/execution-isolation",
+  "remote": "origin",
+  "remote_url": "git@github.com:VincentChuWaiChow/CloudDialect.git",
+  "remote_branch_before": "No matching branch: ls-remote --exit-code returned2, not an SSH/auth error",
+  "code_commit": "fd8400a6ea50746bb72701f2db4c66191d35a934",
+  "rules_commit": "3926eaca88ea8862743194a214e7da681ccce3b9",
+  "commit_signatures_present": true,
+  "signature_identity_verification": "UNVERIFIED: configured SSH signatures exist; allowedSignersFile is not configured. No signing policy bypass/global config edit.",
+  "push_authorized": "Explicit user request",
+  "push_method": "Normal feature-branch push, noforce, notmain/master",
+  "research_excluded": [
+    "research.md",
+    "cloud-transformation-framework-research.pdf"
+  ],
+  "workflow_triggers": "No .github/workflows or active git hooks found; remote server hooks not observable"
+}

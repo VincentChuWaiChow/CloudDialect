@@ -1,0 +1,22 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.15s
+     Running tests/behavioral_schema.rs (/tmp/clouddialect-phase-target/debug/deps/behavioral_schema-08ddf14d5fbadc28)
+
+running 1 test
+test a_declared_wrapper_chain_cannot_be_empty ... FAILED
+
+failures:
+
+---- a_declared_wrapper_chain_cannot_be_empty stdout ----
+
+thread 'a_declared_wrapper_chain_cannot_be_empty' (204) panicked at tests/behavioral_schema.rs:171:5:
+assertion failed: !valid(&h, &v)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    a_declared_wrapper_chain_cannot_be_empty
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 8 filtered out; finished in 0.01s
+
+error: test failed, to rerun pass `--test behavioral_schema`

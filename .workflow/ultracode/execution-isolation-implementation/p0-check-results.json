@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "name": "requirements",
+      "snapshot": "baseline",
+      "command": "rtk proxy python3 /home/raishin/.agents/skills/requirements-engineering/scripts/validate_requirements.py /home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation-implementation/p0-baseline-docs-9w7y04z8/requirements.md",
+      "exit_code": 1,
+      "evidence": "results/p0-requirements-baseline.txt"
+    },
+    {
+      "name": "requirements",
+      "snapshot": "current",
+      "command": "rtk proxy python3 /home/raishin/.agents/skills/requirements-engineering/scripts/validate_requirements.py /home/raishin/projects/CloudDialect/.kiro/specs/contracts-evidence-foundation/requirements.md",
+      "exit_code": 1,
+      "evidence": "results/p0-requirements-current.txt"
+    },
+    {
+      "name": "design",
+      "snapshot": "baseline",
+      "command": "rtk proxy python3 /home/raishin/.agents/skills/design-documentation/scripts/validate_design.py /home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation-implementation/p0-baseline-docs-9w7y04z8/design.md",
+      "exit_code": 1,
+      "evidence": "results/p0-design-baseline.txt"
+    },
+    {
+      "name": "design",
+      "snapshot": "current",
+      "command": "rtk proxy python3 /home/raishin/.agents/skills/design-documentation/scripts/validate_design.py /home/raishin/projects/CloudDialect/.kiro/specs/contracts-evidence-foundation/design.md",
+      "exit_code": 1,
+      "evidence": "results/p0-design-current.txt"
+    },
+    {
+      "name": "tasks",
+      "snapshot": "baseline",
+      "command": "rtk proxy python3 /home/raishin/.agents/skills/task-breakdown/scripts/validate_tasks.py /home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation-implementation/p0-baseline-docs-9w7y04z8/tasks.md",
+      "exit_code": 1,
+      "evidence": "results/p0-tasks-baseline.txt"
+    },
+    {
+      "name": "tasks",
+      "snapshot": "current",
+      "command": "rtk proxy python3 /home/raishin/.agents/skills/task-breakdown/scripts/validate_tasks.py /home/raishin/projects/CloudDialect/.kiro/specs/contracts-evidence-foundation/tasks.md",
+      "exit_code": 1,
+      "evidence": "results/p0-tasks-current.txt"
+    },
+    {
+      "name": "P0 grader initial setup",
+      "command": "rtk proxy python3 .workflow/ultracode/execution-isolation-implementation/verify-p0.py",
+      "exit_code": 1,
+      "status": "fail",
+      "evidence": "results/p0-grader-initial.txt",
+      "classification": "Grader assumptions: unavailable optional date-time checker; pre-existing trailing spaces counted as new. Not production RED."
+    },
+    {
+      "name": "P0 focused documentation suite",
+      "command": "rtk proxy python3 .workflow/ultracode/execution-isolation-implementation/verify-p0.py",
+      "exit_code": 0,
+      "status": "pass",
+      "evidence": "results/p0-focused-final.txt"
+    },
+    {
+      "name": "P0 scaffold regression",
+      "command": "rtk proxy python3 -m unittest discover -s tests -p test_contracts_scaffold.py -v",
+      "exit_code": 0,
+      "status": "pass",
+      "evidence": "results/p0-scaffold-final.txt"
+    },
+    {
+      "name": "P0 diff whitespace",
+      "command": "rtk git diff --check",
+      "exit_code": 0,
+      "status": "pass",
+      "evidence": "results/p0-diff-final.txt"
+    },
+    {
+      "name": "P0 grader sensitivity",
+      "command": "in-process import verify-p0.py, remove configuration from schema.required, run exact required-field test",
+      "exit_code": 0,
+      "status": "pass",
+      "evidence": "results/p0-grader-sensitivity.txt",
+      "interpretation": "Expected failing test from seeded mutation was detected; schema file unchanged."
+    }
+  ],
+  "tooling": {
+    "python_jsonschema": "4.26.0",
+    "referencing": "0.37.0",
+    "date_time_format_checker_available": false,
+    "external_reference_retrieval": "deny callback; no HTTP implementation; not a native offline observation"
+  },
+  "updated_at": "2026-10-22T08:12:24.555016+00:00"
+}

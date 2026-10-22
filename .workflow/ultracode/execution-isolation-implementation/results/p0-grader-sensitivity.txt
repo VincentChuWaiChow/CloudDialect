@@ -1,0 +1,16 @@
+Seeded mutation: remove required configuration from in-memory schema. Expected: grader fails.
+test_valid_verification_and_required_fields (p0grader.P0DocumentationTests.test_valid_verification_and_required_fields) ... FAIL
+
+======================================================================
+FAIL: test_valid_verification_and_required_fields (p0grader.P0DocumentationTests.test_valid_verification_and_required_fields)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation-implementation/verify-p0.py", line 66, in test_valid_verification_and_required_fields
+    self.assertEqual(set(SCHEMA["required"]),
+AssertionError: Items in the second set but not the first:
+'configuration'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)

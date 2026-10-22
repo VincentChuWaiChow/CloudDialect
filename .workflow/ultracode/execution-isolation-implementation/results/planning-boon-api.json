@@ -1,0 +1,56 @@
+{
+  "source": "https://static.crates.io/crates/boon/boon-0.6.1.crate",
+  "archive_sha256": "baa187da765010b70370368c49f08244b1ae5cae1d5d33072f76c8cb7112fe3e",
+  "matches_committed_lock": true,
+  "archive_bytes": 51696,
+  "executed": false,
+  "installed": false,
+  "findings": [
+    {
+      "path": "boon-0.6.1/src/compiler.rs",
+      "line": 85,
+      "snippet": "84: impl Compiler {\n85:     pub fn new() -> Self {\n86:         Self::default()\n87:     }\n88: \n89:     /**\n90:     Overrides the draft used to compile schemas without\n91:     explicit `$schema` field.\n92: \n93:     By default this library uses latest draft supported."
+    },
+    {
+      "path": "boon-0.6.1/src/compiler.rs",
+      "line": 114,
+      "snippet": "113:     */\n114:     pub fn enable_format_assertions(&mut self) {\n115:         self.assert_format = true;\n116:     }\n117: \n118:     /**\n119:     Always enable content assertions.\n120: \n121:     content assertions include keywords:\n122:     - contentEncoding"
+    },
+    {
+      "path": "boon-0.6.1/src/compiler.rs",
+      "line": 133,
+      "snippet": "132:     /// Overrides default [`UrlLoader`] used to load schema resources\n133:     pub fn use_loader(&mut self, url_loader: Box<dyn UrlLoader>) {\n134:         self.roots.loader.use_loader(url_loader);\n135:     }\n136: \n137:     /**\n138:     Registers custom `format`\n139: \n140:     # Note\n141: "
+    },
+    {
+      "path": "boon-0.6.1/src/loader.rs",
+      "line": 23,
+      "snippet": "22: /// A trait for loading json from given `url`\n23: pub trait UrlLoader {\n24:     /// Loads json from given absolute `url`.\n25:     fn load(&self, url: &str) -> Result<Value, Box<dyn Error>>;\n26: }\n27: \n28: // --\n29: \n30: #[cfg(not(target_arch = \"wasm32\"))]\n31: pub struct FileLoader;"
+    },
+    {
+      "path": "boon-0.6.1/src/loader.rs",
+      "line": 25,
+      "snippet": "24:     /// Loads json from given absolute `url`.\n25:     fn load(&self, url: &str) -> Result<Value, Box<dyn Error>>;\n26: }\n27: \n28: // --\n29: \n30: #[cfg(not(target_arch = \"wasm32\"))]\n31: pub struct FileLoader;\n32: \n33: #[cfg(not(target_arch = \"wasm32\"))]"
+    },
+    {
+      "path": "boon-0.6.1/src/loader.rs",
+      "line": 35,
+      "snippet": "34: impl UrlLoader for FileLoader {\n35:     fn load(&self, url: &str) -> Result<Value, Box<dyn Error>> {\n36:         let url = Url::parse(url)?;\n37:         let path = url.to_file_path().map_err(|_| \"invalid file path\")?;\n38:         let file = File::open(path)?;\n39:         Ok(serde_json::from_reader(file)?)\n40:     }\n41: }\n42: \n43: // --"
+    },
+    {
+      "path": "boon-0.6.1/src/loader.rs",
+      "line": 62,
+      "snippet": "61: impl UrlLoader for SchemeUrlLoader {\n62:     fn load(&self, url: &str) -> Result<Value, Box<dyn Error>> {\n63:         let url = Url::parse(url)?;\n64:         let Some(loader) = self.loaders.get(url.scheme()) else {\n65:             return Err(CompileError::UnsupportedUrlScheme {\n66:                 url: url.as_str().to_owned(),\n67:             }\n68:             .into());\n69:         };\n70:         loader.load(url.as_str())"
+    },
+    {
+      "path": "boon-0.6.1/src/loader.rs",
+      "line": 112,
+      "snippet": "111: \n112:     pub fn use_loader(&mut self, loader: Box<dyn UrlLoader>) {\n113:         self.loader = loader;\n114:     }\n115: \n116:     pub(crate) fn load(&self, url: &Url) -> Result<&Value, CompileError> {\n117:         if let Some(doc) = self.get_doc(url) {\n118:             return Ok(doc);\n119:         }\n120: "
+    },
+    {
+      "path": "boon-0.6.1/src/loader.rs",
+      "line": 116,
+      "snippet": "115: \n116:     pub(crate) fn load(&self, url: &Url) -> Result<&Value, CompileError> {\n117:         if let Some(doc) = self.get_doc(url) {\n118:             return Ok(doc);\n119:         }\n120: \n121:         // check in STD_METAFILES\n122:         let doc = if let Some(content) = load_std_meta(url.as_str()) {\n123:             serde_json::from_str::<Value>(content).map_err(|e| CompileError::LoadUrlError {\n124:                 url: url.to_string(),"
+    }
+  ],
+  "scope": "Read-only inspection of checksum-matching official archive; not compile/behavior proof"
+}

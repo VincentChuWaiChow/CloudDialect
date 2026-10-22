@@ -1,0 +1,42 @@
+{
+  "run_at": "2026-10-22T07:33:22.974366+00:00",
+  "checks": [
+    {
+      "name": "scaffold",
+      "command": "rtk proxy python3 -m unittest discover -s tests -p test_contracts_scaffold.py -v",
+      "exit_code": 0,
+      "status": "pass",
+      "evidence": "results/scaffold.txt"
+    },
+    {
+      "name": "historical-spec-checker",
+      "command": "rtk proxy python3 .workflow/ultracode/execution-isolation/check_spec.py",
+      "exit_code": 1,
+      "status": "fail",
+      "evidence": "results/historical-spec-checker.txt"
+    },
+    {
+      "name": "historical-sensitivity-suite",
+      "command": "rtk proxy python3 .workflow/ultracode/execution-isolation/test_check_spec.py -v",
+      "exit_code": 1,
+      "status": "fail",
+      "evidence": "results/historical-sensitivity-suite.txt"
+    },
+    {
+      "name": "tracked-diff",
+      "command": "rtk git diff --check",
+      "exit_code": 0,
+      "status": "pass",
+      "evidence": "results/tracked-diff.txt"
+    },
+    {
+      "name": "fresh-baseline-document-checker-and-sensitivity",
+      "command": "rtk proxy bash .workflow/ultracode/execution-isolation-implementation/reproduce-document-checks.sh",
+      "exit_code": 0,
+      "status": "pass",
+      "evidence": "results/reproducible-document-checks.txt",
+      "adapter": "reproduce-document-checks.sh",
+      "scope": "Unchanged historical source/doc/graph checks; baseline head adapted, new drafts checked separately"
+    }
+  ]
+}
