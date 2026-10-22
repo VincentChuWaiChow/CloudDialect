@@ -120,6 +120,8 @@ Catalog index application document types are exactly behavioral-contract, eviden
 
 ## E. Project-scoped document references and semantic entrypoints
 
+Owner-approved initial-MVP follow-up: standalone fidelity and future evidence-completeness helpers receive a final validator:&Validator, using the caller's active explicit catalog rather than an implicit default. CatalogIndex gains public extensions:RawObject and existing duplicate-aware raw decoding for exact unknown root-value retention. Rust struct-literal compatibility changes are acknowledged; initial approved document/catalog1.0.0 remains unchanged. Actual fidelity/TOML semantic delivery does not implement JSON semantics, completeness, authentication or acceptance.
+
 ```rust
 pub struct StoredDocument {
     pub reference: DocumentRef,
@@ -144,7 +146,7 @@ DocumentStore is supplied by the trusted core already bound to authenticated ten
 
 DocumentKind is the closed enum BehavioralContract/EvidenceRecord/VerificationResult/CatalogIndex/ExtensionRegistry, selected by trusted caller purpose (or protected fixture metadata), never inferred from attacker-controlled document shape. Structural selection uses kind + supported format_version in the admitted catalog. Instances may optionally carry a nonempty `$schema` string; if present it must resolve and match the selected kind/version URI. A missing `$schema` does not prevent dispatch; an unknown or mismatched value blocks, with no network fallback. Referenced records are validated using the expected kind, not a self-declared kind.
 
-`validate_semantic` accepts JSON only; `validate_manifest_semantic` validates TOML locally then checks exact contract references/fidelity through the same store. `validate_manifest` covers local manifest rules, not proof that external references resolve. `check_fidelity_mapping(manifest: &PackManifest, store: &dyn DocumentStore) -> Vec<ValidatorError>` and `check_evidence_completeness(contract: &BehavioralContract, candidate_id: &str, store: &dyn DocumentStore) -> BehavioralResult` consume this port. Missing/unknown/corrupt/ambiguous records block; no fabricated empty store or permissive default.
+`validate_semantic` accepts JSON only; `validate_manifest_semantic` validates TOML locally then checks exact contract references/fidelity through the same store. `validate_manifest` covers local manifest rules, not proof that external references resolve. `check_fidelity_mapping(manifest: &PackManifest, store: &dyn DocumentStore, validator: &Validator) -> Vec<ValidatorError>` and `check_evidence_completeness(contract: &BehavioralContract, candidate_id: &str, store: &dyn DocumentStore, validator: &Validator) -> BehavioralResult` consume this port. Missing/unknown/corrupt/ambiguous records block; no fabricated empty store or permissive default.
 
 Phase-specific fixture expectations are exact: structural/semantic use pass/fail/warn where the relevant outcome enum supports them; behavioral completeness uses deferred/evidence-complete/blocked (the three BehavioralOutcome variants); artifact-hash uses `expected_match: true|false`, not an invented invalid enum. JSON fixtures declare DocumentKind; TOML fixtures select the manifest entrypoint. EvidenceComplete is never normalized to behavioral pass. The fixture runner must reject unsupported phase/outcome pairs and seeded incorrect expectations.
 

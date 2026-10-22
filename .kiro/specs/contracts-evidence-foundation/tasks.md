@@ -12,7 +12,7 @@ This plan builds the `clouddialect-contracts` Rust crate, its bundled JSON Schem
 
 **Current continuation status (2026-10-22):** user approved P0-A–F for implementation planning, then separately authorized the remaining Spec 1 prerequisite units in [implementation-plan.md](implementation-plan.md), TDD and no commits/probes/pushes/releases. User attests this is a new project and approves document/catalog **1.0.0** and crate API **0.1.0** as the initial MVP versions. This is not an independent external-publication audit or security-gate approval. Exact encoded extension JSON value bytes are required; raw_value on the existing pinned serde_json is separately approved.
 
-**Delivery is partial.** DTOs, schemas, catalog inventory, frozen snapshot/loading, structural JSON validation, local TOML rules and candidate hash equality have bounded verification. Semantic/fidelity/completeness validation, integrated mandatory blockers, exhaustive conformance and delivered downstream compatibility remain unfinished. See the [current run report](../../../.workflow/ultracode/execution-isolation-implementation/final-report.md) for actual evidence and outstanding work. Canonical task checkmarks are conservative; BG-01 and Spec 2 UD-1–UD-5 remain OPEN.
+**Delivery is partial.** DTOs, schemas, catalog inventory, frozen snapshot/loading, structural JSON validation, local TOML rules and candidate hash equality have bounded verification. JSON semantic/completeness validation, full mandatory-blocker integration, exhaustive conformance and delivered downstream compatibility remain unfinished; scoped fidelity/TOML semantic delivery is recorded in the current report. See the [current run report](../../../.workflow/ultracode/execution-isolation-implementation/final-report.md) for actual evidence and outstanding work. Canonical task checkmarks are conservative; BG-01 and Spec 2 UD-1–UD-5 remain OPEN.
 
 `BehavioralResult` full implementation, the Rust CLI binary, worker isolation, and Python transformation logic are explicitly out of scope.
 
@@ -330,7 +330,7 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
 
 - [ ] 14. Implement blocking-gap report and artifact hash staleness detection
   - Create `crates/clouddialect-contracts/src/validator/behavioral.rs`.
-  - Implement `check_evidence_completeness(contract: &BehavioralContract, candidate_id: &str, store: &dyn DocumentStore) -> BehavioralResult` using P0-E scoped validated evidence records:
+  - Implement `check_evidence_completeness(contract: &BehavioralContract, candidate_id: &str, store: &dyn DocumentStore, validator: &Validator) -> BehavioralResult` using P0-E scoped validated evidence records:
     - Iterate over all obligations in the contract.
     - For obligations with `evidence_refs`: for each referenced evidence record, check if the classification is `unknown`. If yes, append a `BlockingGap { candidate_id, obligation_id, assumption_text }` to the result.
     - For obligations with `unresolved_assumption`: always append a `BlockingGap`.
@@ -409,9 +409,9 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - An inline contract body is rejected (Req 5.3).
   - Bounded delivery:12local test groups and1actual local ValidateManifest trait-dispatch test pass in the integrated193integration+2unit+7doctest suite. Req11.3 source-artifact coverage and real semantic/fidelity checks remain unfinished; this TOML-only method has no artifact argument. See [wave evidence](../../../.workflow/ultracode/execution-isolation-implementation/extension-manifest-hash-report.md).
 
-- [ ] 17. Implement fidelity enum mapping semantic check
+- [x] 17. Implement fidelity enum mapping semantic check
   - Add `crates/clouddialect-contracts/src/validator/fidelity.rs`.
-  - Implement `check_fidelity_mapping(manifest: &PackManifest, store: &dyn DocumentStore) -> Vec<ValidatorError>` against the P0-E exact-version store. Dependencies: tasks 9 and 15; complete before task 13 integration.
+  - Implement `check_fidelity_mapping(manifest: &PackManifest, store: &dyn DocumentStore, validator: &Validator) -> Vec<ValidatorError>` against the P0-E exact-version store. Dependencies: tasks 9 and 15; complete before task 13 integration.
     - For each operation in the manifest with `behavioral_fidelity: Full`: look up the referenced contract and verify that every obligation in that contract has `behavioral_fidelity: equivalent-within-contract`. If any obligation carries a different value, emit a `ValidatorError { category: Semantic, field_path: "operations[<id>].behavioral_fidelity", description: "manifest fidelity 'full' but contract obligation <obligation_id> has fidelity '<value>'" }`.
     - For each operation with `behavioral_fidelity: Partial`: verify no obligation carries `architectural-change-required`, `unsupported`, or `unknown`. Emit an error if found.
     - For `Unsupported` operations: no fidelity constraint on the contract.
@@ -427,6 +427,7 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - Manifest `full` + contract obligation `adaptation-required` produces `SemanticResult { outcome: Fail }`.
   - Manifest `partial` + contract obligation `architectural-change-required` produces `SemanticResult { outcome: Fail }`.
   - Manifest `full` + all obligations `equivalent-within-contract` produces `SemanticResult { outcome: Pass }`.
+  - Scoped initial-MVP delivery: actual fidelity matrix and ManifestValidator/ValidateManifest semantic method use the owner's explicitly supplied active catalog and scoped store. Stored identity/version/bytes/hash/schema/mandatory semantics are checked before use. JSON semantic/verification-linkage portions of task13 and completeness of task14 remain unfinished; no result accepts a transformation.
 
 - [ ] 18. Write positive conformance fixtures
   - Every verification fixture includes P0-C configuration/binding/digests/test-obligation links; every manifest fixture includes an explicit valid P0-B capabilities table, with both empty and nonempty positive declarations. A minimal pass is structural only, never acceptance.

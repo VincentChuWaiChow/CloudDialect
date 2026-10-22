@@ -1,0 +1,15 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.58s
+     Running tests/document_resolution.rs (/tmp/clouddialect-phase-target/debug/deps/document_resolution-40f3d2f1c8af03ed)
+
+running 8 tests
+test missing_and_unavailable_stores_fail_without_echoing_backend_details ... ok
+test mandatory_extension_declarations_block_even_without_payload_or_with_approval_claims ... ok
+test trusted_kind_schema_parse_and_duplicate_checks_cannot_be_bypassed_by_a_valid_hash ... ok
+test returned_metadata_body_and_requested_identity_and_version_must_match_exactly ... ok
+test resolution_uses_the_callers_active_catalog_not_an_embedded_fallback ... ok
+test valid_exact_references_preserve_original_bytes_with_every_supported_digest ... ok
+test tampered_bytes_unknown_hashes_and_noncanonical_digests_never_resolve ... ok
+test unversioned_lookup_is_reserved_for_globally_unique_evidence ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.11s

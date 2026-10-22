@@ -1,5 +1,8 @@
 # Orchestration
 
+## Current owner-approved reference/fidelity wave
+Three approvals received:26cumulative dispatch ceiling (24/25write workers,26final readonly), explicit Validator context and CatalogIndex raw field amendment. Original16:07:43–17:37:43UTC window retained; no recursion/followup dispatches,4concurrent maximum including parent. Parent owns actual fidelity/TOML consumers/shared integration/Git. All26used; sole repair consumed by private filename/layout guard collision, no test weakened. No further dispatch/time/repair reset assumed. Full runtime/native/BG-01 gates remain OPEN; current evidence/report reference-fidelity-report.md.
+
 ## Approved parallel implementation wave (current)
 Owner approved three additional native sidecars,23cumulative, max4concurrent including parent. Original15:26:28UTC preflight starts the90-minute cap; deadline16:56:28UTC, not reset by delayed approval.21manifest and22hash own disjoint new source/test pairs,23reserved final read-only review. Parent owns extensions, shared modules/exports, all run artifacts and Git. Tests-first worker handshakes require actual RED and parent checkpoint before implementation, complete source before parent registration, then real public target GREEN. No recursive/followup dispatches, one consolidated repair (0used initially). Models/effort inherited and UNVERIFIED; no hidden specialist/runtime isolation claims. Native probes/releases/runtime/BG-01 remain excluded/open.
 

@@ -1,0 +1,39 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+error[E0599]: no method named `validate_manifest_semantic` found for reference `&dyn clouddialect_contracts::ValidateManifest` in the current scope
+  --> tests/manifest_semantic.rs:23:26
+   |
+23 |     let semantic=checker.validate_manifest_semantic(data.as_bytes(),&store);
+   |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+help: there is a method `validate_manifest` with a similar name, but with different arguments
+  --> src/manifest/mod.rs:18:5
+   |
+18 |     fn validate_manifest(&self, toml_bytes: &[u8]) -> ManifestValidationResult;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0599]: no method named `validate_manifest_semantic` found for struct `clouddialect_contracts::ManifestValidator` in the current scope
+  --> tests/manifest_semantic.rs:34:18
+   |
+34 |     assert_eq!(v.validate_manifest_semantic(b"not toml",&store).outcome,SemanticOutcome::Fail);
+   |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+help: there is a method `validate_manifest` with a similar name, but with different arguments
+  --> src/manifest/validator.rs:25:5
+   |
+25 |     pub fn validate_manifest(&self, toml_bytes: &[u8]) -> ManifestValidationResult {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0599]: no method named `validate_manifest_semantic` found for struct `clouddialect_contracts::ManifestValidator` in the current scope
+  --> tests/manifest_semantic.rs:45:18
+   |
+45 |     let result=v.validate_manifest_semantic(bytes.as_bytes(),&store);
+   |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+help: there is a method `validate_manifest` with a similar name, but with different arguments
+  --> src/manifest/validator.rs:25:5
+   |
+25 |     pub fn validate_manifest(&self, toml_bytes: &[u8]) -> ManifestValidationResult {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For more information about this error, try `rustc --explain E0599`.
+error: could not compile `clouddialect-contracts` (test "manifest_semantic") due to 3 previous errors

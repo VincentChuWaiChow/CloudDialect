@@ -1,0 +1,11 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.24s
+     Running tests/catalog_extension_roundtrip.rs (/tmp/clouddialect-phase-target/debug/deps/catalog_extension_roundtrip-aa004d0384467614)
+
+running 4 tests
+test typed_and_inventory_decoding_preserve_exact_extension_value_bytes ... ok
+test decoded_duplicate_extension_names_are_rejected_before_inventory_admission ... ok
+test mandatory_declaration_remains_a_typed_core_field ... ok
+test decoded_duplicate_core_names_remain_rejected ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s

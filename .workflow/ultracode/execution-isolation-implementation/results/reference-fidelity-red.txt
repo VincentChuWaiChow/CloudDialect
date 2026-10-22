@@ -1,0 +1,57 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+error[E0425]: cannot find function `check_fidelity_mapping` in this scope
+  --> tests/fidelity_mapping.rs:86:26
+   |
+86 |             let errors = check_fidelity_mapping(&manifest(mode), &store(&value), &validator());
+   |                          ^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `check_fidelity_mapping` in this scope
+  --> tests/fidelity_mapping.rs:99:13
+   |
+99 |     assert!(check_fidelity_mapping(&manifest,&source,&validator()).is_empty());
+   |             ^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `check_fidelity_mapping` in this scope
+   --> tests/fidelity_mapping.rs:109:14
+    |
+109 |     assert!(!check_fidelity_mapping(&manifest,&source,&validator()).is_empty());
+    |              ^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `check_fidelity_mapping` in this scope
+   --> tests/fidelity_mapping.rs:112:14
+    |
+112 |     assert!(!check_fidelity_mapping(&manifest,&source,&validator()).is_empty());
+    |              ^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `check_fidelity_mapping` in this scope
+   --> tests/fidelity_mapping.rs:114:16
+    |
+114 |     let errors=check_fidelity_mapping(&manifest,&source,&validator());
+    |                ^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `check_fidelity_mapping` in this scope
+   --> tests/fidelity_mapping.rs:124:14
+    |
+124 |     assert!(!check_fidelity_mapping(&manifest,&source,&validator()).is_empty());
+    |              ^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `check_fidelity_mapping` in this scope
+   --> tests/fidelity_mapping.rs:127:14
+    |
+127 |     assert!(!check_fidelity_mapping(&manifest,&store(&invalid),&validator()).is_empty());
+    |              ^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `check_fidelity_mapping` in this scope
+   --> tests/fidelity_mapping.rs:136:16
+    |
+136 |     let errors=check_fidelity_mapping(&manifest,&store(&value),&validator());
+    |                ^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `check_fidelity_mapping` in this scope
+   --> tests/fidelity_mapping.rs:139:16
+    |
+139 |     let errors=check_fidelity_mapping(&manifest,&store(&value),&validator());
+    |                ^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+For more information about this error, try `rustc --explain E0425`.
+error: could not compile `clouddialect-contracts` (test "fidelity_mapping") due to 9 previous errors

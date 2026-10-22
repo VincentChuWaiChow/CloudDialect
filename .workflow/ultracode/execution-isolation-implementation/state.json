@@ -2,7 +2,7 @@
   "title": "Execution-isolation implementation",
   "slug": "execution-isolation-implementation",
   "created_at": "2026-10-22T07:25:44.090021+00:00",
-  "updated_at": "2026-10-22T16:18:39.551410+00:00",
+  "updated_at": "2026-10-22T17:30:20.033316+00:00",
   "status": "executing",
   "mode": "delegated",
   "baseline_ref": "3b9cb6bd0ee82dbef3b731a35ce68fc778c4906a",
@@ -21,10 +21,10 @@
     "native_agent_available": true,
     "native_agent_planned": true,
     "native_agent_used": true,
-    "agent_count": 23,
-    "wave_count": 11,
+    "agent_count": 26,
+    "wave_count": 12,
     "no_delegation_reason": "",
-    "notes": "Owner-approved23cumulative used;21/22completed owned write work;23final read-only review active at frozenbc974f0;0recursive/followupdispatches.",
+    "notes": "Owner approved26cumulative;24reference/25catalog raw write workers complete;26final readonly active. No recursion/followup dispatches. Original17:37:43UTC deadline retained.",
     "additional_dispatch_limit": 3,
     "additional_dispatches_used": 3
   },
@@ -199,10 +199,37 @@
       "owner": "readonly-agent",
       "write_scope": [],
       "result_path": "results/23-extension-manifest-hash-review.md"
+    },
+    {
+      "id": "24-document-resolution",
+      "status": "complete",
+      "owner": "write-capable-agent",
+      "write_scope": [
+        "src/validator/references.rs (parent rename to document_resolution.rs)",
+        "tests/document_resolution.rs"
+      ],
+      "result_path": "results/24-document-resolution.md"
+    },
+    {
+      "id": "25-catalog-raw",
+      "status": "complete",
+      "owner": "write-capable-agent",
+      "write_scope": [
+        "src/schema/catalog.rs",
+        "tests/catalog_extension_roundtrip.rs"
+      ],
+      "result_path": "results/25-catalog-raw.md"
+    },
+    {
+      "id": "26-reference-fidelity-review",
+      "status": "complete",
+      "owner": "readonly-agent",
+      "write_scope": [],
+      "result_path": "results/26-reference-fidelity-review.md"
     }
   ],
   "verification": {
-    "status": "Bounded extensions/local manifest/hash:193integration+2unit+7doctests/15Python/8selectedP0/check/fmt/Clippy pass;997/1035registeredproductionlines;review23 no actionable findings; private mandatory semantic integration/fullgoal/BG01/native incomplete",
+    "status": "215integration+2unit+7doctests/check/fmt/Clippy/15Python/8selectedP0content pass;1229/1312productionlines;26static no actionable findings before private-module rename; full JSONsemantic/completeness/conformance/BG01/native incomplete.",
     "checks": [
       {
         "name": "scaffold",
@@ -1474,14 +1501,14 @@
     "snapshot_digest_resolver_authentication": "not implemented"
   },
   "current_limits": {
-    "cumulative_dispatch_ceiling": 23,
-    "cumulative_dispatches_used": 23,
+    "cumulative_dispatch_ceiling": 26,
+    "cumulative_dispatches_used": 26,
     "max_concurrent_including_parent": 4,
     "recursion": 0,
     "followup_dispatches": 0,
     "repair_limit": 1,
     "repairs_consumed": 1,
-    "deadline": "2026-10-22T16:56:28Z"
+    "deadline": "2026-10-22T17:37:43Z"
   },
   "ai_rule_location_correction": {
     "requested_by": "Explicit user: AI agent rules should be in .agents/rules",
@@ -1646,7 +1673,7 @@
     "publication_sha": "e1e43d98fe2137b7d63643ba2b1762bdfca71cfc"
   },
   "next_parallel_wave_request": {
-    "status": "pending-owner-reply",
+    "status": "approved",
     "additional_dispatches": 3,
     "proposed_cumulative_ceiling": 26,
     "current_ceiling_unchanged": 23,
@@ -1662,7 +1689,12 @@
       "explicit Validator argument on standalone fidelity/completeness helpers",
       "public CatalogIndex raw extensions field/decoder amendment"
     ],
-    "dispatches_before_approval": 0
+    "dispatches_before_approval": 0,
+    "owner_answers": [
+      "Approve next bounded parallel wave",
+      "Approve explicit validator context",
+      "Approve bounded CatalogIndex raw-field repair"
+    ]
   },
   "extension_manifest_hash_wave": {
     "started_at": "2026-10-22T15:26:28+00:00",
@@ -1703,15 +1735,34 @@
     "publication_sha": "cd51996c3b2f65adb23aa129d412111b2d12ec6b"
   },
   "continuation_blocked_audit": {
-    "condition": "Owner approval pending for new delegation allocation and validation-context/CatalogIndex API amendments",
-    "first_seen_goal_turn": "reference-fidelity preflight continuation",
-    "consecutive_goal_turns_verified": 2,
-    "previous_goal_turn_classification": "progress: actual current API evidence established two implementation contract gaps",
-    "current_safe_action": "Reproduced retained API evidence; documentation checkpoint/publication only. No production API/agent-budget change.",
-    "owner_answers_received": false,
-    "all_old_agents_terminal": true,
-    "live_job_wait_claim": false,
-    "goal_status": "active; blocked threshold not yet met; no completion claim",
-    "verified_at": "2026-10-22T16:18:39.551417+00:00"
+    "status": "owner approvals received; resumed fresh blocked audit",
+    "consecutive_goal_turns_verified": 0
+  },
+  "reference_fidelity_wave": {
+    "started_at": "2026-10-22T16:07:43Z",
+    "deadline": "2026-10-22T17:37:43Z",
+    "dispatch_ceiling": 26,
+    "additional_dispatches_approved": 3,
+    "additional_dispatches_used": 3,
+    "repair_limit": 1,
+    "repairs_consumed": 1,
+    "max_concurrent_including_parent": 4,
+    "recursion": 0,
+    "followup_dispatches": 0,
+    "eval": "reference-fidelity-eval.md",
+    "scope": "refs+catalog raw workers, parent fidelity/actual semantic prerequisites; no native gates",
+    "status": "postrepair implementation verified; publication proof external",
+    "green_checkpoint": "6186d551dc8078dee592e9846689c8da21ecfdd2",
+    "repair": "Rename private resolver references.rs to document_resolution.rs to respect existing domain-layout guard; no guard weakening. Supplemental full/partial semantic tests, no behavior/code algorithm repair.",
+    "checks": "results/reference-verified-checks.json",
+    "coverage": "results/reference-verified-production-coverage.json",
+    "production_lines": {
+      "count": 1312,
+      "covered": 1229,
+      "percent": 93.67378048780488
+    },
+    "review": "26static no actionable findings at e40c6d9, no independent postrename signoff",
+    "report": "reference-fidelity-report.md",
+    "publication_receipt": "/tmp/clouddialect-reference-fidelity-publication.json"
   }
 }

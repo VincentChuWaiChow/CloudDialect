@@ -1,0 +1,2 @@
+# Worker25 result
+Native /root/catalog_raw owned only schema/catalog.rs and tests/catalog_extension_roundtrip.rs. Real data-loss/duplicate RED4tests1pass/3fail, checkpoint68ba69d. Approved existing raw decoder/public extensions field yields4/4GREEN and20/20adjacent catalog/snapshot checks. Required_extensions stays typed; exact raw values and decoded duplicates tested. Parent alone widened existing crate-private raw helper visibility. No dependency/schema/registry DTO/Git/provider actions by worker.

@@ -1,5 +1,7 @@
 # Reference / fidelity continuation preflight — 2026-10-22
 
+**Subsequent owner disposition:** all three approvals received; actual delivery/limits/evidence are in reference-fidelity-report.md. Pending language below records the original historical preflight, not current permission. Original deadline was retained.
+
 Previous goal turn is **progress**, not a wait/status restatement: authoritative source checkpoint bc974f0 and independently verified remote cd51996 delivered the actual extension/local-manifest/hash tranche. Fresh worktree check: tracked clean, only research.md and cloud-transformation-framework-research.pdf remain untracked. Native agent list confirms all previously dispatched workers/reviewer are terminal, not live handles to poll.
 
 ## Current approval boundary

@@ -147,16 +147,18 @@ Verified declaration delivery: [EX-1 report](../../../.workflow/ultracode/execut
     - Cases: all eight local rule families; version/range validity; inline body rejected; missing toolchain; capability grammar/duplicates; unknown fields; explicit TOML 1.0-compatible valid syntax. Target: `manifest_validation`.
     - Done: declarations never dispatch or resolve external authority; local pass does not imply references/fidelity checked. Do not require rejecting all later TOML syntax unless the approved requirement actually says that. Estimate: 3–4h. Dependencies: 1.11, 2.3, 2.4.
     - Verified bounded initial MVP:12local rule groups plus1real trait-dispatch test; exact snapshot ownership, no ambient catalog. Schema refs are syntax-checked locally, not resolved/matched to compatibility bounds. Full SemVer syntax/core-u64 support and Cargo comparator/prerelease ranges follow approved profile. Req11.3 source-artifact coverage remains future work, not claimed by this TOML-only API. See [wave report](../../../.workflow/ultracode/execution-isolation-implementation/extension-manifest-hash-report.md).
-  - [ ] 2.8 Scoped fidelity function
+  - [x] 2.8 Scoped fidelity function
     - Spec1: task 17, before task 13 integration. Requirements: 5.2, 8.3/8.7.
     - Owned: `src/validator/fidelity.rs`, `src/validator/mod.rs`, `tests/fidelity_mapping.rs`.
     - Cases: full/equivalent; full/adaptation deny; partial/architectural deny; missing exact contract; wrong identity/version/type; store outage; unsupported operation retained. Target: `fidelity_mapping`.
     - Done: real typed/validated source documents through injected store, not catalog instance search. Estimate: 2–3h. Dependencies: 1.4, 2.5, 2.7.
+    - Owner-approved initial API amendment: final validator:&Validator argument on standalone fidelity and future completeness helpers. Private exact reference/hash/schema/mandatory resolver now has actual fidelity/TOML consumers; no implicit embedded/default catalog. CatalogIndex now publicly retains extensions:RawObject through the existing duplicate-aware raw decoder; initial document version unchanged, Rust struct-literal change explicitly approved.
   - [ ] 2.9 JSON/TOML semantic entrypoints and verification linkage
     - Spec1: task 13. Requirements: 4.8, 8.3/8.7, 11.1.
     - Owned: `src/validator/semantic.rs`, `src/validator/mod.rs`, `src/manifest/validator.rs`, `tests/semantic_validation.rs`.
     - Cases: exact references; corrupt/wrong-type/hash mismatch; unique tests/obligation membership; UTC/date validity; matching approval-result ref; missing/ambiguous/outage; no cross-project/ambient fallback. Target: `semantic_validation`.
     - Done: separate actual JSON/TOML ports, faithful safe errors; document strings still do not authenticate observations/approval. Split verification-link rules into a second named unit before dispatch if >4h or >8 independent test groups; no silent overrun. Estimate: conditional 4h slice. Dependencies: 1.5, 2.6, 2.8. Gate: G-DEPS for required hash checks.
+    - Bounded2.9M TOML consumer delivered: src/manifest/{validator,mod}.rs plus tests/manifest_semantic.rs, shared crate-private reference visibility parent-owned. Actual local-gated method/trait checks exact references and fidelity, including explicit unsupported/orphan references, using owned snapshot. Full2.9 remains unchecked: JSON semantic method, evidence traversal and verification linkage are not delivered by this TOML leaf.
   - [ ] 2.10 Non-accepting completeness and artifact staleness
     - Spec1: task 14. Requirements: 3.6, 4.6, 8.6, 11.4.
     - Owned: `src/validator/behavioral.rs`, `src/validator/mod.rs`, `src/lib.rs`, `tests/evidence_completeness.rs`.

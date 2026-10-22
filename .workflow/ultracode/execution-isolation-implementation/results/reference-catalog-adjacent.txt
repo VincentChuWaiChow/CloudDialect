@@ -1,0 +1,39 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.53s
+     Running tests/catalog_extension_roundtrip.rs (/tmp/clouddialect-phase-target/debug/deps/catalog_extension_roundtrip-aa004d0384467614)
+
+running 4 tests
+test typed_and_inventory_decoding_preserve_exact_extension_value_bytes ... ok
+test mandatory_declaration_remains_a_typed_core_field ... ok
+test decoded_duplicate_extension_names_are_rejected_before_inventory_admission ... ok
+test decoded_duplicate_core_names_remain_rejected ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running tests/catalog_index.rs (/tmp/clouddialect-phase-target/debug/deps/catalog_index-5552d04e420ef4ba)
+
+running 8 tests
+test delivered_inventory_contains_all_five_kinds_and_its_own_schema ... ok
+test exact_uri_uniqueness_and_path_aliasing_span_both_lists ... ok
+test malformed_and_shape_invalid_index_bytes_are_rejected ... ok
+test missing_material_and_mismatched_schema_id_fail ... ok
+test supplied_support_material_and_relocated_bytes_need_no_live_paths ... ok
+test application_identity_kind_version_and_directory_must_agree ... ok
+test pinned_engine_compiles_all_bundled_schemas_with_deny_unknown_loader ... ok
+test noncanonical_paths_and_reserved_index_material_are_rejected ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+     Running tests/catalog_snapshot.rs (/tmp/clouddialect-phase-target/debug/deps/catalog_snapshot-31c14a72592bd827)
+
+running 8 tests
+test frozen_bytes_and_identity_do_not_follow_later_caller_mutation ... ok
+test lookup_is_exact_and_constructor_does_not_attest_schema_provenance ... ok
+test utf8_byte_lengths_and_empty_payloads_match_independent_vector ... ok
+test exact_p0_binary_encoding_matches_independent_sha256_vector ... ok
+test unresolved_and_malformed_parts_do_not_construct_a_snapshot ... ok
+test every_exact_index_byte_is_bound_even_when_json_values_are_equal ... ok
+test insertion_order_is_irrelevant_but_length_prefixes_prevent_concatenation_aliases ... ok
+test duplicate_mappings_and_index_aliases_cannot_enter_frozen_material ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
