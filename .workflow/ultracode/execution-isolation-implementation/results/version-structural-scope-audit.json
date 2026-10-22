@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-10-22T15:17:43.647534+00:00",
+  "baseline": "3a7d163bd2d48c2866083f081c88518afe577315",
+  "head_at_audit": "a4ceec8dd4fae28ca4a594faa2914ec20d44b528",
+  "branch": "feat/execution-isolation",
+  "source_test_paths": [
+    "crates/clouddialect-contracts/src/validator/version.rs",
+    "crates/clouddialect-contracts/src/validator/structural.rs",
+    "crates/clouddialect-contracts/src/validator/mod.rs",
+    "crates/clouddialect-contracts/src/lib.rs",
+    "crates/clouddialect-contracts/src/schema/snapshot.rs",
+    "crates/clouddialect-contracts/src/documents/mod.rs",
+    "crates/clouddialect-contracts/src/documents/raw_objects.rs",
+    "crates/clouddialect-contracts/tests/version_compatibility.rs",
+    "crates/clouddialect-contracts/tests/structural_validation.rs"
+  ],
+  "source_scope_groups": {
+    "2.4": [
+      "src/validator/version.rs",
+      "tests/version_compatibility.rs"
+    ],
+    "2.5consumer": [
+      "src/validator/structural.rs",
+      "src/validator/mod.rs",
+      "src/lib.rs",
+      "src/schema/snapshot.rs",
+      "tests/structural_validation.rs"
+    ],
+    "2.5Uinternaldecoderreuse": [
+      "src/documents/raw_objects.rs",
+      "src/documents/mod.rs"
+    ]
+  },
+  "spec_documents": [
+    ".kiro/specs/contracts-evidence-foundation/requirements.md",
+    ".kiro/specs/contracts-evidence-foundation/design.md",
+    ".kiro/specs/contracts-evidence-foundation/tasks.md",
+    ".kiro/specs/contracts-evidence-foundation/implementation-plan.md"
+  ],
+  "changed_non_run_paths": [
+    ".kiro/specs/contracts-evidence-foundation/design.md",
+    ".kiro/specs/contracts-evidence-foundation/implementation-plan.md",
+    ".kiro/specs/contracts-evidence-foundation/requirements.md",
+    ".kiro/specs/contracts-evidence-foundation/tasks.md",
+    "crates/clouddialect-contracts/src/documents/mod.rs",
+    "crates/clouddialect-contracts/src/documents/raw_objects.rs",
+    "crates/clouddialect-contracts/src/lib.rs",
+    "crates/clouddialect-contracts/src/schema/snapshot.rs",
+    "crates/clouddialect-contracts/src/validator/mod.rs",
+    "crates/clouddialect-contracts/src/validator/structural.rs",
+    "crates/clouddialect-contracts/src/validator/version.rs",
+    "crates/clouddialect-contracts/tests/structural_validation.rs",
+    "crates/clouddialect-contracts/tests/version_compatibility.rs"
+  ],
+  "source_hashes": {
+    "crates/clouddialect-contracts/src/validator/version.rs": "ad60f449560dc039f4e723be50a46737580aab987ae731dbf9cbf8b2e2fcf8ba",
+    "crates/clouddialect-contracts/src/validator/structural.rs": "976efc2c594e3f6fe489397bb322886c022b5a5b5856d4bd01a446ec3f1e5b05",
+    "crates/clouddialect-contracts/src/validator/mod.rs": "c4312756328c90b5514bcd901386067694e614dd6032f983512f30d41c9abdbe",
+    "crates/clouddialect-contracts/src/lib.rs": "e5597ba0151e83b18a73ce97dc5f6a26033d1d4aceb31420d9b7f6e2810c5b50",
+    "crates/clouddialect-contracts/src/schema/snapshot.rs": "873c8932116777ed7fe385ef4d8794c2a5c6727294c9a51831af82a791416fd1",
+    "crates/clouddialect-contracts/src/documents/mod.rs": "dcdd5431aca6eb398e21529e1e5940f48a851f7295b1c7fc07fee5381fe43a74",
+    "crates/clouddialect-contracts/src/documents/raw_objects.rs": "89d4864124c8782fb3ed743272d848333eac16ab115105539d8cc9c41cfc209a",
+    "crates/clouddialect-contracts/tests/version_compatibility.rs": "8c9029f1d97e333171b601f3fe8684ec1a71fd6aa51d34d58f4f11accc88d760",
+    "crates/clouddialect-contracts/tests/structural_validation.rs": "dbe78df962d25233165dfc3f35e61f6fed5295ec36fe3e6f6702b220855a7c3c"
+  },
+  "preserved_baseline_files": 101,
+  "preserved_research": [
+    "research.md",
+    "cloud-transformation-framework-research.pdf"
+  ],
+  "unexpected_changes": [],
+  "unexpected_new_files": [],
+  "checkpoint_evidence": [
+    {
+      "short": "8d3589b",
+      "sha": "8d3589bfb915f58dcdaceb5d3a0021bf799c2f59",
+      "reachable_from_current_head": true,
+      "ssh_signature_block_present": true
+    },
+    {
+      "short": "5695df0",
+      "sha": "5695df060a4632da7be4d7f5b45973716ce0b464",
+      "reachable_from_current_head": true,
+      "ssh_signature_block_present": true
+    },
+    {
+      "short": "b4d8623",
+      "sha": "b4d8623719be3aef319a4a27fd944c12212930ea",
+      "reachable_from_current_head": true,
+      "ssh_signature_block_present": true
+    },
+    {
+      "short": "d8c7ff1",
+      "sha": "d8c7ff142bac04645bcd8e25ded1f9e28f06d78d",
+      "reachable_from_current_head": true,
+      "ssh_signature_block_present": true
+    },
+    {
+      "short": "939b83e",
+      "sha": "939b83ee3b64054a38e9b2d44419b00155c882b0",
+      "reachable_from_current_head": true,
+      "ssh_signature_block_present": true
+    },
+    {
+      "short": "3c2c2a1",
+      "sha": "3c2c2a16e94c24fd7df2768fc04cf266514ed713",
+      "reachable_from_current_head": true,
+      "ssh_signature_block_present": true
+    },
+    {
+      "short": "c1c4bcf",
+      "sha": "c1c4bcfb3bc90ce62382783893f423816ee70ec6",
+      "reachable_from_current_head": true,
+      "ssh_signature_block_present": true
+    },
+    {
+      "short": "a4ceec8",
+      "sha": "a4ceec8dd4fae28ca4a594faa2914ec20d44b528",
+      "reachable_from_current_head": true,
+      "ssh_signature_block_present": true
+    }
+  ],
+  "signer_identity": "UNVERIFIED; signature block presence only; signing policy/allowed-signers config not changed",
+  "review": "20required P2 reproduced and repaired in one consolidated parent pass; no independent postrepair signoff",
+  "limits": "No catalog/schema/dependency/lock/notices/rule/symlink/script/global/native/runtime/release modifications. Original goal incomplete."
+}

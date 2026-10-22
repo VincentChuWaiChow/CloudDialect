@@ -124,16 +124,17 @@ Verified declaration delivery: [EX-1 report](../../../.workflow/ultracode/execut
     - Owned: `src/schema/loader.rs`, `src/schema/embedded.rs`, `src/schema/mod.rs`, `src/lib.rs`, `tests/catalog_loading.rs`.
     - Cases: embedded/explicit snapshot; parsed Value adapter; unknown/file/HTTP URI deny; pinned-engine built-ins; both ambient overrides ignored; format assertions enabled; malformed schema maps safe errors. Target: `catalog_loading`.
     - Done: real checksum-source-matching adapter before compilation; no byte-returning stub, ambient file loader or mock-only qualified-offline claim. Estimate: 3–4h. Dependencies: 2.2.
-  - [ ] 2.4 Version grammar/compatibility helper
+  - [x] 2.4 Version grammar/compatibility helper
     - Spec1: task 11 logic subset. Requirements: 6.1–6.5, 7.1–7.4.
-    - Owned: `src/validator/version.rs`, `src/validator/mod.rs`, `tests/version_compatibility.rs`.
+    - Owned: `src/validator/version.rs`, `tests/version_compatibility.rs`. Test-includes the exact private source; production registration in mod.rs belongs with its actual structural consumer2.5, not an unused public placeholder.
     - Cases: full SemVer suffixes; invalid leading-zero/empty IDs; supported/unsupported major; minor-newer warning; distinct pack/document/dialect spaces; safe unsupported-security-version handling. Target: `version_compatibility`.
     - Done: explicit compatibility dispositions, no implicit format fallback. Estimate: 2–3h. Dependencies: 1.2. Gates: G-VERSION, G-DEPS (version/range strategy).
-  - [ ] 2.5 Structural JSON entrypoint
+  - [x] 2.5 Structural JSON entrypoint
     - Spec1: task 10 and task 11 integration. Requirements: 1.2–1.3, 4.7, 8.1–8.2, 11.1–11.2.
-    - Owned: `src/validator/structural.rs`, `src/validator/mod.rs`, `src/lib.rs`, `tests/structural_validation.rs`.
+    - Owned consumer: `src/validator/structural.rs`, `src/validator/mod.rs`, `src/lib.rs`, `src/schema/snapshot.rs` (crate-private immutable entry accessor), `tests/structural_validation.rs` (five files). Distinct prerequisite2.5U owns two internal-reuse lines in documents/{raw_objects,mod}.rs to share existing RawFields duplicate-key rejection; no new public type/parser or decoding behavior. Validate initially exposes only the implemented structural method; semantic methods arrive with their real leaf, never a success/panic stub.
     - Cases: trusted DocumentKind; absent/known/wrong schema URI; malformed input offset; missing field; real version disposition; safe paths/diagnostics; no semantic/behavior acceptance. Target: `structural_validation`.
     - Done: actual schemas + loader, no shape inference or unresolved external references. Estimate: 3–4h. Dependencies: 2.3, 2.4.
+    - Bounded initial-MVP delivery: [version/structural report](../../../.workflow/ultracode/execution-isolation-implementation/version-structural-report.md). All five current kinds, trusted selection and version/root-projection boundaries are tested; opaque/external/dynamic/changed-$id root projection scopes conservatively fail rather than guess. Exact versions still use the actual compiler. This explicit limitation is not an owner-approved waiver of future arbitrary-schema compatibility. Canonical tasks10/11 remain conservative pending their larger extension/conformance obligations.
   - [ ] 2.6 Extensions and mandatory blockers
     - Spec1: task 12. Requirements: 10.1–10.7.
     - Owned: `src/validator/extensions.rs`, `src/validator/structural.rs`, `tests/extension_validation.rs` (structural integration serialized after 2.5).

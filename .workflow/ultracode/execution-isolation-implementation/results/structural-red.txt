@@ -1,0 +1,17 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+error[E0432]: unresolved imports `clouddialect_contracts::Validate`, `clouddialect_contracts::Validator`
+ --> tests/structural_validation.rs:4:85
+  |
+4 |     CatalogSnapshot, DocumentKind as K, ErrorCategory as E, StructuralOutcome as O, Validate,
+  |                                                                                     ^^^^^^^^ no `Validate` in the root
+5 |     Validator,
+  |     ^^^^^^^^^ no `Validator` in the root
+  |
+help: a similar name exists in the module (notice the capitalization)
+  |
+5 -     Validator,
+5 +     validator,
+  |
+
+For more information about this error, try `rustc --explain E0432`.
+error: could not compile `clouddialect-contracts` (test "structural_validation") due to 1 previous error

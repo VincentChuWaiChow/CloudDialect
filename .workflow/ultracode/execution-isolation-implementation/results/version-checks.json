@@ -1,0 +1,79 @@
+[
+  {
+    "name": "tests",
+    "command": [
+      "rtk",
+      "proxy",
+      "env",
+      "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+      "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen"
+    ],
+    "exit_code": 0,
+    "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-tests.txt",
+    "raw_path": "/tmp/clouddialect-version-tests-final.txt"
+  },
+  {
+    "name": "check",
+    "command": [
+      "rtk",
+      "proxy",
+      "env",
+      "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+      "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+      "cargo",
+      "check",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--all-targets"
+    ],
+    "exit_code": 0,
+    "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-check.txt",
+    "raw_path": "/tmp/clouddialect-version-check-final.txt"
+  },
+  {
+    "name": "fmt",
+    "command": [
+      "rtk",
+      "proxy",
+      "env",
+      "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+      "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+      "cargo",
+      "fmt",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--check"
+    ],
+    "exit_code": 0,
+    "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-fmt.txt",
+    "raw_path": "/tmp/clouddialect-version-fmt-final.txt"
+  },
+  {
+    "name": "clippy",
+    "command": [
+      "rtk",
+      "proxy",
+      "env",
+      "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+      "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+      "cargo",
+      "clippy",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--all-targets",
+      "--",
+      "-D",
+      "warnings"
+    ],
+    "exit_code": 0,
+    "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-clippy.txt",
+    "raw_path": "/tmp/clouddialect-version-clippy-final.txt"
+  }
+]

@@ -2,7 +2,7 @@
   "title": "Execution-isolation implementation",
   "slug": "execution-isolation-implementation",
   "created_at": "2026-10-22T07:25:44.090021+00:00",
-  "updated_at": "2026-10-22T14:29:40.058379+00:00",
+  "updated_at": "2026-10-22T15:16:12.940389+00:00",
   "status": "executing",
   "mode": "delegated",
   "baseline_ref": "3b9cb6bd0ee82dbef3b731a35ce68fc778c4906a",
@@ -21,10 +21,10 @@
     "native_agent_available": true,
     "native_agent_planned": true,
     "native_agent_used": true,
-    "agent_count": 18,
-    "wave_count": 8,
+    "agent_count": 20,
+    "wave_count": 10,
     "no_delegation_reason": "",
-    "notes": "Owner-approved packets17/18 completed bounded static PASS; cumulative18 ceiling exhausted; zero recursion/followups. No further dispatch without fresh allocation.",
+    "notes": "19contract recommendations integrated;20static P2 reproduced/repaired in one consolidated parent pass; no independent postrepair signoff.20cumulative ceiling exhausted, zero recursion/followups.",
     "additional_dispatch_limit": 2,
     "additional_dispatches_used": 2
   },
@@ -158,10 +158,24 @@
       "owner": "readonly-agent",
       "write_scope": [],
       "result_path": "results/18-extension-integration.md"
+    },
+    {
+      "id": "19-version-structural-contract",
+      "status": "complete",
+      "owner": "readonly-agent",
+      "write_scope": [],
+      "result_path": "results/19-version-structural-contract.md"
+    },
+    {
+      "id": "20-version-structural-integration",
+      "status": "complete",
+      "owner": "readonly-agent",
+      "write_scope": [],
+      "result_path": "results/20-version-structural-integration.md"
     }
   ],
   "verification": {
-    "status": "EX1declarations:136integration+2unit+7doctests/15Python/8P0content/check/fmt/Clippy pass;315/330productionlines; packet18staticPASS; fullgoal/runtime/BG01 incomplete, priornonEXdesignparityMISS explicit",
+    "status": "Version/structural bounded MVP:162integration+2unit+7doctests/15Python/8P0content/check/fmt/Clippy pass;701/738actualproductionlines; packet20finding repaired/no independentpostrepair; fullgoal/BG01/native incomplete",
     "checks": [
       {
         "name": "scaffold",
@@ -315,7 +329,7 @@
         "evidence": "No approved environment or closed gates; user explicitly authorized draft plans only."
       }
     ],
-    "current_scope": "RC1resource model/schema and EX1declaration prerequisites, not actual extension blockers or full goal",
+    "current_scope": "Private version helper and structural consumer for actual five MVP kinds; opaque projection scopes conservatively unsupported, later phases unfinished",
     "planning_checks": [
       {
         "name": "planning",
@@ -1017,6 +1031,158 @@
         "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-final-diff.txt",
         "raw_path": "/tmp/clouddialect-extension-final-diff.txt"
       }
+    ],
+    "version_structural_checks": [
+      {
+        "name": "tests",
+        "command": [
+          "rtk",
+          "proxy",
+          "env",
+          "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+          "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+          "cargo",
+          "test",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen"
+        ],
+        "exit_code": 0,
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-verified-tests.txt",
+        "raw_path": "/tmp/clouddialect-version-structural-verified-tests.txt"
+      },
+      {
+        "name": "check",
+        "command": [
+          "rtk",
+          "proxy",
+          "env",
+          "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+          "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+          "cargo",
+          "check",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen",
+          "--all-targets"
+        ],
+        "exit_code": 0,
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-verified-check.txt",
+        "raw_path": "/tmp/clouddialect-version-structural-verified-check.txt"
+      },
+      {
+        "name": "fmt",
+        "command": [
+          "rtk",
+          "proxy",
+          "env",
+          "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+          "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+          "cargo",
+          "fmt",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--check"
+        ],
+        "exit_code": 0,
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-verified-fmt.txt",
+        "raw_path": "/tmp/clouddialect-version-structural-verified-fmt.txt"
+      },
+      {
+        "name": "clippy",
+        "command": [
+          "rtk",
+          "proxy",
+          "env",
+          "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+          "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+          "cargo",
+          "clippy",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "exit_code": 0,
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-verified-clippy.txt",
+        "raw_path": "/tmp/clouddialect-version-structural-verified-clippy.txt"
+      },
+      {
+        "name": "negative-doctests",
+        "command": [
+          "rtk",
+          "proxy",
+          "env",
+          "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+          "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+          "cargo",
+          "test",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen",
+          "--doc",
+          "--",
+          "--nocapture"
+        ],
+        "exit_code": 0,
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-verified-negative-doctests.txt",
+        "raw_path": "/tmp/clouddialect-version-structural-verified-negative-doctests.txt"
+      },
+      {
+        "name": "python",
+        "command": [
+          "rtk",
+          "proxy",
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_*.py",
+          "-v"
+        ],
+        "exit_code": 0,
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-verified-python.txt",
+        "raw_path": "/tmp/clouddialect-version-structural-verified-python.txt"
+      },
+      {
+        "name": "p0-content",
+        "command": [
+          "rtk",
+          "proxy",
+          "python3",
+          "scripts/verification/contracts-evidence-foundation/verify-p0.py",
+          "P0DocumentationTests.test_full_embedded_schemas_and_toml_parse",
+          "P0DocumentationTests.test_valid_verification_and_required_fields",
+          "P0DocumentationTests.test_nonpass_failure_object_and_unicode_boundaries",
+          "P0DocumentationTests.test_binding_test_and_digest_shape_negatives",
+          "P0DocumentationTests.test_full_semver_boundaries",
+          "P0DocumentationTests.test_approval_shape_is_not_authentication",
+          "P0DocumentationTests.test_schema_kind_and_api_consistency",
+          "P0DocumentationTests.test_capability_and_catalog_contracts"
+        ],
+        "exit_code": 0,
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-verified-p0-content.txt",
+        "raw_path": "/tmp/clouddialect-version-structural-verified-p0-content.txt"
+      },
+      {
+        "name": "diff",
+        "command": [
+          "rtk",
+          "proxy",
+          "git",
+          "diff",
+          "--check"
+        ],
+        "exit_code": 0,
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-verified-diff.txt",
+        "raw_path": "/tmp/clouddialect-version-structural-verified-diff.txt"
+      }
     ]
   },
   "limits": {
@@ -1041,9 +1207,9 @@
     "integration_repairs": 1
   },
   "blocked_audit": {
-    "checked_at": "2026-10-22T14:29:40.058379+00:00",
-    "previous_turn": "Progress: DTO/schema/manifest/inventory implementation and explicit approvals",
-    "current_turn": "Progress: domain organization/rules/commit/push request; prerequisite gates persist",
+    "checked_at": "2026-10-22T15:16:12.940389+00:00",
+    "previous_turn": "Progress: EX1 declarations published and independently verified at3a7d163",
+    "current_turn": "Progress: actual version helper/structural API and review repair implemented, tested and committed",
     "consecutive_goal_turns_with_same_blocker": 0,
     "branch": "feat/execution-isolation",
     "open_gates": [
@@ -1061,9 +1227,9 @@
       "granted": true,
       "scope": "P0-A\u2013F for implementation planning only; plan delivered"
     },
-    "pending_input": "No current contract input needed for2.4/2.5/2.6; reviewer allocation exhausted for further delegated work",
+    "pending_input": "Next distinct parallel-worker allocation requested; actual extension/manifest/hash/semantic/conformance work remains authorized, native approvals still separate",
     "safe_authorized_work_remaining": true,
-    "why": "Meaningful source progress delivered this turn; validators/conformance/native gates remain unfinished. Do not mark original goal complete/blocked."
+    "why": "Meaningful source progress this turn; no goal completion or blocked claim."
   },
   "p0": {
     "authorized": true,
@@ -1281,15 +1447,15 @@
     "snapshot_digest_resolver_authentication": "not implemented"
   },
   "current_limits": {
-    "scope": "Shared RC1/EX1 resource-extension tranche; no timer or repair reset",
-    "started_at": "2026-10-22T13:41:20.378712+00:00",
-    "elapsed_minutes_limit": 75,
-    "dispatches_total_ceiling": 18,
-    "dispatches_total_used": 18,
+    "scope": "Next approved version/structural tranche; prior RC/EX delivery closed, not retried",
+    "started_at": "2026-10-22T14:38:03.358282+00:00",
+    "elapsed_minutes_limit": 90,
+    "dispatches_total_ceiling": 20,
+    "dispatches_total_used": 20,
     "followups": 0,
     "recursion": 0,
     "repairs_allowed": 1,
-    "repairs_used": 0
+    "repairs_used": 1
   },
   "ai_rule_location_correction": {
     "requested_by": "Explicit user: AI agent rules should be in .agents/rules",
@@ -1357,7 +1523,7 @@
   },
   "resource_contract_delivery": {
     "started_at": "2026-10-22T13:41:20.378712+00:00",
-    "status": "RC1published-verified;EX1verified-pending-publication",
+    "status": "RC1/EX1declarationspublished-verified",
     "authority": "Explicit user RC-1 discriminator and per-dimension coverage decision; approved remaining Spec1 implementation/commit/push.",
     "elapsed_limit_minutes": 75,
     "new_dispatches_authorized": 2,
@@ -1385,7 +1551,7 @@
   },
   "extension_declaration_delivery": {
     "started_at": "2026-10-22T14:06:35.864278+00:00",
-    "status": "verified-pending-evidence-commit-and-normal-push",
+    "status": "published-verified",
     "parent_tranche_start": "2026-10-22T13:41:20.378712+00:00",
     "elapsed_limit_minutes": 75,
     "no_timer_reset": true,
@@ -1410,6 +1576,62 @@
     "scope_audit": "results/extension-scope-audit.json",
     "signature_identity": "UNVERIFIED; signing policy retained; reachability/signature blocks checked",
     "publication_receipt": "/tmp/clouddialect-extension-publication.json follows evidence commit",
-    "blocker_implementation": "not delivered; future2.6"
+    "blocker_implementation": "not delivered; future2.6",
+    "publication_sha": "3a7d163bd2d48c2866083f081c88518afe577315"
+  },
+  "version_structural_delivery": {
+    "started_at": "2026-10-22T14:38:03.358282+00:00",
+    "elapsed_limit_minutes": 90,
+    "additional_dispatch_limit": 2,
+    "additional_dispatches_used": 2,
+    "cumulative_dispatch_ceiling": 20,
+    "repair_limit": 1,
+    "repairs_consumed": 1,
+    "followups": 0,
+    "recursion": 0,
+    "status": "verified-pending-evidence-commit-and-normal-push",
+    "authority": "User approves two additional bounded read-only reviewers and implementation already authorized; latest asks fanout for speed. Existing readonly scope and ceiling retained.",
+    "eval": "version-structural-eval.md",
+    "owner": "parent",
+    "native_probes_releases": false,
+    "contract_review": "19complete bounded recommendations integrated; static only",
+    "final_review": "20required P2 global const/enum projection finding; reproduced and one consolidated parent repair executed; no independent postrepair review",
+    "repair_scope": "structural.rs root global predicates and dependent missing-child paths, structural_validation.rs narrow real-engine regressions",
+    "verified_at": "2026-10-22T15:16:12.940389+00:00",
+    "elapsed_minutes": 38.15970178333334,
+    "version_red": "8d3589b",
+    "version_green": "5695df0",
+    "structural_red": "b4d8623",
+    "additional_implementation_reds": [
+      "d8c7ff1",
+      "939b83e"
+    ],
+    "structural_green": "3c2c2a1",
+    "review_repair_red": "c1c4bcf",
+    "review_repair_green": "a4ceec8",
+    "checks": "results/version-structural-verified-checks.json",
+    "coverage": "results/version-structural-verified-production-coverage.json",
+    "scope_audit": "results/version-structural-scope-audit.json",
+    "report": "version-structural-report.md",
+    "arbitrary_schema_projection": "Opaque/external/dynamic/changed-id root scopes Unsupported; no owner waiver/full arbitrary-schema claim",
+    "independent_postrepair_signoff": false,
+    "original_goal": "active/fullscope/incomplete",
+    "publication_receipt": "/tmp/clouddialect-version-structural-publication.json follows evidence commit"
+  },
+  "next_parallel_wave_request": {
+    "status": "pending owner reply, not authorization",
+    "additional_dispatches": 3,
+    "cumulative_ceiling_proposed": 23,
+    "roles": [
+      "manifest write worker",
+      "artifact hash write worker",
+      "final readonly reviewer"
+    ],
+    "parent": "extension critical path, shared exports, Git",
+    "concurrent_max_including_parent": 4,
+    "elapsed_minutes": 90,
+    "repair_limit": 1,
+    "recursion": 0,
+    "native_probes_releases": false
   }
 }

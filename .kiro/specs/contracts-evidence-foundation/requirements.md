@@ -328,6 +328,7 @@ The labels below retain the original full-conformance baseline, not a claim that
    - Evidence status: `MISSING`
 
 3. WHEN a validator encounters a document at a MINOR version newer than the validator's supported version within the same MAJOR version, THE Validator SHALL process the document using the MAJOR.0.0 base schema and SHALL surface a non-blocking warning identifying the newer minor version and the fields it did not validate.
+   - Owner-approved VC-1 initial profile: exact admitted stable versions are supported by precedence (build metadata ignored). Newer stable MINOR uses an actually admitted MAJOR.0.0 base and root-only additions with exact-path warnings; original bytes/version remain intact. Unsupported nested additions are not projected away, while existing freeform/open base-schema data remains valid. Same-MINOR unindexed PATCH, prerelease and valid core-u64 overflow are UnsupportedVersion; malformed syntax remains InvalidFormat in the helper. Trusted kind and exact admitted URI selection remain mandatory.
    - Verification method: Conformance fixture asserting a document with a MINOR-newer version within the same MAJOR is processed without a validation error but with a recorded warning identifying the version difference.
    - Evidence status: `MISSING`
 

@@ -228,7 +228,7 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
     ```
   - Implementation steps:
     1. Parse `document` as JSON. If parsing fails, return `StructuralResult` with `outcome: Fail` and a `ValidatorError` with `category: Unparseable` and `byte_offset` set to the approximate failure position.
-    2. Extract `format_version` from the parsed document (if present). If absent or not a string, record a structural error and continue.
+    2. Extract `format_version` from the parsed document. If absent or not a string, fail structurally at `format_version`: no trusted schema can be selected without it, and guessing a default is forbidden.
     3. Select exact admitted catalog schema by trusted DocumentKind plus supported format_version. Optional instance `$schema` must resolve and match that selection; absent is valid, unknown/mismatched blocks. All five instance schemas permit the optional property. Never infer kind from attacker-controlled shape.
     4. Install the snapshot-backed adapter using the actually verified pinned boon compiler API, then compile. No guessed constructor or fallback resolver.
     5. Validate the parsed document against the compiled schema using `boon`. Collect all errors as `ValidatorError` instances with `field_path` in dot-notation.
@@ -253,18 +253,19 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
 
 - [ ] 11. Implement version compatibility logic
   - Create `crates/clouddialect-contracts/src/validator/version.rs`.
-  - Implement `check_version_compatibility(format_version: &str, supported_major: u64) -> VersionCheckResult` where `VersionCheckResult` is an internal enum: `Supported`, `MinorNewer(String)`, `UnsupportedMajor(String)`, `InvalidFormat`.
+  - Implement private `check_version_compatibility(format_version: &str, admitted: &[&str]) -> VersionCheckResult` using the trusted caller-kind's admitted document versions, not a MAJOR-only parameter. Internal outcomes are `Supported(index)`, `MinorNewer(base_index)`, `UnsupportedMajor`, `UnsupportedVersion`, `InvalidFormat`; indices select actual admitted entries, not reconstructed URIs (owner-approved initial profile).
   - Logic:
-    - Parse `format_version` as SemVer (MAJOR.MINOR.PATCH). If not parseable, return `InvalidFormat`.
-    - If MAJOR matches `supported_major` exactly and MINOR == supported MINOR: `Supported`.
-    - If MAJOR matches and MINOR > supported MINOR: `MinorNewer(format_version.to_string())` — non-blocking warning (Req 7.3).
-    - If MAJOR != `supported_major`: `UnsupportedMajor(format_version.to_string())` — blocking error (Req 7.4, 6.4).
+    - Validate full SemVer2.0.0 syntax, including suffixes; malformed syntax is `InvalidFormat`, valid core-u64 overflow is `UnsupportedVersion`. Preserve representable valid suffixes rather than imposing a made-up suffix-number limit.
+    - Support exact admitted stable precedence, ignoring build metadata. Same-MINOR unindexed PATCH, lower/unindexed MINOR and every prerelease are `UnsupportedVersion`; registration of a prerelease alone does not implement it. The newer stable MINOR rule below takes precedence over its possibly nonzero PATCH.
+    - A stable MINOR above the highest admitted stable MINOR in that MAJOR may use an actually admitted MAJOR.0.0 base: `MinorNewer(base_index)`. No base means `UnsupportedVersion`, not a guessed schema.
+    - A stable MAJOR absent from admitted stable entries is `UnsupportedMajor` (Req7.4); numeric overflow/prerelease dispositions above remain distinct.
   - Integrate into `validate_structural()`:
-    - `MinorNewer` → append a `ValidatorWarning` to the result; continue validation using MAJOR.0.0 base schema.
+    - `MinorNewer` → append a version warning; use a separate base-check view with effective base format_version and root-only projection. Warn with exact escaped paths for root additions not checked by the base. Preserve original bytes/reported version, conditional/composed root fields, known malformed fields and required children. Never recursively discard nested fields or embedded JSON Schema data; existing intentionally open objects stay open. Opaque root reference scopes fail closed rather than guessing field coverage.
     - `UnsupportedMajor` → return `StructuralResult` with `outcome: Fail` and a `ValidatorError` with `category: UnsupportedMajorVersion` containing the unsupported version, error category string, and a reference to compatibility documentation.
     - `InvalidFormat` → return `StructuralResult` with `outcome: Fail` and `category: Version`.
+    - `UnsupportedVersion` → fail with category `UnsupportedVersion`, the original identifier and a compatibility-document reference. Instance `$schema`, when present, must equal the selected admitted entry URI even for build metadata or newer-MINOR fallback; no synthesized future URI is admitted.
   - Write unit tests:
-    - Test: same MAJOR/MINOR → `Supported`.
+    - Test: exact admitted stable precedence → `Supported`; same-MINOR unindexed PATCH is unsupported, not automatically supported.
     - Test: same MAJOR, higher MINOR → `MinorNewer`.
     - Test: higher MAJOR → `UnsupportedMajor`.
     - Test: Property 7 — unsupported MAJOR produces `category: UnsupportedMajorVersion` and no partial validation output.

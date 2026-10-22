@@ -1614,7 +1614,7 @@ All validation errors are non-silent. The validator never partially validates a 
 
 **Unparseable input:** If the input bytes cannot be parsed as JSON, the validator returns `ErrorCategory::Unparseable` with a byte offset or line number. No further validation occurs.
 
-**Version errors:** An unsupported MAJOR version returns `ErrorCategory::UnsupportedMajorVersion` with the version string and a reference to compatibility documentation. A MINOR-newer version within a supported MAJOR returns a non-blocking warning; structural validation continues using the MAJOR.0.0 base schema.
+**Version errors:** An unsupported stable MAJOR returns `ErrorCategory::UnsupportedMajorVersion` with the version string and compatibility-document reference. Owner-approved initial VC-1 supports exact admitted stable precedence (build metadata ignored); unindexed PATCH/prerelease and valid core-u64 overflow return `UnsupportedVersion`, malformed SemVer returns the helper's `InvalidFormat`/structural category `Version`. A stable MINOR above the highest admitted stable MINOR in that MAJOR may use an actually admitted MAJOR.0.0 base with a non-blocking version warning. A separate base-check view normalizes only its effective version and projects root additions with exact escaped-path warnings; original input/reported version remains unchanged. Conditional/composed root declarations stay checked, and no nested fields or embedded JSON Schema content are recursively dropped. Instance `$schema` must equal the selected exact admitted URI, never a URI synthesized from build metadata or the future version. An opaque root reference scope that cannot safely expose field coverage fails closed; this is a conservative implementation boundary, not a waiver of broader future compatibility requirements.
 
 **Unresolvable schema URI:** If any `$ref` or `$schema` URI cannot be found in the catalog index, the validator returns `ErrorCategory::UnresolvableReference` identifying the exact URI. Partial validation does not occur.
 
@@ -1744,7 +1744,9 @@ crates/
       integration/
 ```
 
-**Target public API surface (DTOs partially delivered; validator traits/algorithms remain unfinished):**
+**Target public API surface (DTOs and structural Validator/Validate method delivered; semantic/manifest methods and later algorithms remain unfinished):**
+
+Current Validate exposes only validate_structural; the semantic method below is the remaining target, not a success/default/panic stub. Opaque root reference projection is conservatively unsupported; exact-version validation still uses the actual catalog-backed compiler. Whole canonical tasks/conformance and acceptance are not implied by this bounded structural API.
 
 ```rust
 // clouddialect-contracts public API

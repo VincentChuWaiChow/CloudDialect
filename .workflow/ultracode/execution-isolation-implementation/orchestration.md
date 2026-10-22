@@ -1,5 +1,8 @@
 # Orchestration
 
+## Current version / structural tranche
+Owner approved two additional readonly sidecars (20cumulative), no recursion/followups,90minutes from14:38:03UTC and one consolidated repair. Fanout request used reader19 for contract edges while parent implemented; reader20 reviewed frozen integration while parent ran actual checks/coverage. Parent serialized all code/exports/Git. Review20 P2 global-predicate projection finding reproduced and fixed in sole repair, no independent postrepair sign-off.20ceiling exhausted. Next distinct wave requests two disjoint write workers plus readonly final review while parent owns extension critical path; no approval inferred. All native/release/gate boundaries retained.
+
 ## Current resource/extension tranche
 Parent owns approved RC-1/EX-1 source, shared exports, tests, evidence and Git. Owner approved two additional bounded readonly reviewers (18cumulative) and75minutes from original13:41:20UTC start, zero recursion/followups, one consolidated repair total. Packet17 reviewed RC-1/EX-1 contract and packet18 reviewed frozen integrated EX declarations; both bounded static PASS, no repairs. All18 dispatches now used; no more agents without fresh allocation. Parent independently ran full current checks/coverage and scope audits; actual recognition/blockers remain future2.6. No probes/releases/deployments/gate closure. Older sections below retain historical limits/approval context and do not override these current counters.
 

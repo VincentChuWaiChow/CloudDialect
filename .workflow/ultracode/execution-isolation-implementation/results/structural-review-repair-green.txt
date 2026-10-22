@@ -1,0 +1,26 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.69s
+     Running tests/structural_validation.rs (/tmp/clouddialect-phase-target/debug/deps/structural_validation-4d653714f63d3c4a)
+
+running 19 tests
+test malformed_json_reports_bounded_approximate_offsets_and_scalars_fail_structurally ... ok
+test actual_production_dispatch_enforces_every_version_disposition ... ok
+test missing_or_non_string_versions_never_guess_a_schema ... ok
+test duplicate_core_members_cannot_change_version_or_required_extensions ... ok
+test missing_external_schema_resource_fails_closed_with_safe_diagnostics ... ok
+test newer_minor_does_not_bypass_declared_root_wildcard_constraints ... ok
+test changed_root_reference_scope_never_causes_guessed_property_removal ... ok
+test explicit_catalog_selection_not_an_embedded_or_same_minor_patch_default ... ok
+test projection_preserves_root_dependent_required_names ... ok
+test required_errors_have_child_paths_context_and_no_private_input_values ... ok
+test projection_never_strips_nested_closed_fields_or_embedded_schema_content ... ok
+test build_metadata_does_not_create_a_new_schema_uri_or_change_reported_version ... ok
+test schema_formats_are_assertions_not_only_annotations ... ok
+test newer_minor_still_checks_known_conditional_fields_and_required_children ... ok
+test global_root_predicates_are_not_bypassed_by_discarding_members ... ok
+test all_five_trusted_kinds_pass_and_round_trip_without_other_phase_claims ... ok
+test root_composition_and_local_reference_fields_remain_checked ... ok
+test instance_schema_is_optional_but_must_equal_the_selected_admitted_uri ... ok
+test newer_minor_projects_only_root_additions_and_warns_with_unambiguous_paths ... ok
+
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s

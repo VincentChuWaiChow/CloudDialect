@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-10-22T15:18:07.258733+00:00",
+  "method": "Per-source .cargo-checksum.json absent in admitted isolated extraction; initial inventory lookup failed without mutation. Instead directly compared bounded files against checksum-verified cached .crate archive, without extraction/network.",
+  "packages": [
+    {
+      "name": "boon",
+      "version": "0.6.1",
+      "archive_sha256_matches_lock": "baa187da765010b70370368c49f08244b1ae5cae1d5d33072f76c8cb7112fe3e",
+      "inspected_api_sources_exactly_match_archive_bytes": {
+        "src/lib.rs": "e84e1dfef9f595e309365b8ae2bd7a8106ab52ba903cba0cd77bf0300a4f4b6c",
+        "src/compiler.rs": "050caf500f3066da5ce3e55aaa20ab6be6dc1d6ed67e1b3ec02d514389a92885",
+        "src/validator.rs": "f406499be88a2dd54ebe06e1a747a8ee6195a689d40269b5ae3eb50b8a3eff34"
+      }
+    },
+    {
+      "name": "semver",
+      "version": "1.0.28",
+      "archive_sha256_matches_lock": "8a7852d02fc848982e0c167ef163aaff9cd91dc640ba85e263cb1ce46fae51cd",
+      "inspected_api_sources_exactly_match_archive_bytes": {
+        "src/lib.rs": "e56f4d7c7774c45e61026fb0050955d67601c9ad18bdf93f8921d9898067c119",
+        "src/parse.rs": "2d9cb28a72a813968c16da29a9690f8e53f1ce00727a1dbe67aec3ddb5ed59ed"
+      }
+    }
+  ]
+}
