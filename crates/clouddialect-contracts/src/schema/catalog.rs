@@ -1,4 +1,4 @@
-//! Pure catalog inventory checks. This is neither provenance nor a schema resolver.
+//! Catalog inventory/identity checks. This is neither provenance nor a schema resolver.
 
 use std::{
     cell::Cell,
@@ -8,7 +8,7 @@ use std::{
     rc::Rc,
 };
 
-use boon::{Compiler, Schemas, UrlLoader};
+use boon::{CompileError, Compiler, Schemas, UrlLoader};
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
 
@@ -48,6 +48,7 @@ pub struct CatalogEntry {
     pub format_version: String,
     pub catalog_path: String,
     pub status: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
     pub end_of_life_date: Option<String>,
 }
 
@@ -73,7 +74,8 @@ impl UrlLoader for IndexSchemaLoader {
 
 impl CatalogIndex {
     /// Checks index shape and exact URI/path/material inventory from caller-owned bytes.
-    /// Does not acquire files, authenticate material, freeze/digest it or compile its schemas.
+    /// Does not acquire files, authenticate material or freeze/digest it. The
+    /// pinned engine probes resource identities, not schema validity.
     pub fn from_parts(
         index: &[u8],
         material: &BTreeMap<String, Vec<u8>>,
@@ -155,8 +157,81 @@ impl CatalogIndex {
             )?;
             check_external_resource_uri(&entry.schema_id)?;
         }
+        check_resource_identities(&parsed, material)?;
         Ok(parsed)
     }
+}
+
+struct IdentityProbeLoader(Rc<BTreeMap<String, Value>>);
+
+impl UrlLoader for IdentityProbeLoader {
+    fn load(&self, url: &str) -> Result<Value, Box<dyn Error>> {
+        self.0.get(url).cloned().ok_or_else(|| {
+            io::Error::new(io::ErrorKind::NotFound, "Unlisted identity probe resource").into()
+        })
+    }
+}
+
+fn check_resource_identities(
+    index: &CatalogIndex,
+    material: &BTreeMap<String, Vec<u8>>,
+) -> Result<(), ValidatorError> {
+    let resources = Rc::new(
+        index
+            .schemas
+            .iter()
+            .map(|entry| (&entry.schema_id, &entry.catalog_path))
+            .chain(
+                index
+                    .resolver_resources
+                    .iter()
+                    .map(|entry| (&entry.schema_id, &entry.catalog_path)),
+            )
+            .map(|(uri, path)| Ok((uri.clone(), parse_json(&material[path])?)))
+            .collect::<Result<BTreeMap<_, _>, ValidatorError>>()?,
+    );
+    for (uri, original) in resources.iter() {
+        let mut probe = original.clone();
+        let Some(object) = probe.as_object_mut() else {
+            continue;
+        };
+        // Temporary siblings make the pinned engine detect indexed/nested ID
+        // collisions using its own draft traversal and normalized URL joining.
+        // `definitions` is a schema container in every draft Boon supports;
+        // IDs in instance data (e.g. const/examples) are not recursively scanned.
+        let definitions = object
+            .entry("definitions")
+            .or_insert_with(|| Value::Object(Default::default()));
+        if !definitions.is_object() {
+            // The engine finds no resources in a non-object container. Changing
+            // only the probe lets it inspect IDs elsewhere even in invalid schemas.
+            *definitions = Value::Object(Default::default());
+        }
+        let definitions = definitions.as_object_mut().unwrap();
+        for (position, other_uri) in resources.keys().filter(|id| *id != uri).enumerate() {
+            let mut key = format!("__clouddialect_identity_probe_{position}");
+            while definitions.contains_key(&key) {
+                key.push('_');
+            }
+            definitions.insert(key, serde_json::json!({"$id": other_uri, "id": other_uri}));
+        }
+        let mut compiler = Compiler::new();
+        compiler.use_loader(Box::new(IdentityProbeLoader(Rc::clone(&resources))));
+        compiler
+            .add_resource(uri, probe)
+            .map_err(|_| invalid("Catalog resource identity could not be probed"))?;
+        // Other compilation errors retain the existing lazy schema-validity
+        // boundary. Probe copies/compiled output never become snapshot material.
+        if matches!(
+            compiler.compile(uri, &mut Schemas::new()),
+            Err(CompileError::DuplicateId { .. })
+        ) {
+            return Err(invalid(
+                "Catalog contains a conflicting schema resource identity",
+            ));
+        }
+    }
+    Ok(())
 }
 
 // Boon normalizes resource URLs and resolves its bundled meta-schemas before

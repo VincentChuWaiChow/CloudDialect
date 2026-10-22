@@ -98,3 +98,34 @@ fn mandatory_declaration_remains_a_typed_core_field() {
     assert!(serde_json::from_str::<CatalogIndex>(&duplicate).is_err());
     assert!(CatalogIndex::from_parts(duplicate.as_bytes(), &material).is_err());
 }
+
+#[test]
+fn admitted_catalog_serialization_omits_absent_dates_and_revalidates() {
+    let (index, material) = parts();
+    let mut document = CatalogIndex::from_parts(index.as_bytes(), &material).unwrap();
+    assert!(
+        document
+            .schemas
+            .iter()
+            .all(|entry| entry.end_of_life_date.is_none())
+    );
+    document.schemas[0].end_of_life_date = Some("2030-01-01".to_owned());
+    let encoded = serde_json::to_vec(&document).unwrap();
+    let value: Value = serde_json::from_slice(&encoded).unwrap();
+    assert_eq!(value["schemas"][0]["end_of_life_date"], "2030-01-01");
+    for entry in value["schemas"].as_array().unwrap().iter().skip(1) {
+        assert!(entry.get("end_of_life_date").is_none());
+    }
+    let reparsed = CatalogIndex::from_parts(&encoded, &material).unwrap();
+    assert_eq!(
+        reparsed.schemas[0].end_of_life_date.as_deref(),
+        Some("2030-01-01")
+    );
+    assert!(
+        reparsed
+            .schemas
+            .iter()
+            .skip(1)
+            .all(|entry| entry.end_of_life_date.is_none())
+    );
+}

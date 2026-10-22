@@ -13,11 +13,10 @@ pub fn check_fidelity_mapping(
     validator: &Validator,
 ) -> Vec<ValidatorError> {
     let mut errors = Vec::new();
-    for operation in &manifest.operations {
+    for (index, operation) in manifest.operations.iter().enumerate() {
         if operation.behavioral_fidelity == ManifestFidelity::Unsupported {
             continue;
         }
-        let key = serde_json::to_string(&operation.id).expect("JSON string encoding");
         let reference_path = super::structural::property_path("contracts", &operation.id);
         let Some(reference) = manifest.contracts.get(&operation.id) else {
             errors.push(error(
@@ -38,12 +37,24 @@ pub fn check_fidelity_mapping(
             Ok(record) => record,
             Err(diagnostics) => {
                 errors.extend(diagnostics.into_iter().map(|mut diagnostic| {
-                    diagnostic.document_id = Some(manifest.pack.id.clone());
-                    diagnostic.format_version = None;
-                    diagnostic.field_path = Some(match diagnostic.field_path {
-                        Some(path) => format!("{reference_path}.{path}"),
-                        None => format!("{reference_path}.id"),
-                    });
+                    // Located diagnostics belong to the referenced document,
+                    // not to nonexistent children of the manifest reference.
+                    if diagnostic.field_path.is_none() {
+                        diagnostic.description = format!(
+                            "{} (referenced document {:?}, format version {:?})",
+                            diagnostic.description, reference.id, reference.format_version
+                        );
+                        diagnostic.document_id = Some(manifest.pack.id.clone());
+                        diagnostic.format_version = None;
+                        diagnostic.field_path = Some(format!("{reference_path}.id"));
+                    } else {
+                        diagnostic
+                            .document_id
+                            .get_or_insert_with(|| reference.id.clone());
+                        diagnostic
+                            .format_version
+                            .get_or_insert_with(|| reference.format_version.clone());
+                    }
                     diagnostic
                 }));
                 continue;
@@ -89,8 +100,8 @@ pub fn check_fidelity_mapping(
                     BehavioralFidelity::Unknown => "unknown",
                 };
                 errors.push(error(manifest, ErrorCategory::Semantic,
-                    format!("operations[{key}].behavioral_fidelity"),
-                    format!("manifest fidelity '{mode}' but contract obligation {:?} has fidelity '{fidelity}'", obligation.obligation_id)));
+                    format!("operations[{index}].behavioral_fidelity"),
+                    format!("manifest operation {:?} declares fidelity '{mode}' but contract obligation {:?} has fidelity '{fidelity}'", operation.id, obligation.obligation_id)));
             }
         }
     }

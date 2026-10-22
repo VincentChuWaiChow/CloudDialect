@@ -205,3 +205,126 @@ fn semantic_entrypoint_uses_its_owned_active_catalog() {
         SemanticOutcome::Fail
     );
 }
+
+#[test]
+fn every_explicit_binding_preserves_referenced_structural_diagnostics() {
+    let snapshot = CatalogSnapshot::embedded().unwrap();
+    let validator = Validator::new(snapshot.clone());
+    let manifest_validator = ManifestValidator::new(snapshot);
+    let (data, store) = valid_record();
+    let mut invalid: Value = serde_json::from_slice(&store.0.bytes).unwrap();
+    invalid
+        .as_object_mut()
+        .unwrap()
+        .remove("operation_identity");
+    let mut record = store.0;
+    record.bytes = serde_json::to_vec(&invalid).unwrap();
+    record.content_hash.value = Sha256::digest(&record.bytes)
+        .iter()
+        .map(|b| format!("{b:02x}"))
+        .collect();
+    let expected = validator.validate_structural(DocumentKind::BehavioralContract, &record.bytes);
+    assert_eq!(expected.outcome, StructuralOutcome::Fail);
+    for mode in ["full", "partial", "unsupported", "orphan"] {
+        let mut manifest: toml::Value = toml::from_str(&data).unwrap();
+        if mode == "orphan" {
+            manifest["operations"] = toml::Value::Array(Vec::new());
+        } else {
+            manifest["operations"][0]["behavioral_fidelity"] = mode.into();
+        }
+        let bytes = toml::to_string(&manifest).unwrap();
+        assert_eq!(
+            manifest_validator
+                .validate_manifest(bytes.as_bytes())
+                .outcome,
+            ManifestOutcome::Pass,
+            "{mode}"
+        );
+        let result = manifest_validator
+            .validate_manifest_semantic(bytes.as_bytes(), &Record(record.clone()));
+        assert_eq!(result.outcome, SemanticOutcome::Fail, "{mode}");
+        assert_eq!(
+            result.document_id.as_deref(),
+            Some("io.clouddialect.python.oss-to-s3")
+        );
+        assert_eq!(result.errors, expected.errors, "{mode}");
+    }
+}
+
+#[test]
+fn unsupported_and_orphan_missing_records_identify_the_manifest_reference() {
+    let validator = ManifestValidator::new(CatalogSnapshot::embedded().unwrap());
+    let (data, store) = valid_record();
+    for mode in ["unsupported", "orphan"] {
+        let mut manifest: toml::Value = toml::from_str(&data).unwrap();
+        if mode == "orphan" {
+            manifest["operations"] = toml::Value::Array(Vec::new());
+        } else {
+            manifest["operations"][0]["behavioral_fidelity"] = mode.into();
+        }
+        let bytes = toml::to_string(&manifest).unwrap();
+        let missing = Missing(Cell::new(0));
+        let result = validator.validate_manifest_semantic(bytes.as_bytes(), &missing);
+        assert_eq!(result.outcome, SemanticOutcome::Fail, "{mode}");
+        assert_eq!(result.errors.len(), 1, "{mode}");
+        let error = &result.errors[0];
+        assert_eq!(
+            error.document_id.as_deref(),
+            Some("io.clouddialect.python.oss-to-s3")
+        );
+        assert_eq!(error.format_version, None);
+        assert_eq!(
+            error.field_path.as_deref(),
+            Some("contracts.upload_object.id")
+        );
+        assert!(error.description.contains(&store.0.reference.id));
+        assert!(error.description.contains("1.0.0"));
+    }
+}
+
+#[test]
+fn referenced_parse_failures_retain_context_for_every_explicit_binding() {
+    let snapshot = CatalogSnapshot::embedded().unwrap();
+    let validator = Validator::new(snapshot.clone());
+    let manifest_validator = ManifestValidator::new(snapshot);
+    let (data, store) = valid_record();
+    let duplicate = String::from_utf8(store.0.bytes.clone())
+        .unwrap()
+        .replace(
+            "\"call_site\":\"pkg.call\"",
+            "\"call_site\":\"first\",\"call_site\":\"pkg.call\"",
+        )
+        .into_bytes();
+    for bytes in [b"{".to_vec(), duplicate] {
+        let mut record = store.0.clone();
+        record.bytes = bytes;
+        record.content_hash.value = Sha256::digest(&record.bytes)
+            .iter()
+            .map(|b| format!("{b:02x}"))
+            .collect();
+        let mut expected =
+            validator.validate_structural(DocumentKind::BehavioralContract, &record.bytes);
+        assert_eq!(expected.outcome, StructuralOutcome::Fail);
+        for error in &mut expected.errors {
+            assert_eq!(error.category, ErrorCategory::Unparseable);
+            assert_eq!(error.field_path.as_deref(), Some("$"));
+            assert_eq!(error.document_id, None);
+            assert_eq!(error.format_version, None);
+            error.document_id = Some(record.reference.id.clone());
+            error.format_version = Some(record.reference.format_version.clone());
+        }
+        for mode in ["full", "partial", "unsupported", "orphan"] {
+            let mut manifest: toml::Value = toml::from_str(&data).unwrap();
+            if mode == "orphan" {
+                manifest["operations"] = toml::Value::Array(Vec::new());
+            } else {
+                manifest["operations"][0]["behavioral_fidelity"] = mode.into();
+            }
+            let bytes = toml::to_string(&manifest).unwrap();
+            let result = manifest_validator
+                .validate_manifest_semantic(bytes.as_bytes(), &Record(record.clone()));
+            assert_eq!(result.outcome, SemanticOutcome::Fail);
+            assert_eq!(result.errors, expected.errors, "{mode}");
+        }
+    }
+}

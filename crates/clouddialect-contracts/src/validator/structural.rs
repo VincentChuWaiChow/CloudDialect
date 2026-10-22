@@ -44,9 +44,9 @@ impl Validator {
                 "Document must be a JSON object",
             );
         }
-        // Preserve the existing typed-decoder boundary against duplicate core
-        // members; a Value alone silently keeps the last duplicate value.
-        if let Err(error) = serde_json::from_slice::<RawFields>(document) {
+        // Check original core objects before Value can hide duplicate members.
+        // Opaque extension values and embedded schema fragments stay untouched.
+        if let Err(error) = check_core_duplicates(kind, document) {
             return parse_failure(result, document, error);
         }
         result.document_id = parsed.get("id").and_then(Value::as_str).map(str::to_owned);
@@ -199,6 +199,93 @@ impl Validator {
         };
         result
     }
+}
+
+// These edges follow the document DTOs, not JSON Schema keywords or arbitrary
+// payload keys. A leaf checks that object's member names, but never interprets
+// its opaque values. This is deliberately not a second schema/type validator.
+fn check_core_duplicates(kind: DocumentKind, document: &[u8]) -> serde_json::Result<()> {
+    use serde_json::value::RawValue;
+
+    #[derive(Clone, Copy)]
+    enum Shape {
+        Object(&'static [(&'static str, Shape)]),
+        Array(&'static [(&'static str, Shape)]),
+    }
+    use Shape::{Array, Object};
+    const LEAF: Shape = Object(&[]);
+    const ARTIFACT: &[(&str, Shape)] = &[("content_hash", LEAF)];
+    const CONTRACT: &[(&str, Shape)] = &[
+        ("operation_identity", LEAF),
+        ("side_effects", Array(&[])),
+        (
+            "resource_dependencies",
+            Array(&[
+                ("known_behavior", LEAF),
+                ("unresolved_assumptions", Array(&[])),
+            ]),
+        ),
+        ("obligations", Array(&[("unresolved_assumption", LEAF)])),
+        ("behavioral_notes", Array(&[])),
+    ];
+    const EVIDENCE: &[(&str, Shape)] =
+        &[("provenance", LEAF), ("unresolved_assumptions", Array(&[]))];
+    const VERIFICATION: &[(&str, Shape)] = &[
+        ("candidate", Object(ARTIFACT)),
+        ("pack", Object(ARTIFACT)),
+        ("toolchain", Object(ARTIFACT)),
+        ("configuration", Object(ARTIFACT)),
+        (
+            "binding",
+            Object(&[
+                ("input", Object(ARTIFACT)),
+                ("dependencies", Object(ARTIFACT)),
+                ("suite", Object(ARTIFACT)),
+                ("oracle", Object(ARTIFACT)),
+                ("policy", Object(ARTIFACT)),
+            ]),
+        ),
+        ("tests", Array(&[("failure_description", LEAF)])),
+        (
+            "acceptance",
+            Object(&[
+                ("verification_result", LEAF),
+                ("approval_evidence", Object(ARTIFACT)),
+            ]),
+        ),
+    ];
+
+    fn check(raw: &str, shape: Shape) -> serde_json::Result<()> {
+        match shape {
+            Object(children) if raw.starts_with('{') => {
+                let fields: RawFields = serde_json::from_str(raw)?;
+                for (name, shape) in children {
+                    if let Some(value) = fields.0.get(*name) {
+                        check(value.get(), *shape)?;
+                    }
+                }
+            }
+            Array(children) if raw.starts_with('[') => {
+                for value in serde_json::from_str::<Vec<Box<RawValue>>>(raw)? {
+                    check(value.get(), Object(children))?;
+                }
+            }
+            _ => {} // The actual active schema reports incorrect field types.
+        }
+        Ok(())
+    }
+
+    let children = match kind {
+        DocumentKind::BehavioralContract => CONTRACT,
+        DocumentKind::EvidenceRecord => EVIDENCE,
+        DocumentKind::VerificationResult => VERIFICATION,
+        DocumentKind::CatalogIndex => {
+            &[("schemas", Array(&[])), ("resolver_resources", Array(&[]))]
+        }
+        DocumentKind::ExtensionRegistry => &[("extensions", Array(&[]))],
+    };
+    let raw: Box<RawValue> = serde_json::from_slice(document)?;
+    check(raw.get(), Object(children))
 }
 
 fn fail(

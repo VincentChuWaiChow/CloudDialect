@@ -67,12 +67,24 @@ impl ManifestValidator {
             ) {
                 let path = property_path("contracts", key);
                 errors.extend(diagnostics.into_iter().map(|mut error| {
-                    error.document_id = Some(manifest.pack.id.clone());
-                    error.format_version = None;
-                    error.field_path = Some(format!(
-                        "{path}.{}",
-                        error.field_path.as_deref().unwrap_or("id")
-                    ));
+                    // Preserve the referenced document's original location.
+                    // Only locationless store failures belong at the binding.
+                    if error.field_path.is_none() {
+                        error.description = format!(
+                            "{} (referenced document {:?}, format version {:?})",
+                            error.description, reference.id, reference.format_version
+                        );
+                        error.document_id = Some(manifest.pack.id.clone());
+                        error.format_version = None;
+                        error.field_path = Some(format!("{path}.id"));
+                    } else {
+                        error
+                            .document_id
+                            .get_or_insert_with(|| reference.id.clone());
+                        error
+                            .format_version
+                            .get_or_insert_with(|| reference.format_version.clone());
+                    }
                     error
                 }));
             }

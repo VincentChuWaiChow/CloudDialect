@@ -140,12 +140,84 @@ fn full_and_partial_enforce_every_declared_obligation_fidelity() {
             );
             if !permitted {
                 assert!(errors.iter().any(|e| e.category == ErrorCategory::Semantic
-                    && e.field_path.as_deref()
-                        == Some("operations[\"upload\"].behavioral_fidelity")
+                    && e.field_path.as_deref() == Some("operations[0].behavioral_fidelity")
+                    && e.description.contains("upload")
                     && e.description.contains("o1")));
             }
         }
     }
+}
+
+#[test]
+fn fidelity_error_uses_actual_index_after_unsupported_operation() {
+    let mut manifest = manifest("full");
+    let mut unsupported = manifest.operations[0].clone();
+    unsupported.id = "not-supported".into();
+    unsupported.behavioral_fidelity = ManifestFidelity::Unsupported;
+    manifest.operations.insert(0, unsupported);
+    let errors = check_fidelity_mapping(
+        &manifest,
+        &store(&contract("adaptation-required")),
+        &validator(),
+    );
+    assert_eq!(errors.len(), 1);
+    assert_eq!(
+        errors[0].field_path.as_deref(),
+        Some("operations[1].behavioral_fidelity")
+    );
+    assert!(errors[0].description.contains("upload"));
+}
+
+#[test]
+fn referenced_document_diagnostics_retain_original_location_for_full_and_partial() {
+    let validator = validator();
+    for mode in ["full", "partial"] {
+        let mut invalid = contract("equivalent-within-contract");
+        invalid
+            .as_object_mut()
+            .unwrap()
+            .remove("operation_identity");
+        let source = store(&invalid);
+        let expected = validator.validate_structural(
+            DocumentKind::BehavioralContract,
+            &source.record.as_ref().unwrap().bytes,
+        );
+        assert_eq!(expected.outcome, StructuralOutcome::Fail);
+        let errors = check_fidelity_mapping(&manifest(mode), &source, &validator);
+        assert_eq!(errors, expected.errors, "{mode}");
+        assert_eq!(errors[0].document_id.as_deref(), Some(ID));
+        assert_eq!(errors[0].format_version.as_deref(), Some("1.0.0"));
+        assert_eq!(errors[0].field_path.as_deref(), Some("operation_identity"));
+
+        let mut mandatory = contract("equivalent-within-contract");
+        mandatory["required_extensions"] = json!(["acme"]);
+        let errors = check_fidelity_mapping(&manifest(mode), &store(&mandatory), &validator);
+        assert_eq!(errors.len(), 1);
+        assert_eq!(errors[0].category, ErrorCategory::BlockingGap);
+        assert_eq!(errors[0].document_id.as_deref(), Some(ID));
+        assert_eq!(errors[0].format_version.as_deref(), Some("1.0.0"));
+        assert_eq!(
+            errors[0].field_path.as_deref(),
+            Some("required_extensions[0]")
+        );
+    }
+}
+
+#[test]
+fn missing_record_keeps_manifest_reference_location_and_target_details() {
+    let manifest = manifest("full");
+    let source = Store {
+        record: None,
+        calls: Cell::new(0),
+        unavailable: false,
+    };
+    let errors = check_fidelity_mapping(&manifest, &source, &validator());
+    assert_eq!(errors.len(), 1);
+    assert_eq!(errors[0].document_id.as_deref(), Some("io.example.pack"));
+    assert_eq!(errors[0].format_version, None);
+    assert_eq!(errors[0].field_path.as_deref(), Some("contracts.upload.id"));
+    assert!(errors[0].description.contains(ID));
+    assert!(errors[0].description.contains("1.0.0"));
 }
 
 #[test]

@@ -357,3 +357,148 @@ fn ordinary_same_host_resources_are_not_rejected_by_a_host_prefix_rule() {
         assert!(schemas.validate(&json!({}), root).is_err());
     }
 }
+
+#[test]
+fn nested_resource_ids_cannot_shadow_indexed_application_or_support_material() {
+    let verification = "https://schemas.clouddialect.io/verification-result/1.0.0/schema.json";
+    let support = "https://schemas.clouddialect.io/support/string.json";
+    for nested_id in [
+        verification,
+        "../../verification-result/1.0.0/schema.json",
+        "HTTPS://SCHEMAS.CLOUDDIALECT.IO:443/verification-result/1.0.0/schema.json",
+        support,
+        "../../support/other/../string.json",
+    ] {
+        let (index, mut material) = parts();
+        let mut index: Value = serde_json::from_slice(&index).unwrap();
+        index["resolver_resources"] =
+            json!([{"schema_id":support,"catalog_path":"support/false.json"}]);
+        material.insert("support/false.json".to_owned(), b"false".to_vec());
+        material.insert(
+            "schemas/evidence-record/1.0/schema.json".to_owned(),
+            serde_json::to_vec(&json!({
+                "$id": EVIDENCE,
+                "$schema": META,
+                "$defs": {"shadow": {"$id": nested_id, "type": "object"}},
+                "$ref": if nested_id.contains("support") { support } else { verification }
+            }))
+            .unwrap(),
+        );
+        let error = CatalogSnapshot::from_parts(serde_json::to_vec(&index).unwrap(), material)
+            .map(|_| ())
+            .expect_err("nested resource must not replace independently indexed material");
+        assert!(
+            error.description.contains("resource identity"),
+            "{nested_id}: {error:?}"
+        );
+    }
+}
+
+#[test]
+fn nonconflicting_bundles_and_schema_looking_instance_data_remain_supported() {
+    let (index, mut material) = parts();
+    let mut index: Value = serde_json::from_slice(&index).unwrap();
+    index["resolver_resources"] =
+        json!([{"schema_id":SUPPORT,"catalog_path":"support/false.json"}]);
+    material.insert("support/false.json".to_owned(), b"false".to_vec());
+    let example = json!({"$id": SUPPORT, "type": "string"});
+    material.insert(
+        "schemas/evidence-record/1.0/schema.json".to_owned(),
+        serde_json::to_vec(&json!({
+            "$id": EVIDENCE,
+            "$schema": META,
+            "$defs": {"local": {"$id": "bundled.json", "const": example}},
+            "examples": [{"$id": SUPPORT}],
+            "$ref": "bundled.json"
+        }))
+        .unwrap(),
+    );
+    let snapshot =
+        CatalogSnapshot::from_parts(serde_json::to_vec(&index).unwrap(), material).unwrap();
+    let (schemas, root) = compile(snapshot, EVIDENCE, true).unwrap();
+    assert!(schemas.validate(&example, root).is_ok());
+    assert!(schemas.validate(&json!({}), root).is_err());
+}
+
+#[test]
+fn collision_probe_uses_pinned_engine_drafts_and_admitted_custom_meta_schemas() {
+    let custom_meta = "urn:clouddialect:test:custom-meta";
+    for (draft, id_keyword) in [
+        ("http://json-schema.org/draft-04/schema", "id"),
+        ("http://json-schema.org/draft-06/schema", "$id"),
+        ("http://json-schema.org/draft-07/schema", "$id"),
+        ("https://json-schema.org/draft/2019-09/schema", "$id"),
+        (META, "$id"),
+        (custom_meta, "$id"),
+    ] {
+        let (index, mut material) = parts();
+        let mut index: Value = serde_json::from_slice(&index).unwrap();
+        index["resolver_resources"] = json!([
+            {"schema_id": SUPPORT, "catalog_path": "support/false.json"},
+            {"schema_id": custom_meta, "catalog_path": "support/meta.json"}
+        ]);
+        material.insert("support/false.json".to_owned(), b"false".to_vec());
+        material.insert(
+            "support/meta.json".to_owned(),
+            serde_json::to_vec(&json!({"$id": custom_meta, "$schema": META})).unwrap(),
+        );
+        let mut shadow = json!({"type": "object"});
+        shadow[id_keyword] = json!(SUPPORT);
+        material.insert(
+            "schemas/evidence-record/1.0/schema.json".to_owned(),
+            serde_json::to_vec(&json!({
+                "$id": EVIDENCE,
+                "$schema": draft,
+                "definitions": {"shadow": shadow},
+                "$ref": SUPPORT
+            }))
+            .unwrap(),
+        );
+        assert!(
+            CatalogSnapshot::from_parts(serde_json::to_vec(&index).unwrap(), material).is_err(),
+            "{draft}"
+        );
+    }
+}
+
+#[test]
+fn indexed_support_roots_cannot_shadow_application_material() {
+    let (index, mut material) = parts();
+    let mut index: Value = serde_json::from_slice(&index).unwrap();
+    index["resolver_resources"] =
+        json!([{"schema_id": SUPPORT, "catalog_path": "support/root.json"}]);
+    material.insert(
+        "support/root.json".to_owned(),
+        serde_json::to_vec(&json!({
+            "$id": SUPPORT,
+            "$schema": META,
+            "$defs": {"shadow": {"$id": EVIDENCE, "type": "null"}}
+        }))
+        .unwrap(),
+    );
+    assert!(CatalogSnapshot::from_parts(serde_json::to_vec(&index).unwrap(), material).is_err());
+}
+
+#[test]
+fn draft4_ignores_dollar_id_instead_of_treating_it_as_a_resource() {
+    let (index, mut material) = parts();
+    let mut index: Value = serde_json::from_slice(&index).unwrap();
+    index["resolver_resources"] =
+        json!([{"schema_id": SUPPORT, "catalog_path": "support/false.json"}]);
+    material.insert("support/false.json".to_owned(), b"false".to_vec());
+    material.insert(
+        "schemas/evidence-record/1.0/schema.json".to_owned(),
+        serde_json::to_vec(&json!({
+            "$id": EVIDENCE,
+            "$schema": "http://json-schema.org/draft-04/schema",
+            "definitions": {"data": {"$id": SUPPORT}},
+            "type": "null"
+        }))
+        .unwrap(),
+    );
+    let snapshot =
+        CatalogSnapshot::from_parts(serde_json::to_vec(&index).unwrap(), material).unwrap();
+    let (schemas, root) = compile(snapshot, EVIDENCE, true).unwrap();
+    assert!(schemas.validate(&Value::Null, root).is_ok());
+    assert!(schemas.validate(&json!({}), root).is_err());
+}
