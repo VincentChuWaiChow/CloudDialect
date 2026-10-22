@@ -1,0 +1,88 @@
+{
+  "build_command": [
+    "rtk",
+    "proxy",
+    "env",
+    "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+    "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+    "cargo",
+    "build",
+    "--manifest-path",
+    "crates/clouddialect-contracts/Cargo.toml",
+    "--frozen",
+    "--message-format=json"
+  ],
+  "compile_command": [
+    "rtk",
+    "proxy",
+    "rustc",
+    "--edition=2024",
+    "/tmp/clouddialect-reference-catalog-preflight.rs",
+    "-L",
+    "dependency=/tmp/clouddialect-phase-target/debug/deps",
+    "--extern",
+    "clouddialect_contracts=/tmp/clouddialect-phase-target/debug/libclouddialect_contracts.rlib",
+    "--extern",
+    "serde_json=/tmp/clouddialect-phase-target/debug/deps/libserde_json-54c79b5a5f3297b1.rlib",
+    "-o",
+    "/tmp/clouddialect-reference-catalog-preflight"
+  ],
+  "run_command": [
+    "rtk",
+    "proxy",
+    "/tmp/clouddialect-reference-catalog-preflight"
+  ],
+  "build_exit": 0,
+  "compile_exit": 0,
+  "run_exit": 0,
+  "source": "/tmp/clouddialect-reference-catalog-preflight.rs",
+  "raw_log": "/tmp/clouddialect-reference-catalog-preflight.txt",
+  "initial_setup_failure": "Used top-level debug directory rather than debug/deps for direct dependency search; no production source changed, not RED.",
+  "source_sha256": "334e89bfea0cf1246139bb1a373e7de373608c948ebf2462a8eb7ed064157730",
+  "raw_sha256": "317376b3c60a0e6950362b3b01a640d27ab079a13a86124962bf0da1ec2164a1",
+  "current_head": "cd51996c3b2f65adb23aa129d412111b2d12ec6b",
+  "classification": "Deterministic current library API evidence only, not native sandbox qualification or implementation RED.",
+  "repository_artifact_reproduction": {
+    "build_command": [
+      "rtk",
+      "proxy",
+      "env",
+      "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+      "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+      "cargo",
+      "build",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--message-format=json"
+    ],
+    "compile_command": [
+      "rtk",
+      "proxy",
+      "rustc",
+      "--edition=2024",
+      "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation-implementation/results/reference-catalog-preflight.rs",
+      "-L",
+      "dependency=/tmp/clouddialect-phase-target/debug/deps",
+      "--extern",
+      "clouddialect_contracts=/tmp/clouddialect-phase-target/debug/libclouddialect_contracts.rlib",
+      "--extern",
+      "serde_json=/tmp/clouddialect-phase-target/debug/deps/libserde_json-54c79b5a5f3297b1.rlib",
+      "-o",
+      "/tmp/clouddialect-reference-catalog-reproduced"
+    ],
+    "run_command": [
+      "rtk",
+      "proxy",
+      "/tmp/clouddialect-reference-catalog-reproduced"
+    ],
+    "build_exit": 0,
+    "compile_exit": 0,
+    "run_exit": 0,
+    "output_identical": true,
+    "raw_path": "/tmp/clouddialect-reference-catalog-reproduced.txt",
+    "source_sha256": "334e89bfea0cf1246139bb1a373e7de373608c948ebf2462a8eb7ed064157730",
+    "frozen_crate_hashes_verified": 53,
+    "verified_at": "2026-10-22T16:18:39.550718+00:00"
+  }
+}

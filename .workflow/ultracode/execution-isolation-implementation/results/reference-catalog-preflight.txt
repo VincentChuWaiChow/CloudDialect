@@ -1,0 +1,2 @@
+CONFIRMED: actual CatalogIndex::from_parts admits optional root extension, but typed serialization drops the entire payload.
+CONFIRMED: identical evidence bytes pass embedded catalog and fail an explicitly supplied valid snapshot. A standalone helper must receive the active validation context to select the intended policy.
