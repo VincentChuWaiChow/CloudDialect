@@ -1,5 +1,6 @@
 use clouddialect_contracts::{
     BehavioralContract, BehavioralFidelity, EvidenceClassification, EvidenceRecord,
+    ResourceBehaviorDimension, ResourceUnresolvedAssumption, UnresolvedAssumption,
 };
 use serde_json::{Value, json};
 
@@ -13,7 +14,7 @@ fn contract() -> Value {
         "resource_dependencies":[{
             "identity":"test-store", "permissions":["write"], "configuration":{"bucket":"test"},
             "known_behavior":{"ordering":"per-key", "consistency":"strong", "retry":"bounded", "failure":"explicit"},
-            "unresolved_assumptions":[{"assumption_id":"a1", "description":"ETag behavior", "reason":"not observed"}]
+            "unresolved_assumptions":[{"behavior":"consistency", "assumption_id":"a1", "description":"ETag behavior", "reason":"not observed"}]
         }],
         "obligations":[{"obligation_id":"o1", "behavioral_fidelity":"equivalent-within-contract", "evidence_refs":["evidence-1"]}],
         "behavioral_notes":[{"note_type":"boundary", "description":"wrapper retains ordering", "evidence_ref":"evidence-1"}]
@@ -222,4 +223,100 @@ fn encoded_extension_value_bytes_survive_without_reencoding() {
                 .contains(&format!("\"acme:encoded\":{raw}"))
         );
     }
+}
+
+#[test]
+fn resource_assumptions_have_a_typed_closed_dimension_and_existing_payload() {
+    for (label, dimension) in [
+        ("ordering", ResourceBehaviorDimension::Ordering),
+        ("consistency", ResourceBehaviorDimension::Consistency),
+        ("retry", ResourceBehaviorDimension::Retry),
+        ("failure", ResourceBehaviorDimension::Failure),
+    ] {
+        let value = json!({"behavior":label,"assumption_id":"a1","description":"unknown details","reason":"not observed"});
+        let assumption: ResourceUnresolvedAssumption =
+            serde_json::from_value(value.clone()).unwrap();
+        assert_eq!(assumption.behavior, dimension);
+        let alias: clouddialect_contracts::validator::ResourceUnresolvedAssumption = assumption;
+        let alias_dimension: clouddialect_contracts::validator::ResourceBehaviorDimension =
+            dimension;
+        assert_eq!(alias.behavior, alias_dimension);
+        assert_eq!(serde_json::to_value(alias).unwrap(), value);
+    }
+    for invalid in [
+        json!("timeout"),
+        json!("Retry"),
+        json!(""),
+        json!(null),
+        json!(1),
+    ] {
+        assert!(serde_json::from_value::<ResourceBehaviorDimension>(invalid).is_err());
+    }
+    let document: BehavioralContract = serde_json::from_value(contract()).unwrap();
+    assert_eq!(
+        document.resource_dependencies[0]
+            .unresolved_assumptions
+            .as_ref()
+            .unwrap()[0]
+            .behavior,
+        ResourceBehaviorDimension::Consistency
+    );
+}
+
+#[test]
+fn resource_assumption_fields_cannot_be_missing_or_duplicated() {
+    let value = json!({"behavior":"retry","assumption_id":"a1","description":"unknown","reason":"not observed"});
+    for key in ["behavior", "assumption_id", "description", "reason"] {
+        let mut missing = value.clone();
+        missing.as_object_mut().unwrap().remove(key);
+        assert!(
+            serde_json::from_value::<ResourceUnresolvedAssumption>(missing).is_err(),
+            "{key}"
+        );
+    }
+    let duplicate = r#"{"behavior":"retry","behavior":"failure","assumption_id":"a1","description":"unknown","reason":"not observed"}"#;
+    assert!(serde_json::from_str::<ResourceUnresolvedAssumption>(duplicate).is_err());
+    let mut unbound = contract();
+    unbound["resource_dependencies"][0]["unresolved_assumptions"][0]
+        .as_object_mut()
+        .unwrap()
+        .remove("behavior");
+    assert!(serde_json::from_value::<BehavioralContract>(unbound).is_err());
+}
+
+#[test]
+fn resource_assumption_extensions_preserve_exact_encoded_value_bytes() {
+    let raw = r#"{ "z" : "\u0061", "a" : [1.2300e+04,  2] }"#;
+    let input = format!(
+        r#"{{"behavior":"failure","assumption_id":"a1","description":"unknown","reason":"not observed","acme:encoded":{raw}}}"#
+    );
+    let assumption: ResourceUnresolvedAssumption = serde_json::from_str(&input).unwrap();
+    assert_eq!(assumption.extensions["acme:encoded"].get(), raw);
+    assert!(serde_json::to_string(&assumption).unwrap().contains(raw));
+    let mut value = contract();
+    value["resource_dependencies"][0]["unresolved_assumptions"][0]["acme:encoded"] =
+        json!("__RESOURCE_RAW__");
+    let input = serde_json::to_string(&value)
+        .unwrap()
+        .replace("\"__RESOURCE_RAW__\"", raw);
+    let document: BehavioralContract = serde_json::from_str(&input).unwrap();
+    assert!(serde_json::to_string(&document).unwrap().contains(raw));
+}
+
+#[test]
+fn generic_assumptions_stay_generic_and_dto_decoding_does_not_prove_coverage() {
+    let generic = json!({"assumption_id":"a1","description":"unknown","reason":"no evidence"});
+    let assumption: UnresolvedAssumption = serde_json::from_value(generic.clone()).unwrap();
+    assert_eq!(serde_json::to_value(assumption).unwrap(), generic);
+    // The DTO records malformed-for-schema empty strings and incomplete dimensions;
+    // actual resource coverage and populated values are the schema leaf's job.
+    let resource = json!({"behavior":"retry","assumption_id":"","description":"","reason":""});
+    let _: ResourceUnresolvedAssumption = serde_json::from_value(resource).unwrap();
+    let mut value = contract();
+    value["resource_dependencies"][0]
+        .as_object_mut()
+        .unwrap()
+        .remove("known_behavior");
+    let document: BehavioralContract = serde_json::from_value(value).unwrap();
+    assert!(document.resource_dependencies[0].known_behavior.is_none());
 }
