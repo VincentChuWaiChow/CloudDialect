@@ -1,0 +1,50 @@
+[
+  {
+    "name": "requirements",
+    "command": "rtk proxy python3 /home/raishin/projects/agentic-vantage/skills/requirements-engineering/scripts/validate_requirements.py .kiro/specs/execution-isolation/requirements.md",
+    "exit_code": 0,
+    "evidence": "results/check-requirements.txt"
+  },
+  {
+    "name": "design",
+    "command": "rtk proxy python3 /home/raishin/projects/agentic-vantage/skills/design-documentation/scripts/validate_design.py .kiro/specs/execution-isolation/design.md",
+    "exit_code": 0,
+    "evidence": "results/check-design.txt"
+  },
+  {
+    "name": "tasks",
+    "command": "rtk proxy python3 /home/raishin/projects/agentic-vantage/skills/task-breakdown/scripts/validate_tasks.py .kiro/specs/execution-isolation/tasks.md",
+    "exit_code": 0,
+    "evidence": "results/check-tasks.txt"
+  },
+  {
+    "name": "traceability",
+    "command": "rtk proxy python3 /home/raishin/projects/agentic-vantage/skills/spec-driven-development/scripts/validate_spec.py .kiro/specs/execution-isolation",
+    "exit_code": 0,
+    "evidence": "results/check-traceability.txt"
+  },
+  {
+    "name": "spec-grader",
+    "command": "rtk proxy python3 .workflow/ultracode/execution-isolation/check_spec.py",
+    "exit_code": 0,
+    "evidence": "results/check-spec-grader.txt"
+  },
+  {
+    "name": "scaffold",
+    "command": "rtk proxy python3 -m unittest discover -s tests -p test_contracts_scaffold.py -v",
+    "exit_code": 0,
+    "evidence": "results/check-scaffold.txt"
+  },
+  {
+    "name": "diff",
+    "command": "rtk proxy git diff --check",
+    "exit_code": 0,
+    "evidence": "results/check-diff.txt"
+  },
+  {
+    "name": "grader-sensitivity",
+    "command": "rtk proxy python3 .workflow/ultracode/execution-isolation/test_check_spec.py -v",
+    "exit_code": 0,
+    "evidence": "results/check-grader-sensitivity.txt"
+  }
+]

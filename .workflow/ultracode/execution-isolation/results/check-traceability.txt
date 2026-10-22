@@ -1,0 +1,8 @@
+Found 10 requirements, 10 design elements, 21 tasks.
+
+--- Coverage Summary ---
+Requirement coverage (REQ → DES): 100%
+Design coverage (DES → TASK):     100%
+Task traceability (TASK → DES):   100%
+
+RESULT: FULLY TRACED — all artifacts linked, no orphans.

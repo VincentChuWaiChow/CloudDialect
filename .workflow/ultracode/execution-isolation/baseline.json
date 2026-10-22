@@ -1,0 +1,8 @@
+{
+  "branch": "spec/execution-isolation",
+  "head": "ad2b4bd0823c1a092e9a331c69a600ecad96bb6c",
+  "inputs": {
+    "research.md": "dac1b1907059187912cafdb3c9b168ff388ce75099a011a9750b37ff44cbd110",
+    "cloud-transformation-framework-research.pdf": "b2b31aa20cb4aac5f971433c9a33d467c3910e1a50f4da807b93cfdc17b926e5"
+  }
+}

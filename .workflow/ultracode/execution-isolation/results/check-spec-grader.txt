@@ -1,0 +1,1 @@
+PASS: 10 requirement groups, 104 atomic criteria, 6 threats, 5 open decisions, 10 design elements, 21 tasks, 3 parent waves; actual leaf depth 6 disclosed; baseline preserved

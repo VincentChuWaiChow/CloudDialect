@@ -1,0 +1,149 @@
+{
+  "title": "Execution and isolation specification",
+  "slug": "execution-isolation",
+  "created_at": "2026-10-22T04:19:38.485451+00:00",
+  "updated_at": "2026-10-22T04:53:02.512258+00:00",
+  "status": "complete",
+  "mode": "delegated",
+  "baseline_ref": "ad2b4bd0823c1a092e9a331c69a600ecad96bb6c",
+  "risk_level": "medium",
+  "eval_contract": {
+    "level": "inline",
+    "path": "eval.md",
+    "status": "checked"
+  },
+  "approval": {
+    "required": false,
+    "granted": true,
+    "notes": "User approved master base, conditional design/tasks with five unresolved decisions, and six-level leaf dependency chain in three parent waves."
+  },
+  "delegation": {
+    "native_agent_available": true,
+    "native_agent_planned": true,
+    "native_agent_used": true,
+    "agent_count": 4,
+    "wave_count": 2,
+    "no_delegation_reason": "",
+    "notes": "Four cumulative worker turns consumed; no follow-up or replacement. Final reviewer provided partial finding then handle absent after continuation. Parent fallback audit; one consolidated downstream repair."
+  },
+  "packets": [
+    {
+      "id": "01-upstream",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/01-upstream.md"
+    },
+    {
+      "id": "02-threats",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/02-threats.md"
+    },
+    {
+      "id": "03-requirements",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/03-requirements.md"
+    },
+    {
+      "id": "04-integrated",
+      "status": "complete",
+      "owner": "parent (partial read-only-agent review followed by parent fallback)",
+      "write_scope": [],
+      "result_path": "results/04-integrated.md"
+    }
+  ],
+  "verification": {
+    "status": "pass for conditional documentation only",
+    "checks": [
+      {
+        "name": "requirements",
+        "command": "rtk proxy python3 /home/raishin/projects/agentic-vantage/skills/requirements-engineering/scripts/validate_requirements.py .kiro/specs/execution-isolation/requirements.md",
+        "required": true,
+        "status": "pass",
+        "evidence": "results/check-requirements.txt",
+        "exit_code": 0
+      },
+      {
+        "name": "design",
+        "command": "rtk proxy python3 /home/raishin/projects/agentic-vantage/skills/design-documentation/scripts/validate_design.py .kiro/specs/execution-isolation/design.md",
+        "required": true,
+        "status": "pass",
+        "evidence": "results/check-design.txt",
+        "exit_code": 0
+      },
+      {
+        "name": "tasks",
+        "command": "rtk proxy python3 /home/raishin/projects/agentic-vantage/skills/task-breakdown/scripts/validate_tasks.py .kiro/specs/execution-isolation/tasks.md",
+        "required": true,
+        "status": "pass",
+        "evidence": "results/check-tasks.txt",
+        "exit_code": 0
+      },
+      {
+        "name": "traceability",
+        "command": "rtk proxy python3 /home/raishin/projects/agentic-vantage/skills/spec-driven-development/scripts/validate_spec.py .kiro/specs/execution-isolation",
+        "required": true,
+        "status": "pass",
+        "evidence": "results/check-traceability.txt",
+        "exit_code": 0
+      },
+      {
+        "name": "spec-grader",
+        "command": "rtk proxy python3 .workflow/ultracode/execution-isolation/check_spec.py",
+        "required": true,
+        "status": "pass",
+        "evidence": "results/check-spec-grader.txt",
+        "exit_code": 0
+      },
+      {
+        "name": "scaffold",
+        "command": "rtk proxy python3 -m unittest discover -s tests -p test_contracts_scaffold.py -v",
+        "required": true,
+        "status": "pass",
+        "evidence": "results/check-scaffold.txt",
+        "exit_code": 0
+      },
+      {
+        "name": "diff",
+        "command": "rtk proxy git diff --check",
+        "required": true,
+        "status": "pass",
+        "evidence": "results/check-diff.txt",
+        "exit_code": 0
+      },
+      {
+        "name": "grader-sensitivity",
+        "command": "rtk proxy python3 .workflow/ultracode/execution-isolation/test_check_spec.py -v",
+        "required": true,
+        "status": "pass",
+        "evidence": "results/check-grader-sensitivity.txt",
+        "exit_code": 0
+      },
+      {
+        "name": "native Kiro/SMT",
+        "required": false,
+        "status": "skipped",
+        "evidence": "Unavailable; manual review only."
+      },
+      {
+        "name": "runtime security qualification",
+        "required": false,
+        "status": "skipped",
+        "evidence": "No runtime implemented; requirements evidence MISSING."
+      },
+      {
+        "name": "final independent integrated verdict",
+        "required": false,
+        "status": "skipped",
+        "evidence": "Partial review only; handle absent on continuation; parent fallback audit."
+      }
+    ]
+  },
+  "elapsed_seconds": 2004,
+  "repairs_consumed": 1,
+  "followup_turns": 0
+}

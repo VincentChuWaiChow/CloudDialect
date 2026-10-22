@@ -1,0 +1,327 @@
+
+======================================================================
+  REQUIREMENTS VALIDATION REPORT
+  File: .kiro/specs/execution-isolation/requirements.md
+======================================================================
+
+  ✅ [PASS] Line 78: WHEN an execution request is admitted, THE Core SHALL bind the worker and its de
+              ...scendants to the authenticated tenant, project, run, attempt
+
+  ✅ [PASS] Line 79: IF a required control or compatible execution profile is unavailable, THEN THE C
+              ...ore SHALL reject launch with `[ISOLATION_UNAVAILABLE]` rathe
+
+  ✅ [PASS] Line 80: WHEN a worker is launched, THE Core SHALL expose only explicitly authorized proc
+              ...ess inputs, environment entries, handles, and communication 
+
+  ✅ [PASS] Line 81: WHEN a worker establishes communication, THE Core SHALL require an explicitly su
+              ...pported protocol version before accepting operation messages
+
+  ✅ [PASS] Line 82: IF a message is malformed, oversized relative to the approved profile, out of se
+              ...quence, duplicated, or bound to another attempt, THEN THE Co
+
+  ✅ [PASS] Line 83: WHEN a worker exits, crashes, disconnects, or is terminated, THE Core SHALL acco
+              ...unt for the entire descendant execution domain before releas
+
+  ✅ [PASS] Line 84: IF descendant termination or reaping cannot be confirmed within the approved cle
+              ...anup deadline, THEN THE Core SHALL quarantine the execution 
+
+  ✅ [PASS] Line 85: THE Core SHALL NEVER treat process exit status, worker log text, or a worker-rep
+              ...orted success field as an acceptance decision.
+
+  ✅ [PASS] Line 86: THE Core SHALL expose the same authorization and isolation requirements to every
+              ... supported worker language.
+
+  ✅ [PASS] Line 87: WHEN a worker produces candidate artifacts, THE Core SHALL bind their immutable 
+              ...output identity to the admitted input and originating attemp
+
+  ✅ [PASS] Line 88: WHEN a worker exits, crashes, disconnects, or another attempt-ending event occur
+              ...s, THE Core SHALL initiate descendant termination under the 
+
+  ✅ [PASS] Line 102: THE Execution_Boundary SHALL deny worker filesystem access outside the approved 
+              ...project inputs, toolchain material, private writable workspa
+
+  ✅ [PASS] Line 103: THE Execution_Boundary SHALL protect approved inputs, toolchain material, and ac
+              ...ceptance-control assets from worker writes.
+
+  ✅ [PASS] Line 104: IF traversal, symlinks, hard links, mount aliasing, inherited descriptors, devic
+              ...es, or host-control sockets would escape the authorized reso
+
+  ✅ [PASS] Line 105: THE Execution_Boundary SHALL deny network communication unless authorized by an 
+              ...explicit destination, operation, and purpose policy.
+
+  ✅ [PASS] Line 106: WHEN network access is authorized, THE Execution_Boundary SHALL enforce the dest
+              ...ination restriction across DNS resolution, redirects, proxie
+
+  ✅ [PASS] Line 107: WHILE offline mode is active, THE Execution_Boundary SHALL permit zero outbound 
+              ...network traffic attributable to the run, including run-servi
+
+  ✅ [PASS] Line 108: IF an offline request requires an external service, THEN THE Core SHALL return `
+              ...[OFFLINE_DEPENDENCY]` before the external call.
+
+  ✅ [PASS] Line 109: THE Execution_Boundary SHALL apply confinement to analysis, dependency resolutio
+              ...n, build scripts, toolchain startup, and verifier-side candi
+
+  ✅ [PASS] Line 110: IF host observation detects an isolation violation, THEN THE Core SHALL invalida
+              ...te that attempt with `[ISOLATION_VIOLATION]`.
+
+  ✅ [PASS] Line 124: IF an execution profile lacks measured, approved, positive finite CPU-time, memo
+              ...ry, wall-clock, process-count, output-size, workspace-size, 
+
+  ✅ [PASS] Line 125: WHERE external operations or model use are enabled, THE Core SHALL require expli
+              ...cit finite call/usage allowances before authorizing them.
+
+  ✅ [PASS] Line 126: WHEN work is reserved for an attempt, THE Core SHALL charge its resource reserva
+              ...tion against the remaining run budget before dispatch.
+
+  ✅ [PASS] Line 127: THE Core SHALL account for descendants, parallel workers, verifier execution, an
+              ...d retries within cumulative run accounting rather than indep
+
+  ✅ [PASS] Line 128: IF the next operation would exceed a discrete allowance or an enforced runtime l
+              ...imit is reached, THEN THE Core SHALL stop further dispatch w
+
+  ✅ [PASS] Line 129: WHEN the control plane accepts cancellation, THE Core SHALL prohibit new operati
+              ...ons for that run.
+
+  ✅ [PASS] Line 130: WHEN cancellation or a runtime limit stops an active attempt, THE Core SHALL ini
+              ...tiate termination of its full execution domain under the app
+
+  ✅ [PASS] Line 131: IF cancellation, budget exhaustion, or a failed control check is ordered before 
+              ...acceptance commit, THEN THE Core SHALL prohibit acceptance f
+
+  ✅ [PASS] Line 132: THE Core SHALL preserve consumed-budget accounting across checkpoint recovery an
+              ...d retries.
+
+  ✅ [PASS] Line 133: IF reliable budget accounting cannot be recovered, THEN THE Core SHALL return `[
+              ...ACCOUNTING_UNKNOWN]` rather than reset the allowance.
+
+  ✅ [PASS] Line 147: WHEN a pack requests a capability, THE Core SHALL limit the effective grant to t
+              ...he intersection of its validated declaration, authenticated 
+
+  ✅ [PASS] Line 148: IF a declaration, identity binding, policy revision, or required approval is abs
+              ...ent or invalid, THEN THE Core SHALL deny the operation with 
+
+  ✅ [PASS] Line 149: THE Core SHALL distinguish propose, approve, deploy, and delete permissions with
+              ...out implication from one permission to another.
+
+  ✅ [PASS] Line 150: THE Core SHALL NEVER grant approve, deploy, or delete authority to candidate-con
+              ...trolled workers through repository content or model output.
+
+  ✅ [PASS] Line 151: WHEN a grant or approval is used, THE Core SHALL validate its phase-specific bin
+              ...ding at the authorization boundary: admitted input and execu
+
+  ✅ [PASS] Line 152: WHEN operator policy is revoked or narrowed during execution, THE Core SHALL sto
+              ...p operations that no longer have authorization.
+
+  ✅ [PASS] Line 153: WHEN a pack or toolchain is admitted, THE Core SHALL verify immutable content id
+              ...entity, permitted version, provenance, declared capabilities
+
+  ✅ [PASS] Line 154: THE Core SHALL NEVER treat a valid signature as permission to bypass isolation, 
+              ...behavioral tests, or capability checks.
+
+  ✅ [PASS] Line 155: IF a dependency or executable differs from its admitted immutable identity, THEN
+              ... THE Core SHALL block its use with `[ARTIFACT_IDENTITY_MISMA
+
+  ✅ [PASS] Line 156: WHEN an execution release is qualified, THE Release_Owner SHALL provide signed r
+              ...elease evidence, a dependency inventory, and verifiable buil
+
+  ✅ [PASS] Line 170: THE Core SHALL NEVER include credential values in model prompts, retrieval conte
+              ...xt, model-visible tool output, checkpoints, audit payloads, 
+
+  ✅ [PASS] Line 171: IF a worker has no approved credential-dependent operation, THEN THE Execution_B
+              ...oundary SHALL expose no credential material or credential-ac
+
+  ✅ [PASS] Line 172: WHERE an approved test operation needs credentials, THE Credential_Authority SHA
+              ...LL restrict their authority to the bound tenant, project, te
+
+  ✅ [PASS] Line 173: THE Execution_Boundary SHALL deny access to ambient host credentials, credential
+              ... agents, metadata services, other workers' secrets, and unde
+
+  ✅ [PASS] Line 174: IF credentials expire, are revoked, or cannot be verified as scoped, THEN THE Co
+              ...re SHALL block the dependent operation with `[CREDENTIAL_UNA
+
+  ✅ [PASS] Line 175: WHEN an attempt terminates or is cancelled, THE Core SHALL invalidate its creden
+              ...tial-use authorization before any retry.
+
+  ✅ [PASS] Line 176: WHEN a retry needs credentials, THE Core SHALL require a fresh authorization dec
+              ...ision rather than reuse checkpointed credential material.
+
+  ✅ [PASS] Line 177: THE Core SHALL exclude secret-bearing raw stdout, stderr, crash dumps, and diagn
+              ...ostics from persistent or external channels unless processed
+
+  ✅ [PASS] Line 178: THE Credential_Authority SHALL NEVER grant production deploy/delete or cross-pro
+              ...ject access as a consequence of permission to run a test.
+
+  ✅ [PASS] Line 192: THE Core SHALL treat repository content, retrieved material, candidate-produced 
+              ...tool output, and model output as untrusted data rather than 
+
+  ✅ [PASS] Line 193: WHEN a model or worker proposes a tool call, THE Core SHALL authorize the concre
+              ...te operation and resource outside the model context before e
+
+  ✅ [PASS] Line 194: IF untrusted content requests secrets, broader permissions, weaker acceptance ru
+              ...les, or unauthorized endpoints, THEN THE Core SHALL deny the
+
+  ✅ [PASS] Line 195: THE Core SHALL NEVER let a candidate or model modify protected acceptance tests,
+              ... expected outcomes, test-selection rules, approver identity,
+
+  ✅ [PASS] Line 196: WHEN code, artifacts, prompts, retrieval examples, logs, or exports would leave 
+              ...the project boundary, THE Core SHALL require an explicit dat
+
+  ✅ [PASS] Line 197: IF a model route or external processor is unavailable or lacks approved data-han
+              ...dling terms, THEN THE Core SHALL block transmission with `[E
+
+  ✅ [PASS] Line 198: THE Core SHALL record the applied routing and egress policy revision without per
+              ...sisting secret or disallowed source payloads.
+
+  ✅ [PASS] Line 199: THE Qualification_Suite SHALL include attacks that attempt exfiltration through 
+              ...otherwise valid tool requests, generated filenames, test out
+
+  ✅ [PASS] Line 213: WHEN the Core reads, writes, lists, retrieves, caches, exports, or deletes proje
+              ...ct data, THE Core SHALL enforce the authenticated tenant/pro
+
+  ✅ [PASS] Line 214: THE Core SHALL partition private artifacts, workspace material, caches, retrieva
+              ...l indexes, migration examples, audit access, and checkpoints
+
+  ✅ [PASS] Line 215: THE Core SHALL NEVER reuse project-private cached outputs or retrieval results a
+              ...cross project boundaries, including projects owned by the sa
+
+  ✅ [PASS] Line 216: WHERE immutable public toolchain or schema material is shared, THE Core SHALL re
+              ...strict sharing to operator-admitted content that contains no
+
+  ✅ [PASS] Line 217: IF a cached object has mismatched identity, provenance, policy compatibility, or
+              ... project scope, THEN THE Core SHALL reject it with `[CACHE_I
+
+  ✅ [PASS] Line 218: WHEN a project retention policy is configured, THE Core SHALL require explicit r
+              ...etention and deletion rules for each persisted data class, i
+
+  ✅ [PASS] Line 219: WHEN an authorized project-data deletion or expiry is applied, THE Core SHALL in
+              ...validate access to affected live objects and references unde
+
+  ✅ [PASS] Line 220: IF retained backup or audit copies cannot yet be physically deleted under the co
+              ...nfigured policy, THEN THE Core SHALL report the retained cla
+
+  ✅ [PASS] Line 221: WHEN data is restored, THE Core SHALL preserve project authorization and deletio
+              ...n restrictions before making restored objects accessible.
+
+  ✅ [PASS] Line 222: THE Core SHALL limit this spec's deletion behavior to framework-owned project da
+              ...ta rather than source cloud resources.
+
+  ✅ [PASS] Line 223: IF the applicable data class lacks an approved retention/deletion policy, THEN T
+              ...HE Core SHALL deny persistence with `[RETENTION_UNCONFIGURED
+
+  ✅ [PASS] Line 224: IF execution requires persistence denied by the retention policy gate, THEN THE 
+              ...Core SHALL block that execution before launch.
+
+  ✅ [PASS] Line 238: WHEN execution consumes a contract document or worker-produced evidence, THE Cor
+              ...e SHALL require successful Spec 1 structural and semantic va
+
+  ✅ [PASS] Line 239: IF structural or semantic validation fails, THEN THE Core SHALL block the depend
+              ...ent action with the consumed `ValidatorError` diagnostics.
+
+  ✅ [PASS] Line 240: WHEN behavioral verification begins, THE Verifier_Control SHALL bind the exact c
+              ...andidate, dependencies, toolchain, configuration, mandatory 
+
+  ✅ [PASS] Line 241: THE Verifier_Control SHALL keep acceptance control outside candidate-writable ex
+              ...ecution domains while applying worker isolation to all candi
+
+  ✅ [PASS] Line 242: IF mandatory evidence is absent, unknown, failed, skipped, deferred, stale, fabr
+              ...icated, or from a different verification identity, THEN THE 
+
+  ✅ [PASS] Line 243: THE Verifier_Control SHALL NEVER interpret `StructuralResult`, `SemanticResult`,
+              ... `BehavioralOutcome::Deferred`, or `BehavioralOutcome::Evide
+
+  ✅ [PASS] Line 244: WHEN all mandatory checks complete, THE Verifier_Control SHALL produce a `Behavi
+              ...oralResult` using the reconciled Spec 1 API without altering
+
+  ✅ [PASS] Line 245: WHEN acceptance is requested, THE Core SHALL require independently authenticated
+              ... approval bound to the complete current verification identit
+
+  ✅ [PASS] Line 246: IF any bound artifact or protected rule changes before acceptance commit, THEN T
+              ...HE Core SHALL invalidate the result with `[EVIDENCE_IDENTITY
+
+  ✅ [PASS] Line 247: THE Qualification_Suite SHALL reject or block every seeded critical defect in it
+              ...s declared AC-05 suite.
+
+  ✅ [PASS] Line 248: IF the consumed API cannot represent the required non-accepting outcomes or veri
+              ...fication linkage, THEN THE Core SHALL block integration with
+
+  ✅ [PASS] Line 249: THE Qualification_Suite SHALL include a valid reference candidate that completes
+              ... the declared acceptance path as a positive control against 
+
+  ✅ [PASS] Line 250: THE Verifier_Control SHALL authenticate the origin and integrity of behavioral o
+              ...bservations independently of candidate-controlled result tex
+
+  ✅ [PASS] Line 264: WHEN an attempt is admitted, THE Core SHALL durably record its identity and init
+              ...ial authorization before worker execution begins.
+
+  ✅ [PASS] Line 265: WHEN a security-relevant transition occurs, THE Core SHALL record its attributab
+              ...le input identities, plan and patch references, test/evidenc
+
+  ✅ [PASS] Line 266: THE Audit_Control SHALL prevent workers from modifying or deleting acceptance-co
+              ...ntrol audit records.
+
+  ✅ [PASS] Line 267: WHEN an audit record is read or restored, THE Audit_Control SHALL detect missing
+              ... links or integrity failures before treating it as valid dec
+
+  ✅ [PASS] Line 268: IF required audit persistence fails, THEN THE Core SHALL prohibit new dispatch a
+              ...nd acceptance until durability is re-established or the atte
+
+  ✅ [PASS] Line 269: THE Core SHALL permit containment, revocation, and termination actions even when
+              ... audit storage is unavailable.
+
+  ✅ [PASS] Line 270: THE Audit_Control SHALL enforce project-scoped access and the operator-approved 
+              ...retention/deletion policy without persisting credential valu
+
+  ✅ [PASS] Line 271: WHEN an execution profile is published as qualified, THE Release_Owner SHALL inc
+              ...lude an adversarial-suite report identifying environment, ex
+
+  ✅ [PASS] Line 272: THE Release_Owner SHALL provide tested restore procedures, failure/cancellation/
+              ...cleanup runbooks, and a named compatibility owner for each s
+
+  ✅ [PASS] Line 286: THE Core SHALL classify attempt states as intermediate (`prepared`, `running`, `
+              ...verifying`, `committing`, `stopping`) or terminal (`accepted
+
+  ✅ [PASS] Line 287: THE Core SHALL persist declared checkpoints at admission, dispatch intent, worke
+              ...r completion, verification completion, and acceptance commit
+
+  ✅ [PASS] Line 288: WHEN recovery reads a checkpoint, THE Core SHALL verify its tenant/project scope
+              ..., integrity, candidate and evidence identities, policy appli
+
+  ✅ [PASS] Line 289: IF a checkpoint is corrupt, incomplete, incompatible, or insufficient to determi
+              ...ne side effects, THEN THE Core SHALL produce `[RECOVERY_BLOC
+
+  ✅ [PASS] Line 290: WHEN a retry is authorized for a classified transient failure, THE Core SHALL cr
+              ...eate a new attempt within the remaining run budget using cur
+
+  ✅ [PASS] Line 291: THE Core SHALL NEVER automatically retry validation failures, permission denials
+              ..., unsupported environments, identity mismatches, revoked cre
+
+  ✅ [PASS] Line 292: WHEN an interrupted operation has a reconciled idempotent outcome, THE Core SHAL
+              ...L resume only from the declared checkpoint whose prerequisit
+
+  ✅ [PASS] Line 293: IF a retry or resumption changes any verification-bound identity, THEN THE Core 
+              ...SHALL invalidate prior behavioral success for that identity.
+
+  ✅ [PASS] Line 294: THE Core SHALL order cancellation, revocation, budget exhaustion, and acceptance
+              ... commit through one authoritative decision sequence.
+
+  ✅ [PASS] Line 295: WHEN a terminal state is recorded, THE Core SHALL prohibit reopening that attemp
+              ...t; recovery requires a separately authorized attempt except 
+
+  ✅ [PASS] Line 296: THE Qualification_Suite SHALL demonstrate safe resumption or an explicit termina
+              ...l blocker for failure injection at every declared checkpoint
+
+  ✅ [PASS] Line 297: THE Core SHALL NEVER promote incomplete verification, uncertain cleanup, or an u
+              ...ncommitted acceptance intent to accepted state.
+
+  ✅ [PASS] Line 298: WHEN cancellation is ordered after durable acceptance commit, THE Core SHALL rep
+              ...ort the already committed outcome without replaying or retro
+
+──────────────────────────────────────────────────────────────────────
+  SUMMARY: 104 requirements checked
+    ✅ PASS: 104
+    ⚠️  WARN: 0
+    ❌ FAIL: 0
+
+  ✅ VERDICT: ALL PASS — requirements are well-formed
+
+======================================================================
