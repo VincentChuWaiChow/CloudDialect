@@ -31,3 +31,30 @@ impl UrlLoader for CatalogUrlLoader {
         Ok(serde_json::from_slice(bytes)?)
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn an_indexed_schema_resolves_from_nonempty_frozen_bytes() {
+        let snapshot = CatalogSnapshot::embedded().unwrap();
+        let uri = "https://schemas.clouddialect.io/evidence-record/1.0.0/schema.json";
+        assert!(!snapshot.schema_bytes(uri).unwrap().is_empty());
+        assert!(
+            CatalogUrlLoader::new(snapshot)
+                .load(uri)
+                .unwrap()
+                .is_object()
+        );
+    }
+
+    #[test]
+    fn an_unlisted_uri_has_no_fallback_and_remains_in_the_error() {
+        let uri = "https://schemas.clouddialect.io/unlisted/1.0.0/schema.json";
+        let error = CatalogUrlLoader::new(CatalogSnapshot::embedded().unwrap())
+            .load(uri)
+            .unwrap_err();
+        assert!(error.to_string().contains(uri));
+    }
+}

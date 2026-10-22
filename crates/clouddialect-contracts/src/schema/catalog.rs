@@ -1,9 +1,11 @@
 //! Pure catalog inventory checks. This is neither provenance nor a schema resolver.
 
 use std::{
+    cell::Cell,
     collections::{BTreeMap, BTreeSet},
     error::Error,
     io,
+    rc::Rc,
 };
 
 use boon::{Compiler, Schemas, UrlLoader};
@@ -135,9 +137,42 @@ impl CatalogIndex {
                 &mut paths,
                 false,
             )?;
+            check_external_resource_uri(&entry.schema_id)?;
         }
         Ok(parsed)
     }
+}
+
+// Boon normalizes resource URLs and resolves its bundled meta-schemas before
+// calling UrlLoader. Do not admit an exact mapping it would silently bypass.
+struct ExactResourceProbe {
+    expected: String,
+    reached: Rc<Cell<bool>>,
+}
+
+impl UrlLoader for ExactResourceProbe {
+    fn load(&self, url: &str) -> Result<Value, Box<dyn Error>> {
+        self.reached.set(url == self.expected);
+        Err(io::Error::new(io::ErrorKind::NotFound, "Resource probe denies acquisition").into())
+    }
+}
+
+fn check_external_resource_uri(uri: &str) -> Result<(), ValidatorError> {
+    let reached = Rc::new(Cell::new(false));
+    let mut compiler = Compiler::new();
+    compiler.use_loader(Box::new(ExactResourceProbe {
+        expected: uri.to_owned(),
+        reached: Rc::clone(&reached),
+    }));
+    // Only engine-owned built-ins can load here. The probe never returns or
+    // compiles caller-supplied content, and never opens files or network URLs.
+    let _ = compiler.compile(uri, &mut Schemas::new());
+    if !reached.get() {
+        return Err(invalid(
+            "Resolver URI cannot be dispatched as an exact external resource",
+        ));
+    }
+    Ok(())
 }
 
 fn kind_name(kind: DocumentKind) -> &'static str {

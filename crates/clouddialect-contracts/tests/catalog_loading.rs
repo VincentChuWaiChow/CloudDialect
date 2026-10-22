@@ -322,8 +322,8 @@ fn support_mappings_cannot_claim_any_pinned_engine_builtin_resource() {
                 assert!(schemas.validate(&json!({}), root).is_ok());
             }
             let error = result
-                .err()
-                .expect("built-in byte substitution must be rejected at admission");
+                .map(|_| ())
+                .expect_err("built-in byte substitution must be rejected at admission");
             assert!(
                 error.description.contains("exact external resource"),
                 "{error:?}"
