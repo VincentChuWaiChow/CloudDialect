@@ -258,6 +258,12 @@ fn newer_minor_projects_only_root_additions_and_warns_with_unambiguous_paths() {
                 .iter()
                 .any(|w| w.field_name_verbatim == "reasoning_chain")
         );
+        let kind_name = serde_json::to_value(kind).unwrap();
+        value["$schema"] = json!(format!(
+            "https://schemas.clouddialect.io/{}/1.0.0/schema.json",
+            kind_name.as_str().unwrap()
+        ));
+        assert_eq!(validate(&v, kind, &value).outcome, O::Warn);
         value["$schema"] =
             json!("https://schemas.clouddialect.io/evidence-record/1.1.7/schema.json");
         assert_eq!(validate(&v, kind, &value).outcome, O::Fail);
@@ -497,4 +503,39 @@ fn root_composition_and_local_reference_fields_remain_checked() {
         value["trusted_marker"] = json!(17);
         assert_eq!(validate(&v, K::EvidenceRecord, &value).outcome, O::Warn);
     }
+}
+
+#[test]
+fn projection_preserves_root_dependent_required_names() {
+    let (index, mut material) = parts();
+    let path = "schemas/extension-registry/1.0/schema.json";
+    let mut schema: Value = serde_json::from_slice(&material[path]).unwrap();
+    schema["dependentRequired"] = json!({"trigger":["companion"]});
+    material.insert(path.to_owned(), serde_json::to_vec(&schema).unwrap());
+    let v = from_parts(index, material);
+    let mut value = documents()[4].1.clone();
+    value["format_version"] = json!("1.1.0");
+    value["trigger"] = json!(true);
+    value["companion"] = json!(true);
+    assert_eq!(validate(&v, K::ExtensionRegistry, &value).outcome, O::Warn);
+    value.as_object_mut().unwrap().remove("companion");
+    assert_eq!(validate(&v, K::ExtensionRegistry, &value).outcome, O::Fail);
+}
+
+#[test]
+fn changed_root_reference_scope_never_causes_guessed_property_removal() {
+    let (index, mut material) = parts();
+    let path = "schemas/evidence-record/1.0/schema.json";
+    let mut schema: Value = serde_json::from_slice(&material[path]).unwrap();
+    schema["$defs"] = json!({"constraint":{"properties":{"wrong_scope_marker":{}}}});
+    schema["allOf"] = json!([{"$id":"urn:clouddialect:scoped-root", "$defs":{"constraint":{"properties":{"scoped_marker":{"type":"integer"}}}}, "$ref":"#/$defs/constraint"}]);
+    material.insert(path.to_owned(), serde_json::to_vec(&schema).unwrap());
+    let v = from_parts(index, material);
+    let mut value = documents()[1].1.clone();
+    value["scoped_marker"] = json!("not an integer");
+    assert_eq!(validate(&v, K::EvidenceRecord, &value).outcome, O::Fail);
+    value["format_version"] = json!("1.1.0");
+    let r = validate(&v, K::EvidenceRecord, &value);
+    assert_eq!(r.outcome, O::Fail);
+    assert_eq!(r.errors[0].category, E::Unsupported);
 }
