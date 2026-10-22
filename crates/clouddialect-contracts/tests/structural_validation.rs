@@ -452,3 +452,49 @@ fn schema_formats_are_assertions_not_only_annotations() {
             .any(|e| e.field_path.as_deref() == Some("acceptance.timestamp"))
     );
 }
+
+#[test]
+fn newer_minor_does_not_bypass_declared_root_wildcard_constraints() {
+    let (index, mut material) = parts();
+    let path = "schemas/extension-registry/1.0/schema.json";
+    let mut schema: Value = serde_json::from_slice(&material[path]).unwrap();
+    schema["additionalProperties"] = json!({"type":"integer"});
+    material.insert(path.to_owned(), serde_json::to_vec(&schema).unwrap());
+    let v = from_parts(index, material);
+    let mut value = documents()[4].1.clone();
+    value["format_version"] = json!("1.1.0");
+    value["wildcard_field"] = json!("PRIVATE-SENTINEL");
+    assert_eq!(validate(&v, K::ExtensionRegistry, &value).outcome, O::Fail);
+    value["wildcard_field"] = json!(17);
+    let r = validate(&v, K::ExtensionRegistry, &value);
+    assert_eq!(r.outcome, O::Warn);
+    assert!(
+        !r.warnings
+            .iter()
+            .any(|w| w.field_name_verbatim == "wildcard_field")
+    );
+}
+
+#[test]
+fn root_composition_and_local_reference_fields_remain_checked() {
+    for reference in [false, true] {
+        let (index, mut material) = parts();
+        let path = "schemas/evidence-record/1.0/schema.json";
+        let mut schema: Value = serde_json::from_slice(&material[path]).unwrap();
+        let constraint = json!({"properties":{"trusted_marker":{"type":"integer"}},"required":["trusted_marker"]});
+        if reference {
+            schema["$defs"] = json!({"root_constraint":constraint});
+            schema["$ref"] = json!("#/$defs/root_constraint");
+        } else {
+            schema["allOf"] = json!([constraint]);
+        }
+        material.insert(path.to_owned(), serde_json::to_vec(&schema).unwrap());
+        let v = from_parts(index, material);
+        let mut value = documents()[1].1.clone();
+        value["format_version"] = json!("1.1.0");
+        value["trusted_marker"] = json!("not an integer");
+        assert_eq!(validate(&v, K::EvidenceRecord, &value).outcome, O::Fail);
+        value["trusted_marker"] = json!(17);
+        assert_eq!(validate(&v, K::EvidenceRecord, &value).outcome, O::Warn);
+    }
+}
