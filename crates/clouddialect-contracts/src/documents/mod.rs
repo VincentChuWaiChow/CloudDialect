@@ -8,7 +8,8 @@ mod verification;
 
 pub use behavioral_contract::{
     BehavioralContract, BehavioralFidelity, BehavioralNote, KnownBehavior, Obligation,
-    OperationIdentity, ResourceDependency, SideEffect, UnresolvedAssumption,
+    OperationIdentity, ResourceBehaviorDimension, ResourceDependency, ResourceUnresolvedAssumption,
+    SideEffect, UnresolvedAssumption,
 };
 pub use evidence::{EvidenceClassification, EvidenceProvenance, EvidenceRecord};
 pub use raw_objects::RawObject;

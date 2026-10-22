@@ -5,7 +5,7 @@ pub use crate::documents::{
     AcceptanceRecord, ArtifactRef, BehavioralContract, BehavioralFidelity, BehavioralNote,
     BehavioralOutcome, BehavioralResult, BlockingGap, ContentHash, DocumentKind, DocumentRef,
     DocumentStore, EvidenceClassification, EvidenceProvenance, EvidenceRecord, FailureDescription,
-    KnownBehavior, Obligation, OperationIdentity, RawObject, ResourceDependency, SideEffect,
-    StoredDocument, TestOutcome, TestResult, UnresolvedAssumption, VerificationBinding,
-    VerificationResult, VersionedArtifact,
+    KnownBehavior, Obligation, OperationIdentity, RawObject, ResourceBehaviorDimension,
+    ResourceDependency, ResourceUnresolvedAssumption, SideEffect, StoredDocument, TestOutcome,
+    TestResult, UnresolvedAssumption, VerificationBinding, VerificationResult, VersionedArtifact,
 };

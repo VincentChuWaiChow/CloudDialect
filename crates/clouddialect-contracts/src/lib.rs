@@ -29,7 +29,8 @@ pub use validator::{
 pub use validator::{
     BehavioralContract, BehavioralFidelity, BehavioralNote, EvidenceClassification,
     EvidenceProvenance, EvidenceRecord, KnownBehavior, Obligation, OperationIdentity,
-    ResourceDependency, SideEffect, UnresolvedAssumption,
+    ResourceBehaviorDimension, ResourceDependency, ResourceUnresolvedAssumption, SideEffect,
+    UnresolvedAssumption,
 };
 pub use validator::{
     ContentHash, DocumentKind, DocumentRef, DocumentStore, RawObject, StoredDocument,

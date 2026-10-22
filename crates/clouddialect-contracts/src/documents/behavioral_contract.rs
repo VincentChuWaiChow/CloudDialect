@@ -37,6 +37,28 @@ pub struct UnresolvedAssumption {
     pub extensions: RawObject,
 }
 
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum ResourceBehaviorDimension {
+    Ordering,
+    Consistency,
+    Retry,
+    Failure,
+}
+
+/// Resource-only dimension binding. Populated text and complete coverage are
+/// enforced by the schema, not proven by decoding this declaration.
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(try_from = "RawFields")]
+pub struct ResourceUnresolvedAssumption {
+    pub behavior: ResourceBehaviorDimension,
+    pub assumption_id: String,
+    pub description: String,
+    pub reason: String,
+    #[serde(flatten)]
+    pub extensions: RawObject,
+}
+
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(try_from = "RawFields")]
 pub struct SideEffect {
@@ -71,7 +93,7 @@ pub struct ResourceDependency {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub known_behavior: Option<KnownBehavior>,
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub unresolved_assumptions: Option<Vec<UnresolvedAssumption>>,
+    pub unresolved_assumptions: Option<Vec<ResourceUnresolvedAssumption>>,
     #[serde(flatten)]
     pub extensions: RawObject,
 }
@@ -123,6 +145,11 @@ raw_object_model!(OperationIdentity, [call_site], [wrapper_chain => "wrapper_cha
 raw_object_model!(
     UnresolvedAssumption,
     [assumption_id, description, reason],
+    []
+);
+raw_object_model!(
+    ResourceUnresolvedAssumption,
+    [behavior, assumption_id, description, reason],
     []
 );
 raw_object_model!(SideEffect, [description], [evidence_ref => "evidence_ref"]);
