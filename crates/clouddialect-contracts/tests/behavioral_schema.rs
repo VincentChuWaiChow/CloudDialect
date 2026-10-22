@@ -186,3 +186,146 @@ fn wrappers_resources_and_open_note_types_keep_their_required_structure() {
         .remove("configuration");
     assert!(!valid(&h, &v));
 }
+
+const DIMENSIONS: [&str; 4] = ["ordering", "consistency", "retry", "failure"];
+
+fn resource(known_mask: u8) -> Value {
+    let mut known = serde_json::Map::new();
+    let mut assumptions = vec![];
+    for (i, dimension) in DIMENSIONS.into_iter().enumerate() {
+        if known_mask & (1 << i) != 0 {
+            known.insert(dimension.to_owned(), json!("declared behavior"));
+        } else {
+            assumptions.push(json!({"behavior":dimension,"assumption_id":format!("a-{dimension}"),"description":"unknown details","reason":"not observed"}));
+        }
+    }
+    let mut result = json!({"identity":"store","permissions":["write"],"configuration":{}});
+    if !known.is_empty() {
+        result["known_behavior"] = json!(known);
+    }
+    if !assumptions.is_empty() {
+        result["unresolved_assumptions"] = json!(assumptions);
+    }
+    result
+}
+
+#[test]
+fn every_resource_dimension_must_be_covered_on_that_dependency() {
+    let h = harness();
+    let mut missing_both = contract();
+    missing_both["resource_dependencies"] =
+        json!([{"identity":"store","permissions":[],"configuration":{}}]);
+    assert!(!valid(&h, &missing_both));
+    for (i, dimension) in DIMENSIONS.into_iter().enumerate() {
+        let mut v = contract();
+        let mut incomplete = resource(15);
+        incomplete["known_behavior"]
+            .as_object_mut()
+            .unwrap()
+            .remove(dimension);
+        v["resource_dependencies"] = json!([incomplete.clone(), resource(15)]);
+        assert!(
+            !valid(&h, &v),
+            "another dependency cannot cover {dimension}"
+        );
+        let unrelated = DIMENSIONS[(i + 1) % DIMENSIONS.len()];
+        incomplete["unresolved_assumptions"] = json!([{"behavior":unrelated,"assumption_id":"a1","description":"unknown","reason":"not observed"}]);
+        v["resource_dependencies"] = json!([incomplete.clone()]);
+        assert!(
+            !valid(&h, &v),
+            "unrelated assumption cannot cover {dimension}"
+        );
+        incomplete["unresolved_assumptions"][0]["behavior"] = json!(dimension);
+        v["resource_dependencies"] = json!([incomplete]);
+        assert!(valid(&h, &v), "matching assumption covers {dimension}");
+    }
+}
+
+#[test]
+fn all_known_unknown_combinations_and_partial_knowledge_are_valid() {
+    let h = harness();
+    for mask in 0..16 {
+        let mut v = contract();
+        v["resource_dependencies"] = json!([resource(mask)]);
+        assert!(valid(&h, &v), "known mask {mask}");
+    }
+    let mut v = contract();
+    let mut partial = resource(0);
+    partial["known_behavior"] = json!({"retry":"some observed behavior"});
+    v["resource_dependencies"] = json!([partial]);
+    assert!(
+        valid(&h, &v),
+        "known and unknown details can coexist for retry"
+    );
+    v["resource_dependencies"] = json!([resource(15)]);
+    v["resource_dependencies"][0]["unresolved_assumptions"] = json!([]);
+    assert!(valid(&h, &v), "all-known resource needs no assumptions");
+}
+
+#[test]
+fn resource_assumptions_are_populated_even_when_known_values_already_cover_everything() {
+    let h = harness();
+    for key in ["behavior", "assumption_id", "description", "reason"] {
+        let mut v = contract();
+        v["resource_dependencies"] = json!([resource(0)]);
+        v["resource_dependencies"][0]["unresolved_assumptions"][0]
+            .as_object_mut()
+            .unwrap()
+            .remove(key);
+        assert!(!valid(&h, &v), "missing {key}");
+        for malformed in [json!(""), json!(null), json!(17), json!([])] {
+            let mut v = contract();
+            let mut declared = resource(15);
+            declared["unresolved_assumptions"] = resource(0)["unresolved_assumptions"].clone();
+            declared["unresolved_assumptions"][0][key] = malformed.clone();
+            v["resource_dependencies"] = json!([declared]);
+            assert!(!valid(&h, &v), "malformed {key}: {malformed}");
+        }
+    }
+}
+
+#[test]
+fn known_behavior_declarations_cannot_be_empty_or_wrongly_typed() {
+    let h = harness();
+    for dimension in DIMENSIONS {
+        for malformed in [json!(""), json!(null), json!(17), json!([])] {
+            let mut v = contract();
+            let mut declared = resource(0);
+            declared["known_behavior"] = json!({});
+            declared["known_behavior"][dimension] = malformed.clone();
+            v["resource_dependencies"] = json!([declared]);
+            assert!(!valid(&h, &v), "invalid {dimension}: {malformed}");
+        }
+    }
+}
+
+#[test]
+fn arbitrary_ids_text_extensions_and_duplicate_other_dimensions_do_not_fill_gaps() {
+    let h = harness();
+    for wrong in ["Retry", "timeout", ""] {
+        let mut v = contract();
+        v["resource_dependencies"] = json!([resource(0)]);
+        v["resource_dependencies"][0]["unresolved_assumptions"][2]["behavior"] = json!(wrong);
+        assert!(!valid(&h, &v), "unknown dimension {wrong}");
+    }
+    let mut v = contract();
+    let mut declared = resource(0);
+    declared["unresolved_assumptions"][2] = json!({"assumption_id":"retry","description":"retry is unknown","reason":"retry was not observed","acme:behavior":"retry"});
+    v["resource_dependencies"] = json!([declared.clone()]);
+    assert!(
+        !valid(&h, &v),
+        "free text and qualified fields are not bindings"
+    );
+    declared["unresolved_assumptions"][2] = declared["unresolved_assumptions"][3].clone();
+    v["resource_dependencies"] = json!([declared]);
+    assert!(!valid(&h, &v), "two failure assumptions cannot cover retry");
+}
+
+#[test]
+fn generic_obligation_assumptions_do_not_require_resource_dimension_bindings() {
+    let h = harness();
+    let mut v = contract();
+    v["resource_dependencies"] = json!([resource(0)]);
+    v["obligations"][0] = json!({"obligation_id":"o1","behavioral_fidelity":"unknown","unresolved_assumption":{"assumption_id":"a1","description":"unknown","reason":"no evidence"}});
+    assert!(valid(&h, &v));
+}
