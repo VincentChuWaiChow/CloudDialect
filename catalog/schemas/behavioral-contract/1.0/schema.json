@@ -107,26 +107,80 @@
             "type": "object",
             "properties": {
               "ordering": {
-                "type": "string"
+                "type": "string",
+                "minLength": 1
               },
               "consistency": {
-                "type": "string"
+                "type": "string",
+                "minLength": 1
               },
               "retry": {
-                "type": "string"
+                "type": "string",
+                "minLength": 1
               },
               "failure": {
-                "type": "string"
+                "type": "string",
+                "minLength": 1
               }
             }
           },
           "unresolved_assumptions": {
             "type": "array",
             "items": {
-              "$ref": "#/$defs/unresolved_assumption"
+              "$ref": "#/$defs/resource_unresolved_assumption"
             }
           }
-        }
+        },
+        "allOf": [
+          {
+            "anyOf": [
+              {
+                "required": ["known_behavior"],
+                "properties": {"known_behavior": {"required": ["ordering"]}}
+              },
+              {
+                "required": ["unresolved_assumptions"],
+                "properties": {"unresolved_assumptions": {"contains": {"required": ["behavior"], "properties": {"behavior": {"const": "ordering"}}}}}
+              }
+            ]
+          },
+          {
+            "anyOf": [
+              {
+                "required": ["known_behavior"],
+                "properties": {"known_behavior": {"required": ["consistency"]}}
+              },
+              {
+                "required": ["unresolved_assumptions"],
+                "properties": {"unresolved_assumptions": {"contains": {"required": ["behavior"], "properties": {"behavior": {"const": "consistency"}}}}}
+              }
+            ]
+          },
+          {
+            "anyOf": [
+              {
+                "required": ["known_behavior"],
+                "properties": {"known_behavior": {"required": ["retry"]}}
+              },
+              {
+                "required": ["unresolved_assumptions"],
+                "properties": {"unresolved_assumptions": {"contains": {"required": ["behavior"], "properties": {"behavior": {"const": "retry"}}}}}
+              }
+            ]
+          },
+          {
+            "anyOf": [
+              {
+                "required": ["known_behavior"],
+                "properties": {"known_behavior": {"required": ["failure"]}}
+              },
+              {
+                "required": ["unresolved_assumptions"],
+                "properties": {"unresolved_assumptions": {"contains": {"required": ["behavior"], "properties": {"behavior": {"const": "failure"}}}}}
+              }
+            ]
+          }
+        ]
       }
     },
     "obligations": {
@@ -218,6 +272,19 @@
   },
   "unevaluatedProperties": false,
   "$defs": {
+    "resource_unresolved_assumption": {
+      "$ref": "#/$defs/unresolved_assumption",
+      "required": ["behavior"],
+      "properties": {
+        "behavior": {
+          "type": "string",
+          "enum": ["ordering", "consistency", "retry", "failure"]
+        },
+        "assumption_id": {"minLength": 1},
+        "description": {"minLength": 1},
+        "reason": {"minLength": 1}
+      }
+    },
     "unresolved_assumption": {
       "type": "object",
       "required": [

@@ -450,6 +450,8 @@ P0-E expectation union: structural uses pass/warn/fail; semantic uses pass/fail;
 
 ### 4.1 Behavioral Contract
 
+**Owner-approved RC-1 resource binding (2026-10-22):** resource-specific assumptions carry `behavior: ordering | consistency | retry | failure` plus nonempty `assumption_id`, `description`, `reason`. For every dependency, each dimension has a nonempty known declaration or a matching populated assumption; both are permitted for partial knowledge. Generic evidence/obligation assumptions keep their existing shape. DTOs use distinct `ResourceBehaviorDimension` and `ResourceUnresolvedAssumption` types, retain exact extension-value bytes, and do not perform schema completeness checks. This is an intentional approved initial-MVP resource-model/API amendment, not a backward-compatible reinterpretation or behavioral evidence. The matching schema block is reconciled in the schema implementation leaf.
+
 Annotated JSON Schema skeleton (key fields with types and constraints):
 
 ```json
@@ -525,17 +527,67 @@ Annotated JSON Schema skeleton (key fields with types and constraints):
           "known_behavior": {
             "type": "object",
             "properties": {
-              "ordering": { "type": "string" },
-              "consistency": { "type": "string" },
-              "retry": { "type": "string" },
-              "failure": { "type": "string" }
+              "ordering": { "type": "string", "minLength": 1 },
+              "consistency": { "type": "string", "minLength": 1 },
+              "retry": { "type": "string", "minLength": 1 },
+              "failure": { "type": "string", "minLength": 1 }
             }
           },
           "unresolved_assumptions": {
             "type": "array",
-            "items": { "$ref": "#/$defs/unresolved_assumption" }
+            "items": { "$ref": "#/$defs/resource_unresolved_assumption" }
           }
-        }
+        },
+        "allOf": [
+          {
+            "anyOf": [
+              {
+                "required": ["known_behavior"],
+                "properties": {"known_behavior": {"required": ["ordering"]}}
+              },
+              {
+                "required": ["unresolved_assumptions"],
+                "properties": {"unresolved_assumptions": {"contains": {"required": ["behavior"], "properties": {"behavior": {"const": "ordering"}}}}}
+              }
+            ]
+          },
+          {
+            "anyOf": [
+              {
+                "required": ["known_behavior"],
+                "properties": {"known_behavior": {"required": ["consistency"]}}
+              },
+              {
+                "required": ["unresolved_assumptions"],
+                "properties": {"unresolved_assumptions": {"contains": {"required": ["behavior"], "properties": {"behavior": {"const": "consistency"}}}}}
+              }
+            ]
+          },
+          {
+            "anyOf": [
+              {
+                "required": ["known_behavior"],
+                "properties": {"known_behavior": {"required": ["retry"]}}
+              },
+              {
+                "required": ["unresolved_assumptions"],
+                "properties": {"unresolved_assumptions": {"contains": {"required": ["behavior"], "properties": {"behavior": {"const": "retry"}}}}}
+              }
+            ]
+          },
+          {
+            "anyOf": [
+              {
+                "required": ["known_behavior"],
+                "properties": {"known_behavior": {"required": ["failure"]}}
+              },
+              {
+                "required": ["unresolved_assumptions"],
+                "properties": {"unresolved_assumptions": {"contains": {"required": ["behavior"], "properties": {"behavior": {"const": "failure"}}}}}
+              }
+            ]
+          }
+        ]
       }
     },
     "obligations": {
@@ -594,6 +646,19 @@ Annotated JSON Schema skeleton (key fields with types and constraints):
   },
   "unevaluatedProperties": false,
   "$defs": {
+    "resource_unresolved_assumption": {
+      "$ref": "#/$defs/unresolved_assumption",
+      "required": ["behavior"],
+      "properties": {
+        "behavior": {
+          "type": "string",
+          "enum": ["ordering", "consistency", "retry", "failure"]
+        },
+        "assumption_id": {"minLength": 1},
+        "description": {"minLength": 1},
+        "reason": {"minLength": 1}
+      }
+    },
     "unresolved_assumption": {
       "type": "object",
       "required": ["assumption_id", "description", "reason"],
