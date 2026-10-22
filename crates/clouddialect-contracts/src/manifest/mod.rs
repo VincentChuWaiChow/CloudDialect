@@ -12,8 +12,8 @@ pub use types::{
     PackManifest, PackSection, SchemaRefsSection, SourceSection, TargetSection, ToolchainEntry,
 };
 
-/// Local declaration validation only; external references and fidelity remain
-/// separate semantic checks and no result grants execution authority.
+/// Distinct local declarations and scoped reference/fidelity semantic checks;
+/// neither result grants execution authority.
 pub trait ValidateManifest {
     fn validate_manifest(&self, toml_bytes: &[u8]) -> ManifestValidationResult;
     fn validate_manifest_semantic(

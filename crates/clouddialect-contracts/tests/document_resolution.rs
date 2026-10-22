@@ -4,7 +4,7 @@ mod artifact_hash;
 mod documents;
 #[path = "../src/validator/mandatory_extensions.rs"]
 mod mandatory_extensions;
-#[path = "../src/validator/references.rs"]
+#[path = "../src/validator/document_resolution.rs"]
 mod references;
 
 pub use clouddialect_contracts::*;

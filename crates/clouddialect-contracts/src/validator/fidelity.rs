@@ -1,4 +1,4 @@
-use super::references::resolve_document;
+use super::document_resolution::resolve_document;
 use crate::{
     BehavioralContract, BehavioralFidelity, DocumentKind, DocumentStore, ErrorCategory,
     ManifestFidelity, PackManifest, Validator, ValidatorError,

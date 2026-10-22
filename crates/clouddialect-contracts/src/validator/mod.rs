@@ -2,10 +2,10 @@
 //! Validation algorithms are implemented separately; these types grant no authority.
 
 mod artifact_hash;
+pub(crate) mod document_resolution;
 mod extensions;
 mod fidelity;
 mod mandatory_extensions;
-pub(crate) mod references;
 mod structural;
 mod version;
 

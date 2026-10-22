@@ -1,4 +1,4 @@
-//! Local TOML declarations only, not reference resolution or execution admission.
+//! Local and scoped semantic TOML validation, never execution admission.
 
 use std::{collections::BTreeSet, sync::OnceLock};
 
@@ -58,7 +58,7 @@ impl ManifestValidator {
             {
                 continue;
             }
-            if let Err(diagnostics) = crate::validator::references::resolve_document(
+            if let Err(diagnostics) = crate::validator::document_resolution::resolve_document(
                 &validator,
                 store,
                 &reference.id,

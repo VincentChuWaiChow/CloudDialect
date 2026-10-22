@@ -124,6 +124,28 @@ fn valid_stored_contract_passes_real_semantics_but_explicit_unsupported_refs_sti
             .outcome,
         SemanticOutcome::Pass
     );
+    for mode in ["full", "partial"] {
+        let mut bad: Value = serde_json::from_slice(&store.0.bytes).unwrap();
+        bad["obligations"][0]["behavioral_fidelity"] = json!("architectural-change-required");
+        let mut record = store.0.clone();
+        record.bytes = serde_json::to_vec(&bad).unwrap();
+        record.content_hash.value = Sha256::digest(&record.bytes)
+            .iter()
+            .map(|b| format!("{b:02x}"))
+            .collect();
+        let input = data.replace(
+            "behavioral_fidelity = \"full\"",
+            &format!("behavioral_fidelity = \"{mode}\""),
+        );
+        let result = v.validate_manifest_semantic(input.as_bytes(), &Record(record));
+        assert_eq!(result.outcome, SemanticOutcome::Fail);
+        assert!(
+            result
+                .errors
+                .iter()
+                .any(|e| e.category == ErrorCategory::Semantic)
+        );
+    }
     let unsupported = data.replace(
         "behavioral_fidelity = \"full\"",
         "behavioral_fidelity = \"unsupported\"",
