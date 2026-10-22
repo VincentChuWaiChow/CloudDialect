@@ -8,6 +8,15 @@
     "resolver_resources"
   ],
   "properties": {
+    "required_extensions": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9-]+$",
+        "not": {"pattern": "\\s"}
+      }
+    },
     "$schema": {
       "type": "string",
       "minLength": 1
