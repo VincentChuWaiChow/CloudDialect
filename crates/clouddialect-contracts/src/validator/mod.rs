@@ -3,10 +3,14 @@
 
 mod artifact_hash;
 mod extensions;
+mod fidelity;
+mod mandatory_extensions;
+pub(crate) mod references;
 mod structural;
 mod version;
 
 pub use artifact_hash::verify_artifact_hash;
+pub use fidelity::check_fidelity_mapping;
 pub use structural::Validator;
 
 /// Structural checking only; later phases have distinct, non-accepting results.

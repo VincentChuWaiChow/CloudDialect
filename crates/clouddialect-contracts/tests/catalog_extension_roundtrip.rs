@@ -34,6 +34,7 @@ fn typed_and_inventory_decoding_preserve_exact_extension_value_bytes() {
     let typed: CatalogIndex = serde_json::from_str(&bytes).unwrap();
     let admitted = CatalogIndex::from_parts(bytes.as_bytes(), &material).unwrap();
     for document in [typed, admitted] {
+        assert_eq!(document.extensions["acme:payload"].get(), raw);
         let encoded = serde_json::to_vec(&document).unwrap();
         let members: RawObject = serde_json::from_slice(&encoded).unwrap();
         assert_eq!(
@@ -85,6 +86,7 @@ fn mandatory_declaration_remains_a_typed_core_field() {
         admitted.required_extensions.as_deref(),
         Some(["acme".to_owned()].as_slice())
     );
+    assert!(!admitted.extensions.contains_key("required_extensions"));
     let encoded = serde_json::to_vec(&admitted).unwrap();
     let members: RawObject = serde_json::from_slice(&encoded).unwrap();
     assert_eq!(members["required_extensions"].get(), r#"["acme"]"#);

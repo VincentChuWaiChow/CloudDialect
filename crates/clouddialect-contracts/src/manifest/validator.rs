@@ -6,18 +6,87 @@ use regex::Regex;
 use semver::{Version, VersionReq};
 
 use super::{ManifestFidelity, ManifestOutcome, ManifestValidationResult, PackManifest};
-use crate::{CatalogSnapshot, ErrorCategory, ValidatorError};
+use crate::{
+    CatalogSnapshot, DocumentKind, DocumentStore, ErrorCategory, SemanticOutcome, SemanticResult,
+    Validator, ValidatorError, check_fidelity_mapping,
+};
 
 /// Owns the explicitly supplied catalog for validation phases. The local phase
 /// checks declaration syntax, not catalog compatibility or external documents.
 pub struct ManifestValidator {
-    _snapshot: CatalogSnapshot,
+    snapshot: CatalogSnapshot,
 }
 
 impl ManifestValidator {
     pub fn new(snapshot: CatalogSnapshot) -> Self {
-        Self {
-            _snapshot: snapshot,
+        Self { snapshot }
+    }
+
+    /// Local validity precedes exact project-store references and fidelity.
+    /// Semantic success authenticates neither observations nor approval.
+    pub fn validate_manifest_semantic(
+        &self,
+        toml_bytes: &[u8],
+        store: &dyn DocumentStore,
+    ) -> SemanticResult {
+        let local = self.validate_manifest(toml_bytes);
+        if local.outcome == ManifestOutcome::Fail {
+            let errors: Vec<_> = local
+                .structural_errors
+                .into_iter()
+                .chain(local.semantic_errors)
+                .collect();
+            return SemanticResult {
+                document_id: errors.iter().find_map(|e| e.document_id.clone()),
+                outcome: SemanticOutcome::Fail,
+                errors,
+            };
+        }
+        let manifest: PackManifest = toml::from_str(
+            std::str::from_utf8(toml_bytes).expect("local validation decoded identical bytes"),
+        )
+        .expect("local validation decoded identical manifest");
+        let validator = Validator::new(self.snapshot.clone());
+        let mut errors = check_fidelity_mapping(&manifest, store, &validator);
+        // Full/partial bindings have already been resolved by the fidelity
+        // checker. Explicit unsupported/orphan references still must resolve.
+        for (key, reference) in &manifest.contracts {
+            if manifest
+                .operations
+                .iter()
+                .any(|op| op.id == *key && op.behavioral_fidelity != ManifestFidelity::Unsupported)
+            {
+                continue;
+            }
+            if let Err(diagnostics) = crate::validator::references::resolve_document(
+                &validator,
+                store,
+                &reference.id,
+                Some(&reference.format_version),
+                DocumentKind::BehavioralContract,
+            ) {
+                let path = property_path("contracts", key);
+                errors.extend(diagnostics.into_iter().map(|mut error| {
+                    error.document_id = Some(manifest.pack.id.clone());
+                    error.format_version = None;
+                    error.field_path = Some(format!(
+                        "{path}.{}",
+                        error.field_path.as_deref().unwrap_or("id")
+                    ));
+                    error
+                }));
+            }
+        }
+        errors
+            .sort_by(|a, b| (&a.field_path, &a.description).cmp(&(&b.field_path, &b.description)));
+        SemanticResult {
+            document_id: Some(manifest.pack.id),
+            outcome: if errors.is_empty() {
+                SemanticOutcome::Pass
+            } else {
+                SemanticOutcome::Fail
+            },
+            errors,
         }
     }
 

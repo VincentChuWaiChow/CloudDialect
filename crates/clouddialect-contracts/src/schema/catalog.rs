@@ -12,13 +12,17 @@ use boon::{Compiler, Schemas, UrlLoader};
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
 
-use crate::{DocumentKind, ErrorCategory, ValidatorError};
+use crate::{
+    DocumentKind, ErrorCategory, RawObject, ValidatorError,
+    documents::raw_objects::{RawFields, raw_object_model},
+};
 
 const INDEX_URI: &str = "https://schemas.clouddialect.io/catalog-index/1.0.0/schema.json";
 const INDEX_SCHEMA: &[u8] =
     include_bytes!("../../../../catalog/schemas/catalog-index/1.0/schema.json");
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(try_from = "RawFields")]
 pub struct CatalogIndex {
     #[serde(rename = "$schema", skip_serializing_if = "Option::is_none")]
     pub schema: Option<String>,
@@ -27,7 +31,15 @@ pub struct CatalogIndex {
     pub required_extensions: Option<Vec<String>>,
     pub schemas: Vec<CatalogEntry>,
     pub resolver_resources: Vec<ResolverResource>,
+    #[serde(flatten)]
+    pub extensions: RawObject,
 }
+
+raw_object_model!(
+    CatalogIndex,
+    [format_version, schemas, resolver_resources],
+    [schema => "$schema", required_extensions => "required_extensions"]
+);
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct CatalogEntry {

@@ -3,14 +3,17 @@
 use sha2::{Digest, Sha256, Sha384, Sha512};
 use sha3::{Sha3_256, Sha3_512};
 
-use crate::VerificationResult;
+use crate::{ContentHash, VerificationResult};
 
 /// Compare exact candidate bytes with the document's declared content hash.
 /// Only the five schema-enumerated algorithm names and canonical lowercase
 /// hexadecimal values match. Other document claims are not validated here;
 /// matching is not proof of identity, provenance, observation or approval.
 pub fn verify_artifact_hash(result_doc: &VerificationResult, candidate_bytes: &[u8]) -> bool {
-    let hash = &result_doc.candidate.content_hash;
+    verify_content_hash(&result_doc.candidate.content_hash, candidate_bytes)
+}
+
+pub(super) fn verify_content_hash(hash: &ContentHash, candidate_bytes: &[u8]) -> bool {
     match hash.algorithm.as_str() {
         "sha-256" => digest_matches::<Sha256>(&hash.value, candidate_bytes),
         "sha-384" => digest_matches::<Sha384>(&hash.value, candidate_bytes),

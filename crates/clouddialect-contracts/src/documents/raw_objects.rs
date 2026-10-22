@@ -11,7 +11,7 @@ use serde_json::value::RawValue;
 
 pub type RawObject = BTreeMap<String, Box<RawValue>>;
 
-pub(crate) struct RawFields(pub(super) RawObject);
+pub(crate) struct RawFields(pub(crate) RawObject);
 
 impl<'de> Deserialize<'de> for RawFields {
     fn deserialize<D: Deserializer<'de>>(deserializer: D) -> Result<Self, D::Error> {
@@ -38,7 +38,7 @@ impl<'de> Deserialize<'de> for RawFields {
     }
 }
 
-pub(super) fn required<T: DeserializeOwned>(
+pub(crate) fn required<T: DeserializeOwned>(
     fields: &mut RawObject,
     key: &'static str,
 ) -> serde_json::Result<T> {
@@ -48,7 +48,7 @@ pub(super) fn required<T: DeserializeOwned>(
     serde_json::from_str(raw.get())
 }
 
-pub(super) fn optional<T: DeserializeOwned>(
+pub(crate) fn optional<T: DeserializeOwned>(
     fields: &mut RawObject,
     key: &str,
 ) -> serde_json::Result<Option<T>> {
@@ -58,7 +58,7 @@ pub(super) fn optional<T: DeserializeOwned>(
     }
 }
 
-// Shared only by the source/verification DTOs that retain unknown raw members.
+// Shared only by DTOs that retain unknown raw members.
 macro_rules! raw_object_model {
     ($model:ty, [$($required:ident),*], [$($optional:ident => $key:literal),*]) => {
         impl TryFrom<$crate::documents::raw_objects::RawFields> for $model {
@@ -74,4 +74,4 @@ macro_rules! raw_object_model {
         }
     };
 }
-pub(super) use raw_object_model;
+pub(crate) use raw_object_model;
