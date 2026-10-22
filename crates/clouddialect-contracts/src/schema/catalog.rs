@@ -23,6 +23,8 @@ pub struct CatalogIndex {
     #[serde(rename = "$schema", skip_serializing_if = "Option::is_none")]
     pub schema: Option<String>,
     pub format_version: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub required_extensions: Option<Vec<String>>,
     pub schemas: Vec<CatalogEntry>,
     pub resolver_resources: Vec<ResolverResource>,
 }
@@ -75,7 +77,9 @@ impl CatalogIndex {
         schemas
             .validate(&value, root)
             .map_err(|_| invalid("Catalog index does not match its schema"))?;
-        let parsed: Self = serde_json::from_value(value)
+        // Decode original members so duplicate core declarations cannot be
+        // erased by the schema-checking Value before typed conversion.
+        let parsed: Self = serde_json::from_slice(index)
             .map_err(|_| invalid("Catalog index fields could not decode"))?;
         if parsed.format_version != "1.0.0" {
             let mut error = invalid("Unsupported catalog index version");

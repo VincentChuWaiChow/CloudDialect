@@ -81,6 +81,8 @@ pub struct VerificationResult {
     pub schema: Option<String>,
     pub id: String,
     pub format_version: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub required_extensions: Option<Vec<String>>,
     pub candidate: ArtifactRef,
     pub pack: VersionedArtifact,
     pub toolchain: VersionedArtifact,
@@ -138,4 +140,4 @@ pub struct BehavioralResult {
     pub blocking_gaps: Vec<BlockingGap>,
 }
 
-raw_object_model!(VerificationResult, [id, format_version, candidate, pack, toolchain, configuration, binding, tests], [schema => "$schema", acceptance => "acceptance"]);
+raw_object_model!(VerificationResult, [id, format_version, candidate, pack, toolchain, configuration, binding, tests], [schema => "$schema", required_extensions => "required_extensions", acceptance => "acceptance"]);

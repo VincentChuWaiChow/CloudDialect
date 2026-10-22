@@ -36,6 +36,8 @@ pub struct EvidenceRecord {
     pub schema: Option<String>,
     pub id: String,
     pub format_version: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub required_extensions: Option<Vec<String>>,
     pub claim: String,
     pub classification: EvidenceClassification,
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -48,4 +50,4 @@ pub struct EvidenceRecord {
     pub extensions: RawObject,
 }
 
-raw_object_model!(EvidenceRecord, [id, format_version, claim, classification], [schema => "$schema", provenance => "provenance", reasoning_chain => "reasoning_chain", unresolved_assumptions => "unresolved_assumptions"]);
+raw_object_model!(EvidenceRecord, [id, format_version, claim, classification], [schema => "$schema", required_extensions => "required_extensions", provenance => "provenance", reasoning_chain => "reasoning_chain", unresolved_assumptions => "unresolved_assumptions"]);

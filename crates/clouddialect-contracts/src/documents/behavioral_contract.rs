@@ -129,6 +129,8 @@ pub struct BehavioralContract {
     pub schema: Option<String>,
     pub id: String,
     pub format_version: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub required_extensions: Option<Vec<String>>,
     pub operation_identity: OperationIdentity,
     pub inputs: RawObject,
     pub outputs: RawObject,
@@ -157,4 +159,4 @@ raw_object_model!(KnownBehavior, [], [ordering => "ordering", consistency => "co
 raw_object_model!(ResourceDependency, [identity, permissions, configuration], [known_behavior => "known_behavior", unresolved_assumptions => "unresolved_assumptions"]);
 raw_object_model!(Obligation, [obligation_id, behavioral_fidelity], [evidence_refs => "evidence_refs", unresolved_assumption => "unresolved_assumption"]);
 raw_object_model!(BehavioralNote, [note_type, description, evidence_ref], []);
-raw_object_model!(BehavioralContract, [id, format_version, operation_identity, inputs, outputs, side_effects, resource_dependencies, obligations], [schema => "$schema", behavioral_notes => "behavioral_notes"]);
+raw_object_model!(BehavioralContract, [id, format_version, operation_identity, inputs, outputs, side_effects, resource_dependencies, obligations], [schema => "$schema", required_extensions => "required_extensions", behavioral_notes => "behavioral_notes"]);
