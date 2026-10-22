@@ -31,6 +31,9 @@ system/developer instructions and explicit user scope take precedence.
   A public-path or schema change requires explicit migration/version review.
 - Prefer one file until a domain needs multiple cohesive files. Do not create
   empty domain scaffolding or reorganize unrelated specifications/research.
+- Put custom verification scripts in `scripts/verification/<domain>/`, keeping
+  one canonical implementation per tool. Keep run data/evidence in `.workflow/`;
+  use relative compatibility links when relocating existing command paths.
 
 ## Evidence, scope and safety
 

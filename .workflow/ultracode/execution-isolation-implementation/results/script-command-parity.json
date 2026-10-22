@@ -1,0 +1,114 @@
+[
+  {
+    "name": "execution-check",
+    "before_exit_code": 1,
+    "after": [
+      {
+        "path": "legacy",
+        "command": [
+          "rtk",
+          "proxy",
+          "python3",
+          ".workflow/ultracode/execution-isolation/check_spec.py"
+        ],
+        "exit_code": 1,
+        "status": "EXPECTED_HISTORICAL_FAILURE_PRESERVED"
+      },
+      {
+        "path": "canonical",
+        "command": [
+          "rtk",
+          "proxy",
+          "python3",
+          "scripts/verification/execution-isolation/check_spec.py"
+        ],
+        "exit_code": 1,
+        "status": "EXPECTED_HISTORICAL_FAILURE_PRESERVED"
+      }
+    ]
+  },
+  {
+    "name": "execution-sensitivity",
+    "before_exit_code": 1,
+    "after": [
+      {
+        "path": "legacy",
+        "command": [
+          "rtk",
+          "proxy",
+          "python3",
+          ".workflow/ultracode/execution-isolation/test_check_spec.py"
+        ],
+        "exit_code": 1,
+        "status": "EXPECTED_HISTORICAL_FAILURE_PRESERVED"
+      },
+      {
+        "path": "canonical",
+        "command": [
+          "rtk",
+          "proxy",
+          "python3",
+          "scripts/verification/execution-isolation/test_check_spec.py"
+        ],
+        "exit_code": 1,
+        "status": "EXPECTED_HISTORICAL_FAILURE_PRESERVED"
+      }
+    ]
+  },
+  {
+    "name": "pack-check",
+    "before_exit_code": 1,
+    "after": [
+      {
+        "path": "legacy",
+        "command": [
+          "rtk",
+          "proxy",
+          "python3",
+          ".workflow/ultracode/python-oss-to-s3-pack/check_docs.py"
+        ],
+        "exit_code": 1,
+        "status": "EXPECTED_HISTORICAL_FAILURE_PRESERVED"
+      },
+      {
+        "path": "canonical",
+        "command": [
+          "rtk",
+          "proxy",
+          "python3",
+          "scripts/verification/python-oss-to-s3-pack/check_docs.py"
+        ],
+        "exit_code": 1,
+        "status": "EXPECTED_HISTORICAL_FAILURE_PRESERVED"
+      }
+    ]
+  },
+  {
+    "name": "planning-check",
+    "before_exit_code": 1,
+    "after": [
+      {
+        "path": "legacy",
+        "command": [
+          "rtk",
+          "proxy",
+          "python3",
+          ".workflow/ultracode/execution-isolation-implementation/verify-planning.py"
+        ],
+        "exit_code": 1,
+        "status": "EXPECTED_HISTORICAL_FAILURE_PRESERVED"
+      },
+      {
+        "path": "canonical",
+        "command": [
+          "rtk",
+          "proxy",
+          "python3",
+          "scripts/verification/contracts-evidence-foundation/verify-planning.py"
+        ],
+        "exit_code": 1,
+        "status": "EXPECTED_HISTORICAL_FAILURE_PRESERVED"
+      }
+    ]
+  }
+]

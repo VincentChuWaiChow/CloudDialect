@@ -1,0 +1,17 @@
+........E
+======================================================================
+ERROR: test_valid_documents_pass (__main__.SpecGraderTests.test_valid_documents_pass)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/scripts/verification/execution-isolation/test_check_spec.py", line 39, in test_valid_documents_pass
+    check_spec.main()
+  File "/home/raishin/projects/CloudDialect/scripts/verification/execution-isolation/check_spec.py", line 115, in main
+    require(all(p.startswith((".kiro/specs/execution-isolation/", ".workflow/ultracode/execution-isolation/")) for p in changed), "no unrelated tracked changes")
+  File "/home/raishin/projects/CloudDialect/scripts/verification/execution-isolation/check_spec.py", line 17, in require
+    raise SystemExit(f"FAIL: {message}")
+SystemExit: FAIL: no unrelated tracked changes
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.391s
+
+FAILED (errors=1)

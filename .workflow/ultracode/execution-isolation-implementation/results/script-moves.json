@@ -1,0 +1,9 @@
+{
+  ".workflow/ultracode/execution-isolation-implementation/measure-domain-coverage.py": "scripts/verification/contracts-evidence-foundation/measure-domain-coverage.py",
+  ".workflow/ultracode/execution-isolation-implementation/verify-p0.py": "scripts/verification/contracts-evidence-foundation/verify-p0.py",
+  ".workflow/ultracode/execution-isolation-implementation/verify-planning.py": "scripts/verification/contracts-evidence-foundation/verify-planning.py",
+  ".workflow/ultracode/execution-isolation-implementation/reproduce-document-checks.sh": "scripts/verification/execution-isolation/reproduce-document-checks.sh",
+  ".workflow/ultracode/execution-isolation/check_spec.py": "scripts/verification/execution-isolation/check_spec.py",
+  ".workflow/ultracode/execution-isolation/test_check_spec.py": "scripts/verification/execution-isolation/test_check_spec.py",
+  ".workflow/ultracode/python-oss-to-s3-pack/check_docs.py": "scripts/verification/python-oss-to-s3-pack/check_docs.py"
+}

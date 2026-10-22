@@ -1,0 +1,18 @@
+{
+  "status": "FAIL",
+  "criteria": 67,
+  "requirements": 10,
+  "design_elements": 10,
+  "tasks": 17,
+  "leaf_depth": 6,
+  "negative_controls": 5,
+  "errors": [
+    "baseline branch/HEAD changed",
+    "unowned new file: .workflow/ultracode/execution-isolation-implementation/results/pre-script-source-snapshot.json",
+    "unowned new file: .workflow/ultracode/execution-isolation-implementation/results/script-before-execution-check.txt",
+    "unowned new file: .workflow/ultracode/execution-isolation-implementation/results/script-before-execution-sensitivity.txt",
+    "unowned new file: .workflow/ultracode/execution-isolation-implementation/results/script-layout-red.txt",
+    "unowned new file: .workflow/ultracode/execution-isolation-implementation/script-organization-eval.md",
+    "unowned new file: tests/test_script_layout.py"
+  ]
+}

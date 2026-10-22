@@ -1,0 +1,37 @@
+[
+  {
+    "old": ".workflow/ultracode/execution-isolation-implementation/measure-domain-coverage.py",
+    "new": "scripts/verification/contracts-evidence-foundation/measure-domain-coverage.py",
+    "nonpath_logic_exactly_preserved": true
+  },
+  {
+    "old": ".workflow/ultracode/execution-isolation-implementation/verify-p0.py",
+    "new": "scripts/verification/contracts-evidence-foundation/verify-p0.py",
+    "nonpath_logic_exactly_preserved": true
+  },
+  {
+    "old": ".workflow/ultracode/execution-isolation-implementation/verify-planning.py",
+    "new": "scripts/verification/contracts-evidence-foundation/verify-planning.py",
+    "nonpath_logic_exactly_preserved": true
+  },
+  {
+    "old": ".workflow/ultracode/execution-isolation-implementation/reproduce-document-checks.sh",
+    "new": "scripts/verification/execution-isolation/reproduce-document-checks.sh",
+    "nonpath_logic_exactly_preserved": true
+  },
+  {
+    "old": ".workflow/ultracode/execution-isolation/check_spec.py",
+    "new": "scripts/verification/execution-isolation/check_spec.py",
+    "nonpath_logic_exactly_preserved": true
+  },
+  {
+    "old": ".workflow/ultracode/execution-isolation/test_check_spec.py",
+    "new": "scripts/verification/execution-isolation/test_check_spec.py",
+    "nonpath_logic_exactly_preserved": true
+  },
+  {
+    "old": ".workflow/ultracode/python-oss-to-s3-pack/check_docs.py",
+    "new": "scripts/verification/python-oss-to-s3-pack/check_docs.py",
+    "nonpath_logic_exactly_preserved": true
+  }
+]

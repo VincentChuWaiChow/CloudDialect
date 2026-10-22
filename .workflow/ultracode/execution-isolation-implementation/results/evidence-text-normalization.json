@@ -157,6 +157,20 @@
       "raw_copy": "/tmp/clouddialect-raw-evidence-0qb6zxea/results/catalog-schemas-green.txt",
       "raw_sha256": "6a0c9a36a33b843ea3389211cf9ead41acc800fd5d9c524306b6cd557f912c6b",
       "presentation_sha256": "7c4ab242f8b9fa8d93b3076ddc55338b2dfe47ca311c6d42cc1614de943d3117"
+    },
+    {
+      "path": "results/script-layout-red.txt",
+      "raw_copy": "/tmp/clouddialect-raw-script-evidence-ur_w85sg/results/script-layout-red.txt",
+      "raw_sha256": "dcc6f67c97c6cd588bc6cd2edec109fe9b8f6a1f23e54b731038bc57dee739a2",
+      "presentation_sha256": "9790791ac4f9bf2d4c404e41a2a72afb702781201ed028d4383953dff65b5f37",
+      "scope": "new custom-script command evidence, same presentation policy"
+    },
+    {
+      "path": "results/script-final-rust-tests.txt",
+      "raw_copy": "/tmp/clouddialect-raw-script-evidence-ur_w85sg/results/script-final-rust-tests.txt",
+      "raw_sha256": "9fee248743bb5d1a8f26083c17ddb2eb19b5851abcec0dd2cac726c203be3b64",
+      "presentation_sha256": "5b021b98fa312cf4b0d22d1c135e5b9c0ac2fc0abf159ec94a3ed7a496c59e14",
+      "scope": "new custom-script command evidence, same presentation policy"
     }
   ],
   "raw_stdout_stage_check_exit_code": 2

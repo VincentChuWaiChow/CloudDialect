@@ -110,7 +110,7 @@
     "/tmp/clouddialect-phase-coverage-target/debug/deps/verification_models-8dde92cbaf7dc767",
     "/tmp/clouddialect-phase-coverage-target/debug/deps/verification_schema-e0c61a540e1e3a83"
   ],
-  "profiles_directory": "/tmp/clouddialect-domain-profiles-smy031is",
+  "profiles_directory": "/tmp/clouddialect-domain-profiles-hjy24y4v",
   "threshold": 80,
   "scope": "Emitted production mappings only; tests/dependencies/unmapped DTOs excluded. No branch, whole-spec or native runtime coverage claimed."
 }
