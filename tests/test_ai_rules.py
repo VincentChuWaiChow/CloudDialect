@@ -18,7 +18,8 @@ ENTRYPOINTS = (
 
 class AiRulesTests(unittest.TestCase):
     def test_previous_rule_copy_is_absent(self):
-        self.assertFalse((ROOT / ".ai/rules/engineering.md").exists())
+        previous = ROOT / ".ai/rules/engineering.md"
+        self.assertFalse(previous.exists() or previous.is_symlink())
 
     def test_one_canonical_rule_defines_domain_ownership_and_safety(self):
         self.assertTrue(CANONICAL.is_file(), "canonical repository AI rule missing")

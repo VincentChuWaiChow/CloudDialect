@@ -1,0 +1,23 @@
+test_one_canonical_rule_defines_domain_ownership_and_safety (__main__.AiRulesTests.test_one_canonical_rule_defines_domain_ownership_and_safety) ... FAIL
+test_previous_rule_copy_is_absent (__main__.AiRulesTests.test_previous_rule_copy_is_absent) ... FAIL
+
+======================================================================
+FAIL: test_one_canonical_rule_defines_domain_ownership_and_safety (__main__.AiRulesTests.test_one_canonical_rule_defines_domain_ownership_and_safety)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/tests/test_ai_rules.py", line 24, in test_one_canonical_rule_defines_domain_ownership_and_safety
+    self.assertTrue(CANONICAL.is_file(), "canonical repository AI rule missing")
+AssertionError: False is not true : canonical repository AI rule missing
+
+======================================================================
+FAIL: test_previous_rule_copy_is_absent (__main__.AiRulesTests.test_previous_rule_copy_is_absent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/tests/test_ai_rules.py", line 21, in test_previous_rule_copy_is_absent
+    self.assertFalse((ROOT / ".ai/rules/engineering.md").exists())
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+FAILED (failures=2)

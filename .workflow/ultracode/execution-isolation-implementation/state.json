@@ -2,7 +2,7 @@
   "title": "Execution-isolation implementation",
   "slug": "execution-isolation-implementation",
   "created_at": "2026-10-22T07:25:44.090021+00:00",
-  "updated_at": "2026-10-22T12:41:30.774894+00:00",
+  "updated_at": "2026-10-22T12:52:55.962754+00:00",
   "status": "executing",
   "mode": "delegated",
   "baseline_ref": "3b9cb6bd0ee82dbef3b731a35ce68fc778c4906a",
@@ -21,10 +21,10 @@
     "native_agent_available": true,
     "native_agent_planned": true,
     "native_agent_used": true,
-    "agent_count": 13,
+    "agent_count": 14,
     "wave_count": 7,
     "no_delegation_reason": "",
-    "notes": "Thirteen cumulative sidecars: current user clarified Rust/customscripts only; one additional bounded script static reviewer admitted. No recursive/followup turns; inheritedmodel/effortunverified.",
+    "notes": "Fourteen cumulative bounded sidecars; latest user-requested rule-location correction adds one static reviewer, no followups/recursion. Generic inherited model/effort unverified.",
     "additional_dispatch_limit": 2,
     "additional_dispatches_used": 2
   },
@@ -123,6 +123,13 @@
       "owner": "read-only-agent",
       "write_scope": [],
       "result_path": "results/13-script-layout-review.md"
+    },
+    {
+      "id": "14-rule-location-review",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/14-rule-location-review.md"
     }
   ],
   "verification": {
@@ -785,5 +792,37 @@
     "followups": 0,
     "repairs_allowed": 1,
     "repairs_used": 1
+  },
+  "ai_rule_location_correction": {
+    "requested_by": "Explicit user: AI agent rules should be in .agents/rules",
+    "started_at": "2026-10-22T12:49:57.956025+00:00",
+    "owned_paths": [
+      ".agents/rules/engineering.md",
+      ".ai/rules/engineering.md",
+      "AGENTS.md",
+      "CLAUDE.md",
+      "GEMINI.md",
+      ".github/copilot-instructions.md",
+      ".kiro/steering/engineering.md",
+      ".cursor/rules/engineering.mdc",
+      "tests/test_ai_rules.py",
+      "current Spec1 layout reference lines",
+      "workflow evidence"
+    ],
+    "dispatch_limit": 1,
+    "dispatches_used": 1,
+    "repair_limit": 1,
+    "repairs_used": 0,
+    "elapsed_limit_minutes": 15,
+    "no_global_config_probes_releases": true,
+    "commit_push_authority": "Correction within prior explicit AI-rule organization commit/push request",
+    "status": "verified_pending_commit_push",
+    "review": "PASS packet14; no required findings. Parent strengthened old-path assertion to reject dangling links.",
+    "red_checkpoint": "30de008",
+    "canonical_path": ".agents/rules/engineering.md",
+    "old_tree_absent": true,
+    "rule_bytes": "Unchanged exact4239bytes",
+    "tests": "15Python and94Rustintegration+6compilefaildoctests PASS; currentfocusedtarget GREEN",
+    "runtime_activation": "UNVERIFIED"
   }
 }

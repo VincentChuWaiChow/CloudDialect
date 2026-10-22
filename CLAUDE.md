@@ -1,1 +1,1 @@
-.ai/rules/engineering.md
+.agents/rules/engineering.md

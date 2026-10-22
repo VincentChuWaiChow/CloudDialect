@@ -1,0 +1,25 @@
+[
+  {
+    "name": "python",
+    "command": "rtk proxy python3 -m unittest discover -s tests -v",
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "rust",
+    "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-phase-target cargo test --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen",
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "diff",
+    "command": "rtk proxy git diff --check",
+    "exit_code": 0,
+    "status": "PASS"
+  },
+  {
+    "name": "unchanged-rule-bytes",
+    "status": "PASS",
+    "sha256": "4bce257ce86bcf01f68c8af280a50e54079d71c0cc070f201f48defef1c7e721"
+  }
+]
