@@ -2,7 +2,7 @@
   "title": "Execution-isolation implementation",
   "slug": "execution-isolation-implementation",
   "created_at": "2026-10-22T07:25:44.090021+00:00",
-  "updated_at": "2026-10-22T13:35:24.348735+00:00",
+  "updated_at": "2026-10-22T13:54:52.291460+00:00",
   "status": "executing",
   "mode": "delegated",
   "baseline_ref": "3b9cb6bd0ee82dbef3b731a35ce68fc778c4906a",
@@ -21,10 +21,10 @@
     "native_agent_available": true,
     "native_agent_planned": true,
     "native_agent_used": true,
-    "agent_count": 16,
+    "agent_count": 17,
     "wave_count": 8,
     "no_delegation_reason": "",
-    "notes": "Sixteen cumulative bounded sidecars; packet15 contract review complete; packet16 frozen catalog static review dispatched. No recursion/followups; inherited model/effort unverified.",
+    "notes": "User-approved resource/extension tranche adds packet17read-only RC/EX contract review; packet18reserved for final integration. Counts cumulative; no recursion/followups.",
     "additional_dispatch_limit": 2,
     "additional_dispatches_used": 2
   },
@@ -144,10 +144,17 @@
       "owner": "read-only-agent",
       "write_scope": [],
       "result_path": "results/16-catalog-integration.md"
+    },
+    {
+      "id": "17-resource-extension-review",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/17-resource-extension-review.md"
     }
   ],
   "verification": {
-    "status": "Catalog leaves2.2/2.3 verified:114integration+2unit+7compilefaildoctests/15Python/check/fmt/Clippy/8P0content pass; corrected emitted production lines314/330=95.15%; native/conformance/fullvalidators/BG01 unfinished",
+    "status": "RC1:124integration+2unit+7doctests/15Python/8P0content/check/fmt/Clippy pass;314/330productionlines; packet17staticPASS; fullgoal/runtime/BG01 incomplete, priornonRCdesignparityMISS explicit",
     "checks": [
       {
         "name": "scaffold",
@@ -301,7 +308,7 @@
         "evidence": "No approved environment or closed gates; user explicitly authorized draft plans only."
       }
     ],
-    "current_scope": "Frozen exact catalog identity and actual embedded-only pinned-engine adapter; one consolidated engine-reserved URI repair; owner contract decisions recorded",
+    "current_scope": "RC-1 resource-only assumption dimension bindings and per-dependency coverage, not full original goal",
     "planning_checks": [
       {
         "name": "planning",
@@ -699,6 +706,158 @@
         "status": "UNVERIFIED",
         "reason": "No approved environment or probe authority; gates remain OPEN."
       }
+    ],
+    "resource_checks": [
+      {
+        "name": "tests",
+        "command": [
+          "rtk",
+          "proxy",
+          "env",
+          "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+          "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+          "cargo",
+          "test",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen"
+        ],
+        "exit_code": 0,
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/resource-final-tests.txt",
+        "raw_log": "/tmp/clouddialect-resource-final-tests.txt"
+      },
+      {
+        "name": "check",
+        "command": [
+          "rtk",
+          "proxy",
+          "env",
+          "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+          "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+          "cargo",
+          "check",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen",
+          "--all-targets"
+        ],
+        "exit_code": 0,
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/resource-final-check.txt",
+        "raw_log": "/tmp/clouddialect-resource-final-check.txt"
+      },
+      {
+        "name": "fmt",
+        "command": [
+          "rtk",
+          "proxy",
+          "env",
+          "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+          "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+          "cargo",
+          "fmt",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--check"
+        ],
+        "exit_code": 0,
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/resource-final-fmt.txt",
+        "raw_log": "/tmp/clouddialect-resource-final-fmt.txt"
+      },
+      {
+        "name": "clippy",
+        "command": [
+          "rtk",
+          "proxy",
+          "env",
+          "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+          "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+          "cargo",
+          "clippy",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "exit_code": 0,
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/resource-final-clippy.txt",
+        "raw_log": "/tmp/clouddialect-resource-final-clippy.txt"
+      },
+      {
+        "name": "negative-doctests",
+        "command": [
+          "rtk",
+          "proxy",
+          "env",
+          "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+          "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+          "cargo",
+          "test",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen",
+          "--doc",
+          "--",
+          "--nocapture"
+        ],
+        "exit_code": 0,
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/resource-final-negative-doctests.txt",
+        "raw_log": "/tmp/clouddialect-resource-final-negative-doctests.txt"
+      },
+      {
+        "name": "python",
+        "command": [
+          "rtk",
+          "proxy",
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_*.py",
+          "-v"
+        ],
+        "exit_code": 0,
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/resource-final-python.txt",
+        "raw_log": "/tmp/clouddialect-resource-final-python.txt"
+      },
+      {
+        "name": "p0-content",
+        "command": [
+          "rtk",
+          "proxy",
+          "python3",
+          "scripts/verification/contracts-evidence-foundation/verify-p0.py",
+          "P0DocumentationTests.test_full_embedded_schemas_and_toml_parse",
+          "P0DocumentationTests.test_valid_verification_and_required_fields",
+          "P0DocumentationTests.test_nonpass_failure_object_and_unicode_boundaries",
+          "P0DocumentationTests.test_binding_test_and_digest_shape_negatives",
+          "P0DocumentationTests.test_full_semver_boundaries",
+          "P0DocumentationTests.test_approval_shape_is_not_authentication",
+          "P0DocumentationTests.test_schema_kind_and_api_consistency",
+          "P0DocumentationTests.test_capability_and_catalog_contracts"
+        ],
+        "exit_code": 0,
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/resource-final-p0-content.txt",
+        "raw_log": "/tmp/clouddialect-resource-final-p0-content.txt"
+      },
+      {
+        "name": "diff",
+        "command": [
+          "rtk",
+          "proxy",
+          "git",
+          "diff",
+          "--check"
+        ],
+        "exit_code": 0,
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/resource-final-diff.txt",
+        "raw_log": "/tmp/clouddialect-resource-final-diff.txt"
+      }
     ]
   },
   "limits": {
@@ -1005,7 +1164,7 @@
   },
   "catalog_delivery": {
     "started_at": "2026-10-22T13:00:49.631695+00:00",
-    "status": "verified-awaiting-normal-publication",
+    "status": "published-verified",
     "units": [
       "2.2",
       "2.3"
@@ -1031,6 +1190,34 @@
     "final_checks": "results/catalog-verified-check-results.json",
     "coverage": "results/catalog-production-coverage-summary.json",
     "scope_audit": "results/catalog-scope-audit.json",
-    "pending_next_tranche": "RC-1/EX-1 amendments approved but not implemented; next reviewer budget and remaining VC-1 version edges asked asynchronously, no inference of approval."
+    "pending_next_tranche": "RC-1/EX-1 amendments approved but not implemented; next reviewer budget and remaining VC-1 version edges asked asynchronously, no inference of approval.",
+    "publication_sha": "ff3957c1843d113afee4d1d4dcae36667fe16449",
+    "publication_receipt": "/tmp/clouddialect-catalog-publication.json"
+  },
+  "resource_contract_delivery": {
+    "started_at": "2026-10-22T13:41:20.378712+00:00",
+    "status": "rc1-verified-awaiting-normal-publication;ex1-next",
+    "authority": "Explicit user RC-1 discriminator and per-dimension coverage decision; approved remaining Spec1 implementation/commit/push.",
+    "elapsed_limit_minutes": 75,
+    "new_dispatches_authorized": 2,
+    "new_dispatches_used": 1,
+    "cumulative_dispatch_count": 17,
+    "pending_reviewer_request": "User approved two additional read-only reviewers,18 cumulative,75minutes,one repair,zero recursion/followups.",
+    "repair_limit": 1,
+    "repairs_consumed": 0,
+    "owner": "parent",
+    "eval": "resource-contract-eval.md",
+    "original_goal": "active/incomplete; fullscope retained",
+    "elapsed_minutes": 13.531879133333332,
+    "dto_green": "79493fe",
+    "schema_green": "7f97567",
+    "checks": "results/resource-final-checks.json",
+    "coverage": "results/resource-final-production-coverage.json",
+    "report": "resource-contract-report.md",
+    "independent_postchange_review": "packet17boundedstaticPASS; actualtests/coverage parentverified; no independent execution",
+    "whole_schema_design_parity": "MISS: five pre-existing non-RC differences unchanged; RC subtrees match as values",
+    "additional_dispatch_limit": 2,
+    "version_profile_decision": "User approved exact admitted stable versions; root-only newer-stable-MINOR fallback; build metadata ignored for precedence; unindexed PATCH/prerelease and u64overflow UnsupportedVersion; malformed syntax InvalidFormat. Not yet implemented.",
+    "reserved_final_dispatch": 18
   }
 }

@@ -30,7 +30,7 @@ After focused GREEN, every code unit also requires current full crate tests/chec
 File lists below are relative to the contracts crate unless prefixed `catalog/` or `docs/`. Parent alone edits shared lib.rs/mod.rs registration, Cargo.toml/Cargo.lock, common test support and catalog index. Workers, if later separately authorized, may edit only named private files; registration/lock/index writes serialize. Do not add public placeholders for unmet dependencies. Estimates are conditional engineering effort per bounded unit, not elapsed delivery promises; split before dispatch if >4h, >5 files or too many independent concepts. Runtime/security functionality remains Spec 2 scope.
 
 ## Verified progress (2026-10-22)
-Units1.2–1.6,1.8–1.11 and2.1–2.3 passed bounded checks; checkmarks below refer only to those unit scopes. Unit1.7 remains partial: the user has now approved the requirement2.2 resource-dimension discriminator/coverage contract, but its DTO/schema repair is not implemented. Whole canonical tasks remain conservative where obligations extend beyond a leaf; full conformance, runtime and BG-01 remain unfinished. [Latest catalog evidence](../../../.workflow/ultracode/execution-isolation-implementation/catalog-delivery-report.md), [approved contract decisions](../../../.workflow/ultracode/execution-isolation-implementation/contract-reconciliation-decisions.md), and [earlier prerequisite evidence](../../../.workflow/ultracode/execution-isolation-implementation/prerequisite-catalog-report.md).
+Units1.2–1.11, the approved resource DTO amendment1.4R, and2.1–2.3 passed bounded checks; checkmarks below refer only to those unit scopes. RC-1 now closes the resource-dimension representation/schema gap through typed bindings and per-dependency coverage tests. Whole canonical tasks remain conservative where obligations extend beyond a leaf; full conformance, runtime and BG-01 remain unfinished. [Latest resource evidence](../../../.workflow/ultracode/execution-isolation-implementation/resource-contract-report.md), [catalog evidence](../../../.workflow/ultracode/execution-isolation-implementation/catalog-delivery-report.md), and [approved contract decisions](../../../.workflow/ultracode/execution-isolation-implementation/contract-reconciliation-decisions.md).
 
 ## Tasks
 
@@ -57,6 +57,11 @@ Units1.2–1.6,1.8–1.11 and2.1–2.3 passed bounded checks; checkmarks below r
     - Approved clarification 2026-10-22: preserve encoded extension JSON value bytes, not merely decoded values. User separately approved raw_value on pinned serde_json; the feature/requirement disposition is a parent-owned prerequisite slice, not a new crate/version choice. Shared direct raw-object decoding avoids Serde flatten normalization; freeform object members use raw values too. 1.5 reuses this decoder. Unit estimates must be rechecked if additional lexical syntax beyond value bytes is requested.
     - Cases: all required source fields; observed provenance; inferred reasoning; unknown assumptions; obligation/reference alternatives; extension preservation. Target: `source_document_models`.
     - Done: BehavioralContract/EvidenceRecord and nested models used by later store/completeness APIs exist; no fabricated references or acceptance. Split if model scope exceeds four hours. Estimate: 3–4h. Dependencies: 1.3.
+  - [x] 1.4R Approved resource-assumption DTO amendment
+    - Spec1: tasks2/9 model subset, requirement2.2, owner-approved RC-1. Separate from generic assumptions and schema completeness.
+    - Owned: `src/documents/behavioral_contract.rs`, `src/documents/mod.rs`, `src/validator/mod.rs`, `src/lib.rs`, `tests/source_document_models.rs` (five files).
+    - Cases: required closed dimension enum and resource-specific assumption payload, root/validator type identity, missing/duplicate fields, exact encoded extension values, generic evidence/obligation assumptions unchanged. Target: `source_document_models`; missing API RED checkpoint before code, same-target GREEN/full checks. Existing resource fixture gains its explicit behavior binding, not removal.
+    - Done: typed resource binding and intentional vector element-type amendment; parsing does not prove per-dimension coverage or nonempty text. No new dependencies, accepting conversions or native probes. Schema enforcement is unit1.7. Conditional estimate1–2h, dependencies1.4 plus current owner decision.
   - [x] 1.5 Verification/projection models
     - Spec1: task 9 remaining P0-A/C. Requirements: 4.1–4.8, 8.6.
     - Owned: `src/validator/verification_types.rs`, `src/validator/mod.rs`, `src/errors/mod.rs`, `src/lib.rs`, `tests/verification_models.rs`.
@@ -67,7 +72,7 @@ Units1.2–1.6,1.8–1.11 and2.1–2.3 passed bounded checks; checkmarks below r
     - Owned: `tests/support/mod.rs`, `tests/schema_harness.rs`.
     - Cases: known-good schema/instance; deliberate mismatch; malformed JSON; unknown URI never retrieves; local references; explicit format-assertion capability exposed. Target: `schema_harness`.
     - Done: reusable test-only in-memory/deny-unknown resolver with actual pinned Boon signatures and positive/negative controls; no default filesystem/network loader. Not a production CatalogSnapshot or native offline proof. Estimate: 2–3h. Dependencies: 1.2.
-  - [ ] 1.7 Behavioral-contract schema
+  - [x] 1.7 Behavioral-contract schema
     - Spec1: task 2 and its focused fixtures. Requirements: 2.1–2.7, 10.2.
     - Owned: `catalog/schemas/behavioral-contract/1.0/schema.json`, `tests/behavioral_schema.rs`. Path version is conditional on G-VERSION, not permission to overwrite a published format.
     - Cases: required fields; wrapper/resource behavior; fidelity enum; evidence-or-assumption; notes; qualified extensions; optional declared schema selector. Target: `behavioral_schema`.

@@ -1,0 +1,33 @@
+{
+  "baseline": "ff3957c1843d113afee4d1d4dcae36667fe16449",
+  "changed_nonworkflow_paths": [
+    ".kiro/specs/contracts-evidence-foundation/design.md",
+    ".kiro/specs/contracts-evidence-foundation/implementation-plan.md",
+    ".kiro/specs/contracts-evidence-foundation/requirements.md",
+    ".kiro/specs/contracts-evidence-foundation/tasks.md",
+    "catalog/schemas/behavioral-contract/1.0/schema.json",
+    "crates/clouddialect-contracts/src/documents/behavioral_contract.rs",
+    "crates/clouddialect-contracts/src/documents/mod.rs",
+    "crates/clouddialect-contracts/src/lib.rs",
+    "crates/clouddialect-contracts/src/validator/mod.rs",
+    "crates/clouddialect-contracts/tests/behavioral_schema.rs",
+    "crates/clouddialect-contracts/tests/source_document_models.rs"
+  ],
+  "unexpected_baseline_changes": [],
+  "unexpected_tracked_changes": [],
+  "unexpected_new_paths": [],
+  "source_sha256": {
+    "catalog/schemas/behavioral-contract/1.0/schema.json": "7086196a1b76c3035863b26f38aacdf69b8dffc835afe3b1d796f95367b3d1c5",
+    "crates/clouddialect-contracts/src/documents/behavioral_contract.rs": "83de3cee9d6527bbba9eabb77f36cb79dbdd8c42f474f7cd225d562dfa10baf3",
+    "crates/clouddialect-contracts/src/documents/mod.rs": "0a6ceed12c8a090a7d8cf7dc6db2579b15d58f3c9474a14e2b4e0fc845f18b06",
+    "crates/clouddialect-contracts/src/lib.rs": "03954a939f2509d06720e0e2fc4a0b269b8df3e7e41ac4846dd098e68c6d4682",
+    "crates/clouddialect-contracts/src/validator/mod.rs": "c08a0ad57269c97010be7250c4553f84f12efb84819be1611653d1ddc897f51f",
+    "crates/clouddialect-contracts/tests/behavioral_schema.rs": "7e6bd15acd16ba9197c981a3fddfc111167137e46baa7bd8ee32ad63e11822bb",
+    "crates/clouddialect-contracts/tests/source_document_models.rs": "23085fc0fd2a70a8a02f80bd4f645e4b8d9b8ec2034737f369df7ac187636438"
+  },
+  "research_dependencies_rules_scripts_preserved": true,
+  "new_dispatch_count": 1,
+  "reviewer_ceiling": 18,
+  "no_native_probe_or_runtime_changes": true,
+  "review": "packet17read-only staticPASS;18reserved"
+}

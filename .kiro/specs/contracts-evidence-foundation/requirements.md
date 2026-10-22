@@ -137,6 +137,7 @@ The labels below retain the original full-conformance baseline, not a claim that
    - Evidence status: `MISSING`
 
 2. THE Behavioral_Contract_Schema SHALL require each contract document to declare resource dependencies including: identity, permissions required, and configuration parameters; for each dependency, any ordering, consistency, retry, or failure behavior that is known MUST be declared, and any such behavior that is not known MUST be recorded as an unresolved-assumption entry on that dependency.
+   - Owner-approved RC-1 binding (2026-10-22): each resource-specific unresolved assumption requires `behavior` in `ordering | consistency | retry | failure` and nonempty `assumption_id`, `description`, `reason`. Every dependency covers all four dimensions by a nonempty `known_behavior.<dimension>` value or a matching populated assumption; both may coexist for partial knowledge. Generic evidence/obligation assumptions remain unchanged. Nonempty means decoded string length at least one, not proof the claim is true.
    - Verification method: Conformance fixture with example operations having non-trivial resource dependencies, including one dependency where retry behavior is declared and one where it is recorded as an unresolved assumption.
    - Evidence status: `MISSING`
 

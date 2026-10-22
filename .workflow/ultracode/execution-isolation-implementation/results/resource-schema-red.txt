@@ -1,0 +1,54 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.36s
+     Running tests/behavioral_schema.rs (/tmp/clouddialect-phase-target/debug/deps/behavioral_schema-5dd223edca6042f0)
+
+running 15 tests
+test a_declared_wrapper_chain_cannot_be_empty ... ok
+test generic_obligation_assumptions_do_not_require_resource_dimension_bindings ... ok
+test identifiers_are_lowercase_hyphenated_uuid_v4 ... ok
+test known_behavior_declarations_cannot_be_empty_or_wrongly_typed ... FAILED
+test fidelity_is_closed_without_promoting_structural_success ... ok
+test every_resource_dimension_must_be_covered_on_that_dependency ... FAILED
+test every_required_base_field_is_enforced ... ok
+test each_obligation_has_exactly_one_nonempty_support_alternative ... ok
+test arbitrary_ids_text_extensions_and_duplicate_other_dimensions_do_not_fill_gaps ... FAILED
+test community_extensions_are_valid_but_invalid_namespace_spellings_are_not ... ok
+test complete_semver_syntax_rejects_leading_zeroes_empty_suffixes_and_whitespace ... ok
+test all_known_unknown_combinations_and_partial_knowledge_are_valid ... ok
+test minimal_contract_and_explicit_schema_selector_validate ... ok
+test resource_assumptions_are_populated_even_when_known_values_already_cover_everything ... FAILED
+test wrappers_resources_and_open_note_types_keep_their_required_structure ... ok
+
+failures:
+
+---- known_behavior_declarations_cannot_be_empty_or_wrongly_typed stdout ----
+
+thread 'known_behavior_declarations_cannot_be_empty_or_wrongly_typed' (163) panicked at tests/behavioral_schema.rs:297:13:
+invalid ordering: ""
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- every_resource_dimension_must_be_covered_on_that_dependency stdout ----
+
+thread 'every_resource_dimension_must_be_covered_on_that_dependency' (159) panicked at tests/behavioral_schema.rs:218:5:
+assertion failed: !valid(&h, &missing_both)
+
+---- arbitrary_ids_text_extensions_and_duplicate_other_dimensions_do_not_fill_gaps stdout ----
+
+thread 'arbitrary_ids_text_extensions_and_duplicate_other_dimensions_do_not_fill_gaps' (154) panicked at tests/behavioral_schema.rs:309:9:
+unknown dimension Retry
+
+---- resource_assumptions_are_populated_even_when_known_values_already_cover_everything stdout ----
+
+thread 'resource_assumptions_are_populated_even_when_known_values_already_cover_everything' (165) panicked at tests/behavioral_schema.rs:275:9:
+missing behavior
+
+
+failures:
+    arbitrary_ids_text_extensions_and_duplicate_other_dimensions_do_not_fill_gaps
+    every_resource_dimension_must_be_covered_on_that_dependency
+    known_behavior_declarations_cannot_be_empty_or_wrongly_typed
+    resource_assumptions_are_populated_even_when_known_values_already_cover_everything
+
+test result: FAILED. 11 passed; 4 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+error: test failed, to rerun pass `--test behavioral_schema`

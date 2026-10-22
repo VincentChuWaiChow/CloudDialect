@@ -40,7 +40,7 @@ This plan builds the `clouddialect-contracts` Rust crate, its bundled JSON Schem
 ---
 
 ## Bounded implementation progress (2026-10-22)
-Implemented/checked prerequisite units:1.2–1.6,1.8–1.11 and2.1–2.3 in the [delivery plan](implementation-plan.md). This includes DTOs, five schema artifacts, seed/index, inventory checks, frozen identity and the actual pinned-engine loader, not all validators or full conformance. Behavioral schema unit1.7 retains the requirement2.2 resource-completeness implementation gap; its precise repair contract is now user-approved. Canonical checkmarks below remain conservative until every task obligation passes; see [latest catalog evidence](../../../.workflow/ultracode/execution-isolation-implementation/catalog-delivery-report.md) and [contract decisions](../../../.workflow/ultracode/execution-isolation-implementation/contract-reconciliation-decisions.md).
+Implemented/checked prerequisite units:1.2–1.11, resource DTO amendment1.4R and2.1–2.3 in the [delivery plan](implementation-plan.md). This includes resource-specific dimension bindings and all16 known/unknown coverage combinations per dependency, in addition to earlier DTO/schema/catalog work; it is not all validators or full conformance. Canonical checkmarks below remain conservative until every task obligation passes; see [latest resource evidence](../../../.workflow/ultracode/execution-isolation-implementation/resource-contract-report.md), [catalog evidence](../../../.workflow/ultracode/execution-isolation-implementation/catalog-delivery-report.md) and [contract decisions](../../../.workflow/ultracode/execution-isolation-implementation/contract-reconciliation-decisions.md).
 
 ## Tasks
 
@@ -77,7 +77,7 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - `operation_identity`: object with required `call_site` string; optional `wrapper_chain` array of strings.
   - `inputs`, `outputs`: objects (JSON Schema fragments).
   - `side_effects`: array of objects, each requiring a `description` string, optional `evidence_ref` string.
-  - `resource_dependencies`: array of objects, each requiring `identity`, `permissions` (array of strings), `configuration` (object); optional `known_behavior` object with `ordering`, `consistency`, `retry`, `failure` strings; optional `unresolved_assumptions` array of `$ref: "#/$defs/unresolved_assumption"`.
+  - `resource_dependencies`: array of objects, each requiring `identity`, `permissions` (array of strings), `configuration` (object); optional `known_behavior` object with nonempty `ordering`, `consistency`, `retry`, `failure` strings; optional `unresolved_assumptions` array referencing the resource-specific assumption definition. Each such assumption requires nonempty `assumption_id`, `description`, `reason` and `behavior` in `ordering | consistency | retry | failure`. Every dependency must cover each dimension by a known declaration or matching populated assumption; both may coexist. Do not impose this discriminator on generic evidence/obligation assumptions (owner-approved RC-1).
   - `obligations`: array of objects, each requiring `obligation_id` string and `behavioral_fidelity` (enum: `equivalent-within-contract`, `adaptation-required`, `architectural-change-required`, `unsupported`, `unknown`); each obligation must satisfy a `oneOf`: either has `evidence_refs` (array, minItems 1) or has `unresolved_assumption` ($ref to `#/$defs/unresolved_assumption`).
   - `behavioral_notes`: optional array; each entry requires `note_type` (string), `description` (string), `evidence_ref` (string).
   - Extension mechanism: add `"patternProperties": { "^[a-zA-Z][a-zA-Z0-9\\-]+:": {} }` and `"unevaluatedProperties": false`.
@@ -90,6 +90,7 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - A document missing any field in the `required` array fails validation (Req 2.1).
   - A document with an obligation missing both `evidence_refs` and `unresolved_assumption` fails validation (Req 2.4).
   - A document with `behavioral_fidelity` value `"invalid-value"` fails validation (Req 2.3).
+  - Every resource covers all four behavior dimensions independently; missing, unrelated or unbound assumptions cannot cover a dimension or another dependency. All16 known/unknown combinations and partial knowledge with both declarations must validate; malformed declared entries must still fail (Req 2.2, approved RC-1).
   - A document with an unknown community extension key (e.g., `"acme:custom": "value"`) passes validation (Req 2.6, 10.2).
 
 - [ ] 3. Write evidence record JSON Schema
