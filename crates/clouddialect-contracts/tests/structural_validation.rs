@@ -519,7 +519,13 @@ fn projection_preserves_root_dependent_required_names() {
     value["companion"] = json!(true);
     assert_eq!(validate(&v, K::ExtensionRegistry, &value).outcome, O::Warn);
     value.as_object_mut().unwrap().remove("companion");
-    assert_eq!(validate(&v, K::ExtensionRegistry, &value).outcome, O::Fail);
+    let r = validate(&v, K::ExtensionRegistry, &value);
+    assert_eq!(r.outcome, O::Fail);
+    assert!(
+        r.errors
+            .iter()
+            .any(|e| e.field_path.as_deref() == Some("companion"))
+    );
 }
 
 #[test]
@@ -538,4 +544,66 @@ fn changed_root_reference_scope_never_causes_guessed_property_removal() {
     let r = validate(&v, K::EvidenceRecord, &value);
     assert_eq!(r.outcome, O::Fail);
     assert_eq!(r.errors[0].category, E::Unsupported);
+}
+
+#[test]
+fn global_root_predicates_are_not_bypassed_by_discarding_members() {
+    let forbidden = json!({"format_version":"1.0.0","extensions":[],"forbidden_marker":true});
+    let mut mismatches = Vec::new();
+    for (name, constraint, exact, future) in [
+        (
+            "const",
+            json!({"not":{"const":forbidden}}),
+            O::Fail,
+            O::Fail,
+        ),
+        (
+            "enum",
+            json!({"not":{"enum":[forbidden]}}),
+            O::Fail,
+            O::Fail,
+        ),
+        (
+            "maxProperties",
+            json!({"maxProperties":2}),
+            O::Fail,
+            O::Fail,
+        ),
+        (
+            "minProperties",
+            json!({"minProperties":3}),
+            O::Pass,
+            O::Warn,
+        ),
+    ] {
+        let (index, mut material) = parts();
+        let path = "schemas/extension-registry/1.0/schema.json";
+        let mut schema: Value = serde_json::from_slice(&material[path]).unwrap();
+        schema
+            .as_object_mut()
+            .unwrap()
+            .extend(constraint.as_object().unwrap().clone());
+        material.insert(path.to_owned(), serde_json::to_vec(&schema).unwrap());
+        let v = from_parts(index, material);
+        assert_eq!(
+            validate(&v, K::ExtensionRegistry, &forbidden).outcome,
+            exact,
+            "actual exact base {name}"
+        );
+        let mut value = forbidden.clone();
+        value["format_version"] = json!("1.1.0");
+        let got = validate(&v, K::ExtensionRegistry, &value).outcome;
+        if got != future {
+            mismatches.push(format!("{name}: {got:?}, expected {future:?}"));
+        }
+        if name == "const" || name == "enum" {
+            value["forbidden_marker"] = json!(false);
+            assert_eq!(
+                validate(&v, K::ExtensionRegistry, &value).outcome,
+                O::Warn,
+                "allowed predicate control {name}"
+            );
+        }
+    }
+    assert!(mismatches.is_empty(), "{}", mismatches.join("; "));
 }
