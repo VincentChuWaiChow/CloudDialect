@@ -1,0 +1,312 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.clouddialect.io/verification-result/1.0.0/schema.json",
+  "type": "object",
+  "required": [
+    "id",
+    "format_version",
+    "candidate",
+    "pack",
+    "toolchain",
+    "configuration",
+    "binding",
+    "tests"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "minLength": 1
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$",
+      "not": {
+        "pattern": "\\s"
+      }
+    },
+    "format_version": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*)(?:\\.(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*))*)?(?:\\+[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?$",
+      "not": {
+        "pattern": "\\s"
+      }
+    },
+    "candidate": {
+      "$ref": "#/$defs/artifact_ref"
+    },
+    "pack": {
+      "$ref": "#/$defs/versioned_artifact"
+    },
+    "toolchain": {
+      "$ref": "#/$defs/versioned_artifact"
+    },
+    "configuration": {
+      "$ref": "#/$defs/artifact_ref"
+    },
+    "binding": {
+      "$ref": "#/$defs/verification_binding"
+    },
+    "tests": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "test_id",
+          "obligation_ids",
+          "outcome",
+          "origin_identity"
+        ],
+        "properties": {
+          "test_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "obligation_ids": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "outcome": {
+            "type": "string",
+            "enum": [
+              "pass",
+              "fail",
+              "skip",
+              "error"
+            ]
+          },
+          "origin_identity": {
+            "type": "string",
+            "minLength": 1
+          },
+          "failure_description": {
+            "$ref": "#/$defs/failure"
+          }
+        },
+        "unevaluatedProperties": false,
+        "if": {
+          "properties": {
+            "outcome": {
+              "enum": [
+                "fail",
+                "skip",
+                "error"
+              ]
+            }
+          },
+          "required": [
+            "outcome"
+          ]
+        },
+        "then": {
+          "required": [
+            "failure_description"
+          ]
+        }
+      }
+    },
+    "acceptance": {
+      "type": "object",
+      "required": [
+        "approver_identities",
+        "timestamp",
+        "verification_result",
+        "approval_evidence"
+      ],
+      "properties": {
+        "approver_identities": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "Z$"
+        },
+        "verification_result": {
+          "$ref": "#/$defs/document_ref"
+        },
+        "approval_evidence": {
+          "$ref": "#/$defs/artifact_ref"
+        }
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "unevaluatedProperties": false,
+  "$defs": {
+    "content_hash": {
+      "type": "object",
+      "required": [
+        "algorithm",
+        "value"
+      ],
+      "properties": {
+        "algorithm": {
+          "type": "string",
+          "enum": [
+            "sha-256",
+            "sha-384",
+            "sha-512",
+            "sha3-256",
+            "sha3-512"
+          ]
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^[0-9a-f]+$"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "artifact_ref": {
+      "type": "object",
+      "required": [
+        "identity",
+        "content_hash"
+      ],
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1
+        },
+        "content_hash": {
+          "$ref": "#/$defs/content_hash"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "versioned_artifact": {
+      "type": "object",
+      "required": [
+        "id",
+        "version",
+        "content_hash"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*)(?:\\.(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*))*)?(?:\\+[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?$",
+          "not": {
+            "pattern": "\\s"
+          }
+        },
+        "content_hash": {
+          "$ref": "#/$defs/content_hash"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "document_ref": {
+      "type": "object",
+      "required": [
+        "id",
+        "format_version"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "format_version": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*)(?:\\.(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*))*)?(?:\\+[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?$",
+          "not": {
+            "pattern": "\\s"
+          }
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "failure": {
+      "type": "object",
+      "required": [
+        "detail"
+      ],
+      "properties": {
+        "detail": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "verification_binding": {
+      "type": "object",
+      "required": [
+        "tenant_id",
+        "project_id",
+        "run_id",
+        "attempt_id",
+        "input",
+        "dependencies",
+        "suite",
+        "oracle",
+        "policy",
+        "obligation_ids"
+      ],
+      "properties": {
+        "tenant_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "project_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "run_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "attempt_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "input": {
+          "$ref": "#/$defs/artifact_ref"
+        },
+        "dependencies": {
+          "$ref": "#/$defs/artifact_ref"
+        },
+        "suite": {
+          "$ref": "#/$defs/artifact_ref"
+        },
+        "oracle": {
+          "$ref": "#/$defs/artifact_ref"
+        },
+        "policy": {
+          "$ref": "#/$defs/artifact_ref"
+        },
+        "obligation_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "patternProperties": {
+    "^[a-zA-Z][a-zA-Z0-9\\-]+:": {}
+  }
+}

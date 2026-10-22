@@ -8,7 +8,10 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 CRATE = ROOT / "crates" / "clouddialect-contracts"
-DEPENDENCIES = {"boon", "toml", "include_dir", "uuid", "serde", "serde_json", "regex"}
+DEPENDENCIES = {
+    "boon", "toml", "include_dir", "uuid", "serde", "serde_json", "regex",
+    "sha2", "sha3", "semver",
+}
 
 
 class ContractsScaffoldTests(unittest.TestCase):
@@ -41,6 +44,11 @@ class ContractsScaffoldTests(unittest.TestCase):
         self.assertIn("derive", dependencies["serde"]["features"])
         self.assertIn("v4", dependencies["uuid"]["features"])
         self.assertIn("serde", dependencies["toml"]["features"])
+        self.assertIn("raw_value", dependencies["serde_json"]["features"])
+        self.assertEqual(dependencies["sha2"], {"version": "=0.11.1", "default-features": False})
+        self.assertEqual(dependencies["sha3"], {"version": "=0.12.0", "default-features": False})
+        self.assertEqual(dependencies["semver"], "=1.0.28")
+        self.assertEqual(self.manifest()["package"]["rust-version"], "1.88")
 
     def test_public_module_tree_exists(self):
         lib = CRATE / "src" / "lib.rs"

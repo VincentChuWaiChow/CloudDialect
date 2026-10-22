@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.clouddialect.io/extension-registry/1.0.0/schema.json",
+  "type": "object",
+  "required": [
+    "format_version",
+    "extensions"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "minLength": 1
+    },
+    "format_version": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*)(?:\\.(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*))*)?(?:\\+[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?$",
+      "not": {
+        "pattern": "\\s"
+      }
+    },
+    "extensions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "namespace_prefix",
+          "owner",
+          "purpose",
+          "registration_date"
+        ],
+        "properties": {
+          "namespace_prefix": {
+            "type": "string",
+            "pattern": "^[a-zA-Z][a-zA-Z0-9-]+$",
+            "not": {
+              "pattern": "\\s"
+            }
+          },
+          "owner": {
+            "type": "string"
+          },
+          "purpose": {
+            "type": "string"
+          },
+          "registration_date": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    }
+  }
+}

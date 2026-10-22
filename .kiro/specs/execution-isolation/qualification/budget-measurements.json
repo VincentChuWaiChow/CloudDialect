@@ -1,0 +1,55 @@
+{
+  "artifact_kind": "measurement-plan-not-runtime-configuration",
+  "status": "MISSING",
+  "measured": false,
+  "environment_approval": null,
+  "profile_identity": null,
+  "workload": {
+    "description": "Proposed synthetic admission-build-candidate-verification-cleanup with retry/restart and concurrent-capacity variants",
+    "source_digest": null,
+    "fixture_digest": null,
+    "commands": [],
+    "toolchain_digest": null
+  },
+  "environment": {
+    "os_kernel": null,
+    "cpu_memory": null,
+    "storage_filesystem_vfs": null,
+    "isolation_configuration": null
+  },
+  "method": {
+    "collector_digest": null,
+    "clock_basis": null,
+    "counter_scope": null,
+    "sampling_interval": null,
+    "counter_precision": null,
+    "cache_plan": null,
+    "concurrency": null,
+    "repetitions": null,
+    "observer_positive_controls": [],
+    "known_blind_spots": []
+  },
+  "required_metrics": [
+    "cpu_microseconds",
+    "wall_nanoseconds",
+    "aggregate_live_memory_bytes_and_peak",
+    "concurrent_kernel_tasks_including_threads",
+    "cumulative_raw_output_bytes",
+    "live_allocated_workspace_storage_bytes_and_peak",
+    "admitted_attempt_count",
+    "cleanup_nanoseconds",
+    "enabled_external_attempted_calls_by_class",
+    "enabled_model_usage_by_unit"
+  ],
+  "measurements": [],
+  "proposed_limits": null,
+  "approved_limits": null,
+  "owner_approvals": [],
+  "blockers": [
+    "UD-1 selected and approved execution profile missing",
+    "Disposable measurement environment approval missing",
+    "Immutable reference workload, collector and method missing",
+    "Reference and saturation observations missing",
+    "Finite values, accounting semantics and overshoot tolerances not approved"
+  ]
+}

@@ -16,6 +16,31 @@ against registry metadata on October 19, 2026. No third-party source is vendored
 | [toml](https://crates.io/crates/toml/0.9.9) | 0.9.9+spec-1.0.0 | MIT OR Apache-2.0 |
 | [uuid](https://crates.io/crates/uuid/1.28.0) | 1.28.0 | Apache-2.0 OR MIT |
 
+### Approved prerequisite additions (October 22, 2026)
+
+The owner approved these exact direct pins and a Rust 1.88 minimum. SHA-2/SHA-3
+use no default features; SemVer uses its default `std` feature. The existing
+`serde_json =1.0.154` pin now enables `raw_value` for exact encoded extension
+value preservation; its version and license are unchanged.
+
+| Direct dependency and source | Pinned version | Declared license |
+| --- | --- | --- |
+| [sha2](https://crates.io/crates/sha2/0.11.1) | 0.11.1 | MIT OR Apache-2.0 |
+| [sha3](https://crates.io/crates/sha3/0.12.0) | 0.12.0 | MIT OR Apache-2.0 |
+| [semver](https://crates.io/crates/semver/1.0.28) | 1.0.28 | MIT OR Apache-2.0 |
+
+New locked transitive packages: `block-buffer 0.12.1`, `cpufeatures 0.3.1`,
+`crypto-common 0.2.2`, `digest 0.11.3`, `hybrid-array 0.4.15`, `keccak 0.2.2`,
+`sponge-cursor 0.1.0` and `typenum 1.20.1`. Their downloaded manifests declare
+MIT OR Apache-2.0 (`keccak` lists Apache-2.0 OR MIT); the MIT option is selected
+for these additions. License files were present and hashed. All 100 registry
+archives in the resulting lockfile matched their recorded SHA-256 checksums;
+all 89 pre-existing registry identities/checksums were preserved. Detailed
+metadata/license-file evidence is in
+[approved-dependency-admission.json](.workflow/ultracode/execution-isolation-implementation/results/approved-dependency-admission.json).
+This is source/license inventory, not legal clearance, vulnerability screening,
+cryptographic certification or release-integrity proof.
+
 `toml` is pinned to the last release explicitly tagged for TOML 1.0 rather than
 the latest TOML 1.1 release. Cargo ignores build metadata in version requirements;
 the committed `crates/clouddialect-contracts/Cargo.lock` records the full version

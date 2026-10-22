@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schemas.clouddialect.io/catalog-index/1.0.0/schema.json",
+  "format_version": "1.0.0",
+  "schemas": [
+    {
+      "schema_id": "https://schemas.clouddialect.io/behavioral-contract/1.0.0/schema.json",
+      "document_type": "behavioral-contract",
+      "format_version": "1.0.0",
+      "catalog_path": "schemas/behavioral-contract/1.0/schema.json",
+      "status": "current"
+    },
+    {
+      "schema_id": "https://schemas.clouddialect.io/evidence-record/1.0.0/schema.json",
+      "document_type": "evidence-record",
+      "format_version": "1.0.0",
+      "catalog_path": "schemas/evidence-record/1.0/schema.json",
+      "status": "current"
+    },
+    {
+      "schema_id": "https://schemas.clouddialect.io/verification-result/1.0.0/schema.json",
+      "document_type": "verification-result",
+      "format_version": "1.0.0",
+      "catalog_path": "schemas/verification-result/1.0/schema.json",
+      "status": "current"
+    },
+    {
+      "schema_id": "https://schemas.clouddialect.io/catalog-index/1.0.0/schema.json",
+      "document_type": "catalog-index",
+      "format_version": "1.0.0",
+      "catalog_path": "schemas/catalog-index/1.0/schema.json",
+      "status": "current"
+    },
+    {
+      "schema_id": "https://schemas.clouddialect.io/extension-registry/1.0.0/schema.json",
+      "document_type": "extension-registry",
+      "format_version": "1.0.0",
+      "catalog_path": "schemas/extension-registry/1.0/schema.json",
+      "status": "current"
+    }
+  ],
+  "resolver_resources": []
+}
