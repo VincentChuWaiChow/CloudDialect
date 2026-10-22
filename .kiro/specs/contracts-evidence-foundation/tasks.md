@@ -31,7 +31,7 @@ This plan builds the `clouddialect-contracts` Rust crate, its bundled JSON Schem
 
 ## Tasks
 
-- [ ] 1. Initialize `clouddialect-contracts` Rust crate scaffold
+- [x] 1. Initialize `clouddialect-contracts` Rust crate scaffold
   - Create the directory `crates/clouddialect-contracts/` at the repository root.
   - Write `crates/clouddialect-contracts/Cargo.toml` as a library crate (no `[[bin]]` section) with the following pinned dependencies (exact versions to be resolved at implementation time from crates.io, keeping Cargo.lock committed):
     - `boon` — JSON Schema Draft 2020-12 validation (`UrlLoader` trait, MIT/Apache-2.0)
