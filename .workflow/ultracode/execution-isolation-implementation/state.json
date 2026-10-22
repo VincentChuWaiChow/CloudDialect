@@ -2,7 +2,7 @@
   "title": "Execution-isolation implementation",
   "slug": "execution-isolation-implementation",
   "created_at": "2026-10-22T07:25:44.090021+00:00",
-  "updated_at": "2026-10-22T12:52:55.962754+00:00",
+  "updated_at": "2026-10-22T13:35:24.348735+00:00",
   "status": "executing",
   "mode": "delegated",
   "baseline_ref": "3b9cb6bd0ee82dbef3b731a35ce68fc778c4906a",
@@ -21,10 +21,10 @@
     "native_agent_available": true,
     "native_agent_planned": true,
     "native_agent_used": true,
-    "agent_count": 14,
-    "wave_count": 7,
+    "agent_count": 16,
+    "wave_count": 8,
     "no_delegation_reason": "",
-    "notes": "Fourteen cumulative bounded sidecars; latest user-requested rule-location correction adds one static reviewer, no followups/recursion. Generic inherited model/effort unverified.",
+    "notes": "Sixteen cumulative bounded sidecars; packet15 contract review complete; packet16 frozen catalog static review dispatched. No recursion/followups; inherited model/effort unverified.",
     "additional_dispatch_limit": 2,
     "additional_dispatches_used": 2
   },
@@ -130,10 +130,24 @@
       "owner": "read-only-agent",
       "write_scope": [],
       "result_path": "results/14-rule-location-review.md"
+    },
+    {
+      "id": "15-contract-interactions",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/15-contract-interactions.md"
+    },
+    {
+      "id": "16-catalog-integration",
+      "status": "complete-with-required-finding",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/16-catalog-integration.md"
     }
   ],
   "verification": {
-    "status": "94integration+6compilefaildoctests/14Python/check/fmt/Clippy/shellsyntax pass;13sidecars; historicalgradersfailbeforeandafteronoriginalscope/draft checks, not hidden",
+    "status": "Catalog leaves2.2/2.3 verified:114integration+2unit+7compilefaildoctests/15Python/check/fmt/Clippy/8P0content pass; corrected emitted production lines314/330=95.15%; native/conformance/fullvalidators/BG01 unfinished",
     "checks": [
       {
         "name": "scaffold",
@@ -287,7 +301,7 @@
         "evidence": "No approved environment or closed gates; user explicitly authorized draft plans only."
       }
     ],
-    "current_scope": "Rust domain ordering, sharedAIrules and customscript canonical paths/compatibility links; script-final-check-results.json current",
+    "current_scope": "Frozen exact catalog identity and actual embedded-only pinned-engine adapter; one consolidated engine-reserved URI repair; owner contract decisions recorded",
     "planning_checks": [
       {
         "name": "planning",
@@ -520,6 +534,170 @@
         "command": "rtk proxy bash -n scripts/verification/execution-isolation/reproduce-document-checks.sh",
         "exit_code": 0,
         "status": "PASS"
+      }
+    ],
+    "catalog_checks": [
+      {
+        "name": "all-tests",
+        "command": [
+          "rtk",
+          "proxy",
+          "env",
+          "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+          "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+          "cargo",
+          "test",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen"
+        ],
+        "exit_code": 0,
+        "status": "PASS",
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/catalog-verified-all-tests.txt",
+        "raw_log": "/tmp/clouddialect-catalog-verified-all-tests.txt"
+      },
+      {
+        "name": "check",
+        "command": [
+          "rtk",
+          "proxy",
+          "env",
+          "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+          "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+          "cargo",
+          "check",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen",
+          "--all-targets"
+        ],
+        "exit_code": 0,
+        "status": "PASS",
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/catalog-verified-check.txt",
+        "raw_log": "/tmp/clouddialect-catalog-verified-check.txt"
+      },
+      {
+        "name": "fmt",
+        "command": [
+          "rtk",
+          "proxy",
+          "env",
+          "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+          "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+          "cargo",
+          "fmt",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--check"
+        ],
+        "exit_code": 0,
+        "status": "PASS",
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/catalog-verified-fmt.txt",
+        "raw_log": "/tmp/clouddialect-catalog-verified-fmt.txt"
+      },
+      {
+        "name": "clippy",
+        "command": [
+          "rtk",
+          "proxy",
+          "env",
+          "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+          "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+          "cargo",
+          "clippy",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "exit_code": 0,
+        "status": "PASS",
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/catalog-verified-clippy.txt",
+        "raw_log": "/tmp/clouddialect-catalog-verified-clippy.txt"
+      },
+      {
+        "name": "negative-doctests",
+        "command": [
+          "rtk",
+          "proxy",
+          "env",
+          "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+          "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+          "cargo",
+          "test",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen",
+          "--doc",
+          "--",
+          "--nocapture"
+        ],
+        "exit_code": 0,
+        "status": "PASS",
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/catalog-verified-negative-doctests.txt",
+        "raw_log": "/tmp/clouddialect-catalog-verified-negative-doctests.txt"
+      },
+      {
+        "name": "python",
+        "command": [
+          "rtk",
+          "proxy",
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_*.py",
+          "-v"
+        ],
+        "exit_code": 0,
+        "status": "PASS",
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/catalog-verified-python.txt",
+        "raw_log": "/tmp/clouddialect-catalog-verified-python.txt"
+      },
+      {
+        "name": "diff",
+        "command": [
+          "rtk",
+          "proxy",
+          "git",
+          "diff",
+          "--check"
+        ],
+        "exit_code": 0,
+        "status": "PASS",
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/catalog-verified-diff.txt",
+        "raw_log": "/tmp/clouddialect-catalog-verified-diff.txt"
+      },
+      {
+        "name": "p0-content-only",
+        "status": "PASS",
+        "test_count": 8,
+        "evidence": "results/catalog-p0-final.txt",
+        "limits": "Historical draft/scope cases deliberately not claimed green."
+      },
+      {
+        "name": "production-line-coverage",
+        "status": "PASS",
+        "covered": 314,
+        "count": 330,
+        "percent": 95.15151515151516,
+        "evidence": "results/catalog-production-coverage-summary.json"
+      },
+      {
+        "name": "preservation-audit",
+        "status": "PASS",
+        "evidence": "results/catalog-scope-audit.json"
+      },
+      {
+        "name": "native-isolation-offline-qualification",
+        "status": "UNVERIFIED",
+        "reason": "No approved environment or probe authority; gates remain OPEN."
       }
     ]
   },
@@ -824,5 +1002,35 @@
     "rule_bytes": "Unchanged exact4239bytes",
     "tests": "15Python and94Rustintegration+6compilefaildoctests PASS; currentfocusedtarget GREEN",
     "runtime_activation": "UNVERIFIED"
+  },
+  "catalog_delivery": {
+    "started_at": "2026-10-22T13:00:49.631695+00:00",
+    "status": "verified-awaiting-normal-publication",
+    "units": [
+      "2.2",
+      "2.3"
+    ],
+    "authority": "Previously approved remaining Spec1 prerequisite plan; exactsha2/include_dirpinsalreadyapproved; delegatealwaysrequest. New leaf delivery, not reset/retry of earlier tranches.",
+    "elapsed_limit_minutes": 60,
+    "additional_dispatch_limit": 2,
+    "additional_dispatches_used": 2,
+    "cumulative_dispatch_ceiling": 16,
+    "cumulative_dispatches_before": 14,
+    "followups_allowed": 0,
+    "repair_limit": 1,
+    "repairs_consumed": 1,
+    "shared_writes_owner": "parent",
+    "no_native_probes_releases": true,
+    "repair_scope": "catalog.rs, loader.rs, tests/catalog_loading.rs; exact engine-builtin/resource URI collision guard, one consolidated repair.",
+    "owner_contract_decisions": "User approved VC-1 root-only compatibility, RC-1 dimension discriminator/coverage, EX-1 all-five-kind declaration/trusted recognition. Not implemented in catalog leaves.",
+    "verified_at": "2026-10-22T13:35:24.348735+00:00",
+    "elapsed_minutes": 34.578617333333334,
+    "review": "packet16 required built-in byte-substitution finding reproduced/repaired; no independent post-repair signoff",
+    "source_green_commit": "cc65d4a",
+    "current_report": "catalog-delivery-report.md",
+    "final_checks": "results/catalog-verified-check-results.json",
+    "coverage": "results/catalog-production-coverage-summary.json",
+    "scope_audit": "results/catalog-scope-audit.json",
+    "pending_next_tranche": "RC-1/EX-1 amendments approved but not implemented; next reviewer budget and remaining VC-1 version edges asked asynchronously, no inference of approval."
   }
 }

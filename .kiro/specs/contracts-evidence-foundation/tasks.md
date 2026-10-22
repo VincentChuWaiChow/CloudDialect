@@ -12,7 +12,7 @@ This plan builds the `clouddialect-contracts` Rust crate, its bundled JSON Schem
 
 **Current continuation status (2026-10-22):** user approved P0-A–F for implementation planning, then separately authorized the remaining Spec 1 prerequisite units in [implementation-plan.md](implementation-plan.md), TDD and no commits/probes/pushes/releases. User attests this is a new project and approves document/catalog **1.0.0** and crate API **0.1.0** as the initial MVP versions. This is not an independent external-publication audit or security-gate approval. Exact encoded extension JSON value bytes are required; raw_value on the existing pinned serde_json is separately approved.
 
-**Delivery is partial.** DTOs, schemas and catalog inventory are being verified in bounded units; full validators, conformance, snapshot/crypto and delivered downstream compatibility remain unfinished. See the [current run report](../../../.workflow/ultracode/execution-isolation-implementation/final-report.md) for actual evidence and outstanding review findings. Canonical task checkmarks are conservative; BG-01 and Spec 2 UD-1–UD-5 remain OPEN.
+**Delivery is partial.** DTOs, schemas, catalog inventory, frozen SHA-256 snapshot identity and embedded-only schema loading have bounded verification; full validators, artifact hash verification, conformance and delivered downstream compatibility remain unfinished. See the [current run report](../../../.workflow/ultracode/execution-isolation-implementation/final-report.md) for actual evidence and outstanding work. Canonical task checkmarks are conservative; BG-01 and Spec 2 UD-1–UD-5 remain OPEN.
 
 `BehavioralResult` full implementation, the Rust CLI binary, worker isolation, and Python transformation logic are explicitly out of scope.
 
@@ -40,7 +40,7 @@ This plan builds the `clouddialect-contracts` Rust crate, its bundled JSON Schem
 ---
 
 ## Bounded implementation progress (2026-10-22)
-Implemented/checked prerequisite units:1.2–1.6,1.8–1.11 and2.1 in the [delivery plan](implementation-plan.md). This includes DTOs, five schema artifacts, seed/index and inventory checks, not all validators or full conformance. Behavioral schema unit1.7 retains an explicit requirement2.2 resource-completeness gap. Canonical checkmarks below remain conservative until every task obligation passes; see [current evidence](../../../.workflow/ultracode/execution-isolation-implementation/prerequisite-catalog-report.md).
+Implemented/checked prerequisite units:1.2–1.6,1.8–1.11 and2.1–2.3 in the [delivery plan](implementation-plan.md). This includes DTOs, five schema artifacts, seed/index, inventory checks, frozen identity and the actual pinned-engine loader, not all validators or full conformance. Behavioral schema unit1.7 retains the requirement2.2 resource-completeness implementation gap; its precise repair contract is now user-approved. Canonical checkmarks below remain conservative until every task obligation passes; see [latest catalog evidence](../../../.workflow/ultracode/execution-isolation-implementation/catalog-delivery-report.md) and [contract decisions](../../../.workflow/ultracode/execution-isolation-implementation/contract-reconciliation-decisions.md).
 
 ## Tasks
 

@@ -1,0 +1,19 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.34s
+     Running tests/catalog_loading.rs (/tmp/clouddialect-phase-target/debug/deps/catalog_loading-0753ce6a911566cf)
+
+running 1 test
+
+thread 'support_mappings_cannot_claim_any_pinned_engine_builtin_resource' (134) panicked at tests/catalog_loading.rs:326:18:
+built-in byte substitution must be rejected at admission
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test support_mappings_cannot_claim_any_pinned_engine_builtin_resource ... FAILED
+
+failures:
+
+failures:
+    support_mappings_cannot_claim_any_pinned_engine_builtin_resource
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 11 filtered out; finished in 0.02s
+
+error: test failed, to rerun pass `--test catalog_loading`

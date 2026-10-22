@@ -30,7 +30,7 @@ After focused GREEN, every code unit also requires current full crate tests/chec
 File lists below are relative to the contracts crate unless prefixed `catalog/` or `docs/`. Parent alone edits shared lib.rs/mod.rs registration, Cargo.toml/Cargo.lock, common test support and catalog index. Workers, if later separately authorized, may edit only named private files; registration/lock/index writes serialize. Do not add public placeholders for unmet dependencies. Estimates are conditional engineering effort per bounded unit, not elapsed delivery promises; split before dispatch if >4h, >5 files or too many independent concepts. Runtime/security functionality remains Spec 2 scope.
 
 ## Verified progress (2026-10-22)
-Units1.2–1.6,1.8–1.11 and2.1 passed bounded checks; checkmarks below refer only to those unit scopes. Unit1.7 is partial because requirement2.2 per-resource behavior completeness needs a precise representation contract. Whole canonical tasks remain conservative where obligations extend beyond a leaf; full conformance, runtime and BG-01 remain unfinished. [Evidence and limitations](../../../.workflow/ultracode/execution-isolation-implementation/prerequisite-catalog-report.md).
+Units1.2–1.6,1.8–1.11 and2.1–2.3 passed bounded checks; checkmarks below refer only to those unit scopes. Unit1.7 remains partial: the user has now approved the requirement2.2 resource-dimension discriminator/coverage contract, but its DTO/schema repair is not implemented. Whole canonical tasks remain conservative where obligations extend beyond a leaf; full conformance, runtime and BG-01 remain unfinished. [Latest catalog evidence](../../../.workflow/ultracode/execution-isolation-implementation/catalog-delivery-report.md), [approved contract decisions](../../../.workflow/ultracode/execution-isolation-implementation/contract-reconciliation-decisions.md), and [earlier prerequisite evidence](../../../.workflow/ultracode/execution-isolation-implementation/prerequisite-catalog-report.md).
 
 ## Tasks
 
@@ -100,12 +100,12 @@ Units1.2–1.6,1.8–1.11 and2.1 passed bounded checks; checkmarks below refer o
     - Owned: `catalog/index.json`, `src/schema/catalog.rs`, `src/schema/mod.rs`, `tests/catalog_index.rs`.
     - Cases: five app entries; self-schema; exact URI uniqueness; missing/duplicate/path escape; support entries or proved built-ins; relocated immutable bytes. Target: `catalog_index`.
     - Done: catalog inventory matches real files and required support resources; unknown engine built-ins are not silently assumed. Estimate: 2–3h. Dependencies: 1.7, 1.8, 1.9, 1.10.
-  - [ ] 2.2 Frozen snapshot and digest
+  - [x] 2.2 Frozen snapshot and digest
     - Spec1: task 8 subset. Requirements: 9.1–9.5; P0-D.
     - Owned: `src/schema/snapshot.rs`, `src/schema/mod.rs`, `src/lib.rs`, `tests/catalog_snapshot.rs`; parent separately owns any approved dependency/lock change.
     - Cases: exact P0-D digest vectors; path sort/length encoding; duplicate/index alias; overflow; mutation after construction; ambient variables irrelevant. Target: `catalog_snapshot`.
     - Done: immutable admitted parts + deterministic digest; constructor never asserts signer authority. If dependencies and these four files exceed five changed files, separate the approved manifest/lock update before dispatch. Estimate: 3–4h. Dependencies: 1.3, 2.1. Gate: G-DEPS (SHA-256).
-  - [ ] 2.3 Actual resolver and embedding
+  - [x] 2.3 Actual resolver and embedding
     - Spec1: task 8 completion. Requirements: 1.2–1.3, 9.1–9.5.
     - Owned: `src/schema/loader.rs`, `src/schema/embedded.rs`, `src/schema/mod.rs`, `src/lib.rs`, `tests/catalog_loading.rs`.
     - Cases: embedded/explicit snapshot; parsed Value adapter; unknown/file/HTTP URI deny; pinned-engine built-ins; both ambient overrides ignored; format assertions enabled; malformed schema maps safe errors. Target: `catalog_loading`.

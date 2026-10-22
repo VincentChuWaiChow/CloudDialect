@@ -1,0 +1,103 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+error[E0432]: unresolved imports `clouddialect_contracts::CatalogUrlLoader`, `clouddialect_contracts::schema::get_embedded_schema`
+ --> tests/catalog_loading.rs:4:47
+  |
+4 | use clouddialect_contracts::{CatalogSnapshot, CatalogUrlLoader, schema::get_embedded_schema};
+  |                                               ^^^^^^^^^^^^^^^^  ^^^^^^^^-------------------
+  |                                               |                         |
+  |                                               |                         no `get_embedded_schema` in `schema`
+  |                                               no `CatalogUrlLoader` in the root
+
+error[E0599]: no associated function or constant named `embedded` found for struct `CatalogSnapshot` in the current scope
+  --> tests/catalog_loading.rs:76:37
+   |
+76 |     let embedded = CatalogSnapshot::embedded().unwrap();
+   |                                     ^^^^^^^^ associated function or constant not found in `CatalogSnapshot`
+   |
+note: if you're trying to build a new `CatalogSnapshot`, consider using `CatalogSnapshot::from_parts` which returns `Result<CatalogSnapshot, ValidatorError>`
+  --> src/schema/snapshot.rs:28:5
+   |
+28 | /     pub fn from_parts(
+29 | |         index: Vec<u8>,
+30 | |         mut schemas: BTreeMap<String, Vec<u8>>,
+31 | |     ) -> Result<Self, ValidatorError> {
+   | |_____________________________________^
+
+error[E0599]: no associated function or constant named `embedded` found for struct `CatalogSnapshot` in the current scope
+   --> tests/catalog_loading.rs:111:57
+    |
+111 |     let loader = CatalogUrlLoader::new(CatalogSnapshot::embedded().unwrap());
+    |                                                         ^^^^^^^^ associated function or constant not found in `CatalogSnapshot`
+    |
+note: if you're trying to build a new `CatalogSnapshot`, consider using `CatalogSnapshot::from_parts` which returns `Result<CatalogSnapshot, ValidatorError>`
+   --> src/schema/snapshot.rs:28:5
+    |
+ 28 | /     pub fn from_parts(
+ 29 | |         index: Vec<u8>,
+ 30 | |         mut schemas: BTreeMap<String, Vec<u8>>,
+ 31 | |     ) -> Result<Self, ValidatorError> {
+    | |_____________________________________^
+
+error[E0599]: no associated function or constant named `embedded` found for struct `CatalogSnapshot` in the current scope
+   --> tests/catalog_loading.rs:135:56
+    |
+135 |         let (schemas, root) = compile(CatalogSnapshot::embedded().unwrap(), uri, true).unwrap();
+    |                                                        ^^^^^^^^ associated function or constant not found in `CatalogSnapshot`
+    |
+note: if you're trying to build a new `CatalogSnapshot`, consider using `CatalogSnapshot::from_parts` which returns `Result<CatalogSnapshot, ValidatorError>`
+   --> src/schema/snapshot.rs:28:5
+    |
+ 28 | /     pub fn from_parts(
+ 29 | |         index: Vec<u8>,
+ 30 | |         mut schemas: BTreeMap<String, Vec<u8>>,
+ 31 | |     ) -> Result<Self, ValidatorError> {
+    | |_____________________________________^
+
+error[E0599]: no associated function or constant named `embedded` found for struct `CatalogSnapshot` in the current scope
+   --> tests/catalog_loading.rs:152:34
+    |
+152 |         compile(CatalogSnapshot::embedded().unwrap(), uri, true).unwrap();
+    |                                  ^^^^^^^^ associated function or constant not found in `CatalogSnapshot`
+    |
+note: if you're trying to build a new `CatalogSnapshot`, consider using `CatalogSnapshot::from_parts` which returns `Result<CatalogSnapshot, ValidatorError>`
+   --> src/schema/snapshot.rs:28:5
+    |
+ 28 | /     pub fn from_parts(
+ 29 | |         index: Vec<u8>,
+ 30 | |         mut schemas: BTreeMap<String, Vec<u8>>,
+ 31 | |     ) -> Result<Self, ValidatorError> {
+    | |_____________________________________^
+
+error[E0599]: no associated function or constant named `embedded` found for struct `CatalogSnapshot` in the current scope
+   --> tests/catalog_loading.rs:240:30
+    |
+240 |             CatalogSnapshot::embedded().unwrap().digest(),
+    |                              ^^^^^^^^ associated function or constant not found in `CatalogSnapshot`
+    |
+note: if you're trying to build a new `CatalogSnapshot`, consider using `CatalogSnapshot::from_parts` which returns `Result<CatalogSnapshot, ValidatorError>`
+   --> src/schema/snapshot.rs:28:5
+    |
+ 28 | /     pub fn from_parts(
+ 29 | |         index: Vec<u8>,
+ 30 | |         mut schemas: BTreeMap<String, Vec<u8>>,
+ 31 | |     ) -> Result<Self, ValidatorError> {
+    | |_____________________________________^
+
+error[E0599]: no associated function or constant named `embedded` found for struct `CatalogSnapshot` in the current scope
+   --> tests/catalog_loading.rs:248:34
+    |
+248 |         compile(CatalogSnapshot::embedded().unwrap(), EVIDENCE, true).unwrap();
+    |                                  ^^^^^^^^ associated function or constant not found in `CatalogSnapshot`
+    |
+note: if you're trying to build a new `CatalogSnapshot`, consider using `CatalogSnapshot::from_parts` which returns `Result<CatalogSnapshot, ValidatorError>`
+   --> src/schema/snapshot.rs:28:5
+    |
+ 28 | /     pub fn from_parts(
+ 29 | |         index: Vec<u8>,
+ 30 | |         mut schemas: BTreeMap<String, Vec<u8>>,
+ 31 | |     ) -> Result<Self, ValidatorError> {
+    | |_____________________________________^
+
+Some errors have detailed explanations: E0432, E0599.
+For more information about an error, try `rustc --explain E0432`.
+error: could not compile `clouddialect-contracts` (test "catalog_loading") due to 7 previous errors

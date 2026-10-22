@@ -1,0 +1,16 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.90s
+     Running tests/catalog_loading.rs (/tmp/clouddialect-phase-target/debug/deps/catalog_loading-0753ce6a911566cf)
+
+running 9 tests
+test indexed_support_resources_and_local_fragments_use_actual_adapter ... ok
+test format_assertions_are_an_explicit_compiler_setting_not_a_loader_claim ... ok
+test malformed_material_and_invalid_schema_are_not_successful_validation ... ok
+test actual_boon_adapter_returns_only_the_owned_snapshot_values ... ok
+test unresolved_references_and_unknown_meta_schemas_fail_closed_in_real_compiler ... ok
+test embedded_inventory_bytes_and_digest_match_all_explicit_material ... ok
+test unknown_uri_errors_include_exact_uri_without_prefix_or_file_fallback ... ok
+test hostile_ambient_catalog_overrides_do_not_select_any_runtime_material ... ok
+test pinned_engine_compiles_all_embedded_schemas_and_validates_real_catalog_documents ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s

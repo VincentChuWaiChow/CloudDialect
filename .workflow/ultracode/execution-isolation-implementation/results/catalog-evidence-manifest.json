@@ -1,0 +1,106 @@
+[
+  {
+    "name": "snapshot-red",
+    "raw_path": "/tmp/clouddialect-snapshot-red.txt",
+    "raw_sha256": "c506b5f32996bdf10165288ef210b7ec828be0ad42b24afe5db36337e82c76fa",
+    "presentation_path": ".workflow/ultracode/execution-isolation-implementation/results/catalog-snapshot-red.txt",
+    "presentation_sha256": "c506b5f32996bdf10165288ef210b7ec828be0ad42b24afe5db36337e82c76fa",
+    "normalization": "trailing whitespace and blank EOF lines only; internal diagnostic/source-like text unchanged"
+  },
+  {
+    "name": "snapshot-green",
+    "raw_path": "/tmp/clouddialect-snapshot-green.txt",
+    "raw_sha256": "97c6bb4ad478312943f633748d976b1b183ec60f700d045fb054addd6ea909d5",
+    "presentation_path": ".workflow/ultracode/execution-isolation-implementation/results/catalog-snapshot-green.txt",
+    "presentation_sha256": "b83e8cadbe4e1a22d375eccdf11151b96d0df5a97a45e602f1701cbe1bf4e556",
+    "normalization": "trailing whitespace and blank EOF lines only; internal diagnostic/source-like text unchanged"
+  },
+  {
+    "name": "snapshot-full",
+    "raw_path": "/tmp/clouddialect-snapshot-full.txt",
+    "raw_sha256": "95c1a5ccc8fd5fb52eacfb652886f7f76b900824f5b30b09efb7567350492f88",
+    "presentation_path": ".workflow/ultracode/execution-isolation-implementation/results/catalog-snapshot-full.txt",
+    "presentation_sha256": "8f72bb4a5f13011e500bd0145e2f1f11afca9d7e93ac211944ecd257e9720249",
+    "normalization": "trailing whitespace and blank EOF lines only; internal diagnostic/source-like text unchanged"
+  },
+  {
+    "name": "snapshot-negative-doctests",
+    "raw_path": "/tmp/clouddialect-snapshot-negative-doctests.txt",
+    "raw_sha256": "bcff2bf521d8bb733e5c3ecd5f00521b503e5adc74cb44b07ad0bf5ea8cd13d6",
+    "presentation_path": ".workflow/ultracode/execution-isolation-implementation/results/catalog-snapshot-negative-doctests.txt",
+    "presentation_sha256": "d5ce1808773f04ee75447580f4b04fa58358e639d579d47a2496337adefa0360",
+    "normalization": "trailing whitespace and blank EOF lines only; internal diagnostic/source-like text unchanged"
+  },
+  {
+    "name": "loading-red",
+    "raw_path": "/tmp/clouddialect-loading-red.txt",
+    "raw_sha256": "e1dfb43b07d94537dea7b78cf7c5d31ac44556882a8048f48a8afd61114e5432",
+    "presentation_path": ".workflow/ultracode/execution-isolation-implementation/results/catalog-loading-red.txt",
+    "presentation_sha256": "e1dfb43b07d94537dea7b78cf7c5d31ac44556882a8048f48a8afd61114e5432",
+    "normalization": "trailing whitespace and blank EOF lines only; internal diagnostic/source-like text unchanged"
+  },
+  {
+    "name": "loading-green",
+    "raw_path": "/tmp/clouddialect-loading-green.txt",
+    "raw_sha256": "1e38efe391728396aa920e2fc0f34bae0cf3988c325ab98ec21bc9b37d470377",
+    "presentation_path": ".workflow/ultracode/execution-isolation-implementation/results/catalog-loading-green.txt",
+    "presentation_sha256": "026f5a76e3808f8ad140bfc7281a4bdcea2189417dbe7706c449dc87254678bb",
+    "normalization": "trailing whitespace and blank EOF lines only; internal diagnostic/source-like text unchanged"
+  },
+  {
+    "name": "repair-red",
+    "raw_path": "/tmp/clouddialect-catalog-repair-red.txt",
+    "raw_sha256": "ab9babc79a21bf2222dffefc0b3119f2cd0b56dccb2738ab56b0ef767cf98052",
+    "presentation_path": ".workflow/ultracode/execution-isolation-implementation/results/catalog-repair-red.txt",
+    "presentation_sha256": "ab9babc79a21bf2222dffefc0b3119f2cd0b56dccb2738ab56b0ef767cf98052",
+    "normalization": "trailing whitespace and blank EOF lines only; internal diagnostic/source-like text unchanged"
+  },
+  {
+    "name": "repair-green",
+    "raw_path": "/tmp/clouddialect-catalog-repair-green.txt",
+    "raw_sha256": "e2d7a9d37f3af3c45c78e08d278c13415da424a5834cff1e02c9997ab9904965",
+    "presentation_path": ".workflow/ultracode/execution-isolation-implementation/results/catalog-repair-green.txt",
+    "presentation_sha256": "297232248dd53773bc4b46a707a40f127e7cab4af6bb881b2eb463f5a97dd173",
+    "normalization": "trailing whitespace and blank EOF lines only; internal diagnostic/source-like text unchanged"
+  },
+  {
+    "name": "p0-content",
+    "raw_path": "/tmp/clouddialect-catalog-p0-content.txt",
+    "raw_sha256": "4cdd8cf2ae0e2590ba9412027c8102f6a183afe0e3d51f0fafc2ada2e32fbac4",
+    "presentation_path": ".workflow/ultracode/execution-isolation-implementation/results/catalog-p0-content.txt",
+    "presentation_sha256": "4cdd8cf2ae0e2590ba9412027c8102f6a183afe0e3d51f0fafc2ada2e32fbac4",
+    "normalization": "trailing whitespace and blank EOF lines only; internal diagnostic/source-like text unchanged"
+  },
+  {
+    "name": "catalog-final-coverage.json",
+    "raw_path": "/tmp/clouddialect-catalog-final-coverage.json",
+    "raw_sha256": "5f66335daa0dd41f6e3b3caf7488cb8773128bb91e18f84c47f573c9cf3643d1",
+    "retention": "raw full dependency export local only; filtered summary retained in repository"
+  },
+  {
+    "name": "catalog-repaired-coverage.json",
+    "raw_path": "/tmp/clouddialect-catalog-repaired-coverage.json",
+    "raw_sha256": "cd8525ed4ee4ed46bbd68aac235046e7ea198dc79b649c471a132c3512c80b77",
+    "retention": "raw full dependency export local only; filtered summary retained in repository"
+  },
+  {
+    "name": "catalog-snapshot-coverage.json",
+    "raw_path": "/tmp/clouddialect-catalog-snapshot-coverage.json",
+    "raw_sha256": "4bce24efff091950dfebfb7bfb87bef8698656400bdbb59d84b4c24524e343bd",
+    "retention": "raw full dependency export local only; filtered summary retained in repository"
+  },
+  {
+    "name": "catalog-verified-coverage.json",
+    "raw_path": "/tmp/clouddialect-catalog-verified-coverage.json",
+    "raw_sha256": "9bb8b48a8bdd77aeda7b35b2a0b6ab31b760211987e03339ea237282d52c1f98",
+    "retention": "full dependency export local only; filtered source summary and exact line view retained"
+  },
+  {
+    "name": "p0-final",
+    "raw_path": "/tmp/clouddialect-catalog-p0-final.txt",
+    "raw_sha256": "07c8eb5668a04dcce206a68d0a689f8c31b7416d60039302e86befc6edd77db7",
+    "presentation_path": ".workflow/ultracode/execution-isolation-implementation/results/catalog-p0-final.txt",
+    "presentation_sha256": "07c8eb5668a04dcce206a68d0a689f8c31b7416d60039302e86befc6edd77db7",
+    "normalization": "trailing whitespace and blank EOF lines only; internal diagnostic/source-like text unchanged"
+  }
+]

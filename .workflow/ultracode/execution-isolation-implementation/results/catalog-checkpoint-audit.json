@@ -1,0 +1,38 @@
+{
+  "branch": "feat/execution-isolation",
+  "checkpoints": [
+    {
+      "commit": "a60173b",
+      "reachable_from_current_head": true,
+      "ssh_signature_block_present": true
+    },
+    {
+      "commit": "00b70fa",
+      "reachable_from_current_head": true,
+      "ssh_signature_block_present": true
+    },
+    {
+      "commit": "78dcd1a",
+      "reachable_from_current_head": true,
+      "ssh_signature_block_present": true
+    },
+    {
+      "commit": "05b81cf",
+      "reachable_from_current_head": true,
+      "ssh_signature_block_present": true
+    },
+    {
+      "commit": "551e8cd",
+      "reachable_from_current_head": true,
+      "ssh_signature_block_present": true
+    },
+    {
+      "commit": "cc65d4a",
+      "reachable_from_current_head": true,
+      "ssh_signature_block_present": true
+    }
+  ],
+  "signing_policy": "retained SSH signing enabled",
+  "signer_identity": "UNVERIFIED; no configured allowed-signers file",
+  "meaning": "Signature block/reachability does not attest signer identity, release or deployment."
+}

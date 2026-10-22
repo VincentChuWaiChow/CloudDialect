@@ -1,0 +1,139 @@
+[
+  {
+    "name": "all-tests",
+    "command": [
+      "rtk",
+      "proxy",
+      "env",
+      "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+      "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen"
+    ],
+    "exit_code": 0,
+    "status": "PASS",
+    "evidence": ".workflow/ultracode/execution-isolation-implementation/results/catalog-repaired-all-tests.txt",
+    "raw_log": "/tmp/clouddialect-catalog-repaired-all-tests.txt"
+  },
+  {
+    "name": "check",
+    "command": [
+      "rtk",
+      "proxy",
+      "env",
+      "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+      "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+      "cargo",
+      "check",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--all-targets"
+    ],
+    "exit_code": 0,
+    "status": "PASS",
+    "evidence": ".workflow/ultracode/execution-isolation-implementation/results/catalog-repaired-check.txt",
+    "raw_log": "/tmp/clouddialect-catalog-repaired-check.txt"
+  },
+  {
+    "name": "fmt",
+    "command": [
+      "rtk",
+      "proxy",
+      "env",
+      "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+      "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+      "cargo",
+      "fmt",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--check"
+    ],
+    "exit_code": 0,
+    "status": "PASS",
+    "evidence": ".workflow/ultracode/execution-isolation-implementation/results/catalog-repaired-fmt.txt",
+    "raw_log": "/tmp/clouddialect-catalog-repaired-fmt.txt"
+  },
+  {
+    "name": "clippy",
+    "command": [
+      "rtk",
+      "proxy",
+      "env",
+      "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+      "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+      "cargo",
+      "clippy",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--all-targets",
+      "--",
+      "-D",
+      "warnings"
+    ],
+    "exit_code": 101,
+    "status": "FAIL",
+    "evidence": ".workflow/ultracode/execution-isolation-implementation/results/catalog-repaired-clippy.txt",
+    "raw_log": "/tmp/clouddialect-catalog-repaired-clippy.txt"
+  },
+  {
+    "name": "negative-doctests",
+    "command": [
+      "rtk",
+      "proxy",
+      "env",
+      "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+      "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--doc",
+      "--",
+      "--nocapture"
+    ],
+    "exit_code": 0,
+    "status": "PASS",
+    "evidence": ".workflow/ultracode/execution-isolation-implementation/results/catalog-repaired-negative-doctests.txt",
+    "raw_log": "/tmp/clouddialect-catalog-repaired-negative-doctests.txt"
+  },
+  {
+    "name": "python",
+    "command": [
+      "rtk",
+      "proxy",
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "status": "PASS",
+    "evidence": ".workflow/ultracode/execution-isolation-implementation/results/catalog-repaired-python.txt",
+    "raw_log": "/tmp/clouddialect-catalog-repaired-python.txt"
+  },
+  {
+    "name": "diff",
+    "command": [
+      "rtk",
+      "proxy",
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "status": "PASS",
+    "evidence": ".workflow/ultracode/execution-isolation-implementation/results/catalog-repaired-diff.txt",
+    "raw_log": "/tmp/clouddialect-catalog-repaired-diff.txt"
+  }
+]

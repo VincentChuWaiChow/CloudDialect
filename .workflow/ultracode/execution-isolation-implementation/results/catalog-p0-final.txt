@@ -1,0 +1,13 @@
+test_full_embedded_schemas_and_toml_parse (__main__.P0DocumentationTests.test_full_embedded_schemas_and_toml_parse) ... ok
+test_valid_verification_and_required_fields (__main__.P0DocumentationTests.test_valid_verification_and_required_fields) ... ok
+test_nonpass_failure_object_and_unicode_boundaries (__main__.P0DocumentationTests.test_nonpass_failure_object_and_unicode_boundaries) ... ok
+test_binding_test_and_digest_shape_negatives (__main__.P0DocumentationTests.test_binding_test_and_digest_shape_negatives) ... ok
+test_full_semver_boundaries (__main__.P0DocumentationTests.test_full_semver_boundaries) ... ok
+test_approval_shape_is_not_authentication (__main__.P0DocumentationTests.test_approval_shape_is_not_authentication) ... ok
+test_schema_kind_and_api_consistency (__main__.P0DocumentationTests.test_schema_kind_and_api_consistency) ... ok
+test_capability_and_catalog_contracts (__main__.P0DocumentationTests.test_capability_and_catalog_contracts) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.060s
+
+OK
