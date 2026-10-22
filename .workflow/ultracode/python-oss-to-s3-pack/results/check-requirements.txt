@@ -1,0 +1,216 @@
+
+======================================================================
+  REQUIREMENTS VALIDATION REPORT
+  File: .kiro/specs/python-oss-to-s3-pack/requirements.md
+======================================================================
+
+  ✅ [PASS] Line 109: WHEN a workload is proposed THE Pack SHALL record its immutable source identity,
+              ... fixture-use license permission, non-toy functionality, actu
+
+  ✅ [PASS] Line 111: IF a proposed workload contains fewer than three distinct OSS operation types TH
+              ...EN THE Pack SHALL reject it as the reference workload.
+
+  ✅ [PASS] Line 113: WHEN support is declared THE Pack SHALL bind every supported operation and call 
+              ...pattern to the selected workload identity and exact approved
+
+  ✅ [PASS] Line 115: IF no suitable public workload is selected THEN THE Pack SHALL retain UD-1 as un
+              ...resolved pending an approved purpose-built non-toy applicati
+
+  ✅ [PASS] Line 117: WHERE a model is used THE Pack SHALL require evidence that the reference workloa
+              ...d was excluded from that model's training and example data b
+
+  ✅ [PASS] Line 119: WHEN scope is presented THE Pack SHALL limit its coverage claim to the declared 
+              ...reference workload, operations, call patterns, versions and 
+
+  ✅ [PASS] Line 128: WHEN analysis begins THE Pack SHALL identify an immutable baseline containing th
+              ...e declared Python source/configuration tree, resolved depend
+
+  ✅ [PASS] Line 130: WHEN static analysis finishes THE Pack SHALL emit a complete declared-tree inven
+              ...tory with file/span, possible OSS target, wrapper chain, con
+
+  ✅ [PASS] Line 132: IF a target or dependency cannot be established statically THEN THE Pack SHALL r
+              ...ecord it as unknown with source location and a reason instea
+
+  ✅ [PASS] Line 134: WHEN critical dependency and dangerous unsupported-pattern cases are evaluated T
+              ...HE Pack SHALL identify every predeclared critical annotation
+
+  ✅ [PASS] Line 136: WHEN discovery quality is reported THE Pack SHALL publish precision, recall, raw
+              ... counts and unresolved references for the entire annotated c
+
+  ✅ [PASS] Line 138: WHILE analyzing source THE Pack SHALL NEVER import or execute application code o
+              ...utside the Spec 2 execution boundary.
+
+  ✅ [PASS] Line 140: IF an unresolved target or dependency could affect declared migration behavior T
+              ...HEN THE Pack SHALL block candidate acceptance until independ
+
+  ✅ [PASS] Line 149: WHEN an operation enters scope THE Pack SHALL provide its completed Spec 1 contr
+              ...act covering call/wrapper identity, inputs, outputs, side ef
+
+  ✅ [PASS] Line 151: WHEN an obligation is declared THE Pack SHALL attach at least one evidence recor
+              ...d with observed/inferred/unknown provenance and a per-obliga
+
+  ✅ [PASS] Line 153: WHEN a mandatory obligation is admitted for acceptance THE Pack SHALL link it to
+              ... source evidence, an independently approved expected outcome
+
+  ✅ [PASS] Line 155: WHEN a known source/target semantic difference is identified THE Pack SHALL reco
+              ...rd a `behavioral_notes` entry with its concrete effect, evid
+
+  ✅ [PASS] Line 157: WHERE an operation exposes or relies on ETag integrity behavior THE Pack SHALL e
+              ...xplicitly document that S3 ETag is not universally a content
+
+  ✅ [PASS] Line 159: WHERE presigned URLs are in scope THE Pack SHALL document version-specific units
+              ..., precision/range, wrapper conversions and credential-lifeti
+
+  ✅ [PASS] Line 161: WHERE object metadata is in scope THE Pack SHALL record known key/value normaliz
+              ...ation, encoding and retrieval differences as evidenced notes
+
+  ✅ [PASS] Line 163: IF a mandatory obligation has unknown fidelity or unresolved behavior needed for
+              ... acceptance THEN THE Pack SHALL block acceptance even when i
+
+  ✅ [PASS] Line 172: WHEN the deterministic path runs THE Pack SHALL produce its proposal without any
+              ... model call or model-produced runtime decision.
+
+  ✅ [PASS] Line 174: WHEN identical baseline, recipe, contract, scope and toolchain identities are su
+              ...pplied THE Pack SHALL produce byte-identical candidate sourc
+
+  ✅ [PASS] Line 176: WHEN a recipe transforms a supported call pattern THE Pack SHALL associate every
+              ... code/configuration edit with its source location, recipe id
+
+  ✅ [PASS] Line 178: WHEN generating a candidate THE Pack SHALL preserve the original baseline withou
+              ...t in-place source or configuration modification.
+
+  ✅ [PASS] Line 180: IF the actual baseline or declared compatibility differs from the admitted ident
+              ...ities THEN THE Pack SHALL refuse the transformation before a
+
+  ✅ [PASS] Line 182: IF the candidate still contains an unaccounted mandatory OSS dependency or requi
+              ...res an unsupported pattern THEN THE Pack SHALL expose a non-
+
+  ✅ [PASS] Line 191: IF UD-4 is unresolved or AI is disabled THEN THE Pack SHALL keep model-assisted 
+              ...execution unavailable while preserving the deterministic pat
+
+  ✅ [PASS] Line 193: WHERE AI assistance is proposed THE Pack SHALL require an approved bounded case 
+              ...set, model/configuration identity, holdout evidence, allowed
+
+  ✅ [PASS] Line 195: WHEN AI benefit is evaluated THE Pack SHALL compare against the deterministic ba
+              ...seline under identical frozen eligibility, obligations, acce
+
+  ✅ [PASS] Line 197: IF the approved comparison shows no measurable benefit THEN THE Pack SHALL exclu
+              ...de AI from the qualified profile.
+
+  ✅ [PASS] Line 199: WHERE a model proposes a patch THE Pack SHALL treat it as an untrusted candidate
+              ... with no authority to change the independent oracle, accepta
+
+  ✅ [PASS] Line 201: WHERE external model processing is enabled THE Pack SHALL use only Spec 2's appr
+              ...oved egress/data policy without transmitting credentials or 
+
+  ✅ [PASS] Line 210: WHEN verification is prepared THE Pack SHALL bind a suite and oracle assets auth
+              ...ored outside the patch-writing path, with recorded origin/re
+
+  ✅ [PASS] Line 212: WHEN a candidate is accepted THE Pack SHALL require passing results for every ma
+              ...ndatory functional, permission-denial and failure-behavior t
+
+  ✅ [PASS] Line 214: IF only local mocks, emulators or offline fixtures ran THEN THE Pack SHALL label
+              ... their evidence local-only rather than integration-verified 
+
+  ✅ [PASS] Line 216: WHEN a real-service integration claim is made THE Pack SHALL include observed ev
+              ...idence from the declared source and target environments, sco
+
+  ✅ [PASS] Line 218: WHEN a critical seeded defect is submitted THE Pack SHALL reject or block the ca
+              ...ndidate without recording acceptance.
+
+  ✅ [PASS] Line 220: WHEN verification terminates with intact trusted result/audit linkage THE Pack S
+              ...HALL produce an upstream-compatible completed `BehavioralRes
+
+  ✅ [PASS] Line 222: IF any critical false acceptance is observed THEN THE Pack SHALL mark that pack/
+              ...version unqualified regardless of later repair or aggregate 
+
+  ✅ [PASS] Line 224: WHEN verifier integrity is qualified THE Pack SHALL demonstrate acceptance of an
+              ... independently confirmed valid positive control as well as r
+
+  ✅ [PASS] Line 226: WHEN the pack/version is qualified THE Pack SHALL demonstrate an accepted determ
+              ...inistic pack-produced transformation of the complete declare
+
+  ✅ [PASS] Line 235: WHEN exporting a run THE Pack SHALL include baseline/candidate identities, diff,
+              ... analysis findings, obligation/evidence links, test identiti
+
+  ✅ [PASS] Line 237: WHEN an artifact is linked in a bundle THE Pack SHALL bind its immutable identit
+              ...y to the run/attempt and audit references supplied by Spec 2
+
+  ✅ [PASS] Line 239: WHEN preparing human-readable findings THE Pack SHALL distinguish observed facts
+              ..., inferences and unknowns using their evidence provenance.
+
+  ✅ [PASS] Line 241: WHEN exporting artifacts THE Pack SHALL exclude credential values, usable signed
+              ... URLs, secret-bearing configuration and unauthorized source 
+
+  ✅ [PASS] Line 243: IF required artifacts are missing, corrupt or identity-mismatched THEN THE Pack 
+              ...SHALL label the export incomplete and non-qualifying rather 
+
+  ✅ [PASS] Line 245: WHEN another engineer reproduces qualification THE Pack SHALL provide versioned 
+              ...instructions and non-secret inputs that reproduce the declar
+
+  ✅ [PASS] Line 254: WHEN the pack manifest is prepared THE Pack SHALL populate Spec 1 Requirement 5'
+              ...s TOML format with pack identity/version, source/target cons
+
+  ✅ [PASS] Line 256: WHEN loading the pack THE Pack SHALL validate the manifest and referenced docume
+              ...nts through Spec 1 structural/semantic validation and offlin
+
+  ✅ [PASS] Line 258: IF an analyzed operation, version or call pattern falls outside declared coverag
+              ...e THEN THE Pack SHALL obtain an explicit `unsupported` appli
+
+  ✅ [PASS] Line 260: WHEN support fidelity is declared THE Pack SHALL keep Spec 1 manifest labels (`f
+              ...ull`, `partial`, `unsupported`) distinct from per-obligation
+
+  ✅ [PASS] Line 262: IF a required validation/applicability API or result mapping is absent or incomp
+              ...atible THEN THE Pack SHALL block integration with an upstrea
+
+  ✅ [PASS] Line 271: WHEN an approach comparison is requested THE Pack SHALL freeze corpus identities
+              ..., eligibility, obligations, criticality, acceptance rules, o
+
+  ✅ [PASS] Line 273: WHEN assembling the corpus THE Pack SHALL record independent representativeness 
+              ...review and repository-lineage separation between development
+
+  ✅ [PASS] Line 275: WHEN reporting qualification THE Pack SHALL compute all three required rates wit
+              ...h the units, denominators, zero-denominator and pending-adju
+
+  ✅ [PASS] Line 277: WHEN attempts are reviewed or repaired THE Pack SHALL retain their original acce
+              ...ptance events and charge setup, generation, review, diagnosi
+
+  ✅ [PASS] Line 279: WHEN measurements are published THE Pack SHALL include raw counts, exclusions, u
+              ...nknowns, untested cases, uncertainty and corpus-specific lim
+
+  ✅ [PASS] Line 281: IF an evaluation changes eligibility, oracle or acceptance rules after observing
+              ... outcomes THEN THE Pack SHALL require a new reviewed evaluat
+
+  ✅ [PASS] Line 283: WHEN a pack, recipe, dependency/SDK, contract, suite, rule or relevant environme
+              ...nt identity changes THE Pack SHALL invalidate reuse of quali
+
+  ✅ [PASS] Line 285: WHILE comparison outputs are generated THE Pack SHALL keep evaluation expected o
+              ...utcomes, annotations and mutant answers outside the patch-ge
+
+  ✅ [PASS] Line 294: IF applicability is unsupported THEN THE Pack SHALL report the operation/pattern
+              ..., source location and declared scope without applying an und
+
+  ✅ [PASS] Line 296: IF mandatory evidence, approvals, upstream interfaces or real-service qualificat
+              ...ion inputs are missing THEN THE Pack SHALL report a blocked 
+
+  ✅ [PASS] Line 298: IF transformation is partial or verification fails THEN THE Pack SHALL preserve 
+              ...the reviewable proposal and limitations as non-accepted outp
+
+  ✅ [PASS] Line 300: IF execution is cancelled, exceeds the approved Spec 2 budget or loses trusted a
+              ...udit/result linkage THEN THE Pack SHALL terminate the attemp
+
+  ✅ [PASS] Line 302: WHILE reporting or retrying a run THE Pack SHALL NEVER promote unsupported, bloc
+              ...ked, rejected, stale or incomplete evidence to accepted base
+
+  ✅ [PASS] Line 304: WHEN retry or repair is explicitly authorized THE Pack SHALL create a new linked
+              ... attempt using Spec 2's remaining shared budget without muta
+
+──────────────────────────────────────────────────────────────────────
+  SUMMARY: 67 requirements checked
+    ✅ PASS: 67
+    ⚠️  WARN: 0
+    ❌ FAIL: 0
+
+  ✅ VERDICT: ALL PASS — requirements are well-formed
+
+======================================================================

@@ -1,0 +1,14 @@
+test_consistent_but_cyclic_graph_rejected (__main__.SpecGraderTests.test_consistent_but_cyclic_graph_rejected) ... ok
+test_dropped_dependency_edge_rejected (__main__.SpecGraderTests.test_dropped_dependency_edge_rejected) ... ok
+test_false_evidence_status_rejected (__main__.SpecGraderTests.test_false_evidence_status_rejected) ... ok
+test_false_implementation_completion_rejected (__main__.SpecGraderTests.test_false_implementation_completion_rejected) ... ok
+test_missing_document_rejected (__main__.SpecGraderTests.test_missing_document_rejected) ... ok
+test_missing_shall_rejected (__main__.SpecGraderTests.test_missing_shall_rejected) ... ok
+test_orphan_design_rejected (__main__.SpecGraderTests.test_orphan_design_rejected) ... ok
+test_parallel_file_collision_rejected (__main__.SpecGraderTests.test_parallel_file_collision_rejected) ... ok
+test_valid_documents_pass (__main__.SpecGraderTests.test_valid_documents_pass) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.353s
+
+OK

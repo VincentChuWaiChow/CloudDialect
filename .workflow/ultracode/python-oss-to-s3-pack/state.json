@@ -1,0 +1,106 @@
+{
+  "title": "Python OSS-to-S3 pack specification",
+  "slug": "python-oss-to-s3-pack",
+  "created_at": "2026-10-22T05:10:28.959808+00:00",
+  "updated_at": "2026-10-22T05:37:08.226400+00:00",
+  "status": "completed",
+  "mode": "delegated",
+  "baseline_ref": "fb21cc6a613d63d83a26ce178d98020e57af205f",
+  "risk_level": "medium",
+  "eval_contract": {
+    "level": "inline",
+    "path": "plan.md",
+    "status": "ready"
+  },
+  "approval": {
+    "required": false,
+    "granted": true,
+    "notes": "User requested docs-only sequence; separately approved six-level leaf dependencies within three parent waves for Spec 3."
+  },
+  "delegation": {
+    "native_agent_available": true,
+    "native_agent_planned": true,
+    "native_agent_used": true,
+    "agent_count": 3,
+    "wave_count": 2,
+    "no_delegation_reason": ""
+  },
+  "packets": [
+    {
+      "id": "01-upstream-evaluation",
+      "status": "completed",
+      "owner": "/root/pack_upstream_review",
+      "write_scope": [],
+      "result_path": "results/01-upstream-evaluation.md"
+    },
+    {
+      "id": "02-requirements",
+      "status": "completed",
+      "owner": "/root/pack_requirements_qa",
+      "write_scope": [],
+      "result_path": "results/02-requirements.md"
+    },
+    {
+      "id": "03-integrated",
+      "status": "completed",
+      "owner": "/root/pack_integrated_review",
+      "write_scope": [],
+      "result_path": "results/03-integrated.md"
+    }
+  ],
+  "verification": {
+    "status": "pass",
+    "scope": "Document structure, graph, baseline preservation and existing scaffold regressions only",
+    "checks": [
+      {
+        "name": "requirements",
+        "status": "pass",
+        "exit_code": 0
+      },
+      {
+        "name": "design",
+        "status": "pass",
+        "exit_code": 0
+      },
+      {
+        "name": "tasks",
+        "status": "pass",
+        "exit_code": 0
+      },
+      {
+        "name": "traceability",
+        "status": "pass",
+        "exit_code": 0
+      },
+      {
+        "name": "docs_graph_scope",
+        "status": "pass",
+        "exit_code": 0
+      },
+      {
+        "name": "seven_scaffold_tests",
+        "status": "pass",
+        "exit_code": 0
+      },
+      {
+        "name": "diff_check",
+        "status": "pass",
+        "exit_code": 0
+      }
+    ],
+    "skipped": [
+      "native Kiro/SMT",
+      "migration/runtime/real-service qualification",
+      "Cargo rebuild for docs-only change"
+    ]
+  },
+  "completion_scope": "Conditional documentation only; all product decisions and runtime evidence remain unresolved/MISSING",
+  "usage": {
+    "cumulative_worker_turns": 3,
+    "followups": 0,
+    "replacements": 0,
+    "parent_downstream_repairs": 1,
+    "elapsed_seconds_since_run_record": 1599,
+    "tokens": "UNVERIFIED"
+  }
+}
