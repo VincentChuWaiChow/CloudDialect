@@ -12,12 +12,13 @@ pub mod schema;
 pub mod validator;
 
 pub use schema::{CatalogSnapshot, CatalogUrlLoader};
-pub use validator::{Validate, Validator};
+pub use validator::{Validate, Validator, verify_artifact_hash};
 
 pub use manifest::{
     CapabilityAction, CapabilityDeclaration, CapabilityRequirement, CompatibilitySection,
-    ContractRef, ManifestFidelity, ManifestOutcome, ManifestValidationResult, OperationEntry,
-    PackManifest, PackSection, SchemaRefsSection, SourceSection, TargetSection, ToolchainEntry,
+    ContractRef, ManifestFidelity, ManifestOutcome, ManifestValidationResult, ManifestValidator,
+    OperationEntry, PackManifest, PackSection, SchemaRefsSection, SourceSection, TargetSection,
+    ToolchainEntry, ValidateManifest,
 };
 
 pub use errors::{

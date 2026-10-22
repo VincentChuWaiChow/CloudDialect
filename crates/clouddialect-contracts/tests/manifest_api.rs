@@ -1,4 +1,6 @@
-use clouddialect_contracts::{CatalogSnapshot, ManifestOutcome, ManifestValidator, ValidateManifest};
+use clouddialect_contracts::{
+    CatalogSnapshot, ManifestOutcome, ManifestValidator, ValidateManifest,
+};
 
 #[test]
 fn trait_dispatch_uses_the_real_local_validator_without_authority_projection() {

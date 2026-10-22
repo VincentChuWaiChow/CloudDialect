@@ -183,13 +183,16 @@ impl Validator {
         if let Err(error) = schemas.validate(&view, root) {
             collect_errors(&error, &mut result);
         }
+        let (warnings, errors) = super::extensions::scan_extension_fields(&parsed);
+        result.warnings.extend(warnings);
+        result.errors.extend(errors);
         result
             .errors
             .sort_by(|a, b| (&a.field_path, &a.description).cmp(&(&b.field_path, &b.description)));
         result.errors.dedup();
         result.outcome = if !result.errors.is_empty() {
             StructuralOutcome::Fail
-        } else if !result.warnings.is_empty() {
+        } else if minor_newer {
             StructuralOutcome::Warn
         } else {
             StructuralOutcome::Pass
@@ -237,7 +240,7 @@ fn parse_failure(
     result
 }
 
-fn property_path(parent: &str, key: &str) -> String {
+pub(super) fn property_path(parent: &str, key: &str) -> String {
     let simple = !key.is_empty()
         && key.bytes().enumerate().all(|(i, b)| {
             b.is_ascii_alphabetic()

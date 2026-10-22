@@ -92,7 +92,17 @@ fn reverse_dns_pack_identifier_is_whole_string_ascii_and_dot_separated() {
         input["pack"]["id"] = id.into();
         assert_eq!(validate(&input).outcome, ManifestOutcome::Pass, "{id}");
     }
-    for id in ["", "single", "Io.example", "1a.b", ".a.b", "a..b", "a_b.c", "a.b\n", "é.b"] {
+    for id in [
+        "",
+        "single",
+        "Io.example",
+        "1a.b",
+        ".a.b",
+        "a..b",
+        "a_b.c",
+        "a.b\n",
+        "é.b",
+    ] {
         let mut input = value();
         input["pack"]["id"] = id.into();
         fails_at(&validate(&input), "pack.id", ErrorCategory::Semantic);
@@ -109,19 +119,36 @@ fn all_version_fields_use_full_semver_syntax_without_conflating_spaces() {
         ("schema_refs", "evidence_record_schema_version"),
         ("schema_refs", "verification_result_schema_version"),
     ] {
-        for version in ["1.2.3-rc.1", "1.2.3+build.1", "1.2.3-0", "1.2.3-999999999999999999999999999999999999999"] {
+        for version in [
+            "1.2.3-rc.1",
+            "1.2.3+build.1",
+            "1.2.3-0",
+            "1.2.3-999999999999999999999999999999999999999",
+        ] {
             let mut input = value();
             input[section][field] = version.into();
-            assert_eq!(validate(&input).outcome, ManifestOutcome::Pass, "{section}.{field}: {version}");
+            assert_eq!(
+                validate(&input).outcome,
+                ManifestOutcome::Pass,
+                "{section}.{field}: {version}"
+            );
         }
         for version in ["1.2", "01.2.3", "1.2.3-01", "1.2.3+", "1.2.3-", "1.2.3\n"] {
             let mut input = value();
             input[section][field] = version.into();
-            fails_at(&validate(&input), &format!("{section}.{field}"), ErrorCategory::Version);
+            fails_at(
+                &validate(&input),
+                &format!("{section}.{field}"),
+                ErrorCategory::Version,
+            );
         }
         let mut input = value();
         input[section][field] = "18446744073709551616.0.0".into();
-        fails_at(&validate(&input), &format!("{section}.{field}"), ErrorCategory::UnsupportedVersion);
+        fails_at(
+            &validate(&input),
+            &format!("{section}.{field}"),
+            ErrorCategory::UnsupportedVersion,
+        );
     }
 }
 
@@ -133,7 +160,10 @@ fn fidelity_is_closed_and_executable_operations_need_nonempty_toolchain() {
         assert_eq!(validate(&input).outcome, ManifestOutcome::Pass);
         input.as_table_mut().unwrap().remove("toolchain");
         fails_at(&validate(&input), "toolchain", ErrorCategory::Semantic);
-        input["toolchain"] = toml::Value::Array(vec![]);
+        input
+            .as_table_mut()
+            .unwrap()
+            .insert("toolchain".into(), toml::Value::Array(vec![]));
         fails_at(&validate(&input), "toolchain", ErrorCategory::Semantic);
     }
     for fidelity in ["FULL", "equivalent-within-contract", "full-featured"] {
@@ -141,7 +171,10 @@ fn fidelity_is_closed_and_executable_operations_need_nonempty_toolchain() {
         input["operations"][0]["behavioral_fidelity"] = fidelity.into();
         let result = validate(&input);
         assert_eq!(result.outcome, ManifestOutcome::Fail);
-        assert_eq!(result.structural_errors[0].category, ErrorCategory::Unparseable);
+        assert_eq!(
+            result.structural_errors[0].category,
+            ErrorCategory::Unparseable
+        );
     }
 }
 
@@ -149,7 +182,11 @@ fn fidelity_is_closed_and_executable_operations_need_nonempty_toolchain() {
 fn contract_references_are_exact_closed_shapes_with_nonempty_id_and_semver() {
     let mut input = value();
     input["contracts"]["upload_object"]["id"] = "".into();
-    fails_at(&validate(&input), "contracts.upload_object.id", ErrorCategory::Semantic);
+    fails_at(
+        &validate(&input),
+        "contracts.upload_object.id",
+        ErrorCategory::Semantic,
+    );
     for version in ["1.2.3-rc.1+build.1", "1.2.3-0"] {
         let mut input = value();
         input["contracts"]["upload_object"]["format_version"] = version.into();
@@ -157,15 +194,31 @@ fn contract_references_are_exact_closed_shapes_with_nonempty_id_and_semver() {
     }
     let mut input = value();
     input["contracts"]["upload_object"]["format_version"] = "1.0".into();
-    fails_at(&validate(&input), "contracts.upload_object.format_version", ErrorCategory::Version);
+    fails_at(
+        &validate(&input),
+        "contracts.upload_object.format_version",
+        ErrorCategory::Version,
+    );
     for field in ["id", "format_version"] {
         let mut input = value();
-        input["contracts"]["upload_object"].as_table_mut().unwrap().remove(field);
-        assert_eq!(validate(&input).structural_errors[0].category, ErrorCategory::Unparseable);
+        input["contracts"]["upload_object"]
+            .as_table_mut()
+            .unwrap()
+            .remove(field);
+        assert_eq!(
+            validate(&input).structural_errors[0].category,
+            ErrorCategory::Unparseable
+        );
     }
     let mut input = value();
-    input["contracts"]["upload_object"]["obligations"] = toml::Value::Array(vec![]);
-    assert_eq!(validate(&input).structural_errors[0].category, ErrorCategory::Unparseable);
+    input["contracts"]["upload_object"]
+        .as_table_mut()
+        .unwrap()
+        .insert("obligations".into(), toml::Value::Array(vec![]));
+    assert_eq!(
+        validate(&input).structural_errors[0].category,
+        ErrorCategory::Unparseable
+    );
 }
 
 #[test]
@@ -177,24 +230,59 @@ fn unsupported_operations_remain_accessible_and_need_no_toolchain() {
     let parsed: PackManifest = input.try_into().unwrap();
     assert_eq!(parsed.operations.len(), 1);
     assert_eq!(parsed.operations[0].id, "delete_object");
-    assert_eq!(parsed.operations[0].behavioral_fidelity, ManifestFidelity::Unsupported);
+    assert_eq!(
+        parsed.operations[0].behavioral_fidelity,
+        ManifestFidelity::Unsupported
+    );
 }
 
 #[test]
 fn extensions_preserve_toml_values_but_cannot_shadow_top_level_core_tables() {
-    let extended = format!("{MANIFEST}\n[x]\n\"vendor:counter\" = 9007199254740993\nobserved_at = 2026-10-22T12:00:00Z\nnested = {{ pack = 'opaque' }}\n");
-    assert_eq!(validator().validate_manifest(extended.as_bytes()).outcome, ManifestOutcome::Pass);
+    let extended = format!(
+        "{MANIFEST}\n[x]\n\"vendor:counter\" = 9007199254740993\nobserved_at = 2026-10-22T12:00:00Z\nnested = {{ pack = 'opaque' }}\n"
+    );
+    assert_eq!(
+        validator().validate_manifest(extended.as_bytes()).outcome,
+        ManifestOutcome::Pass
+    );
     let parsed: PackManifest = toml::from_str(&extended).unwrap();
-    assert_eq!(parsed.x.as_ref().unwrap()["vendor:counter"].as_integer(), Some(9007199254740993));
+    assert_eq!(
+        parsed.x.as_ref().unwrap()["vendor:counter"].as_integer(),
+        Some(9007199254740993)
+    );
     assert!(parsed.x.as_ref().unwrap()["observed_at"].is_datetime());
-    for key in ["pack", "source", "target", "schema_refs", "compatibility", "capabilities", "operations", "toolchain", "contracts", "x"] {
+    for key in [
+        "pack",
+        "source",
+        "target",
+        "schema_refs",
+        "compatibility",
+        "capabilities",
+        "operations",
+        "toolchain",
+        "contracts",
+        "x",
+    ] {
         let mut input = value();
-        input["x"] = toml::Value::Table(toml::map::Map::new());
-        input["x"][key] = toml::Value::Boolean(true);
-        fails_at(&validate(&input), &format!("x.{key}"), ErrorCategory::Semantic);
+        input
+            .as_table_mut()
+            .unwrap()
+            .insert("x".into(), toml::Value::Table(toml::map::Map::new()));
+        input["x"]
+            .as_table_mut()
+            .unwrap()
+            .insert(key.into(), toml::Value::Boolean(true));
+        fails_at(
+            &validate(&input),
+            &format!("x.{key}"),
+            ErrorCategory::Semantic,
+        );
     }
     let mut input = value();
-    input["x"] = "not-a-table".into();
+    input
+        .as_table_mut()
+        .unwrap()
+        .insert("x".into(), "not-a-table".into());
     fails_at(&validate(&input), "x", ErrorCategory::Semantic);
 }
 
@@ -218,26 +306,52 @@ fn capability_version_fields_actions_and_operation_references_are_checked_locall
     for version in ["99.0.0", "1.0.1", "1.0.0-rc.1"] {
         let mut input = with_capability();
         input["capabilities"]["format_version"] = version.into();
-        fails_at(&validate(&input), "capabilities.format_version", ErrorCategory::UnsupportedVersion);
+        fails_at(
+            &validate(&input),
+            "capabilities.format_version",
+            ErrorCategory::UnsupportedVersion,
+        );
     }
     let mut input = with_capability();
     input["capabilities"]["format_version"] = "1.0".into();
-    fails_at(&validate(&input), "capabilities.format_version", ErrorCategory::Version);
+    fails_at(
+        &validate(&input),
+        "capabilities.format_version",
+        ErrorCategory::Version,
+    );
     for field in ["id", "operation_id", "resource", "purpose"] {
         let mut input = with_capability();
         input["capabilities"]["requirements"][0][field] = "".into();
-        fails_at(&validate(&input), &format!("capabilities.requirements[0].{field}"), ErrorCategory::Semantic);
+        fails_at(
+            &validate(&input),
+            &format!("capabilities.requirements[0].{field}"),
+            ErrorCategory::Semantic,
+        );
     }
     let mut input = with_capability();
     input["capabilities"]["requirements"][0]["operation_id"] = "not-declared".into();
-    fails_at(&validate(&input), "capabilities.requirements[0].operation_id", ErrorCategory::Semantic);
+    fails_at(
+        &validate(&input),
+        "capabilities.requirements[0].operation_id",
+        ErrorCategory::Semantic,
+    );
     let mut input = with_capability();
-    input["capabilities"]["requirements"].as_array_mut().unwrap().push(capability());
-    fails_at(&validate(&input), "capabilities.requirements[1].id", ErrorCategory::Semantic);
+    input["capabilities"]["requirements"]
+        .as_array_mut()
+        .unwrap()
+        .push(capability());
+    fails_at(
+        &validate(&input),
+        "capabilities.requirements[1].id",
+        ErrorCategory::Semantic,
+    );
     for action in ["*", "Read", "admin"] {
         let mut input = with_capability();
         input["capabilities"]["requirements"][0]["action"] = action.into();
-        assert_eq!(validate(&input).structural_errors[0].category, ErrorCategory::Unparseable);
+        assert_eq!(
+            validate(&input).structural_errors[0].category,
+            ErrorCategory::Unparseable
+        );
     }
 }
 
@@ -246,50 +360,104 @@ fn capability_tables_are_required_closed_and_extensions_never_grant_authority() 
     for field in ["format_version", "requirements"] {
         let mut input = value();
         input["capabilities"].as_table_mut().unwrap().remove(field);
-        assert_eq!(validate(&input).structural_errors[0].category, ErrorCategory::Unparseable);
+        assert_eq!(
+            validate(&input).structural_errors[0].category,
+            ErrorCategory::Unparseable
+        );
     }
     for field in ["id", "operation_id", "action", "resource", "purpose"] {
         let mut input = with_capability();
-        input["capabilities"]["requirements"][0].as_table_mut().unwrap().remove(field);
-        assert_eq!(validate(&input).structural_errors[0].category, ErrorCategory::Unparseable);
+        input["capabilities"]["requirements"][0]
+            .as_table_mut()
+            .unwrap()
+            .remove(field);
+        assert_eq!(
+            validate(&input).structural_errors[0].category,
+            ErrorCategory::Unparseable
+        );
     }
     let mut input = with_capability();
-    input["capabilities"]["requirements"][0]["grant"] = toml::Value::Boolean(true);
-    assert_eq!(validate(&input).structural_errors[0].category, ErrorCategory::Unparseable);
+    input["capabilities"]["requirements"][0]
+        .as_table_mut()
+        .unwrap()
+        .insert("grant".into(), toml::Value::Boolean(true));
+    assert_eq!(
+        validate(&input).structural_errors[0].category,
+        ErrorCategory::Unparseable
+    );
     let mut input = value();
-    input["capabilities"]["grants"] = toml::Value::Array(vec![]);
-    assert_eq!(validate(&input).structural_errors[0].category, ErrorCategory::Unparseable);
+    input["capabilities"]
+        .as_table_mut()
+        .unwrap()
+        .insert("grants".into(), toml::Value::Array(vec![]));
+    assert_eq!(
+        validate(&input).structural_errors[0].category,
+        ErrorCategory::Unparseable
+    );
     // All closed actions may be requested; Spec2 admission, not parsing, denies
     // prohibited worker actions. Resource strings are never expanded here.
-    for action in ["read", "write", "execute", "network", "model", "propose", "approve", "deploy", "delete"] {
+    for action in [
+        "read", "write", "execute", "network", "model", "propose", "approve", "deploy", "delete",
+    ] {
         let mut input = with_capability();
         input["capabilities"]["requirements"][0]["action"] = action.into();
         input["capabilities"]["requirements"][0]["resource"] = "../unresolved/*".into();
         assert_eq!(validate(&input).outcome, ManifestOutcome::Pass);
     }
     let mut input = with_capability();
-    input["x"] = toml::Value::Table(toml::map::Map::new());
-    input["x"]["capabilities"] = capability();
+    input
+        .as_table_mut()
+        .unwrap()
+        .insert("x".into(), toml::Value::Table(toml::map::Map::new()));
+    input["x"]
+        .as_table_mut()
+        .unwrap()
+        .insert("capabilities".into(), capability());
     fails_at(&validate(&input), "x.capabilities", ErrorCategory::Semantic);
     input.as_table_mut().unwrap().remove("capabilities");
-    assert_eq!(validate(&input).structural_errors[0].category, ErrorCategory::Unparseable);
+    assert_eq!(
+        validate(&input).structural_errors[0].category,
+        ErrorCategory::Unparseable
+    );
 }
 
 #[test]
 fn source_and_toolchain_ranges_follow_cargo_comparator_syntax() {
-    for range in [">=1.2.3, <2.0.0", "^1.2", "~1.2.3", "*", "=1.2.3-rc.1", "1.2.3+build.1"] {
+    for range in [
+        ">=1.2.3, <2.0.0",
+        "^1.2",
+        "~1.2.3",
+        "*",
+        "=1.2.3-rc.1",
+        "1.2.3+build.1",
+    ] {
         let mut input = value();
         input["source"]["language_version_range"] = range.into();
         input["toolchain"][0]["version_range"] = range.into();
         assert_eq!(validate(&input).outcome, ManifestOutcome::Pass, "{range}");
     }
-    for range in ["", ">=1.0 <2.0", "1.0.0 || 2.0.0", "1.0.0 - 2.0.0", "@1.0.0", "1.2.3-01"] {
+    for range in [
+        "",
+        ">=1.0 <2.0",
+        "1.0.0 || 2.0.0",
+        "1.0.0 - 2.0.0",
+        "@1.0.0",
+        "1.2.3-01",
+    ] {
         let mut input = value();
         input["source"]["language_version_range"] = range.into();
-        fails_at(&validate(&input), "source.language_version_range", ErrorCategory::Semantic);
+        fails_at(
+            &validate(&input),
+            "source.language_version_range",
+            ErrorCategory::Semantic,
+        );
         let mut input = value();
         input["toolchain"][0]["version_range"] = range.into();
-        fails_at(&validate(&input), "toolchain[0].version_range", ErrorCategory::Semantic);
+        fails_at(
+            &validate(&input),
+            "toolchain[0].version_range",
+            ErrorCategory::Semantic,
+        );
     }
 }
 
@@ -297,44 +465,101 @@ fn source_and_toolchain_ranges_follow_cargo_comparator_syntax() {
 fn malformed_utf8_toml_shapes_unknown_fields_and_duplicates_fail_without_input_leaks() {
     let parser = validator();
     let invalid_utf8 = parser.validate_manifest(&[b'#', 0xff]);
-    assert_eq!(invalid_utf8.structural_errors[0].category, ErrorCategory::Unparseable);
+    assert_eq!(
+        invalid_utf8.structural_errors[0].category,
+        ErrorCategory::Unparseable
+    );
     assert_eq!(invalid_utf8.structural_errors[0].byte_offset, Some(1));
-    for input in ["", "pack = [", "secret = 'DO_NOT_ECHO_SECRET'\n", "[pack]\nid = 'DO_NOT_ECHO_SECRET'\nid = 'duplicate'\n"] {
+    for input in [
+        "",
+        "pack = [",
+        "secret = 'DO_NOT_ECHO_SECRET'\n",
+        "[pack]\nid = 'DO_NOT_ECHO_SECRET'\nid = 'duplicate'\n",
+    ] {
         let result = parser.validate_manifest(input.as_bytes());
         assert_eq!(result.outcome, ManifestOutcome::Fail);
         assert_eq!(result.structural_errors.len(), 1);
-        assert_eq!(result.structural_errors[0].category, ErrorCategory::Unparseable);
+        assert_eq!(
+            result.structural_errors[0].category,
+            ErrorCategory::Unparseable
+        );
         assert!(result.semantic_errors.is_empty());
-        assert!(!serde_json::to_string(&result).unwrap().contains("DO_NOT_ECHO_SECRET"));
+        assert!(
+            !serde_json::to_string(&result)
+                .unwrap()
+                .contains("DO_NOT_ECHO_SECRET")
+        );
     }
-    for section in ["pack", "source", "target", "schema_refs", "compatibility", "capabilities", "operations", "contracts"] {
+    for section in [
+        "pack",
+        "source",
+        "target",
+        "schema_refs",
+        "compatibility",
+        "capabilities",
+        "operations",
+        "contracts",
+    ] {
         let mut input = value();
         input.as_table_mut().unwrap().remove(section);
-        assert_eq!(validate(&input).structural_errors[0].category, ErrorCategory::Unparseable);
+        assert_eq!(
+            validate(&input).structural_errors[0].category,
+            ErrorCategory::Unparseable
+        );
     }
     let mut input = value();
-    input["authority"] = "DO_NOT_ECHO_SECRET".into();
+    input
+        .as_table_mut()
+        .unwrap()
+        .insert("authority".into(), "DO_NOT_ECHO_SECRET".into());
     let result = validate(&input);
-    assert_eq!(result.structural_errors[0].category, ErrorCategory::Unparseable);
-    assert!(!serde_json::to_string(&result).unwrap().contains("DO_NOT_ECHO_SECRET"));
+    assert_eq!(
+        result.structural_errors[0].category,
+        ErrorCategory::Unparseable
+    );
+    assert!(
+        !serde_json::to_string(&result)
+            .unwrap()
+            .contains("DO_NOT_ECHO_SECRET")
+    );
 }
 
 #[test]
 fn local_diagnostics_are_deterministic_contextual_and_escape_opaque_contract_keys() {
     let mut input = value();
     input["pack"]["version"] = "1".into();
-    input["contracts"]["z"] = input["contracts"]["upload_object"].clone();
-    input["contracts"]["a"] = input["contracts"]["upload_object"].clone();
+    let reference = input["contracts"]["upload_object"].clone();
+    input["contracts"]
+        .as_table_mut()
+        .unwrap()
+        .insert("z".into(), reference.clone());
+    input["contracts"]
+        .as_table_mut()
+        .unwrap()
+        .insert("a".into(), reference.clone());
     input["contracts"]["a"]["id"] = "".into();
     input["contracts"]["z"]["format_version"] = "1".into();
-    input["contracts"]["unsafe.key\n"] = input["contracts"]["upload_object"].clone();
+    input["contracts"]
+        .as_table_mut()
+        .unwrap()
+        .insert("unsafe.key\n".into(), reference);
     input["contracts"]["unsafe.key\n"]["id"] = "".into();
     let result = validate(&input);
     assert_eq!(result, validate(&input));
-    fails_at(&result, "contracts[\"unsafe.key\\n\"].id", ErrorCategory::Semantic);
+    fails_at(
+        &result,
+        "contracts[\"unsafe.key\\n\"].id",
+        ErrorCategory::Semantic,
+    );
     for error in &result.semantic_errors {
-        assert_eq!(error.document_id.as_deref(), Some("io.clouddialect.python.oss-to-s3"));
-        assert!(error.format_version.is_none(), "pack version is not a document format version");
+        assert_eq!(
+            error.document_id.as_deref(),
+            Some("io.clouddialect.python.oss-to-s3")
+        );
+        assert!(
+            error.format_version.is_none(),
+            "pack version is not a document format version"
+        );
         assert!(error.byte_offset.is_none());
     }
 }
