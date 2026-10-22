@@ -293,6 +293,14 @@ fn collect_errors(error: &ValidationError<'_, '_>, result: &mut StructuralResult
                 push(property_path(&path, key), "Required field is missing");
             }
         }
+        ErrorKind::DependentRequired { missing, .. } | ErrorKind::Dependency { missing, .. } => {
+            for key in missing {
+                push(
+                    property_path(&path, key),
+                    "Required dependent field is missing",
+                );
+            }
+        }
         ErrorKind::AdditionalProperties { got } => {
             for key in got {
                 push(
@@ -331,7 +339,15 @@ fn root_key_schema(base: &Value) -> Option<Value> {
         }
         // Explicit wildcard schemas constrain/evaluate root keys. Keep even
         // malformed values for the real base check; never classify by value.
-        *covers_all |= schema.get("propertyNames").is_some();
+        *covers_all |= [
+            "propertyNames",
+            "const",
+            "enum",
+            "minProperties",
+            "maxProperties",
+        ]
+        .iter()
+        .any(|keyword| schema.get(*keyword).is_some());
         for keyword in ["additionalProperties", "unevaluatedProperties"] {
             if let Some(value) = schema.get(keyword)
                 && value != &Value::Bool(false)
