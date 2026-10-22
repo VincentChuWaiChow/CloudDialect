@@ -3,6 +3,8 @@
 mod behavioral_contract;
 mod evidence;
 mod raw_objects;
+
+pub(crate) use raw_objects::RawFields;
 mod references;
 mod verification;
 

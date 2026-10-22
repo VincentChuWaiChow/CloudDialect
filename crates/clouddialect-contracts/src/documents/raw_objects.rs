@@ -11,7 +11,7 @@ use serde_json::value::RawValue;
 
 pub type RawObject = BTreeMap<String, Box<RawValue>>;
 
-pub(super) struct RawFields(pub(super) RawObject);
+pub(crate) struct RawFields(pub(super) RawObject);
 
 impl<'de> Deserialize<'de> for RawFields {
     fn deserialize<D: Deserializer<'de>>(deserializer: D) -> Result<Self, D::Error> {

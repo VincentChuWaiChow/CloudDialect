@@ -1,7 +1,8 @@
 //! Contracts and evidence foundation for CloudDialect.
 //!
 //! Catalog inventory checks and phase/document declarations are available.
-//! Full validation is not yet implemented; no result authorizes acceptance.
+//! Structural validation is available; later phases remain incomplete.
+//! No result authorizes acceptance.
 
 mod documents;
 
@@ -11,6 +12,7 @@ pub mod schema;
 pub mod validator;
 
 pub use schema::{CatalogSnapshot, CatalogUrlLoader};
+pub use validator::{Validate, Validator};
 
 pub use manifest::{
     CapabilityAction, CapabilityDeclaration, CapabilityRequirement, CompatibilitySection,

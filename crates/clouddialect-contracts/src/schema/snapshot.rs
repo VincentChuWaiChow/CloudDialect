@@ -71,6 +71,10 @@ impl CatalogSnapshot {
         &self.digest
     }
 
+    pub(crate) fn entries(&self) -> &[super::CatalogEntry] {
+        &self.index.schemas
+    }
+
     /// Return immutable bytes only for an exact indexed application/support URI.
     /// Other digest-bound material is never implicitly resolvable.
     pub fn schema_bytes(&self, uri: &str) -> Option<&[u8]> {
