@@ -1,0 +1,254 @@
+
+running 2 tests
+test schema::loader::tests::an_unlisted_uri_has_no_fallback_and_remains_in_the_error ... ok
+test schema::loader::tests::an_indexed_schema_resolves_from_nonempty_frozen_bytes ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+
+
+running 15 tests
+test identifiers_are_lowercase_hyphenated_uuid_v4 ... ok
+test every_resource_dimension_must_be_covered_on_that_dependency ... ok
+test every_required_base_field_is_enforced ... ok
+test a_declared_wrapper_chain_cannot_be_empty ... ok
+test each_obligation_has_exactly_one_nonempty_support_alternative ... ok
+test generic_obligation_assumptions_do_not_require_resource_dimension_bindings ... ok
+test complete_semver_syntax_rejects_leading_zeroes_empty_suffixes_and_whitespace ... ok
+test known_behavior_declarations_cannot_be_empty_or_wrongly_typed ... ok
+test fidelity_is_closed_without_promoting_structural_success ... ok
+test all_known_unknown_combinations_and_partial_knowledge_are_valid ... ok
+test arbitrary_ids_text_extensions_and_duplicate_other_dimensions_do_not_fill_gaps ... ok
+test community_extensions_are_valid_but_invalid_namespace_spellings_are_not ... ok
+test minimal_contract_and_explicit_schema_selector_validate ... ok
+test wrappers_resources_and_open_note_types_keep_their_required_structure ... ok
+test resource_assumptions_are_populated_even_when_known_values_already_cover_everything ... ok
+
+test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+
+
+running 8 tests
+test delivered_inventory_contains_all_five_kinds_and_its_own_schema ... ok
+test exact_uri_uniqueness_and_path_aliasing_span_both_lists ... ok
+test malformed_and_shape_invalid_index_bytes_are_rejected ... ok
+test application_identity_kind_version_and_directory_must_agree ... ok
+test supplied_support_material_and_relocated_bytes_need_no_live_paths ... ok
+test missing_material_and_mismatched_schema_id_fail ... ok
+test pinned_engine_compiles_all_bundled_schemas_with_deny_unknown_loader ... ok
+test noncanonical_paths_and_reserved_index_material_are_rejected ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.11s
+
+
+running 12 tests
+test indexed_support_resources_and_local_fragments_use_actual_adapter ... ok
+test format_assertions_are_an_explicit_compiler_setting_not_a_loader_claim ... ok
+test ordinary_same_host_resources_are_not_rejected_by_a_host_prefix_rule ... ok
+test malformed_material_and_invalid_schema_are_not_successful_validation ... ok
+test actual_boon_adapter_returns_only_the_owned_snapshot_values ... ok
+test hostile_ambient_catalog_overrides_do_not_select_any_runtime_material ... ok
+test unresolved_references_and_unknown_meta_schemas_fail_closed_in_real_compiler ... ok
+test normalized_builtin_aliases_and_fragment_resource_identifiers_are_rejected ... ok
+test embedded_inventory_bytes_and_digest_match_all_explicit_material ... ok
+test unknown_uri_errors_include_exact_uri_without_prefix_or_file_fallback ... ok
+test support_mappings_cannot_claim_any_pinned_engine_builtin_resource ... ok
+test pinned_engine_compiles_all_embedded_schemas_and_validates_real_catalog_documents ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.43s
+
+
+running 8 tests
+test application_kinds_exclude_toml_manifests_and_private_records ... ok
+test empty_registry_seed_is_valid_but_not_identity_authentication ... ok
+test version_syntax_and_entry_metadata_do_not_prove_path_or_uri_admission ... ok
+test registry_entries_require_all_metadata_and_real_dates ... ok
+test index_requires_nonempty_application_list_and_explicit_resolver_resources ... ok
+test registry_has_required_version_list_and_namespace_grammar ... ok
+test resolver_support_mappings_are_separate_exact_shapes ... ok
+test end_of_life_status_requires_a_valid_date ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+
+running 8 tests
+test frozen_bytes_and_identity_do_not_follow_later_caller_mutation ... ok
+test exact_p0_binary_encoding_matches_independent_sha256_vector ... ok
+test utf8_byte_lengths_and_empty_payloads_match_independent_vector ... ok
+test lookup_is_exact_and_constructor_does_not_attest_schema_provenance ... ok
+test every_exact_index_byte_is_bound_even_when_json_values_are_equal ... ok
+test unresolved_and_malformed_parts_do_not_construct_a_snapshot ... ok
+test insertion_order_is_irrelevant_but_length_prefixes_prevent_concatenation_aliases ... ok
+test duplicate_mappings_and_index_aliases_cannot_enter_frozen_material ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 8 tests
+test required_base_fields_and_classification_are_not_defaulted ... ok
+test observed_and_inferred_records_can_preserve_valid_unresolved_assumptions ... ok
+test version_and_identifier_shapes_are_enforced ... ok
+test inferred_reasoning_cannot_be_empty_or_absent ... ok
+test unknown_assumptions_require_nonempty_complete_entries ... ok
+test observed_provenance_requires_both_identities ... ok
+test explicit_classifications_require_their_declared_support ... ok
+test extensions_are_preserved_data_not_implicit_evidence ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+
+
+running 13 tests
+test capability_actions_have_exactly_nine_lowercase_variants ... ok
+test capability_fields_are_required_and_unknown_fields_are_rejected ... ok
+test absent_toolchain_is_representable_for_unsupported_only_packs ... ok
+test deserialization_retains_claims_for_later_validation_not_admission ... ok
+test capabilities_require_both_declared_version_and_explicit_requirement_list ... ok
+test fidelity_is_closed_and_lowercase ... ok
+test complete_manifest_retains_all_sections_and_unsupported_operation ... ok
+test manifest_results_have_only_canonical_local_diagnostic_fields ... ok
+test extensions_preserve_toml_values_but_do_not_populate_capabilities ... ok
+test every_unconditional_core_section_is_required ... ok
+test unknown_core_fields_and_inline_contract_bodies_are_rejected ... ok
+test operation_toolchain_and_contract_entries_require_their_exact_fields ... ok
+test required_nested_core_fields_are_not_defaulted ... ok
+
+test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+
+running 8 tests
+test category_labels_match_the_closed_error_taxonomy ... ok
+test error_preserves_unknown_context_and_zero_offset ... ok
+test malformed_diagnostics_and_missing_phase_data_are_not_silently_defaulted ... ok
+test semantic_outcomes_do_not_gain_warnings_or_acceptance ... ok
+test semantic_result_remains_distinct_from_structural_result ... ok
+test structural_outcomes_use_only_the_three_phase_labels ... ok
+test structural_result_has_only_its_canonical_diagnostic_fields ... ok
+test warning_keeps_the_verbatim_field_name_and_description ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 1 test
+test existing_facades_reexport_the_same_public_definitions ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 7 tests
+test document_kinds_are_explicit_and_closed ... ok
+test document_reference_retains_the_exact_version_without_resolving_it ... ok
+test exact_lookup_and_missing_reference_are_distinct ... ok
+test outage_is_not_normalized_into_a_missing_document ... ok
+test receiver_scope_is_supplied_by_the_caller_not_by_the_document ... ok
+test stored_bytes_and_hash_claims_are_not_rewritten_or_authenticated ... ok
+test unversioned_evidence_lookup_requires_a_single_match_in_the_consumer ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 4 tests
+test declarations_preserve_existing_support_root_openness_and_do_not_attest_registration ... ok
+test support_kinds_allow_absent_empty_and_declaration_only_mandatory_prefixes ... ok
+test support_kinds_reject_invalid_prefix_grammar_and_whitespace ... ok
+test support_kinds_reject_wrong_types_and_duplicate_decoded_prefixes ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+
+running 4 tests
+test explicit_declarations_do_not_normalize_payload_bytes_or_weaken_duplicate_rejection ... ok
+test mandatory_declarations_are_explicit_fields_not_unknown_extension_payloads ... ok
+test absence_empty_lists_and_string_types_round_trip_in_all_existing_dtos ... ok
+test catalog_inventory_retains_unknown_requirements_without_granting_support ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+
+
+running 4 tests
+test all_primary_kinds_allow_absence_empty_and_declaration_only_unknown_prefixes ... ok
+test primary_prefixes_use_exact_ascii_namespace_grammar_without_colons_or_whitespace ... ok
+test adding_the_core_declaration_does_not_open_primary_roots_or_promote_payload_claims ... ok
+test primary_declarations_reject_wrong_types_and_duplicate_decoded_prefixes ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+
+
+running 8 tests
+test resource_lookup_is_exact_not_a_host_prefix_permission ... ok
+test malformed_instance_is_a_parse_error_not_validity_false_or_success ... ok
+test malformed_and_invalid_schema_resources_fail_compilation ... ok
+test unknown_http_and_file_references_use_the_deny_loader ... ok
+test real_pinned_engine_accepts_a_valid_instance ... ok
+test local_refs_and_explicitly_supplied_external_resources_work ... ok
+test format_assertion_switch_has_actual_positive_and_negative_controls ... ok
+test deliberately_incorrect_instance_is_not_a_passing_control ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+
+running 12 tests
+test every_evidence_class_preserves_its_recorded_support ... ok
+test complete_source_contract_round_trips_without_losing_nested_data ... ok
+test encoded_extension_value_bytes_survive_without_reencoding ... ok
+test generic_assumptions_stay_generic_and_dto_decoding_does_not_prove_coverage ... ok
+test extension_values_survive_at_root_and_nested_model_boundaries ... ok
+test resource_assumption_fields_cannot_be_missing_or_duplicated ... ok
+test resource_assumption_extensions_preserve_exact_encoded_value_bytes ... ok
+test source_fidelity_labels_are_closed_and_not_manifest_summaries ... ok
+test resource_assumptions_have_a_typed_closed_dimension_and_existing_payload ... ok
+test typed_data_is_not_mistaken_for_schema_or_behavioral_validation ... ok
+test required_source_fields_and_object_shapes_are_not_fabricated ... ok
+test unknown_assumptions_and_evidence_references_are_distinct_data ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 8 tests
+test completeness_result_has_only_the_three_non_accepting_outcomes ... ok
+test approval_strings_and_unvalidated_projection_data_do_not_become_authority ... ok
+test projected_tests_and_gap_diagnostics_remain_exact_non_accepting_data ... ok
+test test_outcomes_and_failure_object_shape_match_the_proposed_contract ... ok
+test schema_selector_and_extension_values_survive_verification_round_trip ... ok
+test verification_extension_values_keep_their_original_json_encoding ... ok
+test verification_model_retains_every_binding_and_immutable_reference_field ... ok
+test required_verification_fields_are_not_silently_defaulted ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 8 tests
+test tests_are_nonempty_with_explicit_identity_outcome_and_obligations ... ok
+test approval_requires_all_fields_and_utc_z_but_never_authenticates_an_approver ... ok
+test algorithm_names_and_digest_shapes_are_closed_but_hashes_still_need_verification ... ok
+test complete_record_has_structure_not_authenticated_authority ... ok
+test valid_community_extensions_do_not_replace_required_core_fields ... ok
+test required_configuration_context_and_artifact_identities_are_enforced ... ok
+test pack_toolchain_and_document_versions_use_full_semver ... ok
+test every_nonpass_requires_a_bounded_structured_unicode_failure ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.75s
+     Running unittests src/lib.rs (/tmp/clouddialect-phase-coverage-target/debug/deps/clouddialect_contracts-6605992efdf07329)
+     Running tests/behavioral_schema.rs (/tmp/clouddialect-phase-coverage-target/debug/deps/behavioral_schema-7ae9252b3219faf9)
+     Running tests/catalog_index.rs (/tmp/clouddialect-phase-coverage-target/debug/deps/catalog_index-ad856dede90249de)
+     Running tests/catalog_loading.rs (/tmp/clouddialect-phase-coverage-target/debug/deps/catalog_loading-4100cf06e5565b33)
+     Running tests/catalog_schemas.rs (/tmp/clouddialect-phase-coverage-target/debug/deps/catalog_schemas-0d6e22f7e147aaf8)
+     Running tests/catalog_snapshot.rs (/tmp/clouddialect-phase-coverage-target/debug/deps/catalog_snapshot-ad64e43f9c3d39f0)
+     Running tests/conformance.rs (/tmp/clouddialect-phase-coverage-target/debug/deps/conformance-8578d0c356816383)
+     Running tests/evidence_schema.rs (/tmp/clouddialect-phase-coverage-target/debug/deps/evidence_schema-f68f70413b3ae17c)
+     Running tests/manifest_types.rs (/tmp/clouddialect-phase-coverage-target/debug/deps/manifest_types-c2a7814f60309259)
+     Running tests/phase_results.rs (/tmp/clouddialect-phase-coverage-target/debug/deps/phase_results-68e789a47189adcf)
+     Running tests/public_api_compatibility.rs (/tmp/clouddialect-phase-coverage-target/debug/deps/public_api_compatibility-671c3c907113d0a8)
+     Running tests/reference_contracts.rs (/tmp/clouddialect-phase-coverage-target/debug/deps/reference_contracts-9b5505e6dac5d91b)
+     Running tests/required_extension_catalogs.rs (/tmp/clouddialect-phase-coverage-target/debug/deps/required_extension_catalogs-3feabe3b632d82bc)
+     Running tests/required_extension_models.rs (/tmp/clouddialect-phase-coverage-target/debug/deps/required_extension_models-e25419ef3b7e7013)
+     Running tests/required_extensions.rs (/tmp/clouddialect-phase-coverage-target/debug/deps/required_extensions-566f5079071feac5)
+     Running tests/schema_harness.rs (/tmp/clouddialect-phase-coverage-target/debug/deps/schema_harness-902096b2a524bc0e)
+     Running tests/source_document_models.rs (/tmp/clouddialect-phase-coverage-target/debug/deps/source_document_models-b71b80c49c26b615)
+     Running tests/verification_models.rs (/tmp/clouddialect-phase-coverage-target/debug/deps/verification_models-8dde92cbaf7dc767)
+     Running tests/verification_schema.rs (/tmp/clouddialect-phase-coverage-target/debug/deps/verification_schema-e0c61a540e1e3a83)

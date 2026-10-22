@@ -332,7 +332,7 @@ This regex is compiled once at library initialization and reused for all validat
 
 **Mandatory extension blocker:**
 
-If a document contains a field whose key conforms to the extension grammar, and the document explicitly declares that extension as mandatory (via a document-level `required_extensions` array containing the prefix), and the validator does not recognize that extension, the validator emits a blocker that prevents acceptance. Traceability: Requirement 10.4.
+All five JSON document kinds permit optional root `required_extensions`: a unique array of decoded ASCII namespace-prefix strings, minimum two characters, letter start, then alphanumeric/hyphen, no colon or whitespace. Omission/empty declares none. This is a core field, explicitly retained by the four existing DTOs; no registry DTO is invented. If a declared prefix has no trusted implemented semantics, the extension validator emits a separate acceptance blocker even when no matching payload exists. Structural success, catalog/registry membership, claimed ownership and optional payload do not establish recognition. MVP currently implements no extension semantics; later activation requires a real trusted implementation, not declaration data. Existing root openness outside this new field is unchanged. Traceability: Requirement10.4, owner-approved EX-1; blocker logic remains the separate validator unit, not schema acceptance.
 
 **Error response structure (Requirement 11):**
 
@@ -465,6 +465,15 @@ Annotated JSON Schema skeleton (key fields with types and constraints):
     "resource_dependencies", "obligations"
   ],
   "properties": {
+    "required_extensions": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9-]+$",
+        "not": {"pattern": "\\s"}
+      }
+    },
     "$schema": { "type": "string", "minLength": 1 },
     "id": {
       "type": "string",
@@ -683,6 +692,15 @@ Annotated JSON Schema skeleton (key fields with types and constraints):
   "type": "object",
   "required": ["id", "format_version", "claim", "classification"],
   "properties": {
+    "required_extensions": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9-]+$",
+        "not": {"pattern": "\\s"}
+      }
+    },
     "$schema": { "type": "string", "minLength": 1 },
     "id": {
       "type": "string",
@@ -779,6 +797,15 @@ Annotated JSON Schema skeleton (key fields with types and constraints):
     "tests"
   ],
   "properties": {
+    "required_extensions": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9-]+$",
+        "not": {"pattern": "\\s"}
+      }
+    },
     "$schema": { "type": "string", "minLength": 1 },
     "id": {
       "type": "string",
@@ -1133,6 +1160,15 @@ format_version = "<SemVer>"                       # required
   "type": "object",
   "required": ["format_version", "schemas", "resolver_resources"],
   "properties": {
+    "required_extensions": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9-]+$",
+        "not": {"pattern": "\\s"}
+      }
+    },
     "$schema": { "type": "string", "minLength": 1 },
     "format_version": {
       "type": "string",

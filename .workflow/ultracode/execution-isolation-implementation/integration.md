@@ -1,5 +1,8 @@
 # Integration
 
+## Current RC-1 / EX-1 integration
+Owner-approved RC-1 resource bindings/coverage are published at55351ac. EX-1 declaration prerequisites are source-frozen and verified: four existing DTOs, five schemas, three new integration targets; raw values and duplicate detection preserved, no recognition grants. Current136integration+2unit+7compile-fail doctests,15Python,8P0content/check/fmt/Clippy pass; corrected emitted production lines315/330. Packets17/18 bounded static PASS; no required repairs, no independent runtime execution. Fullschema design parity remains explicitly MISS for five pre-existing non-EX behavioral differences; all new properties match. The current handoff is extension-declaration-report.md; older sections below describe historical stages, not current source/authority. Version helper/structural entrypoint/actual mandatory blockers, full conformance and BG-01/native qualification remain unfinished. Eighteen approved sidecars used; no further dispatches without fresh allocation.
+
 ## Accepted
 Two independent read-only research passes; current Context7 Rust/JSON-RPC and SQLite sidecar lookup; primary-source corroboration. Parent-authored six decision records and six qualification/measurement artifacts, all explicitly non-accepting and unqualified.
 

@@ -1,0 +1,30 @@
+{
+  "five_schema_declarations_identical": true,
+  "only_new_root_property_changed_in_schemas": true,
+  "all_prior_root_openness_and_other_constraints_preserved": true,
+  "matching_design_properties": [
+    "behavioral-contract",
+    "evidence-record",
+    "verification-result",
+    "catalog-index"
+  ],
+  "whole_schema_design_parity": "Not claimed; pre-existing non-EX differences preserved.",
+  "declaration": {
+    "type": "array",
+    "uniqueItems": true,
+    "items": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9-]+$",
+      "not": {
+        "pattern": "\\s"
+      }
+    }
+  },
+  "source_schema_sha256": {
+    "catalog/schemas/behavioral-contract/1.0/schema.json": "4a159debf540e781bb4dfed001e31f6c68915876ab0bc9cd9f52ffb143f77f53",
+    "catalog/schemas/evidence-record/1.0/schema.json": "d25acf15e02251188dfca4f34774699a326de1c8ef629c226f34cba6c6158df3",
+    "catalog/schemas/verification-result/1.0/schema.json": "c6246397e248f89fecae1639ae838153a88946b9cdfa15dde15de1b3e6b06ba9",
+    "catalog/schemas/catalog-index/1.0/schema.json": "7c231690c96aa107fe192f6256c6eefbfae7cbb859a55364590738e824395e29",
+    "catalog/schemas/extension-registry/1.0/schema.json": "f968ec530254a23012f6e4941dd21b02870eb48ad6a97ed19a6b101ca6069c2d"
+  }
+}

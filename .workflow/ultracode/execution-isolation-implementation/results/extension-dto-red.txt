@@ -1,0 +1,67 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+error[E0609]: no field `required_extensions` on type `clouddialect_contracts::BehavioralContract`
+  --> tests/required_extension_models.rs:39:11
+   |
+39 |         c.required_extensions.as_deref(),
+   |           ^^^^^^^^^^^^^^^^^^^ unknown field
+   |
+   = note: available fields are: `schema`, `id`, `format_version`, `operation_identity`, `inputs` ... and 6 others
+
+error[E0609]: no field `required_extensions` on type `clouddialect_contracts::EvidenceRecord`
+  --> tests/required_extension_models.rs:47:11
+   |
+47 |         e.required_extensions.as_deref(),
+   |           ^^^^^^^^^^^^^^^^^^^ unknown field
+   |
+   = note: available fields are: `schema`, `id`, `format_version`, `claim`, `classification` ... and 4 others
+
+error[E0609]: no field `required_extensions` on type `clouddialect_contracts::BehavioralContract`
+  --> tests/required_extension_models.rs:48:11
+   |
+48 |         c.required_extensions.as_deref()
+   |           ^^^^^^^^^^^^^^^^^^^ unknown field
+   |
+   = note: available fields are: `schema`, `id`, `format_version`, `operation_identity`, `inputs` ... and 6 others
+
+error[E0609]: no field `required_extensions` on type `clouddialect_contracts::VerificationResult`
+  --> tests/required_extension_models.rs:55:11
+   |
+55 |         v.required_extensions.as_deref(),
+   |           ^^^^^^^^^^^^^^^^^^^ unknown field
+   |
+   = note: available fields are: `schema`, `id`, `format_version`, `candidate`, `pack` ... and 6 others
+
+error[E0609]: no field `required_extensions` on type `clouddialect_contracts::BehavioralContract`
+  --> tests/required_extension_models.rs:56:11
+   |
+56 |         c.required_extensions.as_deref()
+   |           ^^^^^^^^^^^^^^^^^^^ unknown field
+   |
+   = note: available fields are: `schema`, `id`, `format_version`, `operation_identity`, `inputs` ... and 6 others
+
+error[E0609]: no field `required_extensions` on type `clouddialect_contracts::schema::CatalogIndex`
+  --> tests/required_extension_models.rs:63:11
+   |
+63 |         i.required_extensions.as_deref(),
+   |           ^^^^^^^^^^^^^^^^^^^ unknown field
+   |
+   = note: available fields are: `schema`, `format_version`, `schemas`, `resolver_resources`
+
+error[E0609]: no field `required_extensions` on type `clouddialect_contracts::BehavioralContract`
+  --> tests/required_extension_models.rs:64:11
+   |
+64 |         c.required_extensions.as_deref()
+   |           ^^^^^^^^^^^^^^^^^^^ unknown field
+   |
+   = note: available fields are: `schema`, `id`, `format_version`, `operation_identity`, `inputs` ... and 6 others
+
+error[E0609]: no field `required_extensions` on type `clouddialect_contracts::schema::CatalogIndex`
+   --> tests/required_extension_models.rs:147:16
+    |
+147 |         parsed.required_extensions.as_deref(),
+    |                ^^^^^^^^^^^^^^^^^^^ unknown field
+    |
+    = note: available fields are: `schema`, `format_version`, `schemas`, `resolver_resources`
+
+For more information about this error, try `rustc --explain E0609`.
+error: could not compile `clouddialect-contracts` (test "required_extension_models") due to 8 previous errors

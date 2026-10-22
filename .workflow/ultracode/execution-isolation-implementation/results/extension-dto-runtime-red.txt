@@ -1,0 +1,25 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.21s
+     Running tests/required_extension_models.rs (/tmp/clouddialect-phase-target/debug/deps/required_extension_models-832c73ed09d8181f)
+
+running 4 tests
+test mandatory_declarations_are_explicit_fields_not_unknown_extension_payloads ... ok
+test explicit_declarations_do_not_normalize_payload_bytes_or_weaken_duplicate_rejection ... ok
+test absence_empty_lists_and_string_types_round_trip_in_all_existing_dtos ... ok
+test catalog_inventory_retains_unknown_requirements_without_granting_support ... FAILED
+
+failures:
+
+---- catalog_inventory_retains_unknown_requirements_without_granting_support stdout ----
+
+thread 'catalog_inventory_retains_unknown_requirements_without_granting_support' (278) panicked at tests/required_extension_models.rs:159:5:
+assertion failed: CatalogIndex::from_parts(duplicate.as_bytes(), &material).is_err()
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    catalog_inventory_retains_unknown_requirements_without_granting_support
+
+test result: FAILED. 3 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+
+error: test failed, to rerun pass `--test required_extension_models`

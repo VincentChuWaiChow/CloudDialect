@@ -34,6 +34,15 @@ Units1.2–1.11, the approved resource DTO amendment1.4R, and2.1–2.3 passed bo
 
 ## Tasks
 
+### Owner-approved EX-1 declaration leaves
+- [x] EX1-a Existing DTOs: `src/documents/{behavioral_contract,evidence,verification}.rs`, `src/schema/catalog.rs`, `tests/required_extension_models.rs` (five files). Explicit optional string-vector fields, omission/empty retention, raw payload preservation, original-byte catalog typed decoding to reject duplicate core declarations; no recognition grant or new registry DTO.
+- [x] EX1-b Primary schema declarations: three primary schema.json files and `tests/required_extensions.rs` (four files). Optional unique ASCII prefixes, no colon/whitespace, declaration-only valid, malformed types/duplicates invalid; actual closed production adapter. Existing primary root closure unchanged.
+- [x] EX1-c Catalog/registry declarations: their two schema.json files and `tests/required_extension_catalogs.rs` (three files). Same field constraints and declaration-only validity; preserve unrelated support-root openness. Inventory/registration is not implemented recognition.
+
+These are bounded prerequisites to unit2.6, not completion of mandatory-extension blocker logic. All require actual RED/GREEN/full checks and shared final resource/extension review. Requirement/design/task prose and matching properties are parent-owned documentation reconciliation; prior non-EX design differences stay explicit. Scope approval and75-minute/18-reviewer/one-repair limits carry the existing resource tranche, not a reset.
+
+Verified declaration delivery: [EX-1 report](../../../.workflow/ultracode/execution-isolation-implementation/extension-declaration-report.md). Three RED/GREEN pairs, twelve new integration tests and packet18 bounded static PASS; current full suite136integration+2unit+7compile-fail doctests passes. Unit2.6 remains unchecked: no actual mandatory-extension blocker engine or trusted-recognition implementation is delivered by these declarations.
+
 - [ ] 1. Resolve prerequisites and freeze shared data contracts
   - [ ] 1.1 Record activation and tooling dispositions (read-only/draft)
     - Spec1: 1/8/23/26 prerequisite review. Requirements: 1.2, 6.2, 7.2, 9.5, 12.3.

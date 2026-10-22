@@ -2,7 +2,7 @@
   "title": "Execution-isolation implementation",
   "slug": "execution-isolation-implementation",
   "created_at": "2026-10-22T07:25:44.090021+00:00",
-  "updated_at": "2026-10-22T13:54:52.291460+00:00",
+  "updated_at": "2026-10-22T14:29:40.058379+00:00",
   "status": "executing",
   "mode": "delegated",
   "baseline_ref": "3b9cb6bd0ee82dbef3b731a35ce68fc778c4906a",
@@ -21,10 +21,10 @@
     "native_agent_available": true,
     "native_agent_planned": true,
     "native_agent_used": true,
-    "agent_count": 17,
+    "agent_count": 18,
     "wave_count": 8,
     "no_delegation_reason": "",
-    "notes": "User-approved resource/extension tranche adds packet17read-only RC/EX contract review; packet18reserved for final integration. Counts cumulative; no recursion/followups.",
+    "notes": "Owner-approved packets17/18 completed bounded static PASS; cumulative18 ceiling exhausted; zero recursion/followups. No further dispatch without fresh allocation.",
     "additional_dispatch_limit": 2,
     "additional_dispatches_used": 2
   },
@@ -151,10 +151,17 @@
       "owner": "read-only-agent",
       "write_scope": [],
       "result_path": "results/17-resource-extension-review.md"
+    },
+    {
+      "id": "18-extension-integration",
+      "status": "complete",
+      "owner": "readonly-agent",
+      "write_scope": [],
+      "result_path": "results/18-extension-integration.md"
     }
   ],
   "verification": {
-    "status": "RC1:124integration+2unit+7doctests/15Python/8P0content/check/fmt/Clippy pass;314/330productionlines; packet17staticPASS; fullgoal/runtime/BG01 incomplete, priornonRCdesignparityMISS explicit",
+    "status": "EX1declarations:136integration+2unit+7doctests/15Python/8P0content/check/fmt/Clippy pass;315/330productionlines; packet18staticPASS; fullgoal/runtime/BG01 incomplete, priornonEXdesignparityMISS explicit",
     "checks": [
       {
         "name": "scaffold",
@@ -308,7 +315,7 @@
         "evidence": "No approved environment or closed gates; user explicitly authorized draft plans only."
       }
     ],
-    "current_scope": "RC-1 resource-only assumption dimension bindings and per-dependency coverage, not full original goal",
+    "current_scope": "RC1resource model/schema and EX1declaration prerequisites, not actual extension blockers or full goal",
     "planning_checks": [
       {
         "name": "planning",
@@ -858,6 +865,158 @@
         "evidence": ".workflow/ultracode/execution-isolation-implementation/results/resource-final-diff.txt",
         "raw_log": "/tmp/clouddialect-resource-final-diff.txt"
       }
+    ],
+    "extension_declaration_checks": [
+      {
+        "name": "tests",
+        "command": [
+          "rtk",
+          "proxy",
+          "env",
+          "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+          "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+          "cargo",
+          "test",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen"
+        ],
+        "exit_code": 0,
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-final-tests.txt",
+        "raw_path": "/tmp/clouddialect-extension-final-tests.txt"
+      },
+      {
+        "name": "check",
+        "command": [
+          "rtk",
+          "proxy",
+          "env",
+          "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+          "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+          "cargo",
+          "check",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen",
+          "--all-targets"
+        ],
+        "exit_code": 0,
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-final-check.txt",
+        "raw_path": "/tmp/clouddialect-extension-final-check.txt"
+      },
+      {
+        "name": "fmt",
+        "command": [
+          "rtk",
+          "proxy",
+          "env",
+          "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+          "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+          "cargo",
+          "fmt",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--check"
+        ],
+        "exit_code": 0,
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-final-fmt.txt",
+        "raw_path": "/tmp/clouddialect-extension-final-fmt.txt"
+      },
+      {
+        "name": "clippy",
+        "command": [
+          "rtk",
+          "proxy",
+          "env",
+          "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+          "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+          "cargo",
+          "clippy",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "exit_code": 0,
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-final-clippy.txt",
+        "raw_path": "/tmp/clouddialect-extension-final-clippy.txt"
+      },
+      {
+        "name": "negative-doctests",
+        "command": [
+          "rtk",
+          "proxy",
+          "env",
+          "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+          "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+          "cargo",
+          "test",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen",
+          "--doc",
+          "--",
+          "--nocapture"
+        ],
+        "exit_code": 0,
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-final-negative-doctests.txt",
+        "raw_path": "/tmp/clouddialect-extension-final-negative-doctests.txt"
+      },
+      {
+        "name": "python",
+        "command": [
+          "rtk",
+          "proxy",
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_*.py",
+          "-v"
+        ],
+        "exit_code": 0,
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-final-python.txt",
+        "raw_path": "/tmp/clouddialect-extension-final-python.txt"
+      },
+      {
+        "name": "p0-content",
+        "command": [
+          "rtk",
+          "proxy",
+          "python3",
+          "scripts/verification/contracts-evidence-foundation/verify-p0.py",
+          "P0DocumentationTests.test_full_embedded_schemas_and_toml_parse",
+          "P0DocumentationTests.test_valid_verification_and_required_fields",
+          "P0DocumentationTests.test_nonpass_failure_object_and_unicode_boundaries",
+          "P0DocumentationTests.test_binding_test_and_digest_shape_negatives",
+          "P0DocumentationTests.test_full_semver_boundaries",
+          "P0DocumentationTests.test_approval_shape_is_not_authentication",
+          "P0DocumentationTests.test_schema_kind_and_api_consistency",
+          "P0DocumentationTests.test_capability_and_catalog_contracts"
+        ],
+        "exit_code": 0,
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-final-p0-content.txt",
+        "raw_path": "/tmp/clouddialect-extension-final-p0-content.txt"
+      },
+      {
+        "name": "diff",
+        "command": [
+          "rtk",
+          "proxy",
+          "git",
+          "diff",
+          "--check"
+        ],
+        "exit_code": 0,
+        "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-final-diff.txt",
+        "raw_path": "/tmp/clouddialect-extension-final-diff.txt"
+      }
     ]
   },
   "limits": {
@@ -882,7 +1041,7 @@
     "integration_repairs": 1
   },
   "blocked_audit": {
-    "checked_at": "2026-10-22T11:05:19.541417+00:00",
+    "checked_at": "2026-10-22T14:29:40.058379+00:00",
     "previous_turn": "Progress: DTO/schema/manifest/inventory implementation and explicit approvals",
     "current_turn": "Progress: domain organization/rules/commit/push request; prerequisite gates persist",
     "consecutive_goal_turns_with_same_blocker": 0,
@@ -902,9 +1061,9 @@
       "granted": true,
       "scope": "P0-A\u2013F for implementation planning only; plan delivered"
     },
-    "pending_input": "Physical domain scope clarification pending; resource model reconciliation/native approvals remain distinct",
+    "pending_input": "No current contract input needed for2.4/2.5/2.6; reviewer allocation exhausted for further delegated work",
     "safe_authorized_work_remaining": true,
-    "why": "Spec1 remaining validators/conformance and new user-directed organization remain; do not mark full goal blocked or complete"
+    "why": "Meaningful source progress delivered this turn; validators/conformance/native gates remain unfinished. Do not mark original goal complete/blocked."
   },
   "p0": {
     "authorized": true,
@@ -1122,13 +1281,15 @@
     "snapshot_digest_resolver_authentication": "not implemented"
   },
   "current_limits": {
-    "scope": "DDD/rules/publication user request",
-    "elapsed_minutes": 60,
-    "dispatches_total_ceiling": 13,
-    "dispatches_total_used": 13,
+    "scope": "Shared RC1/EX1 resource-extension tranche; no timer or repair reset",
+    "started_at": "2026-10-22T13:41:20.378712+00:00",
+    "elapsed_minutes_limit": 75,
+    "dispatches_total_ceiling": 18,
+    "dispatches_total_used": 18,
     "followups": 0,
+    "recursion": 0,
     "repairs_allowed": 1,
-    "repairs_used": 1
+    "repairs_used": 0
   },
   "ai_rule_location_correction": {
     "requested_by": "Explicit user: AI agent rules should be in .agents/rules",
@@ -1196,19 +1357,19 @@
   },
   "resource_contract_delivery": {
     "started_at": "2026-10-22T13:41:20.378712+00:00",
-    "status": "rc1-verified-awaiting-normal-publication;ex1-next",
+    "status": "RC1published-verified;EX1verified-pending-publication",
     "authority": "Explicit user RC-1 discriminator and per-dimension coverage decision; approved remaining Spec1 implementation/commit/push.",
     "elapsed_limit_minutes": 75,
     "new_dispatches_authorized": 2,
-    "new_dispatches_used": 1,
-    "cumulative_dispatch_count": 17,
+    "new_dispatches_used": 2,
+    "cumulative_dispatch_count": 18,
     "pending_reviewer_request": "User approved two additional read-only reviewers,18 cumulative,75minutes,one repair,zero recursion/followups.",
     "repair_limit": 1,
     "repairs_consumed": 0,
     "owner": "parent",
     "eval": "resource-contract-eval.md",
     "original_goal": "active/incomplete; fullscope retained",
-    "elapsed_minutes": 13.531879133333332,
+    "elapsed_minutes": 48.32799445,
     "dto_green": "79493fe",
     "schema_green": "7f97567",
     "checks": "results/resource-final-checks.json",
@@ -1218,6 +1379,37 @@
     "whole_schema_design_parity": "MISS: five pre-existing non-RC differences unchanged; RC subtrees match as values",
     "additional_dispatch_limit": 2,
     "version_profile_decision": "User approved exact admitted stable versions; root-only newer-stable-MINOR fallback; build metadata ignored for precedence; unindexed PATCH/prerelease and u64overflow UnsupportedVersion; malformed syntax InvalidFormat. Not yet implemented.",
-    "reserved_final_dispatch": 18
+    "reserved_final_dispatch": "18completed bounded static PASS",
+    "rc1_publication_sha": "55351acfca50064c68a82d1ebaca216dc22c05ed",
+    "rc1_publication_receipt": "/tmp/clouddialect-resource-publication.json"
+  },
+  "extension_declaration_delivery": {
+    "started_at": "2026-10-22T14:06:35.864278+00:00",
+    "status": "verified-pending-evidence-commit-and-normal-push",
+    "parent_tranche_start": "2026-10-22T13:41:20.378712+00:00",
+    "elapsed_limit_minutes": 75,
+    "no_timer_reset": true,
+    "owner": "parent",
+    "eval": "extension-declaration-eval.md",
+    "additional_dispatch_reserved": 18,
+    "repair_budget_shared_with_resource": 1,
+    "repairs_consumed": 0,
+    "original_goal": "active/fullscope/incomplete",
+    "final_review": "packet18boundedstaticPASS; no required findings/repairs; no independent test execution",
+    "verified_at": "2026-10-22T14:29:40.058379+00:00",
+    "parent_tranche_elapsed_minutes": 48.32799445,
+    "dto_red": "cec592d",
+    "dto_green": "a28cb70",
+    "primary_red": "5bc422e",
+    "primary_green": "1ae8b66",
+    "support_red": "8cfd8a0",
+    "support_green": "c4a2601",
+    "report": "extension-declaration-report.md",
+    "checks": "results/extension-final-checks.json",
+    "coverage": "results/extension-final-production-coverage.json",
+    "scope_audit": "results/extension-scope-audit.json",
+    "signature_identity": "UNVERIFIED; signing policy retained; reachability/signature blocks checked",
+    "publication_receipt": "/tmp/clouddialect-extension-publication.json follows evidence commit",
+    "blocker_implementation": "not delivered; future2.6"
   }
 }

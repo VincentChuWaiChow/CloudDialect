@@ -431,6 +431,7 @@ The labels below retain the original full-conformance baseline, not a claim that
    - Evidence status: `MISSING`
 
 4. IF an extension field is declared as required for behavioral correctness or security enforcement in a document (i.e., the document explicitly declares the extension as mandatory), AND THE active Validator does not recognize that extension namespace, THEN THE Validator SHALL produce an explicit blocker identifying the unrecognized mandatory extension and SHALL NOT permit the document to be accepted or the associated transformation to be promoted.
+   - Owner-approved EX-1 declaration (2026-10-22): all five JSON document kinds permit optional root `required_extensions`, an array of unique decoded ASCII namespace prefixes without a colon. Omission or empty means none; duplicate strings, malformed prefixes and non-array/non-string values fail structurally. The declaration alone is sufficient to require the separate blocker; a payload is not required. Recognition requires trusted implemented semantics, never catalog/registry membership, ownership or payload claims. A structurally valid unknown mandatory declaration remains structurally valid and separately blocks acceptance.
    - Verification method: Integration test asserting that a document declaring an unrecognized mandatory extension produces a blocker result and cannot be accepted.
    - Evidence status: `MISSING`
 

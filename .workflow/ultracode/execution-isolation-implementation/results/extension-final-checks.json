@@ -1,0 +1,152 @@
+[
+  {
+    "name": "tests",
+    "command": [
+      "rtk",
+      "proxy",
+      "env",
+      "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+      "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen"
+    ],
+    "exit_code": 0,
+    "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-final-tests.txt",
+    "raw_path": "/tmp/clouddialect-extension-final-tests.txt"
+  },
+  {
+    "name": "check",
+    "command": [
+      "rtk",
+      "proxy",
+      "env",
+      "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+      "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+      "cargo",
+      "check",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--all-targets"
+    ],
+    "exit_code": 0,
+    "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-final-check.txt",
+    "raw_path": "/tmp/clouddialect-extension-final-check.txt"
+  },
+  {
+    "name": "fmt",
+    "command": [
+      "rtk",
+      "proxy",
+      "env",
+      "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+      "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+      "cargo",
+      "fmt",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--check"
+    ],
+    "exit_code": 0,
+    "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-final-fmt.txt",
+    "raw_path": "/tmp/clouddialect-extension-final-fmt.txt"
+  },
+  {
+    "name": "clippy",
+    "command": [
+      "rtk",
+      "proxy",
+      "env",
+      "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+      "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+      "cargo",
+      "clippy",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--all-targets",
+      "--",
+      "-D",
+      "warnings"
+    ],
+    "exit_code": 0,
+    "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-final-clippy.txt",
+    "raw_path": "/tmp/clouddialect-extension-final-clippy.txt"
+  },
+  {
+    "name": "negative-doctests",
+    "command": [
+      "rtk",
+      "proxy",
+      "env",
+      "CARGO_HOME=/tmp/clouddialect-phase-cargo",
+      "CARGO_TARGET_DIR=/tmp/clouddialect-phase-target",
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--doc",
+      "--",
+      "--nocapture"
+    ],
+    "exit_code": 0,
+    "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-final-negative-doctests.txt",
+    "raw_path": "/tmp/clouddialect-extension-final-negative-doctests.txt"
+  },
+  {
+    "name": "python",
+    "command": [
+      "rtk",
+      "proxy",
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-final-python.txt",
+    "raw_path": "/tmp/clouddialect-extension-final-python.txt"
+  },
+  {
+    "name": "p0-content",
+    "command": [
+      "rtk",
+      "proxy",
+      "python3",
+      "scripts/verification/contracts-evidence-foundation/verify-p0.py",
+      "P0DocumentationTests.test_full_embedded_schemas_and_toml_parse",
+      "P0DocumentationTests.test_valid_verification_and_required_fields",
+      "P0DocumentationTests.test_nonpass_failure_object_and_unicode_boundaries",
+      "P0DocumentationTests.test_binding_test_and_digest_shape_negatives",
+      "P0DocumentationTests.test_full_semver_boundaries",
+      "P0DocumentationTests.test_approval_shape_is_not_authentication",
+      "P0DocumentationTests.test_schema_kind_and_api_consistency",
+      "P0DocumentationTests.test_capability_and_catalog_contracts"
+    ],
+    "exit_code": 0,
+    "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-final-p0-content.txt",
+    "raw_path": "/tmp/clouddialect-extension-final-p0-content.txt"
+  },
+  {
+    "name": "diff",
+    "command": [
+      "rtk",
+      "proxy",
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-final-diff.txt",
+    "raw_path": "/tmp/clouddialect-extension-final-diff.txt"
+  }
+]

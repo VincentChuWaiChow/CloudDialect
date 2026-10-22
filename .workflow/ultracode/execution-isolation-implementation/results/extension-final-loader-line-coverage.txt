@@ -1,0 +1,111 @@
+    1|       |//! Closed snapshot-backed adapter for the pinned Boon compiler.
+    2|       |
+    3|       |use std::{error::Error, io};
+    4|       |
+    5|       |use boon::UrlLoader;
+    6|       |use serde_json::Value;
+    7|       |
+    8|       |use super::CatalogSnapshot;
+    9|       |
+   10|       |/// Owns frozen bytes; never delegates to a network or live-filesystem loader.
+   11|       |/// Callers must install it before compilation and separately configure the
+   12|       |/// compiler's format assertions. Inventory validity does not attest provenance.
+   13|       |pub struct CatalogUrlLoader {
+   14|       |    snapshot: CatalogSnapshot,
+   15|       |}
+   16|       |
+   17|       |impl CatalogUrlLoader {
+   18|     87|    pub fn new(snapshot: CatalogSnapshot) -> Self {
+   19|     87|        Self { snapshot }
+   20|     87|    }
+  ------------------
+  | _RNvMNtNtCs52vJC7iXCnl_22clouddialect_contracts6schema6loaderNtB2_16CatalogUrlLoader3new:
+  |   18|     85|    pub fn new(snapshot: CatalogSnapshot) -> Self {
+  |   19|     85|        Self { snapshot }
+  |   20|     85|    }
+  ------------------
+  | _RNvMNtNtCs7BwknqFfBN7_22clouddialect_contracts6schema6loaderNtB2_16CatalogUrlLoader3new:
+  |   18|      2|    pub fn new(snapshot: CatalogSnapshot) -> Self {
+  |   19|      2|        Self { snapshot }
+  |   20|      2|    }
+  ------------------
+   21|       |}
+   22|       |
+   23|       |impl UrlLoader for CatalogUrlLoader {
+   24|     65|    fn load(&self, url: &str) -> Result<Value, Box<dyn Error>> {
+   25|     65|        let bytes = self.snapshot.schema_bytes(url).ok_or_else(|| {
+   26|     18|            io::Error::new(
+   27|     18|                io::ErrorKind::NotFound,
+   28|     18|                format!("Unresolvable catalog URI: {url}"),
+   29|       |            )
+   30|     18|        })?;
+  ------------------
+  | _RNCNvXs_NtNtCs52vJC7iXCnl_22clouddialect_contracts6schema6loaderNtB6_16CatalogUrlLoaderNtNtCs7QhBz5h9n3L_4boon6loader9UrlLoader4load0Ba_:
+  |   25|     17|        let bytes = self.snapshot.schema_bytes(url).ok_or_else(|| {
+  |   26|     17|            io::Error::new(
+  |   27|     17|                io::ErrorKind::NotFound,
+  |   28|     17|                format!("Unresolvable catalog URI: {url}"),
+  |   29|       |            )
+  |   30|     17|        })?;
+  ------------------
+  | _RNCNvXs_NtNtCs7BwknqFfBN7_22clouddialect_contracts6schema6loaderNtB6_16CatalogUrlLoaderNtNtCs7QhBz5h9n3L_4boon6loader9UrlLoader4load0Ba_:
+  |   25|      1|        let bytes = self.snapshot.schema_bytes(url).ok_or_else(|| {
+  |   26|      1|            io::Error::new(
+  |   27|      1|                io::ErrorKind::NotFound,
+  |   28|      1|                format!("Unresolvable catalog URI: {url}"),
+  |   29|       |            )
+  |   30|      1|        })?;
+  ------------------
+   31|     47|        Ok(serde_json::from_slice(bytes)?)
+   32|     65|    }
+  ------------------
+  | _RNvXs_NtNtCs52vJC7iXCnl_22clouddialect_contracts6schema6loaderNtB4_16CatalogUrlLoaderNtNtCs7QhBz5h9n3L_4boon6loader9UrlLoader4load:
+  |   24|     63|    fn load(&self, url: &str) -> Result<Value, Box<dyn Error>> {
+  |   25|     63|        let bytes = self.snapshot.schema_bytes(url).ok_or_else(|| {
+  |   26|       |            io::Error::new(
+  |   27|       |                io::ErrorKind::NotFound,
+  |   28|       |                format!("Unresolvable catalog URI: {url}"),
+  |   29|       |            )
+  |   30|     17|        })?;
+  |   31|     46|        Ok(serde_json::from_slice(bytes)?)
+  |   32|     63|    }
+  ------------------
+  | _RNvXs_NtNtCs7BwknqFfBN7_22clouddialect_contracts6schema6loaderNtB4_16CatalogUrlLoaderNtNtCs7QhBz5h9n3L_4boon6loader9UrlLoader4load:
+  |   24|      2|    fn load(&self, url: &str) -> Result<Value, Box<dyn Error>> {
+  |   25|      2|        let bytes = self.snapshot.schema_bytes(url).ok_or_else(|| {
+  |   26|       |            io::Error::new(
+  |   27|       |                io::ErrorKind::NotFound,
+  |   28|       |                format!("Unresolvable catalog URI: {url}"),
+  |   29|       |            )
+  |   30|      1|        })?;
+  |   31|      1|        Ok(serde_json::from_slice(bytes)?)
+  |   32|      2|    }
+  ------------------
+   33|       |}
+   34|       |
+   35|       |#[cfg(test)]
+   36|       |mod tests {
+   37|       |    use super::*;
+   38|       |
+   39|       |    #[test]
+   40|      1|    fn an_indexed_schema_resolves_from_nonempty_frozen_bytes() {
+   41|      1|        let snapshot = CatalogSnapshot::embedded().unwrap();
+   42|      1|        let uri = "https://schemas.clouddialect.io/evidence-record/1.0.0/schema.json";
+   43|      1|        assert!(!snapshot.schema_bytes(uri).unwrap().is_empty());
+   44|      1|        assert!(
+   45|      1|            CatalogUrlLoader::new(snapshot)
+   46|      1|                .load(uri)
+   47|      1|                .unwrap()
+   48|      1|                .is_object()
+   49|       |        );
+   50|      1|    }
+   51|       |
+   52|       |    #[test]
+   53|      1|    fn an_unlisted_uri_has_no_fallback_and_remains_in_the_error() {
+   54|      1|        let uri = "https://schemas.clouddialect.io/unlisted/1.0.0/schema.json";
+   55|      1|        let error = CatalogUrlLoader::new(CatalogSnapshot::embedded().unwrap())
+   56|      1|            .load(uri)
+   57|      1|            .unwrap_err();
+   58|      1|        assert!(error.to_string().contains(uri));
+   59|      1|    }
+   60|       |}

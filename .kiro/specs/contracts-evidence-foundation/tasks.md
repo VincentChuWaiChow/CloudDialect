@@ -284,9 +284,11 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
     - For each key containing `:`, extract the prefix (everything before the first `:`).
     - Check the prefix is valid ASCII extension prefix grammar (`^[a-zA-Z][a-zA-Z0-9\-]+$`; minimum 2 chars, ASCII only). If not valid grammar, `unevaluatedProperties: false` in the schema will have already rejected it; no additional action needed.
     - If the prefix matches the reserved-namespace regex: emit a `ValidatorWarning` with `field_name_verbatim` set to the exact key as it appears in the document and `description` set to `"prefix '<prefix>' is reserved for core use"`. Structural validation continues (Req 10.3).
-  - Implement `check_mandatory_extensions(document: &serde_json::Value, validator: &CatalogUrlLoader) -> Vec<ValidatorError>`:
-    - Look for a `required_extensions` array in the document (Req 10.4).
-    - For each prefix in `required_extensions`, check whether the validator recognizes it (i.e., it maps to a known catalog schema or registered namespace). If unrecognized, emit a `ValidatorError` with `category: BlockingGap` and description identifying the unrecognized mandatory extension.
+  - Declare optional root `required_extensions` consistently in all five JSON schemas and the four existing DTOs. It is an array of unique decoded ASCII namespace-prefix strings without a colon, minimum two characters, letter start then alphanumeric/hyphen; reject whitespace/newlines. Omission/empty means none. Preserve unrelated root openness and raw extension payload bytes; no new registry DTO is required (owner-approved EX-1).
+  - Implement private `check_mandatory_extensions(document: &serde_json::Value) -> Vec<ValidatorError>`:
+    - Look for the already structurally validated `required_extensions` array (Req10.4). A payload is not required to trigger a blocker.
+    - Recognize only semantics actually implemented by the trusted active core, not catalog/schema/registry membership, claimed ownership or optional payload. The current MVP implements no extension namespaces, so every declared mandatory prefix is an explicit `ValidatorError` with `category: BlockingGap` identifying that prefix. Do not introduce public caller-controlled recognition or network-loader injection. Adding recognized namespaces later requires their actual implementation and reviewed activation.
+    - Keep this acceptance blocker separate from structural schema success; do not turn the declaration-only structurally-valid fixture into structural Fail.
   - Integrate `scan_extension_fields` into `validate_structural()` (after schema validation).
   - Write unit tests:
     - Test: Property 5 — reserved namespace warning is non-blocking — `CORE:field`, `Core-Validation:field`, `cdc:field`, `CDC:field`, `Cdc-Evidence:field` each produce a warning and `outcome` is still `Pass` (Req 10.3).

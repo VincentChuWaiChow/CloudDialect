@@ -19,5 +19,7 @@ Exact answer: “Use this declaration and trusted-recognition rule for all five 
 
 Next implementation: amend all five schema/DTO contracts and design examples, then integrate the actual extension validator after structural dispatch. Declaration-only structural-pass/blocker fixtures remain mandatory. This decision does not confer runtime policy grants.
 
+Subsequent declaration-only delivery: existing DTO GREEN `a28cb70`, primary schema GREEN `1ae8b66`, support schema GREEN `c4a2601`; [bounded report](extension-declaration-report.md). Unknown mandatory declarations pass these structural schemas without a payload, and raw extension values survive typed round-trips. Actual separate blockers and trusted recognition remain future unit2.6; neither catalog inventory nor this delivery grants acceptance.
+
 ## Boundaries
 Initial MVP versions remain document/catalog1.0.0 and crate0.1.0, based on the earlier owner attestation. No release or crate publication has been authorized; if prior distributed formats are discovered, migration/version review remains required. BG-01/UD1–UD5, native qualification and measured budgets remain open.

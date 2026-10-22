@@ -1,5 +1,8 @@
 # Orchestration
 
+## Current resource/extension tranche
+Parent owns approved RC-1/EX-1 source, shared exports, tests, evidence and Git. Owner approved two additional bounded readonly reviewers (18cumulative) and75minutes from original13:41:20UTC start, zero recursion/followups, one consolidated repair total. Packet17 reviewed RC-1/EX-1 contract and packet18 reviewed frozen integrated EX declarations; both bounded static PASS, no repairs. All18 dispatches now used; no more agents without fresh allocation. Parent independently ran full current checks/coverage and scope audits; actual recognition/blockers remain future2.6. No probes/releases/deployments/gate closure. Older sections below retain historical limits/approval context and do not override these current counters.
+
 ## Parent critical path
 Read spec/current source, create branch, define checks, ask missing-context questions, research IPC and upstream contracts, integrate decision drafts, verify and report actual readiness.
 
