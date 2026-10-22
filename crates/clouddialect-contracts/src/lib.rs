@@ -10,7 +10,7 @@ pub mod manifest;
 pub mod schema;
 pub mod validator;
 
-pub use schema::CatalogSnapshot;
+pub use schema::{CatalogSnapshot, CatalogUrlLoader};
 
 pub use manifest::{
     CapabilityAction, CapabilityDeclaration, CapabilityRequirement, CompatibilitySection,
