@@ -8,6 +8,29 @@ const EVIDENCE: &str = "https://schemas.clouddialect.io/evidence-record/1.0.0/sc
 const SUPPORT: &str = "urn:clouddialect:test:support";
 const META: &str = "https://json-schema.org/draft/2020-12/schema";
 const INDEX: &[u8] = include_bytes!("../../../catalog/index.json");
+// Exact pinned Boon 0.6.1 STD_METAFILES plus its latest-draft alias.
+const BUILTIN_PATHS: [&str; 20] = [
+    "schema",
+    "draft-04/schema",
+    "draft-06/schema",
+    "draft-07/schema",
+    "draft/2019-09/schema",
+    "draft/2019-09/meta/core",
+    "draft/2019-09/meta/applicator",
+    "draft/2019-09/meta/validation",
+    "draft/2019-09/meta/meta-data",
+    "draft/2019-09/meta/format",
+    "draft/2019-09/meta/content",
+    "draft/2020-12/schema",
+    "draft/2020-12/meta/core",
+    "draft/2020-12/meta/applicator",
+    "draft/2020-12/meta/unevaluated",
+    "draft/2020-12/meta/validation",
+    "draft/2020-12/meta/meta-data",
+    "draft/2020-12/meta/content",
+    "draft/2020-12/meta/format-annotation",
+    "draft/2020-12/meta/format-assertion",
+];
 
 fn parts() -> (Vec<u8>, BTreeMap<String, Vec<u8>>) {
     let files: [(&str, &[u8]); 6] = [
@@ -144,12 +167,11 @@ fn pinned_engine_compiles_all_embedded_schemas_and_validates_real_catalog_docume
             assert!(schemas.validate(&json!({}), root).is_err());
         }
     }
-    for uri in [
-        META,
-        "https://json-schema.org/draft/2020-12/meta/core",
-        "https://json-schema.org/draft/2020-12/meta/format-assertion",
-    ] {
-        compile(CatalogSnapshot::embedded().unwrap(), uri, true).unwrap();
+    for scheme in ["http", "https"] {
+        for path in BUILTIN_PATHS {
+            let uri = format!("{scheme}://json-schema.org/{path}");
+            compile(CatalogSnapshot::embedded().unwrap(), &uri, true).unwrap();
+        }
     }
 }
 
@@ -273,4 +295,65 @@ fn hostile_ambient_catalog_overrides_do_not_select_any_runtime_material() {
         assert!(String::from_utf8_lossy(&output.stdout).contains("1 passed"));
     }
     // This is deterministic library evidence, not approved native zero-network qualification.
+}
+
+fn false_support(uri: &str) -> Result<CatalogSnapshot, clouddialect_contracts::ValidatorError> {
+    let (index, mut material) = parts();
+    let mut index: Value = serde_json::from_slice(&index).unwrap();
+    index["resolver_resources"] = json!([{"schema_id":uri,"catalog_path":"support/false.json"}]);
+    material.insert("support/false.json".to_owned(), b"false".to_vec());
+    CatalogSnapshot::from_parts(serde_json::to_vec(&index).unwrap(), material)
+}
+
+#[test]
+fn support_mappings_cannot_claim_any_pinned_engine_builtin_resource() {
+    for scheme in ["http", "https"] {
+        for path in BUILTIN_PATHS {
+            let uri = format!("{scheme}://json-schema.org/{path}");
+            let result = false_support(&uri);
+            if let Ok(snapshot) = &result {
+                // Real-engine RED characterization: direct adapter says false,
+                // while Boon silently substitutes its built-in meta-schema.
+                assert_eq!(
+                    CatalogUrlLoader::new(snapshot.clone()).load(&uri).unwrap(),
+                    json!(false)
+                );
+                let (schemas, root) = compile(snapshot.clone(), &uri, true).unwrap();
+                assert!(schemas.validate(&json!({}), root).is_ok());
+            }
+            let error = result
+                .err()
+                .expect("built-in byte substitution must be rejected at admission");
+            assert!(
+                error.description.contains("exact external resource"),
+                "{error:?}"
+            );
+        }
+    }
+}
+
+#[test]
+fn normalized_builtin_aliases_and_fragment_resource_identifiers_are_rejected() {
+    for uri in [
+        "HTTPS://JSON-SCHEMA.ORG:443/draft/2020-12/schema",
+        "http://json-schema.org:80/draft/2020-12/meta/core",
+        "https://json-schema.org/draft/2020-12/other/../schema",
+        "https://json-schema.org/schema#",
+        "https://json-schema.org/schema#/$defs/missing",
+        "urn:clouddialect:test:support#fragment",
+    ] {
+        assert!(false_support(uri).is_err(), "{uri}");
+    }
+}
+
+#[test]
+fn ordinary_same_host_resources_are_not_rejected_by_a_host_prefix_rule() {
+    for uri in [
+        "https://json-schema.org/not-a-builtin",
+        "https://json-schema.org/draft/2020-12/schema?owned-support",
+    ] {
+        let snapshot = false_support(uri).unwrap();
+        let (schemas, root) = compile(snapshot, uri, true).unwrap();
+        assert!(schemas.validate(&json!({}), root).is_err());
+    }
 }
