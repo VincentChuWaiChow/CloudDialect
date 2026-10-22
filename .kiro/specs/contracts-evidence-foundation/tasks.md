@@ -12,7 +12,7 @@ This plan builds the `clouddialect-contracts` Rust crate, its bundled JSON Schem
 
 **Current continuation status (2026-10-22):** user approved P0-A–F for implementation planning, then separately authorized the remaining Spec 1 prerequisite units in [implementation-plan.md](implementation-plan.md), TDD and no commits/probes/pushes/releases. User attests this is a new project and approves document/catalog **1.0.0** and crate API **0.1.0** as the initial MVP versions. This is not an independent external-publication audit or security-gate approval. Exact encoded extension JSON value bytes are required; raw_value on the existing pinned serde_json is separately approved.
 
-**Delivery is partial.** DTOs, schemas, catalog inventory, frozen SHA-256 snapshot identity and embedded-only schema loading have bounded verification; full validators, artifact hash verification, conformance and delivered downstream compatibility remain unfinished. See the [current run report](../../../.workflow/ultracode/execution-isolation-implementation/final-report.md) for actual evidence and outstanding work. Canonical task checkmarks are conservative; BG-01 and Spec 2 UD-1–UD-5 remain OPEN.
+**Delivery is partial.** DTOs, schemas, catalog inventory, frozen snapshot/loading, structural JSON validation, local TOML rules and candidate hash equality have bounded verification. Semantic/fidelity/completeness validation, integrated mandatory blockers, exhaustive conformance and delivered downstream compatibility remain unfinished. See the [current run report](../../../.workflow/ultracode/execution-isolation-implementation/final-report.md) for actual evidence and outstanding work. Canonical task checkmarks are conservative; BG-01 and Spec 2 UD-1–UD-5 remain OPEN.
 
 `BehavioralResult` full implementation, the Rust CLI binary, worker isolation, and Python transformation logic are explicitly out of scope.
 
@@ -283,7 +283,7 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - Implement `scan_extension_fields(document: &serde_json::Value) -> (Vec<ValidatorWarning>, Vec<ValidatorError>)`:
     - Walk all keys in the document object (top level only; behavioral documents are not deeply nested objects with arbitrary extension keys).
     - For each key containing `:`, extract the prefix (everything before the first `:`).
-    - Check the prefix is valid ASCII extension prefix grammar (`^[a-zA-Z][a-zA-Z0-9\-]+$`; minimum 2 chars, ASCII only). If not valid grammar, `unevaluatedProperties: false` in the schema will have already rejected it; no additional action needed.
+    - Check the prefix is valid whole-string ASCII extension prefix grammar (`[a-zA-Z][a-zA-Z0-9-]+`; minimum 2 chars, ASCII only). Invalid grammar emits a Structural error against the original key. Do not assume schema closure already rejected it: support roots remain open and newer-MINOR projection may remove unknown fields before base validation.
     - If the prefix matches the reserved-namespace regex: emit a `ValidatorWarning` with `field_name_verbatim` set to the exact key as it appears in the document and `description` set to `"prefix '<prefix>' is reserved for core use"`. Structural validation continues (Req 10.3).
   - Declare optional root `required_extensions` consistently in all five JSON schemas and the four existing DTOs. It is an array of unique decoded ASCII namespace-prefix strings without a colon, minimum two characters, letter start then alphanumeric/hyphen; reject whitespace/newlines. Omission/empty means none. Preserve unrelated root openness and raw extension payload bytes; no new registry DTO is required (owner-approved EX-1).
   - Implement private `check_mandatory_extensions(document: &serde_json::Value) -> Vec<ValidatorError>`:
@@ -377,7 +377,7 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - `ManifestFidelity` deserializes correctly from TOML strings `"full"`, `"partial"`, `"unsupported"`.
   - `PackManifest` fails to deserialize from TOML missing any required section.
 
-- [ ] 16. Implement `validate_manifest()`
+- [x] 16. Implement `validate_manifest()`
   - Create `crates/clouddialect-contracts/src/manifest/validator.rs`.
   - Implement:
     ```rust
@@ -407,6 +407,7 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - A manifest with a `full`/`partial` operation and an empty toolchain section returns `outcome: Fail` (Req 5.5).
   - An `unsupported` operation is present in the parsed result after validation (Req 5.7).
   - An inline contract body is rejected (Req 5.3).
+  - Bounded delivery:12local test groups and1actual local ValidateManifest trait-dispatch test pass in the integrated193integration+2unit+7doctest suite. Req11.3 source-artifact coverage and real semantic/fidelity checks remain unfinished; this TOML-only method has no artifact argument. See [wave evidence](../../../.workflow/ultracode/execution-isolation-implementation/extension-manifest-hash-report.md).
 
 - [ ] 17. Implement fidelity enum mapping semantic check
   - Add `crates/clouddialect-contracts/src/validator/fidelity.rs`.

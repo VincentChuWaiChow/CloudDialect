@@ -1,5 +1,8 @@
 # Orchestration
 
+## Approved parallel implementation wave (current)
+Owner approved three additional native sidecars,23cumulative, max4concurrent including parent. Original15:26:28UTC preflight starts the90-minute cap; deadline16:56:28UTC, not reset by delayed approval.21manifest and22hash own disjoint new source/test pairs,23reserved final read-only review. Parent owns extensions, shared modules/exports, all run artifacts and Git. Tests-first worker handshakes require actual RED and parent checkpoint before implementation, complete source before parent registration, then real public target GREEN. No recursive/followup dispatches, one consolidated repair (0used initially). Models/effort inherited and UNVERIFIED; no hidden specialist/runtime isolation claims. Native probes/releases/runtime/BG-01 remain excluded/open.
+
 ## Current version / structural tranche
 Owner approved two additional readonly sidecars (20cumulative), no recursion/followups,90minutes from14:38:03UTC and one consolidated repair. Fanout request used reader19 for contract edges while parent implemented; reader20 reviewed frozen integration while parent ran actual checks/coverage. Parent serialized all code/exports/Git. Review20 P2 global-predicate projection finding reproduced and fixed in sole repair, no independent postrepair sign-off.20ceiling exhausted. Next distinct wave requests two disjoint write workers plus readonly final review while parent owns extension critical path; no approval inferred. All native/release/gate boundaries retained.
 

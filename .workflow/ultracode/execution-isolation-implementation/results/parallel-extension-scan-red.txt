@@ -1,0 +1,127 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.03s
+     Running tests/extension_validation.rs (/tmp/clouddialect-phase-target/debug/deps/extension_validation-40be2de6ebb6b94d)
+
+running 7 tests
+test validation_does_not_rewrite_unknown_optional_encoded_value_bytes ... ok
+test reserved_warnings_coexist_with_minor_warning_without_promoting_failures ... FAILED
+test nested_embedded_schema_keys_are_not_root_extension_declarations ... ok
+test reserved_exact_case_and_family_variants_warn_verbatim_without_failing_structure ... FAILED
+test optional_payloads_cannot_override_core_fields_or_structural_failures ... ok
+test community_prefixes_and_nonreserved_neighbors_are_allowed_without_warnings ... ok
+test malformed_prefixes_fail_on_closed_open_and_minor_projection_roots ... FAILED
+
+failures:
+
+---- reserved_warnings_coexist_with_minor_warning_without_promoting_failures stdout ----
+
+thread 'reserved_warnings_coexist_with_minor_warning_without_promoting_failures' (125) panicked at tests/extension_validation.rs:133:5:
+assertion `left == right` failed
+  left: 1
+ right: 2
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- reserved_exact_case_and_family_variants_warn_verbatim_without_failing_structure stdout ----
+
+thread 'reserved_exact_case_and_family_variants_warn_verbatim_without_failing_structure' (124) panicked at tests/extension_validation.rs:43:13:
+assertion `left == right` failed: BehavioralContract: core:field
+  left: 0
+ right: 1
+
+---- malformed_prefixes_fail_on_closed_open_and_minor_projection_roots stdout ----
+
+thread 'malformed_prefixes_fail_on_closed_open_and_minor_projection_roots' (121) panicked at tests/extension_validation.rs:122:5:
+BehavioralContract 1.1.0 ":field": Warn
+BehavioralContract 1.1.0 "a:field": Warn
+BehavioralContract 1.1.0 "1acme:field": Warn
+BehavioralContract 1.1.0 "ac me:field": Warn
+BehavioralContract 1.1.0 "acme_tools:field": Warn
+BehavioralContract 1.1.0 "acme\\tools:field": Warn
+BehavioralContract 1.1.0 "acme.:field": Warn
+BehavioralContract 1.1.0 "équipe:field": Warn
+BehavioralContract 1.1.0 "соre:field": Warn
+BehavioralContract 1.1.0 "core-K:field": Warn
+BehavioralContract 1.1.0 "acme\n:field": Warn
+BehavioralContract 1.1.0 "acme\0:field": Warn
+EvidenceRecord 1.1.0 ":field": Warn
+EvidenceRecord 1.1.0 "a:field": Warn
+EvidenceRecord 1.1.0 "1acme:field": Warn
+EvidenceRecord 1.1.0 "ac me:field": Warn
+EvidenceRecord 1.1.0 "acme_tools:field": Warn
+EvidenceRecord 1.1.0 "acme\\tools:field": Warn
+EvidenceRecord 1.1.0 "acme.:field": Warn
+EvidenceRecord 1.1.0 "équipe:field": Warn
+EvidenceRecord 1.1.0 "соre:field": Warn
+EvidenceRecord 1.1.0 "core-K:field": Warn
+EvidenceRecord 1.1.0 "acme\n:field": Warn
+EvidenceRecord 1.1.0 "acme\0:field": Warn
+VerificationResult 1.1.0 ":field": Warn
+VerificationResult 1.1.0 "a:field": Warn
+VerificationResult 1.1.0 "1acme:field": Warn
+VerificationResult 1.1.0 "ac me:field": Warn
+VerificationResult 1.1.0 "acme_tools:field": Warn
+VerificationResult 1.1.0 "acme\\tools:field": Warn
+VerificationResult 1.1.0 "acme.:field": Warn
+VerificationResult 1.1.0 "équipe:field": Warn
+VerificationResult 1.1.0 "соre:field": Warn
+VerificationResult 1.1.0 "core-K:field": Warn
+VerificationResult 1.1.0 "acme\n:field": Warn
+VerificationResult 1.1.0 "acme\0:field": Warn
+CatalogIndex 1.0.0 ":field": Pass
+CatalogIndex 1.1.0 ":field": Warn
+CatalogIndex 1.0.0 "a:field": Pass
+CatalogIndex 1.1.0 "a:field": Warn
+CatalogIndex 1.0.0 "1acme:field": Pass
+CatalogIndex 1.1.0 "1acme:field": Warn
+CatalogIndex 1.0.0 "ac me:field": Pass
+CatalogIndex 1.1.0 "ac me:field": Warn
+CatalogIndex 1.0.0 "acme_tools:field": Pass
+CatalogIndex 1.1.0 "acme_tools:field": Warn
+CatalogIndex 1.0.0 "acme\\tools:field": Pass
+CatalogIndex 1.1.0 "acme\\tools:field": Warn
+CatalogIndex 1.0.0 "acme.:field": Pass
+CatalogIndex 1.1.0 "acme.:field": Warn
+CatalogIndex 1.0.0 "équipe:field": Pass
+CatalogIndex 1.1.0 "équipe:field": Warn
+CatalogIndex 1.0.0 "соre:field": Pass
+CatalogIndex 1.1.0 "соre:field": Warn
+CatalogIndex 1.0.0 "core-K:field": Pass
+CatalogIndex 1.1.0 "core-K:field": Warn
+CatalogIndex 1.0.0 "acme\n:field": Pass
+CatalogIndex 1.1.0 "acme\n:field": Warn
+CatalogIndex 1.0.0 "acme\0:field": Pass
+CatalogIndex 1.1.0 "acme\0:field": Warn
+ExtensionRegistry 1.0.0 ":field": Pass
+ExtensionRegistry 1.1.0 ":field": Warn
+ExtensionRegistry 1.0.0 "a:field": Pass
+ExtensionRegistry 1.1.0 "a:field": Warn
+ExtensionRegistry 1.0.0 "1acme:field": Pass
+ExtensionRegistry 1.1.0 "1acme:field": Warn
+ExtensionRegistry 1.0.0 "ac me:field": Pass
+ExtensionRegistry 1.1.0 "ac me:field": Warn
+ExtensionRegistry 1.0.0 "acme_tools:field": Pass
+ExtensionRegistry 1.1.0 "acme_tools:field": Warn
+ExtensionRegistry 1.0.0 "acme\\tools:field": Pass
+ExtensionRegistry 1.1.0 "acme\\tools:field": Warn
+ExtensionRegistry 1.0.0 "acme.:field": Pass
+ExtensionRegistry 1.1.0 "acme.:field": Warn
+ExtensionRegistry 1.0.0 "équipe:field": Pass
+ExtensionRegistry 1.1.0 "équipe:field": Warn
+ExtensionRegistry 1.0.0 "соre:field": Pass
+ExtensionRegistry 1.1.0 "соre:field": Warn
+ExtensionRegistry 1.0.0 "core-K:field": Pass
+ExtensionRegistry 1.1.0 "core-K:field": Warn
+ExtensionRegistry 1.0.0 "acme\n:field": Pass
+ExtensionRegistry 1.1.0 "acme\n:field": Warn
+ExtensionRegistry 1.0.0 "acme\0:field": Pass
+ExtensionRegistry 1.1.0 "acme\0:field": Warn
+
+
+failures:
+    malformed_prefixes_fail_on_closed_open_and_minor_projection_roots
+    reserved_exact_case_and_family_variants_warn_verbatim_without_failing_structure
+    reserved_warnings_coexist_with_minor_warning_without_promoting_failures
+
+test result: FAILED. 4 passed; 3 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.57s
+
+error: test failed, to rerun pass `--test extension_validation`

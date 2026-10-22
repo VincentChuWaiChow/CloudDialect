@@ -1,0 +1,37 @@
+# Extension / local manifest / artifact hash wave — 2026-10-22
+
+**Bounded implementation verified; publication receipt follows separately.** Baseline e1e43d98fe2137b7d63643ba2b1762bdfca71cfc, integrated GREEN bc974f08cb47026fd0bf97cd8c92581a43cf8289. Owner approved three additional sidecars (23cumulative): two disjoint write workers and final readonly review, all completed. Max4concurrent including parent, no recursion/followup dispatches, original90-minute window15:26:28–16:56:28UTC. No review repair required (0/1used). Parent owns extensions/shared exports/Git; native model/effort and runtime isolation remain UNVERIFIED.
+
+## Bounded implementation and phase boundaries
+
+- **2.6a extension scanner:** actual structural Validator scans original root fields after schema validation, not the projected newer-MINOR view. Whole-string ASCII prefix grammar and case-insensitive ASCII reserved families, one verbatim warning per reserved key. Reserved warnings alone remain structural Pass; newer-MINOR compatibility remains Warn and real errors Fail. Explicit grammar errors are necessary on open support roots and projected additions: the earlier task's assumption that closed schemas always reject them was false. Nested/freeform content is not interpreted as root declarations. Exact primary DTO raw-value bytes remain unchanged.
+- **2.6b mandatory blocker foundation:** exact private source is test-included pending real semantic consumer2.9, not registered as unused production code. MVP recognizes no implemented namespaces. Declaration-only input triggers BlockingGap with indexed path, independently of structural Pass, payload, claimed owner or registry entry. Malformed direct helper arrays/items fail closed; diagnostics escape prefix text. **Not public end-to-end mandatory enforcement:** semantic integration and its acceptance-blocking proof remain pending. No new public blocker/acceptance API.
+- **2.7 local manifest validation:** actual ManifestValidator owns explicit snapshot; local-only ValidateManifest delegates to the real implementation. Closed DTO TOML decoding, reverse-DNS ID, distinct full SemVer fields/core-u64 profile, approved Cargo ranges, contract-ref shape/nonempty ID, fidelity/toolchain rule, explicit closed capability declarations/version/IDs/known operation references, `[x]` shadow prevention and unsupported-operation retention. Local semantic_errors means local rules, not external reference/fidelity/authentication success. Ordinary PackManifest.operations is the listing; result DTO is not silently expanded with parsed data. Req11.3 source-artifact coverage has no input here and remains unimplemented. No claim to reject all TOML1.1syntax.
+- **2.10H hash-only split:** public verify_artifact_hash uses existing approved sha2/sha3 dependencies for exactly five declared algorithms, exact canonical lowercase digest strings, all known-vector/tamper/empty/malformed cases. It checks candidate bytes only; equality is not document validity, other-artifact verification, identity, observation, provenance, approval or acceptance. Remaining2.10 semantic/completeness work is unfinished.
+
+Catalog/registry optional-extension round-trip conformance is **not established** by schema Pass or mandatory-declaration retention. Static inspection shows CatalogIndex still uses ordinary derived serde; no speculative registry DTO or unrelated catalog repair is included. Future all-kind conformance must investigate this rather than count primary DTO raw-byte tests as proof.
+
+## TDD checkpoints and actual evidence
+
+| Slice | Actual RED checkpoint | Same-target result |
+|---|---|---|
+| Scanner |3d29d67:7execute,4pass/3intended runtime failures |7/7GREEN |
+| Private mandatory foundation |e54be29: missing exact private helper source |5/5GREEN |
+| Hash worker22 |bea5793: missing public helper E0432 |6/6GREEN |
+| Manifest worker21 |87cbd19: parent independently reproduced missing class E0432 |12/12GREEN twice, plus parent full-suite rerun; initial6/12 setup insertion panics are not behavioral RED |
+| Parent local trait |75e6be2: missing ValidateManifest E0432 |1/1GREEN |
+
+All checkpoints are on the active feature branch, not borrowed/squashed history. Parent registers only complete implementation, no success/panic stubs. Worker setup failure is retained in native output (chunkbd3f13), not invented as a raw log; parent first fmt check found one test import wrap, fixed before final checks. Neither is an intended behavioral RED or a postreview repair. Earlier waves remain historical, not proof of this source.
+
+## Integrated verification and independent review
+
+- Actual frozen **193integration+2unit+7compile-fail doctests pass**,31new integration tests over baseline. Conformance target still runs0 and is not conformance delivery. Explicit doctest diagnostics preserve E0596 once/E0277 six times.
+- Frozen all-target check, fmt check, Clippy-Dwarnings,15Python and8selected historical P0 content checks pass. Commands/exits/raw paths: `results/parallel-green-checks.json`. Historical full grader source/draft/scope failures remain explicitly unresolved; selected8content cases are not fullgrader success.
+- Installed tools were independently re-read: rustc1.99.1(58cf8f9c3,2026-10-13), cargo1.99.1(5f94df478,2026-08-27). Approved Rust>=1.88 minimum is not an independently tested MSRV result.
+- Fresh instrumented full test suite, actual LLVM objects/profiles and exact source filtering. Raw emitted line total1014/1052 includes source-local unit tests; fresh loader LCOV identifies17covered inline test lines, giving corrected **997/1035=96.33% production lines**. Test-copy aliases/dependencies/unmapped DTOs excluded. Private mandatory helper is test-included, not counted as registered production enforcement; no branch/full-spec/native/MSRV claim. Source-local test correction is based on fresh exact LCOV DA records, not blindly copied historical lists. See `results/parallel-production-coverage.json` and raw LCOV/view.
+- Final native readonly reviewer23 found **no actionable findings** in the14-path source diff at frozen bc974f0. Verified source matched review SHA; inspected recorded checks but did not independently rerun tests, write files, use network or perform native probes. External semantic/fidelity checks, private mandatory integration and catalog/registry round-trips remain outside the tranche. No independent runtime qualification inferred.
+- Scoped source/frozen/metadata/link/JSON/whitespace preservation checks and normal feature-branch publication are recorded in the closeout artifacts/independent `/tmp` receipt. No full-goal completion or gate closure follows.
+
+## Remaining original objective
+
+Original execution-isolation goal is active/incomplete. Fidelity, real JSON/TOML semantic/store linkage, externally integrated mandatory blockers, non-accepting evidence completeness, exhaustive phase-aware conformance/traceability and real downstream handoff remain. BG-01 and UD-1–UD-5 stay OPEN. No approved disposable native qualification environment exists; plans only. No sandbox/provider probes, releases or deployments performed or inferred from Rust tests.

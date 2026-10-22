@@ -1,0 +1,13 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.56s
+     Running tests/mandatory_extension_blockers.rs (/tmp/clouddialect-phase-target/debug/deps/mandatory_extension_blockers-9a6794e7ca19fb84)
+
+running 5 tests
+test diagnostics_escape_declared_names_without_interpreting_them_as_paths ... ok
+test malformed_direct_helper_inputs_fail_closed_and_do_not_echo_payloads ... ok
+test absent_or_explicit_empty_declaration_has_no_mandatory_blocker ... ok
+test registry_membership_payloads_and_ownership_claims_cannot_clear_blockers ... ok
+test unknown_declaration_without_payload_is_structurally_valid_but_separately_blocked ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+

@@ -140,11 +140,13 @@ Verified declaration delivery: [EX-1 report](../../../.workflow/ultracode/execut
     - Owned: `src/validator/extensions.rs`, `src/validator/structural.rs`, `tests/extension_validation.rs` (structural integration serialized after 2.5).
     - Cases: reserved exact/upper/mixed families; invalid grammar; unknown optional preserved; unknown mandatory blocks; extension cannot override core; collisions confer no trust. Target: `extension_validation`.
     - Done: structural warnings remain non-blocking while mandatory security semantics never become permissive; no acceptance bit. Estimate: 3–4h. Dependencies: 2.5, 1.10.
-  - [ ] 2.7 TOML/local manifest validation
+    - Bounded delivery2.6a: scanner/structural integration and test-only document fixtures (five named files in the current wave eval),7actual integration tests. Bounded2.6b: separate private mandatory_extensions.rs and exact-source test target,5tests; no trusted implemented namespace. This helper is deliberately not registered until real semantic consumer2.9 exists. Full2.6 stays unchecked: private tests are not public end-to-end mandatory enforcement; catalog/registry optional-extension round-trip conformance also remains unestablished.
+  - [x] 2.7 TOML/local manifest validation
     - Spec1: task 16. Requirements: 5.1–5.8, 11.3.
-    - Owned: `src/manifest/validator.rs`, `src/manifest/mod.rs`, `src/lib.rs`, `tests/manifest_validation.rs`.
+    - Owned: `src/manifest/validator.rs`, `src/manifest/mod.rs`, `src/lib.rs`, `tests/manifest_validation.rs`, `tests/manifest_api.rs` (parent-only local trait registration/test).
     - Cases: all eight local rule families; version/range validity; inline body rejected; missing toolchain; capability grammar/duplicates; unknown fields; explicit TOML 1.0-compatible valid syntax. Target: `manifest_validation`.
     - Done: declarations never dispatch or resolve external authority; local pass does not imply references/fidelity checked. Do not require rejecting all later TOML syntax unless the approved requirement actually says that. Estimate: 3–4h. Dependencies: 1.11, 2.3, 2.4.
+    - Verified bounded initial MVP:12local rule groups plus1real trait-dispatch test; exact snapshot ownership, no ambient catalog. Schema refs are syntax-checked locally, not resolved/matched to compatibility bounds. Full SemVer syntax/core-u64 support and Cargo comparator/prerelease ranges follow approved profile. Req11.3 source-artifact coverage remains future work, not claimed by this TOML-only API. See [wave report](../../../.workflow/ultracode/execution-isolation-implementation/extension-manifest-hash-report.md).
   - [ ] 2.8 Scoped fidelity function
     - Spec1: task 17, before task 13 integration. Requirements: 5.2, 8.3/8.7.
     - Owned: `src/validator/fidelity.rs`, `src/validator/mod.rs`, `tests/fidelity_mapping.rs`.
@@ -160,6 +162,7 @@ Verified declaration delivery: [EX-1 report](../../../.workflow/ultracode/execut
     - Owned: `src/validator/behavioral.rs`, `src/validator/mod.rs`, `src/lib.rs`, `tests/evidence_completeness.rs`.
     - Cases: observed/inferred completeness not acceptance; unknown/missing/corrupt source gaps; all named obligation diagnostics; empty verification projection; every supported hash algorithm with known vectors/tamper; no approving conversion. Target: `evidence_completeness`.
     - Done: real state/data checks and crypto verification, never executed behavioral-test success. If hash algorithms make the unit exceed bounds, split a dedicated artifact-hash helper/test slice before dispatch. Estimate: conditional 3–4h. Dependencies: 1.4, 1.5, 2.9. Gate: G-DEPS (all five declared hash algorithms).
+    - Bounded2.10H split recorded before worker22 dispatch: `src/validator/artifact_hash.rs`, `tests/artifact_hash.rs`, parent-only `src/validator/mod.rs`/`src/lib.rs` registration. Dependencies for this independent hash-only leaf are existing VerificationResult DTO and approved sha2/sha3 pins, not unfinished semantic/completeness orchestration. All five declared algorithms and ten independently checked empty/abc vectors, malformed/tamper/immutability controls pass6tests. Public helper checks candidate digest equality only; no acceptance/provenance/other-artifact claim. Full2.10 stays unchecked.
 
 - [ ] 3. Complete conformance and upstream handoff
   - [ ] 3.1 Bounded phase-aware conformance runner
@@ -233,7 +236,8 @@ Parent coordination stages: 1 foundation, 2 validators, 3 qualification/handoff.
   "2.7": ["1.11", "2.3", "2.4"],
   "2.8": ["1.4", "2.5", "2.7"],
   "2.9": ["1.5", "2.6", "2.8"],
-  "2.10": ["1.4", "1.5", "2.9"],
+  "2.10H": ["1.5"],
+  "2.10": ["1.4", "1.5", "2.9", "2.10H"],
   "3.1": ["2.9", "2.10"],
   "3.2": ["3.1"],
   "3.3": ["2.4", "2.5"],

@@ -2,7 +2,7 @@
   "title": "Execution-isolation implementation",
   "slug": "execution-isolation-implementation",
   "created_at": "2026-10-22T07:25:44.090021+00:00",
-  "updated_at": "2026-10-22T15:16:12.940389+00:00",
+  "updated_at": "2026-10-22T16:02:22.745846+00:00",
   "status": "executing",
   "mode": "delegated",
   "baseline_ref": "3b9cb6bd0ee82dbef3b731a35ce68fc778c4906a",
@@ -21,12 +21,12 @@
     "native_agent_available": true,
     "native_agent_planned": true,
     "native_agent_used": true,
-    "agent_count": 20,
-    "wave_count": 10,
+    "agent_count": 23,
+    "wave_count": 11,
     "no_delegation_reason": "",
-    "notes": "19contract recommendations integrated;20static P2 reproduced/repaired in one consolidated parent pass; no independent postrepair signoff.20cumulative ceiling exhausted, zero recursion/followups.",
-    "additional_dispatch_limit": 2,
-    "additional_dispatches_used": 2
+    "notes": "Owner-approved23cumulative used;21/22completed owned write work;23final read-only review active at frozenbc974f0;0recursive/followupdispatches.",
+    "additional_dispatch_limit": 3,
+    "additional_dispatches_used": 3
   },
   "packets": [
     {
@@ -172,10 +172,37 @@
       "owner": "readonly-agent",
       "write_scope": [],
       "result_path": "results/20-version-structural-integration.md"
+    },
+    {
+      "id": "21-manifest-validation",
+      "status": "complete",
+      "owner": "write-capable-agent",
+      "write_scope": [
+        "src/manifest/validator.rs",
+        "tests/manifest_validation.rs"
+      ],
+      "result_path": "results/21-manifest-validation.md"
+    },
+    {
+      "id": "22-artifact-hash",
+      "status": "complete",
+      "owner": "write-capable-agent",
+      "write_scope": [
+        "src/validator/artifact_hash.rs",
+        "tests/artifact_hash.rs"
+      ],
+      "result_path": "results/22-artifact-hash.md"
+    },
+    {
+      "id": "23-extension-manifest-hash-review",
+      "status": "complete",
+      "owner": "readonly-agent",
+      "write_scope": [],
+      "result_path": "results/23-extension-manifest-hash-review.md"
     }
   ],
   "verification": {
-    "status": "Version/structural bounded MVP:162integration+2unit+7doctests/15Python/8P0content/check/fmt/Clippy pass;701/738actualproductionlines; packet20finding repaired/no independentpostrepair; fullgoal/BG01/native incomplete",
+    "status": "Bounded extensions/local manifest/hash:193integration+2unit+7doctests/15Python/8selectedP0/check/fmt/Clippy pass;997/1035registeredproductionlines;review23 no actionable findings; private mandatory semantic integration/fullgoal/BG01/native incomplete",
     "checks": [
       {
         "name": "scaffold",
@@ -1447,15 +1474,14 @@
     "snapshot_digest_resolver_authentication": "not implemented"
   },
   "current_limits": {
-    "scope": "Next approved version/structural tranche; prior RC/EX delivery closed, not retried",
-    "started_at": "2026-10-22T14:38:03.358282+00:00",
-    "elapsed_minutes_limit": 90,
-    "dispatches_total_ceiling": 20,
-    "dispatches_total_used": 20,
-    "followups": 0,
+    "cumulative_dispatch_ceiling": 23,
+    "cumulative_dispatches_used": 23,
+    "max_concurrent_including_parent": 4,
     "recursion": 0,
-    "repairs_allowed": 1,
-    "repairs_used": 1
+    "followup_dispatches": 0,
+    "repair_limit": 1,
+    "repairs_consumed": 0,
+    "deadline": "2026-10-22T16:56:28Z"
   },
   "ai_rule_location_correction": {
     "requested_by": "Explicit user: AI agent rules should be in .agents/rules",
@@ -1589,7 +1615,7 @@
     "repairs_consumed": 1,
     "followups": 0,
     "recursion": 0,
-    "status": "verified-pending-evidence-commit-and-normal-push",
+    "status": "published-verified",
     "authority": "User approves two additional bounded read-only reviewers and implementation already authorized; latest asks fanout for speed. Existing readonly scope and ceiling retained.",
     "eval": "version-structural-eval.md",
     "owner": "parent",
@@ -1616,22 +1642,50 @@
     "arbitrary_schema_projection": "Opaque/external/dynamic/changed-id root scopes Unsupported; no owner waiver/full arbitrary-schema claim",
     "independent_postrepair_signoff": false,
     "original_goal": "active/fullscope/incomplete",
-    "publication_receipt": "/tmp/clouddialect-version-structural-publication.json follows evidence commit"
+    "publication_receipt": "/tmp/clouddialect-version-structural-publication.json follows evidence commit",
+    "publication_sha": "e1e43d98fe2137b7d63643ba2b1762bdfca71cfc"
   },
   "next_parallel_wave_request": {
-    "status": "pending owner reply, not authorization",
+    "status": "approved",
+    "owner_reply": "Approve parallel worker wave",
     "additional_dispatches": 3,
-    "cumulative_ceiling_proposed": 23,
-    "roles": [
-      "manifest write worker",
-      "artifact hash write worker",
-      "final readonly reviewer"
-    ],
-    "parent": "extension critical path, shared exports, Git",
-    "concurrent_max_including_parent": 4,
-    "elapsed_minutes": 90,
-    "repair_limit": 1,
+    "max_concurrent_including_parent": 4,
+    "deadline": "2026-10-22T16:56:28Z"
+  },
+  "extension_manifest_hash_wave": {
+    "started_at": "2026-10-22T15:26:28+00:00",
+    "elapsed_limit_minutes": 90,
+    "status": "bounded implementation verified; all23approved dispatches complete; normal publication proof tracked externally",
+    "parent_scope": "2.6a reserved/grammar scan,2.6b private blocker foundation; no new public phase API",
+    "cumulative_dispatches_before": 20,
+    "additional_dispatches_requested": 3,
+    "additional_dispatches_approved": 3,
+    "additional_dispatches_used": 3,
+    "cumulative_ceiling_current": 23,
+    "followups": 0,
     "recursion": 0,
-    "native_probes_releases": false
+    "repair_limit": 1,
+    "repairs_consumed": 0,
+    "no_native_probes_releases": true,
+    "eval": "extension-manifest-hash-eval.md",
+    "green_checkpoint": "bc974f08cb47026fd0bf97cd8c92581a43cf8289",
+    "production_lines": {
+      "count": 1035,
+      "covered": 997,
+      "percent": 96.32850241545894
+    },
+    "elapsed_minutes_at_verification": 35.912431133333335
+  },
+  "extension_manifest_hash_delivery": {
+    "status": "source verified; immutable publication proof is external to self-referential commit",
+    "green_checkpoint": "bc974f08cb47026fd0bf97cd8c92581a43cf8289",
+    "report": "extension-manifest-hash-report.md",
+    "checks": "results/parallel-green-checks.json",
+    "source_frozen": "results/parallel-frozen-source.json",
+    "coverage": "results/parallel-production-coverage.json",
+    "review": "results/23-extension-manifest-hash-review.md",
+    "publication_receipt": "/tmp/clouddialect-extension-manifest-hash-publication.json",
+    "scope_audit": "results/parallel-scope-audit.json",
+    "closeout_checks": "results/parallel-closeout-checks.json"
   }
 }

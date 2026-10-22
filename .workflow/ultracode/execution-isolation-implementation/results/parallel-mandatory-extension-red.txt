@@ -1,0 +1,8 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+error: couldn't find file `tests/../src/validator/mandatory_extensions.rs`
+ --> tests/mandatory_extension_blockers.rs:4:1
+  |
+4 | mod mandatory_extensions;
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error: could not compile `clouddialect-contracts` (test "mandatory_extension_blockers") due to 1 previous error

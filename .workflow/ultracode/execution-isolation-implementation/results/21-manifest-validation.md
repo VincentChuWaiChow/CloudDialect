@@ -1,0 +1,9 @@
+# Packet21 — local manifest write worker
+
+Native /root/manifest_validation owned only src/manifest/validator.rs and tests/manifest_validation.rs. Parent independently reran actual E0432 missing ManifestValidator RED, checkpoint87cbd19, then authorized implementation and registered only complete source. Same target GREEN12/12 twice. Raw parallel-manifest-validation-{red-parent,green}.txt. Owned rustfmt/diff checks passed. Parent public local-only trait has distinct parent-owned test/RED75e6be2 and actual1/1GREEN.
+
+First registered worker run executed12tests,6pass/6setup failures: TOML Value IndexMut cannot insert missing keys. Worker repaired owned fixtures via table.insert, no production change. Original failure is preserved in native tool output chunkbd3f13, not a raw/tmp log; do not label it behavioral RED or invent a file. It is not an additional review repair. Final raw log captures actual passing invocation.
+
+Task16 eight local rule families, full SemVer/u64 syntax distinction, exact initial capability precedence ignoring build metadata, approved Cargo VersionReq ranges, closed typed fields/actions, explicit empty capabilities, duplicate requirement IDs, known-operation references, x-shadowing and retained unsupported operations. External contract existence/catalog support/bounds/fidelity and Req11.3 artifact coverage are not established; no artifact input exists here. Result DTO unchanged, ordinary PackManifest.operations supplies listing. Source language range, toolchain range, pack release and document/catalog versions remain distinct. No all-TOML1.1 rejection claim.
+
+Context7 resolved /websites/rs_toml and /dtolnay/semver, queried typed from_str/error spans and Version/VersionReq. Pinned actual toml0.9.9 from_str/error.span and semver1.0.28 parsers inspected. No new dependency/fetch/global config/DTO/Git/probe edits by worker. Models/effort/native isolation UNVERIFIED. Parent integrated checks/review remain separate evidence.
