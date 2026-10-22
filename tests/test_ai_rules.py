@@ -5,7 +5,7 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-CANONICAL = ROOT / ".ai/rules/engineering.md"
+CANONICAL = ROOT / ".agents/rules/engineering.md"
 ENTRYPOINTS = (
     "AGENTS.md",
     "CLAUDE.md",
@@ -17,6 +17,9 @@ ENTRYPOINTS = (
 
 
 class AiRulesTests(unittest.TestCase):
+    def test_previous_rule_copy_is_absent(self):
+        self.assertFalse((ROOT / ".ai/rules/engineering.md").exists())
+
     def test_one_canonical_rule_defines_domain_ownership_and_safety(self):
         self.assertTrue(CANONICAL.is_file(), "canonical repository AI rule missing")
         text = CANONICAL.read_text()
