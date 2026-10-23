@@ -93,7 +93,7 @@ impl DocumentStore for Record {
 }
 fn valid_record() -> (String, Record) {
     let mut value = documents::minimal_documents()[0].1.clone();
-    value["obligations"] = json!([{"obligation_id":"o1","behavioral_fidelity":"equivalent-within-contract","evidence_refs":[value["id"]]}]);
+    value["obligations"] = json!([{"obligation_id":"o1","behavioral_fidelity":"equivalent-within-contract","unresolved_assumption":{"assumption_id":"a1","description":"unknown","reason":"not observed"}}]);
     let bytes = serde_json::to_vec(&value).unwrap();
     let id = value["id"].as_str().unwrap().to_owned();
     let mut manifest: toml::Value = toml::from_str(&input()).unwrap();

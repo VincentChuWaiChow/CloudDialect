@@ -1,7 +1,7 @@
 use super::document_resolution::resolve_document;
 use crate::{
     BehavioralContract, BehavioralFidelity, DocumentKind, DocumentStore, ErrorCategory,
-    ManifestFidelity, PackManifest, Validator, ValidatorError,
+    ManifestFidelity, PackManifest, SemanticOutcome, Validator, ValidatorError,
 };
 
 /// Checks cross-document fidelity through the explicit active validator/store.
@@ -60,6 +60,12 @@ pub fn check_fidelity_mapping(
                 continue;
             }
         };
+        let semantic =
+            validator.validate_semantic(DocumentKind::BehavioralContract, &record.bytes, store);
+        if semantic.outcome == SemanticOutcome::Fail {
+            errors.extend(semantic.errors);
+            continue;
+        }
         let contract: BehavioralContract = match serde_json::from_slice(&record.bytes) {
             Ok(contract) => contract,
             Err(_) => {

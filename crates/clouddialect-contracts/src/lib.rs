@@ -12,7 +12,9 @@ pub mod schema;
 pub mod validator;
 
 pub use schema::{CatalogSnapshot, CatalogUrlLoader};
-pub use validator::{Validate, Validator, check_fidelity_mapping, verify_artifact_hash};
+pub use validator::{
+    Validate, Validator, check_evidence_completeness, check_fidelity_mapping, verify_artifact_hash,
+};
 
 pub use manifest::{
     CapabilityAction, CapabilityDeclaration, CapabilityRequirement, CompatibilitySection,

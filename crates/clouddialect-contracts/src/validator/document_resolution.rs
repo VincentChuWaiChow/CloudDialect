@@ -56,6 +56,17 @@ pub(crate) fn resolve_document(
             ));
         }
     };
+    // An evidence lookup may omit a version, but returned metadata still names
+    // the immutable record whose resolution failed. Keep that diagnostic context.
+    let failure = |path, description| {
+        let mut errors = failure(path, description);
+        for error in &mut errors {
+            error
+                .format_version
+                .get_or_insert_with(|| stored.reference.format_version.clone());
+        }
+        errors
+    };
     if stored.reference.id != id {
         return Err(failure(
             Some("id"),
@@ -78,7 +89,17 @@ pub(crate) fn resolve_document(
     }
     let structural = validator.validate_structural(kind, &stored.bytes);
     if structural.outcome == StructuralOutcome::Fail {
-        return Err(structural.errors);
+        return Err(structural
+            .errors
+            .into_iter()
+            .map(|mut error| {
+                error.document_id.get_or_insert_with(|| id.to_owned());
+                error
+                    .format_version
+                    .get_or_insert_with(|| stored.reference.format_version.clone());
+                error
+            })
+            .collect());
     }
     let document: Value = serde_json::from_slice(&stored.bytes)
         .map_err(|_| failure(None, "Referenced document is not parseable JSON"))?;
