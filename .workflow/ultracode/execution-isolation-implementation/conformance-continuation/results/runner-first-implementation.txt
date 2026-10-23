@@ -1,0 +1,40 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+error[E0599]: `clouddialect_contracts::ValidatorError` doesn't implement `std::fmt::Display`
+   --> tests/support/fixtures.rs:240:62
+    |
+240 |     let snapshot = CatalogSnapshot::embedded().map_err(|e| e.to_string())?;
+    |                                                              ^^^^^^^^^ method cannot be called on `clouddialect_contracts::ValidatorError` due to unsatisfied trait bounds
+    |
+   ::: src/errors/diagnostics.rs:20:1
+    |
+ 20 | pub struct ValidatorError {
+    | ------------------------- doesn't satisfy `_: Display` or `clouddialect_contracts::ValidatorError: ToString`
+    |
+    = note: the following trait bounds were not satisfied:
+            `clouddialect_contracts::ValidatorError: std::fmt::Display`
+            which is required by `clouddialect_contracts::ValidatorError: ToString`
+
+error[E0277]: the trait bound `Array<u8, UInt<UInt<UInt<UInt<_, B0>, B0>, B0>, B0>>: LowerHex` is not satisfied
+   --> tests/conformance_controls.rs:218:177
+    |
+218 | ...{"algorithm":"sha-256", "value":format!("{:x}",Sha256::digest(&raw))}, "bytes":raw});
+    |                                             ----  ^^^^^^^^^^^^^^^^^^^^ the trait `LowerHex` is not implemented for `Array<u8, UInt<UInt<UInt<UInt<UInt<_, B0>, B0>, B0>, B0>, B0>>`
+    |                                             |
+    |                                             required by this formatting parameter
+    |
+    = help: the following other types implement trait `LowerHex`:
+              &T
+              &mut T
+              Braced
+              Hyphenated
+              Saturating<T>
+              Simple
+              Urn
+              Uuid
+            and 30 others
+    = note: the full name for the type has been written to '/tmp/clouddialect-runtime-target/debug/deps/conformance_controls-2d572dfd683c9da2.long-type-12223769308172003533.txt'
+    = note: consider using `--verbose` to print the full type name to the console
+
+Some errors have detailed explanations: E0277, E0599.
+For more information about an error, try `rustc --explain E0277`.
+error: could not compile `clouddialect-contracts` (test "conformance_controls") due to 2 previous errors

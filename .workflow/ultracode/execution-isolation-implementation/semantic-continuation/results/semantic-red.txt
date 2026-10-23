@@ -1,0 +1,24 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+error[E0599]: no method named `validate_semantic` found for reference `&dyn clouddialect_contracts::Validate` in the current scope
+  --> tests/semantic_validation.rs:49:9
+   |
+49 |     api.validate_semantic(kind, &serde_json::to_vec(value).unwrap(), store)
+   |         ^^^^^^^^^^^^^^^^^ method not found in `&dyn clouddialect_contracts::Validate`
+
+error[E0599]: no method named `validate_semantic` found for struct `clouddialect_contracts::Validator` in the current scope
+  --> tests/semantic_validation.rs:98:24
+   |
+98 |         let result = v.validate_semantic(DocumentKind::BehavioralContract, bytes, &store);
+   |                        ^^^^^^^^^^^^^^^^^ method not found in `clouddialect_contracts::Validator`
+
+error[E0502]: cannot borrow `value` as immutable because it is also borrowed as mutable
+   --> tests/semantic_validation.rs:257:49
+    |
+257 |     value["tests"].as_array_mut().unwrap().push(value["tests"][0].clone());
+    |     -----                                  ---- ^^^^^ immutable borrow occurs here
+    |     |                                      |
+    |     mutable borrow occurs here             mutable borrow later used by call
+
+Some errors have detailed explanations: E0502, E0599.
+For more information about an error, try `rustc --explain E0502`.
+error: could not compile `clouddialect-contracts` (test "semantic_validation") due to 3 previous errors

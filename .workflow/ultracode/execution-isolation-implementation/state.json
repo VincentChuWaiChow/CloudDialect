@@ -2,7 +2,7 @@
   "title": "Execution-isolation implementation",
   "slug": "execution-isolation-implementation",
   "created_at": "2026-10-22T07:25:44.090021+00:00",
-  "updated_at": "2026-10-22T17:30:20.033316+00:00",
+  "updated_at": "2026-10-23T15:50:42.245558+00:00",
   "status": "executing",
   "mode": "delegated",
   "baseline_ref": "3b9cb6bd0ee82dbef3b731a35ce68fc778c4906a",
@@ -15,18 +15,19 @@
   "approval": {
     "required": true,
     "granted": false,
-    "notes": "Implementation, initial MVP versions, exact extension feature and three direct pins/profile separately approved; latest user explicitly authorizes domain organization/rules plus git commit/push. No native probes/releases/security-gate closure."
+    "notes": "Explicit next-tranche approval+frequent commits received; local commits authorized, no pushes/native/release or runtime-gate closure."
   },
   "delegation": {
     "native_agent_available": true,
     "native_agent_planned": true,
     "native_agent_used": true,
-    "agent_count": 26,
+    "agent_count": 28,
     "wave_count": 12,
     "no_delegation_reason": "",
-    "notes": "Owner approved26cumulative;24reference/25catalog raw write workers complete;26final readonly active. No recursion/followup dispatches. Original17:37:43UTC deadline retained.",
-    "additional_dispatch_limit": 3,
-    "additional_dispatches_used": 3
+    "notes": "Reviewer27/28complete;28cumulative exhausted, no recursion/follow-ups. Later extension/completeness parent-audited only. One consolidated date review repair used; original15:54UTC cap unchanged.",
+    "additional_dispatch_limit": 2,
+    "additional_dispatches_used": 2,
+    "consolidated_repairs_used_current_tranche": 1
   },
   "packets": [
     {
@@ -226,6 +227,20 @@
       "owner": "readonly-agent",
       "write_scope": [],
       "result_path": "results/26-reference-fidelity-review.md"
+    },
+    {
+      "id": "27-contract-audit",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "semantic-continuation/results/27-contract-audit.md"
+    },
+    {
+      "id": "28-integration-review",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "semantic-continuation/results/28-integration-review.md"
     }
   ],
   "verification": {
@@ -1237,7 +1252,15 @@
         "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-verified-diff.txt",
         "raw_path": "/tmp/clouddialect-version-structural-verified-diff.txt"
       }
-    ]
+    ],
+    "latest_continuation": {
+      "status": "Current implemented tree GREEN:275Rust/15Python/check/fmt/Clippy/94.54% emitted production lines. Full conformance/native/consumer not delivered.",
+      "report": "semantic-continuation/final-report.md",
+      "checks": "semantic-continuation/results/complete-checks.json",
+      "coverage": "semantic-continuation/results/complete-coverage/domain-coverage-summary.json",
+      "completeness_implemented": true,
+      "review_boundary": "reviewer28semantic/compatibility only; later extension/completeness parent-audited"
+    }
   },
   "limits": {
     "cumulative_dispatches": 3,
@@ -1501,14 +1524,15 @@
     "snapshot_digest_resolver_authentication": "not implemented"
   },
   "current_limits": {
-    "cumulative_dispatch_ceiling": 26,
-    "cumulative_dispatches_used": 26,
+    "cumulative_dispatch_ceiling": 30,
+    "cumulative_dispatches_used": 29,
     "max_concurrent_including_parent": 4,
     "recursion": 0,
     "followup_dispatches": 0,
     "repair_limit": 1,
     "repairs_consumed": 1,
-    "deadline": "2026-10-22T17:37:43Z"
+    "deadline": "2026-10-23T20:14:04Z",
+    "started_at": "2026-10-23T18:44:04+00:00"
   },
   "ai_rule_location_correction": {
     "requested_by": "Explicit user: AI agent rules should be in .agents/rules",
@@ -1735,8 +1759,9 @@
     "publication_sha": "cd51996c3b2f65adb23aa129d412111b2d12ec6b"
   },
   "continuation_blocked_audit": {
-    "status": "owner approvals received; resumed fresh blocked audit",
-    "consecutive_goal_turns_verified": 0
+    "status": "resumed after explicit owner next-tranche approval",
+    "consecutive_no_progress_goal_turns": 0,
+    "checked_at": "2026-10-23T18:45:46.167066+00:00"
   },
   "reference_fidelity_wave": {
     "started_at": "2026-10-22T16:07:43Z",
@@ -1764,5 +1789,21 @@
     "review": "26static no actionable findings at e40c6d9, no independent postrename signoff",
     "report": "reference-fidelity-report.md",
     "publication_receipt": "/tmp/clouddialect-reference-fidelity-publication.json"
-  }
+  },
+  "semantic_continuation": {
+    "status": "semantic_completeness_policy_verified_full_goal_incomplete",
+    "report": "semantic-continuation/final-report.md",
+    "implemented_units": [
+      "2.9",
+      "2.10",
+      "3.3",
+      "3.4"
+    ],
+    "completeness_disposition": "Explicit owner-approved invalid/valid-empty Deferred; resource assumptions map to every obligation",
+    "known_preexisting_blocker": "mismatching instance schema diagnostic omits URI",
+    "full_goal_complete": false,
+    "current_full_tree_green": true,
+    "completeness_implemented": true
+  },
+  "current_tranche": "conformance-continuation"
 }

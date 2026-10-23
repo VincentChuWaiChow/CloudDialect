@@ -1,0 +1,38 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.88s
+     Running tests/fidelity_mapping.rs (/tmp/clouddialect-runtime-target/debug/deps/fidelity_mapping-f6acfd7b7ac884aa)
+
+running 8 tests
+test unsupported_is_retained_and_does_not_require_a_fidelity_lookup ... ok
+test missing_record_keeps_manifest_reference_location_and_target_details ... ok
+test fidelity_error_uses_actual_index_after_unsupported_operation ... ok
+test corrupted_or_schema_invalid_records_are_not_used_for_fidelity ... ok
+test referenced_document_diagnostics_retain_original_location_for_full_and_partial ... ok
+test mandatory_semantics_block_and_all_fidelity_violations_are_reported_without_acceptance ... ok
+test missing_bindings_records_and_outages_never_become_success ... ok
+test full_and_partial_enforce_every_declared_obligation_fidelity ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.37s
+
+     Running tests/manifest_evidence.rs (/tmp/clouddialect-runtime-target/debug/deps/manifest_evidence-1539fd957c5a3860)
+
+running 3 tests
+test fidelity_helper_and_manifest_consume_the_same_validated_contract_evidence_boundary ... ok
+test every_manifest_binding_checks_evidence_without_refetching_the_contract ... ok
+test corrupt_or_mandatory_evidence_blocks_but_unknown_classification_is_not_a_reference_failure ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.20s
+
+     Running tests/manifest_semantic.rs (/tmp/clouddialect-runtime-target/debug/deps/manifest_semantic-8de376cdd78f705e)
+
+running 8 tests
+test invalid_local_manifest_never_queries_store ... ok
+test local_pass_missing_contract_semantic_fail_and_trait_dispatch_remain_separate ... ok
+test unsupported_and_orphan_missing_records_identify_the_manifest_reference ... ok
+test referenced_parse_failures_retain_context_for_every_explicit_binding ... ok
+test unsupported_without_contracts_is_semantic_pass_not_authority ... ok
+test every_explicit_binding_preserves_referenced_structural_diagnostics ... ok
+test valid_stored_contract_passes_real_semantics_but_explicit_unsupported_refs_still_resolve ... ok
+test semantic_entrypoint_uses_its_owned_active_catalog ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s

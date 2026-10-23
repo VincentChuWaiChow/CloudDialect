@@ -1,6 +1,6 @@
 # Design Document
 
-**Later publication action approval:** the user explicitly requested git commit and git push for this work. Those actions are now authorized; the earlier no-commit/no-push implementation limit is historical. Native probes, deployment and releases remain unauthorized.
+**Publication authority:** earlier commit/push approvals apply to their historical actions. The current2026-10-23 continuation explicitly authorizes frequent local commits, not pushes, native probes, deployments or releases.
 
 
 ## Current physical domain layout
@@ -14,7 +14,7 @@ User requested domain-first organization on2026-10-22. Document DTO implementati
 
 **Current continuation status (2026-10-22):** user approved P0-A–F for implementation planning, then separately authorized the remaining Spec 1 prerequisite units in [implementation-plan.md](implementation-plan.md), TDD and no commits/probes/pushes/releases. User attests this is a new project and approves document/catalog **1.0.0** and crate API **0.1.0** as the initial MVP versions. This is not an independent external-publication audit or security-gate approval. Exact encoded extension JSON value bytes are required; raw_value on the existing pinned serde_json is separately approved.
 
-**Delivery is partial.** DTOs, schemas, catalog inventory, frozen snapshot/loading, structural JSON validation, local TOML rules and candidate hash equality have bounded verification. JSON semantic/completeness validation, full mandatory-blocker integration, exhaustive conformance and delivered downstream compatibility remain unfinished; scoped fidelity/TOML semantic delivery is recorded in the current report. See the [current run report](../../../.workflow/ultracode/execution-isolation-implementation/final-report.md) for actual evidence and outstanding work. Canonical task checkmarks are conservative; BG-01 and Spec 2 UD-1–UD-5 remain OPEN.
+**Delivery is partial.** DTOs, schemas, catalog inventory, frozen snapshot/loading, structural JSON validation, local TOML rules and candidate hash equality have bounded verification. JSON/TOML semantic validation and mandatory blockers have bounded independent review; completeness now has9focused tests and parent-only audit. Exhaustive conformance and delivered downstream compatibility remain unfinished. See the [current run report](../../../.workflow/ultracode/execution-isolation-implementation/final-report.md) for actual evidence and outstanding work. Canonical task checkmarks are conservative; BG-01 and Spec 2 UD-1–UD-5 remain OPEN.
 
 This design document specifies the technical architecture for the CloudDialect **Contracts & Evidence Foundation** — Spec 1 of 3 in a sequenced set.
 
@@ -779,7 +779,7 @@ Annotated JSON Schema skeleton (key fields with types and constraints):
 
 ### 4.3 Verification Result
 
-**P0-C initial MVP schema artifact implemented under separate code/version approvals; semantic and authority checks remain unfinished.** Configuration is a reference to exact immutable secret-free bytes. Artifact bindings and approval/origin strings are untrusted claims until checked against independent trusted context; JSON Schema cannot authenticate them. P0-C specifies semantic checks for digest lengths, unique test IDs, obligation membership, UTC time and matching document references.
+**P0-C initial MVP schema and bounded semantic checks implemented under separate code/version approvals; authority checks remain Spec 2 work.** Configuration is a reference to exact immutable secret-free bytes. Artifact bindings and approval/origin strings are untrusted claims until checked against independent trusted context; JSON Schema cannot authenticate them. The semantic continuation checks digest lengths, unique test IDs, obligation membership, UTC time and matching document references; complete conformance and independent review remain outstanding.
 
 ```json
 {
@@ -1744,9 +1744,9 @@ crates/
       integration/
 ```
 
-**Target public API surface (DTOs, structural Validator/Validate, local and scoped semantic ManifestValidator/ValidateManifest, explicit-context check_fidelity_mapping and verify_artifact_hash delivered within scoped tests; JSON semantic methods, completeness and full mandatory blocker integration remain unfinished):**
+**Public API surface (DTOs, structural/semantic Validator/Validate, local/scoped semantic ManifestValidator/ValidateManifest, explicit-context check_fidelity_mapping/check_evidence_completeness and verify_artifact_hash delivered within scoped tests; exhaustive conformance and downstream qualification remain unfinished):**
 
-Current Validate exposes only validate_structural; the semantic method below is the remaining target, not a success/default/panic stub. Opaque root reference projection is conservatively unsupported; exact-version validation still uses the actual catalog-backed compiler. Whole canonical tasks/conformance and acceptance are not implied by this bounded structural API.
+Validate now exposes both methods below with real structural, mandatory-extension, core-reference and verification-rule consumers. Opaque root reference projection is conservatively unsupported; exact-version validation still uses the actual catalog-backed compiler. JSON semantic calendar/UTC checks use real format assertions, including a fixed core date-time rule so a relaxed explicit schema cannot bypass them. Whole canonical tasks/conformance, independent review and acceptance are not implied by the bounded API.
 
 ```rust
 // clouddialect-contracts public API

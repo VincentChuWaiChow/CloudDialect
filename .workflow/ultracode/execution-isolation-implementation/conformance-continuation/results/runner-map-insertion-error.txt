@@ -1,0 +1,46 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+error[E0423]: cannot find value `manifest` in this scope
+   --> tests/support/fixtures.rs:406:8
+    |
+406 |     if manifest && expected.phase == "structural" {
+    |        ^^^^^^^^ not found in this scope
+    |
+    = note: a module named `manifest` exists in another namespace
+
+error[E0425]: cannot find value `expected` in this scope
+   --> tests/support/fixtures.rs:406:20
+    |
+406 |     if manifest && expected.phase == "structural" {
+    |                    ^^^^^^^^ not found in this scope
+    |
+help: consider importing this function
+    |
+  3 + use crate::expected;
+    |
+
+error[E0425]: cannot find value `actual` in this scope
+   --> tests/support/fixtures.rs:409:31
+    |
+409 |             .flat_map(|field| actual[field].as_array().unwrap().iter().cloned())
+    |                               ^^^^^^ not found in this scope
+
+error[E0425]: cannot find value `actual` in this scope
+   --> tests/support/fixtures.rs:411:9
+    |
+411 |         actual["errors"] = Value::Array(errors);
+    |         ^^^^^^ not found in this scope
+
+warning: variable does not need to be mutable
+   --> tests/support/fixtures.rs:243:9
+    |
+243 |     let mut actual = match (expected.phase.as_str(), kind) {
+    |         ----^^^^^^
+    |         |
+    |         help: remove this `mut`
+    |
+    = note: `#[warn(unused_mut)]` (part of `#[warn(unused)]`) on by default
+
+Some errors have detailed explanations: E0423, E0425.
+For more information about an error, try `rustc --explain E0423`.
+warning: `clouddialect-contracts` (test "conformance_controls") generated 1 warning
+error: could not compile `clouddialect-contracts` (test "conformance_controls") due to 4 previous errors; 1 warning emitted

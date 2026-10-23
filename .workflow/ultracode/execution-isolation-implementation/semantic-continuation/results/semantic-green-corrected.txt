@@ -1,0 +1,15 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.73s
+     Running tests/semantic_validation.rs (/tmp/clouddialect-runtime-target/debug/deps/semantic_validation-a366acfbb86d76fa)
+
+running 8 tests
+test structural_failures_are_non_accepting_and_never_query_the_store ... ok
+test missing_ambiguous_or_unavailable_evidence_reports_every_referring_path_safely ... ok
+test verification_rules_are_enforced_by_the_public_method_and_cannot_be_overridden_by_extensions ... ok
+test declared_core_evidence_references_resolve_uniquely_without_scanning_opaque_payloads ... ok
+test unknown_evidence_and_explicit_assumptions_are_semantic_data_not_completeness_or_acceptance ... ok
+test semantic_calendar_and_utc_validation_uses_real_schema_assertions_not_only_z_suffix ... ok
+test store_identity_type_hash_version_and_malformed_bytes_cannot_substitute_evidence ... ok
+test unknown_mandatory_extensions_block_all_five_kinds_with_or_without_payloads ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.13s

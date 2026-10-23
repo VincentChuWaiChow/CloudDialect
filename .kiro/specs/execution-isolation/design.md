@@ -4,7 +4,7 @@
 
 This is the **conditional technical design for Spec 2**, following the requirements analysis in `analysis.md`. It proposes a trusted Rust control plane around independently confined worker execution, with separate policy, budget, project-data, credential, verifier, audit, and recovery responsibilities. These are logical boundaries, not a commitment to microservices, containers, or a particular sandbox.
 
-**NOT IMPLEMENTATION-READY.** UD-1 through UD-5 remain unresolved; BG-01 blocks integration with nonexistent/disagreeing Spec 1 APIs. Interfaces below are proposed internal contracts, not implemented Rust exports, IPC schemas, or amendments to Spec 1. No runtime dependency, backend, operating-system support claim, numerical budget, retention duration, or credential delivery mechanism is selected. All implementation and qualification evidence is MISSING.
+**NOT IMPLEMENTATION-READY.** UD-1 through UD-5 remain unresolved; BG-01 blocks integration until the partially delivered Spec 1 dependency has complete qualification and owner acceptance. Interfaces below are proposed execution-layer contracts, not implemented execution Rust exports, IPC schemas, or amendments to Spec 1. No runtime dependency, backend, operating-system support claim, numerical budget, retention duration, or credential delivery mechanism is selected. Execution implementation and native qualification evidence is MISSING; current upstream progress is recorded in the [BG-01 inventory](decisions/BG-01-upstream.md).
 
 The design consumes `clouddialect-contracts` once its required APIs exist. It never substitutes structural validity, evidence completeness, signatures, process exit codes, or generated explanations for behavioral acceptance. Commercial use remains subject to a separate executed license under the existing CloudDialect licensing model.
 
@@ -43,7 +43,7 @@ flowchart LR
 | Constraint | Consequence |
 |---|---|
 | Rust trusted core; future Python/Go/Java workers | Core-owned authority and language-independent semantics; language cannot weaken isolation. |
-| Spec 1 currently only module stubs | BG-01 must deliver compatible APIs before executable integration; proposed names are not compile evidence. |
+| Spec 1 partially implemented; full conformance/handoff incomplete | BG-01 must deliver a qualified compatible dependency before executable integration; API presence and unit tests alone do not close the gate. |
 | Linux, macOS and CI portability must be evaluated | UD-1 must publish a supported-profile matrix; no implicit Linux-only choice or native macOS guarantee. |
 | Security controls outside model context | Tools and output are data; concrete operations pass external policy guards. |
 | No measured resource values or staffing/cost baseline | UD-5 reference measurements precede budgets; task estimates are planning estimates, not delivery promises. |

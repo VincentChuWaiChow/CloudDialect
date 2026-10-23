@@ -1,0 +1,11 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.42s
+     Running tests/extension_policy.rs (/tmp/clouddialect-runtime-target/debug/deps/extension_policy-53dfdba2d02a92a3)
+
+running 4 tests
+test convention_covers_required_elements_and_real_registry_fields ... ok
+test toml_extension_claims_cannot_supply_or_change_core_capability_declarations ... ok
+test raw_optional_value_bytes_survive_without_overriding_core_semantics ... ok
+test documented_grammar_warnings_and_declaration_only_blockers_use_public_phases ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.28s

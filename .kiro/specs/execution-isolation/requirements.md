@@ -49,15 +49,15 @@ Out of scope: changing Spec 1 document formats or reimplementing its crate; tran
 
 | Consumed contract | Intended use | Verified repository state / blocker |
 |---|---|---|
-| `StructuralResult`, `SemanticResult` | Gate documents and reference integrity before dispatch and output promotion. | Types absent from module-stub source; Spec 1 implementation prerequisite. |
-| `BehavioralResult`, `BehavioralOutcome` | Complete behavioral verification after Spec 1's deferred phase. | Types absent; Spec 1 design includes `test_results`, tasks omit it and enumerate `Deferred`, `EvidenceComplete`, `Blocked`. Neither completeness nor deferred means behavioral success. |
-| `CatalogUrlLoader` | Use Spec 1's offline schema validation, if needed. | Not implemented; no new loader or network schema resolution here. |
-| `ValidatorError`, `BlockingGap` | Carry dependency validation diagnostics and unresolved obligations. | Not implemented; do not invent exported variants or incompatible fields. |
-| Pack manifest / verification result documents | Consume versioned capability declarations, identities, evidence, and approvals. | Capability declaration representation and behavioral outcome integration need upstream agreement. No competing schema is defined here. |
+| `StructuralResult`, `SemanticResult` | Gate documents and reference integrity before dispatch and output promotion. | Distinct exported types and structural/scoped JSON/TOML methods now have bounded tests; full conformance and consumer handoff remain incomplete. |
+| `BehavioralResult`, `BehavioralOutcome` | Complete behavioral verification after Spec 1's deferred phase. | Non-accepting completeness helper now exists with empty verification projection; actual behavioral verification and complete consumer qualification remain unfinished. |
+| `CatalogUrlLoader` | Use Spec 1's offline schema validation, if needed. | Closed snapshot-backed loader implemented; native network-disabled qualification remains outstanding. No competing loader or network resolution here. |
+| `ValidatorError`, `BlockingGap` | Carry dependency validation diagnostics and unresolved obligations. | Exported types exist; execution diagnostics remain separate. No incompatible variants are invented here. |
+| Pack manifest / verification result documents | Consume versioned capability declarations, identities, evidence, and approvals. | Approved initial-MVP representations and bounded validation exist. Declarations/approval strings confer no authority; complete dependency qualification and owner acceptance remain open. |
 
 **BG-01 — upstream integration gate:** before executable implementation, the Spec 1 owner must deliver the consumed APIs and reconcile its design/task disagreement, capability declaration representation, behavioral outcome mapping, verification configuration/failure-detail representation, and trusted schema-catalog override contract. Record the accepted version and compatibility tests. Optional manifest extensions cannot silently acquire security authority. Any required upstream format change belongs to Spec 1 under separate review. Spec 2 does not silently add a `Passed` enum variant or interpret `EvidenceComplete` as accepted. Execution blockers remain separate from document-validation error categories.
 
-References: `../contracts-evidence-foundation/design.md` (result types, offline loader, deferred phase); `../contracts-evidence-foundation/tasks.md` tasks 8–15; repository-root path `crates/clouddialect-contracts/src/lib.rs` contains stubs only at the baseline.
+References: `../contracts-evidence-foundation/design.md` (result types, offline loader, deferred phase); `../contracts-evidence-foundation/tasks.md` tasks 8–15; [current BG-01 inventory](decisions/BG-01-upstream.md). The original source baseline contained module stubs; those absence findings are historical, not current API state.
 
 ## Requirements
 

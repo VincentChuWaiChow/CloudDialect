@@ -1,0 +1,15 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+error[E0599]: no method named `validate_semantic` found for reference `&dyn clouddialect_contracts::Validate` in the current scope
+  --> tests/semantic_validation.rs:49:9
+   |
+49 |     api.validate_semantic(kind, &serde_json::to_vec(value).unwrap(), store)
+   |         ^^^^^^^^^^^^^^^^^ method not found in `&dyn clouddialect_contracts::Validate`
+
+error[E0599]: no method named `validate_semantic` found for struct `clouddialect_contracts::Validator` in the current scope
+  --> tests/semantic_validation.rs:98:24
+   |
+98 |         let result = v.validate_semantic(DocumentKind::BehavioralContract, bytes, &store);
+   |                        ^^^^^^^^^^^^^^^^^ method not found in `clouddialect_contracts::Validator`
+
+For more information about this error, try `rustc --explain E0599`.
+error: could not compile `clouddialect-contracts` (test "semantic_validation") due to 2 previous errors

@@ -1,0 +1,251 @@
+{
+  "title": "Semantic prerequisite continuation",
+  "slug": "semantic-continuation",
+  "created_at": "2026-10-23T14:26:56.364921+00:00",
+  "updated_at": "2026-10-23T15:50:42.245558+00:00",
+  "status": "executing",
+  "mode": "delegated",
+  "baseline_ref": "5dc25f3f31ce500d17aa2322793d3a970f9b73d9",
+  "risk_level": "high",
+  "eval_contract": {
+    "level": "full",
+    "path": "eval-contract.md",
+    "status": "checked"
+  },
+  "approval": {
+    "required": true,
+    "granted": true,
+    "notes": "All completeness dispositions explicitly owner-approved, including valid zero-obligation Deferred; no fabricated IDs/schema change. No current Git/native/release authority."
+  },
+  "delegation": {
+    "native_agent_available": true,
+    "native_agent_planned": true,
+    "native_agent_used": true,
+    "agent_count": 2,
+    "prior_implementation_dispatches": 26,
+    "wave_count": 2,
+    "no_delegation_reason": "",
+    "notes": "Reviewer27and28complete;28cumulative consumed, zero recursion/follow-ups. Later extension unit parent-audited only. One repair used; original15:54UTC deadline unchanged.",
+    "consolidated_repairs_used": 1,
+    "additional_dispatch_limit": 2,
+    "additional_dispatches_used": 2
+  },
+  "packets": [
+    {
+      "id": "2.9V",
+      "status": "complete",
+      "owner": "parent",
+      "write_scope": [
+        "src/validator/verification_semantics.rs",
+        "tests/verification_semantics.rs"
+      ],
+      "result_path": "results/verification-green.txt"
+    },
+    {
+      "id": "2.9S",
+      "status": "complete",
+      "owner": "parent",
+      "write_scope": [
+        "src/validator/semantic.rs",
+        "src/validator/mod.rs",
+        "src/validator/document_resolution.rs",
+        "src/validator/mandatory_extensions.rs (consumer comment)",
+        "tests/semantic_validation.rs"
+      ],
+      "result_path": "results/semantic-green-corrected.txt"
+    },
+    {
+      "id": "2.9T",
+      "status": "complete",
+      "owner": "parent",
+      "write_scope": [
+        "src/validator/fidelity.rs",
+        "src/manifest/validator.rs",
+        "tests/fidelity_mapping.rs",
+        "tests/manifest_semantic.rs",
+        "tests/manifest_evidence.rs"
+      ],
+      "result_path": "results/manifest-evidence-green.txt"
+    },
+    {
+      "id": "27-contract-audit",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/27-contract-audit.md"
+    },
+    {
+      "id": "28-integration-review",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/28-integration-review.md"
+    },
+    {
+      "id": "2.10B",
+      "status": "complete_parent_audited",
+      "owner": "parent",
+      "write_scope": [
+        "src/validator/behavioral.rs",
+        "src/validator/mod.rs",
+        "src/lib.rs",
+        "tests/evidence_completeness.rs"
+      ],
+      "result_path": "results/complete-focused.txt"
+    },
+    {
+      "id": "3.3",
+      "status": "complete",
+      "owner": "parent",
+      "write_scope": [
+        "docs/compatibility-policy.md",
+        "tests/compatibility_policy.rs"
+      ],
+      "result_path": "results/compatibility-policy-corrected.txt"
+    },
+    {
+      "id": "3.4",
+      "status": "complete_parent_audited",
+      "owner": "parent",
+      "write_scope": [
+        "docs/extension-convention.md",
+        "tests/extension_policy.rs"
+      ],
+      "result_path": "results/extension-policy-focused.txt"
+    }
+  ],
+  "verification": {
+    "status": "Current implemented tree GREEN:275Rust/15Python/check/fmt/Clippy/94.54% emitted production lines. Full conformance/native/consumer not delivered.",
+    "checks": [
+      {
+        "name": "complete-focused",
+        "command": [
+          "rtk",
+          "proxy",
+          "cargo",
+          "test",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen",
+          "--test",
+          "evidence_completeness"
+        ],
+        "exit_code": 0,
+        "status": "pass",
+        "completed_at": "2026-10-23T15:47:50.544782+00:00",
+        "evidence": "results/complete-focused.txt"
+      },
+      {
+        "name": "complete-full",
+        "command": [
+          "rtk",
+          "proxy",
+          "cargo",
+          "test",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen"
+        ],
+        "exit_code": 0,
+        "status": "pass",
+        "completed_at": "2026-10-23T15:47:58.808776+00:00",
+        "evidence": "results/complete-full.txt"
+      },
+      {
+        "name": "complete-check",
+        "command": [
+          "rtk",
+          "proxy",
+          "cargo",
+          "check",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen",
+          "--all-targets"
+        ],
+        "exit_code": 0,
+        "status": "pass",
+        "completed_at": "2026-10-23T15:47:59.412392+00:00",
+        "evidence": "results/complete-check.txt"
+      },
+      {
+        "name": "complete-fmt",
+        "command": [
+          "rtk",
+          "proxy",
+          "cargo",
+          "fmt",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--check"
+        ],
+        "exit_code": 0,
+        "status": "pass",
+        "completed_at": "2026-10-23T15:47:59.538102+00:00",
+        "evidence": "results/complete-fmt.txt"
+      },
+      {
+        "name": "complete-clippy",
+        "command": [
+          "rtk",
+          "proxy",
+          "cargo",
+          "clippy",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "exit_code": 0,
+        "status": "pass",
+        "completed_at": "2026-10-23T15:48:00.216186+00:00",
+        "evidence": "results/complete-clippy.txt"
+      },
+      {
+        "name": "complete-python",
+        "command": [
+          "rtk",
+          "proxy",
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "exit_code": 0,
+        "status": "pass",
+        "completed_at": "2026-10-23T15:48:00.268859+00:00",
+        "evidence": "results/complete-python.txt"
+      },
+      {
+        "name": "complete-whitespace",
+        "command": [
+          "rtk",
+          "proxy",
+          "git",
+          "diff",
+          "--check"
+        ],
+        "exit_code": 0,
+        "status": "pass",
+        "completed_at": "2026-10-23T15:48:00.281694+00:00",
+        "evidence": "results/complete-whitespace.txt"
+      },
+      {
+        "name": "complete-coverage",
+        "command": "Canonical measure-domain-coverage.py with recorded path-only adapter",
+        "status": "pass",
+        "exit_code": 0,
+        "evidence": "results/complete-coverage/domain-coverage-summary.json"
+      }
+    ]
+  },
+  "current_full_tree_green": true,
+  "completeness_implemented": true,
+  "full_goal_complete": false
+}

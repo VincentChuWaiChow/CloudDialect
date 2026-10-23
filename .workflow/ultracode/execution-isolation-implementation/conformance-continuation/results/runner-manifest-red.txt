@@ -1,0 +1,22 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.70s
+     Running tests/conformance_controls.rs (/tmp/clouddialect-runtime-target/debug/deps/conformance_controls-2d572dfd683c9da2)
+
+running 1 test
+test manifest_dispatch_compares_both_local_error_channels_and_real_semantic_results ... FAILED
+
+failures:
+
+---- manifest_dispatch_compares_both_local_error_channels_and_real_semantic_results stdout ----
+
+thread 'manifest_dispatch_compares_both_local_error_channels_and_real_semantic_results' (186) panicked at tests/conformance_controls.rs:163:84:
+called `Result::unwrap()` on an `Err` value: "/tmp/clouddialect-conformance-9d5c96a4-ba5d-4741-aec4-84297a582f6a/manifest: errors: expected 1 entries, actual 0"
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    manifest_dispatch_compares_both_local_error_channels_and_real_semantic_results
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 8 filtered out; finished in 0.08s
+
+error: test failed, to rerun pass `--test conformance_controls`

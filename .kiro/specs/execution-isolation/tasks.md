@@ -2,11 +2,17 @@
 
 ## Overview
 
-**Conditional, decision-gated plan; no implementation is authorized or performed by this documentation run.** Strategy: risk-first decisions and upstream compatibility, then foundation-first independent modules, then integrated qualification. All checkboxes remain unchecked. UD-1 through UD-5 and BG-01 must close with owner-approved evidence before implementation task 1.7 or any runtime work starts.
+**Conditional, decision-gated plan.** Strategy: risk-first decisions and upstream compatibility, then foundation-first independent modules, then integrated qualification. Checked supporting deliverables below record completed preparation or separately authorized Spec 1 work, not completion of their numbered task or approval of a gate. UD-1 through UD-5 and BG-01 must close with owner-approved evidence before implementation task 1.7 or any runtime work starts.
 
 Proposed implementation home: `crates/clouddialect-execution/` (abbreviated `EXEC/` below); it is not present today and this plan does not create it. Spec 1 owns `clouddialect-contracts`; its corrections are upstream prerequisites under separate approval, not permission to implement Spec 1 in these tasks. Paths and module interfaces are conditional on approved decision records; re-gate affected design/tasks if they change.
 
 Estimates are 2–4 engineering hours per leaf after prerequisites are available, not elapsed approval time or a delivery commitment. The sandbox/credential/persistence feasibility spikes are timeboxed investigations: unresolved results leave gates open and require a scoped follow-up plan, never an unreviewed default or an arbitrarily enlarged task. Platform/backend implementation must be re-estimated after selection; split any leaf exceeding four hours before dispatch.
+
+## Progress reconciled — 2026-10-23
+
+Decision recommendations and qualification plans have been drafted. Spec 1 contract prerequisites have been partially implemented and reviewed; they are tracked in the [upstream delivery plan](../contracts-evidence-foundation/implementation-plan.md), not counted as execution-runtime implementation here. No `crates/clouddialect-execution/` crate exists. All 21 numbered tasks remain open because their approval, compatibility, implementation or qualification obligations are not fully satisfied.
+
+The checked supporting items under 1.1–1.6 identify what is actually delivered. UD-1–UD-5 and BG-01 remain **OPEN**; native qualification is **NOT RUN**, and budgets remain unmeasured. The original BG-01 missing-export probe describes an old stub revision, not the current contracts crate. The semantic continuation adds actual JSON/TOML reference validation and verification consistency; bounded semantic independent review and parent-audited completeness are now delivered; the complete consumer/conformance handoff remains unfinished. Current upstream progress does not replace owner approvals.
 
 ## Tasks
 
@@ -19,6 +25,8 @@ Estimates are 2–4 engineering hours per leaf after prerequisites are available
     - Estimate: 4h timebox. Dependencies: none; no prerequisite on other decision packets.
     - Design: DES-001, DES-002, DES-008.
     - _Requirements: REQ-001, REQ-002, REQ-005, REQ-008_
+    - Completed supporting deliverable:
+      - [x] Drafted the [isolation/verifier-observation comparison and residual risks](decisions/UD-1-isolation.md) and [qualification plan](qualification/isolation-plan.md). Owner selection, supported-profile approval and native evidence remain outstanding.
   - [ ] 1.2 TASK-002 Prepare versioned IPC decision evidence
     - Define proposed negotiation, framing, messages, bounded parsing/backpressure, correlation and cancellation only during this future decision task. Compare the JSON-RPC-over-stdio recommendation with requirements; do not treat JSON-RPC as transport authorization.
     - Files: `decisions/UD-2-ipc.md`, `qualification/ipc-cases.md` under this spec directory.
@@ -27,6 +35,8 @@ Estimates are 2–4 engineering hours per leaf after prerequisites are available
     - Estimate: 3h. Dependencies: none.
     - Design: DES-001, DES-006, DES-010.
     - _Requirements: REQ-001, REQ-003, REQ-006, REQ-010_
+    - Completed supporting deliverable:
+      - [x] Drafted the [IPC profile recommendation](decisions/UD-2-ipc.md) and [protocol qualification cases](qualification/ipc-cases.md). Exact wire/schema/error contracts, reconciled bounds, owner approval and interoperability evidence remain outstanding.
   - [ ] 1.3 TASK-003 Prepare scoped credential delivery decision evidence
     - Compare delivery options, actual authority, lifetime/revocation and authorized-recipient exfiltration risk. Identify test-resource and operation scoping; no real secret is needed in this packet.
     - Files: `decisions/UD-3-credentials.md`, `qualification/credential-cases.md` under this spec directory.
@@ -35,6 +45,8 @@ Estimates are 2–4 engineering hours per leaf after prerequisites are available
     - Estimate: 3h. Dependencies: none.
     - Design: DES-005, DES-006, DES-010.
     - _Requirements: REQ-004, REQ-005, REQ-006, REQ-010_
+    - Completed supporting deliverable:
+      - [x] Drafted the [credential-delivery comparison and lifecycle proposal](decisions/UD-3-credentials.md) and [synthetic-canary qualification cases](qualification/credential-cases.md). Mechanism/provider selection, measured guarantees and owner approval remain outstanding.
   - [ ] 1.4 TASK-004 Prepare persistence, retention and restore decision evidence
     - Compare audit/project persistence, integrity, authoritative commit ordering, access control, outage handling and offline behavior. Define every data-class retention/deletion rule, backup limitations and restore policy before claiming durability.
     - Files: `decisions/UD-4-persistence.md`, `qualification/restore-cases.md` under this spec directory.
@@ -43,6 +55,8 @@ Estimates are 2–4 engineering hours per leaf after prerequisites are available
     - Estimate: 4h. Dependencies: none.
     - Design: DES-007, DES-009, DES-010.
     - _Requirements: REQ-007, REQ-009, REQ-010_
+    - Completed supporting deliverable:
+      - [x] Drafted the [persistence options, ordering and retention decision table](decisions/UD-4-persistence.md) and [restore qualification cases](qualification/restore-cases.md). Backend/retention decisions, tested restore evidence and owner approval remain outstanding.
   - [ ] 1.5 TASK-005 Measure a reference workload and propose finite budgets
     - Define a reproducible reference workload and approved measurement environment; record CPU, aggregate memory, elapsed wall, process, output/storage, attempts, cleanup, and enabled external-use consumption with explicit units. Account for enforcement lag and cumulative retries.
     - Files: `decisions/UD-5-budgets.md`, `qualification/budget-measurements.json` under this spec directory.
@@ -51,6 +65,8 @@ Estimates are 2–4 engineering hours per leaf after prerequisites are available
     - Estimate: 4h timebox. Dependencies: none for reference planning; selected-profile qualification is reconciled at 1.7 and tested at 12.3.
     - Design: DES-003, DES-001, DES-010.
     - _Requirements: REQ-001, REQ-003, REQ-010_
+    - Completed supporting deliverable:
+      - [x] Drafted the [accounting/reference-workload measurement proposal](decisions/UD-5-budgets.md) and [explicit missing-measurement record](qualification/budget-measurements.json). No benchmark was executed or finite budget approved; task 1.5 remains incomplete.
   - [ ] 1.6 TASK-006 Reconcile and verify the Spec 1 dependency contract
     - Inventory delivered types/API versions; obtain upstream resolution of BehavioralResult fields/outcomes, manifest capability representation, verification configuration/structured failures and trusted catalog override. Optional extensions cannot become security grants. Do not add an invented accepted/pass variant or modify Spec 1 locally.
     - Files: `decisions/BG-01-upstream.md`, `qualification/upstream-compatibility.md` under this spec directory.
@@ -59,6 +75,10 @@ Estimates are 2–4 engineering hours per leaf after prerequisites are available
     - Estimate: 3h excluding upstream implementation. Dependencies: none.
     - Design: DES-004, DES-008.
     - _Requirements: REQ-001, REQ-004, REQ-008_
+    - Completed supporting deliverables:
+      - [x] Prepared the [initial upstream gap inventory](decisions/BG-01-upstream.md), [compatibility qualification plan](qualification/upstream-compatibility.md) and [separate Spec 1 prerequisite plan](decisions/BG-01-prerequisite-plan.md). Their stub-absence observations are historical, not current API-readiness evidence.
+      - [x] Delivered scoped upstream DTO/schema/catalog/structural/manifest/hash/reference/fidelity prerequisites and review fixes under separate Spec 1 authorization: [implementation handoff](../../../.workflow/ultracode/execution-isolation-implementation/reference-fidelity-report.md), [review corrections](../../../.workflow/ultracode/pr-3-fixes/final-report.md) and [catalog-entry correction](../../../.workflow/ultracode/pr-3-catalog-entry-fix/final-report.md). JSON semantics/evidence completeness, full conformance and the Spec 2 consumer/owner handoff remain unfinished; BG-01 is not closed.
+      - [x] Subsequently implemented scoped JSON semantic validation, all-five-kind mandatory blockers, verification-link consistency and transitive TOML/fidelity evidence checks; reconciled the [current upstream inventory](decisions/BG-01-upstream.md). [Current evidence](../../../.workflow/ultracode/execution-isolation-implementation/semantic-continuation/final-report.md) includes bounded independent semantic review and supersedes the earlier JSON-absence statement, not the still-open full conformance, native or owner-acceptance requirements. Completeness is subsequently delivered with9focused tests and parent-only audit, including explicit invalid/empty Deferred dispositions. Compatibility/extension policies are upstream artifacts, not runtime qualification. No execution runtime task is complete.
   - [ ] 1.7 TASK-007 Re-gate the approved design and establish the minimal compile/test foundation
     - Parent integration owner reconciles all six packets against requirements/design; no unresolved mechanism becomes a default. After separate implementation authorization, establish the standalone execution library and shared internal typed ports/identities from the approved design, with a path dependency on the delivered contracts crate.
     - Files: `EXEC/Cargo.toml`, `EXEC/Cargo.lock`, `EXEC/src/lib.rs`, `EXEC/src/model.rs`, `EXEC/tests/contracts.rs` (five-file implementation scope; affected spec amendments reviewed before this task starts).

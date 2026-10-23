@@ -1,8 +1,16 @@
 # Upstream compatibility plan — TASK-006
 
-Status: **BLOCKED** by missing implementation and owner agreement; package 0.1.0 does not establish API compatibility.
+Status: **INCOMPLETE** — partial implementation now exists; complete conformance, native qualification and upstream/core owner acceptance remain outstanding. Package 0.1.0 alone does not establish API compatibility.
 
-## Observed prerequisite probe
+## Current bounded evidence — 2026-10-23
+
+The [current BG-01 inventory](../decisions/BG-01-upstream.md) replaces the historical absence claim below. Baseline `5dc25f3` plus uncommitted semantic changes includes real JSON/TOML semantic methods, verification-link rules, all-five-kind mandatory blockers and transitive contract/evidence checks using the active catalog and explicitly scoped store. Current unit/integration checks are recorded with exact source hashes in the [continuation report](../../../../.workflow/ultracode/execution-isolation-implementation/semantic-continuation/final-report.md).
+
+These tests validate the port's data boundary, not a real tenant/project store backend or authenticated observations/approval. Completeness now has9focused tests and parent-only audit, not reviewer28signoff. Exhaustive conformance, actual downstream consumer qualification, required native checks and an immutable accepted delivery revision remain unfinished. No gate is closed.
+
+Reviewer28's bounded semantic/compatibility review independently passed36tests and found no new actionable diff defect. The later extension convention is parent-audited only. The pre-existing mismatched `$schema` URI diagnostic is now fixed with actual RED/GREEN checkpoints36db142/cb36beb. Reviewer29subsequently found a separate completeness diagnostic omission, reopened task14, and a bounded repair is requested. The phase-aware runner passes9focused controls; no full corpus, native evidence or downstream handoff is inferred.
+
+## Historical prerequisite probe — not current API evidence
 The actual library root compiled directly with `rustc --edition=2024 --crate-type rlib --crate-name clouddialect_contracts`; consumer imports of StructuralResult, SemanticResult, BehavioralResult, BehavioralOutcome, ValidatorError, BlockingGap and CatalogUrlLoader failed with E0432. The direct compile bypasses unused Cargo dependencies and proves only the stub's missing exports. No full Cargo integration result is claimed.
 
 ## Required checks after upstream delivery

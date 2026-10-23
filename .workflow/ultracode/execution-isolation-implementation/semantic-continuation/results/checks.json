@@ -1,0 +1,153 @@
+[
+  {
+    "name": "final-focused",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--test",
+      "verification_semantics",
+      "--test",
+      "semantic_validation",
+      "--test",
+      "manifest_evidence"
+    ],
+    "environment": {
+      "CARGO_HOME": "/tmp/clouddialect-runtime-cargo",
+      "CARGO_TARGET_DIR": "/tmp/clouddialect-runtime-target"
+    },
+    "exit_code": 0,
+    "status": "pass",
+    "evidence": "results/final-focused.txt"
+  },
+  {
+    "name": "final-full",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen"
+    ],
+    "environment": {
+      "CARGO_HOME": "/tmp/clouddialect-runtime-cargo",
+      "CARGO_TARGET_DIR": "/tmp/clouddialect-runtime-target"
+    },
+    "exit_code": 0,
+    "status": "pass",
+    "evidence": "results/final-full.txt"
+  },
+  {
+    "name": "final-check",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "check",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--all-targets"
+    ],
+    "environment": {
+      "CARGO_HOME": "/tmp/clouddialect-runtime-cargo",
+      "CARGO_TARGET_DIR": "/tmp/clouddialect-runtime-target"
+    },
+    "exit_code": 0,
+    "status": "pass",
+    "evidence": "results/final-check.txt"
+  },
+  {
+    "name": "final-fmt",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "fmt",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--check"
+    ],
+    "environment": {
+      "CARGO_HOME": "/tmp/clouddialect-runtime-cargo",
+      "CARGO_TARGET_DIR": "/tmp/clouddialect-runtime-target"
+    },
+    "exit_code": 0,
+    "status": "pass",
+    "evidence": "results/final-fmt.txt"
+  },
+  {
+    "name": "final-clippy",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "clippy",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--all-targets",
+      "--",
+      "-D",
+      "warnings"
+    ],
+    "environment": {
+      "CARGO_HOME": "/tmp/clouddialect-runtime-cargo",
+      "CARGO_TARGET_DIR": "/tmp/clouddialect-runtime-target"
+    },
+    "exit_code": 0,
+    "status": "pass",
+    "evidence": "results/final-clippy.txt"
+  },
+  {
+    "name": "final-python",
+    "command": [
+      "rtk",
+      "proxy",
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "environment": {
+      "CARGO_HOME": "/tmp/clouddialect-runtime-cargo",
+      "CARGO_TARGET_DIR": "/tmp/clouddialect-runtime-target"
+    },
+    "exit_code": 0,
+    "status": "pass",
+    "evidence": "results/final-python.txt"
+  },
+  {
+    "name": "final-whitespace",
+    "command": [
+      "rtk",
+      "proxy",
+      "git",
+      "diff",
+      "--check"
+    ],
+    "environment": {
+      "CARGO_HOME": "/tmp/clouddialect-runtime-cargo",
+      "CARGO_TARGET_DIR": "/tmp/clouddialect-runtime-target"
+    },
+    "exit_code": 0,
+    "status": "pass",
+    "evidence": "results/final-whitespace.txt"
+  },
+  {
+    "name": "final-coverage",
+    "command": "Canonical measure-domain-coverage.py with results/cache/target/LLVM path substitutions only; see coverage-adapter.json",
+    "exit_code": 0,
+    "status": "pass",
+    "evidence": "results/domain-coverage-summary.json"
+  }
+]

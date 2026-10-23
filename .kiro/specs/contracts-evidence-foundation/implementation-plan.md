@@ -1,6 +1,6 @@
 # Implementation Plan: contracts-evidence-prerequisite-delivery
 
-**Later publication action approval:** the user explicitly requested git commit and git push for this work. Those actions are now authorized; the earlier no-commit/no-push implementation limit is historical. Native probes, deployment and releases remain unauthorized.
+**Publication authority:** earlier commit/push approvals apply to their historical actions. The current2026-10-23 continuation explicitly authorizes frequent local commits, not pushes, native probes, deployments or releases.
 
 
 ## Current physical domain layout
@@ -153,18 +153,25 @@ Verified declaration delivery: [EX-1 report](../../../.workflow/ultracode/execut
     - Cases: full/equivalent; full/adaptation deny; partial/architectural deny; missing exact contract; wrong identity/version/type; store outage; unsupported operation retained. Target: `fidelity_mapping`.
     - Done: real typed/validated source documents through injected store, not catalog instance search. Estimate: 2–3h. Dependencies: 1.4, 2.5, 2.7.
     - Owner-approved initial API amendment: final validator:&Validator argument on standalone fidelity and future completeness helpers. Private exact reference/hash/schema/mandatory resolver now has actual fidelity/TOML consumers; no implicit embedded/default catalog. CatalogIndex now publicly retains extensions:RawObject through the existing duplicate-aware raw decoder; initial document version unchanged, Rust struct-literal change explicitly approved.
-  - [ ] 2.9 JSON/TOML semantic entrypoints and verification linkage
+  - [x] 2.9 JSON/TOML semantic entrypoints and verification linkage
     - Spec1: task 13. Requirements: 4.8, 8.3/8.7, 11.1.
     - Owned: `src/validator/semantic.rs`, `src/validator/mod.rs`, `src/manifest/validator.rs`, `tests/semantic_validation.rs`.
     - Cases: exact references; corrupt/wrong-type/hash mismatch; unique tests/obligation membership; UTC/date validity; matching approval-result ref; missing/ambiguous/outage; no cross-project/ambient fallback. Target: `semantic_validation`.
     - Done: separate actual JSON/TOML ports, faithful safe errors; document strings still do not authenticate observations/approval. Split verification-link rules into a second named unit before dispatch if >4h or >8 independent test groups; no silent overrun. Estimate: conditional 4h slice. Dependencies: 1.5, 2.6, 2.8. Gate: G-DEPS for required hash checks.
     - Bounded2.9M TOML consumer delivered: src/manifest/{validator,mod}.rs plus tests/manifest_semantic.rs, shared crate-private reference visibility parent-owned. Actual local-gated method/trait checks exact references and fidelity, including explicit unsupported/orphan references, using owned snapshot. Full2.9 remains unchecked: JSON semantic method, evidence traversal and verification linkage are not delivered by this TOML leaf.
+    - Semantic continuation (2026-10-23), [current report](../../../.workflow/ultracode/execution-isolation-implementation/semantic-continuation/final-report.md):
+      - [x] 2.9V Implemented private P0-C verification consistency with focused RED/GREEN: all ten digest positions/five algorithms, unique tests, obligation membership and exact approval self-reference; real structural/calendar checks plus fixed core semantic date-time assertions prevent relaxed-catalog bypass.
+      - [x] 2.9S Implemented actual JSON Validator/Validate semantic entrypoint, all-five-kind mandatory blockers and exact scoped evidence resolution for obligations, side effects and notes. Preserves located source diagnostics, reports safe referring paths for store failures and uses the explicit active snapshot.
+      - [x] 2.9T Integrated that contract/evidence boundary into fidelity and every TOML binding, including unsupported/orphan declarations, without refetching a contract for the second decision. Three new behavior regressions were RED before the correction.
+      - [x] Independent integrated reviewer28 found no new actionable defect in the scoped semantic/policy diff and independently passed36selected tests against68unchanged source hashes. Parent reran the full implemented tree after preserving the pending completeness draft outside Cargo discovery; full tests/check/fmt/Clippy/coverage passed. Unit2.9/canonical task13 is delivered within that scope, not completeness, exhaustive conformance or BG-01. Reviewer confirmed a pre-existing unresolvable-schema URI diagnostic blocker for future conformance; no second source repair was authorized. Earlier2.9M absence statements above describe its historical delivery, not current source.
   - [ ] 2.10 Non-accepting completeness and artifact staleness
+    - Reopened after reviewer29: root mandatory blockers hide direct obligation assumptions. This P2 diagnostic omission keeps the task incomplete pending separately requested two-file repair; outcome remains non-accepting Blocked.
     - Spec1: task 14. Requirements: 3.6, 4.6, 8.6, 11.4.
     - Owned: `src/validator/behavioral.rs`, `src/validator/mod.rs`, `src/lib.rs`, `tests/evidence_completeness.rs`.
     - Cases: observed/inferred completeness not acceptance; unknown/missing/corrupt source gaps; all named obligation diagnostics; empty verification projection; every supported hash algorithm with known vectors/tamper; no approving conversion. Target: `evidence_completeness`.
     - Done: real state/data checks and crypto verification, never executed behavioral-test success. If hash algorithms make the unit exceed bounds, split a dedicated artifact-hash helper/test slice before dispatch. Estimate: conditional 3–4h. Dependencies: 1.4, 1.5, 2.9. Gate: G-DEPS (all five declared hash algorithms).
     - Bounded2.10H split recorded before worker22 dispatch: `src/validator/artifact_hash.rs`, `tests/artifact_hash.rs`, parent-only `src/validator/mod.rs`/`src/lib.rs` registration. Dependencies for this independent hash-only leaf are existing VerificationResult DTO and approved sha2/sha3 pins, not unfinished semantic/completeness orchestration. All five declared algorithms and ten independently checked empty/abc vectors, malformed/tamper/immutability controls pass6tests. Public helper checks candidate digest equality only; no acceptance/provenance/other-artifact claim. Full2.10 stays unchecked.
+    - Bounded2.10B delivered after explicit owner empty-scope decision: helper/export and9focused tests, missing-API RED→GREEN and full checks. Invalid source/valid zero obligations return Deferred/no store; semantic mandatory blockers stay separate. Resource assumptions map to every obligation, even alongside a root blocker. No verification/test projection. Parent-only audit: reviewer28predates this implementation, allocation exhausted. Earlier2.10H completeness-absence wording is historical. Full conformance/downstream/native proof remains unfinished.
 
 - [ ] 3. Complete conformance and upstream handoff
   - [ ] 3.1 Bounded phase-aware conformance runner
@@ -179,16 +186,18 @@ Verified declaration delivery: [EX-1 report](../../../.workflow/ultracode/execut
     - Before dispatch, expand the canonical list into uniquely numbered `3.2.N` batches, each owning at most two concrete fixture directories (input + expected = at most four files), with paths, exact phase/kind, oracle and prerequisites recorded. Cases nested under a named canonical fixture class still count; no hidden unbounded directory ownership. One inventory owner prevents missing or duplicated cases.
     - Each batch estimate <=2h only after enumeration; grader is target `conformance -- <approved-prefix>` followed by the complete suite. Tests/data-only additions may already pass; no fabricated RED. Any production fix needs a fresh actual RED checkpoint and explicit owned-code scope.
     - Done: exhaustive versioned inventory, all seeded controls and full suite pass with no skipped/missing fixtures. Existing document/Python checks do not substitute. Dependencies: 3.1. G-NATIVE applies to actual network-disabled cases; unavailable evidence remains blocked. This container is **not implementation-ready until expanded/approved**.
-  - [ ] 3.3 Compatibility and format migration policy
+  - [x] 3.3 Compatibility and format migration policy
     - Spec1: task 23. Requirements: 6.1–6.4, 7.1–7.4, NFR-3.
     - Owned: `docs/compatibility-policy.md`, `tests/compatibility_policy.rs`.
     - Cases: three version spaces; 12-month window; breaking P0 migration; legacy record non-acceptance; EOL/revision matrix; unsupported security version. Target: `compatibility_policy`.
     - Done: concrete approved versions/publication disposition, not an invented no-release assumption. Estimate: 2–3h. Dependencies: 2.4, 2.5. Gate: G-VERSION.
-  - [ ] 3.4 Extension/capability convention
+    - Delivered locally2026-10-23: policy plus3actual public-API/source-profile tests, owner-attested first-MVP history explicitly qualified, real prerelease manifest matrix, root-only fallback/security non-acceptance. Reviewer28included this snapshot; parent full checks passed. No publication, deployed-pack qualification, migration release or native proof claimed.
+  - [x] 3.4 Extension/capability convention
     - Spec1: task 24. Requirements: 5.8, 10.1–10.6.
     - Owned: `docs/extension-convention.md`, `tests/extension_policy.rs`.
     - Cases: grammar/families; verbatim warnings; registry ownership not identity; optional data preservation; mandatory blockers; no `[x]` capability or acceptance override. Target: `extension_policy`.
     - Done: published-field semantics match real validator/manifest behavior. Estimate: 2–3h. Dependencies: 2.6, 2.7.
+    - Delivered locally2026-10-23: convention plus4public-phase/round-trip/TOML tests and full integrated checks. Parent-only source audit, not independently reviewed:28agent allocation exhausted. No new production semantics, namespace assignment, registry authentication, release packaging or capability grant. Complete adversarial fixture corpus remains3.2.
   - [ ] 3.5 Field/gate traceability
     - Spec1: task 25. Requirements: NFR-2, P0-A–F.
     - Owned: `docs/traceability/field-to-requirement.md`, `docs/traceability/gate-to-requirement.md`, `tests/traceability.rs`.

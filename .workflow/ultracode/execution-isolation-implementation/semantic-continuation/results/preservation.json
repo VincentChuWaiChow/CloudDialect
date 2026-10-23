@@ -1,0 +1,61 @@
+{
+  "baseline_head": "5dc25f3f31ce500d17aa2322793d3a970f9b73d9",
+  "branch": "feat/execution-isolation-runtime",
+  "changed_tracked_files": [
+    ".kiro/specs/contracts-evidence-foundation/design.md",
+    ".kiro/specs/contracts-evidence-foundation/implementation-plan.md",
+    ".kiro/specs/contracts-evidence-foundation/p0-contract-amendments.md",
+    ".kiro/specs/contracts-evidence-foundation/requirements.md",
+    ".kiro/specs/contracts-evidence-foundation/tasks.md",
+    ".kiro/specs/execution-isolation/decisions/BG-01-upstream.md",
+    ".kiro/specs/execution-isolation/design.md",
+    ".kiro/specs/execution-isolation/qualification/upstream-compatibility.md",
+    ".kiro/specs/execution-isolation/requirements.md",
+    ".kiro/specs/execution-isolation/tasks.md",
+    ".workflow/ultracode/execution-isolation-implementation/final-report.md",
+    ".workflow/ultracode/execution-isolation-implementation/state.json",
+    "crates/clouddialect-contracts/src/lib.rs",
+    "crates/clouddialect-contracts/src/manifest/validator.rs",
+    "crates/clouddialect-contracts/src/validator/document_resolution.rs",
+    "crates/clouddialect-contracts/src/validator/fidelity.rs",
+    "crates/clouddialect-contracts/src/validator/mandatory_extensions.rs",
+    "crates/clouddialect-contracts/src/validator/mod.rs",
+    "crates/clouddialect-contracts/tests/fidelity_mapping.rs",
+    "crates/clouddialect-contracts/tests/manifest_semantic.rs"
+  ],
+  "allowed_changes_only": true,
+  "unrelated_tracked_files_preserved": 830,
+  "research_preserved": true,
+  "index_empty_and_head_unchanged": true,
+  "all_21_numbered_execution_tasks_open": true,
+  "supporting_checked_deliverables": 8,
+  "execution_crate_absent": true,
+  "current_full_tree_green": true,
+  "rust_tests": 275,
+  "python_tests": 15,
+  "completeness_implemented": true,
+  "completeness_tests": 9,
+  "review28_postreview_changed_paths": [
+    "crates/clouddialect-contracts/src/lib.rs",
+    "crates/clouddialect-contracts/src/validator/mod.rs",
+    "crates/clouddialect-contracts/tests/evidence_completeness.rs"
+  ],
+  "reviewed_other_source_paths_unchanged": 65,
+  "later_units_parent_audited_only": [
+    "extension convention",
+    "completeness"
+  ],
+  "coverage_lines": {
+    "count": 1757,
+    "covered": 1661,
+    "percent": 94.53614114968697
+  },
+  "coverage_objects": 37,
+  "unverified": [
+    "Full conformance",
+    "Native qualification",
+    "Rust1.88 MSRV",
+    "BG-01 downstream handoff",
+    "Independent completeness review"
+  ]
+}

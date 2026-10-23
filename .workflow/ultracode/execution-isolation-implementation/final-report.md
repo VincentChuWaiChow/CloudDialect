@@ -1,3 +1,33 @@
+# Current conformance continuation — 2026-10-23
+
+[Tranche report](conformance-continuation/final-report.md): owner approved the
+next90minute tranche and two read-only reviewers(30cumulative), then frequent
+local commits. Prior semantic/completeness/policy code is checkpoint494ddc3;
+URI RED/GREEN36db142/cb36beb; runner RED/evolution/GREEN e24248c/899fd46/42be2c7.
+9focused runner controls pass. No default-corpus/full-suite GREEN is yet claimed:
+seed fixture3.2.1 is separately requested. Reviewer29's P2 direct-assumption gap
+omission reopens task14pending two-file repair approval; no acceptance bypass.
+All21numbered Spec2tasks and their native/owner/consumer gates remain open.
+No pushes, native probes, releases or deployments are authorized/run.
+
+## Earlier delivery snapshots below
+
+# Latest prerequisite delivery — 2026-10-23
+
+[Current report](semantic-continuation/final-report.md): JSON/TOML semantics,
+verification consistency, mandatory blockers, transitive fidelity, non-accepting
+completeness and compatibility/extension policies delivered locally.275Rust/
+15Python/check/fmt/Clippy pass;94.54% emitted production-line coverage.28approved
+dispatches consumed; reviewer28covers semantic/compatibility only, subsequent
+extension/completeness have parent-only audit. Owner explicitly approved valid
+empty-scope Deferred before completeness implementation. No disabled test target.
+Pre-existing URI diagnostic conformance defect remains; full conformance,
+traceability, real consumer/native handoff and all21Spec2tasks/gates remain open.
+Uncommitted on feat/execution-isolation-runtime; no Git/native/release actions.
+Full original goal remains active and unachieved.
+
+## Historical handoffs below — superseded by the current report
+
 # Current handoff
 
 **Current approved continuation:** [reference/fidelity report](reference-fidelity-report.md). CatalogIndex exact raw extension preservation, scoped active-catalog resolver, public fidelity matrix and actual ManifestValidator/ValidateManifest semantic method delivered.215integration+2unit+7doctests/check/fmt/Clippy/15Python/8selectedP0content pass; corrected1229/1312=93.67% production lines.26approved sidecars used; reviewer26 static no actionable findings before sole private-filename layout repair, no independent postrepair signoff. JSON semantic/evidence completeness/full conformance/downstream/native/BG-01 remain incomplete/open. Owner approved helper context and CatalogIndex initial-MVP API changes. Original full goal is not achieved. Independent final publication receipt follows externally; older sections are historical snapshots.

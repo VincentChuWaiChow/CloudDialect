@@ -1,6 +1,6 @@
 # Implementation Plan: CloudDialect Contracts & Evidence Foundation
 
-**Later publication action approval:** the user explicitly requested git commit and git push for this work. Those actions are now authorized; the earlier no-commit/no-push implementation limit is historical. Native probes, deployment and releases remain unauthorized.
+**Publication authority:** earlier commit/push approvals apply to their historical actions. The current2026-10-23 continuation explicitly authorizes frequent local commits, not pushes, native probes, deployments or releases.
 
 
 ## Current physical domain layout
@@ -12,7 +12,7 @@ This plan builds the `clouddialect-contracts` Rust crate, its bundled JSON Schem
 
 **Current continuation status (2026-10-22):** user approved P0-A–F for implementation planning, then separately authorized the remaining Spec 1 prerequisite units in [implementation-plan.md](implementation-plan.md), TDD and no commits/probes/pushes/releases. User attests this is a new project and approves document/catalog **1.0.0** and crate API **0.1.0** as the initial MVP versions. This is not an independent external-publication audit or security-gate approval. Exact encoded extension JSON value bytes are required; raw_value on the existing pinned serde_json is separately approved.
 
-**Delivery is partial.** DTOs, schemas, catalog inventory, frozen snapshot/loading, structural JSON validation, local TOML rules and candidate hash equality have bounded verification. JSON semantic/completeness validation, full mandatory-blocker integration, exhaustive conformance and delivered downstream compatibility remain unfinished; scoped fidelity/TOML semantic delivery is recorded in the current report. See the [current run report](../../../.workflow/ultracode/execution-isolation-implementation/final-report.md) for actual evidence and outstanding work. Canonical task checkmarks are conservative; BG-01 and Spec 2 UD-1–UD-5 remain OPEN.
+**Delivery is partial.** DTOs, schemas, catalog inventory, frozen snapshot/loading, structural JSON validation, local TOML rules and candidate hash equality have bounded verification. JSON/TOML semantics and mandatory blockers have bounded independent review; completeness has9focused tests and parent-only audit. Exhaustive conformance and downstream compatibility remain unfinished. See the [current run report](../../../.workflow/ultracode/execution-isolation-implementation/final-report.md) for actual evidence and outstanding work. Canonical task checkmarks are conservative; BG-01 and Spec 2 UD-1–UD-5 remain OPEN.
 
 `BehavioralResult` full implementation, the Rust CLI binary, worker isolation, and Python transformation logic are explicitly out of scope.
 
@@ -305,7 +305,8 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - Property 6: a mandatory unknown extension produces a blocker; document cannot be marked accepted (Req 10.4).
   - An extension field attempting to override a core verification result field does not affect the core outcome (Req 10.5).
 
-- [ ] 13. Implement `validate_semantic()`
+- [x] 13. Implement `validate_semantic()`
+  - Verified implementation (2026-10-23): JSON/TOML entrypoints, transitive contract evidence, verification consistency and mandatory blockers pass integrated tests. Reviewer28found no new actionable defect in this scope and independently passed36targeted tests; parent full implemented-tree checks passed. See [2.9V/S/T evidence](../../../.workflow/ultracode/execution-isolation-implementation/semantic-continuation/final-report.md). Complete conformance and real scoped-store/native handoff remain separate obligations; this does not implement completeness or close BG-01.
   - Create `crates/clouddialect-contracts/src/validator/semantic.rs`.
   - Implement:
     ```rust
@@ -329,8 +330,11 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - Property 4: `validate_structural` pass and `validate_semantic` fail can coexist on the same document without contradiction.
 
 - [ ] 14. Implement blocking-gap report and artifact hash staleness detection
+  - Reopened2026-10-23 after reviewer29: root mandatory blockers currently hide an obligation’s own unresolved assumption, contrary to the always-report rule. Outcome stays Blocked, but diagnostics are incomplete. A bounded two-file TDD repair is requested; no fix or whole-task completion presumed.
+  - Delivered2026-10-23: explicit-context completeness helper with9focused tests and prior all-five-algorithm artifact helper with6tests; full integrated checks pass. Completeness has parent-only audit after reviewer28/allocation exhaustion, not independent review. EvidenceComplete is never behavioral verification or acceptance; full conformance/consumer/native handoff remain separate.
   - Create `crates/clouddialect-contracts/src/validator/behavioral.rs`.
   - Implement `check_evidence_completeness(contract: &BehavioralContract, candidate_id: &str, store: &dyn DocumentStore, validator: &Validator) -> BehavioralResult` using P0-E scoped validated evidence records:
+    - Owner-approved2026-10-23: validate the supplied source first; an unvalidatable contract or structurally valid zero-obligation scope returns non-accepting Deferred without fabricated IDs or store access. Empty-scope mandatory blockers remain in separate semantic results. Each resource assumption blocks every declared obligation; no resource-to-obligation mapping is inferred.
     - Iterate over all obligations in the contract.
     - For obligations with `evidence_refs`: for each referenced evidence record, check if the classification is `unknown`. If yes, append a `BlockingGap { candidate_id, obligation_id, assumption_text }` to the result.
     - For obligations with `unresolved_assumption`: always append a `BlockingGap`.
@@ -341,9 +345,10 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
     - Compute the hash of `candidate_bytes` using the specified algorithm.
     - Return `true` if the computed hash matches the recorded value, `false` otherwise.
     - When `false`, the acceptance result is invalid and must not be used for any downstream decision (Req 4.6).
-  - Note: BehavioralOutcome::Deferred means not evaluated; this task implements Blocked/EvidenceComplete completeness checks only. No outcome accepts, and Spec 2 may populate a test projection only from the same immutable validated verification document with independent observation checks.
+  - Note: BehavioralOutcome::Deferred means not evaluated, including an unvalidatable supplied source under the owner-approved initial profile. Blocked/EvidenceComplete describe evaluated obligation support, not acceptance. Every completeness outcome leaves verification_result absent and test_results empty; Spec 2 may populate a projection only from the same immutable validated verification document with independent observation checks.
   - Write unit tests:
-    - Test: a contract where all obligations have `observed` or `inferred` evidence → `outcome: EvidenceComplete`.
+    - Test: a valid contract where all obligations have `observed` or `inferred` evidence without unresolved assumptions, and no resource assumption remains → `outcome: EvidenceComplete`.
+    - Test: observed/inferred evidence with residual assumptions blocks its obligations; every resource assumption blocks every declared obligation. Unvalidatable source returns Deferred without fabricated gaps or store access.
     - Test: a contract where a mandatory obligation has `unknown` evidence → `outcome: Blocked` with a `BlockingGap` containing `obligation_id` and `assumption_text` (Req 3.6, 11.4).
     - Test: modified candidate bytes → `verify_artifact_hash` returns `false` (Req 4.6).
     - Test: Property 6 — mandatory unknown evidence produces a blocking-gap preventing acceptance.
@@ -427,7 +432,7 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - Manifest `full` + contract obligation `adaptation-required` produces `SemanticResult { outcome: Fail }`.
   - Manifest `partial` + contract obligation `architectural-change-required` produces `SemanticResult { outcome: Fail }`.
   - Manifest `full` + all obligations `equivalent-within-contract` produces `SemanticResult { outcome: Pass }`.
-  - Scoped initial-MVP delivery: actual fidelity matrix and ManifestValidator/ValidateManifest semantic method use the owner's explicitly supplied active catalog and scoped store. Stored identity/version/bytes/hash/schema/mandatory semantics are checked before use. JSON semantic/verification-linkage portions of task13 and completeness of task14 remain unfinished; no result accepts a transformation.
+  - Scoped initial-MVP delivery: actual fidelity matrix and ManifestValidator/ValidateManifest semantic method use the owner's explicitly supplied active catalog and scoped store. Stored identity/version/bytes/hash/schema/mandatory semantics are checked before use. Later semantic/completeness delivery is recorded under tasks13/14; this earlier scoped snapshot alone did not deliver those portions. No result accepts a transformation.
 
 - [ ] 18. Write positive conformance fixtures
   - Every verification fixture includes P0-C configuration/binding/digests/test-obligation links; every manifest fixture includes an explicit valid P0-B capabilities table, with both empty and nonempty positive declarations. A minimal pass is structural only, never acceptance.
@@ -556,7 +561,8 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - Filtering by directory prefix works: `cargo test --test conformance -- adversarial` runs only adversarial fixtures.
   - Per-fixture 5-second timeout prevents a recursive schema from blocking the suite.
 
-- [ ] 23. Write compatibility policy document
+- [x] 23. Write compatibility policy document
+  - Delivered locally2026-10-23: [policy](../../../docs/compatibility-policy.md),3source-profile/public-API tests, bounded independent review and full parent checks. Initial-MVP history is owner-attested; no release/distribution audit, invented publication date or deployed pack qualification is claimed.
   - Record P0 publication-history review and approved target format/API/catalog versions. New required capability/binding/configuration fields and structured failure objects cannot mutate a previously published format in MINOR/PATCH; require MAJOR/migration fixtures where applicable. Legacy structural warnings do not grant unsupported security semantics.
   - Create `docs/compatibility-policy.md`.
   - Document must include all of the following (Req 7.1):
@@ -575,7 +581,8 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - The three version spaces are named with their respective field names (Req 6.1).
   - EOL process references updating `status` in `index.json`.
 
-- [ ] 24. Write extension convention document
+- [x] 24. Write extension convention document
+  - Delivered locally2026-10-23: [convention](../../../docs/extension-convention.md),4public-phase/encoded-value/TOML tests and full parent checks. Parent-only audit after the28agent allocation was consumed; no independent review of this new document is claimed. Full adversarial conformance and release-registry packaging remain separate tasks.
   - Create `docs/extension-convention.md`.
   - Document must include all six elements from Req 10.1:
     1. **Namespace prefix grammar**: ASCII letter followed by zero or more ASCII alphanumeric characters or hyphens, minimum total length two characters, colon separator when used in a qualified key (e.g., `acme:field-name`).
@@ -634,7 +641,7 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
 
 - Tasks marked with `*` are optional and can be skipped for faster MVP iteration.
 - Every task references specific requirements for traceability.
-- `BehavioralResult` full implementation (running independently controlled tests) is Spec 2 scope; Tasks 14 and 22 implement the evidence-completeness check only (`Blocked` / `EvidenceComplete` outcomes).
+- `BehavioralResult` full implementation (running independently controlled tests) is Spec2scope; Tasks14/22 implement only non-accepting completeness (`Blocked` / `EvidenceComplete`, or owner-approved `Deferred` for an invalid source or valid empty scope). Empty-scope mandatory blockers remain separate semantic diagnostics; no outcome asserts behavioral correctness or acceptance.
 - The conformance fixture runner (Task 22) must be implemented before the release tooling gate (Task 26) since `cargo test --test conformance` is part of the pre-release gate sequence.
 - All JSON Schema documents use `unevaluatedProperties: false` combined with `patternProperties` for extension fields per DDR-06.
 - UUID v4 (hyphenated lowercase) is the required identifier format for all CloudDialect JSON document `id` fields per DDR-07.

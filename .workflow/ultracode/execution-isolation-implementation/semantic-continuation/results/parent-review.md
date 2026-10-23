@@ -1,0 +1,8 @@
+# Parent adversarial integration pass (not independent review)
+
+- Checked public JSON method, trait dispatch, full/partial/unsupported/orphan manifest binding paths, exact-source private rules and active-catalog identity preservation.
+- Found a genuine bypass: relaxing the active verification schema timestamp to type:string allowed 2026-02-30T12:34:56Z to pass the first semantic implementation. Captured failing regression in relaxed-date-red.txt (exit101, semantic Pass where Fail required).
+- One consolidated repair consumed: fixed core date-time assertion uses the existing pinned Boon engine with a literal resource without external references, plus explicit UTC-Z. No hand-written calendar parser, default catalog, dependency/schema/version change or network resolver was introduced. Same focused targets pass in relaxed-date-green.txt; final full checks/coverage rerun afterward.
+- Context7 twice resolved the wrong Boon project (game-demo parser); no unrelated docs were used. Exact boon0.6.1 source inspected: src/compiler.rs enable_format_assertions/add_resource, src/lib.rs public Compiler/Schemas/Format exports and src/formats.rs private date/time implementation. Format internals are not imported; only already-used public Compiler/Schemas API is consumed.
+- Exact-source helper tests are not independent or native evidence. Additional read-only reviewer allocation is still pending; no new agents were dispatched and no postrepair independent signoff is claimed.
+- Completeness remains unimplemented pending explicit resource-to-obligation and invalid-source disposition decisions. Full conformance/downstream/native qualification and all Spec 2 gates remain incomplete.

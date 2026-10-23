@@ -1,0 +1,103 @@
+[
+  {
+    "name": "implemented-final-full",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen"
+    ],
+    "started_at": "2026-10-23T15:33:28.973625+00:00",
+    "exit_code": 0,
+    "status": "pass",
+    "evidence": "results/implemented-final-full.txt"
+  },
+  {
+    "name": "implemented-final-check",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "check",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--all-targets"
+    ],
+    "started_at": "2026-10-23T15:33:35.505479+00:00",
+    "exit_code": 0,
+    "status": "pass",
+    "evidence": "results/implemented-final-check.txt"
+  },
+  {
+    "name": "implemented-final-fmt",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "fmt",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--check"
+    ],
+    "started_at": "2026-10-23T15:33:35.624188+00:00",
+    "exit_code": 0,
+    "status": "pass",
+    "evidence": "results/implemented-final-fmt.txt"
+  },
+  {
+    "name": "implemented-final-clippy",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "clippy",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--all-targets",
+      "--",
+      "-D",
+      "warnings"
+    ],
+    "started_at": "2026-10-23T15:33:35.735414+00:00",
+    "exit_code": 0,
+    "status": "pass",
+    "evidence": "results/implemented-final-clippy.txt"
+  },
+  {
+    "name": "implemented-final-python",
+    "command": [
+      "rtk",
+      "proxy",
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "started_at": "2026-10-23T15:33:35.917140+00:00",
+    "exit_code": 0,
+    "status": "pass",
+    "evidence": "results/implemented-final-python.txt"
+  },
+  {
+    "name": "implemented-final-whitespace",
+    "command": [
+      "rtk",
+      "proxy",
+      "git",
+      "diff",
+      "--check"
+    ],
+    "started_at": "2026-10-23T15:33:35.970394+00:00",
+    "exit_code": 0,
+    "status": "pass",
+    "evidence": "results/implemented-final-whitespace.txt"
+  }
+]
