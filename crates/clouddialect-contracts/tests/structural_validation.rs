@@ -147,6 +147,34 @@ fn instance_schema_is_optional_but_must_equal_the_selected_admitted_uri() {
 }
 
 #[test]
+fn unresolvable_instance_schema_identifies_only_the_escaped_uri_not_other_payloads() {
+    let v = validator();
+    for (kind, mut value) in documents() {
+        for uri in [
+            "https://example.com/unknown-schema",
+            "https://example.com/unknown\nforged: accepted\"",
+        ] {
+            value["$schema"] = json!(uri);
+            value["acme:private"] = json!("PRIVATE-SENTINEL");
+            let result = validate(&v, kind, &value);
+            assert_eq!(result.outcome, O::Fail);
+            assert_eq!(result.errors.len(), 1);
+            let error = &result.errors[0];
+            assert_eq!(error.category, E::UnresolvableReference);
+            assert_eq!(error.field_path.as_deref(), Some("$schema"));
+            assert!(error.description.contains(&format!("{uri:?}")));
+            assert!(!error.description.contains('\n'));
+            assert!(!error.description.contains("PRIVATE-SENTINEL"));
+        }
+        value["$schema"] = json!({"unrelated":"PRIVATE-SENTINEL"});
+        let result = validate(&v, kind, &value);
+        assert_eq!(result.outcome, O::Fail);
+        assert_eq!(result.errors[0].field_path.as_deref(), Some("$schema"));
+        assert!(!result.errors[0].description.contains("PRIVATE-SENTINEL"));
+    }
+}
+
+#[test]
 fn missing_or_non_string_versions_never_guess_a_schema() {
     let v = validator();
     for bad in [None, Some(json!(null)), Some(json!(1)), Some(json!({}))] {
