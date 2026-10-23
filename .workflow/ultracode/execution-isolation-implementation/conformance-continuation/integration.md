@@ -9,6 +9,9 @@
   scope. Its 13 hashes still match after parent regression and focused coverage.
 - Parent checks: 278 conventional Rust tests, 7 doctests and 15 Python checks.
   Existing all-target check, fmt and Clippy pass against unchanged frozen source.
+- Parent continuation exercised 67 predeclared actual CLI controls against
+  temporary data; all matched. This adds fail-closed evidence without changing
+  reviewed source, admitting a corpus or claiming independent test execution.
 
 ## Rejected
 - No default/full-suite GREEN: actual default conformance exits 1 because the

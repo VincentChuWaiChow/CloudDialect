@@ -24,6 +24,11 @@ and unachieved. All 21 numbered Spec 2 tasks and UD-1–UD-5/BG-01 remain open.
   `results/runner-final-build-checks.json`.
 - **PASS:** actual executable positive/negative CLI controls and 11 additional
   temporary-root phase/roundtrip/multiset cases; no canonical corpus substitution.
+- **PASS, parent continuation:** 67 further predeclared actual CLI controls all
+  matched their expected disposition: malformed metadata/phase unions, exact
+  diagnostic rejection, roundtrip requirements, unsafe prefixes, orphan/dual/
+  non-leaf fixture pairs, symlinks and a non-regular FIFO entry. No source repair
+  or canonical fixture admission. Definitions/results: `runner-failclosed-*.json`.
 - **PASS, bounded:** reviewer 30 independently ran 9 runner controls and 20 URI/
   structural tests; found no new actionable defect in actual frozen scope.
   All 13 frozen source/draft hashes still match. See its result and hash manifest.

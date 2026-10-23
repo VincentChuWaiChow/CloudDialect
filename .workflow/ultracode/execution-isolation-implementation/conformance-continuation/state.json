@@ -2,7 +2,7 @@
   "title": "Conformance prerequisite continuation",
   "slug": "conformance-continuation",
   "created_at": "2026-10-23T18:44:04+00:00",
-  "updated_at": "2026-10-23T19:33:55.746512+00:00",
+  "updated_at": "2026-10-23T19:38:32.085305+00:00",
   "status": "waiting_for_approval",
   "mode": "delegated",
   "baseline_ref": "5dc25f3f31ce500d17aa2322793d3a970f9b73d9",
@@ -92,6 +92,13 @@
         "required": true,
         "status": "skipped",
         "evidence": "not run, not authorized/delivered in this tranche"
+      },
+      {
+        "name": "additional fail-closed actual CLI matrix",
+        "command": "rtk proxy <recorded-conformance-executable> --fixture-root <temporary-root> [prefix]",
+        "required": false,
+        "status": "pass",
+        "evidence": "67/67 matched: 5 positive, 62 expected rejections; results/runner-failclosed-results.json; reviewed hashes unchanged"
       }
     ]
   },
@@ -130,6 +137,10 @@
     {
       "sha": "ce2babae580c3be32b7f0de8d4536e3734142afa",
       "stage": "refactor(conformance): simplify timeout cleanup after green controls"
+    },
+    {
+      "sha": "b7c744028d5ea7b00d0920cdfadd4b097b3b243a",
+      "stage": "docs(conformance): checkpoint review and scoped verification evidence"
     }
   ],
   "pending_approvals": [
@@ -138,5 +149,6 @@
   ],
   "full_goal_complete": false,
   "current_full_tree_green": false,
-  "no_processes_running": true
+  "no_processes_running": true,
+  "current_safe_runner_verification": "Bounded additional matrix complete. Next implementation/corpus action still requires pending owner answers; no process/agent live."
 }

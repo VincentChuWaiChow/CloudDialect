@@ -1,0 +1,1771 @@
+{
+  "created_at": "2026-10-23T19:37:19.862503+00:00",
+  "scope": "Parent-only bounded fail-closed actual runner checks using temporary fixture trees. No canonical fixture admission, source repair, native probe or extra agent. Expectations fixed before execution from existing frozen runner contract.",
+  "executable": "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+  "executable_sha256": "0b13d03988d45ab931bf64809d49c4b166ca63ba3b34dab36831217f2fcccdf2",
+  "case_count": 67,
+  "cases": [
+    {
+      "name": "baseline-valid",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": true,
+      "expected_detail": "",
+      "prefix": null
+    },
+    {
+      "name": "metadata-missing-phase",
+      "oracle": {
+        "document_kind": "evidence-record",
+        "outcome": "pass"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "missing field",
+      "prefix": null
+    },
+    {
+      "name": "metadata-missing-document_kind",
+      "oracle": {
+        "phase": "structural",
+        "outcome": "pass"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "missing field",
+      "prefix": null
+    },
+    {
+      "name": "metadata-unknown-field",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "typo": true
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "unknown field",
+      "prefix": null
+    },
+    {
+      "name": "metadata-unknown-kind",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "unknown",
+        "outcome": "pass"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "invalid document_kind",
+      "prefix": null
+    },
+    {
+      "name": "metadata-invalid-json",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": "{",
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "invalid expected.json",
+      "prefix": null
+    },
+    {
+      "name": "metadata-array-not-object",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": "[]",
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "invalid expected.json",
+      "prefix": null
+    },
+    {
+      "name": "invalid-union-unknown-evidence-record-pass",
+      "oracle": {
+        "phase": "unknown",
+        "document_kind": "evidence-record",
+        "outcome": "pass"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "unsupported phase",
+      "prefix": null
+    },
+    {
+      "name": "invalid-union-behavioral-evidence-record-deferred",
+      "oracle": {
+        "phase": "behavioral",
+        "document_kind": "evidence-record",
+        "outcome": "deferred"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "unsupported phase",
+      "prefix": null
+    },
+    {
+      "name": "invalid-union-artifact-hash-evidence-record-pass",
+      "oracle": {
+        "phase": "artifact-hash",
+        "document_kind": "evidence-record",
+        "outcome": "pass"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "unsupported phase",
+      "prefix": null
+    },
+    {
+      "name": "invalid-union-structural-manifest-warn",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "warn"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "unsupported phase",
+      "prefix": null
+    },
+    {
+      "name": "invalid-union-semantic-evidence-record-warn",
+      "oracle": {
+        "phase": "semantic",
+        "document_kind": "evidence-record",
+        "outcome": "warn"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "unsupported phase",
+      "prefix": null
+    },
+    {
+      "name": "invalid-union-structural-evidence-record-blocked",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "blocked"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "unsupported phase",
+      "prefix": null
+    },
+    {
+      "name": "hash-field-in-structural-expected_match-None",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "expected_match": null
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "phase-specific outcome or hash fields",
+      "prefix": null
+    },
+    {
+      "name": "hash-field-in-structural-expected_match-False",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "expected_match": false
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "phase-specific outcome or hash fields",
+      "prefix": null
+    },
+    {
+      "name": "hash-field-in-structural-candidate_bytes-None",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "candidate_bytes": null
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "phase-specific outcome or hash fields",
+      "prefix": null
+    },
+    {
+      "name": "hash-field-in-structural-candidate_bytes-[]",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "candidate_bytes": []
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "phase-specific outcome or hash fields",
+      "prefix": null
+    },
+    {
+      "name": "hash-missing-expected_match",
+      "oracle": {
+        "phase": "artifact-hash",
+        "document_kind": "verification-result",
+        "candidate_bytes": [
+          97,
+          98,
+          99
+        ]
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "artifact-hash requires",
+      "prefix": null
+    },
+    {
+      "name": "hash-missing-candidate_bytes",
+      "oracle": {
+        "phase": "artifact-hash",
+        "document_kind": "verification-result",
+        "expected_match": true
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "artifact-hash requires",
+      "prefix": null
+    },
+    {
+      "name": "hash-outcome-null-presence",
+      "oracle": {
+        "phase": "artifact-hash",
+        "document_kind": "verification-result",
+        "expected_match": true,
+        "candidate_bytes": [],
+        "outcome": null
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "artifact-hash requires",
+      "prefix": null
+    },
+    {
+      "name": "behavioral-missing-candidate",
+      "oracle": {
+        "phase": "behavioral",
+        "document_kind": "behavioral-contract",
+        "outcome": "blocked"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "operation_identity": {
+          "call_site": "pkg.call"
+        },
+        "inputs": {},
+        "outputs": {},
+        "side_effects": [],
+        "resource_dependencies": [],
+        "obligations": [
+          {
+            "obligation_id": "o1",
+            "behavioral_fidelity": "unknown",
+            "unresolved_assumption": {
+              "assumption_id": "a1",
+              "description": "unknown",
+              "reason": "not observed"
+            }
+          }
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "candidate_id is required",
+      "prefix": null
+    },
+    {
+      "name": "structural-extraneous-candidate",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "candidate_id": "candidate"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "candidate_id is required only",
+      "prefix": null
+    },
+    {
+      "name": "structural-extraneous-store",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "store_error": true
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "store context is supported only",
+      "prefix": null
+    },
+    {
+      "name": "roundtrip-no-extension",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "round_trip": true
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "round-trip extension value bytes missing or changed",
+      "prefix": null
+    },
+    {
+      "name": "roundtrip-wrong-phase",
+      "oracle": {
+        "phase": "semantic",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "round_trip": true
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "round_trip requires",
+      "prefix": null
+    },
+    {
+      "name": "roundtrip-wrong-kind",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "catalog-index",
+        "outcome": "pass",
+        "round_trip": true
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "round_trip requires",
+      "prefix": null
+    },
+    {
+      "name": "roundtrip-positive",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "round_trip": true
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ],
+        "acme:meta": {
+          "order": [
+            2,
+            1
+          ],
+          "nested": {
+            "literal": "value"
+          }
+        }
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": true,
+      "expected_detail": "",
+      "prefix": null
+    },
+    {
+      "name": "error-positive",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "unresolvable-reference",
+            "field_path": "$schema",
+            "description_contains": "unknown-schema"
+          }
+        ]
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ],
+        "$schema": "https://example.com/unknown-schema"
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": true,
+      "expected_detail": "",
+      "prefix": null
+    },
+    {
+      "name": "error-missing-category",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "field_path": "$schema"
+          }
+        ]
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ],
+        "$schema": "https://example.com/unknown-schema"
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "",
+      "prefix": null
+    },
+    {
+      "name": "error-unknown-category",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "invalid-category"
+          }
+        ]
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ],
+        "$schema": "https://example.com/unknown-schema"
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "",
+      "prefix": null
+    },
+    {
+      "name": "error-unknown-field",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "unresolvable-reference",
+            "field_path": "$schema",
+            "description_contains": "unknown-schema",
+            "typo": true
+          }
+        ]
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ],
+        "$schema": "https://example.com/unknown-schema"
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "",
+      "prefix": null
+    },
+    {
+      "name": "error-invalid-description",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "unresolvable-reference",
+            "field_path": "$schema",
+            "description_contains": 7
+          }
+        ]
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ],
+        "$schema": "https://example.com/unknown-schema"
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "",
+      "prefix": null
+    },
+    {
+      "name": "error-invalid-path",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "unresolvable-reference",
+            "field_path": 7,
+            "description_contains": "unknown-schema"
+          }
+        ]
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ],
+        "$schema": "https://example.com/unknown-schema"
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "",
+      "prefix": null
+    },
+    {
+      "name": "error-wrong-category",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "$schema",
+            "description_contains": "unknown-schema"
+          }
+        ]
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ],
+        "$schema": "https://example.com/unknown-schema"
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "",
+      "prefix": null
+    },
+    {
+      "name": "error-null-path-mismatch",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "unresolvable-reference",
+            "field_path": null,
+            "description_contains": "unknown-schema"
+          }
+        ]
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ],
+        "$schema": "https://example.com/unknown-schema"
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "",
+      "prefix": null
+    },
+    {
+      "name": "error-wrong-path",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "unresolvable-reference",
+            "field_path": "wrong",
+            "description_contains": "unknown-schema"
+          }
+        ]
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ],
+        "$schema": "https://example.com/unknown-schema"
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "",
+      "prefix": null
+    },
+    {
+      "name": "error-wrong-description",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "unresolvable-reference",
+            "field_path": "$schema",
+            "description_contains": "absent-text"
+          }
+        ]
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ],
+        "$schema": "https://example.com/unknown-schema"
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "",
+      "prefix": null
+    },
+    {
+      "name": "error-scalar",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          "wrong"
+        ]
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ],
+        "$schema": "https://example.com/unknown-schema"
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "",
+      "prefix": null
+    },
+    {
+      "name": "error-missing",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "fail"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ],
+        "$schema": "https://example.com/unknown-schema"
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "",
+      "prefix": null
+    },
+    {
+      "name": "error-extra",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "unresolvable-reference",
+            "field_path": "$schema",
+            "description_contains": "unknown-schema"
+          },
+          {
+            "category": "unresolvable-reference",
+            "field_path": "$schema",
+            "description_contains": "unknown-schema"
+          }
+        ]
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ],
+        "$schema": "https://example.com/unknown-schema"
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "",
+      "prefix": null
+    },
+    {
+      "name": "warning-positive",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "warnings": [
+          {
+            "field_name_verbatim": "CORE:field",
+            "description_contains": "reserved for core use"
+          }
+        ]
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ],
+        "CORE:field": true
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": true,
+      "expected_detail": "",
+      "prefix": null
+    },
+    {
+      "name": "warning-missing-key",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "warnings": [
+          {
+            "description_contains": "reserved"
+          }
+        ]
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ],
+        "CORE:field": true
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "",
+      "prefix": null
+    },
+    {
+      "name": "warning-wrong-key",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "warnings": [
+          {
+            "field_name_verbatim": "core:field",
+            "description_contains": "reserved for core use"
+          }
+        ]
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ],
+        "CORE:field": true
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "",
+      "prefix": null
+    },
+    {
+      "name": "warning-unknown-field",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "warnings": [
+          {
+            "field_name_verbatim": "CORE:field",
+            "description_contains": "reserved for core use",
+            "typo": true
+          }
+        ]
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ],
+        "CORE:field": true
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "",
+      "prefix": null
+    },
+    {
+      "name": "warning-invalid-description",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "warnings": [
+          {
+            "field_name_verbatim": "CORE:field",
+            "description_contains": 7
+          }
+        ]
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ],
+        "CORE:field": true
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "",
+      "prefix": null
+    },
+    {
+      "name": "warning-scalar",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "warnings": [
+          "wrong"
+        ]
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ],
+        "CORE:field": true
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "",
+      "prefix": null
+    },
+    {
+      "name": "blocker-positive",
+      "oracle": {
+        "phase": "behavioral",
+        "document_kind": "behavioral-contract",
+        "outcome": "blocked",
+        "candidate_id": "candidate",
+        "blockers": [
+          {
+            "obligation_id": "o1",
+            "assumption_text_contains": "unknown"
+          }
+        ]
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "operation_identity": {
+          "call_site": "pkg.call"
+        },
+        "inputs": {},
+        "outputs": {},
+        "side_effects": [],
+        "resource_dependencies": [],
+        "obligations": [
+          {
+            "obligation_id": "o1",
+            "behavioral_fidelity": "unknown",
+            "unresolved_assumption": {
+              "assumption_id": "a1",
+              "description": "unknown",
+              "reason": "not observed"
+            }
+          }
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": true,
+      "expected_detail": "",
+      "prefix": null
+    },
+    {
+      "name": "blocker-missing-id",
+      "oracle": {
+        "phase": "behavioral",
+        "document_kind": "behavioral-contract",
+        "outcome": "blocked",
+        "candidate_id": "candidate",
+        "blockers": [
+          {
+            "assumption_text_contains": "unknown"
+          }
+        ]
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "operation_identity": {
+          "call_site": "pkg.call"
+        },
+        "inputs": {},
+        "outputs": {},
+        "side_effects": [],
+        "resource_dependencies": [],
+        "obligations": [
+          {
+            "obligation_id": "o1",
+            "behavioral_fidelity": "unknown",
+            "unresolved_assumption": {
+              "assumption_id": "a1",
+              "description": "unknown",
+              "reason": "not observed"
+            }
+          }
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "",
+      "prefix": null
+    },
+    {
+      "name": "blocker-wrong-id",
+      "oracle": {
+        "phase": "behavioral",
+        "document_kind": "behavioral-contract",
+        "outcome": "blocked",
+        "candidate_id": "candidate",
+        "blockers": [
+          {
+            "obligation_id": "wrong",
+            "assumption_text_contains": "unknown"
+          }
+        ]
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "operation_identity": {
+          "call_site": "pkg.call"
+        },
+        "inputs": {},
+        "outputs": {},
+        "side_effects": [],
+        "resource_dependencies": [],
+        "obligations": [
+          {
+            "obligation_id": "o1",
+            "behavioral_fidelity": "unknown",
+            "unresolved_assumption": {
+              "assumption_id": "a1",
+              "description": "unknown",
+              "reason": "not observed"
+            }
+          }
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "",
+      "prefix": null
+    },
+    {
+      "name": "blocker-unknown-field",
+      "oracle": {
+        "phase": "behavioral",
+        "document_kind": "behavioral-contract",
+        "outcome": "blocked",
+        "candidate_id": "candidate",
+        "blockers": [
+          {
+            "obligation_id": "o1",
+            "assumption_text_contains": "unknown",
+            "typo": true
+          }
+        ]
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "operation_identity": {
+          "call_site": "pkg.call"
+        },
+        "inputs": {},
+        "outputs": {},
+        "side_effects": [],
+        "resource_dependencies": [],
+        "obligations": [
+          {
+            "obligation_id": "o1",
+            "behavioral_fidelity": "unknown",
+            "unresolved_assumption": {
+              "assumption_id": "a1",
+              "description": "unknown",
+              "reason": "not observed"
+            }
+          }
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "",
+      "prefix": null
+    },
+    {
+      "name": "blocker-invalid-description",
+      "oracle": {
+        "phase": "behavioral",
+        "document_kind": "behavioral-contract",
+        "outcome": "blocked",
+        "candidate_id": "candidate",
+        "blockers": [
+          {
+            "obligation_id": "o1",
+            "assumption_text_contains": 7
+          }
+        ]
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "operation_identity": {
+          "call_site": "pkg.call"
+        },
+        "inputs": {},
+        "outputs": {},
+        "side_effects": [],
+        "resource_dependencies": [],
+        "obligations": [
+          {
+            "obligation_id": "o1",
+            "behavioral_fidelity": "unknown",
+            "unresolved_assumption": {
+              "assumption_id": "a1",
+              "description": "unknown",
+              "reason": "not observed"
+            }
+          }
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "",
+      "prefix": null
+    },
+    {
+      "name": "blocker-scalar",
+      "oracle": {
+        "phase": "behavioral",
+        "document_kind": "behavioral-contract",
+        "outcome": "blocked",
+        "candidate_id": "candidate",
+        "blockers": [
+          "wrong"
+        ]
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "operation_identity": {
+          "call_site": "pkg.call"
+        },
+        "inputs": {},
+        "outputs": {},
+        "side_effects": [],
+        "resource_dependencies": [],
+        "obligations": [
+          {
+            "obligation_id": "o1",
+            "behavioral_fidelity": "unknown",
+            "unresolved_assumption": {
+              "assumption_id": "a1",
+              "description": "unknown",
+              "reason": "not observed"
+            }
+          }
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "",
+      "prefix": null
+    },
+    {
+      "name": "discovery-input-only",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "input-only",
+      "success": false,
+      "expected_detail": "incomplete, ambiguous or non-leaf fixture",
+      "prefix": null
+    },
+    {
+      "name": "discovery-oracle-only",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "oracle-only",
+      "success": false,
+      "expected_detail": "incomplete, ambiguous or non-leaf fixture",
+      "prefix": null
+    },
+    {
+      "name": "discovery-dual-input",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "dual-input",
+      "success": false,
+      "expected_detail": "incomplete, ambiguous or non-leaf fixture",
+      "prefix": null
+    },
+    {
+      "name": "discovery-non-leaf",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "non-leaf",
+      "success": false,
+      "expected_detail": "incomplete, ambiguous or non-leaf fixture",
+      "prefix": null
+    },
+    {
+      "name": "discovery-symlink-file",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "symlink-file",
+      "success": false,
+      "expected_detail": "symlink",
+      "prefix": null
+    },
+    {
+      "name": "discovery-symlink-directory",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "symlink-directory",
+      "success": false,
+      "expected_detail": "symlink",
+      "prefix": null
+    },
+    {
+      "name": "discovery-fifo-entry",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "fifo-entry",
+      "success": false,
+      "expected_detail": "non-regular fixture entry",
+      "prefix": null
+    },
+    {
+      "name": "invalid-prefix-''",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "invalid fixture directory prefix",
+      "prefix": ""
+    },
+    {
+      "name": "invalid-prefix-'..'",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "invalid fixture directory prefix",
+      "prefix": ".."
+    },
+    {
+      "name": "invalid-prefix-'positive/../case'",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "invalid fixture directory prefix",
+      "prefix": "positive/../case"
+    },
+    {
+      "name": "invalid-prefix-'positive//case'",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "invalid fixture directory prefix",
+      "prefix": "positive//case"
+    },
+    {
+      "name": "invalid-prefix-'/positive'",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "invalid fixture directory prefix",
+      "prefix": "/positive"
+    },
+    {
+      "name": "invalid-prefix-'positive\\\\case'",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "invalid fixture directory prefix",
+      "prefix": "positive\\case"
+    },
+    {
+      "name": "invalid-prefix-'positive/./case'",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "pair",
+      "success": false,
+      "expected_detail": "invalid fixture directory prefix",
+      "prefix": "positive/./case"
+    },
+    {
+      "name": "empty-tree",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass"
+      },
+      "input": {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "format_version": "1.0.0",
+        "claim": "A source claim inferred from the stated reasoning.",
+        "classification": "inferred",
+        "reasoning_chain": [
+          "Explicit inference; not an authenticated observation."
+        ]
+      },
+      "raw_oracle": null,
+      "setup": "empty",
+      "success": false,
+      "expected_detail": "no fixtures discovered",
+      "prefix": null
+    }
+  ]
+}

@@ -5,6 +5,7 @@
 | Actual URI RED/GREEN and reachable local checkpoints | PASS | `36db142`, `cb36beb`; URI logs |
 | Actual runner RED/GREEN and post-GREEN refactor | PASS | `e24248c`, `899fd46`, `42be2c7`, `ce2baba`; runner logs |
 | Strict phases, diagnostics, zero-selection denial, kill/reap controls | PASS | 9 controls; actual temporary-root CLI matrix; frozen review 30 |
+| Further malformed-fixture/diagnostic/discovery CLI matrix | PASS, parent-only | 67 predeclared cases, all matched; `runner-failclosed-results.json` |
 | All conventional targets and doctests | PASS | 278 conventional + 7 doctests, `final-regression-checks.json` |
 | Python regression | PASS | 15 checks, `python-tests.txt` |
 | All-target check/fmt/Clippy | PASS | Prior current-source `runner-final-build-checks.json`; hashes unchanged |
