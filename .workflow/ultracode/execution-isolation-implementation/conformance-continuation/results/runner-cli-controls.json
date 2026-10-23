@@ -1,0 +1,47 @@
+{
+  "scope": "Actual custom test executable against temporary control fixtures; not default corpus or native sandbox proof",
+  "checks": [
+    {
+      "name": "one-default",
+      "exit_code": 0,
+      "expected_success": true,
+      "output": "PASS positive/evidence-record/inferred\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "positive-prefix",
+      "exit_code": 0,
+      "expected_success": true,
+      "output": "PASS positive/evidence-record/inferred\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "zero-selected",
+      "exit_code": 1,
+      "expected_success": false,
+      "output": "no fixtures selected by directory prefix\n"
+    },
+    {
+      "name": "unsafe-prefix",
+      "exit_code": 1,
+      "expected_success": false,
+      "output": "invalid fixture directory prefix \"../positive\"\n"
+    },
+    {
+      "name": "two-prefixes",
+      "exit_code": 1,
+      "expected_success": false,
+      "output": "expected one directory prefix and optional --fixture-root path\n"
+    },
+    {
+      "name": "prefix-excludes-neighbor",
+      "exit_code": 0,
+      "expected_success": true,
+      "output": "PASS positive/evidence-record/inferred\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "mismatch-detected",
+      "exit_code": 1,
+      "expected_success": false,
+      "output": "PASS positive/evidence-record/inferred\n/tmp/clouddialect-runner-cli-6rx04w0v/positive-neighbor/wrong: fixture validator exit status: 1: /tmp/clouddialect-runner-cli-6rx04w0v/positive-neighbor/wrong: outcome: expected \"fail\", actual \"pass\"\n\n"
+    }
+  ]
+}

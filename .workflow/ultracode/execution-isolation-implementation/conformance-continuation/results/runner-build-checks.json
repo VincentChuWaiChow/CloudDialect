@@ -1,0 +1,33 @@
+[
+  {
+    "name": "runner-check",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "check",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--all-targets"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "runner-clippy",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "clippy",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--all-targets",
+      "--",
+      "-D",
+      "warnings"
+    ],
+    "exit_code": 101
+  }
+]

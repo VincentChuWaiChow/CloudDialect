@@ -487,12 +487,12 @@ pub fn run_bounded(mut command: Command, timeout: Duration) -> Result<(), String
             }
         }
         if started.elapsed() >= timeout {
-            if let Err(error) = child.kill() {
-                if child.try_wait().map_err(|e| e.to_string())?.is_none() {
-                    return Err(format!(
-                        "fixture timeout; child termination unconfirmed: {error}"
-                    ));
-                }
+            if let Err(error) = child.kill()
+                && child.try_wait().map_err(|e| e.to_string())?.is_none()
+            {
+                return Err(format!(
+                    "fixture timeout; child termination unconfirmed: {error}"
+                ));
             }
             child
                 .wait()

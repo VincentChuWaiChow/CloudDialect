@@ -1,0 +1,28 @@
+    Checking clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+error: this `if` statement can be collapsed
+   --> tests/support/fixtures.rs:490:13
+    |
+490 | /             if let Err(error) = child.kill() {
+491 | |                 if child.try_wait().map_err(|e| e.to_string())?.is_none() {
+492 | |                     return Err(format!(
+493 | |                         "fixture timeout; child termination unconfirmed: {error}"
+...   |
+496 | |             }
+    | |_____________^
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.99.0/index.html#collapsible_if
+    = note: `-D clippy::collapsible-if` implied by `-D warnings`
+    = help: to override `-D warnings` add `#[allow(clippy::collapsible_if)]`
+help: collapse nested if block
+    |
+490 ~             if let Err(error) = child.kill()
+491 ~                 && child.try_wait().map_err(|e| e.to_string())?.is_none() {
+492 |                     return Err(format!(
+493 |                         "fixture timeout; child termination unconfirmed: {error}"
+494 |                     ));
+495 ~                 }
+    |
+
+error: could not compile `clouddialect-contracts` (test "conformance") due to 1 previous error
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `clouddialect-contracts` (test "conformance_controls") due to 1 previous error
