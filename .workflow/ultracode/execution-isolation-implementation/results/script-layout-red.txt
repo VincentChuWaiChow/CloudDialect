@@ -1,0 +1,175 @@
+test_canonical_scripts_are_regular_files_grouped_by_domain (test_script_layout.ScriptLayoutTests.test_canonical_scripts_are_regular_files_grouped_by_domain) ... FAIL
+test_previous_command_paths_are_relative_compatibility_links (test_script_layout.ScriptLayoutTests.test_previous_command_paths_are_relative_compatibility_links) ...
+  test_previous_command_paths_are_relative_compatibility_links (test_script_layout.ScriptLayoutTests.test_previous_command_paths_are_relative_compatibility_links) (legacy='.workflow/ultracode/execution-isolation-implementation/measure-domain-coverage.py') ... FAIL
+  test_previous_command_paths_are_relative_compatibility_links (test_script_layout.ScriptLayoutTests.test_previous_command_paths_are_relative_compatibility_links) (legacy='.workflow/ultracode/execution-isolation-implementation/verify-p0.py') ... FAIL
+  test_previous_command_paths_are_relative_compatibility_links (test_script_layout.ScriptLayoutTests.test_previous_command_paths_are_relative_compatibility_links) (legacy='.workflow/ultracode/execution-isolation-implementation/verify-planning.py') ... FAIL
+  test_previous_command_paths_are_relative_compatibility_links (test_script_layout.ScriptLayoutTests.test_previous_command_paths_are_relative_compatibility_links) (legacy='.workflow/ultracode/execution-isolation-implementation/reproduce-document-checks.sh') ... FAIL
+  test_previous_command_paths_are_relative_compatibility_links (test_script_layout.ScriptLayoutTests.test_previous_command_paths_are_relative_compatibility_links) (legacy='.workflow/ultracode/execution-isolation/check_spec.py') ... FAIL
+  test_previous_command_paths_are_relative_compatibility_links (test_script_layout.ScriptLayoutTests.test_previous_command_paths_are_relative_compatibility_links) (legacy='.workflow/ultracode/execution-isolation/test_check_spec.py') ... FAIL
+  test_previous_command_paths_are_relative_compatibility_links (test_script_layout.ScriptLayoutTests.test_previous_command_paths_are_relative_compatibility_links) (legacy='.workflow/ultracode/python-oss-to-s3-pack/check_docs.py') ... FAIL
+test_python_tools_keep_repo_root_and_recorded_data_locations (test_script_layout.ScriptLayoutTests.test_python_tools_keep_repo_root_and_recorded_data_locations) ...
+  test_python_tools_keep_repo_root_and_recorded_data_locations (test_script_layout.ScriptLayoutTests.test_python_tools_keep_repo_root_and_recorded_data_locations) (canonical='scripts/verification/contracts-evidence-foundation/measure-domain-coverage.py') ... ERROR
+  test_python_tools_keep_repo_root_and_recorded_data_locations (test_script_layout.ScriptLayoutTests.test_python_tools_keep_repo_root_and_recorded_data_locations) (canonical='scripts/verification/contracts-evidence-foundation/verify-p0.py') ... ERROR
+  test_python_tools_keep_repo_root_and_recorded_data_locations (test_script_layout.ScriptLayoutTests.test_python_tools_keep_repo_root_and_recorded_data_locations) (canonical='scripts/verification/contracts-evidence-foundation/verify-planning.py') ... ERROR
+  test_python_tools_keep_repo_root_and_recorded_data_locations (test_script_layout.ScriptLayoutTests.test_python_tools_keep_repo_root_and_recorded_data_locations) (canonical='scripts/verification/execution-isolation/check_spec.py') ... ERROR
+  test_python_tools_keep_repo_root_and_recorded_data_locations (test_script_layout.ScriptLayoutTests.test_python_tools_keep_repo_root_and_recorded_data_locations) (canonical='scripts/verification/execution-isolation/test_check_spec.py') ... ERROR
+  test_python_tools_keep_repo_root_and_recorded_data_locations (test_script_layout.ScriptLayoutTests.test_python_tools_keep_repo_root_and_recorded_data_locations) (canonical='scripts/verification/python-oss-to-s3-pack/check_docs.py') ... ERROR
+
+======================================================================
+ERROR: test_python_tools_keep_repo_root_and_recorded_data_locations (test_script_layout.ScriptLayoutTests.test_python_tools_keep_repo_root_and_recorded_data_locations) (canonical='scripts/verification/contracts-evidence-foundation/measure-domain-coverage.py')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/tests/test_script_layout.py", line 53, in test_python_tools_keep_repo_root_and_recorded_data_locations
+    source = path.read_text()
+             ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1029, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/raishin/projects/CloudDialect/scripts/verification/contracts-evidence-foundation/measure-domain-coverage.py'
+
+======================================================================
+ERROR: test_python_tools_keep_repo_root_and_recorded_data_locations (test_script_layout.ScriptLayoutTests.test_python_tools_keep_repo_root_and_recorded_data_locations) (canonical='scripts/verification/contracts-evidence-foundation/verify-p0.py')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/tests/test_script_layout.py", line 53, in test_python_tools_keep_repo_root_and_recorded_data_locations
+    source = path.read_text()
+             ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1029, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/raishin/projects/CloudDialect/scripts/verification/contracts-evidence-foundation/verify-p0.py'
+
+======================================================================
+ERROR: test_python_tools_keep_repo_root_and_recorded_data_locations (test_script_layout.ScriptLayoutTests.test_python_tools_keep_repo_root_and_recorded_data_locations) (canonical='scripts/verification/contracts-evidence-foundation/verify-planning.py')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/tests/test_script_layout.py", line 53, in test_python_tools_keep_repo_root_and_recorded_data_locations
+    source = path.read_text()
+             ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1029, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/raishin/projects/CloudDialect/scripts/verification/contracts-evidence-foundation/verify-planning.py'
+
+======================================================================
+ERROR: test_python_tools_keep_repo_root_and_recorded_data_locations (test_script_layout.ScriptLayoutTests.test_python_tools_keep_repo_root_and_recorded_data_locations) (canonical='scripts/verification/execution-isolation/check_spec.py')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/tests/test_script_layout.py", line 53, in test_python_tools_keep_repo_root_and_recorded_data_locations
+    source = path.read_text()
+             ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1029, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/raishin/projects/CloudDialect/scripts/verification/execution-isolation/check_spec.py'
+
+======================================================================
+ERROR: test_python_tools_keep_repo_root_and_recorded_data_locations (test_script_layout.ScriptLayoutTests.test_python_tools_keep_repo_root_and_recorded_data_locations) (canonical='scripts/verification/execution-isolation/test_check_spec.py')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/tests/test_script_layout.py", line 53, in test_python_tools_keep_repo_root_and_recorded_data_locations
+    source = path.read_text()
+             ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1029, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/raishin/projects/CloudDialect/scripts/verification/execution-isolation/test_check_spec.py'
+
+======================================================================
+ERROR: test_python_tools_keep_repo_root_and_recorded_data_locations (test_script_layout.ScriptLayoutTests.test_python_tools_keep_repo_root_and_recorded_data_locations) (canonical='scripts/verification/python-oss-to-s3-pack/check_docs.py')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/tests/test_script_layout.py", line 53, in test_python_tools_keep_repo_root_and_recorded_data_locations
+    source = path.read_text()
+             ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1029, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/raishin/projects/CloudDialect/scripts/verification/python-oss-to-s3-pack/check_docs.py'
+
+======================================================================
+FAIL: test_canonical_scripts_are_regular_files_grouped_by_domain (test_script_layout.ScriptLayoutTests.test_canonical_scripts_are_regular_files_grouped_by_domain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/tests/test_script_layout.py", line 31, in test_canonical_scripts_are_regular_files_grouped_by_domain
+    self.assertTrue((ROOT / "scripts/README.md").is_file())
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_previous_command_paths_are_relative_compatibility_links (test_script_layout.ScriptLayoutTests.test_previous_command_paths_are_relative_compatibility_links) (legacy='.workflow/ultracode/execution-isolation-implementation/measure-domain-coverage.py')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/tests/test_script_layout.py", line 42, in test_previous_command_paths_are_relative_compatibility_links
+    self.assertTrue(path.is_symlink())
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_previous_command_paths_are_relative_compatibility_links (test_script_layout.ScriptLayoutTests.test_previous_command_paths_are_relative_compatibility_links) (legacy='.workflow/ultracode/execution-isolation-implementation/verify-p0.py')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/tests/test_script_layout.py", line 42, in test_previous_command_paths_are_relative_compatibility_links
+    self.assertTrue(path.is_symlink())
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_previous_command_paths_are_relative_compatibility_links (test_script_layout.ScriptLayoutTests.test_previous_command_paths_are_relative_compatibility_links) (legacy='.workflow/ultracode/execution-isolation-implementation/verify-planning.py')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/tests/test_script_layout.py", line 42, in test_previous_command_paths_are_relative_compatibility_links
+    self.assertTrue(path.is_symlink())
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_previous_command_paths_are_relative_compatibility_links (test_script_layout.ScriptLayoutTests.test_previous_command_paths_are_relative_compatibility_links) (legacy='.workflow/ultracode/execution-isolation-implementation/reproduce-document-checks.sh')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/tests/test_script_layout.py", line 42, in test_previous_command_paths_are_relative_compatibility_links
+    self.assertTrue(path.is_symlink())
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_previous_command_paths_are_relative_compatibility_links (test_script_layout.ScriptLayoutTests.test_previous_command_paths_are_relative_compatibility_links) (legacy='.workflow/ultracode/execution-isolation/check_spec.py')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/tests/test_script_layout.py", line 42, in test_previous_command_paths_are_relative_compatibility_links
+    self.assertTrue(path.is_symlink())
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_previous_command_paths_are_relative_compatibility_links (test_script_layout.ScriptLayoutTests.test_previous_command_paths_are_relative_compatibility_links) (legacy='.workflow/ultracode/execution-isolation/test_check_spec.py')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/tests/test_script_layout.py", line 42, in test_previous_command_paths_are_relative_compatibility_links
+    self.assertTrue(path.is_symlink())
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_previous_command_paths_are_relative_compatibility_links (test_script_layout.ScriptLayoutTests.test_previous_command_paths_are_relative_compatibility_links) (legacy='.workflow/ultracode/python-oss-to-s3-pack/check_docs.py')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/tests/test_script_layout.py", line 42, in test_previous_command_paths_are_relative_compatibility_links
+    self.assertTrue(path.is_symlink())
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.003s
+
+FAILED (failures=8, errors=6)

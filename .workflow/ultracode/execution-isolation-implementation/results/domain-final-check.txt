@@ -1,0 +1,13 @@
+    Checking typenum v1.20.1
+    Checking keccak v0.2.2
+    Checking cpufeatures v0.3.1
+    Checking sponge-cursor v0.1.0
+    Checking semver v1.0.28
+    Checking hybrid-array v0.4.15
+    Checking crypto-common v0.2.2
+    Checking block-buffer v0.12.1
+    Checking digest v0.11.3
+    Checking sha2 v0.11.1
+    Checking sha3 v0.12.0
+    Checking clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.92s

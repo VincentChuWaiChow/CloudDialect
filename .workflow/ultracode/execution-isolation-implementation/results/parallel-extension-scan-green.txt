@@ -1,0 +1,14 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.73s
+     Running tests/extension_validation.rs (/tmp/clouddialect-phase-target/debug/deps/extension_validation-40be2de6ebb6b94d)
+
+running 7 tests
+test validation_does_not_rewrite_unknown_optional_encoded_value_bytes ... ok
+test nested_embedded_schema_keys_are_not_root_extension_declarations ... ok
+test reserved_warnings_coexist_with_minor_warning_without_promoting_failures ... ok
+test optional_payloads_cannot_override_core_fields_or_structural_failures ... ok
+test community_prefixes_and_nonreserved_neighbors_are_allowed_without_warnings ... ok
+test reserved_exact_case_and_family_variants_warn_verbatim_without_failing_structure ... ok
+test malformed_prefixes_fail_on_closed_open_and_minor_projection_roots ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.63s

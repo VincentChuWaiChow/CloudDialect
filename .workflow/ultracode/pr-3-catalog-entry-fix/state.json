@@ -1,0 +1,138 @@
+{
+  "title": "CatalogEntry extension fix",
+  "slug": "pr-3-catalog-entry-fix",
+  "created_at": "2026-10-22T18:28:48.958995+00:00",
+  "updated_at": "2026-10-22T18:32:38.528014+00:00",
+  "status": "complete",
+  "mode": "delegated",
+  "baseline_ref": "0b3feabbc031eceb196156373ad78adf4a4d78de",
+  "risk_level": "medium",
+  "eval_contract": {
+    "level": "full",
+    "path": "eval-contract.md",
+    "status": "checked"
+  },
+  "approval": {
+    "required": false,
+    "granted": true,
+    "notes": "User asks fix the reported findings; public field impact announced; no external mutations."
+  },
+  "delegation": {
+    "native_agent_available": true,
+    "native_agent_planned": true,
+    "native_agent_used": true,
+    "agent_count": 1,
+    "wave_count": 1,
+    "consolidated_repairs_used": 0
+  },
+  "packets": [
+    {
+      "id": "01-review",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/01-review.md"
+    }
+  ],
+  "verification": {
+    "status": "complete",
+    "checks": [
+      {
+        "name": "rust-tests",
+        "status": "pass",
+        "command": [
+          "rtk",
+          "proxy",
+          "cargo",
+          "test",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen",
+          "--offline"
+        ],
+        "evidence": ".workflow/ultracode/pr-3-catalog-entry-fix/results/rust-tests.txt"
+      },
+      {
+        "name": "rust-check",
+        "status": "pass",
+        "command": [
+          "rtk",
+          "proxy",
+          "cargo",
+          "check",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen",
+          "--offline",
+          "--all-targets"
+        ],
+        "evidence": ".workflow/ultracode/pr-3-catalog-entry-fix/results/rust-check.txt"
+      },
+      {
+        "name": "rust-fmt",
+        "status": "pass",
+        "command": [
+          "rtk",
+          "proxy",
+          "cargo",
+          "fmt",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--",
+          "--check"
+        ],
+        "evidence": ".workflow/ultracode/pr-3-catalog-entry-fix/results/rust-fmt.txt"
+      },
+      {
+        "name": "rust-clippy",
+        "status": "pass",
+        "command": [
+          "rtk",
+          "proxy",
+          "cargo",
+          "clippy",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen",
+          "--offline",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "evidence": ".workflow/ultracode/pr-3-catalog-entry-fix/results/rust-clippy.txt"
+      },
+      {
+        "name": "python-tests",
+        "status": "pass",
+        "command": [
+          "rtk",
+          "proxy",
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "evidence": ".workflow/ultracode/pr-3-catalog-entry-fix/results/python-tests.txt"
+      },
+      {
+        "name": "coverage",
+        "status": "pass",
+        "evidence": "results/coverage-result.json"
+      },
+      {
+        "name": "independent-review",
+        "status": "pass",
+        "evidence": "results/01-review.md"
+      },
+      {
+        "name": "scope-preservation",
+        "status": "pass",
+        "evidence": "results/preservation.json"
+      }
+    ]
+  }
+}

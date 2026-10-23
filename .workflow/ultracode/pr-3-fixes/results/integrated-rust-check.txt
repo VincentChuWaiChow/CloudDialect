@@ -1,0 +1,2 @@
+    Checking clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.00s

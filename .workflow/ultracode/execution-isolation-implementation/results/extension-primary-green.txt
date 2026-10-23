@@ -1,0 +1,11 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.61s
+     Running tests/required_extensions.rs (/tmp/clouddialect-phase-target/debug/deps/required_extensions-5b9d1b7ea39a21c1)
+
+running 4 tests
+test all_primary_kinds_allow_absence_empty_and_declaration_only_unknown_prefixes ... ok
+test adding_the_core_declaration_does_not_open_primary_roots_or_promote_payload_claims ... ok
+test primary_declarations_reject_wrong_types_and_duplicate_decoded_prefixes ... ok
+test primary_prefixes_use_exact_ascii_namespace_grammar_without_colons_or_whitespace ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s

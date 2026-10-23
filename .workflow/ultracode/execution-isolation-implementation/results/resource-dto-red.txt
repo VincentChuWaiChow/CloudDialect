@@ -1,0 +1,49 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+error[E0432]: unresolved imports `clouddialect_contracts::ResourceBehaviorDimension`, `clouddialect_contracts::ResourceUnresolvedAssumption`
+ --> tests/source_document_models.rs:3:5
+  |
+3 |     ResourceBehaviorDimension, ResourceUnresolvedAssumption, UnresolvedAssumption,
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no `ResourceUnresolvedAssumption` in the root
+  |     |
+  |     no `ResourceBehaviorDimension` in the root
+  |
+help: a similar name exists in the module
+  |
+3 -     ResourceBehaviorDimension, ResourceUnresolvedAssumption, UnresolvedAssumption,
+3 +     ResourceBehaviorDimension, UnresolvedAssumption, UnresolvedAssumption,
+  |
+
+error[E0425]: cannot find type `ResourceUnresolvedAssumption` in module `clouddialect_contracts::validator`
+   --> tests/source_document_models.rs:240:55
+    |
+240 |         let alias: clouddialect_contracts::validator::ResourceUnresolvedAssumption = assumption;
+    |                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+   ::: src/documents/behavioral_contract.rs:32:1
+    |
+ 32 | pub struct UnresolvedAssumption {
+    | ------------------------------- similarly named struct `UnresolvedAssumption` defined here
+    |
+help: a struct with a similar name exists
+    |
+240 -         let alias: clouddialect_contracts::validator::ResourceUnresolvedAssumption = assumption;
+240 +         let alias: clouddialect_contracts::validator::UnresolvedAssumption = assumption;
+    |
+
+error[E0425]: cannot find type `ResourceBehaviorDimension` in module `clouddialect_contracts::validator`
+   --> tests/source_document_models.rs:241:65
+    |
+241 |         let alias_dimension: clouddialect_contracts::validator::ResourceBehaviorDimension =
+    |                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^ not found in `clouddialect_contracts::validator`
+
+error[E0609]: no field `behavior` on type `UnresolvedAssumption`
+   --> tests/source_document_models.rs:261:14
+    |
+261 |             .behavior,
+    |              ^^^^^^^^ unknown field
+    |
+    = note: available fields are: `assumption_id`, `description`, `reason`, `extensions`
+
+Some errors have detailed explanations: E0425, E0432, E0609.
+For more information about an error, try `rustc --explain E0425`.
+error: could not compile `clouddialect-contracts` (test "source_document_models") due to 4 previous errors

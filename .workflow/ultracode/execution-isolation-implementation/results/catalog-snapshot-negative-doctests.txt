@@ -1,0 +1,88 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.06s
+   Doc-tests clouddialect_contracts
+
+running 7 tests
+error[E0596]: cannot borrow data in a `&` reference as mutable
+  --> src/schema/snapshot.rs:16:5
+   |
+16 |     snapshot.digest().value.push('x');
+   |     ^^^^^^^^^^^^^^^^^^^^^^^ cannot borrow as mutable
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0596`.
+test src/schema/snapshot.rs - schema::snapshot::CatalogSnapshot (line 13) - compile fail ... ok
+error[E0277]: the trait bound `BehavioralResult: From<SemanticResult>` is not satisfied
+   --> src/documents/verification.rs:123:65
+    |
+123 | fn promote(result: SemanticResult) -> BehavioralResult { result.into() }
+    |                                                                 ^^^^ the trait `From<SemanticResult>` is not implemented for `BehavioralResult`
+    |
+    = note: required for `SemanticResult` to implement `Into<BehavioralResult>`
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0277`.
+error[E0277]: the trait bound `SemanticResult: From<BehavioralResult>` is not satisfied
+   --> src/documents/verification.rs:131:68
+    |
+131 | fn substitute(result: BehavioralResult) -> SemanticResult { result.into() }
+    |                                                                    ^^^^ the trait `From<BehavioralResult>` is not implemented for `SemanticResult`
+    |
+    = note: required for `BehavioralResult` to implement `Into<SemanticResult>`
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0277`.
+test src/documents/verification.rs - documents::verification::BehavioralResult (line 120) - compile fail ... ok
+test src/documents/verification.rs - documents::verification::BehavioralResult (line 128) - compile fail ... ok
+error[E0277]: the trait bound `BehavioralResult: From<StructuralResult>` is not satisfied
+   --> src/documents/verification.rs:119:67
+    |
+119 | fn promote(result: StructuralResult) -> BehavioralResult { result.into() }
+    |                                                                   ^^^^ the trait `From<StructuralResult>` is not implemented for `BehavioralResult`
+    |
+    = note: required for `StructuralResult` to implement `Into<BehavioralResult>`
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0277`.
+error[E0277]: the trait bound `StructuralResult: From<BehavioralResult>` is not satisfied
+   --> src/documents/verification.rs:127:70
+    |
+127 | fn substitute(result: BehavioralResult) -> StructuralResult { result.into() }
+    |                                                                      ^^^^ the trait `From<BehavioralResult>` is not implemented for `StructuralResult`
+    |
+    = note: required for `BehavioralResult` to implement `Into<StructuralResult>`
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0277`.
+test src/documents/verification.rs - documents::verification::BehavioralResult (line 116) - compile fail ... ok
+error[E0277]: the trait bound `SemanticResult: From<StructuralResult>` is not satisfied
+  --> src/errors/phase.rs:30:12
+   |
+30 |     result.into()
+   |            ^^^^ the trait `From<StructuralResult>` is not implemented for `SemanticResult`
+   |
+   = note: required for `StructuralResult` to implement `Into<SemanticResult>`
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0277`.
+test src/documents/verification.rs - documents::verification::BehavioralResult (line 124) - compile fail ... ok
+test src/errors/phase.rs - errors::phase::StructuralResult (line 26) - compile fail ... ok
+error[E0277]: the trait bound `StructuralResult: From<SemanticResult>` is not satisfied
+  --> src/errors/phase.rs:49:12
+   |
+49 |     result.into()
+   |            ^^^^ the trait `From<SemanticResult>` is not implemented for `StructuralResult`
+   |
+   = note: required for `SemanticResult` to implement `Into<StructuralResult>`
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0277`.
+test src/errors/phase.rs - errors::phase::SemanticResult (line 45) - compile fail ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s

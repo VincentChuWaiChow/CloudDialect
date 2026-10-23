@@ -1,0 +1,114 @@
+{
+  "trigger": "git diff --cached --check rejected blank EOF lines in captured presentation logs, exit2; no source/schema change",
+  "normalization": "Trailing whitespace/blank EOF only, raw bytes retained under /tmp",
+  "files": [
+    {
+      "presentation": ".workflow/ultracode/execution-isolation-implementation/results/catalog-final-all-tests.txt",
+      "raw_path": "/tmp/clouddialect-catalog-presentation-raw/catalog-final-all-tests.txt",
+      "raw_sha256": "9f7840bd35da2e5622e9610d78020e01cd0853bc705ad2907b49f8b33de18bf2",
+      "normalized_sha256": "9d9194566d1b56bbc7df12d6a668269c30c35a600e636baf4f23727424d9ed71"
+    },
+    {
+      "presentation": ".workflow/ultracode/execution-isolation-implementation/results/catalog-final-diff.txt",
+      "raw_path": "/tmp/clouddialect-catalog-presentation-raw/catalog-final-diff.txt",
+      "raw_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "presentation": ".workflow/ultracode/execution-isolation-implementation/results/catalog-final-fmt.txt",
+      "raw_path": "/tmp/clouddialect-catalog-presentation-raw/catalog-final-fmt.txt",
+      "raw_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "presentation": ".workflow/ultracode/execution-isolation-implementation/results/catalog-final-negative-doctests.txt",
+      "raw_path": "/tmp/clouddialect-catalog-presentation-raw/catalog-final-negative-doctests.txt",
+      "raw_sha256": "6b7a245b56a80a236ff0b85042a3ad6f8afc480702e9b00d1c696dad47769076",
+      "normalized_sha256": "e7419f9573267f1e516aa255a3d8135c17c47cad59ce1da8d4babd42d5843cfb"
+    },
+    {
+      "presentation": ".workflow/ultracode/execution-isolation-implementation/results/catalog-loader-line-coverage.txt",
+      "raw_path": "/tmp/clouddialect-catalog-presentation-raw/catalog-loader-line-coverage.txt",
+      "raw_sha256": "5ecc1ab1eec962beb574022491a582bc24d47ff3492611dea875866ee06daebd",
+      "normalized_sha256": "e44a2b3cd90f5829fea19b89964c9d94e244cb693e19295c133e73e20989659b"
+    },
+    {
+      "presentation": ".workflow/ultracode/execution-isolation-implementation/results/catalog-loading-green.txt",
+      "raw_path": "/tmp/clouddialect-catalog-presentation-raw/catalog-loading-green.txt",
+      "raw_sha256": "1e38efe391728396aa920e2fc0f34bae0cf3988c325ab98ec21bc9b37d470377",
+      "normalized_sha256": "026f5a76e3808f8ad140bfc7281a4bdcea2189417dbe7706c449dc87254678bb"
+    },
+    {
+      "presentation": ".workflow/ultracode/execution-isolation-implementation/results/catalog-repair-green.txt",
+      "raw_path": "/tmp/clouddialect-catalog-presentation-raw/catalog-repair-green.txt",
+      "raw_sha256": "e2d7a9d37f3af3c45c78e08d278c13415da424a5834cff1e02c9997ab9904965",
+      "normalized_sha256": "297232248dd53773bc4b46a707a40f127e7cab4af6bb881b2eb463f5a97dd173"
+    },
+    {
+      "presentation": ".workflow/ultracode/execution-isolation-implementation/results/catalog-repaired-all-tests.txt",
+      "raw_path": "/tmp/clouddialect-catalog-presentation-raw/catalog-repaired-all-tests.txt",
+      "raw_sha256": "3afb6be3c62ef7281205e00e725aab02f11e8de2447e0047bd88bc23df1c605e",
+      "normalized_sha256": "3037626cc443dc524f7c3d521fb4b3570dd3720bba655f64d386088082908b48"
+    },
+    {
+      "presentation": ".workflow/ultracode/execution-isolation-implementation/results/catalog-repaired-diff.txt",
+      "raw_path": "/tmp/clouddialect-catalog-presentation-raw/catalog-repaired-diff.txt",
+      "raw_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "presentation": ".workflow/ultracode/execution-isolation-implementation/results/catalog-repaired-fmt.txt",
+      "raw_path": "/tmp/clouddialect-catalog-presentation-raw/catalog-repaired-fmt.txt",
+      "raw_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "presentation": ".workflow/ultracode/execution-isolation-implementation/results/catalog-repaired-negative-doctests.txt",
+      "raw_path": "/tmp/clouddialect-catalog-presentation-raw/catalog-repaired-negative-doctests.txt",
+      "raw_sha256": "629863758ae217903f6cc5d73521887d39e12fc7c0446202ea50ddecc9ee0012",
+      "normalized_sha256": "bb2221596288834e87cc2375437a553e88695e6fba518a1c136511f82f803e48"
+    },
+    {
+      "presentation": ".workflow/ultracode/execution-isolation-implementation/results/catalog-snapshot-full.txt",
+      "raw_path": "/tmp/clouddialect-catalog-presentation-raw/catalog-snapshot-full.txt",
+      "raw_sha256": "95c1a5ccc8fd5fb52eacfb652886f7f76b900824f5b30b09efb7567350492f88",
+      "normalized_sha256": "8f72bb4a5f13011e500bd0145e2f1f11afca9d7e93ac211944ecd257e9720249"
+    },
+    {
+      "presentation": ".workflow/ultracode/execution-isolation-implementation/results/catalog-snapshot-green.txt",
+      "raw_path": "/tmp/clouddialect-catalog-presentation-raw/catalog-snapshot-green.txt",
+      "raw_sha256": "97c6bb4ad478312943f633748d976b1b183ec60f700d045fb054addd6ea909d5",
+      "normalized_sha256": "b83e8cadbe4e1a22d375eccdf11151b96d0df5a97a45e602f1701cbe1bf4e556"
+    },
+    {
+      "presentation": ".workflow/ultracode/execution-isolation-implementation/results/catalog-snapshot-negative-doctests.txt",
+      "raw_path": "/tmp/clouddialect-catalog-presentation-raw/catalog-snapshot-negative-doctests.txt",
+      "raw_sha256": "bcff2bf521d8bb733e5c3ecd5f00521b503e5adc74cb44b07ad0bf5ea8cd13d6",
+      "normalized_sha256": "d5ce1808773f04ee75447580f4b04fa58358e639d579d47a2496337adefa0360"
+    },
+    {
+      "presentation": ".workflow/ultracode/execution-isolation-implementation/results/catalog-verified-all-tests.txt",
+      "raw_path": "/tmp/clouddialect-catalog-presentation-raw/catalog-verified-all-tests.txt",
+      "raw_sha256": "2b90b492c429e8264468e356658a41898278b5fff00a21b41aaa737ca851807e",
+      "normalized_sha256": "27f3b11d6100be428dbe03070290b7ad2b2cbdfef30ff6a6a0200b308c6703b4"
+    },
+    {
+      "presentation": ".workflow/ultracode/execution-isolation-implementation/results/catalog-verified-diff.txt",
+      "raw_path": "/tmp/clouddialect-catalog-presentation-raw/catalog-verified-diff.txt",
+      "raw_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "presentation": ".workflow/ultracode/execution-isolation-implementation/results/catalog-verified-fmt.txt",
+      "raw_path": "/tmp/clouddialect-catalog-presentation-raw/catalog-verified-fmt.txt",
+      "raw_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "presentation": ".workflow/ultracode/execution-isolation-implementation/results/catalog-verified-negative-doctests.txt",
+      "raw_path": "/tmp/clouddialect-catalog-presentation-raw/catalog-verified-negative-doctests.txt",
+      "raw_sha256": "8472bffc92a4541e7bb35840f32e17f41b36b868f203df9612945c302b46de7e",
+      "normalized_sha256": "e04d486e52c10d2e505097899191cc3116be3e5cc4cf665c563a995d851f7adb"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.clouddialect.io/catalog-index/1.0.0/schema.json",
+  "type": "object",
+  "required": [
+    "format_version",
+    "schemas",
+    "resolver_resources"
+  ],
+  "properties": {
+    "required_extensions": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9-]+$",
+        "not": {"pattern": "\\s"}
+      }
+    },
+    "$schema": {
+      "type": "string",
+      "minLength": 1
+    },
+    "format_version": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*)(?:\\.(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*))*)?(?:\\+[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?$",
+      "not": {
+        "pattern": "\\s"
+      }
+    },
+    "resolver_resources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "schema_id",
+          "catalog_path"
+        ],
+        "properties": {
+          "schema_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "catalog_path": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "unevaluatedProperties": false
+      }
+    },
+    "schemas": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "schema_id",
+          "document_type",
+          "format_version",
+          "catalog_path",
+          "status"
+        ],
+        "properties": {
+          "schema_id": {
+            "type": "string",
+            "description": "The $id URI of the schema document."
+          },
+          "document_type": {
+            "type": "string",
+            "enum": [
+              "behavioral-contract",
+              "evidence-record",
+              "verification-result",
+              "catalog-index",
+              "extension-registry"
+            ]
+          },
+          "format_version": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*)(?:\\.(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*))*)?(?:\\+[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?$",
+            "not": {
+              "pattern": "\\s"
+            }
+          },
+          "catalog_path": {
+            "type": "string",
+            "description": "Path relative to the catalog root, e.g. schemas/behavioral-contract/1.0/schema.json"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "current",
+              "supported",
+              "end-of-life-declared"
+            ],
+            "description": "current = actively published; supported = within 12-month window; end-of-life-declared = window expiry date set."
+          },
+          "end_of_life_date": {
+            "type": "string",
+            "format": "date",
+            "description": "ISO 8601 date. Required when status is end-of-life-declared."
+          }
+        },
+        "if": {
+          "properties": {
+            "status": {
+              "const": "end-of-life-declared"
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "end_of_life_date"
+          ]
+        }
+      }
+    }
+  }
+}

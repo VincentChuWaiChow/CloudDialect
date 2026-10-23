@@ -1,0 +1,22 @@
+{
+  "baseline": "prerequisite-models-baseline.json",
+  "baseline_existing_paths": 114,
+  "authorized_existing_changes": [
+    ".kiro/specs/contracts-evidence-foundation/design.md",
+    ".kiro/specs/contracts-evidence-foundation/implementation-plan.md",
+    ".kiro/specs/contracts-evidence-foundation/requirements.md",
+    ".kiro/specs/contracts-evidence-foundation/tasks.md",
+    "THIRD-PARTY-NOTICES.md",
+    "crates/clouddialect-contracts/Cargo.lock",
+    "crates/clouddialect-contracts/Cargo.toml",
+    "crates/clouddialect-contracts/src/errors/mod.rs",
+    "crates/clouddialect-contracts/src/lib.rs",
+    "crates/clouddialect-contracts/src/manifest/mod.rs",
+    "crates/clouddialect-contracts/src/schema/mod.rs",
+    "crates/clouddialect-contracts/src/validator/mod.rs",
+    "tests/test_contracts_scaffold.py"
+  ],
+  "unexpected_existing_changes": [],
+  "research_hashes_preserved": true,
+  "Spec2_gate_documents_preserved": true
+}

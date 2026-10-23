@@ -1,0 +1,21 @@
+{
+  "crates/clouddialect-contracts/src/lib.rs": "86e974a5c7d1764d0bab050330ed3507498b128bf882b99addf4d122cb77e73a",
+  "crates/clouddialect-contracts/src/errors/diagnostics.rs": "561f49278f8e57aa245e28fa48150a3524d4ab7662867300626289d871da750e",
+  "crates/clouddialect-contracts/src/errors/mod.rs": "5973fffdb0be340c03989343aa4ad483f9f1fc46c188c160ba6137e15f0fe2a1",
+  "crates/clouddialect-contracts/src/errors/phase.rs": "ba8cd5807ce2bae661d2acc13e861c2c493cefc1d7fb0340e9c5265a121416f2",
+  "crates/clouddialect-contracts/src/validator/source_documents.rs": "fad81def4d99236d493ddf6294ec3a5604abb63c8bb2e58e05923b570cb871b2",
+  "crates/clouddialect-contracts/src/validator/verification_types.rs": "221277e2182cbab2290d0e2fb506bd40500b62a68908312d0e17b34872251553",
+  "crates/clouddialect-contracts/src/validator/mod.rs": "50cd84ea5991daee415209ea730cc9d0aab9d90acb0be3f82abbbef6815e1fa0",
+  "crates/clouddialect-contracts/src/validator/references.rs": "7f15716a8651d106a8a4591c96007e79db2e80ab06336329463fca655df0552f",
+  "crates/clouddialect-contracts/src/validator/raw_objects.rs": "cd941b1a7d4f0c337a58a7d770107e6f83d4ebfc89bff779ff9a4dc72f6ad366",
+  "crates/clouddialect-contracts/src/schema/mod.rs": "58b8a3f917807acd515631ba55071e49d66cb8a2018c2aa71bbbb9c28916d91c",
+  "crates/clouddialect-contracts/src/manifest/mod.rs": "1583ecc6a04521aa117419eeb4baf7a5860656f879e8424e73963d927b8e0ad1",
+  "crates/clouddialect-contracts/tests/schema_harness.rs": "f84d5724c8eec04fa7949b2a6387966360e6bec86b02e3f51ea8df182364497e",
+  "crates/clouddialect-contracts/tests/reference_contracts.rs": "a8cc329bf1d8516c664cc5ca77ea65a14530bb1d747fb1f69ab3245e4e96eb87",
+  "crates/clouddialect-contracts/tests/conformance.rs": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+  "crates/clouddialect-contracts/tests/source_document_models.rs": "9dddbca65747c30099508a9f8badf1810aba4078cfd870666bc615ba069c5075",
+  "crates/clouddialect-contracts/tests/phase_results.rs": "7101fee950c523d29e5f796f63a7bb04e53d92912c9195375b0acd0c2fcd067d",
+  "crates/clouddialect-contracts/tests/verification_models.rs": "35169978bd4fb252d80609a72f3d20a2b300d072418164612ad65955118b204f",
+  "crates/clouddialect-contracts/tests/support/mod.rs": "16262e32603dd81e90ef8fcdf083e2b1d4379a65761f2e68d45fc2248f3fd75c",
+  "crates/clouddialect-contracts/Cargo.toml": "c37431de8284a34ada0c712b9c4ab11e7446cc439a43c2ee9172760a36b35eb6"
+}

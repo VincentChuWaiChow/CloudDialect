@@ -1,0 +1,18 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.04s
+     Running tests/manifest_validation.rs (/tmp/clouddialect-phase-target/debug/deps/manifest_validation-10996791aa971c86)
+
+running 12 tests
+test unsupported_operations_remain_accessible_and_need_no_toolchain ... ok
+test local_diagnostics_are_deterministic_contextual_and_escape_opaque_contract_keys ... ok
+test complete_toml_10_manifest_passes_without_acceptance_or_external_reference_claims ... ok
+test contract_references_are_exact_closed_shapes_with_nonempty_id_and_semver ... ok
+test malformed_utf8_toml_shapes_unknown_fields_and_duplicates_fail_without_input_leaks ... ok
+test capability_tables_are_required_closed_and_extensions_never_grant_authority ... ok
+test fidelity_is_closed_and_executable_operations_need_nonempty_toolchain ... ok
+test reverse_dns_pack_identifier_is_whole_string_ascii_and_dot_separated ... ok
+test extensions_preserve_toml_values_but_cannot_shadow_top_level_core_tables ... ok
+test capability_version_fields_actions_and_operation_references_are_checked_locally ... ok
+test source_and_toolchain_ranges_follow_cargo_comparator_syntax ... ok
+test all_version_fields_use_full_semver_syntax_without_conflating_spaces ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.53s

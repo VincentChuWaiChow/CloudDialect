@@ -1,0 +1,13 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.29s
+     Running tests/artifact_hash.rs (/tmp/clouddialect-phase-target/debug/deps/artifact_hash-4889f6eca778f809)
+
+running 6 tests
+test matching_candidate_bytes_do_not_validate_other_document_claims ... ok
+test all_declared_algorithms_match_independent_abc_vectors ... ok
+test empty_artifacts_are_hashed_not_treated_as_missing ... ok
+test any_candidate_byte_change_invalidates_the_recorded_hash ... ok
+test verification_does_not_mutate_the_document_or_candidate ... ok
+test malformed_values_and_unapproved_algorithm_spellings_fail_closed ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s

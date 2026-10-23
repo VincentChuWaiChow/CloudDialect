@@ -1,0 +1,14 @@
+{
+  "resource_subtrees_match": true,
+  "resource_assumption_definition_matches": true,
+  "whole_schema_bytes_equal": false,
+  "whole_schema_json_equal": false,
+  "unchanged_baseline_non_rc_difference_paths": [
+    "/properties/format_version/not",
+    "/properties/format_version/pattern",
+    "/properties/id/not",
+    "/properties/id/pattern",
+    "/properties/obligations/items/oneOf"
+  ],
+  "reason": "Baseline has prior engine-compatible regex/UUID and obligation-oneOf representation differences. Preserve unrelated sections; do not claim whole-schema byte equivalence. RC-1 subtrees match exactly as JSON values."
+}

@@ -1,0 +1,71 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.42s
+     Running tests/catalog_schemas.rs (/tmp/clouddialect-phase-target/debug/deps/catalog_schemas-64553a787a2cf47c)
+
+running 8 tests
+test empty_registry_seed_is_valid_but_not_identity_authentication ... FAILED
+test application_kinds_exclude_toml_manifests_and_private_records ... FAILED
+test end_of_life_status_requires_a_valid_date ... FAILED
+test index_requires_nonempty_application_list_and_explicit_resolver_resources ... FAILED
+test registry_entries_require_all_metadata_and_real_dates ... FAILED
+test registry_has_required_version_list_and_namespace_grammar ... FAILED
+test resolver_support_mappings_are_separate_exact_shapes ... FAILED
+test version_syntax_and_entry_metadata_do_not_prove_path_or_uri_admission ... FAILED
+
+failures:
+
+---- empty_registry_seed_is_valid_but_not_identity_authentication stdout ----
+
+thread 'empty_registry_seed_is_valid_but_not_identity_authentication' (134) panicked at tests/catalog_schemas.rs:10:5:
+required extension-registry schema is not delivered
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- application_kinds_exclude_toml_manifests_and_private_records stdout ----
+
+thread 'application_kinds_exclude_toml_manifests_and_private_records' (133) panicked at tests/catalog_schemas.rs:10:5:
+required catalog-index schema is not delivered
+
+---- end_of_life_status_requires_a_valid_date stdout ----
+
+thread 'end_of_life_status_requires_a_valid_date' (135) panicked at tests/catalog_schemas.rs:10:5:
+required catalog-index schema is not delivered
+
+---- index_requires_nonempty_application_list_and_explicit_resolver_resources stdout ----
+
+thread 'index_requires_nonempty_application_list_and_explicit_resolver_resources' (136) panicked at tests/catalog_schemas.rs:10:5:
+required catalog-index schema is not delivered
+
+---- registry_entries_require_all_metadata_and_real_dates stdout ----
+
+thread 'registry_entries_require_all_metadata_and_real_dates' (137) panicked at tests/catalog_schemas.rs:10:5:
+required extension-registry schema is not delivered
+
+---- registry_has_required_version_list_and_namespace_grammar stdout ----
+
+thread 'registry_has_required_version_list_and_namespace_grammar' (138) panicked at tests/catalog_schemas.rs:10:5:
+required extension-registry schema is not delivered
+
+---- resolver_support_mappings_are_separate_exact_shapes stdout ----
+
+thread 'resolver_support_mappings_are_separate_exact_shapes' (139) panicked at tests/catalog_schemas.rs:10:5:
+required catalog-index schema is not delivered
+
+---- version_syntax_and_entry_metadata_do_not_prove_path_or_uri_admission stdout ----
+
+thread 'version_syntax_and_entry_metadata_do_not_prove_path_or_uri_admission' (140) panicked at tests/catalog_schemas.rs:10:5:
+required catalog-index schema is not delivered
+
+
+failures:
+    application_kinds_exclude_toml_manifests_and_private_records
+    empty_registry_seed_is_valid_but_not_identity_authentication
+    end_of_life_status_requires_a_valid_date
+    index_requires_nonempty_application_list_and_explicit_resolver_resources
+    registry_entries_require_all_metadata_and_real_dates
+    registry_has_required_version_list_and_namespace_grammar
+    resolver_support_mappings_are_separate_exact_shapes
+    version_syntax_and_entry_metadata_do_not_prove_path_or_uri_admission
+
+test result: FAILED. 0 passed; 8 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--test catalog_schemas`

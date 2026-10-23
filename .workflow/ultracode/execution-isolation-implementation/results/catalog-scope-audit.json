@@ -1,0 +1,47 @@
+{
+  "baseline": "33fa3491ece31bd88fb3d54df283666d6d258679",
+  "branch": "feat/execution-isolation",
+  "changed_baseline_paths": [
+    ".kiro/specs/contracts-evidence-foundation/design.md",
+    ".kiro/specs/contracts-evidence-foundation/implementation-plan.md",
+    ".kiro/specs/contracts-evidence-foundation/requirements.md",
+    ".kiro/specs/contracts-evidence-foundation/tasks.md",
+    "crates/clouddialect-contracts/src/lib.rs",
+    "crates/clouddialect-contracts/src/schema/catalog.rs",
+    "crates/clouddialect-contracts/src/schema/mod.rs"
+  ],
+  "unexpected_changes": [],
+  "missing_baseline_paths": [],
+  "new_out_of_scope": [],
+  "research_preserved": true,
+  "dependency_rules_scripts_preserved": true,
+  "new_file_count": 55,
+  "scope": "Two approved catalog leaves plus one consolidated collision repair, documentation progress and run evidence. No runtime/codependency/rule/script changes.",
+  "tracked_diff_paths": [
+    ".kiro/specs/contracts-evidence-foundation/design.md",
+    ".kiro/specs/contracts-evidence-foundation/implementation-plan.md",
+    ".kiro/specs/contracts-evidence-foundation/requirements.md",
+    ".kiro/specs/contracts-evidence-foundation/tasks.md",
+    ".workflow/ultracode/execution-isolation-implementation/final-report.md",
+    ".workflow/ultracode/execution-isolation-implementation/state.json",
+    "crates/clouddialect-contracts/src/lib.rs",
+    "crates/clouddialect-contracts/src/schema/catalog.rs",
+    "crates/clouddialect-contracts/src/schema/embedded.rs",
+    "crates/clouddialect-contracts/src/schema/loader.rs",
+    "crates/clouddialect-contracts/src/schema/mod.rs",
+    "crates/clouddialect-contracts/src/schema/snapshot.rs",
+    "crates/clouddialect-contracts/tests/catalog_loading.rs",
+    "crates/clouddialect-contracts/tests/catalog_snapshot.rs"
+  ],
+  "unexpected_tracked_paths": [],
+  "source_hashes": {
+    "crates/clouddialect-contracts/src/lib.rs": "7d6ec9656e9fc738f797cc379bdc22515781272682d59eb04398857b504cd1d4",
+    "crates/clouddialect-contracts/src/schema/catalog.rs": "1f5b739f942a32cbd67a15164cd053c447fd6663905616c8d86b9ee06f8ccd21",
+    "crates/clouddialect-contracts/src/schema/embedded.rs": "71c8298ccbb5e9b9cefbcca195c3895fd34bbfdc669e398ff66a5153211e6409",
+    "crates/clouddialect-contracts/src/schema/loader.rs": "4ed72eb6225635a27c5b4eb46fee867f8707a754e14e2f291dd6bef1af557f27",
+    "crates/clouddialect-contracts/src/schema/mod.rs": "ca541a9f37bd6667595ddc64635cdf9f1a9835508b1d5fef4eeb2f518f2e9985",
+    "crates/clouddialect-contracts/src/schema/snapshot.rs": "427b5d4c7ff2bb554fa7b8eca50df4f002ca804cda295247e4203deaa97ac20d",
+    "crates/clouddialect-contracts/tests/catalog_loading.rs": "afe7a41de5b8aeacc6bb23942c27ca800c2b6d5c2404496b307a74a655b74c53",
+    "crates/clouddialect-contracts/tests/catalog_snapshot.rs": "6bc70f94c140771651897e800f04b99ce5f9902acefd5e82a674b0d7baf11363"
+  }
+}

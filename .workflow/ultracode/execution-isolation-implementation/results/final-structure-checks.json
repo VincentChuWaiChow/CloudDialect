@@ -1,0 +1,119 @@
+{
+  "run_at": "2026-10-22T07:41:20.676274+00:00",
+  "checks": [
+    {
+      "name": "baseline-preservation",
+      "status": "pass",
+      "evidence": {
+        "files": 96,
+        "changed": []
+      }
+    },
+    {
+      "name": "branch-and-baseline",
+      "status": "pass",
+      "evidence": {
+        "branch": "feat/execution-isolation",
+        "head": "3b9cb6bd0ee82dbef3b731a35ce68fc778c4906a",
+        "new_commits": 0
+      }
+    },
+    {
+      "name": "UD-1-isolation.md",
+      "status": "pass",
+      "evidence": ".kiro/specs/execution-isolation/decisions/UD-1-isolation.md"
+    },
+    {
+      "name": "UD-2-ipc.md",
+      "status": "pass",
+      "evidence": ".kiro/specs/execution-isolation/decisions/UD-2-ipc.md"
+    },
+    {
+      "name": "UD-3-credentials.md",
+      "status": "pass",
+      "evidence": ".kiro/specs/execution-isolation/decisions/UD-3-credentials.md"
+    },
+    {
+      "name": "UD-4-persistence.md",
+      "status": "pass",
+      "evidence": ".kiro/specs/execution-isolation/decisions/UD-4-persistence.md"
+    },
+    {
+      "name": "UD-5-budgets.md",
+      "status": "pass",
+      "evidence": ".kiro/specs/execution-isolation/decisions/UD-5-budgets.md"
+    },
+    {
+      "name": "BG-01-upstream.md",
+      "status": "pass",
+      "evidence": ".kiro/specs/execution-isolation/decisions/BG-01-upstream.md"
+    },
+    {
+      "name": "prerequisite-proposal",
+      "status": "pass",
+      "evidence": "Separate plan, no upstream amendments or implementation"
+    },
+    {
+      "name": "six-qualification-artifacts",
+      "status": "pass",
+      "evidence": [
+        "isolation-plan.md",
+        "ipc-cases.md",
+        "credential-cases.md",
+        "restore-cases.md",
+        "upstream-compatibility.md",
+        "budget-measurements.json"
+      ]
+    },
+    {
+      "name": "no-invented-budget",
+      "status": "pass",
+      "evidence": "No measured values/approved defaults"
+    },
+    {
+      "name": "new-file-whitespace",
+      "status": "pass",
+      "evidence": []
+    },
+    {
+      "name": "local-markdown-links",
+      "status": "pass",
+      "evidence": []
+    },
+    {
+      "name": "json-parse",
+      "status": "pass",
+      "evidence": [
+        ".kiro/specs/execution-isolation/qualification/budget-measurements.json",
+        ".workflow/ultracode/execution-isolation-implementation/check-results.json",
+        ".workflow/ultracode/execution-isolation-implementation/upstream-probe.json",
+        ".workflow/ultracode/execution-isolation-implementation/baseline.json",
+        ".workflow/ultracode/execution-isolation-implementation/state.json",
+        ".workflow/ultracode/execution-isolation-implementation/results/final-structure-checks.json"
+      ]
+    },
+    {
+      "name": "runtime-not-started",
+      "status": "pass",
+      "evidence": "No runtime crate or native/TDD success claims"
+    },
+    {
+      "name": "new-file-scope",
+      "status": "pass",
+      "evidence": {
+        "unexpected": [],
+        "owned_new_files": 42
+      }
+    },
+    {
+      "name": "no-staged-changes",
+      "status": "pass",
+      "evidence": "No unrelated files staged"
+    },
+    {
+      "name": "tracked-diff-check",
+      "status": "pass",
+      "evidence": "rtk git diff --check: exit 0"
+    }
+  ]
+}

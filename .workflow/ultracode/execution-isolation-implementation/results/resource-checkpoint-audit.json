@@ -1,0 +1,26 @@
+{
+  "branch": "feat/execution-isolation",
+  "checkpoints": [
+    {
+      "commit": "b70e9f9",
+      "reachable_from_current_head": true,
+      "ssh_signature_block_present": true
+    },
+    {
+      "commit": "79493fe",
+      "reachable_from_current_head": true,
+      "ssh_signature_block_present": true
+    },
+    {
+      "commit": "759f188",
+      "reachable_from_current_head": true,
+      "ssh_signature_block_present": true
+    },
+    {
+      "commit": "7f97567",
+      "reachable_from_current_head": true,
+      "ssh_signature_block_present": true
+    }
+  ],
+  "signer_identity": "UNVERIFIED; signature block is not independent signer verification"
+}

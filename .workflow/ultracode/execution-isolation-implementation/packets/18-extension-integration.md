@@ -1,0 +1,9 @@
+# Packet18 — final frozen resource/extension integration
+
+Explicit owner allocation18cumulative,75minutes from original resource start13:41:20UTC, one consolidated repair total (none consumed), zero recursion/followups. Final reserved reviewer; parent owns all writes and Git. No additional dispatches after18 without fresh approval.
+
+Within8minutes read-only review current EX-1 declarations across four existing DTOs/five schemas and integration with frozen RC-1. Sources: AGENTS.md; approved contract-reconciliation-decisions.md; extension-declaration-eval.md; current Spec1 req10.4/design/task12; actual source/schema/tests below. No writes, source/test execution, network, secrets, probes, commits/pushes, subagents/followups. Prefixshell commandsrtk; behavioral constraints are not separately verified isolation. Inherited model/effort unverified.
+
+Source: documents/{behavioral_contract,evidence,verification}.rs, schema/catalog.rs; all five catalog schemas; tests/required_extension_models.rs, required_extensions.rs, required_extension_catalogs.rs. Check explicit optional fields + RawFields conversion, omission/empty/typed data preservation, original-byte catalog typed decoding and duplicates, identical prefix array rules/newline handling, unchanged root openness, declaration-only validity and no registry-conferred recognition. Existing RC-1 model/schema must remain intact. All actual blocker/recognition implementation is deliberately separate future leaf2.6, not faked in declarations. No new registry DTO.
+
+Return required findings with exactpath/lines or bounded PASS, limitations and any necessary narrowly scoped regression. Existing non-EX design parity differences remain explicit; do not expand this review into unrelated rewrites. Parent runs actual full frozen regressions/coverage/scope/publication. No report writes.

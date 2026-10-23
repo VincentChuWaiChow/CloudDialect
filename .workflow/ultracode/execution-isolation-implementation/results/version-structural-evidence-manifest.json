@@ -1,0 +1,310 @@
+{
+  "created_at": "2026-10-22T15:16:12.940389+00:00",
+  "normalization": "Text presentation only: trailing whitespace/blank EOF; raw copies/hashes retained. Source/schema/vectors untouched. Large raw LLVM exports retained in /tmp.",
+  "files": [
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-red.txt",
+      "raw_path": "/tmp/clouddialect-version-red.txt",
+      "raw_sha256": "9780e56616de2122cb831fc94e087c6382ed2b27c2576310bec4845a96ad8419",
+      "presentation_sha256": "9780e56616de2122cb831fc94e087c6382ed2b27c2576310bec4845a96ad8419"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-green.txt",
+      "raw_path": "/tmp/clouddialect-version-green.txt",
+      "raw_sha256": "1dbfdf69c6403275dfa51b812fa3ded1727e2aa7d60931b7eefe784166630b16",
+      "presentation_sha256": "34ca82caab5427339117e663429bfab0338fcafd195c2cf9b4aa02eba52a958e"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/structural-red.txt",
+      "raw_path": "/tmp/clouddialect-structural-red.txt",
+      "raw_sha256": "ffdec628befbb3f3ec186ca0b6085cdca5ab0d7be34bd350180b40355039c57e",
+      "presentation_sha256": "ffdec628befbb3f3ec186ca0b6085cdca5ab0d7be34bd350180b40355039c57e"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/structural-first-run.txt",
+      "raw_path": "/tmp/clouddialect-structural-first-run.txt",
+      "raw_sha256": "6d6000a441735297ff57baf76fb8671a50e663256076acc9fc4b4127ca8fecf7",
+      "presentation_sha256": "6d6000a441735297ff57baf76fb8671a50e663256076acc9fc4b4127ca8fecf7"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/structural-green.txt",
+      "raw_path": "/tmp/clouddialect-structural-green.txt",
+      "raw_sha256": "f00c85cfb88048e949704ed7ae9768310cc0e7638412765ccefa22284f338eff",
+      "presentation_sha256": "4b7f19964d12a0d36693d364e5a9f54bae4d7ffb6ef4ee4d5593579fd3a5d5ff"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/structural-wildcard-red.txt",
+      "raw_path": "/tmp/clouddialect-structural-wildcard-red.txt",
+      "raw_sha256": "c0586e7653e1723f60132cc6ba40ac94c46ce787c2222e090473c8e40b3009c2",
+      "presentation_sha256": "c0586e7653e1723f60132cc6ba40ac94c46ce787c2222e090473c8e40b3009c2"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/structural-wildcard-green.txt",
+      "raw_path": "/tmp/clouddialect-structural-wildcard-green.txt",
+      "raw_sha256": "cc512530bd5a12be611fefa8dd84102a30297e063da4e0a534efdbf9f891d83d",
+      "presentation_sha256": "5f66a059b83077efdc8e8fe8fdff54bb092a40df9bfbb56b271a5b6c7e40b660"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/structural-scope-red.txt",
+      "raw_path": "/tmp/clouddialect-structural-scope-red.txt",
+      "raw_sha256": "21553c417ea132a47992116e2dc78d8f1b6f098e186e79ee4cb45714296055ed",
+      "presentation_sha256": "21553c417ea132a47992116e2dc78d8f1b6f098e186e79ee4cb45714296055ed"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/structural-scope-green.txt",
+      "raw_path": "/tmp/clouddialect-structural-scope-green.txt",
+      "raw_sha256": "98ef6465a3d31f8780b66599a7aa5c8c6f02c661d8c1aaa99b161681ae8cf0a4",
+      "presentation_sha256": "a36ec5a2c921140e6882fb4c4f96ff15d3627c75d22816522f68a6317867f568"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/structural-review-repair-red.txt",
+      "raw_path": "/tmp/clouddialect-structural-review-repair-red.txt",
+      "raw_sha256": "35aec12077b8f864ab66cc8d8b8498a162d050157e60d500debb085840cb8cb4",
+      "presentation_sha256": "35aec12077b8f864ab66cc8d8b8498a162d050157e60d500debb085840cb8cb4"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/structural-review-repair-combined-red.txt",
+      "raw_path": "/tmp/clouddialect-structural-review-repair-combined-red.txt",
+      "raw_sha256": "76c255f5c8718f0838db14c48686f8a9d008a1ea3ae7d8e666cf77ff5f6925c7",
+      "presentation_sha256": "76c255f5c8718f0838db14c48686f8a9d008a1ea3ae7d8e666cf77ff5f6925c7"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/structural-review-repair-green.txt",
+      "raw_path": "/tmp/clouddialect-structural-review-repair-green.txt",
+      "raw_sha256": "3bb6bba625ed6f382cdb0a09a374fa4c727b3bda76ff7aafb3eb08397f4fbacd",
+      "presentation_sha256": "796ac4b76bcae30fde5e57f975be63c30b612e86f8567f83e75bba7d5f904698"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/structural-check.txt",
+      "raw_path": "/tmp/clouddialect-structural-check.txt",
+      "raw_sha256": "343b700d900a9b8b8e0653cf3286f642a6440b569b7eaff06f7731050112c746",
+      "presentation_sha256": "343b700d900a9b8b8e0653cf3286f642a6440b569b7eaff06f7731050112c746"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/structural-clippy.txt",
+      "raw_path": "/tmp/clouddialect-structural-clippy.txt",
+      "raw_sha256": "e3642fd614c14b0770ed3b323fe22d6f32346c1af38a15e01f6c4601621acd13",
+      "presentation_sha256": "e3642fd614c14b0770ed3b323fe22d6f32346c1af38a15e01f6c4601621acd13"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/structural-coverage-tests.txt",
+      "raw_path": "/tmp/clouddialect-structural-coverage-tests.txt",
+      "raw_sha256": "54aa8deeab668c64721b9f358bc04b59b1270c73e4e469898578ab7fa64d2f07",
+      "presentation_sha256": "54aa8deeab668c64721b9f358bc04b59b1270c73e4e469898578ab7fa64d2f07"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/structural-fmt.txt",
+      "raw_path": "/tmp/clouddialect-structural-fmt.txt",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "presentation_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/structural-tests.txt",
+      "raw_path": "/tmp/clouddialect-structural-tests.txt",
+      "raw_sha256": "f82cf9f6246f49a38e139153d93b8d1bbf0090e0a94b532f244e5abc6ed484aa",
+      "presentation_sha256": "98dab16b5276dad9eb4fa87fe399b700c468870aeacd06f440318cc68085e027"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-check.txt",
+      "raw_path": "/tmp/clouddialect-version-check.txt",
+      "raw_sha256": "5b3f588d3f1a749dad3c1ebce2c5cf2d928e3c8287a37f05ebc9a063005c4b93",
+      "presentation_sha256": "dbf420a5ae495147e7f93ef9648c5c0fb0f850f20ec593db165aa35997194a71"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-clippy.txt",
+      "raw_path": "/tmp/clouddialect-version-clippy.txt",
+      "raw_sha256": "a2fd46f86693b1c95b11497da62bcbb6add11427bc0a564296ccc222beb312a7",
+      "presentation_sha256": "b1bbaa964a350981f4602da34816964ba507ada00373c0e9cd3bec39a074d7dc"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-coverage-tests.txt",
+      "raw_path": "/tmp/clouddialect-version-coverage-tests.txt",
+      "raw_sha256": "e13cbb0979ce8d1d2b174b5f357f71b85eaed277372534ec7792771242d9f08c",
+      "presentation_sha256": "e13cbb0979ce8d1d2b174b5f357f71b85eaed277372534ec7792771242d9f08c"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-fmt.txt",
+      "raw_path": "/tmp/clouddialect-version-fmt.txt",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "presentation_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-final-check.txt",
+      "raw_path": "/tmp/clouddialect-version-structural-final-check.txt",
+      "raw_sha256": "59a17bdaf0078cd5d62a4539f31269a9cd9e316afef9699f5d7811db0a4216cb",
+      "presentation_sha256": "59a17bdaf0078cd5d62a4539f31269a9cd9e316afef9699f5d7811db0a4216cb"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-final-clippy.txt",
+      "raw_path": "/tmp/clouddialect-version-structural-final-clippy.txt",
+      "raw_sha256": "ac0cb7575364995f7a2f09d7daddb464d456790fdd834c140bdf15b88f67c1c0",
+      "presentation_sha256": "ac0cb7575364995f7a2f09d7daddb464d456790fdd834c140bdf15b88f67c1c0"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-final-coverage-tests.txt",
+      "raw_path": "/tmp/clouddialect-version-structural-final-coverage-tests.txt",
+      "raw_sha256": "374daa060a74b399a056d66a1d08f56eba89f33469e996293b1854e8fc6550e5",
+      "presentation_sha256": "374daa060a74b399a056d66a1d08f56eba89f33469e996293b1854e8fc6550e5"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-final-diff.txt",
+      "raw_path": "/tmp/clouddialect-version-structural-final-diff.txt",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "presentation_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-final-fmt.txt",
+      "raw_path": "/tmp/clouddialect-version-structural-final-fmt.txt",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "presentation_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-final-loader-line-coverage.txt",
+      "raw_path": "/tmp/clouddialect-version-structural-final-loader-line-coverage.txt",
+      "raw_sha256": "b709e9cb1b2c5dbe0f737e2782357187beceb98dfc562eeaea6a4d6aa4fdf369",
+      "presentation_sha256": "f414a8ac86057d2635c547684ddddf37a9048fcced557aa80158c20567acc76f"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-final-negative-doctests.txt",
+      "raw_path": "/tmp/clouddialect-version-structural-final-negative-doctests.txt",
+      "raw_sha256": "440bd9eaee139812e0bb1dd6f04baab6312fe8c7525a9c951e064889cdd3d367",
+      "presentation_sha256": "503664c339774745261fb57ee1d50452c5f74dd3157b07f6a9b89214b69f52dd"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-final-p0-content.txt",
+      "raw_path": "/tmp/clouddialect-version-structural-final-p0-content.txt",
+      "raw_sha256": "71c50e3f4ca8a45869c5b6de930ea641fc23622f2e25c023e7e339c8f7edd623",
+      "presentation_sha256": "71c50e3f4ca8a45869c5b6de930ea641fc23622f2e25c023e7e339c8f7edd623"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-final-python.txt",
+      "raw_path": "/tmp/clouddialect-version-structural-final-python.txt",
+      "raw_sha256": "363e5c34b01f7b7644353d770e2d6af468daeba2d979d6d2341e9c299214d927",
+      "presentation_sha256": "363e5c34b01f7b7644353d770e2d6af468daeba2d979d6d2341e9c299214d927"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-final-tests.txt",
+      "raw_path": "/tmp/clouddialect-version-structural-final-tests.txt",
+      "raw_sha256": "f85f13a5f8ec1a06d95ed2923c417c09ee117329836bc0330209326f894dbe2e",
+      "presentation_sha256": "6d9a9b8203397cbb09bf4afd4ee0d91d5f1af2f9dc2abdbfaf24cbbbf83026a3"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-verified-check.txt",
+      "raw_path": "/tmp/clouddialect-version-structural-verified-check.txt",
+      "raw_sha256": "51b53a983af675625443a8d70b561caac00f99a68304e70aeadada5a8b0386a5",
+      "presentation_sha256": "51b53a983af675625443a8d70b561caac00f99a68304e70aeadada5a8b0386a5"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-verified-clippy.txt",
+      "raw_path": "/tmp/clouddialect-version-structural-verified-clippy.txt",
+      "raw_sha256": "55881c545ab6b5a930262734842851f4c88f522728364ec5b3c3950e67222efd",
+      "presentation_sha256": "55881c545ab6b5a930262734842851f4c88f522728364ec5b3c3950e67222efd"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-verified-coverage-tests.txt",
+      "raw_path": "/tmp/clouddialect-version-structural-verified-coverage-tests.txt",
+      "raw_sha256": "00bf70933f0dd00138a47e2c5f2dc102d667e389f5b2749389998a9038cf86a2",
+      "presentation_sha256": "00bf70933f0dd00138a47e2c5f2dc102d667e389f5b2749389998a9038cf86a2"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-verified-diff.txt",
+      "raw_path": "/tmp/clouddialect-version-structural-verified-diff.txt",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "presentation_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-verified-fmt.txt",
+      "raw_path": "/tmp/clouddialect-version-structural-verified-fmt.txt",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "presentation_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-verified-loader-line-coverage.txt",
+      "raw_path": "/tmp/clouddialect-version-structural-verified-loader-line-coverage.txt",
+      "raw_sha256": "3ea394436cef70c97c970e38ec87265a6c611e9b37b4175012f1de6f177a8277",
+      "presentation_sha256": "0624ea81d90805ff2b039cf7f7b644d059ef100998e30fb307fe8201baf440d3"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-verified-negative-doctests.txt",
+      "raw_path": "/tmp/clouddialect-version-structural-verified-negative-doctests.txt",
+      "raw_sha256": "51715dc97d29412a9da72899070045f95f02b3a3699f5532325a41176727d27d",
+      "presentation_sha256": "394665764d5e9070fe481dd0035586df76c2bb1e968a39a9afd92490c0f8909a"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-verified-p0-content.txt",
+      "raw_path": "/tmp/clouddialect-version-structural-verified-p0-content.txt",
+      "raw_sha256": "c7d77208a948b80f55e450a034703f8cad99686960e19816ac0762363a46c724",
+      "presentation_sha256": "c7d77208a948b80f55e450a034703f8cad99686960e19816ac0762363a46c724"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-verified-python.txt",
+      "raw_path": "/tmp/clouddialect-version-structural-verified-python.txt",
+      "raw_sha256": "287f3a250ebc663c4e05486fdd29065b11aad2ca98ff1b8fd52b973c08001258",
+      "presentation_sha256": "287f3a250ebc663c4e05486fdd29065b11aad2ca98ff1b8fd52b973c08001258"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-verified-tests.txt",
+      "raw_path": "/tmp/clouddialect-version-structural-verified-tests.txt",
+      "raw_sha256": "31187e0f3920d3caa197e29b05313350c21036fb26758ba357badb183f7c2358",
+      "presentation_sha256": "c5066216c0cdf23cc863c6cbbc6fd907cecf3b09236bcf57c6c4d0cf994b3bd8"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-tests.txt",
+      "raw_path": "/tmp/clouddialect-version-tests.txt",
+      "raw_sha256": "ff79e6b7a6750fded2ae70180a20a5d72a7e2a3da174fa6278918f79d37c7cc9",
+      "presentation_sha256": "6883d4458586000b09e055802f7f965ef15ac3d9e1f6fea727cecb746b66cdc3"
+    },
+    {
+      "excluded_heavy_export": ".workflow/ultracode/execution-isolation-implementation/results/version-coverage.json",
+      "raw_path": "/tmp/clouddialect-version-coverage.json",
+      "raw_sha256": "676d7de74512cc8b43898f8f9f8c21288f669a62feb20ed63d23d29a94c53c81",
+      "bytes": 327266
+    },
+    {
+      "excluded_heavy_export": ".workflow/ultracode/execution-isolation-implementation/results/structural-coverage.json",
+      "raw_path": "/tmp/clouddialect-structural-coverage.json",
+      "raw_sha256": "700f8799a58b68093f087fd0e143b29016e872e823b6706d8e8c73ae8fe74047",
+      "bytes": 329124
+    },
+    {
+      "excluded_heavy_export": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-final-coverage.json",
+      "raw_path": "/tmp/clouddialect-version-structural-final-coverage.json",
+      "raw_sha256": "461cfc4e3b12aea89a663a7126b98c5243bdcf6398808563d5b35ef2979049cc",
+      "bytes": 329125
+    },
+    {
+      "excluded_heavy_export": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-verified-coverage.json",
+      "raw_path": "/tmp/clouddialect-version-structural-verified-coverage.json",
+      "raw_sha256": "9bff6d49f5b4878e3ddc24147600ab8afef0d0b87ab6ffc890eee72d396682c4",
+      "bytes": 329173
+    },
+    {
+      "raw_path": "/tmp/clouddialect-version-clippy.txt",
+      "raw_sha256": "a2fd46f86693b1c95b11497da62bcbb6add11427bc0a564296ccc222beb312a7",
+      "scope": "Pre-GREEN lint correction, not intended behavioral RED; final checks separately pass"
+    },
+    {
+      "raw_path": "/tmp/clouddialect-structural-clippy.txt",
+      "raw_sha256": "e3642fd614c14b0770ed3b323fe22d6f32346c1af38a15e01f6c4601621acd13",
+      "scope": "Pre-GREEN lint correction, not intended behavioral RED; final checks separately pass"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-closeout-python.txt",
+      "raw_path": "/tmp/clouddialect-version-structural-closeout-python.txt",
+      "raw_sha256": "0b7982bb92293249375ba05cf4beac0619ce3bd646a87d937bc49a9a23281eb5",
+      "presentation_sha256": "0b7982bb92293249375ba05cf4beac0619ce3bd646a87d937bc49a9a23281eb5"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-closeout-p0-content.txt",
+      "raw_path": "/tmp/clouddialect-version-structural-closeout-p0-content.txt",
+      "raw_sha256": "741404f21e783f36def9f5c8b4317006f56e189158819aec37669d64e6a7e828",
+      "presentation_sha256": "741404f21e783f36def9f5c8b4317006f56e189158819aec37669d64e6a7e828"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-closeout-diff.txt",
+      "raw_path": "/tmp/clouddialect-version-structural-closeout-diff.txt",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "presentation_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.42s
+     Running tests/phase_results.rs (/tmp/clouddialect-phase-target/debug/deps/phase_results-2ae7636ee7203482)
+
+running 8 tests
+test error_preserves_unknown_context_and_zero_offset ... ok
+test category_labels_match_the_closed_error_taxonomy ... ok
+test malformed_diagnostics_and_missing_phase_data_are_not_silently_defaulted ... ok
+test semantic_outcomes_do_not_gain_warnings_or_acceptance ... ok
+test semantic_result_remains_distinct_from_structural_result ... ok
+test structural_outcomes_use_only_the_three_phase_labels ... ok
+test structural_result_has_only_its_canonical_diagnostic_fields ... ok
+test warning_keeps_the_verbatim_field_name_and_description ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

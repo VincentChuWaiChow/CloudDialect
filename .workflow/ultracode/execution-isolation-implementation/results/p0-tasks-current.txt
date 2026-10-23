@@ -1,0 +1,2 @@
+ERROR: No tasks found in /home/raishin/projects/CloudDialect/.kiro/specs/contracts-evidence-foundation/tasks.md
+Expected format: '- [ ] N.N Task title'

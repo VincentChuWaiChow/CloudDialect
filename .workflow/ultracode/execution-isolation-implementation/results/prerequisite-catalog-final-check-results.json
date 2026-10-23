@@ -1,0 +1,44 @@
+[
+  {
+    "name": "all-tests",
+    "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-phase-target cargo test --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen",
+    "exit_code": 0,
+    "status": "PASS",
+    "evidence": "results/prerequisite-catalog-final-all-tests.txt"
+  },
+  {
+    "name": "check",
+    "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-phase-target cargo check --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen --all-targets",
+    "exit_code": 0,
+    "status": "PASS",
+    "evidence": "results/prerequisite-catalog-final-check.txt"
+  },
+  {
+    "name": "fmt",
+    "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-phase-target cargo fmt --manifest-path crates/clouddialect-contracts/Cargo.toml --check",
+    "exit_code": 0,
+    "status": "PASS",
+    "evidence": "results/prerequisite-catalog-final-fmt.txt"
+  },
+  {
+    "name": "clippy",
+    "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-phase-target cargo clippy --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen --all-targets -- -D warnings",
+    "exit_code": 0,
+    "status": "PASS",
+    "evidence": "results/prerequisite-catalog-final-clippy.txt"
+  },
+  {
+    "name": "scaffold",
+    "command": "rtk proxy python3 -m unittest discover -s tests -p test_contracts_scaffold.py -v",
+    "exit_code": 0,
+    "status": "PASS",
+    "evidence": "results/prerequisite-catalog-final-scaffold.txt"
+  },
+  {
+    "name": "diff",
+    "command": "rtk proxy git diff --check",
+    "exit_code": 0,
+    "status": "PASS",
+    "evidence": "results/prerequisite-catalog-final-diff.txt"
+  }
+]

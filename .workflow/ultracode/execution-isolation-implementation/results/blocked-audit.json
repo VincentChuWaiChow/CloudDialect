@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-10-22T07:43:20.284845+00:00",
+  "previous_turn": "no progress, not a verified wait",
+  "current_turn": "no progress; same blocker revalidated",
+  "consecutive_goal_turns_with_same_blocker": 3,
+  "branch": "feat/execution-isolation",
+  "open_gates": [
+    "UD-1-isolation.md",
+    "UD-2-ipc.md",
+    "UD-3-credentials.md",
+    "UD-4-persistence.md",
+    "UD-5-budgets.md",
+    "BG-01-upstream.md"
+  ],
+  "upstream_nonstub_modules": [],
+  "approved_limits": null,
+  "environment_approval": null,
+  "latest_authorized_scope": {
+    "granted": true,
+    "scope": "Recommendations, separate Spec 1 prerequisite plan, qualification drafts only"
+  },
+  "pending_input": "Approval of P0 Spec 1 documentation reconciliation; mechanism/upstream/native qualification gates remain separate.",
+  "safe_authorized_work_remaining": false,
+  "why": "Authorized recommendation, prerequisite-plan and qualification-draft tranche delivered. No code/probes or upstream amendments authorized; no new owner approvals or delivered APIs."
+}

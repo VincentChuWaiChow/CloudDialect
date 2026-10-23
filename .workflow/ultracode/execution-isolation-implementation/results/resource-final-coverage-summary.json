@@ -1,0 +1,232 @@
+{
+  "production_files": [
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/documents/raw_objects.rs",
+      "summary": {
+        "lines": {
+          "count": 39,
+          "covered": 39,
+          "percent": 100
+        },
+        "functions": {
+          "count": 7,
+          "covered": 7,
+          "percent": 100
+        },
+        "instantiations": {
+          "count": 80,
+          "covered": 59,
+          "percent": 73.75
+        },
+        "regions": {
+          "count": 61,
+          "covered": 58,
+          "notcovered": 3,
+          "percent": 95.08196721311475
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    },
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/catalog.rs",
+      "summary": {
+        "lines": {
+          "count": 185,
+          "covered": 179,
+          "percent": 96.75675675675676
+        },
+        "functions": {
+          "count": 17,
+          "covered": 14,
+          "percent": 82.35294117647058
+        },
+        "instantiations": {
+          "count": 34,
+          "covered": 22,
+          "percent": 64.70588235294117
+        },
+        "regions": {
+          "count": 245,
+          "covered": 234,
+          "notcovered": 11,
+          "percent": 95.51020408163265
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    },
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/embedded.rs",
+      "summary": {
+        "lines": {
+          "count": 36,
+          "covered": 35,
+          "percent": 97.22222222222221
+        },
+        "functions": {
+          "count": 8,
+          "covered": 7,
+          "percent": 87.5
+        },
+        "instantiations": {
+          "count": 16,
+          "covered": 10,
+          "percent": 62.5
+        },
+        "regions": {
+          "count": 65,
+          "covered": 62,
+          "notcovered": 3,
+          "percent": 95.38461538461539
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    },
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/loader.rs",
+      "summary": {
+        "lines": {
+          "count": 30,
+          "covered": 30,
+          "percent": 100
+        },
+        "functions": {
+          "count": 5,
+          "covered": 5,
+          "percent": 100
+        },
+        "instantiations": {
+          "count": 8,
+          "covered": 8,
+          "percent": 100
+        },
+        "regions": {
+          "count": 48,
+          "covered": 47,
+          "notcovered": 1,
+          "percent": 97.91666666666666
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    },
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/snapshot.rs",
+      "summary": {
+        "lines": {
+          "count": 57,
+          "covered": 48,
+          "percent": 84.21052631578947
+        },
+        "functions": {
+          "count": 8,
+          "covered": 7,
+          "percent": 87.5
+        },
+        "instantiations": {
+          "count": 16,
+          "covered": 12,
+          "percent": 75
+        },
+        "regions": {
+          "count": 78,
+          "covered": 69,
+          "notcovered": 9,
+          "percent": 88.46153846153845
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    }
+  ],
+  "production_totals": {
+    "lines": {
+      "count": 347,
+      "covered": 331,
+      "percent": 95.38904899135447
+    },
+    "functions": {
+      "count": 45,
+      "covered": 40,
+      "percent": 88.88888888888889
+    },
+    "regions": {
+      "count": 497,
+      "covered": 470,
+      "percent": 94.56740442655935
+    }
+  },
+  "objects": [
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/behavioral_schema-7ae9252b3219faf9",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/catalog_index-ad856dede90249de",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/catalog_loading-4100cf06e5565b33",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/catalog_schemas-0d6e22f7e147aaf8",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/catalog_snapshot-ad64e43f9c3d39f0",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/clouddialect_contracts-6605992efdf07329",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/conformance-8578d0c356816383",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/evidence_schema-f68f70413b3ae17c",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/manifest_types-c2a7814f60309259",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/phase_results-68e789a47189adcf",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/public_api_compatibility-671c3c907113d0a8",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/reference_contracts-9b5505e6dac5d91b",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/schema_harness-902096b2a524bc0e",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/source_document_models-b71b80c49c26b615",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/verification_models-8dde92cbaf7dc767",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/verification_schema-e0c61a540e1e3a83"
+  ],
+  "profiles_directory": "/tmp/clouddialect-domain-profiles-zx1j37l3",
+  "threshold": 80,
+  "scope": "Raw src-file summary includes inline unit tests; use resource-final-production-coverage.json for corrected production LINE result."
+}

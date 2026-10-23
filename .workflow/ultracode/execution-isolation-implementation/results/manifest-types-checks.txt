@@ -1,0 +1,6 @@
+Scoped format check
+rustfmt_exit=0
+diff_check_exit=0
+bef4faeedc7f282dbed57674e57e1582516ae8121b048037e25a4b96dc815ae2  crates/clouddialect-contracts/src/manifest/types.rs
+29b32a3851e634075b39db40df6242959fa45a490d30bf9bf727cf5469216ad4  crates/clouddialect-contracts/src/manifest/mod.rs
+cbb5d34e204e1ac9fbc7168bde0cef0c0474e7105623097364d3ed04c8f267cf  crates/clouddialect-contracts/tests/manifest_types.rs

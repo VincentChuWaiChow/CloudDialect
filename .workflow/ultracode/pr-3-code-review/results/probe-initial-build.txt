@@ -1,0 +1,15 @@
+error[E0433]: cannot find type `CatalogIndex` in this scope
+  --> /tmp/clouddialect-pr3-review-probes.rs:28:15
+   |
+28 |  let admitted=CatalogIndex::from_parts(&index,&material).unwrap();
+   |               ^^^^^^^^^^^^ use of undeclared type `CatalogIndex`
+
+error[E0433]: cannot find type `CatalogIndex` in this scope
+  --> /tmp/clouddialect-pr3-review-probes.rs:31:13
+   |
+31 |  let result=CatalogIndex::from_parts(&encoded,&material);
+   |             ^^^^^^^^^^^^ use of undeclared type `CatalogIndex`
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0433`.

@@ -1,0 +1,151 @@
+{
+  "production_lines": {
+    "count": 1035,
+    "covered": 997,
+    "percent": 96.32850241545894
+  },
+  "excluded_inline_test_lines": {
+    "40": 1,
+    "41": 1,
+    "42": 1,
+    "43": 1,
+    "44": 1,
+    "45": 1,
+    "46": 1,
+    "47": 1,
+    "48": 1,
+    "50": 1,
+    "53": 1,
+    "54": 1,
+    "55": 1,
+    "56": 1,
+    "57": 1,
+    "58": 1,
+    "59": 1
+  },
+  "line_view_command": [
+    "rtk",
+    "proxy",
+    "/tmp/clouddialect-phase-llvm-tools/llvm-cov",
+    "export",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/artifact_hash-d2119d201a4eee87",
+    "-object",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/behavioral_schema-7ae9252b3219faf9",
+    "-object",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/catalog_index-ad856dede90249de",
+    "-object",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/catalog_loading-4100cf06e5565b33",
+    "-object",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/catalog_schemas-0d6e22f7e147aaf8",
+    "-object",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/catalog_snapshot-ad64e43f9c3d39f0",
+    "-object",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/clouddialect_contracts-6605992efdf07329",
+    "-object",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/conformance-8578d0c356816383",
+    "-object",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/evidence_schema-f68f70413b3ae17c",
+    "-object",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/extension_validation-7c20bbf46152d229",
+    "-object",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/mandatory_extension_blockers-f674770caa79ae41",
+    "-object",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/manifest_api-75530174de386632",
+    "-object",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/manifest_types-c2a7814f60309259",
+    "-object",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/manifest_validation-024fad37efe96a42",
+    "-object",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/phase_results-68e789a47189adcf",
+    "-object",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/public_api_compatibility-671c3c907113d0a8",
+    "-object",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/reference_contracts-9b5505e6dac5d91b",
+    "-object",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/required_extension_catalogs-3feabe3b632d82bc",
+    "-object",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/required_extension_models-e25419ef3b7e7013",
+    "-object",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/required_extensions-566f5079071feac5",
+    "-object",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/schema_harness-902096b2a524bc0e",
+    "-object",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/source_document_models-b71b80c49c26b615",
+    "-object",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/structural_validation-fa2fa01b8566d94b",
+    "-object",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/verification_models-8dde92cbaf7dc767",
+    "-object",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/verification_schema-e0c61a540e1e3a83",
+    "-object",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/version_compatibility-b5fd35edad16ebcd",
+    "-instr-profile=/tmp/clouddialect-domain-profiles-kb8va1p_/merged.profdata",
+    "-format=lcov",
+    "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/loader.rs"
+  ],
+  "profiles": "/tmp/clouddialect-domain-profiles-kb8va1p_",
+  "scope": "Actual registered production src paths; excludes test-copy aliases/dependencies/unmapped DTOs and all source-local test DA lines from fresh exact LLVM LCOV export. Private mandatory foundation remains test-included, not public enforcement. No branch/full-spec/native coverage claim.",
+  "raw_lcov_sha256": "f7f4e7d828008b3bba51453598228ac8d6bc9d0151b71c152cb691da2091f2cb",
+  "raw_production_file_lines": {
+    "documents/raw_objects.rs": {
+      "count": 39,
+      "covered": 39,
+      "percent": 100
+    },
+    "manifest/mod.rs": {
+      "count": 3,
+      "covered": 3,
+      "percent": 100
+    },
+    "manifest/validator.rs": {
+      "count": 235,
+      "covered": 234,
+      "percent": 99.57446808510639
+    },
+    "schema/catalog.rs": {
+      "count": 185,
+      "covered": 180,
+      "percent": 97.2972972972973
+    },
+    "schema/embedded.rs": {
+      "count": 36,
+      "covered": 35,
+      "percent": 97.22222222222221
+    },
+    "schema/loader.rs": {
+      "count": 30,
+      "covered": 30,
+      "percent": 100
+    },
+    "schema/snapshot.rs": {
+      "count": 60,
+      "covered": 51,
+      "percent": 85
+    },
+    "validator/artifact_hash.rs": {
+      "count": 18,
+      "covered": 18,
+      "percent": 100
+    },
+    "validator/extensions.rs": {
+      "count": 38,
+      "covered": 38,
+      "percent": 100
+    },
+    "validator/mod.rs": {
+      "count": 7,
+      "covered": 7,
+      "percent": 100
+    },
+    "validator/structural.rs": {
+      "count": 357,
+      "covered": 335,
+      "percent": 93.8375350140056
+    },
+    "validator/version.rs": {
+      "count": 44,
+      "covered": 44,
+      "percent": 100
+    }
+  }
+}

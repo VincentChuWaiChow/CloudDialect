@@ -1,0 +1,39 @@
+{
+  "checked_at": "2026-10-22T11:04:05.367374+00:00",
+  "status": "pass for source scope/API invariants; coverage remains UNVERIFIED",
+  "branch": "feat/execution-isolation",
+  "head": "3b9cb6bd0ee82dbef3b731a35ce68fc778c4906a",
+  "baseline_count": 111,
+  "changed_baseline_files": [
+    "crates/clouddialect-contracts/src/errors/mod.rs",
+    "crates/clouddialect-contracts/src/lib.rs"
+  ],
+  "unowned_baseline_files_preserved": 109,
+  "unexpected_changes": [],
+  "unexpected_new_paths": [],
+  "owned_files_sha256": {
+    "crates/clouddialect-contracts/src/errors/diagnostics.rs": "561f49278f8e57aa245e28fa48150a3524d4ab7662867300626289d871da750e",
+    "crates/clouddialect-contracts/src/errors/mod.rs": "cee5692c71f952aad79659c0e5e7140c8fc34856a65e054e288c1fecaedd8b98",
+    "crates/clouddialect-contracts/src/errors/phase.rs": "ba8cd5807ce2bae661d2acc13e861c2c493cefc1d7fb0340e9c5265a121416f2",
+    "crates/clouddialect-contracts/src/lib.rs": "81366b7aa6106094b2a5b56d534395cfcc3530ec6cc746068dd6ed059c7fd59c",
+    "crates/clouddialect-contracts/tests/phase_results.rs": "7101fee950c523d29e5f796f63a7bb04e53d92912c9195375b0acd0c2fcd067d"
+  },
+  "all_spec_documents_and_decision_drafts_unchanged_this_tranche": true,
+  "manifests_locks_licenses_research_unchanged": true,
+  "task_checkboxes_unchanged": true,
+  "all_six_gates_open": true,
+  "no_execution_crate": true,
+  "no_behavioral_result_placeholder": true,
+  "no_staged_changes": true,
+  "no_commits": true,
+  "red_missing_api_after_successful_dependency_compile": true,
+  "green_same_target_eight_tests": true,
+  "negative_doctests_fail_for_E0277_both_directions": true,
+  "json_files_parsed": 21,
+  "runtime_qualification_not_run": true,
+  "review": "PASS independent read-only unit 1.2 source/artifact inspection; not independently executed tests",
+  "coverage": "UNVERIFIED: no instrumented production mappings; no fake percentage",
+  "checkpoint_commits": "not authorized, not created",
+  "final_handoff_links_and_state_checked": true,
+  "source_hashes_still_match_independent_review_snapshot": true
+}

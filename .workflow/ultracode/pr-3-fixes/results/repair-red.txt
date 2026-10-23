@@ -1,0 +1,24 @@
+
+running 1 test
+test referenced_parse_failures_retain_context_for_every_explicit_binding ... FAILED
+
+failures:
+
+---- referenced_parse_failures_retain_context_for_every_explicit_binding stdout ----
+
+thread 'referenced_parse_failures_retain_context_for_every_explicit_binding' (164) panicked at tests/manifest_semantic.rs:327:13:
+assertion `left == right` failed: full
+  left: [ValidatorError { document_id: None, format_version: None, category: Unparseable, field_path: Some("$"), description: "Document JSON could not parse unambiguously", byte_offset: Some(0) }]
+ right: [ValidatorError { document_id: Some("550e8400-e29b-41d4-a716-446655440000"), format_version: Some("1.0.0"), category: Unparseable, field_path: Some("$"), description: "Document JSON could not parse unambiguously", byte_offset: Some(0) }]
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    referenced_parse_failures_retain_context_for_every_explicit_binding
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 7 filtered out; finished in 0.04s
+
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.42s
+     Running tests/manifest_semantic.rs (/tmp/clouddialect-phase-target/debug/deps/manifest_semantic-8de376cdd78f705e)
+error: test failed, to rerun pass `--test manifest_semantic`

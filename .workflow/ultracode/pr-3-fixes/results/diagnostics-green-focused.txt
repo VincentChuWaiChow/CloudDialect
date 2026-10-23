@@ -1,0 +1,28 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.02s
+     Running tests/fidelity_mapping.rs (/tmp/clouddialect-pr3-diagnostics-target/debug/deps/fidelity_mapping-f6acfd7b7ac884aa)
+
+running 8 tests
+test unsupported_is_retained_and_does_not_require_a_fidelity_lookup ... ok
+test missing_record_keeps_manifest_reference_location_and_target_details ... ok
+test fidelity_error_uses_actual_index_after_unsupported_operation ... ok
+test missing_bindings_records_and_outages_never_become_success ... ok
+test corrupted_or_schema_invalid_records_are_not_used_for_fidelity ... ok
+test mandatory_semantics_block_and_all_fidelity_violations_are_reported_without_acceptance ... ok
+test referenced_document_diagnostics_retain_original_location_for_full_and_partial ... ok
+test full_and_partial_enforce_every_declared_obligation_fidelity ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.13s
+
+     Running tests/manifest_semantic.rs (/tmp/clouddialect-pr3-diagnostics-target/debug/deps/manifest_semantic-8de376cdd78f705e)
+
+running 7 tests
+test invalid_local_manifest_never_queries_store ... ok
+test local_pass_missing_contract_semantic_fail_and_trait_dispatch_remain_separate ... ok
+test unsupported_without_contracts_is_semantic_pass_not_authority ... ok
+test unsupported_and_orphan_missing_records_identify_the_manifest_reference ... ok
+test semantic_entrypoint_uses_its_owned_active_catalog ... ok
+test valid_stored_contract_passes_real_semantics_but_explicit_unsupported_refs_still_resolve ... ok
+test every_explicit_binding_preserves_referenced_structural_diagnostics ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s

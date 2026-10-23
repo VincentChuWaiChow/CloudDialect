@@ -1,0 +1,177 @@
+{
+  "why": "Staged diff audit found trailing spaces/blank final lines in captured command outputs. Preserve raw originals outside repo; normalize text presentation only, never result categories/counts/source/JSON values. This is the one bounded DDD publication repair, not a repeated code repair.",
+  "raw_root": "/tmp/clouddialect-raw-evidence-0qb6zxea",
+  "changed": [
+    {
+      "path": "results/schema-harness-green.txt",
+      "raw_copy": "/tmp/clouddialect-raw-evidence-0qb6zxea/results/schema-harness-green.txt",
+      "raw_sha256": "d56db6280e52cd38761a8cf8bf2a2ef9f28b1ad9e58a4f949faa098e155079d4",
+      "presentation_sha256": "e035e35da896a4b61e37259a916c8f0c53bec933e0c82c65ea9da4b44094c3fb"
+    },
+    {
+      "path": "results/phase-results-full-test.txt",
+      "raw_copy": "/tmp/clouddialect-raw-evidence-0qb6zxea/results/phase-results-full-test.txt",
+      "raw_sha256": "d368c916ef6b85d465323c918c53af4ff14660b3238e73722c1e09572c930eed",
+      "presentation_sha256": "53021a280c1d561c006382b7271a80c96108e95ccd486de19a2df2f778f9b9df"
+    },
+    {
+      "path": "results/p0-design-baseline.txt",
+      "raw_copy": "/tmp/clouddialect-raw-evidence-0qb6zxea/results/p0-design-baseline.txt",
+      "raw_sha256": "3ab9f233433c062f23dbae86fb39d8f62580f5d89da760d7503c3d8b6d157c60",
+      "presentation_sha256": "7b5aee678b0920770a21821b56e68e894b08b840bfeb558e575125519a369c99"
+    },
+    {
+      "path": "results/extension-bytes-green.txt",
+      "raw_copy": "/tmp/clouddialect-raw-evidence-0qb6zxea/results/extension-bytes-green.txt",
+      "raw_sha256": "b8768619bd2c9afa322a0f1e5d5ef81a0b698437ec2099330e79e4eda97ed2b0",
+      "presentation_sha256": "1e48563441f8c705aa5ab5eddc029d85d1ba9234b36c2aca5a582f8ecda126db"
+    },
+    {
+      "path": "results/p0-design-current.txt",
+      "raw_copy": "/tmp/clouddialect-raw-evidence-0qb6zxea/results/p0-design-current.txt",
+      "raw_sha256": "15d594341158913e495a98e6f11269ab6fb10ad12297914391d6b37ebafe4b2d",
+      "presentation_sha256": "716aeea1bf84d70298892ac24982c35687cc25bb471c0c0a38616ca9d0613c27"
+    },
+    {
+      "path": "results/schema-repair-green.txt",
+      "raw_copy": "/tmp/clouddialect-raw-evidence-0qb6zxea/results/schema-repair-green.txt",
+      "raw_sha256": "33391aa95c1ec9aafb588d70496018b67aa20143ee51506f69807a5a04c68b2f",
+      "presentation_sha256": "dc97e590455b04c8fe31590e2c7209d15666539c597969cf1c37051a0ff80254"
+    },
+    {
+      "path": "results/phase-results-coverage-test.txt",
+      "raw_copy": "/tmp/clouddialect-raw-evidence-0qb6zxea/results/phase-results-coverage-test.txt",
+      "raw_sha256": "89f4b2c605813652f99a28251263a964f82a1fb49e6b8ffd4ea3a4249bd0351e",
+      "presentation_sha256": "e63398975a4c2ab3e9eac6928b9345cb0f70c1cb40cf2aded503d5595657f0d1"
+    },
+    {
+      "path": "results/domain-final-negative-doctests.txt",
+      "raw_copy": "/tmp/clouddialect-raw-evidence-0qb6zxea/results/domain-final-negative-doctests.txt",
+      "raw_sha256": "1654abbdd54cc6c138b3d95990d6acf93b6e2b6b231f595418d29531df3e609b",
+      "presentation_sha256": "767396a717aef03b0ce2772ddaaf352917f0c2e46d1b289c46bfbb0a0ff570a2"
+    },
+    {
+      "path": "results/reproducible-document-checks.txt",
+      "raw_copy": "/tmp/clouddialect-raw-evidence-0qb6zxea/results/reproducible-document-checks.txt",
+      "raw_sha256": "bdd5a6eb8a6e1ed3fa7534210722f45eaf6faec5327d8f7846300bd25fd026d9",
+      "presentation_sha256": "6dde1d7ed2ad73d525378b9e24a3cbb7530892bfaa642d8a89da51aefdaf2de4"
+    },
+    {
+      "path": "results/staged-whitespace-initial.txt",
+      "raw_copy": "/tmp/clouddialect-raw-evidence-0qb6zxea/results/staged-whitespace-initial.txt",
+      "raw_sha256": "ef79684b34a08dff05aa9883437bf9d677b2559d873b8569a31cef535f6476fe",
+      "presentation_sha256": "133a5c7da1c962bda7661a14dc4fa5bf9a293d43cb048a091d637aa2217da41a"
+    },
+    {
+      "path": "results/verification-models-green.txt",
+      "raw_copy": "/tmp/clouddialect-raw-evidence-0qb6zxea/results/verification-models-green.txt",
+      "raw_sha256": "6b2f92286d72ed4472ee5576eb3eec0d57338693b11e30875684089ce6c99b03",
+      "presentation_sha256": "448b8dbfdb2435f1ab401d4c0d2c7c656f54f36be37b4bf45691627709f02866"
+    },
+    {
+      "path": "results/p0-requirements-current.txt",
+      "raw_copy": "/tmp/clouddialect-raw-evidence-0qb6zxea/results/p0-requirements-current.txt",
+      "raw_sha256": "96983d9c68c838a93b0a2997f29c8dd84a13bbda454395d71eac1173e0df8132",
+      "presentation_sha256": "9dbd6d6beb06ca2c751c5d1f5ed39eb72530625488efbcd4fe6ca5c6a412bdb0"
+    },
+    {
+      "path": "results/catalog-index-green.txt",
+      "raw_copy": "/tmp/clouddialect-raw-evidence-0qb6zxea/results/catalog-index-green.txt",
+      "raw_sha256": "b9170fc288e77b4e7dddd5c2f8a343a6b98399c5d44eb12bf8f0862ceb82f43c",
+      "presentation_sha256": "8579f7415ee14ef918e8ebac4275506819629f4f6ff3d922b612faab5f113ee1"
+    },
+    {
+      "path": "results/ai-rules-red.txt",
+      "raw_copy": "/tmp/clouddialect-raw-evidence-0qb6zxea/results/ai-rules-red.txt",
+      "raw_sha256": "9b4e73aea5b1d5510e997f04bcb4fbb5c198621e3b101187d65b0a9c1c74d6ff",
+      "presentation_sha256": "634123eccf535eec34b6c6ef3f4a03536fff6acbc8de78c3a809248ef53245fb"
+    },
+    {
+      "path": "results/p0-requirements-baseline.txt",
+      "raw_copy": "/tmp/clouddialect-raw-evidence-0qb6zxea/results/p0-requirements-baseline.txt",
+      "raw_sha256": "e7bd469f4b12c04814b8dad42e6f3c8bfa4e55230847428c390dd2f8f4db9c46",
+      "presentation_sha256": "40f8dcf704002a09013861efec64bf948d32becd908800d0f83a248c8faeb59e"
+    },
+    {
+      "path": "results/domain-api-before.txt",
+      "raw_copy": "/tmp/clouddialect-raw-evidence-0qb6zxea/results/domain-api-before.txt",
+      "raw_sha256": "2ca63f71dfa89b0baab2e87d8d43827a9075d40b5e978b109d7bb6339e94759a",
+      "presentation_sha256": "f791417f096bde895f67dd80b1931cd9ea1f3d193246fe7d345e23a3149715ac"
+    },
+    {
+      "path": "results/domain-layout-before.txt",
+      "raw_copy": "/tmp/clouddialect-raw-evidence-0qb6zxea/results/domain-layout-before.txt",
+      "raw_sha256": "078e387c87fd8cfb69eafe8debdd168e446beadc130d134f5bd5a0191c56345d",
+      "presentation_sha256": "0984c4e5e6217b3e3dcefd3454f2a5c4e2a735959666ffb169617b36d0bb1059"
+    },
+    {
+      "path": "results/manifest-types-green.txt",
+      "raw_copy": "/tmp/clouddialect-raw-evidence-0qb6zxea/results/manifest-types-green.txt",
+      "raw_sha256": "71e61f37ebe91b6f0bb266ee5fd453c093ecdeb36213114c961fe1685a143875",
+      "presentation_sha256": "8a80bb34fd4e9d904e19f57847a15b6c60ed4289c0c4fe8609256883313616ee"
+    },
+    {
+      "path": "results/references-green.txt",
+      "raw_copy": "/tmp/clouddialect-raw-evidence-0qb6zxea/results/references-green.txt",
+      "raw_sha256": "0a456186d8e11e722169163b354fb19ef2ae4e90d05a383ec4788d8708b5fed3",
+      "presentation_sha256": "3c5158761f594463eb92f39e96e888e764555cd0149731199f5385c64a01d3d6"
+    },
+    {
+      "path": "results/domain-final-all-tests.txt",
+      "raw_copy": "/tmp/clouddialect-raw-evidence-0qb6zxea/results/domain-final-all-tests.txt",
+      "raw_sha256": "6507a9ca06dc3d46555bf0df47efd09030d86284ee1c6f40c6e9bdd543d4569e",
+      "presentation_sha256": "9d59dd7bb459f31716fb1e901275a5d8ef17c98aa6bc67478f0aaeb3a5729fa5"
+    },
+    {
+      "path": "results/phase-results-green.txt",
+      "raw_copy": "/tmp/clouddialect-raw-evidence-0qb6zxea/results/phase-results-green.txt",
+      "raw_sha256": "2bf76fbcf595b15704613fe8a332929e82495cde9cfa1a0750b5a635a9830a5f",
+      "presentation_sha256": "b19d6c841454d771566a14c8ec3e9088cbc536394e4b3a3bdeb8951927266d33"
+    },
+    {
+      "path": "results/source-models-green.txt",
+      "raw_copy": "/tmp/clouddialect-raw-evidence-0qb6zxea/results/source-models-green.txt",
+      "raw_sha256": "38510da6e625ce652cdcce2bfa046b4ff1ffc05975dc0510cba7e2e92693311e",
+      "presentation_sha256": "5936c6a9b5fc4b6258cb656278bc94d406a21071ffd3d8855e5c010a8109edc7"
+    },
+    {
+      "path": "results/prerequisite-catalog-final-all-tests.txt",
+      "raw_copy": "/tmp/clouddialect-raw-evidence-0qb6zxea/results/prerequisite-catalog-final-all-tests.txt",
+      "raw_sha256": "e9507a6a910712def2258145d2068cfa033f5f3b45f1e71fb4deab905da58669",
+      "presentation_sha256": "a046b52bf90c7990bbcd12eeed0992fe7fc092db34146145424582d1cd4acc39"
+    },
+    {
+      "path": "results/prerequisite-catalog-coverage-tests.txt",
+      "raw_copy": "/tmp/clouddialect-raw-evidence-0qb6zxea/results/prerequisite-catalog-coverage-tests.txt",
+      "raw_sha256": "d347216c7851f8041f03ab74d889f47090638d0136496702f546e62f00c5b2e4",
+      "presentation_sha256": "e1d3a6d1939504075ac0764d9669310940b22eec9de0c8be0abefdc2c6064eee"
+    },
+    {
+      "path": "results/domain-api-after.txt",
+      "raw_copy": "/tmp/clouddialect-raw-evidence-0qb6zxea/results/domain-api-after.txt",
+      "raw_sha256": "ef904e9495bce159d97cac4e69439cf503b4af364428f627fe5283e5392756ae",
+      "presentation_sha256": "f5c577fae7fefb98523a36b292b6d27a111bebd01014f7870dfb322d393ae54a"
+    },
+    {
+      "path": "results/catalog-schemas-green.txt",
+      "raw_copy": "/tmp/clouddialect-raw-evidence-0qb6zxea/results/catalog-schemas-green.txt",
+      "raw_sha256": "6a0c9a36a33b843ea3389211cf9ead41acc800fd5d9c524306b6cd557f912c6b",
+      "presentation_sha256": "7c4ab242f8b9fa8d93b3076ddc55338b2dfe47ca311c6d42cc1614de943d3117"
+    },
+    {
+      "path": "results/script-layout-red.txt",
+      "raw_copy": "/tmp/clouddialect-raw-script-evidence-ur_w85sg/results/script-layout-red.txt",
+      "raw_sha256": "dcc6f67c97c6cd588bc6cd2edec109fe9b8f6a1f23e54b731038bc57dee739a2",
+      "presentation_sha256": "9790791ac4f9bf2d4c404e41a2a72afb702781201ed028d4383953dff65b5f37",
+      "scope": "new custom-script command evidence, same presentation policy"
+    },
+    {
+      "path": "results/script-final-rust-tests.txt",
+      "raw_copy": "/tmp/clouddialect-raw-script-evidence-ur_w85sg/results/script-final-rust-tests.txt",
+      "raw_sha256": "9fee248743bb5d1a8f26083c17ddb2eb19b5851abcec0dd2cac726c203be3b64",
+      "presentation_sha256": "5b021b98fa312cf4b0d22d1c135e5b9c0ac2fc0abf159ec94a3ed7a496c59e14",
+      "scope": "new custom-script command evidence, same presentation policy"
+    }
+  ],
+  "raw_stdout_stage_check_exit_code": 2
+}

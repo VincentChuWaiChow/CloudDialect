@@ -1,0 +1,156 @@
+{
+  "title": "PR3 five-defect fixes",
+  "slug": "pr-3-fixes",
+  "created_at": "2026-10-22T18:08:01.066989+00:00",
+  "updated_at": "2026-10-22T18:20:25.613895+00:00",
+  "status": "complete",
+  "mode": "delegated",
+  "baseline_ref": "10a4717c3b48fb544be568da37fd1eb42e5c4379",
+  "risk_level": "high",
+  "eval_contract": {
+    "level": "full",
+    "path": "eval-contract.md",
+    "status": "checked"
+  },
+  "approval": {
+    "required": false,
+    "granted": true,
+    "notes": "User asks fix all5; no Git actions."
+  },
+  "delegation": {
+    "native_agent_available": true,
+    "native_agent_planned": true,
+    "native_agent_used": true,
+    "agent_count": 3,
+    "wave_count": 2,
+    "consolidated_repairs_used": 1
+  },
+  "packets": [
+    {
+      "id": "01-catalog",
+      "status": "complete",
+      "owner": "write-capable-agent",
+      "write_scope": [
+        "schema/catalog.rs",
+        "tests/catalog_loading.rs",
+        "tests/catalog_extension_roundtrip.rs"
+      ],
+      "result_path": "results/01-catalog.md"
+    },
+    {
+      "id": "02-diagnostics",
+      "status": "complete",
+      "owner": "write-capable-agent",
+      "write_scope": [
+        "validator/fidelity.rs",
+        "manifest/validator.rs",
+        "tests/fidelity_mapping.rs",
+        "tests/manifest_semantic.rs"
+      ],
+      "result_path": "results/02-diagnostics.md"
+    },
+    {
+      "id": "03-review",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/03-review.md"
+    }
+  ],
+  "verification": {
+    "status": "complete",
+    "checks": [
+      {
+        "name": "rust-tests",
+        "status": "pass",
+        "command": [
+          "rtk",
+          "proxy",
+          "cargo",
+          "test",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen",
+          "--offline"
+        ],
+        "evidence": ".workflow/ultracode/pr-3-fixes/results/final-rust-tests.txt"
+      },
+      {
+        "name": "rust-check",
+        "status": "pass",
+        "command": [
+          "rtk",
+          "proxy",
+          "cargo",
+          "check",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen",
+          "--offline",
+          "--all-targets"
+        ],
+        "evidence": ".workflow/ultracode/pr-3-fixes/results/final-rust-check.txt"
+      },
+      {
+        "name": "rust-fmt",
+        "status": "pass",
+        "command": [
+          "rtk",
+          "proxy",
+          "cargo",
+          "fmt",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--",
+          "--check"
+        ],
+        "evidence": ".workflow/ultracode/pr-3-fixes/results/final-rust-fmt.txt"
+      },
+      {
+        "name": "rust-clippy",
+        "status": "pass",
+        "command": [
+          "rtk",
+          "proxy",
+          "cargo",
+          "clippy",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen",
+          "--offline",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "evidence": ".workflow/ultracode/pr-3-fixes/results/final-rust-clippy.txt"
+      },
+      {
+        "name": "python-tests",
+        "status": "pass",
+        "command": [
+          "rtk",
+          "proxy",
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "evidence": ".workflow/ultracode/pr-3-fixes/results/final-python-tests.txt"
+      },
+      {
+        "name": "coverage",
+        "status": "pass",
+        "evidence": "results/postrepair-coverage-result.json"
+      },
+      {
+        "name": "preservation",
+        "status": "pass",
+        "evidence": "results/final-preservation.json"
+      }
+    ]
+  }
+}

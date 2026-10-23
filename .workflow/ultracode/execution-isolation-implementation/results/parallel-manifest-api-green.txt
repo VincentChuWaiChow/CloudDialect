@@ -1,0 +1,8 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.62s
+     Running tests/manifest_api.rs (/tmp/clouddialect-phase-target/debug/deps/manifest_api-3ea78a1b86198cf1)
+
+running 1 test
+test trait_dispatch_uses_the_real_local_validator_without_authority_projection ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s

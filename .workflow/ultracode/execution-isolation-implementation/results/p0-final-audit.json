@@ -1,0 +1,110 @@
+{
+  "audited_at": "2026-10-22T08:15:02.986122+00:00",
+  "checks": [
+    {
+      "name": "P0 baseline scope",
+      "status": "pass",
+      "evidence": {
+        "changed": [
+          ".kiro/specs/contracts-evidence-foundation/design.md",
+          ".kiro/specs/contracts-evidence-foundation/requirements.md",
+          ".kiro/specs/contracts-evidence-foundation/tasks.md"
+        ],
+        "checked_files": 109,
+        "allowed": [
+          ".kiro/specs/contracts-evidence-foundation/design.md",
+          ".kiro/specs/contracts-evidence-foundation/p0-contract-amendments.md",
+          ".kiro/specs/contracts-evidence-foundation/requirements.md",
+          ".kiro/specs/contracts-evidence-foundation/tasks.md"
+        ]
+      }
+    },
+    {
+      "name": "tracked changes owned",
+      "status": "pass",
+      "evidence": [
+        ".kiro/specs/contracts-evidence-foundation/design.md",
+        ".kiro/specs/contracts-evidence-foundation/requirements.md",
+        ".kiro/specs/contracts-evidence-foundation/tasks.md"
+      ]
+    },
+    {
+      "name": "branch unchanged",
+      "status": "pass",
+      "evidence": "feat/execution-isolation"
+    },
+    {
+      "name": "no new commits",
+      "status": "pass",
+      "evidence": "3b9cb6bd0ee82dbef3b731a35ce68fc778c4906a"
+    },
+    {
+      "name": "no staging",
+      "status": "pass",
+      "evidence": "No staged changes"
+    },
+    {
+      "name": "runtime crate absent",
+      "status": "pass",
+      "evidence": "Documentation-only continuation"
+    },
+    {
+      "name": "Markdown fences balanced",
+      "status": "pass",
+      "evidence": []
+    },
+    {
+      "name": "local Markdown links",
+      "status": "pass",
+      "evidence": []
+    },
+    {
+      "name": "workflow JSON parsing",
+      "status": "pass",
+      "evidence": [
+        ".workflow/ultracode/execution-isolation-implementation/p0-baseline.json",
+        ".workflow/ultracode/execution-isolation-implementation/check-results.json",
+        ".workflow/ultracode/execution-isolation-implementation/p0-check-results.json",
+        ".workflow/ultracode/execution-isolation-implementation/upstream-probe.json",
+        ".workflow/ultracode/execution-isolation-implementation/baseline.json",
+        ".workflow/ultracode/execution-isolation-implementation/state.json",
+        ".workflow/ultracode/execution-isolation-implementation/results/p0-ears-changed-criteria.json",
+        ".workflow/ultracode/execution-isolation-implementation/results/blocked-audit.json",
+        ".workflow/ultracode/execution-isolation-implementation/results/final-structure-checks.json"
+      ]
+    },
+    {
+      "name": "UD-1-isolation.md remains OPEN",
+      "status": "pass",
+      "evidence": "No owner/security gate closure"
+    },
+    {
+      "name": "UD-2-ipc.md remains OPEN",
+      "status": "pass",
+      "evidence": "No owner/security gate closure"
+    },
+    {
+      "name": "UD-3-credentials.md remains OPEN",
+      "status": "pass",
+      "evidence": "No owner/security gate closure"
+    },
+    {
+      "name": "UD-4-persistence.md remains OPEN",
+      "status": "pass",
+      "evidence": "No owner/security gate closure"
+    },
+    {
+      "name": "UD-5-budgets.md remains OPEN",
+      "status": "pass",
+      "evidence": "No owner/security gate closure"
+    },
+    {
+      "name": "BG-01-upstream.md remains OPEN",
+      "status": "pass",
+      "evidence": "No owner/security gate closure"
+    }
+  ],
+  "scope": "P0 documentation only",
+  "native_security_evidence": "MISSING",
+  "independent_postrepair_signoff": false
+}

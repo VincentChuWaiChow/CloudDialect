@@ -1,0 +1,89 @@
+[
+  {
+    "name": "rust-tests",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--offline"
+    ],
+    "exit_code": 0,
+    "seconds": 11.65,
+    "evidence": ".workflow/ultracode/pr-3-catalog-entry-fix/results/rust-tests.txt",
+    "passed_total": 242
+  },
+  {
+    "name": "rust-check",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "check",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--offline",
+      "--all-targets"
+    ],
+    "exit_code": 0,
+    "seconds": 1.38,
+    "evidence": ".workflow/ultracode/pr-3-catalog-entry-fix/results/rust-check.txt"
+  },
+  {
+    "name": "rust-fmt",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "fmt",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--",
+      "--check"
+    ],
+    "exit_code": 0,
+    "seconds": 0.13,
+    "evidence": ".workflow/ultracode/pr-3-catalog-entry-fix/results/rust-fmt.txt"
+  },
+  {
+    "name": "rust-clippy",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "clippy",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--offline",
+      "--all-targets",
+      "--",
+      "-D",
+      "warnings"
+    ],
+    "exit_code": 0,
+    "seconds": 1.22,
+    "evidence": ".workflow/ultracode/pr-3-catalog-entry-fix/results/rust-clippy.txt"
+  },
+  {
+    "name": "python-tests",
+    "command": [
+      "rtk",
+      "proxy",
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "seconds": 0.07,
+    "evidence": ".workflow/ultracode/pr-3-catalog-entry-fix/results/python-tests.txt"
+  }
+]

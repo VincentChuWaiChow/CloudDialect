@@ -1,0 +1,23 @@
+test_conformance_integration_target_exists (test_contracts_scaffold.ContractsScaffoldTests.test_conformance_integration_target_exists) ... ok
+test_lockfile_resolves_direct_dependencies_with_checksums (test_contracts_scaffold.ContractsScaffoldTests.test_lockfile_resolves_direct_dependencies_with_checksums) ... ok
+test_package_is_a_standalone_library (test_contracts_scaffold.ContractsScaffoldTests.test_package_is_a_standalone_library) ... ok
+test_package_retains_repository_license (test_contracts_scaffold.ContractsScaffoldTests.test_package_retains_repository_license) ... ok
+test_public_module_tree_exists (test_contracts_scaffold.ContractsScaffoldTests.test_public_module_tree_exists) ... ok
+test_required_dependencies_are_exactly_pinned (test_contracts_scaffold.ContractsScaffoldTests.test_required_dependencies_are_exactly_pinned) ... FAIL
+test_required_dependency_features_are_enabled (test_contracts_scaffold.ContractsScaffoldTests.test_required_dependency_features_are_enabled) ... ok
+
+======================================================================
+FAIL: test_required_dependencies_are_exactly_pinned (test_contracts_scaffold.ContractsScaffoldTests.test_required_dependencies_are_exactly_pinned)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/tests/test_contracts_scaffold.py", line 33, in test_required_dependencies_are_exactly_pinned
+    self.assertEqual(set(dependencies), DEPENDENCIES)
+AssertionError: Items in the first set but not the second:
+'sha2'
+'sha3'
+'semver'
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.005s
+
+FAILED (failures=1)

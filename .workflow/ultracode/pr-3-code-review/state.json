@@ -1,0 +1,77 @@
+{
+  "title": "PR3 code review",
+  "slug": "pr-3-code-review",
+  "created_at": "2026-10-22T17:57:33.602297+00:00",
+  "updated_at": "2026-10-22T18:02:51.417624+00:00",
+  "status": "complete",
+  "mode": "delegated",
+  "baseline_ref": "10a4717c3b48fb544be568da37fd1eb42e5c4379",
+  "risk_level": "high",
+  "eval_contract": {
+    "level": "full",
+    "path": "eval-contract.md",
+    "status": "checked"
+  },
+  "approval": {
+    "required": false,
+    "granted": true,
+    "notes": "User asks delegated code review; no fixes/publication."
+  },
+  "delegation": {
+    "native_agent_available": true,
+    "native_agent_planned": true,
+    "native_agent_used": true,
+    "agent_count": 3,
+    "wave_count": 1,
+    "notes": "Separate bounded review-only task; max3; no recursion or follow-ups."
+  },
+  "packets": [
+    {
+      "id": "01-schema-version",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/01-schema-version.md"
+    },
+    {
+      "id": "02-manifest-resolution",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/02-manifest-resolution.md"
+    },
+    {
+      "id": "03-model-extensions",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/03-model-extensions.md"
+    }
+  ],
+  "verification": {
+    "status": "complete",
+    "checks": [
+      {
+        "name": "Rust tests",
+        "status": "pass",
+        "evidence": "results/rust-tests.txt"
+      },
+      {
+        "name": "Python tests",
+        "status": "pass",
+        "evidence": "results/python-tests.txt"
+      },
+      {
+        "name": "Defect reproductions",
+        "status": "pass",
+        "evidence": "results/adversarial-probes.txt",
+        "notes": "All5 confirm current wrong behavior, not repairs."
+      },
+      {
+        "name": "Tracked preservation",
+        "status": "pass",
+        "evidence": "results/final-preservation.json"
+      }
+    ]
+  }
+}

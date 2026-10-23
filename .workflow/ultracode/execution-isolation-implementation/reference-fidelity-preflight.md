@@ -1,0 +1,35 @@
+# Reference / fidelity continuation preflight — 2026-10-22
+
+**Subsequent owner disposition:** all three approvals received; actual delivery/limits/evidence are in reference-fidelity-report.md. Pending language below records the original historical preflight, not current permission. Original deadline was retained.
+
+Previous goal turn is **progress**, not a wait/status restatement: authoritative source checkpoint bc974f0 and independently verified remote cd51996 delivered the actual extension/local-manifest/hash tranche. Fresh worktree check: tracked clean, only research.md and cloud-transformation-framework-research.pdf remain untracked. Native agent list confirms all previously dispatched workers/reviewer are terminal, not live handles to poll.
+
+## Current approval boundary
+
+All23approved dispatches and the previous tranche's sole repair are consumed. No new dispatch, follow-up, repair-budget reset or runtime qualification is inferred from automatic goal continuation. Owner is asked for the next bounded3-sidecar wave (26cumulative,4concurrent including parent, no recursion/follow-up dispatches, one consolidated repair,90minutes), explicit validation context on standalone helpers, and a bounded CatalogIndex raw-field API amendment. Decisions are **pending**, not approved. No runtime/Spec2 gate work is authorized; BG-01/UD-1–UD-5 stay OPEN.
+
+Next-wave preflight starts2026-10-22T16:07:43Z. If admitted, retain that original start and a17:37:43Z deadline rather than reset elapsed time when approval arrives. No implementation/dispatch is admitted by this document itself. Inherited model/effort/runtime isolation remain UNVERIFIED.
+
+## Fresh deterministic evidence, not native sandbox qualification
+
+Commands/actual exits/source/raw output: `results/reference-catalog-preflight.json`, `results/reference-catalog-preflight.rs`, `results/reference-catalog-preflight.txt`. Current frozen Cargo library built; direct Rust test program used only existing crate APIs, compiled/read known repository catalog fixtures and wrote disposable /tmp artifacts. No new dependency, provider/VM probe, deployment/release or production source edit. First scratch-harness setup selected debug instead of debug/deps; corrected dependency paths from actual Cargo artifact metadata. That setup failure is not behavioral RED or a delivered fix.
+
+1. **Confirmed optional root data loss:** real CatalogIndex::from_parts accepts a valid index with acme:payload containing escapes/numeric spelling/whitespace. Serializing the returned CatalogIndex removes the entire property. This is not merely an inferred derive limitation or a comparison of decoded values. Requirement10.2 says conforming parser round-trips must preserve unknown optional extension data. Fixing it requires an explicit public extensions:RawObject field/duplicate-aware decoding amendment; no new registry DTO is proposed. Existing struct literals would need the new field, so this is not silently labeled Rust-API compatible.
+2. **Confirmed catalog-context sensitivity:** identical valid evidence bytes pass the embedded snapshot and fail an explicitly supplied, inventory-valid snapshot whose evidence schema requires an additional declared field. Task17/P0-E standalone fidelity and completeness signatures only accept document(s)/store, while P0-D requires explicit active snapshot selection and P0-E requires returned records' structural validity. They cannot select the caller's intended active policy from their current arguments alone. Do not silently choose embedded/default/ambient catalog or weaken the helper to DTO decode-only. Proposed amendment appends validator:&Validator to both standalone helpers, leaving instance semantic APIs unchanged.
+
+The measured facts are data loss and the two distinct validation outcomes. Appending a Validator argument is the proposed minimal API solution, not a claim that it is the only possible redesigned interface. A new trusted validated-record/store contract would be a different owner-reviewed amendment, not a silent substitute for the current DocumentStore.
+
+Repository-artifact reproduction also passed: the retained results/reference-catalog-preflight.rs was compiled against fresh frozen Cargo artifact metadata and executed from /tmp; output exactly matched the saved observation log. Receipt now includes the actual build/compile/run commands and0/0/0 exits, source hash and53unchanged crate hashes. No Rust production source or API was changed.
+
+## Resolved from existing specification, not a new owner decision
+
+Design§4.4 lines1144–1145 explicitly says contracts sub-tables are keyed by operation_id. Fidelity binding is exact contracts[operation.id], not positional matching, inferred call-site/shape or searching unrelated project instances. Full permits equivalent-within-contract only; Partial permits equivalent-within-contract/adaptation-required; Unsupported has no fidelity restriction and stays visible. This does not by itself prove explicit references exist or authenticate evidence.
+
+## Bounded proposed ownership/dependencies
+
+- Worker24: private scoped-reference resolver and exact-source tests only (src/validator/references.rs, tests/document_resolution.rs). Inject actual Validator and DocumentStore; exact requested/reference/body identity/version, trusted kind, all approved digest algorithms, structural success and mandatory-extension blockers before use. Preserve original bytes; no catalog instance lookup, ambient/network fallback, exposed recognition/grant API or accepting result. Store errors must be sanitized, not echoed. Parent registers only with actual consumer.
+- Worker25: schema/catalog.rs and tests/catalog_extension_roundtrip.rs only, contingent on API approval. Existing root openness and unrelated entry DTO behavior stay unchanged. Real from_parts plus typed serde round-trips must retain exact raw extension values, required_extensions and duplicate-core/decoded-duplicate rejection; no registry DTO or catalog schema/dependency mutation.
+- Parent: critical fidelity/semantic consumer, shared module/root exports, any narrowly necessary crate-private existing raw-decoder reuse, existing hash helper extraction for internal ContentHash reuse, documents/spec amendment bookkeeping, verification and all Git. No public parser/semantic success stub; structural/local checks precede references; non-accepting phase boundaries stay intact. New local source-artifact coverage API is not guessed.
+- Reviewer26: final bounded readonly integrated review after actual converged GREEN. No recursive/follow-up dispatches, one consolidated repair,4concurrent maximum including parent. Native restrictions are behavioral, not attested isolation. Do not dispatch until owner grants expansion.
+
+Remaining full semantic verification-link/completeness/conformance units remain explicit; these proposed paths are not permission to dispatch an unbounded task13/14 or claim end-to-end execution-isolation completion.

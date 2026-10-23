@@ -1,0 +1,1 @@
+../../../scripts/verification/contracts-evidence-foundation/verify-planning.py

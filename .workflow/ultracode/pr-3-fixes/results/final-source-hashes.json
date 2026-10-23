@@ -1,0 +1,11 @@
+{
+  "crates/clouddialect-contracts/src/manifest/validator.rs": "8da75f9db0de9bdf78dabd0d020bfe5b9b7711dba8c72c810d655f37a5da17b1",
+  "crates/clouddialect-contracts/src/schema/catalog.rs": "30f6c0ec931183fc03c8ade0ad03c06d9a681344543208a0da0c4811034d6e3b",
+  "crates/clouddialect-contracts/src/validator/fidelity.rs": "359738f913b8586b61bc25fc4e9776925e9010018340e2b89c45e034549c3768",
+  "crates/clouddialect-contracts/src/validator/structural.rs": "aceeeb68da1c0acd7bcacced48d2339f9259995ad9201703c9069a46f98cc7fa",
+  "crates/clouddialect-contracts/tests/catalog_extension_roundtrip.rs": "3fc433aeaeb5579a796546c9d92f3597b6aec6d324f8b3274ffd0904c058a177",
+  "crates/clouddialect-contracts/tests/catalog_loading.rs": "7f1f92f82365496539003b267ef1540413d3d60cfc6e27e53b8571df9f6aab9b",
+  "crates/clouddialect-contracts/tests/fidelity_mapping.rs": "479eafbac042c5f4d7aa0dceb421fe7bf6009073f4ef9bf5768e99d81071c2a5",
+  "crates/clouddialect-contracts/tests/manifest_semantic.rs": "eaf2f3ade7eba685c71945756af1352e513ccab23f29c3bf888988e355f8fc64",
+  "crates/clouddialect-contracts/tests/nested_duplicate_fields.rs": "a20db01f7a743d7b1a27de5bcca056f6cd687ad3711a4f6e84cdb6ffb5d5b166"
+}

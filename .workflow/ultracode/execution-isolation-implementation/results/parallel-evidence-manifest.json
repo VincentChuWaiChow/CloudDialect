@@ -1,0 +1,224 @@
+{
+  "frozen_source_head": "bc974f08cb47026fd0bf97cd8c92581a43cf8289",
+  "created_at": "2026-10-22T16:02:22.747835+00:00",
+  "evidence_sha256": {
+    ".workflow/ultracode/execution-isolation-implementation/extension-manifest-hash-eval.md": "0ba6a096984ab46a5e9abded9fc0b6607ae86c54c25cd1caeef49f24c460122a",
+    ".workflow/ultracode/execution-isolation-implementation/extension-manifest-hash-report.md": "a69d5cd86bb002cdb97ca52df30f75aa462841f91630156cc2719b6ba64013f2",
+    ".workflow/ultracode/execution-isolation-implementation/packets/21-manifest-validation.md": "e54016386785892b2f19a8af249bb83d585b2367b64db96d6918b9bc919d9ae1",
+    ".workflow/ultracode/execution-isolation-implementation/packets/22-artifact-hash.md": "b84c441316e3107be2ea0bf049241e508f5ee3fa091a1148d395487061d78445",
+    ".workflow/ultracode/execution-isolation-implementation/packets/23-extension-manifest-hash-review.md": "d5b1f79810310f27c2053b4496ad5f95261a9cde471b7f6dad9d196cb9729dd3",
+    ".workflow/ultracode/execution-isolation-implementation/results/21-manifest-validation.md": "3f7d1c2a70ab10fa53d353dab91c2fc45b7b6a239f3e4a8438b12a8ec5f464e0",
+    ".workflow/ultracode/execution-isolation-implementation/results/22-artifact-hash.md": "0c817a837c5f1f3bef7b9844e793aa6e517bd83e190926be1969226b12f8d148",
+    ".workflow/ultracode/execution-isolation-implementation/results/23-extension-manifest-hash-review.md": "57cd81441c208b84eff418bc023074b292d0271b20bfce9a578e713e61872047",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-artifact-hash-green.txt": "72a7f865c6226af56c24348ba9450f34cc517297b08135affb0b73322bd6bba0",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-artifact-hash-red.txt": "9ba38f57b17c6849abcbf3f8fffdaaa89e26e1cff800b7c7154b1b7c2ef9291a",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-closeout-checks.json": "6c539f323055f25b9a1d6dc2eadaa63539352540351aa27bf486544b855de4fd",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-closeout-diff.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-closeout-p0-content.txt": "1d13a1a5d0856e69c5bdb9b842a97500d5b5ed5a2fa85e8779cfe3471a2dec20",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-closeout-python.txt": "685dc22f0b34f511971c60f42137c0a23581fe43d43bc31afc8d232734640791",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-coverage-summary.json": "e9bedd8e857071a10c7bf2b5663d843866dfeff45a68b7b702a4f4a8831ac415",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-coverage-tests.txt": "e75090df3fa9638c65379fa9f4f79954cfa42a26a09564dffd2da777c5179785",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-coverage.json": "9b0afb12eedb6a8f94d49b226a6930f9b58f0f05505d73752f5c1029c3867e07",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-extension-scan-green.txt": "3664d48e5b692a68f6db7f9ba6d830017f4a3153cd3e69ca6970085829c287e4",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-extension-scan-red.txt": "b84c8bcf3fc746951598b2138f722ca82372841c8a5d275343e39764e860cf87",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-first-check.txt": "5c2ac483315f6de21f2d2346eeaeeaf61fe61b8582e22640fa04dadc4d10624d",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-first-checks.json": "37f7aa2125a8f2c4a31a28eb9e7a27110c4d552b9b9bd817faefee080f82a736",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-first-clippy.txt": "f9ed08584463486b74bb032cf9f49225b46bd21f9562381335a30d339908b909",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-first-fmt.txt": "f433162b732352aedd93c2dcef3c264484c91666b8577c7f6808e3ba5b841666",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-first-tests.txt": "5403dee935c3db6d426d8b3a67dd8e112af640644eec426083944e8f2d64ae05",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-frozen-source.json": "7a257f2c4c2408dd98da456ca6bb6888f4632fdabfb2fcde4bbcc4bf2e3895a3",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-green-check.txt": "9a8d3e72a1bf36bf96ba761b6893e6bd8b0042c5d04b6aaf6d5bb93783fffd3b",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-green-checks.json": "7f27a3c6873d30d25936a8ef4a52f23b850d197dd06c151cc9d587a4a6666d0e",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-green-clippy.txt": "0b54771e8b575896ec261b441a18cd8225304a0db8f7d0b428a772eeb8b0765e",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-green-diff.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-green-fmt.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-green-negative-doctests.txt": "b933822c0a971481ba68a076ec9300aa980e3874c854b10ec1bb556e4c9bbdc6",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-green-p0-content.txt": "92997ec5d5030544c01077ec002eb5f86f858f820af35201fad92b4cf9dd571b",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-green-python.txt": "10ebc88048a87fb6f18fc5705b28942a16f63f4d0be4c7f2456cbe51b5fd00e8",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-green-tests.txt": "6d54d0ddb390e803e5d0e2e36943f338e3d58218268d93935c29534c81d50706",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-loader-lcov.txt": "57525362f1852e4c272caca88c117b1c74fca5259f1833b362dc24288ef73a0e",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-loader-line-coverage.txt": "f63c124376c311b307683f716ed5e037fd3a0b7dc051353a858e50b88e421541",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-mandatory-extension-green.txt": "5d1a63c0d20b60c79b929fbb305d26c00be4496074cd74c6cbaf98c5be3ba4b6",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-mandatory-extension-red.txt": "77ad555d0e0402d7c76a91c9569f7df5cc24e60b2a1baf77930e6c85f8d7473f",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-manifest-api-green.txt": "29e9400a19f2cdc87fdad4b531c566164a3b396beabfd8a726826e571bd34b4e",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-manifest-api-red.txt": "0fd213911c836774144ff6d28b51022e90213d8358f0b7e91f37dc78af314a7f",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-manifest-validation-green.txt": "430daaa5b4e591190627f86a72a94fc236b6babdee20ad1d85ee1178d376c73b",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-manifest-validation-red-parent.txt": "730d66ec0df2e69e080d04457d252ee16edcbadd92d2e5f046fdf7762c0a8c42",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-production-coverage.json": "3e7fefc09eabe917aa53c9ecbdcb4e008eaa30a9c5e2aca9cae562e1638b1ba1",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-scope-audit.json": "0ee46c7ba5be25913cd9b812a9ee62b915efeac29c9420a29fb6a623b65e045b",
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-evidence-packaging-repair.json": "ea079373d6626649a030cfc72186fc82246eef910b1f83cee6ab6dc627964ed8"
+  },
+  "self_reference_excluded": true,
+  "historical_failed_first_fmt_preserved": true,
+  "scope": "Frozen source tests/coverage/review and final metadata checks. Repository log presentations normalize ANSI/trailing whitespace; exact raw copies and hashes are recorded separately. No CI/native/release/MSRV/fullgoal proof.",
+  "raw_log_receipts": {
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-artifact-hash-green.txt": {
+      "raw_path": "/tmp/clouddialect-parallel-raw-parallel-artifact-hash-green.txt",
+      "raw_sha256": "981888c5298dbccfe11f8c6f4433d7b30e1225b9d74d17b925c73f79c8f491d1",
+      "presentation_sha256": "72a7f865c6226af56c24348ba9450f34cc517297b08135affb0b73322bd6bba0",
+      "normalized": true
+    },
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-artifact-hash-red.txt": {
+      "raw_path": "/tmp/clouddialect-parallel-raw-parallel-artifact-hash-red.txt",
+      "raw_sha256": "9ba38f57b17c6849abcbf3f8fffdaaa89e26e1cff800b7c7154b1b7c2ef9291a",
+      "presentation_sha256": "9ba38f57b17c6849abcbf3f8fffdaaa89e26e1cff800b7c7154b1b7c2ef9291a",
+      "normalized": false
+    },
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-closeout-diff.txt": {
+      "raw_path": "/tmp/clouddialect-parallel-raw-parallel-closeout-diff.txt",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "presentation_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "normalized": false
+    },
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-closeout-p0-content.txt": {
+      "raw_path": "/tmp/clouddialect-parallel-raw-parallel-closeout-p0-content.txt",
+      "raw_sha256": "1d13a1a5d0856e69c5bdb9b842a97500d5b5ed5a2fa85e8779cfe3471a2dec20",
+      "presentation_sha256": "1d13a1a5d0856e69c5bdb9b842a97500d5b5ed5a2fa85e8779cfe3471a2dec20",
+      "normalized": false
+    },
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-closeout-python.txt": {
+      "raw_path": "/tmp/clouddialect-parallel-raw-parallel-closeout-python.txt",
+      "raw_sha256": "685dc22f0b34f511971c60f42137c0a23581fe43d43bc31afc8d232734640791",
+      "presentation_sha256": "685dc22f0b34f511971c60f42137c0a23581fe43d43bc31afc8d232734640791",
+      "normalized": false
+    },
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-coverage-tests.txt": {
+      "raw_path": "/tmp/clouddialect-parallel-raw-parallel-coverage-tests.txt",
+      "raw_sha256": "e75090df3fa9638c65379fa9f4f79954cfa42a26a09564dffd2da777c5179785",
+      "presentation_sha256": "e75090df3fa9638c65379fa9f4f79954cfa42a26a09564dffd2da777c5179785",
+      "normalized": false
+    },
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-extension-scan-green.txt": {
+      "raw_path": "/tmp/clouddialect-parallel-raw-parallel-extension-scan-green.txt",
+      "raw_sha256": "dc216b0766be52f4fc25810a0b1d50fc2bbad3dd85d24387b3742d2b09b702c2",
+      "presentation_sha256": "3664d48e5b692a68f6db7f9ba6d830017f4a3153cd3e69ca6970085829c287e4",
+      "normalized": true
+    },
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-extension-scan-red.txt": {
+      "raw_path": "/tmp/clouddialect-parallel-raw-parallel-extension-scan-red.txt",
+      "raw_sha256": "b84c8bcf3fc746951598b2138f722ca82372841c8a5d275343e39764e860cf87",
+      "presentation_sha256": "b84c8bcf3fc746951598b2138f722ca82372841c8a5d275343e39764e860cf87",
+      "normalized": false
+    },
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-first-check.txt": {
+      "raw_path": "/tmp/clouddialect-parallel-raw-parallel-first-check.txt",
+      "raw_sha256": "5c2ac483315f6de21f2d2346eeaeeaf61fe61b8582e22640fa04dadc4d10624d",
+      "presentation_sha256": "5c2ac483315f6de21f2d2346eeaeeaf61fe61b8582e22640fa04dadc4d10624d",
+      "normalized": false
+    },
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-first-clippy.txt": {
+      "raw_path": "/tmp/clouddialect-parallel-raw-parallel-first-clippy.txt",
+      "raw_sha256": "f9ed08584463486b74bb032cf9f49225b46bd21f9562381335a30d339908b909",
+      "presentation_sha256": "f9ed08584463486b74bb032cf9f49225b46bd21f9562381335a30d339908b909",
+      "normalized": false
+    },
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-first-fmt.txt": {
+      "raw_path": "/tmp/clouddialect-parallel-raw-parallel-first-fmt.txt",
+      "raw_sha256": "d8f45beb5ab5b7075dd6a88c46ee46a63f0189be967cd91f50187dfda1c5e8cc",
+      "presentation_sha256": "f433162b732352aedd93c2dcef3c264484c91666b8577c7f6808e3ba5b841666",
+      "normalized": true
+    },
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-first-tests.txt": {
+      "raw_path": "/tmp/clouddialect-parallel-raw-parallel-first-tests.txt",
+      "raw_sha256": "f1c8b51e7cda70ec250bb445a6eb1e1d5ad2274e09c4cb5119f71df8f7ddf60c",
+      "presentation_sha256": "5403dee935c3db6d426d8b3a67dd8e112af640644eec426083944e8f2d64ae05",
+      "normalized": true
+    },
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-green-check.txt": {
+      "raw_path": "/tmp/clouddialect-parallel-raw-parallel-green-check.txt",
+      "raw_sha256": "9a8d3e72a1bf36bf96ba761b6893e6bd8b0042c5d04b6aaf6d5bb93783fffd3b",
+      "presentation_sha256": "9a8d3e72a1bf36bf96ba761b6893e6bd8b0042c5d04b6aaf6d5bb93783fffd3b",
+      "normalized": false
+    },
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-green-clippy.txt": {
+      "raw_path": "/tmp/clouddialect-parallel-raw-parallel-green-clippy.txt",
+      "raw_sha256": "0b54771e8b575896ec261b441a18cd8225304a0db8f7d0b428a772eeb8b0765e",
+      "presentation_sha256": "0b54771e8b575896ec261b441a18cd8225304a0db8f7d0b428a772eeb8b0765e",
+      "normalized": false
+    },
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-green-diff.txt": {
+      "raw_path": "/tmp/clouddialect-parallel-raw-parallel-green-diff.txt",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "presentation_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "normalized": false
+    },
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-green-fmt.txt": {
+      "raw_path": "/tmp/clouddialect-parallel-raw-parallel-green-fmt.txt",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "presentation_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "normalized": false
+    },
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-green-negative-doctests.txt": {
+      "raw_path": "/tmp/clouddialect-parallel-raw-parallel-green-negative-doctests.txt",
+      "raw_sha256": "c1f3dc5a874c960d821f42a185b6d714a2007eb7bc980e3598dc158a528ba5c7",
+      "presentation_sha256": "b933822c0a971481ba68a076ec9300aa980e3874c854b10ec1bb556e4c9bbdc6",
+      "normalized": true
+    },
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-green-p0-content.txt": {
+      "raw_path": "/tmp/clouddialect-parallel-raw-parallel-green-p0-content.txt",
+      "raw_sha256": "92997ec5d5030544c01077ec002eb5f86f858f820af35201fad92b4cf9dd571b",
+      "presentation_sha256": "92997ec5d5030544c01077ec002eb5f86f858f820af35201fad92b4cf9dd571b",
+      "normalized": false
+    },
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-green-python.txt": {
+      "raw_path": "/tmp/clouddialect-parallel-raw-parallel-green-python.txt",
+      "raw_sha256": "10ebc88048a87fb6f18fc5705b28942a16f63f4d0be4c7f2456cbe51b5fd00e8",
+      "presentation_sha256": "10ebc88048a87fb6f18fc5705b28942a16f63f4d0be4c7f2456cbe51b5fd00e8",
+      "normalized": false
+    },
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-green-tests.txt": {
+      "raw_path": "/tmp/clouddialect-parallel-raw-parallel-green-tests.txt",
+      "raw_sha256": "01976205e16536d3a737b3a3c69545c8b8affd9f623bf04a9e740811f457628d",
+      "presentation_sha256": "6d54d0ddb390e803e5d0e2e36943f338e3d58218268d93935c29534c81d50706",
+      "normalized": true
+    },
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-loader-lcov.txt": {
+      "raw_path": "/tmp/clouddialect-parallel-raw-parallel-loader-lcov.txt",
+      "raw_sha256": "57525362f1852e4c272caca88c117b1c74fca5259f1833b362dc24288ef73a0e",
+      "presentation_sha256": "57525362f1852e4c272caca88c117b1c74fca5259f1833b362dc24288ef73a0e",
+      "normalized": false
+    },
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-loader-line-coverage.txt": {
+      "raw_path": "/tmp/clouddialect-parallel-raw-parallel-loader-line-coverage.txt",
+      "raw_sha256": "f63c124376c311b307683f716ed5e037fd3a0b7dc051353a858e50b88e421541",
+      "presentation_sha256": "f63c124376c311b307683f716ed5e037fd3a0b7dc051353a858e50b88e421541",
+      "normalized": false
+    },
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-mandatory-extension-green.txt": {
+      "raw_path": "/tmp/clouddialect-parallel-raw-parallel-mandatory-extension-green.txt",
+      "raw_sha256": "c302e79a76b67b9ec51574194672e429fb189022b99a1be708f88ea126e7cd99",
+      "presentation_sha256": "5d1a63c0d20b60c79b929fbb305d26c00be4496074cd74c6cbaf98c5be3ba4b6",
+      "normalized": true
+    },
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-mandatory-extension-red.txt": {
+      "raw_path": "/tmp/clouddialect-parallel-raw-parallel-mandatory-extension-red.txt",
+      "raw_sha256": "77ad555d0e0402d7c76a91c9569f7df5cc24e60b2a1baf77930e6c85f8d7473f",
+      "presentation_sha256": "77ad555d0e0402d7c76a91c9569f7df5cc24e60b2a1baf77930e6c85f8d7473f",
+      "normalized": false
+    },
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-manifest-api-green.txt": {
+      "raw_path": "/tmp/clouddialect-parallel-raw-parallel-manifest-api-green.txt",
+      "raw_sha256": "3ea415661ee94dccf8902b6099ad5fd10ba0f5dbe5d4ff0bdbf83b670ca0434b",
+      "presentation_sha256": "29e9400a19f2cdc87fdad4b531c566164a3b396beabfd8a726826e571bd34b4e",
+      "normalized": true
+    },
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-manifest-api-red.txt": {
+      "raw_path": "/tmp/clouddialect-parallel-raw-parallel-manifest-api-red.txt",
+      "raw_sha256": "0fd213911c836774144ff6d28b51022e90213d8358f0b7e91f37dc78af314a7f",
+      "presentation_sha256": "0fd213911c836774144ff6d28b51022e90213d8358f0b7e91f37dc78af314a7f",
+      "normalized": false
+    },
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-manifest-validation-green.txt": {
+      "raw_path": "/tmp/clouddialect-parallel-raw-parallel-manifest-validation-green.txt",
+      "raw_sha256": "1f0fbfdabbf39f65304c0fe9b9720f3571ab61fde07e43e07cd9592a08b09688",
+      "presentation_sha256": "430daaa5b4e591190627f86a72a94fc236b6babdee20ad1d85ee1178d376c73b",
+      "normalized": true
+    },
+    ".workflow/ultracode/execution-isolation-implementation/results/parallel-manifest-validation-red-parent.txt": {
+      "raw_path": "/tmp/clouddialect-parallel-raw-parallel-manifest-validation-red-parent.txt",
+      "raw_sha256": "730d66ec0df2e69e080d04457d252ee16edcbadd92d2e5f046fdf7762c0a8c42",
+      "presentation_sha256": "730d66ec0df2e69e080d04457d252ee16edcbadd92d2e5f046fdf7762c0a8c42",
+      "normalized": false
+    }
+  }
+}

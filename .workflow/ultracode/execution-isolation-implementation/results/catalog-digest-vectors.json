@@ -1,0 +1,9 @@
+{
+  "oracle": "Python stdlib hashlib SHA256 + struct >Q, independently encoded beforeRust implementation",
+  "vectors": {
+    "base": "92994dedad35826e2a35528febaf6f8f4f5308aee3f5e6da1b1a234d305f1fc1",
+    "utf8_empty": "46cd72941288e88ef6d24ba7953da7e708947dd30dd828c8f16c6e514e478e45",
+    "a_bc": "aede7eb989c8a41ec8b4289635d4ddc17bdb72e38c4dfa3ff25745faefc3690c",
+    "ab_c": "358e20ef80fc9f86ee801eff1acbc21ddd8e0dc19c7f66afcfaecf22ab6eddc8"
+  }
+}

@@ -1,0 +1,30 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.30s
+     Running tests/behavioral_schema.rs (/tmp/clouddialect-phase-target/debug/deps/behavioral_schema-08ddf14d5fbadc28)
+
+running 9 tests
+test wrappers_resources_and_open_note_types_keep_their_required_structure ... ok
+test identifiers_are_lowercase_hyphenated_uuid_v4 ... ok
+test community_extensions_are_valid_but_invalid_namespace_spellings_are_not ... ok
+test a_declared_wrapper_chain_cannot_be_empty ... ok
+test minimal_contract_and_explicit_schema_selector_validate ... ok
+test fidelity_is_closed_without_promoting_structural_success ... ok
+test every_required_base_field_is_enforced ... ok
+test each_obligation_has_exactly_one_nonempty_support_alternative ... ok
+test complete_semver_syntax_rejects_leading_zeroes_empty_suffixes_and_whitespace ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running tests/evidence_schema.rs (/tmp/clouddialect-phase-target/debug/deps/evidence_schema-3364e4582ff95d97)
+
+running 8 tests
+test extensions_are_preserved_data_not_implicit_evidence ... ok
+test version_and_identifier_shapes_are_enforced ... ok
+test required_base_fields_and_classification_are_not_defaulted ... ok
+test unknown_assumptions_require_nonempty_complete_entries ... ok
+test observed_provenance_requires_both_identities ... ok
+test inferred_reasoning_cannot_be_empty_or_absent ... ok
+test explicit_classifications_require_their_declared_support ... ok
+test observed_and_inferred_records_can_preserve_valid_unresolved_assumptions ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s

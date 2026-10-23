@@ -1,0 +1,31 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.35s
+     Running tests/required_extension_catalogs.rs (/tmp/clouddialect-phase-target/debug/deps/required_extension_catalogs-c46b00e4a6b8bd93)
+
+running 4 tests
+test support_kinds_reject_invalid_prefix_grammar_and_whitespace ... FAILED
+test support_kinds_reject_wrong_types_and_duplicate_decoded_prefixes ... FAILED
+test support_kinds_allow_absent_empty_and_declaration_only_mandatory_prefixes ... ok
+test declarations_preserve_existing_support_root_openness_and_do_not_attest_registration ... ok
+
+failures:
+
+---- support_kinds_reject_invalid_prefix_grammar_and_whitespace stdout ----
+
+thread 'support_kinds_reject_invalid_prefix_grammar_and_whitespace' (120) panicked at tests/required_extension_catalogs.rs:77:13:
+catalog-index: ""
+
+---- support_kinds_reject_wrong_types_and_duplicate_decoded_prefixes stdout ----
+
+thread 'support_kinds_reject_wrong_types_and_duplicate_decoded_prefixes' (121) panicked at tests/required_extension_catalogs.rs:100:13:
+catalog-index
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    support_kinds_reject_invalid_prefix_grammar_and_whitespace
+    support_kinds_reject_wrong_types_and_duplicate_decoded_prefixes
+
+test result: FAILED. 2 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+error: test failed, to rerun pass `--test required_extension_catalogs`

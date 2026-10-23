@@ -1,0 +1,11 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.58s
+     Running tests/required_extension_catalogs.rs (/tmp/clouddialect-phase-target/debug/deps/required_extension_catalogs-c46b00e4a6b8bd93)
+
+running 4 tests
+test declarations_preserve_existing_support_root_openness_and_do_not_attest_registration ... ok
+test support_kinds_reject_wrong_types_and_duplicate_decoded_prefixes ... ok
+test support_kinds_allow_absent_empty_and_declaration_only_mandatory_prefixes ... ok
+test support_kinds_reject_invalid_prefix_grammar_and_whitespace ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s

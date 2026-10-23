@@ -1,0 +1,58 @@
+{
+  "checked_at": "2026-10-22T08:53:32.024110+00:00",
+  "scope": "planning tranche; prior P0 changes intentional",
+  "branch": "feat/execution-isolation",
+  "head": "3b9cb6bd0ee82dbef3b731a35ce68fc778c4906a",
+  "baseline_file_count": 110,
+  "intentionally_changed_baseline_paths": [
+    ".kiro/specs/contracts-evidence-foundation/design.md",
+    ".kiro/specs/contracts-evidence-foundation/requirements.md",
+    ".kiro/specs/contracts-evidence-foundation/tasks.md",
+    ".kiro/specs/contracts-evidence-foundation/p0-contract-amendments.md"
+  ],
+  "unexpected_changed_paths": [],
+  "unexpected_new_paths": [],
+  "unowned_baseline_files_preserved": 106,
+  "no_staged_changes": true,
+  "no_commits_since_baseline": true,
+  "production_source_manifests_locks_unchanged": true,
+  "user_research_preserved": true,
+  "canonical_checkboxes_unchanged": true,
+  "canonical_task_count": 26,
+  "open_gates": {
+    "UD-5-budgets.md": "Status: **OPEN \u2014 no measurements or approved values**. TASK-005, 2026-10-22. Core/operations approvers not supplied. REQ-001/003/010; DES-003/001/010.",
+    "UD-4-persistence.md": "Status: **OPEN \u2014 backend, retention values and restore evidence MISSING**. TASK-004, 2026-10-22. Operations/security approvers not supplied. REQ-007/009/010; DES-007/009/010.",
+    "UD-3-credentials.md": "Status: **OPEN \u2014 no delivery mechanism/provider approved or tested**. TASK-003, 2026-10-22. Security/operations approvers not supplied. REQ-004/005/006/010; DES-005/006/010.",
+    "UD-1-isolation.md": "Status: **OPEN \u2014 owner decision and native evidence MISSING**. TASK-001, 2026-10-22. Security/operations approvers not supplied. REQ-001/002/003/005/008; DES-001/002/008.",
+    "UD-2-ipc.md": "Status: **OPEN \u2014 proposal only, not an approved wire contract**. Prepared 2026-10-22 for TASK-002. Owners: core/worker owners, identities and approvals not supplied. REQ-001/003/006/010; DES-001/006/010.",
+    "BG-01-upstream.md": "Status: **OPEN \u2014 required exports absent**. TASK-006, 2026-10-22. Upstream/core approvers and accepted contract version not supplied. REQ-001/004/008; DES-004/008."
+  },
+  "no_execution_crate": true,
+  "parsed_json_count": 15,
+  "checked_markdown_paths": [
+    ".kiro/specs/contracts-evidence-foundation/requirements.md",
+    ".kiro/specs/contracts-evidence-foundation/design.md",
+    ".kiro/specs/contracts-evidence-foundation/tasks.md",
+    ".kiro/specs/contracts-evidence-foundation/p0-contract-amendments.md",
+    ".kiro/specs/contracts-evidence-foundation/implementation-plan.md",
+    ".workflow/ultracode/execution-isolation-implementation/results/05-planning-review.md",
+    ".workflow/ultracode/execution-isolation-implementation/planning-eval.md",
+    ".workflow/ultracode/execution-isolation-implementation/planning-report.md",
+    ".workflow/ultracode/execution-isolation-implementation/orchestration.md",
+    ".workflow/ultracode/execution-isolation-implementation/integration.md",
+    ".workflow/ultracode/execution-isolation-implementation/final-report.md"
+  ],
+  "broken_local_links": [],
+  "new_trailing_whitespace": [],
+  "retained_preexisting_markdown_hard_break": [
+    ".kiro/specs/contracts-evidence-foundation/design.md:144"
+  ],
+  "fences_balanced": true,
+  "runtime_or_native_checks_executed": false,
+  "status": "pass",
+  "audit_corrections": [
+    "Initial filtered rtk git show exposed only four checkbox lines. Raw rtk proxy git show confirms all 26 unchanged.",
+    "Whole-file whitespace check flagged existing Markdown hard break at design.md:144; unchanged from HEAD, preserved rather than unrelated cleanup. Only introduced whitespace is prohibited."
+  ],
+  "final_handoff_and_state_checked": true
+}

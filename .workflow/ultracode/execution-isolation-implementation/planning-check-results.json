@@ -1,0 +1,37 @@
+{
+  "scope": "planning and regression checks only; no runtime RED/GREEN",
+  "checked_at": "2026-10-22T08:50:13.322002+00:00",
+  "checks": [
+    {
+      "name": "planning",
+      "command": "rtk proxy python3 .workflow/ultracode/execution-isolation-implementation/verify-planning.py",
+      "exit_code": 0,
+      "status": "pass",
+      "evidence": "results/planning-final-planning.txt"
+    },
+    {
+      "name": "p0",
+      "command": "rtk proxy python3 .workflow/ultracode/execution-isolation-implementation/verify-p0.py",
+      "exit_code": 0,
+      "status": "pass",
+      "evidence": "results/planning-final-p0.txt"
+    },
+    {
+      "name": "scaffold",
+      "command": "rtk proxy python3 -m unittest discover -s tests -p test_contracts_scaffold.py -v",
+      "exit_code": 0,
+      "status": "pass",
+      "evidence": "results/planning-final-scaffold.txt"
+    },
+    {
+      "name": "diff-whitespace",
+      "command": "rtk git diff --check",
+      "exit_code": 0,
+      "status": "pass",
+      "evidence": "results/planning-final-diff-whitespace.txt"
+    }
+  ],
+  "all_pass": true,
+  "runtime_evidence": false,
+  "independent_postrepair_signoff": false
+}

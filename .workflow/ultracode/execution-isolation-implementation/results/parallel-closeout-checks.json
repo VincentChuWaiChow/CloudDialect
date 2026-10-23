@@ -1,0 +1,54 @@
+[
+  {
+    "name": "python",
+    "command": [
+      "rtk",
+      "proxy",
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "evidence": ".workflow/ultracode/execution-isolation-implementation/results/parallel-closeout-python.txt",
+    "raw_path": "/tmp/clouddialect-parallel-closeout-python.txt"
+  },
+  {
+    "name": "p0-content",
+    "command": [
+      "rtk",
+      "proxy",
+      "python3",
+      "scripts/verification/contracts-evidence-foundation/verify-p0.py",
+      "P0DocumentationTests.test_full_embedded_schemas_and_toml_parse",
+      "P0DocumentationTests.test_valid_verification_and_required_fields",
+      "P0DocumentationTests.test_nonpass_failure_object_and_unicode_boundaries",
+      "P0DocumentationTests.test_binding_test_and_digest_shape_negatives",
+      "P0DocumentationTests.test_full_semver_boundaries",
+      "P0DocumentationTests.test_approval_shape_is_not_authentication",
+      "P0DocumentationTests.test_schema_kind_and_api_consistency",
+      "P0DocumentationTests.test_capability_and_catalog_contracts"
+    ],
+    "exit_code": 0,
+    "evidence": ".workflow/ultracode/execution-isolation-implementation/results/parallel-closeout-p0-content.txt",
+    "raw_path": "/tmp/clouddialect-parallel-closeout-p0-content.txt"
+  },
+  {
+    "name": "diff",
+    "command": [
+      "rtk",
+      "proxy",
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "evidence": ".workflow/ultracode/execution-isolation-implementation/results/parallel-closeout-diff.txt",
+    "raw_path": "/tmp/clouddialect-parallel-closeout-diff.txt"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "helper_source": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/validator/version.rs",
+  "source_sha256": "ad60f449560dc039f4e723be50a46737580aab987ae731dbf9cbf8b2e2fcf8ba",
+  "mapped_filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/tests/../src/validator/version.rs",
+  "lines": {
+    "count": 44,
+    "covered": 44,
+    "percent": 100
+  },
+  "scope": "Exact private-source test inclusion before production registration in2.5; not public Validator or native coverage. Existing raw src-only totals exclude this tests/../src alias. Final integrated run must measure the registered production module."
+}

@@ -1,0 +1,66 @@
+{
+  "baseline": "e1e43d98fe2137b7d63643ba2b1762bdfca71cfc",
+  "source_checkpoint": "bc974f08cb47026fd0bf97cd8c92581a43cf8289",
+  "owned_nonworkflow_paths": [
+    ".kiro/specs/contracts-evidence-foundation/design.md",
+    ".kiro/specs/contracts-evidence-foundation/implementation-plan.md",
+    ".kiro/specs/contracts-evidence-foundation/requirements.md",
+    ".kiro/specs/contracts-evidence-foundation/tasks.md",
+    "crates/clouddialect-contracts/src/lib.rs",
+    "crates/clouddialect-contracts/src/manifest/mod.rs",
+    "crates/clouddialect-contracts/src/manifest/validator.rs",
+    "crates/clouddialect-contracts/src/validator/artifact_hash.rs",
+    "crates/clouddialect-contracts/src/validator/extensions.rs",
+    "crates/clouddialect-contracts/src/validator/mandatory_extensions.rs",
+    "crates/clouddialect-contracts/src/validator/mod.rs",
+    "crates/clouddialect-contracts/src/validator/structural.rs",
+    "crates/clouddialect-contracts/tests/artifact_hash.rs",
+    "crates/clouddialect-contracts/tests/extension_validation.rs",
+    "crates/clouddialect-contracts/tests/mandatory_extension_blockers.rs",
+    "crates/clouddialect-contracts/tests/manifest_api.rs",
+    "crates/clouddialect-contracts/tests/manifest_validation.rs",
+    "crates/clouddialect-contracts/tests/support/documents.rs"
+  ],
+  "changed_baseline_paths": [
+    ".kiro/specs/contracts-evidence-foundation/design.md",
+    ".kiro/specs/contracts-evidence-foundation/implementation-plan.md",
+    ".kiro/specs/contracts-evidence-foundation/requirements.md",
+    ".kiro/specs/contracts-evidence-foundation/tasks.md",
+    "crates/clouddialect-contracts/src/lib.rs",
+    "crates/clouddialect-contracts/src/manifest/mod.rs",
+    "crates/clouddialect-contracts/src/validator/mod.rs",
+    "crates/clouddialect-contracts/src/validator/structural.rs"
+  ],
+  "preserved_unowned_baseline_files": 106,
+  "new_nonworkflow_paths": [
+    "crates/clouddialect-contracts/src/manifest/validator.rs",
+    "crates/clouddialect-contracts/src/validator/artifact_hash.rs",
+    "crates/clouddialect-contracts/src/validator/extensions.rs",
+    "crates/clouddialect-contracts/src/validator/mandatory_extensions.rs",
+    "crates/clouddialect-contracts/tests/artifact_hash.rs",
+    "crates/clouddialect-contracts/tests/extension_validation.rs",
+    "crates/clouddialect-contracts/tests/mandatory_extension_blockers.rs",
+    "crates/clouddialect-contracts/tests/manifest_api.rs",
+    "crates/clouddialect-contracts/tests/manifest_validation.rs",
+    "crates/clouddialect-contracts/tests/support/documents.rs"
+  ],
+  "all_frozen_crate_hashes_match": true,
+  "frozen_crate_files": 53,
+  "checkpoint_ancestry": [
+    "3d29d67",
+    "e54be29",
+    "bea5793",
+    "87cbd19",
+    "75e6be2",
+    "bc974f0"
+  ],
+  "branch": "feat/execution-isolation",
+  "workflow_json_files_parsed": 113,
+  "changed_markdown_links_exist": true,
+  "research_preserved": {
+    "research.md": "dac1b1907059187912cafdb3c9b168ff388ce75099a011a9750b37ff44cbd110",
+    "cloud-transformation-framework-research.pdf": "b2b31aa20cb4aac5f971433c9a33d467c3910e1a50f4da807b93cfdc17b926e5"
+  },
+  "native_probes_or_releases": false,
+  "verified_at": "2026-10-22T16:01:26.030096+00:00"
+}

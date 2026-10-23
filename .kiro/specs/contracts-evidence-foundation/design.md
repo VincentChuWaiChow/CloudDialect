@@ -1,16 +1,26 @@
 # Design Document
 
+**Later publication action approval:** the user explicitly requested git commit and git push for this work. Those actions are now authorized; the earlier no-commit/no-push implementation limit is historical. Native probes, deployment and releases remain unauthorized.
+
+
+## Current physical domain layout
+User requested domain-first organization on2026-10-22. Document DTO implementation is now private `src/documents/{behavioral_contract,evidence,verification,references,raw_objects}.rs`; `src/validator/mod.rs` preserves every existing public document import as a compatibility facade. Existing `manifest/`, `schema/` and `errors/` remain cohesive domains/support. Historical source paths below describe original task ownership; new edits use the current owner paths. No new public document namespace, aggregate framework, validator behavior or gate approval follows from this move. Shared repository AI guidance is canonical `.agents/rules/engineering.md` with relative client entrypoint symlinks.
+
 ## Feature: contracts-evidence-foundation
 
 ---
 
 ## Overview
 
+**Current continuation status (2026-10-22):** user approved P0-A–F for implementation planning, then separately authorized the remaining Spec 1 prerequisite units in [implementation-plan.md](implementation-plan.md), TDD and no commits/probes/pushes/releases. User attests this is a new project and approves document/catalog **1.0.0** and crate API **0.1.0** as the initial MVP versions. This is not an independent external-publication audit or security-gate approval. Exact encoded extension JSON value bytes are required; raw_value on the existing pinned serde_json is separately approved.
+
+**Delivery is partial.** DTOs, schemas, catalog inventory, frozen snapshot/loading, structural JSON validation, local TOML rules and candidate hash equality have bounded verification. JSON semantic/completeness validation, full mandatory-blocker integration, exhaustive conformance and delivered downstream compatibility remain unfinished; scoped fidelity/TOML semantic delivery is recorded in the current report. See the [current run report](../../../.workflow/ultracode/execution-isolation-implementation/final-report.md) for actual evidence and outstanding work. Canonical task checkmarks are conservative; BG-01 and Spec 2 UD-1–UD-5 remain OPEN.
+
 This design document specifies the technical architecture for the CloudDialect **Contracts & Evidence Foundation** — Spec 1 of 3 in a sequenced set.
 
 **What this spec produces:**
 
-- Four JSON Schema Draft 2020-12 documents: behavioral contract, evidence record, verification result, and catalog index.
+- Five application JSON Schema Draft 2020-12 documents: behavioral contract, evidence record, verification result, catalog index and extension registry; no manifest JSON Schema.
 - A TOML 1.0 manifest schema for transformation packs.
 - A Bundled Schema Catalog with offline resolution, versioned path layout, and release-artifact signing.
 - A Rust validator library (`clouddialect-contracts`) implementing three distinct validation phases with a clean public API.
@@ -37,12 +47,12 @@ This design document specifies the technical architecture for the CloudDialect *
 
 CloudDialect Contracts & Evidence Foundation consists of four layers:
 
-1. **Schema layer** — five JSON Schema Draft 2020-12 documents (behavioral contract, evidence record, verification result, catalog index, pack manifest schema) bundled in the Bundled Schema Catalog and signed at release time.
+1. **Schema layer** — five application JSON Schema Draft 2020-12 documents (behavioral contract, evidence record, verification result, catalog index, extension registry), plus admitted resolver support material, bundled and signed at release time.
 2. **Manifest layer** — a TOML 1.0 pack manifest format parsed and structurally validated by the Rust manifest parser using `toml` + programmatic rules.
 3. **Validator library layer** — the `clouddialect-contracts` Rust crate exposing three non-interchangeable validation phases (structural, semantic, behavioral) with an offline-only `CatalogUrlLoader` backed by `boon`.
 4. **Conformance fixture layer** — a directory-per-fixture test suite executed by `cargo test --test conformance`, verifying all three implementations (Rust, and future language workers) agree on schema interpretation.
 
-These layers have no runtime external dependencies: the schema catalog is either embedded in the binary or provided via filesystem overlay, and no network access occurs during validation.
+Schema resolution uses embedded or explicitly supplied immutable snapshots, never a live filesystem overlay or network. Semantic references come from an explicitly injected project-scoped DocumentStore; Spec 1 does not choose that store's backend or authority.
 
 ---
 
@@ -60,10 +70,10 @@ These layers have no runtime external dependencies: the schema catalog is either
 
 ### Interface contracts
 
-- `CatalogUrlLoader` accepts a URI, looks it up in the catalog index, and returns schema bytes. It never makes network calls. Any URI not in the index returns an error.
+- `CatalogUrlLoader` resolves exact URIs against an explicit immutable CatalogSnapshot, never ambient environment or network. Read-only checksum-matched boon source verifies the adapter signature below; behavior/qualification remains UNVERIFIED. Public callers supply admitted bytes, not arbitrary loaders.
 - `Validator::validate_structural()` returns `StructuralResult` only. It has no API surface for semantic or behavioral claims.
-- `Validator::validate_semantic()` returns `SemanticResult` only. It requires a prior successful `StructuralResult` or accepts raw document bytes and performs structural parsing internally before semantic checks.
-- `ManifestValidator::validate_manifest()` returns `ManifestValidationResult` containing structural errors, semantic errors, fidelity mapping violations, and warnings as distinct fields.
+- `Validator::validate_semantic(kind, document, store)` returns SemanticResult for JSON after structural checks. DocumentKind is trusted caller purpose, not an inferred input shape. `ManifestValidator::validate_manifest_semantic(toml_bytes, store)` checks TOML references/fidelity through the same project-scoped DocumentStore, not the schema catalog.
+- `ManifestValidator::validate_manifest()` returns ManifestValidationResult with structural_errors, semantic_errors (local-rule failures) and warnings; it does not establish external reference integrity. Fidelity/reference failures are returned by validate_manifest_semantic as ValidatorError entries.
 - All result types are `non-interchangeable`: no `From`/`Into` between `StructuralResult`, `SemanticResult`, and `BehavioralResult`.
 
 ---
@@ -75,6 +85,7 @@ graph TD
     PA["Pack Author\n(writes manifests,\nreferences contracts)"]
     TI["Tool Integrator\n(Rust core, language workers,\nCI tooling)"]
     EA["Evaluator / Auditor\n(inspects evidence bundles,\nreviews traceability)"]
+    DS["Project-scoped DocumentStore\n(core-authenticated scope,\nimmutable contract/evidence/result instances)"]
 
     subgraph "contracts-evidence-foundation (this spec)"
         CAT["Bundled Schema Catalog\n(JSON Schema documents,\ncatalog index, signed archive)"]
@@ -88,18 +99,19 @@ graph TD
     end
 
     PA -- "authors TOML manifests,\nreferences contract IDs" --> MP
-    PA -- "produces behavioral contracts,\nevidence records,\nverification results" --> CAT
+    PA -- "submits untrusted project instances\nfor core admission" --> DS
 
     TI -- "calls validator API" --> VL
     TI -- "parses manifests" --> MP
 
-    EA -- "reads evidence bundles,\nchecks provenance" --> CAT
+    EA -- "authorized evidence access" --> DS
 
     VL -- "resolves $ref/$schema\nfrom catalog only" --> CAT
-    MP -- "validates manifest structure\nvia schema in catalog" --> CAT
+    VL -- "exact document references\nthrough injected port" --> DS
+    MP -- "TOML/local rules and\nseparate semantic entrypoint" --> VL
 
     S2 -- "imports StructuralResult,\nSemanticResult types" --> VL
-    S3 -- "produces manifests,\ncontracts, evidence records,\nverification results" --> CAT
+    S3 -- "submits project instances" --> DS
     S3 -- "uses manifest parser" --> MP
 ```
 
@@ -130,7 +142,7 @@ catalog/
     catalog-index/
       1.0/
         schema.json
-    pack-manifest/
+    extension-registry/
       1.0/
         schema.json
 ```
@@ -209,6 +221,15 @@ verification_result_schema_version = "1.0.0"
 catalog_min = "1.0.0"
 catalog_max = "1.0.0"
 
+[capabilities]
+format_version = "1.0.0"
+[[capabilities.requirements]]
+id = "write-test-store"
+operation_id = "upload_object"
+action = "write"
+resource = "test-object-store"
+purpose = "behavioral-test"
+
 [[operations]]
 id                  = "upload_object"
 behavioral_fidelity = "full"
@@ -243,6 +264,7 @@ format_version = "1.0.0"
 5. If any `[[operations]]` entry declares `behavioral_fidelity` as `full` or `partial`, the `[[toolchain]]` array must be present and non-empty. Traceability: Requirement 5.5.
 6. `[x]` fields are accepted and preserved; they must not conflict with top-level core keys. Traceability: Requirement 5.6.
 7. An operation with `behavioral_fidelity = "unsupported"` is retained in the parsed operation list and returned through the same listing interface as other operations. Traceability: Requirement 5.7.
+8. `[capabilities]` is required and follows P0-B: explicit supported format_version and typed requirements (explicit empty array allowed), exact fields/closed actions/unique IDs/known operation_id. Declarations describe needs only; unknown resource resolution or prohibited worker authority is denied by Spec 2 admission. `[x]` never grants or overrides a capability. Traceability: Requirement 5.8.
 
 **Fidelity enum mapping (UD gap resolved in Section 4.6):** Manifest `full` / `partial` / `unsupported` are a summary view. The authoritative per-obligation fidelity is in the referenced behavioral contract document using the full five-value enum.
 
@@ -260,37 +282,41 @@ pub struct StructuralResult {
     pub document_id: Option<String>,
     pub format_version: Option<String>,
     pub outcome: StructuralOutcome,
-    pub errors: Vec<StructuralError>,
+    pub errors: Vec<ValidatorError>,
+    pub warnings: Vec<ValidatorWarning>,
 }
 
 /// Phase 2: Reference integrity (contract refs, evidence refs)
 pub struct SemanticResult {
     pub document_id: Option<String>,
     pub outcome: SemanticOutcome,
-    pub errors: Vec<SemanticError>,
+    pub errors: Vec<ValidatorError>,
 }
 
 /// Phase 3: Behavioral verification (independently controlled tests)
 pub struct BehavioralResult {
     pub candidate_id: String,
     pub outcome: BehavioralOutcome,
-    pub test_results: Vec<TestOutcome>,
+    pub verification_result: Option<DocumentRef>,
+    pub test_results: Vec<TestResult>,
     pub blocking_gaps: Vec<BlockingGap>,
 }
 ```
 
 `StructuralResult` has no field implying semantic or behavioral correctness. `SemanticResult` has no field implying behavioral correctness. These types are not interchangeable and have no `From` / `Into` implementations between them. Traceability: Requirement 8.1, 8.2.
 
+P0-A defines BehavioralOutcome exactly as Deferred/EvidenceComplete/Blocked; all are non-accepting. Spec 1 completeness returns no verification reference and an empty test projection. Spec 2 may attach the exact validated verification document/test projection, but authentication, protected obligations, fresh approvals and durable acceptance remain separate checks. See P0-A/C/E for TestResult, FailureDescription, DocumentRef, verification projection and DocumentStore contracts; these are proposed types, not exports.
+
 **Offline resolver injection:**
 
-The `boon` crate exposes a `UrlLoader` trait. The `clouddialect-contracts` crate implements a `CatalogUrlLoader` that:
+Proposed CatalogUrlLoader behavior (boon 0.6.1 trait/injection signatures source-verified during planning; implementation and runtime behavior remain UNVERIFIED):
 
-1. Reads the catalog index from the embedded or filesystem catalog (see UD-5 resolution).
-2. Maps any URI beginning with `https://schemas.clouddialect.io/` to its catalog-relative path via the index.
-3. Returns the schema file contents as bytes without making any network call.
-4. Returns a `CompileError::LoadUrlError` for any URI that is not resolvable from the catalog.
+1. Owns a frozen embedded or explicitly supplied CatalogSnapshot using P0-D constructors/identity encoding.
+2. Resolves exact admitted index entries, including required meta-schema/vocabulary material; a URI prefix alone grants nothing.
+3. Serves immutable schema material without network, live filesystem or environment-selected lookups.
+4. Parses admitted JSON bytes into serde_json::Value for UrlLoader::load, returning boxed errors on missing/invalid resources; map actual engine diagnostics to actionable UnresolvableReference without inventing an execution error category.
 
-This loader is injected into `boon::Compiler` before compilation. The loader is not configurable by callers at runtime — it cannot be replaced with a network-capable loader through the public API. Traceability: Requirement 1.2, 1.3, 9.1–9.4.
+The source-verified sequence is Compiler::new(), then use_loader(Box<dyn UrlLoader>) before compilation; load(&self, url: &str) returns Result<serde_json::Value, Box<dyn std::error::Error>>. Format assertions can be enabled explicitly; that does not prove complete date validation or UTC-Z policy. Trusted callers may explicitly supply admitted snapshot bytes; no public network-loader injection. Neither CLOUDDIALECT_CATALOG_DIR nor CLOUDDIALECT_SCHEMA_CATALOG is read by the library. Schema catalog and project-scoped document instance store are separate. Traceability: Requirement 1.2, 1.3, 8.3, 9.1–9.5; P0-D/E. Evidence: checksum-matched source paths/lines in results/planning-boon-api.json under the run directory.
 
 **Reserved-namespace detection:**
 
@@ -306,7 +332,7 @@ This regex is compiled once at library initialization and reused for all validat
 
 **Mandatory extension blocker:**
 
-If a document contains a field whose key conforms to the extension grammar, and the document explicitly declares that extension as mandatory (via a document-level `required_extensions` array containing the prefix), and the validator does not recognize that extension, the validator emits a blocker that prevents acceptance. Traceability: Requirement 10.4.
+All five JSON document kinds permit optional root `required_extensions`: a unique array of decoded ASCII namespace-prefix strings, minimum two characters, letter start, then alphanumeric/hyphen, no colon or whitespace. Omission/empty declares none. This is a core field, explicitly retained by the four existing DTOs; no registry DTO is invented. If a declared prefix has no trusted implemented semantics, the extension validator emits a separate acceptance blocker even when no matching payload exists. Structural success, catalog/registry membership, claimed ownership and optional payload do not establish recognition. MVP currently implements no extension semantics; later activation requires a real trusted implementation, not declaration data. Existing root openness outside this new field is unchanged. Traceability: Requirement10.4, owner-approved EX-1; blocker logic remains the separate validator unit, not schema acceptance.
 
 **Error response structure (Requirement 11):**
 
@@ -389,8 +415,9 @@ fixtures/
 
 ```json
 {
-  "outcome": "pass | fail | warn",
-  "phase": "structural | semantic | behavioral",
+  "outcome": "phase-specific value (see below)",
+  "phase": "structural | semantic | behavioral | artifact-hash",
+  "document_kind": "explicit JSON DocumentKind, or manifest for TOML",
   "errors": [
     {
       "category": "<ErrorCategory>",
@@ -413,7 +440,7 @@ fixtures/
 }
 ```
 
-The fixture runner compares actual output against `expected.json` using substring matching for description fields and exact matching for category and outcome fields. This makes fixtures resilient to minor wording changes without losing correctness guarantees.
+P0-E expectation union: structural uses pass/warn/fail; semantic uses pass/fail; behavioral completeness uses deferred/evidence-complete/blocked exactly, never pass/fail normalization. Artifact-hash fixtures omit outcome and require expected_match boolean matching verify_artifact_hash. JSON fixtures declare the trusted DocumentKind; manifest selects TOML. Unsupported phase/outcome pairs and deliberately wrong expectations must fail the runner. Descriptions use substring checks; categories and phase-specific values use exact checks. No runner pass implies behavioral acceptance.
 
 **CI integration:** The fixture suite runs as a Cargo test (`cargo test --test conformance`) that walks the `fixtures/` directory, loads each `input.json` + `expected.json` pair, runs the appropriate validator phase, and asserts the actual output matches the expectation. Traceability: all requirements marked "Conformance fixture" as their verification method.
 
@@ -422,6 +449,8 @@ The fixture runner compares actual output against `expected.json` using substrin
 ## Data Models
 
 ### 4.1 Behavioral Contract
+
+**Owner-approved RC-1 resource binding (2026-10-22):** resource-specific assumptions carry `behavior: ordering | consistency | retry | failure` plus nonempty `assumption_id`, `description`, `reason`. For every dependency, each dimension has a nonempty known declaration or a matching populated assumption; both are permitted for partial knowledge. Generic evidence/obligation assumptions keep their existing shape. DTOs use distinct `ResourceBehaviorDimension` and `ResourceUnresolvedAssumption` types, retain exact extension-value bytes, and do not perform schema completeness checks. This is an intentional approved initial-MVP resource-model/API amendment, not a backward-compatible reinterpretation or behavioral evidence. The matching schema block is reconciled in the schema implementation leaf.
 
 Annotated JSON Schema skeleton (key fields with types and constraints):
 
@@ -436,6 +465,16 @@ Annotated JSON Schema skeleton (key fields with types and constraints):
     "resource_dependencies", "obligations"
   ],
   "properties": {
+    "required_extensions": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9-]+$",
+        "not": {"pattern": "\\s"}
+      }
+    },
+    "$schema": { "type": "string", "minLength": 1 },
     "id": {
       "type": "string",
       "format": "uuid",
@@ -443,7 +482,7 @@ Annotated JSON Schema skeleton (key fields with types and constraints):
     },
     "format_version": {
       "type": "string",
-      "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)$",
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*)(?:\\.(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*))*)?(?:\\+[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?$(?![\\s\\S])",
       "description": "Document-format version (SemVer 2.0.0). Distinct from pack version and JSON Schema dialect version."
     },
     "operation_identity": {
@@ -456,6 +495,7 @@ Annotated JSON Schema skeleton (key fields with types and constraints):
         },
         "wrapper_chain": {
           "type": "array",
+          "minItems": 1,
           "items": { "type": "string" },
           "description": "Ordered list of wrappers in the call chain up to the operation boundary. Required to be non-empty when a wrapper chain exists."
         }
@@ -496,17 +536,67 @@ Annotated JSON Schema skeleton (key fields with types and constraints):
           "known_behavior": {
             "type": "object",
             "properties": {
-              "ordering": { "type": "string" },
-              "consistency": { "type": "string" },
-              "retry": { "type": "string" },
-              "failure": { "type": "string" }
+              "ordering": { "type": "string", "minLength": 1 },
+              "consistency": { "type": "string", "minLength": 1 },
+              "retry": { "type": "string", "minLength": 1 },
+              "failure": { "type": "string", "minLength": 1 }
             }
           },
           "unresolved_assumptions": {
             "type": "array",
-            "items": { "$ref": "#/$defs/unresolved_assumption" }
+            "items": { "$ref": "#/$defs/resource_unresolved_assumption" }
           }
-        }
+        },
+        "allOf": [
+          {
+            "anyOf": [
+              {
+                "required": ["known_behavior"],
+                "properties": {"known_behavior": {"required": ["ordering"]}}
+              },
+              {
+                "required": ["unresolved_assumptions"],
+                "properties": {"unresolved_assumptions": {"contains": {"required": ["behavior"], "properties": {"behavior": {"const": "ordering"}}}}}
+              }
+            ]
+          },
+          {
+            "anyOf": [
+              {
+                "required": ["known_behavior"],
+                "properties": {"known_behavior": {"required": ["consistency"]}}
+              },
+              {
+                "required": ["unresolved_assumptions"],
+                "properties": {"unresolved_assumptions": {"contains": {"required": ["behavior"], "properties": {"behavior": {"const": "consistency"}}}}}
+              }
+            ]
+          },
+          {
+            "anyOf": [
+              {
+                "required": ["known_behavior"],
+                "properties": {"known_behavior": {"required": ["retry"]}}
+              },
+              {
+                "required": ["unresolved_assumptions"],
+                "properties": {"unresolved_assumptions": {"contains": {"required": ["behavior"], "properties": {"behavior": {"const": "retry"}}}}}
+              }
+            ]
+          },
+          {
+            "anyOf": [
+              {
+                "required": ["known_behavior"],
+                "properties": {"known_behavior": {"required": ["failure"]}}
+              },
+              {
+                "required": ["unresolved_assumptions"],
+                "properties": {"unresolved_assumptions": {"contains": {"required": ["behavior"], "properties": {"behavior": {"const": "failure"}}}}}
+              }
+            ]
+          }
+        ]
       }
     },
     "obligations": {
@@ -565,6 +655,19 @@ Annotated JSON Schema skeleton (key fields with types and constraints):
   },
   "unevaluatedProperties": false,
   "$defs": {
+    "resource_unresolved_assumption": {
+      "$ref": "#/$defs/unresolved_assumption",
+      "required": ["behavior"],
+      "properties": {
+        "behavior": {
+          "type": "string",
+          "enum": ["ordering", "consistency", "retry", "failure"]
+        },
+        "assumption_id": {"minLength": 1},
+        "description": {"minLength": 1},
+        "reason": {"minLength": 1}
+      }
+    },
     "unresolved_assumption": {
       "type": "object",
       "required": ["assumption_id", "description", "reason"],
@@ -589,6 +692,16 @@ Annotated JSON Schema skeleton (key fields with types and constraints):
   "type": "object",
   "required": ["id", "format_version", "claim", "classification"],
   "properties": {
+    "required_extensions": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9-]+$",
+        "not": {"pattern": "\\s"}
+      }
+    },
+    "$schema": { "type": "string", "minLength": 1 },
     "id": {
       "type": "string",
       "format": "uuid",
@@ -596,12 +709,24 @@ Annotated JSON Schema skeleton (key fields with types and constraints):
     },
     "format_version": {
       "type": "string",
-      "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)$"
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*)(?:\\.(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*))*)?(?:\\+[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?$(?![\\s\\S])"
     },
     "claim": { "type": "string" },
     "classification": {
       "type": "string",
       "enum": ["observed", "inferred", "unknown"]
+    },
+    "unresolved_assumptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["assumption_id", "description", "reason"],
+        "properties": {
+          "assumption_id": { "type": "string" },
+          "description": { "type": "string" },
+          "reason": { "type": "string" }
+        }
+      }
     }
   },
   "if": {
@@ -638,17 +763,7 @@ Annotated JSON Schema skeleton (key fields with types and constraints):
       "required": ["unresolved_assumptions"],
       "properties": {
         "unresolved_assumptions": {
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "type": "object",
-            "required": ["assumption_id", "description", "reason"],
-            "properties": {
-              "assumption_id": { "type": "string" },
-              "description": { "type": "string" },
-              "reason": { "type": "string" }
-            }
-          }
+          "minItems": 1
         }
       }
     }
@@ -664,112 +779,317 @@ Annotated JSON Schema skeleton (key fields with types and constraints):
 
 ### 4.3 Verification Result
 
+**P0-C initial MVP schema artifact implemented under separate code/version approvals; semantic and authority checks remain unfinished.** Configuration is a reference to exact immutable secret-free bytes. Artifact bindings and approval/origin strings are untrusted claims until checked against independent trusted context; JSON Schema cannot authenticate them. P0-C specifies semantic checks for digest lengths, unique test IDs, obligation membership, UTC time and matching document references.
+
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://schemas.clouddialect.io/verification-result/1.0.0/schema.json",
   "type": "object",
   "required": [
-    "id", "format_version", "candidate", "pack",
-    "toolchain", "tests"
+    "id",
+    "format_version",
+    "candidate",
+    "pack",
+    "toolchain",
+    "configuration",
+    "binding",
+    "tests"
   ],
   "properties": {
+    "required_extensions": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9-]+$",
+        "not": {"pattern": "\\s"}
+      }
+    },
+    "$schema": { "type": "string", "minLength": 1 },
     "id": {
       "type": "string",
       "format": "uuid"
     },
     "format_version": {
       "type": "string",
-      "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)$"
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*)(?:\\.(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*))*)?(?:\\+[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?$(?![\\s\\S])"
     },
     "candidate": {
-      "type": "object",
-      "required": ["identity", "content_hash"],
-      "properties": {
-        "identity": { "type": "string" },
-        "content_hash": {
-          "type": "object",
-          "required": ["algorithm", "value"],
-          "properties": {
-            "algorithm": {
-              "type": "string",
-              "enum": ["sha-256", "sha-384", "sha-512", "sha3-256", "sha3-512"]
-            },
-            "value": { "type": "string" }
-          }
-        }
-      }
+      "$ref": "#/$defs/artifact_ref"
     },
     "pack": {
-      "type": "object",
-      "required": ["id", "version"],
-      "properties": {
-        "id": { "type": "string" },
-        "version": {
-          "type": "string",
-          "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)$"
-        }
-      }
+      "$ref": "#/$defs/versioned_artifact"
     },
     "toolchain": {
-      "type": "object",
-      "required": ["id", "version"],
-      "properties": {
-        "id": { "type": "string" },
-        "version": { "type": "string" }
-      }
+      "$ref": "#/$defs/versioned_artifact"
+    },
+    "configuration": {
+      "$ref": "#/$defs/artifact_ref"
+    },
+    "binding": {
+      "$ref": "#/$defs/verification_binding"
     },
     "tests": {
       "type": "array",
       "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["test_id", "outcome", "origin_identity"],
+        "required": [
+          "test_id",
+          "obligation_ids",
+          "outcome",
+          "origin_identity"
+        ],
         "properties": {
-          "test_id": { "type": "string" },
+          "test_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "obligation_ids": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
           "outcome": {
             "type": "string",
-            "enum": ["pass", "fail", "skip", "error"]
+            "enum": [
+              "pass",
+              "fail",
+              "skip",
+              "error"
+            ]
           },
-          "origin_identity": { "type": "string" },
-          "failure_description": {
+          "origin_identity": {
             "type": "string",
-            "minLength": 1,
-            "maxLength": 2000
+            "minLength": 1
+          },
+          "failure_description": {
+            "$ref": "#/$defs/failure"
           }
         },
+        "unevaluatedProperties": false,
         "if": {
-          "not": { "properties": { "outcome": { "const": "pass" } } }
+          "properties": {
+            "outcome": {
+              "enum": [
+                "fail",
+                "skip",
+                "error"
+              ]
+            }
+          },
+          "required": [
+            "outcome"
+          ]
         },
         "then": {
-          "required": ["failure_description"]
+          "required": [
+            "failure_description"
+          ]
         }
       }
     },
     "acceptance": {
       "type": "object",
-      "required": ["approver_identities", "timestamp"],
+      "required": [
+        "approver_identities",
+        "timestamp",
+        "verification_result",
+        "approval_evidence"
+      ],
       "properties": {
         "approver_identities": {
           "type": "array",
           "minItems": 1,
-          "items": { "type": "string" }
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
         },
         "timestamp": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "pattern": "Z$"
+        },
+        "verification_result": {
+          "$ref": "#/$defs/document_ref"
+        },
+        "approval_evidence": {
+          "$ref": "#/$defs/artifact_ref"
         }
-      }
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "unevaluatedProperties": false,
+  "$defs": {
+    "content_hash": {
+      "type": "object",
+      "required": [
+        "algorithm",
+        "value"
+      ],
+      "properties": {
+        "algorithm": {
+          "type": "string",
+          "enum": [
+            "sha-256",
+            "sha-384",
+            "sha-512",
+            "sha3-256",
+            "sha3-512"
+          ]
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^[0-9a-f]+$"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "artifact_ref": {
+      "type": "object",
+      "required": [
+        "identity",
+        "content_hash"
+      ],
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1
+        },
+        "content_hash": {
+          "$ref": "#/$defs/content_hash"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "versioned_artifact": {
+      "type": "object",
+      "required": [
+        "id",
+        "version",
+        "content_hash"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*)(?:\\.(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*))*)?(?:\\+[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?$(?![\\s\\S])"
+        },
+        "content_hash": {
+          "$ref": "#/$defs/content_hash"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "document_ref": {
+      "type": "object",
+      "required": [
+        "id",
+        "format_version"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "format_version": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*)(?:\\.(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*))*)?(?:\\+[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?$(?![\\s\\S])"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "failure": {
+      "type": "object",
+      "required": [
+        "detail"
+      ],
+      "properties": {
+        "detail": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "verification_binding": {
+      "type": "object",
+      "required": [
+        "tenant_id",
+        "project_id",
+        "run_id",
+        "attempt_id",
+        "input",
+        "dependencies",
+        "suite",
+        "oracle",
+        "policy",
+        "obligation_ids"
+      ],
+      "properties": {
+        "tenant_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "project_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "run_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "attempt_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "input": {
+          "$ref": "#/$defs/artifact_ref"
+        },
+        "dependencies": {
+          "$ref": "#/$defs/artifact_ref"
+        },
+        "suite": {
+          "$ref": "#/$defs/artifact_ref"
+        },
+        "oracle": {
+          "$ref": "#/$defs/artifact_ref"
+        },
+        "policy": {
+          "$ref": "#/$defs/artifact_ref"
+        },
+        "obligation_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "unevaluatedProperties": false
     }
   },
   "patternProperties": {
     "^[a-zA-Z][a-zA-Z0-9\\-]+:": {}
-  },
-  "unevaluatedProperties": false
+  }
 }
 ```
 
-**Traceability:** Requirement 4.1, 4.2, 4.3, 4.4, 4.5, 4.7.
+**Traceability:** Requirement 4.1–4.8, 8.6–8.7; P0-A/C/E. Mandatory obligation/test completeness, observation authenticity, current-policy approval and durable acceptance remain Spec 2 checks. Any prior published format needs MAJOR-version review before adopting these required fields or the structured failure_description object.
 
 ### 4.4 Pack Manifest (TOML)
 
@@ -803,6 +1123,10 @@ verification_result_schema_version = "<SemVer>"  # required
 catalog_min = "<SemVer>"                          # required
 catalog_max = "<SemVer>"                          # required
 
+[capabilities]
+format_version = "1.0.0"                          # required, document-format version
+requirements = []                                 # required; or typed array-of-tables per P0-B
+
 [[operations]]
 # One entry per supported operation
 id                  = "<string>"                  # required
@@ -818,7 +1142,7 @@ version_range = "<SemVer 2.0.0 range>"           # required
 
 [contracts]
 # Sub-tables keyed by operation_id
-[contracts.<operation_id>]
+[contracts."<operation_id>"]
 id             = "<uuid>"                         # required
 format_version = "<SemVer>"                       # required
 # contract body MUST NOT be included inline
@@ -834,11 +1158,33 @@ format_version = "<SemVer>"                       # required
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://schemas.clouddialect.io/catalog-index/1.0.0/schema.json",
   "type": "object",
-  "required": ["format_version", "schemas"],
+  "required": ["format_version", "schemas", "resolver_resources"],
   "properties": {
+    "required_extensions": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9-]+$",
+        "not": {"pattern": "\\s"}
+      }
+    },
+    "$schema": { "type": "string", "minLength": 1 },
     "format_version": {
       "type": "string",
-      "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)$"
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*)(?:\\.(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*))*)?(?:\\+[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?$(?![\\s\\S])"
+    },
+    "resolver_resources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["schema_id", "catalog_path"],
+        "properties": {
+          "schema_id": { "type": "string", "minLength": 1 },
+          "catalog_path": { "type": "string", "minLength": 1 }
+        },
+        "unevaluatedProperties": false
+      }
     },
     "schemas": {
       "type": "array",
@@ -858,7 +1204,7 @@ format_version = "<SemVer>"                       # required
               "evidence-record",
               "verification-result",
               "catalog-index",
-              "pack-manifest"
+              "extension-registry"
             ]
           },
           "format_version": { "type": "string" },
@@ -889,7 +1235,7 @@ format_version = "<SemVer>"                       # required
 }
 ```
 
-The index validates against its own schema. The `CatalogUrlLoader` reads the index first and uses it to resolve all subsequent URI-to-path lookups. Traceability: Requirement 1.6, 9.4.
+The index validates against its own schema. Application schema entries and P0-D resolver_resources are separate; the latter records meta-schema/vocabulary support without inventing a TOML manifest schema. URI keys across both sets must be unique, paths/material immutable and complete. Empty support entries require verified offline engine built-ins, not an assumed network resolver. Traceability: Requirement 1.6, 9.4–9.5; P0-D.
 
 ### 4.6 Fidelity Enum Mapping
 
@@ -921,7 +1267,7 @@ sequenceDiagram
     participant E as boon::Compiler
     participant S as StructuralResult
 
-    C->>V: validate_structural(document_bytes)
+    C->>V: validate_structural(BehavioralContract, document_bytes)
     V->>V: parse document_bytes as JSON
     alt parse fails
         V-->>C: StructuralResult { outcome: Fail, error: Unparseable, byte_offset }
@@ -955,7 +1301,7 @@ sequenceDiagram
     participant C as Caller
     participant MP as ManifestParser
     participant V as Validator
-    participant CAT as CatalogLookup
+    participant CAT as DocumentStore (trusted project scope)
     participant SR as SemanticResult
 
     C->>MP: parse_manifest(toml_bytes)
@@ -964,16 +1310,16 @@ sequenceDiagram
         MP-->>C: Err(ManifestParseError)
     end
     MP-->>C: ManifestStruct
-    C->>V: validate_semantic(manifest)
+    C->>V: validate_manifest_semantic(toml_bytes, store)
     loop for each contracts entry
         V->>CAT: lookup_contract(id, format_version)
-        alt contract not found in catalog
-            V->>V: record SemanticError { category: UnresolvableReference, field_path: "contracts.<op_id>.id" }
+        alt contract missing, invalid or wrong identity/version in scoped store
+            V->>V: record ValidatorError { category: UnresolvableReference, field_path: "contracts.<op_id>.id" }
         end
     end
     V->>V: check fidelity mapping consistency (full → only equivalent-within-contract obligations)
     alt fidelity mapping violation
-        V->>V: record SemanticError { category: Semantic, description: "fidelity mismatch" }
+        V->>V: record ValidatorError { category: Semantic, description: "fidelity mismatch" }
     end
     alt any errors
         V-->>C: SemanticResult { outcome: Fail, errors }
@@ -988,10 +1334,10 @@ sequenceDiagram
 sequenceDiagram
     participant C as Caller
     participant V as Validator
-    participant ER as EvidenceRecordStore
+    participant ER as DocumentStore (trusted project scope)
     participant BG as BlockingGapReport
 
-    C->>V: check_evidence_completeness(contract, candidate_id)
+    C->>V: check_evidence_completeness(contract, candidate_id, store)
     loop for each obligation in contract.obligations
         alt obligation has evidence_refs
             V->>ER: fetch evidence record(s) by id
@@ -1010,6 +1356,7 @@ sequenceDiagram
         note over V,C: Transformation CANNOT be promoted to accepted state
     else no gaps
         V-->>C: BehavioralResult { outcome: EvidenceComplete }
+        note over V,C: Non-accepting; verification_result=None, test_results=[]
     end
 ```
 
@@ -1048,7 +1395,7 @@ sequenceDiagram
 
 **Decision:** Use `boon` crate (MIT / Apache-2.0 dual-licensed) as the JSON Schema Draft 2020-12 validation engine.
 
-**Rationale:** Independent evidence confirms `boon` is the only Rust crate that fully supports JSON Schema Draft 2020-12, including the `unevaluatedProperties` and `unevaluatedItems` keywords moved to their own vocabulary in 2020-12. It passes the JSON Schema Test Suite (excluding optional format-assertion tests, which are advisory in the spec). It exposes a `UrlLoader` trait that allows injecting a custom resolver, enabling the `CatalogUrlLoader` implementation. The `Compiler` takes a `UrlLoader` at construction time, so offline-only behavior can be enforced without forking the library. License is MIT / Apache-2.0, compatible with CloudDialect's distribution model.
+**Rationale:** The existing design selected boon for Draft 2020-12 and offline resolver customization; the scaffold pins 0.6.1. Initial P0 did not verify its adapter API; subsequent planning inspected the checksum-matched official archive and confirmed load/new/use_loader/format-assertion signatures (see §3.4/P0 evidence). This is source evidence, not conformance/offline behavior or current proof of historical competitor comparisons. Format assertions and actual engine behavior still need a verified supported profile.
 
 **Constraints:** Draft 2020-12 full compliance; offline resolver injection; MIT or Apache-2.0 license; active maintenance.
 
@@ -1104,7 +1451,7 @@ The directory-per-fixture approach wins on discoverability, isolation, portabili
 
 ### DR-4: Schema Registry Distribution Mechanism (UD-5)
 
-**Decision:** Hybrid — embedded in binary via `include_bytes!` macros at compile time, with a filesystem overlay for development and override.
+**P0 proposed amendment — pending owner approval:** Embedded immutable snapshot by default (include_dir per task 8), or explicit frozen parts supplied by trusted caller after admission. No ambient environment-selected filesystem overlay.
 
 **Rationale:**
 
@@ -1116,9 +1463,9 @@ Options evaluated:
 
 3. **Separate downloadable archive with checksum:** Requires a download step before use. Breaks offline-first requirement for air-gapped environments.
 
-4. **Hybrid (embedded default + filesystem overlay):** The embedded catalog is the default. If an environment variable `CLOUDDIALECT_CATALOG_DIR` is set and points to a readable directory, the `CatalogUrlLoader` uses the filesystem catalog instead. This supports development workflows (where schemas are modified frequently) and future override scenarios without compromising the production offline default.
+4. **Explicit snapshot override:** Trusted host code may admit and freeze an approved directory into CatalogSnapshot::from_parts; neither CLOUDDIALECT_CATALOG_DIR nor CLOUDDIALECT_SCHEMA_CATALOG is read by the library. Worker environment/repository content cannot select trust. This replaces the former implicit-overlay proposal; host file acquisition remains outside Spec 1's loader.
 
-The hybrid approach satisfies all four constraints: offline resolution without filesystem assumption (embedded default), verifiable (the release archive covering the binary embeds the catalog; the signature covers the archive), relocatable (the index is read from the embedded or override catalog, no hard-coded paths), and practical for both CLI and library consumers.
+The proposed snapshot approach retains embedded/offline/relocatable resolution, with explicit admission and immutable digest comparison. A constructor or digest is not signer-policy evidence; actual provenance verification and engine qualification remain required. See P0-D for exact constructors/snapshot encoding.
 
 **Constraints:** Offline resolution without runtime filesystem assumption; verifiable; catalog-index-driven (no hard-coded paths); practical for CLI and library.
 
@@ -1161,7 +1508,7 @@ UUID v4 was selected for its standardization (RFC 4122), universal tooling suppo
 | Category | Trigger | Required fields in error response | Example scenario |
 |---|---|---|---|
 | `structural` | A JSON document fails validation against its declared JSON Schema | `document_id` (if parseable), `format_version` (if parseable), `field_path` (dot-notation), `description` | A behavioral contract missing the required `obligations` array |
-| `semantic` | A reference in a document cannot be resolved to an existing artifact | `document_id`, `field_path` to the reference field, `description` | A manifest's `contracts.upload_object.id` does not match any contract in the catalog |
+| `semantic` | A reference cannot be resolved to a valid scoped artifact | `document_id`, `field_path`, `description` | A manifest contract reference is absent or wrong-version in the injected DocumentStore |
 | `version` | A document's `format_version` is syntactically invalid (not SemVer 2.0.0) | `document_id`, `field_path: "format_version"`, `description` | `format_version: "v1"` (not SemVer) |
 | `unresolvable-reference` | A `$ref` or `$schema` URI cannot be resolved from the Bundled Schema Catalog | `document_id`, `field_path` to the `$ref` location, unresolvable URI in `description` | Document declares `$schema: "https://example.com/my-schema"` which is not in the catalog |
 | `unparseable` | The input bytes are not valid JSON (or TOML for manifests) | `category: unparseable`, `byte_offset` or line number, `description` | Truncated JSON document |
@@ -1203,7 +1550,7 @@ Two selected Rust crates must be pinned to exact versions in `Cargo.lock`:
 
 **Schema catalog tampering**
 
-The release archive is signed with an asymmetric key. The signing covers the archive as a whole. An attacker who modifies a schema file inside an unpacked catalog invalidates the archive-level signature. If the embedded-binary distribution mechanism is used (DR-4), the catalog bytes are compiled into the binary at build time; tampering with the running binary is outside this threat model. For the filesystem overlay path, the validator does not verify individual file hashes — consumers who need file-level verification must verify the archive signature before extracting. This is a documented limitation.
+The release archive signature covers the exact archive, not subsequent live directory contents. P0-D explicit snapshot admission requires provenance policy plus comparison of frozen snapshot identity before use; the loader never reads live overlay files. A valid archive signature does not authorize altered extracted bytes or authenticate arbitrary snapshot constructors. Host/core compromise remains outside this boundary.
 
 ---
 
@@ -1219,7 +1566,7 @@ The release archive is signed with an asymmetric key. The signing covers the arc
 
 ### Property 2: Extension field round-trip preservation
 
-*For any* CloudDialect JSON document containing one or more valid community extension fields (prefix conforming to the namespace grammar, not reserved), parsing the document and serializing it back must produce a document where each extension field is byte-for-byte identical to the original.
+*For any* CloudDialect JSON document containing one or more valid community extension fields (prefix conforming to the namespace grammar, not reserved), parsing the document and serializing it back must preserve each qualified key and the exact encoded JSON value bytes, including escapes, numeric spelling and whitespace/member ordering inside that value. Per user clarification approved 2026-10-22, document/key ordering and whitespace outside extension values are not prescribed; decoded-value equality alone does not establish this property.
 
 **Validates: Requirements 3.5, 4.5, 10.2**
 
@@ -1255,7 +1602,7 @@ The release archive is signed with an asymmetric key. The signing covers the arc
 
 ### Property 8: Non-pass test outcomes require failure description
 
-*For any* verification result where at least one test entry has an outcome other than `pass`, that test entry must have a `failure_description` field between 1 and 2000 characters, or structural validation must fail.
+*For any* verification result where at least one test entry has an outcome other than pass, that entry must have a failure_description object with a required safe detail string of 1–2000 Unicode characters and no unknown fields, or structural validation must fail. A legacy string is not the P0-C object contract.
 
 **Validates: Requirements 4.3**
 
@@ -1267,7 +1614,7 @@ All validation errors are non-silent. The validator never partially validates a 
 
 **Unparseable input:** If the input bytes cannot be parsed as JSON, the validator returns `ErrorCategory::Unparseable` with a byte offset or line number. No further validation occurs.
 
-**Version errors:** An unsupported MAJOR version returns `ErrorCategory::UnsupportedMajorVersion` with the version string and a reference to compatibility documentation. A MINOR-newer version within a supported MAJOR returns a non-blocking warning; structural validation continues using the MAJOR.0.0 base schema.
+**Version errors:** An unsupported stable MAJOR returns `ErrorCategory::UnsupportedMajorVersion` with the version string and compatibility-document reference. Owner-approved initial VC-1 supports exact admitted stable precedence (build metadata ignored); unindexed PATCH/prerelease and valid core-u64 overflow return `UnsupportedVersion`, malformed SemVer returns the helper's `InvalidFormat`/structural category `Version`. A stable MINOR above the highest admitted stable MINOR in that MAJOR may use an actually admitted MAJOR.0.0 base with a non-blocking version warning. A separate base-check view normalizes only its effective version and projects root additions with exact escaped-path warnings; original input/reported version remains unchanged. Conditional/composed root declarations stay checked, and no nested fields or embedded JSON Schema content are recursively dropped. Instance `$schema` must equal the selected exact admitted URI, never a URI synthesized from build metadata or the future version. An opaque root reference scope that cannot safely expose field coverage fails closed; this is a conservative implementation boundary, not a waiver of broader future compatibility requirements.
 
 **Unresolvable schema URI:** If any `$ref` or `$schema` URI cannot be found in the catalog index, the validator returns `ErrorCategory::UnresolvableReference` identifying the exact URI. Partial validation does not occur.
 
@@ -1373,7 +1720,7 @@ crates/
         mod.rs                ← schema loading and catalog integration
         catalog.rs            ← CatalogIndex deserialization
         loader.rs             ← CatalogUrlLoader implementing boon::UrlLoader
-        embedded.rs           ← include_bytes! for embedded catalog
+        embedded.rs           ← include_dir! for embedded catalog
       manifest/
         mod.rs                ← public manifest types
         parser.rs             ← TOML deserialization into ManifestStruct
@@ -1384,7 +1731,7 @@ crates/
         semantic.rs           ← Phase 2: Reference integrity checks
         behavioral.rs         ← Phase 3: Evidence completeness, blocking-gap detection
         fidelity.rs           ← Fidelity mapping enforcement
-      error/
+      errors/
         mod.rs                ← ErrorCategory, ValidatorError, all result types
         gap.rs                ← BlockingGap, BlockingGapReport
     tests/
@@ -1397,22 +1744,25 @@ crates/
       integration/
 ```
 
-**Public API surface (traits and key types — no implementation):**
+**Target public API surface (DTOs, structural Validator/Validate, local and scoped semantic ManifestValidator/ValidateManifest, explicit-context check_fidelity_mapping and verify_artifact_hash delivered within scoped tests; JSON semantic methods, completeness and full mandatory blocker integration remain unfinished):**
+
+Current Validate exposes only validate_structural; the semantic method below is the remaining target, not a success/default/panic stub. Opaque root reference projection is conservatively unsupported; exact-version validation still uses the actual catalog-backed compiler. Whole canonical tasks/conformance and acceptance are not implied by this bounded structural API.
 
 ```rust
 // clouddialect-contracts public API
 
 pub trait Validate {
-    fn validate_structural(&self, document: &[u8]) -> StructuralResult;
-    fn validate_semantic(&self, document: &[u8]) -> SemanticResult;
+    fn validate_structural(&self, kind: DocumentKind, document: &[u8]) -> StructuralResult;
+    fn validate_semantic(&self, kind: DocumentKind, document: &[u8], store: &dyn DocumentStore) -> SemanticResult;
 }
 
 pub trait ValidateManifest {
     fn validate_manifest(&self, toml_bytes: &[u8]) -> ManifestValidationResult;
+    fn validate_manifest_semantic(&self, toml_bytes: &[u8], store: &dyn DocumentStore) -> SemanticResult;
 }
 
-pub struct Validator; // implements Validate
-pub struct ManifestValidator; // implements ValidateManifest
+pub struct Validator { /* owns explicit CatalogSnapshot; implements Validate */ }
+pub struct ManifestValidator { /* owns explicit CatalogSnapshot; implements ValidateManifest */ }
 
 // Result types (non-interchangeable)
 pub struct StructuralResult { ... }
@@ -1439,13 +1789,13 @@ The following components are **required** for Spec 3 (Python OSS-to-S3 first pac
 - `schema/` module: catalog loading, embedded schema bytes, `CatalogUrlLoader`.
 - `manifest/` module: TOML parsing and manifest structural validation.
 - `validator/structural.rs`: Phase 1 for behavioral contract, evidence record, verification result.
-- `validator/semantic.rs`: Contract reference resolution from catalog.
-- `error/` module: All `ErrorCategory` variants and `ValidatorError`.
+- `validator/semantic.rs`: Exact contract/evidence resolution through injected project-scoped DocumentStore, never schema catalog or ambient filesystem.
+- `errors/` module: All ErrorCategory variants, ValidatorError, phase results and P0-A/C/E document/reference types with root re-exports.
 - Conformance fixtures: positive, negative, and adversarial suites (minimum coverage for Spec 3 operations).
 
 The following components are **deferred** to later packs:
 
-- `validator/behavioral.rs` and `BehavioralResult`: The full behavioral verification phase requires independently controlled tests, which depend on Spec 2's execution environment. Phase 3 may be stubbed with `BehavioralResult::Deferred` for the first release.
+- Independently controlled behavioral test execution remains Spec 2 scope. Spec 1 task 14 implements non-accepting completeness/gap checks and result projection types; Deferred is a value of BehavioralOutcome, not a BehavioralResult enum variant.
 - `integration/artifact-hash-mismatch` fixture: Requires a live verification run, dependent on Spec 2.
 - Extension registry: The `extension-registry.json` file will be present but empty at first release, as required by Requirement 10.6.
 - Compatibility policy document: The full written policy (Requirement 7.1) is a documentation artifact to be produced alongside the first schema release, not gating Spec 3.
@@ -1518,11 +1868,11 @@ This section provides a canonical, numbered index of all design decisions for th
 
 ### DDR-05: Schema Catalog Distribution — Embedded Binary + Filesystem Overlay
 
-**Decision:** Catalog files are embedded in the binary via `include_bytes!` at compile time. An optional `CLOUDDIALECT_CATALOG_DIR` environment variable enables filesystem override.
+**P0 proposed amendment — pending owner approval:** Catalog files are embedded at compile time with include_dir (task 8) or explicitly supplied as immutable admitted snapshot parts. No environment-selected override. See P0-D.
 
-**Summary:** See detailed rationale in DR-4 above. Key points: embedded default guarantees offline resolution without filesystem assumptions, filesystem overlay supports development and advanced deployment scenarios, catalog index drives URI-to-path resolution (no hard-coded paths).
+**Summary:** P0-D proposes embedded or explicitly admitted immutable snapshots with exact index/support-resource lookup, no ambient override. Actual pinned engine/meta-schema offline behavior and provenance/digest checks need implementation evidence; this summary guarantees no measured security outcome.
 
-**Env-var override:** `CLOUDDIALECT_CATALOG_DIR=/path/to/catalog` — if set, `CatalogUrlLoader` reads the catalog from the filesystem directory instead of the embedded bytes. The directory must contain a valid `index.json` at its root. Traceability: Requirement 1, 9, UD-5 resolved.
+**Explicit override:** Trusted host admission may snapshot approved bytes and call CatalogSnapshot::from_parts. Both historical environment variable names are ignored by the library; snapshot identity is compared with trusted policy before use. Traceability: Requirement 1, 9.5; P0-D. This proposal does not close BG-01 or approve a runtime profile.
 
 ---
 
@@ -1712,4 +2062,4 @@ This section maps each requirement to the design section(s) that satisfy it.
 | **UD-2** | Resolved — DDR-02: `boon` crate selected. |
 | **UD-3** | Resolved — DDR-03: `toml` crate selected. |
 | **UD-4** | Resolved — DDR-04: directory-per-fixture with `input.json` + `expected.json`. |
-| **UD-5** | Resolved — DDR-05: embedded binary catalog + `CLOUDDIALECT_CATALOG_DIR` override. |
+| **UD-5** | P0 amendment pending approval — DDR-05/P0-D: embedded snapshot or explicit admitted immutable parts; no ambient environment override. |

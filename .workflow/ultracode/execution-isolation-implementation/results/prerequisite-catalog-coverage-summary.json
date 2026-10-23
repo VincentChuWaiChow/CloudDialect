@@ -1,0 +1,116 @@
+{
+  "profiles_directory": "/tmp/clouddialect-catalog-profiles-ujtzbip3",
+  "objects": [
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/behavioral_schema-7ae9252b3219faf9",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/catalog_index-ad856dede90249de",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/catalog_schemas-0d6e22f7e147aaf8",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/clouddialect_contracts-6605992efdf07329",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/conformance-8578d0c356816383",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/evidence_schema-f68f70413b3ae17c",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/manifest_types-c2a7814f60309259",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/phase_results-68e789a47189adcf",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/reference_contracts-9b5505e6dac5d91b",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/schema_harness-902096b2a524bc0e",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/source_document_models-b71b80c49c26b615",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/verification_models-8dde92cbaf7dc767",
+    "/tmp/clouddialect-phase-coverage-target/debug/deps/verification_schema-e0c61a540e1e3a83"
+  ],
+  "production_files": [
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/catalog.rs",
+      "summary": {
+        "lines": {
+          "count": 165,
+          "covered": 159,
+          "percent": 96.36363636363636
+        },
+        "functions": {
+          "count": 15,
+          "covered": 12,
+          "percent": 80
+        },
+        "instantiations": {
+          "count": 30,
+          "covered": 12,
+          "percent": 40
+        },
+        "regions": {
+          "count": 215,
+          "covered": 204,
+          "notcovered": 11,
+          "percent": 94.88372093023256
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    },
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/validator/raw_objects.rs",
+      "summary": {
+        "lines": {
+          "count": 39,
+          "covered": 39,
+          "percent": 100
+        },
+        "functions": {
+          "count": 7,
+          "covered": 7,
+          "percent": 100
+        },
+        "instantiations": {
+          "count": 75,
+          "covered": 55,
+          "percent": 73.33333333333333
+        },
+        "regions": {
+          "count": 61,
+          "covered": 58,
+          "notcovered": 3,
+          "percent": 95.08196721311475
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    }
+  ],
+  "production_totals": {
+    "lines": {
+      "count": 204,
+      "covered": 198,
+      "percent": 97.05882352941177
+    },
+    "functions": {
+      "count": 22,
+      "covered": 19,
+      "percent": 86.36363636363636
+    },
+    "regions": {
+      "count": 276,
+      "covered": 262,
+      "percent": 94.92753623188406
+    }
+  },
+  "threshold": 80,
+  "production_line_threshold_pass": true,
+  "scope": "Emitted production mappings only. Derive-only unmapped DTOs excluded, tests/dependencies not counted, no branch coverage or full-spec/native proof."
+}

@@ -1,0 +1,14 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.34s
+     Running tests/version_compatibility.rs (/tmp/clouddialect-phase-target/debug/deps/version_compatibility-b2c96e88910b8160)
+
+running 7 tests
+test newer_stable_minor_uses_only_an_admitted_major_zero_zero_base ... ok
+test only_exact_admitted_stable_precedence_is_supported ... ok
+test prereleases_remain_representable_but_are_not_supported ... ok
+test unsupported_major_and_missing_profiles_never_get_a_fallback ... ok
+test the_helper_does_not_parse_dialects_or_pack_ranges_as_document_versions ... ok
+test full_semver_syntax_errors_are_not_overflow_or_compatibility ... ok
+test valid_oversized_core_numbers_are_explicitly_unsupported ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

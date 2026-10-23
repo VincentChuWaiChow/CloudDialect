@@ -1,0 +1,71 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.43s
+     Running tests/verification_schema.rs (/tmp/clouddialect-phase-target/debug/deps/verification_schema-7265d26e34a6ae10)
+
+running 8 tests
+test algorithm_names_and_digest_shapes_are_closed_but_hashes_still_need_verification ... FAILED
+test approval_requires_all_fields_and_utc_z_but_never_authenticates_an_approver ... FAILED
+test complete_record_has_structure_not_authenticated_authority ... FAILED
+test every_nonpass_requires_a_bounded_structured_unicode_failure ... FAILED
+test pack_toolchain_and_document_versions_use_full_semver ... FAILED
+test required_configuration_context_and_artifact_identities_are_enforced ... FAILED
+test tests_are_nonempty_with_explicit_identity_outcome_and_obligations ... FAILED
+test valid_community_extensions_do_not_replace_required_core_fields ... FAILED
+
+failures:
+
+---- algorithm_names_and_digest_shapes_are_closed_but_hashes_still_need_verification stdout ----
+
+thread 'algorithm_names_and_digest_shapes_are_closed_but_hashes_still_need_verification' (133) panicked at tests/verification_schema.rs:10:5:
+required verification-result schema is not delivered
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- approval_requires_all_fields_and_utc_z_but_never_authenticates_an_approver stdout ----
+
+thread 'approval_requires_all_fields_and_utc_z_but_never_authenticates_an_approver' (134) panicked at tests/verification_schema.rs:10:5:
+required verification-result schema is not delivered
+
+---- complete_record_has_structure_not_authenticated_authority stdout ----
+
+thread 'complete_record_has_structure_not_authenticated_authority' (135) panicked at tests/verification_schema.rs:10:5:
+required verification-result schema is not delivered
+
+---- every_nonpass_requires_a_bounded_structured_unicode_failure stdout ----
+
+thread 'every_nonpass_requires_a_bounded_structured_unicode_failure' (136) panicked at tests/verification_schema.rs:10:5:
+required verification-result schema is not delivered
+
+---- pack_toolchain_and_document_versions_use_full_semver stdout ----
+
+thread 'pack_toolchain_and_document_versions_use_full_semver' (137) panicked at tests/verification_schema.rs:10:5:
+required verification-result schema is not delivered
+
+---- required_configuration_context_and_artifact_identities_are_enforced stdout ----
+
+thread 'required_configuration_context_and_artifact_identities_are_enforced' (138) panicked at tests/verification_schema.rs:10:5:
+required verification-result schema is not delivered
+
+---- tests_are_nonempty_with_explicit_identity_outcome_and_obligations stdout ----
+
+thread 'tests_are_nonempty_with_explicit_identity_outcome_and_obligations' (139) panicked at tests/verification_schema.rs:10:5:
+required verification-result schema is not delivered
+
+---- valid_community_extensions_do_not_replace_required_core_fields stdout ----
+
+thread 'valid_community_extensions_do_not_replace_required_core_fields' (140) panicked at tests/verification_schema.rs:10:5:
+required verification-result schema is not delivered
+
+
+failures:
+    algorithm_names_and_digest_shapes_are_closed_but_hashes_still_need_verification
+    approval_requires_all_fields_and_utc_z_but_never_authenticates_an_approver
+    complete_record_has_structure_not_authenticated_authority
+    every_nonpass_requires_a_bounded_structured_unicode_failure
+    pack_toolchain_and_document_versions_use_full_semver
+    required_configuration_context_and_artifact_identities_are_enforced
+    tests_are_nonempty_with_explicit_identity_outcome_and_obligations
+    valid_community_extensions_do_not_replace_required_core_fields
+
+test result: FAILED. 0 passed; 8 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--test verification_schema`

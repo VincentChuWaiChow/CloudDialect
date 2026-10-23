@@ -1,0 +1,8 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.28s
+     Running tests/public_api_compatibility.rs (/tmp/clouddialect-phase-target/debug/deps/public_api_compatibility-f3e9419d07104e5b)
+
+running 1 test
+test existing_facades_reexport_the_same_public_definitions ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

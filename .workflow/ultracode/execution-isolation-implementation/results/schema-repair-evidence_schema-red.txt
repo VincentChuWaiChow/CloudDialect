@@ -1,0 +1,22 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.35s
+     Running tests/evidence_schema.rs (/tmp/clouddialect-phase-target/debug/deps/evidence_schema-3364e4582ff95d97)
+
+running 1 test
+test observed_and_inferred_records_can_preserve_valid_unresolved_assumptions ... FAILED
+
+failures:
+
+---- observed_and_inferred_records_can_preserve_valid_unresolved_assumptions stdout ----
+
+thread 'observed_and_inferred_records_can_preserve_valid_unresolved_assumptions' (317) panicked at tests/evidence_schema.rs:64:9:
+observed
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    observed_and_inferred_records_can_preserve_valid_unresolved_assumptions
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 7 filtered out; finished in 0.01s
+
+error: test failed, to rerun pass `--test evidence_schema`

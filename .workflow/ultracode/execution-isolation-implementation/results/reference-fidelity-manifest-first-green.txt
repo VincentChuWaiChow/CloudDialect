@@ -1,0 +1,21 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.01s
+     Running tests/fidelity_mapping.rs (/tmp/clouddialect-phase-target/debug/deps/fidelity_mapping-f6acfd7b7ac884aa)
+
+running 5 tests
+test unsupported_is_retained_and_does_not_require_a_fidelity_lookup ... ok
+test missing_bindings_records_and_outages_never_become_success ... ok
+test corrupted_or_schema_invalid_records_are_not_used_for_fidelity ... ok
+test mandatory_semantics_block_and_all_fidelity_violations_are_reported_without_acceptance ... ok
+test full_and_partial_enforce_every_declared_obligation_fidelity ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.12s
+
+     Running tests/manifest_semantic.rs (/tmp/clouddialect-phase-target/debug/deps/manifest_semantic-8de376cdd78f705e)
+
+running 3 tests
+test invalid_local_manifest_never_queries_store ... ok
+test unsupported_without_contracts_is_semantic_pass_not_authority ... ok
+test local_pass_missing_contract_semantic_fail_and_trait_dispatch_remain_separate ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s

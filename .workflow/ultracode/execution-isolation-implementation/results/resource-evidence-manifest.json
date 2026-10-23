@@ -1,0 +1,51 @@
+[
+  {
+    "stage": "dto-red",
+    "raw_path": "/tmp/clouddialect-resource-dto-red.txt",
+    "raw_sha256": "3f69a3478e8b379f77bbe9d65f466d8f14946ebe20bb0c8a0d64b4ca9f3dccdb",
+    "presentation_path": ".workflow/ultracode/execution-isolation-implementation/results/resource-dto-red.txt",
+    "presentation_sha256": "3f69a3478e8b379f77bbe9d65f466d8f14946ebe20bb0c8a0d64b4ca9f3dccdb",
+    "normalization": "trailing whitespace/blank EOF only"
+  },
+  {
+    "stage": "dto-green",
+    "raw_path": "/tmp/clouddialect-resource-dto-green.txt",
+    "raw_sha256": "94ef5992b68069f204a98158e64f92e4701dfd3a3030d27bc1569e727ed568fa",
+    "presentation_path": ".workflow/ultracode/execution-isolation-implementation/results/resource-dto-green.txt",
+    "presentation_sha256": "143c2917b98a9bd5c7a3fd235e682b89473437cc7caef7f098bbe4499795092d",
+    "normalization": "trailing whitespace/blank EOF only"
+  },
+  {
+    "stage": "schema-red",
+    "raw_path": "/tmp/clouddialect-resource-schema-red.txt",
+    "raw_sha256": "8c220197cca4ff43dc3e2f8759c92e5c822f7e60e2088d858f8ea46705a5a7d1",
+    "presentation_path": ".workflow/ultracode/execution-isolation-implementation/results/resource-schema-red.txt",
+    "presentation_sha256": "8c220197cca4ff43dc3e2f8759c92e5c822f7e60e2088d858f8ea46705a5a7d1",
+    "normalization": "trailing whitespace/blank EOF only"
+  },
+  {
+    "stage": "schema-green",
+    "raw_path": "/tmp/clouddialect-resource-schema-green.txt",
+    "raw_sha256": "8933fd6a21ab2bff7eda8c45c355c60d3b080664abc33ee9905e69241150235f",
+    "presentation_path": ".workflow/ultracode/execution-isolation-implementation/results/resource-schema-green.txt",
+    "presentation_sha256": "646d98350392956a1944d5c4da9cd0956a466c58e70790f80292d3a7316fce18",
+    "normalization": "trailing whitespace/blank EOF only"
+  },
+  {
+    "presentation_path": ".workflow/ultracode/execution-isolation-implementation/results/resource-dto-fmt.txt",
+    "raw_path": "/tmp/clouddialect-raw-resource-dto-fmt.txt",
+    "raw_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "presentation_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "normalization": "trailing whitespace/blank EOF only"
+  },
+  {
+    "raw_path": "/tmp/clouddialect-resource-dto-coverage.json",
+    "raw_sha256": "832bf66f6dc0a9ac4ec295d49abac71abb7f706e4694e163726ac38e82e9f169",
+    "retention": "raw full dependency export local only; filtered summaries/counters retained"
+  },
+  {
+    "raw_path": "/tmp/clouddialect-resource-final-coverage.json",
+    "raw_sha256": "f91d078e8b3e2f465bc716beab7d7e4b74fbb36b5b26f8876b1b3dd4bb0ac259",
+    "retention": "raw full dependency export local only; filtered summaries/counters retained"
+  }
+]

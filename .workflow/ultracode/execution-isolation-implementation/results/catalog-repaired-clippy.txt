@@ -1,0 +1,14 @@
+    Checking clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+error: called `.err().expect()` on a `Result` value
+   --> tests/catalog_loading.rs:325:18
+    |
+325 |                   .err()
+    |  __________________^
+326 | |                 .expect("built-in byte substitution must be rejected at admission");
+    | |_______________________^ help: try: `expect_err`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.99.0/index.html#err_expect
+    = note: `-D clippy::err-expect` implied by `-D warnings`
+    = help: to override `-D warnings` add `#[allow(clippy::err_expect)]`
+
+error: could not compile `clouddialect-contracts` (test "catalog_loading") due to 1 previous error

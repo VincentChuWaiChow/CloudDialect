@@ -1,0 +1,20 @@
+test_all_units_have_acyclic_matching_prerequisites (__main__.ImplementationPlanningTests.test_all_units_have_acyclic_matching_prerequisites) ... ok
+test_approval_and_pinned_source_are_not_runtime_proof (__main__.ImplementationPlanningTests.test_approval_and_pinned_source_are_not_runtime_proof) ... ok
+test_canonical_task_coverage (__main__.ImplementationPlanningTests.test_canonical_task_coverage) ... ok
+test_concrete_units_have_bounded_scope_and_checks (__main__.ImplementationPlanningTests.test_concrete_units_have_bounded_scope_and_checks) ... FAIL
+test_first_slice_stays_narrow (__main__.ImplementationPlanningTests.test_first_slice_stays_narrow) ... ok
+test_fixture_filter_is_not_libtest_name_filter (__main__.ImplementationPlanningTests.test_fixture_filter_is_not_libtest_name_filter) ... ok
+test_preserves_unowned_files (__main__.ImplementationPlanningTests.test_preserves_unowned_files) ... ok
+
+======================================================================
+FAIL: test_concrete_units_have_bounded_scope_and_checks (__main__.ImplementationPlanningTests.test_concrete_units_have_bounded_scope_and_checks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/.workflow/ultracode/execution-isolation-implementation/verify-planning.py", line 60, in test_concrete_units_have_bounded_scope_and_checks
+    self.assertIn(field, block, (node, field))
+AssertionError: 'Target:' not found in 'Real downstream compatibility handoff\n    - Spec1: task 26 dependency review portion; Spec 2 TASK-006/BG-01. Requirements: 8.1–8.7, 9.1–9.5, 12.3, NFR-1.\n    - Owned: `tests/execution_consumer.rs`, `docs/upstream-compatibility.md`, dependency/license evidence notes in the run, and repository-root `THIRD-PARTY-NOTICES.md` only if actual approved dependency changes require it (never a crate-local duplicate).\n    - Cases: actual imports/signatures/schemas; non-accepting mappings; catalog identities; manifest capability validation vs grant; two-validator/TOML interoperability; complete fixture/coverage/lint evidence; missing native checks block handoff.\n    - Done: exact immutable delivered revision/version/API/schema/catalog identities, dependency/license inventory, current full tests and upstream/core owner acceptance. No execution crate is created; no BG-01 closure by types-only or mocks. Estimate: 3–4h after prerequisites. Dependencies: 3.2, 3.3, 3.4, 3.5. Gates: G-NATIVE and all actual evidence requirements.\n' : ('3.6', 'Target:')
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.004s
+
+FAILED (failures=1)

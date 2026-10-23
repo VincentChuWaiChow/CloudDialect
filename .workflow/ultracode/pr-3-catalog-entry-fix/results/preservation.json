@@ -1,0 +1,10 @@
+{
+  "head_unchanged": "0b3feabbc031eceb196156373ad78adf4a4d78de",
+  "tracked_changed": [
+    "crates/clouddialect-contracts/src/schema/catalog.rs",
+    "crates/clouddialect-contracts/tests/catalog_extension_roundtrip.rs"
+  ],
+  "all_other_baseline_hashes_and_symlinks_preserved": true,
+  "reviewed_source_hashes_still_match": true,
+  "index_unchanged": true
+}

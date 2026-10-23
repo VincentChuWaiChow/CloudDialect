@@ -1,5 +1,8 @@
 # Requirements Document
 
+**Later publication action approval:** the user explicitly requested git commit and git push for this work. Those actions are now authorized; the earlier no-commit/no-push implementation limit is historical. Native probes, deployment and releases remain unauthorized.
+
+
 ## Introduction
 
 CloudDialect is a community framework for cloud workload transformation and migration. This document defines the behavioral contract and evidence schemas that form the foundation layer for all CloudDialect transformation activity — Spec 1 of 3 in a sequenced set.
@@ -8,6 +11,10 @@ The purpose of this spec is to specify the versioned, machine-readable schemas a
 
 This spec does not define Rust CLI behavior, worker isolation, transformation logic, production cutover, or commercial service delivery. It does not alter CloudDialect's licensing model.
 
+**Current continuation status (2026-10-22):** user approved P0-A–F for implementation planning, then separately authorized the remaining Spec 1 prerequisite units in [implementation-plan.md](implementation-plan.md), TDD and no commits/probes/pushes/releases. User attests this is a new project and approves document/catalog **1.0.0** and crate API **0.1.0** as the initial MVP versions. This is not an independent external-publication audit or security-gate approval. Exact encoded extension JSON value bytes are required; raw_value on the existing pinned serde_json is separately approved.
+
+**Delivery is partial.** DTOs, schemas, catalog inventory, frozen snapshot/loading, structural JSON validation, local TOML rules and candidate hash equality have bounded verification. JSON semantic/completeness validation, full mandatory-blocker integration, exhaustive conformance and delivered downstream compatibility remain unfinished; scoped fidelity/TOML semantic delivery is recorded in the current report. See the [current run report](../../../.workflow/ultracode/execution-isolation-implementation/final-report.md) for actual evidence and outstanding work. Canonical task checkmarks are conservative; BG-01 and Spec 2 UD-1–UD-5 remain OPEN.
+
 **Evidence status convention used in this document:**
 Every requirement carries one of four evidence status labels reflecting where each requirement stands in the development lifecycle:
 - `MISSING` — no schema, fixture, test, or implementation artifact exists yet.
@@ -15,7 +22,7 @@ Every requirement carries one of four evidence status labels reflecting where ea
 - `IMPLEMENTED BUT UNVERIFIED` — an artifact exists but has not been validated against conformance fixtures or integration tests.
 - `VERIFIED WITHIN A DECLARED SCOPE` — passing conformance fixtures and integration tests exist for a stated set of inputs and environments.
 
-All requirements in this document start at `MISSING` because no implementation exists. The status field exists to make gaps visible throughout development.
+The labels below retain the original full-conformance baseline, not a claim that no implementation exists now. Current bounded unit evidence and remaining gaps are recorded in the linked delivery plan/run report; partial artifact delivery does not verify an entire requirement.
 
 ---
 
@@ -130,6 +137,7 @@ All requirements in this document start at `MISSING` because no implementation e
    - Evidence status: `MISSING`
 
 2. THE Behavioral_Contract_Schema SHALL require each contract document to declare resource dependencies including: identity, permissions required, and configuration parameters; for each dependency, any ordering, consistency, retry, or failure behavior that is known MUST be declared, and any such behavior that is not known MUST be recorded as an unresolved-assumption entry on that dependency.
+   - Owner-approved RC-1 binding (2026-10-22): each resource-specific unresolved assumption requires `behavior` in `ordering | consistency | retry | failure` and nonempty `assumption_id`, `description`, `reason`. Every dependency covers all four dimensions by a nonempty `known_behavior.<dimension>` value or a matching populated assumption; both may coexist for partial knowledge. Generic evidence/obligation assumptions remain unchanged. Nonempty means decoded string length at least one, not proof the claim is true.
    - Verification method: Conformance fixture with example operations having non-trivial resource dependencies, including one dependency where retry behavior is declared and one where it is recorded as an unresolved assumption.
    - Evidence status: `MISSING`
 
@@ -197,7 +205,7 @@ All requirements in this document start at `MISSING` because no implementation e
 
 #### Acceptance Criteria
 
-1. THE Verification_Result_Schema SHALL require each result document to declare: a unique document identifier, its document-format version, the identity and content hash of the transformation candidate, the pack identity and version, the toolchain identity and version, the set of test identities run, each test outcome, and the configuration relevant to the verification run.
+1. THE Verification_Result_Schema SHALL require each result document to declare: a unique document identifier, its document-format version, the candidate identity and content hash, pack/toolchain identities with versions and content hashes, test identities and outcomes with obligation links, an immutable secret-free configuration artifact reference and the execution/input/dependency/suite/oracle/policy binding specified by P0-C.
    - Verification method: Conformance fixture asserting documents missing any of these fields fail structural validation.
    - Evidence status: `MISSING`
 
@@ -205,11 +213,11 @@ All requirements in this document start at `MISSING` because no implementation e
    - Verification method: Conformance fixture asserting a result document with a hash algorithm name absent from the enumerated list fails structural validation.
    - Evidence status: `MISSING`
 
-3. WHEN any test in a verification run has an outcome other than `pass`, THE Verification_Result_Schema SHALL require the result document to record for that test: the test identifier, the observed outcome value, and a structured failure description of between 1 and 2000 characters containing at least one human-readable detail field.
+3. WHEN any test in a verification run has an outcome other than `pass`, THE Verification_Result_Schema SHALL require the result document to record for that test: the test identifier, the observed outcome value, and `failure_description` as an object with a required safe human-readable `detail` string of 1–2000 Unicode characters and no unknown object fields.
    - Verification method: Conformance fixture asserting a result with a non-passing outcome but missing or empty failure description fails structural validation.
    - Evidence status: `MISSING`
 
-4. WHEN a result document carries an acceptance decision, THE Verification_Result_Schema SHALL require: at least one approver identity, and an approval timestamp expressed as a UTC date-time.
+4. WHEN a result document carries an acceptance decision, THE Verification_Result_Schema SHALL require: at least one approver identity, a normalized UTC Z approval timestamp, a reference matching this verification document's id/version, and immutable approval-evidence reference whose authenticity and verification binding must be checked independently of document content.
    - Verification method: Conformance fixture asserting a result carrying an acceptance decision but missing approver identity or timestamp fails structural validation.
    - Evidence status: `MISSING`
 
@@ -223,6 +231,10 @@ All requirements in this document start at `MISSING` because no implementation e
 
 7. THE Verification_Result_Schema SHALL require the test-identities array to be present and contain at least one entry; a result document declaring zero tests run SHALL fail structural validation.
    - Verification method: Conformance fixture asserting a result document with an empty or absent test-identities array fails structural validation.
+   - Evidence status: `MISSING`
+
+8. WHEN a verification document is consumed, THE Semantic_Validator SHALL reject duplicate test identities, unmapped obligation identities, invalid hash encodings, non-UTC timestamps and inconsistent result references without interpreting a structurally valid binding, origin string or approval string as authenticated authority.
+   - Verification method: Positive and seeded-negative fixtures for P0-C; Spec 2 separately compares protected expected context/obligations and authenticates observations/approval before acceptance.
    - Evidence status: `MISSING`
 
 ---
@@ -261,6 +273,10 @@ All requirements in this document start at `MISSING` because no implementation e
 
 7. WHEN a manifest declares an operation with `behavioral_fidelity` value `unsupported`, THE Manifest_Validator SHALL accept the manifest and SHALL NOT silently omit the unsupported operation declaration; the entry SHALL remain accessible through the same operation-listing interface as all other operation entries.
    - Verification method: Conformance fixture asserting the unsupported operation is present and returned when the full operation list is retrieved after manifest parsing.
+   - Evidence status: `MISSING`
+
+8. THE Pack_Manifest_Schema SHALL require the P0-B `[capabilities]` table containing its explicit supported format version and typed requirement list, distinct from `[x]`, without treating declarations as grants or implying propose/approve/deploy/delete authority from another action.
+   - Verification method: Fixtures for explicit empty requirements, valid typed requirement, missing/unknown versions/actions/fields, duplicate IDs, unknown operation references and extension escalation; Spec 2 admission denies unresolved resources and prohibited worker authority.
    - Evidence status: `MISSING`
 
 ---
@@ -312,6 +328,7 @@ All requirements in this document start at `MISSING` because no implementation e
    - Evidence status: `MISSING`
 
 3. WHEN a validator encounters a document at a MINOR version newer than the validator's supported version within the same MAJOR version, THE Validator SHALL process the document using the MAJOR.0.0 base schema and SHALL surface a non-blocking warning identifying the newer minor version and the fields it did not validate.
+   - Owner-approved VC-1 initial profile: exact admitted stable versions are supported by precedence (build metadata ignored). Newer stable MINOR uses an actually admitted MAJOR.0.0 base and root-only additions with exact-path warnings; original bytes/version remain intact. Unsupported nested additions are not projected away, while existing freeform/open base-schema data remains valid. Same-MINOR unindexed PATCH, prerelease and valid core-u64 overflow are UnsupportedVersion; malformed syntax remains InvalidFormat in the helper. Trusted kind and exact admitted URI selection remain mandatory.
    - Verification method: Conformance fixture asserting a document with a MINOR-newer version within the same MAJOR is processed without a validation error but with a recorded warning identifying the version difference.
    - Evidence status: `MISSING`
 
@@ -337,7 +354,7 @@ All requirements in this document start at `MISSING` because no implementation e
    - Verification method: Review of Validator API surface confirming `StructuralResult` has no semantic or behavioral correctness fields; integration test asserting structural validation alone does not produce a `SemanticResult` or `BehavioralResult`.
    - Evidence status: `MISSING`
 
-3. WHEN semantic validation is performed, THE Semantic_Validator SHALL check both of the following: (a) every contract reference in a manifest resolves by exact identifier and version lookup in the catalog to an existing contract document; and (b) every evidence reference in a contract document resolves by exact identifier lookup to an existing evidence record.
+3. WHEN semantic validation is performed, THE Semantic_Validator SHALL check both of the following through an explicitly injected project-scoped DocumentStore, separate from the schema catalog: (a) every manifest contract reference resolves by exact identifier/version; and (b) every contract evidence reference resolves uniquely by exact identifier to a structurally valid immutable evidence record.
    - Verification method: Integration test with a manifest referencing a non-existent contract by identifier, asserting a `SemanticResult` containing a resolution-failure error is returned.
    - Evidence status: `MISSING`
 
@@ -347,6 +364,14 @@ All requirements in this document start at `MISSING` because no implementation e
 
 5. THE Framework_Core SHALL document that a structurally valid document never, by itself, establishes migration correctness; this statement MUST appear explicitly in the schema documentation for each document type.
    - Verification method: Review of schema documentation for each document type confirming the statement is present.
+   - Evidence status: `MISSING`
+
+6. THE Framework_Core SHALL keep BehavioralOutcome::Deferred, BehavioralOutcome::EvidenceComplete and BehavioralOutcome::Blocked non-accepting, with the P0-A result/reference/test projection contract and no accepting conversion from structural, semantic or evidence-completeness results.
+   - Verification method: API/fixture checks for all three outcomes, empty completeness projection, mismatched/stale verification projection and unknown/failed/skipped mandatory evidence; Spec 2 owns authenticated behavioral execution and final acceptance.
+   - Evidence status: `MISSING`
+
+7. THE Validator SHALL expose separate JSON and TOML semantic entrypoints receiving the P0-E DocumentStore, with trusted explicit DocumentKind for JSON, failing on missing, ambiguous, corrupt, wrong-type or unavailable referenced records rather than consulting ambient paths or another project.
+   - Verification method: JSON/TOML signature consumer tests and store fixtures with exact-version success and all named failure modes; no network or cross-project fallback.
    - Evidence status: `MISSING`
 
 ---
@@ -375,6 +400,10 @@ All requirements in this document start at `MISSING` because no implementation e
    - Verification method: Review of Validator implementation confirming all schema path lookups use the catalog index; integration test asserting validation succeeds after relocating the catalog to a non-default path when the index is updated accordingly.
    - Evidence status: `MISSING`
 
+5. THE Validator SHALL select schema material only from an embedded or explicitly supplied immutable CatalogSnapshot admitted by trusted caller policy, without reading environment-selected overrides or exposing network-resolver replacement through its public API.
+   - Verification method: Embedded/explicit snapshot positive fixtures, tampered/index/path/meta-schema failures and hostile environment variables having no effect; actual pinned engine adapter API must be verified before implementation.
+   - Evidence status: `MISSING`
+
 ---
 
 ### Requirement 10: Extension Mechanism
@@ -395,7 +424,7 @@ All requirements in this document start at `MISSING` because no implementation e
    - Evidence status: `MISSING`
 
 2. WHEN a document contains an extension field whose qualified key prefix conforms to the documented namespace grammar and is not a reserved prefix, THE Validator SHALL treat the field as a valid unknown property, SHALL NOT fail structural validation because of its presence, and SHALL preserve the field unchanged during any serialization or round-trip operation performed by a conforming parser.
-   - Verification method: Conformance fixture asserting (a) a document with a valid community extension field passes structural validation, and (b) the extension field is present and byte-for-byte identical after round-trip parse-and-serialize.
+   - Verification method: Conformance fixture asserting (a) a document with a valid community extension field passes structural validation, and (b) its qualified key is preserved and its encoded JSON value is byte-for-byte identical after round-trip parse-and-serialize, including escapes, numeric spelling and whitespace/member ordering inside that value. User clarification approved 2026-10-22: document/key ordering and whitespace outside extension values are not prescribed; decoded-value equality alone is insufficient.
    - Evidence status: `MISSING`
 
 3. WHEN a document contains a field whose qualified key prefix matches a reserved namespace (case-insensitive), THE Validator SHALL surface a warning that includes: the violating field name exactly as it appeared in the document, and a description stating that the prefix is reserved for core use; this warning SHALL NOT cause the document to fail structural validation.
@@ -403,6 +432,7 @@ All requirements in this document start at `MISSING` because no implementation e
    - Evidence status: `MISSING`
 
 4. IF an extension field is declared as required for behavioral correctness or security enforcement in a document (i.e., the document explicitly declares the extension as mandatory), AND THE active Validator does not recognize that extension namespace, THEN THE Validator SHALL produce an explicit blocker identifying the unrecognized mandatory extension and SHALL NOT permit the document to be accepted or the associated transformation to be promoted.
+   - Owner-approved EX-1 declaration (2026-10-22): all five JSON document kinds permit optional root `required_extensions`, an array of unique decoded ASCII namespace prefixes without a colon. Omission or empty means none; duplicate strings, malformed prefixes and non-array/non-string values fail structurally. The declaration alone is sufficient to require the separate blocker; a payload is not required. Recognition requires trusted implemented semantics, never catalog/registry membership, ownership or payload claims. A structurally valid unknown mandatory declaration remains structurally valid and separately blocks acceptance.
    - Verification method: Integration test asserting that a document declaring an unrecognized mandatory extension produces a blocker result and cannot be accepted.
    - Evidence status: `MISSING`
 

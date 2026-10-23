@@ -1,0 +1,210 @@
+{
+  "created_at": "2026-10-22T14:29:40.058379+00:00",
+  "normalization": "Text logs only: trailing whitespace and blank EOF removed; raw copies and hashes preserved. Source/schema/raw payload fixtures untouched. Large raw LLVM exports retained in /tmp, corrected summaries tracked.",
+  "files": [
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-dto-red.txt",
+      "raw_path": "/tmp/clouddialect-extension-dto-red.txt",
+      "raw_sha256": "a45457296ef340b426068be3d604a09ed7ab061e0ffac43020c2db5031792c63",
+      "presentation_sha256": "a45457296ef340b426068be3d604a09ed7ab061e0ffac43020c2db5031792c63"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-dto-runtime-red.txt",
+      "raw_path": "/tmp/clouddialect-extension-dto-runtime-red.txt",
+      "raw_sha256": "53dd8ab3047369d396fbc25e5fd0f6624a04c03ec6f4f399f3315ae30a77e9db",
+      "presentation_sha256": "53dd8ab3047369d396fbc25e5fd0f6624a04c03ec6f4f399f3315ae30a77e9db"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-dto-green.txt",
+      "raw_path": "/tmp/clouddialect-extension-dto-green.txt",
+      "raw_sha256": "8a53e0f348dbbc835aeb01f2e4f24641c870a4384585fc592e0573ee71b6c2fb",
+      "presentation_sha256": "2f515ac1acbfadcdb3c7f5830cb934fb7b7ae69bf275a632d1f28ec8da578eeb"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-primary-red.txt",
+      "raw_path": "/tmp/clouddialect-extension-primary-red.txt",
+      "raw_sha256": "20779fea41f73519c7b25427a4809e8ccee125483a5ec61da1b07ca7daaa915b",
+      "presentation_sha256": "20779fea41f73519c7b25427a4809e8ccee125483a5ec61da1b07ca7daaa915b"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-primary-green.txt",
+      "raw_path": "/tmp/clouddialect-extension-primary-green.txt",
+      "raw_sha256": "17fcdfd2058f3d1edde7bc3b4aee54a7d36c88b5442e37747db2730b2b991ce1",
+      "presentation_sha256": "6a449568212111462eb6ad8e855d13f5d3b30026d3151dca4c08e39dce1c9802"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-support-red.txt",
+      "raw_path": "/tmp/clouddialect-extension-support-red.txt",
+      "raw_sha256": "e3ac85e2b9da4316076467b080e5373e0db03d32c802056c6d547a39d0a891ec",
+      "presentation_sha256": "e3ac85e2b9da4316076467b080e5373e0db03d32c802056c6d547a39d0a891ec"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-support-green.txt",
+      "raw_path": "/tmp/clouddialect-extension-support-green.txt",
+      "raw_sha256": "dec862aead01e81517bbe80215c0135edc559998662e6a44263776d3f6662347",
+      "presentation_sha256": "d2fd20a5530dd7c150508f3885cece006b1cee8137a3cfb9ac9b3015f425ed10"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-bytes-green.txt",
+      "raw_path": "/tmp/clouddialect-extension-bytes-green.txt",
+      "raw_sha256": "1e48563441f8c705aa5ab5eddc029d85d1ba9234b36c2aca5a582f8ecda126db",
+      "presentation_sha256": "1e48563441f8c705aa5ab5eddc029d85d1ba9234b36c2aca5a582f8ecda126db"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-bytes-red.txt",
+      "raw_path": "/tmp/clouddialect-extension-bytes-red.txt",
+      "raw_sha256": "b602416177b9fd7f9ff5ffad30e0f5d96b979165324a8d8e5ee50d0bb8e36262",
+      "presentation_sha256": "b602416177b9fd7f9ff5ffad30e0f5d96b979165324a8d8e5ee50d0bb8e36262"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-dto-check.txt",
+      "raw_path": "/tmp/clouddialect-extension-dto-check.txt",
+      "raw_sha256": "c6476ed9fb44989928cb325856312f417944d4711082930a72d0e2d08d57317a",
+      "presentation_sha256": "c6476ed9fb44989928cb325856312f417944d4711082930a72d0e2d08d57317a"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-dto-clippy.txt",
+      "raw_path": "/tmp/clouddialect-extension-dto-clippy.txt",
+      "raw_sha256": "0234131374229d18a6cb4ef7c72e30f530260e8b496370994acb11130a04353e",
+      "presentation_sha256": "0234131374229d18a6cb4ef7c72e30f530260e8b496370994acb11130a04353e"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-dto-coverage-tests.txt",
+      "raw_path": "/tmp/clouddialect-extension-dto-coverage-tests.txt",
+      "raw_sha256": "54b6ff88673f541e2fd7035d8aa795df1c0ffd760dd7b8ed21574690ec9eac9e",
+      "presentation_sha256": "54b6ff88673f541e2fd7035d8aa795df1c0ffd760dd7b8ed21574690ec9eac9e"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-dto-fmt.txt",
+      "raw_path": "/tmp/clouddialect-extension-dto-fmt.txt",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "presentation_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-dto-loader-line-coverage.txt",
+      "raw_path": "/tmp/clouddialect-extension-dto-loader-line-coverage.txt",
+      "raw_sha256": "e44a2b3cd90f5829fea19b89964c9d94e244cb693e19295c133e73e20989659b",
+      "presentation_sha256": "e44a2b3cd90f5829fea19b89964c9d94e244cb693e19295c133e73e20989659b"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-dto-tests.txt",
+      "raw_path": "/tmp/clouddialect-extension-dto-tests.txt",
+      "raw_sha256": "72ee3d6cc99375438d1ac144df52b94fca6411612cac1f568c5433a63d071d64",
+      "presentation_sha256": "72ee3d6cc99375438d1ac144df52b94fca6411612cac1f568c5433a63d071d64"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-final-check.txt",
+      "raw_path": "/tmp/clouddialect-extension-final-check.txt",
+      "raw_sha256": "31d2c6f31f5b4f58f655265df5fb7d24464d866a85588b0a3f71266380c7a381",
+      "presentation_sha256": "31d2c6f31f5b4f58f655265df5fb7d24464d866a85588b0a3f71266380c7a381"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-final-clippy.txt",
+      "raw_path": "/tmp/clouddialect-extension-final-clippy.txt",
+      "raw_sha256": "012081a404fd5d80b8d887fd7cb83b64c421f8728a488c052478ad663fb7db0b",
+      "presentation_sha256": "012081a404fd5d80b8d887fd7cb83b64c421f8728a488c052478ad663fb7db0b"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-final-coverage-tests.txt",
+      "raw_path": "/tmp/clouddialect-extension-final-coverage-tests.txt",
+      "raw_sha256": "d0a2a3a2a57c328f6f3718b6b5f24f363746032c1feeb5824ccd2f33b1276973",
+      "presentation_sha256": "d0a2a3a2a57c328f6f3718b6b5f24f363746032c1feeb5824ccd2f33b1276973"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-final-diff.txt",
+      "raw_path": "/tmp/clouddialect-extension-final-diff.txt",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "presentation_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-final-fmt.txt",
+      "raw_path": "/tmp/clouddialect-extension-final-fmt.txt",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "presentation_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-final-loader-line-coverage.txt",
+      "raw_path": "/tmp/clouddialect-extension-final-loader-line-coverage.txt",
+      "raw_sha256": "cf7178449b9732d575b7ddf9e6d513ad9f021dd384ff46e9f50b4dec0d7a1d14",
+      "presentation_sha256": "0c1a00993854175b7b5f03bbb8d02bf3cd96cdca0f5214307fcd559ac6ade4f9"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-final-negative-doctests.txt",
+      "raw_path": "/tmp/clouddialect-extension-final-negative-doctests.txt",
+      "raw_sha256": "41134bcb3542d675f5df3b2679bdce90e29c154e724b220ad9251eb563634815",
+      "presentation_sha256": "41134bcb3542d675f5df3b2679bdce90e29c154e724b220ad9251eb563634815"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-final-p0-content.txt",
+      "raw_path": "/tmp/clouddialect-extension-final-p0-content.txt",
+      "raw_sha256": "021d1c43f5d681eeace399f653857e8dbd5ce0480d38654639eef8f9f4bf4555",
+      "presentation_sha256": "021d1c43f5d681eeace399f653857e8dbd5ce0480d38654639eef8f9f4bf4555"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-final-python.txt",
+      "raw_path": "/tmp/clouddialect-extension-final-python.txt",
+      "raw_sha256": "ca009f53014b44585da8e8911e799aa4fb052f005f2627706d9d6c904a67ab28",
+      "presentation_sha256": "ca009f53014b44585da8e8911e799aa4fb052f005f2627706d9d6c904a67ab28"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-final-tests.txt",
+      "raw_path": "/tmp/clouddialect-extension-final-tests.txt",
+      "raw_sha256": "8ede50c0b7b105d2fdfa3bf69d3ace7f4ecf4fdee4dea0639ce45606f41aa708",
+      "presentation_sha256": "8ede50c0b7b105d2fdfa3bf69d3ace7f4ecf4fdee4dea0639ce45606f41aa708"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-primary-check.txt",
+      "raw_path": "/tmp/clouddialect-extension-primary-check.txt",
+      "raw_sha256": "3e0d4b4f94eeabb546289941ad7f4582ef0356f01b4a7b8ac1794b83254ebdef",
+      "presentation_sha256": "3e0d4b4f94eeabb546289941ad7f4582ef0356f01b4a7b8ac1794b83254ebdef"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-primary-clippy.txt",
+      "raw_path": "/tmp/clouddialect-extension-primary-clippy.txt",
+      "raw_sha256": "7a7f1e88be9b79ac084e14842fdaff193e9fa57e3d2fbdbc1a624264163f5009",
+      "presentation_sha256": "7a7f1e88be9b79ac084e14842fdaff193e9fa57e3d2fbdbc1a624264163f5009"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-primary-fmt.txt",
+      "raw_path": "/tmp/clouddialect-extension-primary-fmt.txt",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "presentation_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-primary-tests.txt",
+      "raw_path": "/tmp/clouddialect-extension-primary-tests.txt",
+      "raw_sha256": "817e6ec5163648fa10c24cf51abda5e73e750f8b45534195cad2f58e51c0ad7b",
+      "presentation_sha256": "817e6ec5163648fa10c24cf51abda5e73e750f8b45534195cad2f58e51c0ad7b"
+    },
+    {
+      "excluded_heavy_export": ".workflow/ultracode/execution-isolation-implementation/results/extension-dto-coverage.json",
+      "raw_path": "/tmp/clouddialect-extension-dto-coverage.json",
+      "raw_sha256": "07a5e0a8351da70ed6143ff5d93f3fc66e8f4d6909e762d91bdd5b1e56d552fd",
+      "bytes": 321937
+    },
+    {
+      "excluded_heavy_export": ".workflow/ultracode/execution-isolation-implementation/results/extension-final-coverage.json",
+      "raw_path": "/tmp/clouddialect-extension-final-coverage.json",
+      "raw_sha256": "485320c739215a7ba1d302e16d55ef64b9b1b14d72e8475e0ff51a5acc84e47e",
+      "bytes": 322857
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-closeout-python.txt",
+      "raw_path": "/tmp/clouddialect-extension-closeout-python.txt",
+      "raw_sha256": "0b7982bb92293249375ba05cf4beac0619ce3bd646a87d937bc49a9a23281eb5",
+      "presentation_sha256": "0b7982bb92293249375ba05cf4beac0619ce3bd646a87d937bc49a9a23281eb5"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-closeout-p0-content.txt",
+      "raw_path": "/tmp/clouddialect-extension-closeout-p0-content.txt",
+      "raw_sha256": "d40ac757170f22f90650eaf9e86b90c2ac50cedd8fbeeda1746a4c6d812fbc4d",
+      "presentation_sha256": "d40ac757170f22f90650eaf9e86b90c2ac50cedd8fbeeda1746a4c6d812fbc4d"
+    },
+    {
+      "evidence": ".workflow/ultracode/execution-isolation-implementation/results/extension-closeout-diff.txt",
+      "raw_path": "/tmp/clouddialect-extension-closeout-diff.txt",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "presentation_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

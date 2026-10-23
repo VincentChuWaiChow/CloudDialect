@@ -1,0 +1,34 @@
+
+running 3 tests
+test escaped_duplicate_names_and_duplicates_in_resource_and_test_arrays_fail ... FAILED
+test nested_core_duplicates_are_rejected_for_all_five_document_kinds ... FAILED
+test opaque_extension_values_and_schema_fragments_are_not_reinterpreted ... ok
+
+failures:
+
+---- escaped_duplicate_names_and_duplicates_in_resource_and_test_arrays_fail stdout ----
+
+thread 'escaped_duplicate_names_and_duplicates_in_resource_and_test_arrays_fail' (319) panicked at tests/nested_duplicate_fields.rs:48:5:
+assertion `left == right` failed
+  left: Pass
+ right: Fail
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- nested_core_duplicates_are_rejected_for_all_five_document_kinds stdout ----
+
+thread 'nested_core_duplicates_are_rejected_for_all_five_document_kinds' (320) panicked at tests/nested_duplicate_fields.rs:37:9:
+assertion `left == right` failed: BehavioralContract: ambiguous nested member passed
+  left: Pass
+ right: Fail
+
+
+failures:
+    escaped_duplicate_names_and_duplicates_in_resource_and_test_arrays_fail
+    nested_core_duplicates_are_rejected_for_all_five_document_kinds
+
+test result: FAILED. 1 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.17s
+     Running tests/nested_duplicate_fields.rs (/tmp/clouddialect-phase-target/debug/deps/nested_duplicate_fields-a2bbfedf5b8ea236)
+error: test failed, to rerun pass `--test nested_duplicate_fields`
