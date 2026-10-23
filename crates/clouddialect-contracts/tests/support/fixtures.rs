@@ -240,7 +240,7 @@ fn check(directory: &Path) -> Result<(), String> {
     let snapshot = CatalogSnapshot::embedded().map_err(|e| e.description)?;
     let validator = Validator::new(snapshot.clone());
     let store = Store(&expected);
-    let actual = match (expected.phase.as_str(), kind) {
+    let mut actual = match (expected.phase.as_str(), kind) {
         ("structural", None) => serde_json::to_value(ManifestValidator::new(snapshot).validate_manifest(&input)),
         ("structural", Some(kind)) => serde_json::to_value(validator.validate_structural(kind, &input)),
         ("semantic", None) => serde_json::to_value(ManifestValidator::new(snapshot).validate_manifest_semantic(&input, &store)),
@@ -262,6 +262,13 @@ fn check(directory: &Path) -> Result<(), String> {
         }
         _ => unreachable!("phase/kind union validated above"),
     }.map_err(|e| e.to_string())?;
+    if manifest && expected.phase == "structural" {
+        let errors: Vec<_> = ["structural_errors", "semantic_errors"]
+            .into_iter()
+            .flat_map(|field| actual[field].as_array().unwrap().iter().cloned())
+            .collect();
+        actual["errors"] = Value::Array(errors);
+    }
     let (field, wanted) = if hash_phase {
         ("expected_match", json!(expected.expected_match.unwrap()))
     } else {
