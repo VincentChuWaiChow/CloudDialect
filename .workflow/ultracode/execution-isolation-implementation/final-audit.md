@@ -1,3 +1,11 @@
+# Current tranche audit
+
+See [current partial handoff](conformance-continuation/final-audit.md). Current default
+conformance is not green; seed/repair approvals remain pending. Conventional
+278 Rust + 7 doctests / 15 Python checks pass. All runtime gates stay open.
+
+## Earlier snapshots below
+
 # Final audit — preparation tranche only
 
 ## Contract reread

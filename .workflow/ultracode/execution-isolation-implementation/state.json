@@ -2,7 +2,7 @@
   "title": "Execution-isolation implementation",
   "slug": "execution-isolation-implementation",
   "created_at": "2026-10-22T07:25:44.090021+00:00",
-  "updated_at": "2026-10-23T15:50:42.245558+00:00",
+  "updated_at": "2026-10-23T19:33:55.746512+00:00",
   "status": "executing",
   "mode": "delegated",
   "baseline_ref": "3b9cb6bd0ee82dbef3b731a35ce68fc778c4906a",
@@ -21,10 +21,10 @@
     "native_agent_available": true,
     "native_agent_planned": true,
     "native_agent_used": true,
-    "agent_count": 28,
+    "agent_count": 30,
     "wave_count": 12,
     "no_delegation_reason": "",
-    "notes": "Reviewer27/28complete;28cumulative exhausted, no recursion/follow-ups. Later extension/completeness parent-audited only. One consolidated date review repair used; original15:54UTC cap unchanged.",
+    "notes": "29and30complete;30cumulative consumed, zero recursion/follow-ups. Review30actual URI/runner no new defect; proposed patch/seed reviewed separately, not applied.",
     "additional_dispatch_limit": 2,
     "additional_dispatches_used": 2,
     "consolidated_repairs_used_current_tranche": 1
@@ -1525,7 +1525,7 @@
   },
   "current_limits": {
     "cumulative_dispatch_ceiling": 30,
-    "cumulative_dispatches_used": 29,
+    "cumulative_dispatches_used": 30,
     "max_concurrent_including_parent": 4,
     "recursion": 0,
     "followup_dispatches": 0,
@@ -1805,5 +1805,19 @@
     "current_full_tree_green": true,
     "completeness_implemented": true
   },
-  "current_tranche": "conformance-continuation"
+  "current_tranche": "conformance-continuation",
+  "conformance_continuation": {
+    "status": "partial_delivery_pending_two_owner_answers",
+    "report": "conformance-continuation/final-report.md",
+    "current_full_tree_green": false,
+    "default_conformance_exit": 1,
+    "conventional_rust_passed": 278,
+    "doctests_passed": 7,
+    "python_passed": 15,
+    "known_defect": "completeness direct-assumption diagnostic omission; task14 reopened",
+    "review": "30 frozen actual URI/runner no new actionable finding; 29 tests independently passed",
+    "dispatches_consumed": 30,
+    "pushes_authorized": false,
+    "full_goal_complete": false
+  }
 }

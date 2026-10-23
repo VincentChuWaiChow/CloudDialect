@@ -1,14 +1,15 @@
 # Current conformance continuation — 2026-10-23
 
-[Tranche report](conformance-continuation/final-report.md): owner approved the
-next90minute tranche and two read-only reviewers(30cumulative), then frequent
-local commits. Prior semantic/completeness/policy code is checkpoint494ddc3;
-URI RED/GREEN36db142/cb36beb; runner RED/evolution/GREEN e24248c/899fd46/42be2c7.
-9focused runner controls pass. No default-corpus/full-suite GREEN is yet claimed:
-seed fixture3.2.1 is separately requested. Reviewer29's P2 direct-assumption gap
-omission reopens task14pending two-file repair approval; no acceptance bypass.
-All21numbered Spec2tasks and their native/owner/consumer gates remain open.
-No pushes, native probes, releases or deployments are authorized/run.
+[Tranche report](conformance-continuation/final-report.md): URI RED/GREEN and strict
+phase-aware runner are locally committed and independently reviewed. 278
+conventional Rust tests, 7 doctests and 15 Python checks pass; frozen check/fmt/
+Clippy pass. Actual default conformance still exits 1: canonical fixtures absent.
+Focused runner line coverage 89.05%, functions 58.33%; no broad coverage-gate PASS.
+Reviewer 29's P2 reopens completeness task 14; two-file repair and seed fixture
+3.2.1 remain pending owner questions. Both current read-only reviewers completed,
+30/30 cumulative dispatches consumed. All 21 numbered Spec 2 tasks and UD/BG
+native/owner/consumer gates remain open. Full goal is unachieved.
+Frequent local commits authorized; no pushes, native probes or releases.
 
 ## Earlier delivery snapshots below
 

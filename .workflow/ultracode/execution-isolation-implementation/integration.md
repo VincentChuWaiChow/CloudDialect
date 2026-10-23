@@ -1,3 +1,11 @@
+# Current tranche integration
+
+See [current partial handoff](conformance-continuation/integration.md). Current default
+conformance is not green; seed/repair approvals remain pending. Conventional
+278 Rust + 7 doctests / 15 Python checks pass. All runtime gates stay open.
+
+## Earlier snapshots below
+
 # Integration
 
 ## Current scoped reference/fidelity integration

@@ -1,0 +1,18 @@
+{
+  "scope": "Actual instrumented custom executable against temporary synthetic matrix, not default corpus or native proof",
+  "cases": [
+    "semantic-json",
+    "complete",
+    "blocked",
+    "deferred",
+    "hash",
+    "manifest-local",
+    "manifest-semantic",
+    "roundtrip-behavioral-contract",
+    "roundtrip-evidence-record",
+    "roundtrip-verification-result",
+    "diagnostic-reassignment"
+  ],
+  "exit_code": 0,
+  "output": "PASS matrix/blocked\nPASS matrix/complete\nPASS matrix/deferred\nPASS matrix/diagnostic-reassignment\nPASS matrix/hash\nPASS matrix/manifest-local\nPASS matrix/manifest-semantic\nPASS matrix/roundtrip-behavioral-contract\nPASS matrix/roundtrip-evidence-record\nPASS matrix/roundtrip-verification-result\nPASS matrix/semantic-json\n11 conformance fixtures passed\n"
+}

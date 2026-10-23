@@ -1,0 +1,2933 @@
+{
+  "status": "DRAFT INCOMPLETE APPROVAL/ORACLE INVENTORY, not a delivered corpus",
+  "source": "canonical tasks18-21 plus named P0/VC1 follow-ons",
+  "case_count": 104,
+  "batch_count": 60,
+  "cases": [
+    {
+      "path": "positive/behavioral-contract/minimal-valid",
+      "document_kind": "behavioral-contract",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "notes": "Structural declaration only, never observed behavior/authentication/acceptance. Collectively cover >=3 fidelity labels; S3/PubSub note text is synthetic/unresolved, not asserted provider fact.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "positive/behavioral-contract/with-known-behavior",
+      "document_kind": "behavioral-contract",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "notes": "Structural declaration only, never observed behavior/authentication/acceptance. Resource dimensions must satisfy approved RC-1 coverage, not retry-only omission.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "positive/behavioral-contract/with-unresolved-assumption-on-dependency",
+      "document_kind": "behavioral-contract",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "notes": "Structural declaration only, never observed behavior/authentication/acceptance. Resource dimensions must satisfy approved RC-1 coverage, not retry-only omission.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "positive/behavioral-contract/with-behavioral-notes",
+      "document_kind": "behavioral-contract",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "notes": "Structural declaration only, never observed behavior/authentication/acceptance. Resource dimensions must satisfy approved RC-1 coverage, not retry-only omission. Collectively cover >=3 fidelity labels; S3/PubSub note text is synthetic/unresolved, not asserted provider fact.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "positive/behavioral-contract/with-extension-field",
+      "document_kind": "behavioral-contract",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "notes": "Structural declaration only, never observed behavior/authentication/acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "positive/evidence-record/observed",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "notes": "Structural declaration only, never observed behavior/authentication/acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "positive/evidence-record/inferred",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "notes": "Structural declaration only, never observed behavior/authentication/acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "positive/evidence-record/unknown",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "notes": "Structural declaration only, never observed behavior/authentication/acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "positive/verification-result/minimal",
+      "document_kind": "verification-result",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "notes": "Structural declaration only, never observed behavior/authentication/acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "positive/verification-result/with-acceptance",
+      "document_kind": "verification-result",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "notes": "Structural declaration only, never observed behavior/authentication/acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "positive/pack-manifest/full-coverage",
+      "document_kind": "manifest",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "notes": "Structural declaration only, never observed behavior/authentication/acceptance. Include P0-B capabilities; full-coverage may use empty requirements, unsupported-operation must carry a nonempty valid request declaration.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.toml",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "positive/pack-manifest/with-unsupported-operation",
+      "document_kind": "manifest",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "notes": "Structural declaration only, never observed behavior/authentication/acceptance. Include P0-B capabilities; full-coverage may use empty requirements, unsupported-operation must carry a nonempty valid request declaration.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.toml",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "positive/pack-manifest/with-extension-section",
+      "document_kind": "manifest",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "notes": "Structural declaration only, never observed behavior/authentication/acceptance. Include P0-B capabilities; full-coverage may use empty requirements, unsupported-operation must carry a nonempty valid request declaration.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.toml",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "negative/behavioral-contract/missing-id",
+      "document_kind": "behavioral-contract",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "required_category": "structural",
+        "exact_multiset": "must freeze after constructing named fixture, before dispatch approval"
+      },
+      "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "negative/behavioral-contract/obligation-no-evidence-no-assumption",
+      "document_kind": "behavioral-contract",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "required_category": "structural",
+        "exact_multiset": "must freeze after constructing named fixture, before dispatch approval"
+      },
+      "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "negative/behavioral-contract/invalid-behavioral-fidelity",
+      "document_kind": "behavioral-contract",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "required_category": "structural",
+        "exact_multiset": "must freeze after constructing named fixture, before dispatch approval"
+      },
+      "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "negative/evidence-record/missing-classification",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "required_category": "structural",
+        "exact_multiset": "must freeze after constructing named fixture, before dispatch approval"
+      },
+      "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "negative/evidence-record/inferred-empty-reasoning-chain",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "required_category": "structural",
+        "exact_multiset": "must freeze after constructing named fixture, before dispatch approval"
+      },
+      "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "negative/evidence-record/unknown-empty-assumptions",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "required_category": "structural",
+        "exact_multiset": "must freeze after constructing named fixture, before dispatch approval"
+      },
+      "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "negative/verification-result/empty-tests-array",
+      "document_kind": "verification-result",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "required_category": "structural",
+        "exact_multiset": "must freeze after constructing named fixture, before dispatch approval"
+      },
+      "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "negative/verification-result/nonpass-without-failure-description",
+      "document_kind": "verification-result",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "required_category": "structural",
+        "exact_multiset": "must freeze after constructing named fixture, before dispatch approval"
+      },
+      "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "negative/verification-result/acceptance-missing-approver",
+      "document_kind": "verification-result",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "required_category": "structural",
+        "exact_multiset": "must freeze after constructing named fixture, before dispatch approval"
+      },
+      "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "negative/verification-result/unknown-hash-algorithm",
+      "document_kind": "verification-result",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "required_category": "structural",
+        "exact_multiset": "must freeze after constructing named fixture, before dispatch approval"
+      },
+      "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "negative/pack-manifest/missing-toolchain-for-full-operation",
+      "document_kind": "manifest",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "required_category": "freeze actual local error category",
+        "exact_multiset": "must freeze after constructing named fixture, before dispatch approval"
+      },
+      "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.toml",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "negative/pack-manifest/invalid-behavioral-fidelity",
+      "document_kind": "manifest",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "required_category": "freeze actual local error category",
+        "exact_multiset": "must freeze after constructing named fixture, before dispatch approval"
+      },
+      "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.toml",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "negative/pack-manifest/inline-contract-body",
+      "document_kind": "manifest",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "required_category": "freeze actual local error category",
+        "exact_multiset": "must freeze after constructing named fixture, before dispatch approval"
+      },
+      "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.toml",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "negative/version/unsupported-major",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "required_category": "unsupported-major-version",
+        "exact_multiset": "must freeze after constructing named fixture, before dispatch approval"
+      },
+      "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "negative/version/unsupported-minor-newer",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "outcome": "warn",
+      "oracle": {
+        "errors": [],
+        "warnings": [
+          {
+            "field_name_verbatim": "format_version",
+            "description_contains": "1.99.0"
+          }
+        ]
+      },
+      "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "negative/verification-result/missing-binding",
+      "document_kind": "verification-result",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "exact_multiset": "freeze precise structural/local-semantic errors before dispatch"
+      },
+      "notes": "Named P0 negative; no extension fallback or legacy field swallowing.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "negative/verification-result/missing-configuration",
+      "document_kind": "verification-result",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "exact_multiset": "freeze precise structural/local-semantic errors before dispatch"
+      },
+      "notes": "Named P0 negative; no extension fallback or legacy field swallowing.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "negative/verification-result/nonpass-string-failure-description",
+      "document_kind": "verification-result",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "exact_multiset": "freeze precise structural/local-semantic errors before dispatch"
+      },
+      "notes": "Named P0 negative; no extension fallback or legacy field swallowing.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "negative/verification-result/missing-test-obligation",
+      "document_kind": "verification-result",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "exact_multiset": "freeze precise structural/local-semantic errors before dispatch"
+      },
+      "notes": "Named P0 negative; no extension fallback or legacy field swallowing.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "negative/pack-manifest/missing-capabilities",
+      "document_kind": "manifest",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "exact_multiset": "freeze precise structural/local-semantic errors before dispatch"
+      },
+      "notes": "Named P0 negative; no extension fallback or legacy field swallowing.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.toml",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "negative/pack-manifest/unknown-capability-version",
+      "document_kind": "manifest",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "exact_multiset": "freeze precise structural/local-semantic errors before dispatch"
+      },
+      "notes": "Named P0 negative; no extension fallback or legacy field swallowing.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.toml",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "negative/pack-manifest/duplicate-capability-id",
+      "document_kind": "manifest",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "exact_multiset": "freeze precise structural/local-semantic errors before dispatch"
+      },
+      "notes": "Named P0 negative; no extension fallback or legacy field swallowing.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.toml",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "negative/pack-manifest/capability-unknown-field",
+      "document_kind": "manifest",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "exact_multiset": "freeze precise structural/local-semantic errors before dispatch"
+      },
+      "notes": "Named P0 negative; no extension fallback or legacy field swallowing.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.toml",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "adversarial/extension-namespace/reserved-exact-match/correctly-handled",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "errors": [],
+        "warnings": "all named reserved variants verbatim; freeze full list"
+      },
+      "notes": "Reserved prefix alone warns, never fails.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "adversarial/extension-namespace/reserved-exact-match/correctly-rejected",
+      "document_kind": "evidence-record",
+      "phase": "semantic",
+      "outcome": "fail",
+      "oracle": {
+        "errors": [
+          {
+            "category": "blocking-gap",
+            "field_path": "required_extensions[0]"
+          }
+        ]
+      },
+      "notes": "Valid reserved payload claims cannot clear a separately declared unknown mandatory namespace. No rejection merely for reserved spelling.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "adversarial/extension-namespace/reserved-uppercase-bypass/correctly-handled",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "errors": [],
+        "warnings": "all named reserved variants verbatim; freeze full list"
+      },
+      "notes": "Reserved prefix alone warns, never fails.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "adversarial/extension-namespace/reserved-uppercase-bypass/correctly-rejected",
+      "document_kind": "evidence-record",
+      "phase": "semantic",
+      "outcome": "fail",
+      "oracle": {
+        "errors": [
+          {
+            "category": "blocking-gap",
+            "field_path": "required_extensions[0]"
+          }
+        ]
+      },
+      "notes": "Valid reserved payload claims cannot clear a separately declared unknown mandatory namespace. No rejection merely for reserved spelling.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-handled",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "errors": [],
+        "warnings": "all named reserved variants verbatim; freeze full list"
+      },
+      "notes": "Reserved prefix alone warns, never fails.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-rejected",
+      "document_kind": "evidence-record",
+      "phase": "semantic",
+      "outcome": "fail",
+      "oracle": {
+        "errors": [
+          {
+            "category": "blocking-gap",
+            "field_path": "required_extensions[0]"
+          }
+        ]
+      },
+      "notes": "Valid reserved payload claims cannot clear a separately declared unknown mandatory namespace. No rejection merely for reserved spelling.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "adversarial/extension-namespace/namespace-collision/correctly-handled",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "round_trip": true,
+        "errors": [],
+        "warnings": []
+      },
+      "notes": "Two acme fields preserved, not registry ownership/collision authentication.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "adversarial/extension-namespace/namespace-collision/untrusted-claim-author-a",
+      "document_kind": "evidence-record",
+      "phase": "semantic",
+      "outcome": "fail",
+      "oracle": {
+        "errors": [
+          {
+            "category": "blocking-gap",
+            "field_path": "required_extensions[0]"
+          }
+        ]
+      },
+      "notes": "Two independent reserved-prefix owner claims for acme do not recognize required acme semantics. This is not a collision detector; confirm canonical rejection interpretation before approval.",
+      "gate": "owner-oracle-clarification",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "adversarial/extension-namespace/namespace-collision/untrusted-claim-author-b",
+      "document_kind": "evidence-record",
+      "phase": "semantic",
+      "outcome": "fail",
+      "oracle": {
+        "errors": [
+          {
+            "category": "blocking-gap",
+            "field_path": "required_extensions[0]"
+          }
+        ]
+      },
+      "notes": "Two independent reserved-prefix owner claims for acme do not recognize required acme semantics. This is not a collision detector; confirm canonical rejection interpretation before approval.",
+      "gate": "owner-oracle-clarification",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "adversarial/extension-namespace/invalid-prefix-formats/correctly-handled",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "errors": [],
+        "warnings": []
+      },
+      "notes": "Valid minimum-two-character ASCII neighbor.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "adversarial/extension-namespace/invalid-prefix-formats/digit-start",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "required_category": "structural",
+        "exact_multiset": "freeze all actual schema/extension diagnostics"
+      },
+      "notes": "Named malformed-prefix subcase.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "adversarial/extension-namespace/invalid-prefix-formats/space",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "required_category": "structural",
+        "exact_multiset": "freeze all actual schema/extension diagnostics"
+      },
+      "notes": "Named malformed-prefix subcase.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "adversarial/extension-namespace/invalid-prefix-formats/one-character",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "required_category": "structural",
+        "exact_multiset": "freeze all actual schema/extension diagnostics"
+      },
+      "notes": "Named malformed-prefix subcase.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "adversarial/extension-namespace/unknown-optional-round-trip/correctly-handled",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "round_trip": true,
+        "errors": [],
+        "warnings": []
+      },
+      "notes": "Escapes/number spelling/inner whitespace and member ordering retained exactly.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "adversarial/extension-namespace/unknown-optional-round-trip/correctly-rejected",
+      "document_kind": "evidence-record",
+      "phase": "semantic",
+      "outcome": "fail",
+      "oracle": {
+        "errors": [
+          {
+            "category": "blocking-gap",
+            "field_path": "required_extensions[0]"
+          }
+        ]
+      },
+      "notes": "Optional payload/recognized claim cannot clear explicit mandatory declaration.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "adversarial/extension-namespace/mandatory-extension-blocks-acceptance/structurally-handled",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "errors": [],
+        "warnings": []
+      },
+      "notes": "Declaration-only structurally valid.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "adversarial/extension-namespace/mandatory-extension-blocks-acceptance/semantically-rejected",
+      "document_kind": "evidence-record",
+      "phase": "semantic",
+      "outcome": "fail",
+      "oracle": {
+        "errors": [
+          {
+            "category": "blocking-gap",
+            "field_path": "required_extensions[0]"
+          }
+        ]
+      },
+      "notes": "Separate blocker, not structural or behavioral acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "adversarial/extension-namespace/override-core-field-attempt/correctly-handled",
+      "document_kind": "verification-result",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "round_trip": true,
+        "errors": [],
+        "warnings": []
+      },
+      "notes": "Valid core record plus inert accepted-looking extension; no acceptance authority claim.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "adversarial/extension-namespace/override-core-field-attempt/correctly-rejected",
+      "document_kind": "verification-result",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "exact_multiset": "freeze non-pass missing failure_description diagnostics"
+      },
+      "notes": "Extension accepted string must not repair invalid core verification fields.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "adversarial/p0-authority/x-authority-injection",
+      "document_kind": "manifest",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "boundary": "no acceptance/grant field; freeze precise phase errors for rejection cases"
+      },
+      "notes": "[x] accepted/grant strings retained as inert data.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.toml",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "adversarial/p0-authority/x-capability-shadow",
+      "document_kind": "manifest",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "boundary": "no acceptance/grant field; freeze precise phase errors for rejection cases"
+      },
+      "notes": "Direct x core-key shadow rejected.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.toml",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "adversarial/p0-authority/prohibited-worker-action-requests",
+      "document_kind": "manifest",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "boundary": "no acceptance/grant field; freeze precise phase errors for rejection cases"
+      },
+      "notes": "approve/deploy/delete declarations parse as requests; actual worker admission denial is Spec2-only, not this pass.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.toml",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "adversarial/p0-authority/forged-approver-claim",
+      "document_kind": "verification-result",
+      "phase": "semantic",
+      "outcome": "pass",
+      "oracle": {
+        "boundary": "no acceptance/grant field; freeze precise phase errors for rejection cases"
+      },
+      "notes": "Self-consistent strings do not authenticate approval; no Spec1 authentication oracle invented.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "adversarial/p0-authority/forged-origin-claim",
+      "document_kind": "verification-result",
+      "phase": "semantic",
+      "outcome": "pass",
+      "oracle": {
+        "boundary": "no acceptance/grant field; freeze precise phase errors for rejection cases"
+      },
+      "notes": "Origin string is not independent observation.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "adversarial/p0-authority/incomplete-binding",
+      "document_kind": "verification-result",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "boundary": "no acceptance/grant field; freeze precise phase errors for rejection cases"
+      },
+      "notes": "Missing run/attempt binding fields fail structurally.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "adversarial/p0-authority/replayed-binding-claim",
+      "document_kind": "verification-result",
+      "phase": "semantic",
+      "outcome": "pass",
+      "oracle": {
+        "boundary": "no acceptance/grant field; freeze precise phase errors for rejection cases"
+      },
+      "notes": "Self-consistent replay may pass local consistency; protected-context rejection belongs Spec2.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "round-trip/extension-field-preservation/behavioral-contract",
+      "document_kind": "behavioral-contract",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "round_trip": true,
+        "errors": [],
+        "warnings": []
+      },
+      "notes": "Exact encoded qualified extension values, not decoded Value equality.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "round-trip/extension-field-preservation/evidence-record",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "round_trip": true,
+        "errors": [],
+        "warnings": []
+      },
+      "notes": "Exact encoded qualified extension values, not decoded Value equality.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "round-trip/extension-field-preservation/verification-result",
+      "document_kind": "verification-result",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "round_trip": true,
+        "errors": [],
+        "warnings": []
+      },
+      "notes": "Exact encoded qualified extension values, not decoded Value equality.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/blocking-gap/unknown-evidence-mandatory-obligation",
+      "document_kind": "behavioral-contract",
+      "phase": "behavioral",
+      "outcome": "blocked",
+      "oracle": {
+        "candidate_id": "explicit",
+        "blockers": "each named obligation/assumption; all3gap fields"
+      },
+      "notes": "No mocked or declaration-only native proof.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/semantic-resolution-failure/manifest-bad-contract-ref",
+      "document_kind": "manifest",
+      "phase": "semantic",
+      "outcome": "fail",
+      "oracle": {
+        "errors": [
+          {
+            "category": "unresolvable-reference",
+            "field_path": "contracts.upload_object.id"
+          }
+        ]
+      },
+      "notes": "No mocked or declaration-only native proof.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.toml",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/artifact-hash-mismatch/tampered-candidate",
+      "document_kind": "verification-result",
+      "phase": "artifact-hash",
+      "outcome": null,
+      "oracle": {
+        "expected_match": false,
+        "candidate_bytes": "explicit bytes"
+      },
+      "notes": "No mocked or declaration-only native proof.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/offline-resolution/network-disabled",
+      "document_kind": "behavioral-contract",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "errors": [],
+        "warnings": [],
+        "native_requirement": "observed network-disabled execution+positive observer control, not a note"
+      },
+      "notes": "No mocked or declaration-only native proof.",
+      "gate": "G-NATIVE",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/offline-resolution/unresolvable-ref",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "errors": [
+          {
+            "category": "unresolvable-reference",
+            "field_path": "$schema",
+            "description_contains": "https://example.com/unknown-schema"
+          }
+        ]
+      },
+      "notes": "No mocked or declaration-only native proof.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/scoped-store/exact-version",
+      "document_kind": "manifest",
+      "phase": "semantic",
+      "outcome": "pass",
+      "oracle": {
+        "store": "explicit lookup and returned metadata/raw bytes; freeze exact diagnostics"
+      },
+      "notes": "Use exact-version manifest lookup; no catalog-instance or ambient fallback.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.toml",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/scoped-store/missing",
+      "document_kind": "manifest",
+      "phase": "semantic",
+      "outcome": "fail",
+      "oracle": {
+        "store": "explicit lookup and returned metadata/raw bytes; freeze exact diagnostics"
+      },
+      "notes": "Use exact-version manifest lookup; no catalog-instance or ambient fallback.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.toml",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/scoped-store/ambiguous",
+      "document_kind": "manifest",
+      "phase": "semantic",
+      "outcome": "fail",
+      "oracle": {
+        "store": "explicit lookup and returned metadata/raw bytes; freeze exact diagnostics"
+      },
+      "notes": "Use exact-version manifest lookup; no catalog-instance or ambient fallback.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.toml",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/scoped-store/wrong-type",
+      "document_kind": "manifest",
+      "phase": "semantic",
+      "outcome": "fail",
+      "oracle": {
+        "store": "explicit lookup and returned metadata/raw bytes; freeze exact diagnostics"
+      },
+      "notes": "Use exact-version manifest lookup; no catalog-instance or ambient fallback.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.toml",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/scoped-store/hash-mismatch",
+      "document_kind": "manifest",
+      "phase": "semantic",
+      "outcome": "fail",
+      "oracle": {
+        "store": "explicit lookup and returned metadata/raw bytes; freeze exact diagnostics"
+      },
+      "notes": "Use exact-version manifest lookup; no catalog-instance or ambient fallback.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.toml",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/scoped-store/outage",
+      "document_kind": "manifest",
+      "phase": "semantic",
+      "outcome": "fail",
+      "oracle": {
+        "store": "explicit lookup and returned metadata/raw bytes; freeze exact diagnostics"
+      },
+      "notes": "Use exact-version manifest lookup; no catalog-instance or ambient fallback.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.toml",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/scoped-store/wrong-returned-version",
+      "document_kind": "manifest",
+      "phase": "semantic",
+      "outcome": "fail",
+      "oracle": {
+        "store": "explicit lookup and returned metadata/raw bytes; freeze exact diagnostics"
+      },
+      "notes": "Use exact-version manifest lookup; no catalog-instance or ambient fallback.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.toml",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/scoped-store/wrong-returned-identity",
+      "document_kind": "manifest",
+      "phase": "semantic",
+      "outcome": "fail",
+      "oracle": {
+        "store": "explicit lookup and returned metadata/raw bytes; freeze exact diagnostics"
+      },
+      "notes": "Use exact-version manifest lookup; no catalog-instance or ambient fallback.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.toml",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/scoped-store/same-tenant-cross-project-denial",
+      "document_kind": "manifest",
+      "phase": "semantic",
+      "outcome": "fail",
+      "oracle": {
+        "boundary": "real scoped backend proof required; empty synthetic store is not cross-project authorization evidence"
+      },
+      "notes": "Do not relabel a generic missing-record fixture as proven project isolation.",
+      "gate": "Spec2-backend-qualification",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.toml",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/catalog/snapshot-environment-immunity",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "boundary": "trusted harness setup for named catalog variables; exact frozen snapshot identity"
+      },
+      "notes": "Current metadata does not model startup environment; plan a bounded control extension rather than fake proof.",
+      "gate": "runner-setup-amendment",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/digest-vectors/sha-256/empty",
+      "document_kind": "verification-result",
+      "phase": "artifact-hash",
+      "outcome": null,
+      "oracle": {
+        "expected_match": true,
+        "candidate_bytes": [],
+        "digest": "existing independently checked vector from artifact_hash tests"
+      },
+      "notes": "Candidate equality only, no origin/freshness/acceptance claim.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/digest-vectors/sha-256/abc",
+      "document_kind": "verification-result",
+      "phase": "artifact-hash",
+      "outcome": null,
+      "oracle": {
+        "expected_match": true,
+        "candidate_bytes": [
+          97,
+          98,
+          99
+        ],
+        "digest": "existing independently checked vector from artifact_hash tests"
+      },
+      "notes": "Candidate equality only, no origin/freshness/acceptance claim.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/digest-vectors/sha-384/empty",
+      "document_kind": "verification-result",
+      "phase": "artifact-hash",
+      "outcome": null,
+      "oracle": {
+        "expected_match": true,
+        "candidate_bytes": [],
+        "digest": "existing independently checked vector from artifact_hash tests"
+      },
+      "notes": "Candidate equality only, no origin/freshness/acceptance claim.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/digest-vectors/sha-384/abc",
+      "document_kind": "verification-result",
+      "phase": "artifact-hash",
+      "outcome": null,
+      "oracle": {
+        "expected_match": true,
+        "candidate_bytes": [
+          97,
+          98,
+          99
+        ],
+        "digest": "existing independently checked vector from artifact_hash tests"
+      },
+      "notes": "Candidate equality only, no origin/freshness/acceptance claim.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/digest-vectors/sha-512/empty",
+      "document_kind": "verification-result",
+      "phase": "artifact-hash",
+      "outcome": null,
+      "oracle": {
+        "expected_match": true,
+        "candidate_bytes": [],
+        "digest": "existing independently checked vector from artifact_hash tests"
+      },
+      "notes": "Candidate equality only, no origin/freshness/acceptance claim.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/digest-vectors/sha-512/abc",
+      "document_kind": "verification-result",
+      "phase": "artifact-hash",
+      "outcome": null,
+      "oracle": {
+        "expected_match": true,
+        "candidate_bytes": [
+          97,
+          98,
+          99
+        ],
+        "digest": "existing independently checked vector from artifact_hash tests"
+      },
+      "notes": "Candidate equality only, no origin/freshness/acceptance claim.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/digest-vectors/sha3-224/empty",
+      "document_kind": "verification-result",
+      "phase": "artifact-hash",
+      "outcome": null,
+      "oracle": {
+        "expected_match": true,
+        "candidate_bytes": [],
+        "digest": "existing independently checked vector from artifact_hash tests"
+      },
+      "notes": "Candidate equality only, no origin/freshness/acceptance claim.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/digest-vectors/sha3-224/abc",
+      "document_kind": "verification-result",
+      "phase": "artifact-hash",
+      "outcome": null,
+      "oracle": {
+        "expected_match": true,
+        "candidate_bytes": [
+          97,
+          98,
+          99
+        ],
+        "digest": "existing independently checked vector from artifact_hash tests"
+      },
+      "notes": "Candidate equality only, no origin/freshness/acceptance claim.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/digest-vectors/sha3-256/empty",
+      "document_kind": "verification-result",
+      "phase": "artifact-hash",
+      "outcome": null,
+      "oracle": {
+        "expected_match": true,
+        "candidate_bytes": [],
+        "digest": "existing independently checked vector from artifact_hash tests"
+      },
+      "notes": "Candidate equality only, no origin/freshness/acceptance claim.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/digest-vectors/sha3-256/abc",
+      "document_kind": "verification-result",
+      "phase": "artifact-hash",
+      "outcome": null,
+      "oracle": {
+        "expected_match": true,
+        "candidate_bytes": [
+          97,
+          98,
+          99
+        ],
+        "digest": "existing independently checked vector from artifact_hash tests"
+      },
+      "notes": "Candidate equality only, no origin/freshness/acceptance claim.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/verification-consistency/duplicate-test-ids",
+      "document_kind": "verification-result",
+      "phase": "semantic",
+      "outcome": "fail",
+      "oracle": {
+        "exact_multiset": "freeze named semantic paths/descriptions"
+      },
+      "notes": "No fabricated expected observer/authentication context.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/verification-consistency/unmapped-obligations",
+      "document_kind": "verification-result",
+      "phase": "semantic",
+      "outcome": "fail",
+      "oracle": {
+        "exact_multiset": "freeze named semantic paths/descriptions"
+      },
+      "notes": "No fabricated expected observer/authentication context.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/verification-consistency/invalid-calendar-utc",
+      "document_kind": "verification-result",
+      "phase": "semantic",
+      "outcome": "fail",
+      "oracle": {
+        "exact_multiset": "freeze named semantic paths/descriptions"
+      },
+      "notes": "No fabricated expected observer/authentication context.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/verification-consistency/non-z-timestamp",
+      "document_kind": "verification-result",
+      "phase": "semantic",
+      "outcome": "fail",
+      "oracle": {
+        "exact_multiset": "freeze named semantic paths/descriptions"
+      },
+      "notes": "No fabricated expected observer/authentication context.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/verification-consistency/invalid-hash-length",
+      "document_kind": "verification-result",
+      "phase": "semantic",
+      "outcome": "fail",
+      "oracle": {
+        "exact_multiset": "freeze named semantic paths/descriptions"
+      },
+      "notes": "No fabricated expected observer/authentication context.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/verification-consistency/approval-result-id-mismatch",
+      "document_kind": "verification-result",
+      "phase": "semantic",
+      "outcome": "fail",
+      "oracle": {
+        "exact_multiset": "freeze named semantic paths/descriptions"
+      },
+      "notes": "No fabricated expected observer/authentication context.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/verification-consistency/approval-result-version-mismatch",
+      "document_kind": "verification-result",
+      "phase": "semantic",
+      "outcome": "fail",
+      "oracle": {
+        "exact_multiset": "freeze named semantic paths/descriptions"
+      },
+      "notes": "No fabricated expected observer/authentication context.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/version-profile/build-metadata",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "outcome": "pass",
+      "oracle": {
+        "profile": "approved VC-1; freeze exact version/error/warning paths"
+      },
+      "notes": "No unsupported nested projection or legacy security acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/version-profile/prerelease",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "profile": "approved VC-1; freeze exact version/error/warning paths"
+      },
+      "notes": "No unsupported nested projection or legacy security acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/version-profile/leading-zero",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "profile": "approved VC-1; freeze exact version/error/warning paths"
+      },
+      "notes": "No unsupported nested projection or legacy security acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/version-profile/unindexed-patch",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "profile": "approved VC-1; freeze exact version/error/warning paths"
+      },
+      "notes": "No unsupported nested projection or legacy security acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/version-profile/core-overflow",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "profile": "approved VC-1; freeze exact version/error/warning paths"
+      },
+      "notes": "No unsupported nested projection or legacy security acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/version-profile/root-only-newer-minor",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "outcome": "warn",
+      "oracle": {
+        "profile": "approved VC-1; freeze exact version/error/warning paths"
+      },
+      "notes": "No unsupported nested projection or legacy security acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    },
+    {
+      "path": "integration/version-profile/closed-nested-newer-minor",
+      "document_kind": "verification-result",
+      "phase": "structural",
+      "outcome": "fail",
+      "oracle": {
+        "profile": "approved VC-1; freeze exact version/error/warning paths"
+      },
+      "notes": "No unsupported nested projection or legacy security acceptance.",
+      "gate": "code-approval",
+      "status": "draft-not-dispatched",
+      "files": [
+        "input.json",
+        "expected.json"
+      ]
+    }
+  ],
+  "batches": [
+    {
+      "id": "3.2.1",
+      "cases": [
+        "positive/evidence-record/inferred"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/positive/evidence-record/inferred/input.json",
+        "crates/clouddialect-contracts/fixtures/positive/evidence-record/inferred/expected.json"
+      ],
+      "status": "explicit-seed-approval-pending",
+      "phase": "structural",
+      "document_kind": "evidence-record",
+      "oracle": {
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "id": "3.2.2",
+      "cases": [
+        "positive/behavioral-contract/minimal-valid",
+        "positive/behavioral-contract/with-known-behavior"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/minimal-valid/input.json",
+        "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/minimal-valid/expected.json",
+        "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-known-behavior/input.json",
+        "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-known-behavior/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.3",
+      "cases": [
+        "positive/behavioral-contract/with-unresolved-assumption-on-dependency",
+        "positive/behavioral-contract/with-behavioral-notes"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-unresolved-assumption-on-dependency/input.json",
+        "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-unresolved-assumption-on-dependency/expected.json",
+        "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-behavioral-notes/input.json",
+        "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-behavioral-notes/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.4",
+      "cases": [
+        "positive/behavioral-contract/with-extension-field"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-extension-field/input.json",
+        "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-extension-field/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.5",
+      "cases": [
+        "positive/evidence-record/observed",
+        "positive/evidence-record/unknown"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/positive/evidence-record/observed/input.json",
+        "crates/clouddialect-contracts/fixtures/positive/evidence-record/observed/expected.json",
+        "crates/clouddialect-contracts/fixtures/positive/evidence-record/unknown/input.json",
+        "crates/clouddialect-contracts/fixtures/positive/evidence-record/unknown/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.6",
+      "cases": [
+        "positive/verification-result/minimal",
+        "positive/verification-result/with-acceptance"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/positive/verification-result/minimal/input.json",
+        "crates/clouddialect-contracts/fixtures/positive/verification-result/minimal/expected.json",
+        "crates/clouddialect-contracts/fixtures/positive/verification-result/with-acceptance/input.json",
+        "crates/clouddialect-contracts/fixtures/positive/verification-result/with-acceptance/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.7",
+      "cases": [
+        "positive/pack-manifest/full-coverage",
+        "positive/pack-manifest/with-unsupported-operation"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/positive/pack-manifest/full-coverage/input.toml",
+        "crates/clouddialect-contracts/fixtures/positive/pack-manifest/full-coverage/expected.json",
+        "crates/clouddialect-contracts/fixtures/positive/pack-manifest/with-unsupported-operation/input.toml",
+        "crates/clouddialect-contracts/fixtures/positive/pack-manifest/with-unsupported-operation/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.8",
+      "cases": [
+        "positive/pack-manifest/with-extension-section"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/positive/pack-manifest/with-extension-section/input.toml",
+        "crates/clouddialect-contracts/fixtures/positive/pack-manifest/with-extension-section/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.9",
+      "cases": [
+        "negative/behavioral-contract/missing-id",
+        "negative/behavioral-contract/obligation-no-evidence-no-assumption"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/negative/behavioral-contract/missing-id/input.json",
+        "crates/clouddialect-contracts/fixtures/negative/behavioral-contract/missing-id/expected.json",
+        "crates/clouddialect-contracts/fixtures/negative/behavioral-contract/obligation-no-evidence-no-assumption/input.json",
+        "crates/clouddialect-contracts/fixtures/negative/behavioral-contract/obligation-no-evidence-no-assumption/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.10",
+      "cases": [
+        "negative/behavioral-contract/invalid-behavioral-fidelity"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/negative/behavioral-contract/invalid-behavioral-fidelity/input.json",
+        "crates/clouddialect-contracts/fixtures/negative/behavioral-contract/invalid-behavioral-fidelity/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.11",
+      "cases": [
+        "negative/evidence-record/missing-classification",
+        "negative/evidence-record/inferred-empty-reasoning-chain"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/negative/evidence-record/missing-classification/input.json",
+        "crates/clouddialect-contracts/fixtures/negative/evidence-record/missing-classification/expected.json",
+        "crates/clouddialect-contracts/fixtures/negative/evidence-record/inferred-empty-reasoning-chain/input.json",
+        "crates/clouddialect-contracts/fixtures/negative/evidence-record/inferred-empty-reasoning-chain/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.12",
+      "cases": [
+        "negative/evidence-record/unknown-empty-assumptions"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/negative/evidence-record/unknown-empty-assumptions/input.json",
+        "crates/clouddialect-contracts/fixtures/negative/evidence-record/unknown-empty-assumptions/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.13",
+      "cases": [
+        "negative/verification-result/empty-tests-array",
+        "negative/verification-result/nonpass-without-failure-description"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/negative/verification-result/empty-tests-array/input.json",
+        "crates/clouddialect-contracts/fixtures/negative/verification-result/empty-tests-array/expected.json",
+        "crates/clouddialect-contracts/fixtures/negative/verification-result/nonpass-without-failure-description/input.json",
+        "crates/clouddialect-contracts/fixtures/negative/verification-result/nonpass-without-failure-description/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.14",
+      "cases": [
+        "negative/verification-result/acceptance-missing-approver",
+        "negative/verification-result/unknown-hash-algorithm"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/negative/verification-result/acceptance-missing-approver/input.json",
+        "crates/clouddialect-contracts/fixtures/negative/verification-result/acceptance-missing-approver/expected.json",
+        "crates/clouddialect-contracts/fixtures/negative/verification-result/unknown-hash-algorithm/input.json",
+        "crates/clouddialect-contracts/fixtures/negative/verification-result/unknown-hash-algorithm/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.15",
+      "cases": [
+        "negative/verification-result/missing-binding",
+        "negative/verification-result/missing-configuration"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/negative/verification-result/missing-binding/input.json",
+        "crates/clouddialect-contracts/fixtures/negative/verification-result/missing-binding/expected.json",
+        "crates/clouddialect-contracts/fixtures/negative/verification-result/missing-configuration/input.json",
+        "crates/clouddialect-contracts/fixtures/negative/verification-result/missing-configuration/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.16",
+      "cases": [
+        "negative/verification-result/nonpass-string-failure-description",
+        "negative/verification-result/missing-test-obligation"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/negative/verification-result/nonpass-string-failure-description/input.json",
+        "crates/clouddialect-contracts/fixtures/negative/verification-result/nonpass-string-failure-description/expected.json",
+        "crates/clouddialect-contracts/fixtures/negative/verification-result/missing-test-obligation/input.json",
+        "crates/clouddialect-contracts/fixtures/negative/verification-result/missing-test-obligation/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.17",
+      "cases": [
+        "negative/pack-manifest/missing-toolchain-for-full-operation",
+        "negative/pack-manifest/invalid-behavioral-fidelity"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/negative/pack-manifest/missing-toolchain-for-full-operation/input.toml",
+        "crates/clouddialect-contracts/fixtures/negative/pack-manifest/missing-toolchain-for-full-operation/expected.json",
+        "crates/clouddialect-contracts/fixtures/negative/pack-manifest/invalid-behavioral-fidelity/input.toml",
+        "crates/clouddialect-contracts/fixtures/negative/pack-manifest/invalid-behavioral-fidelity/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.18",
+      "cases": [
+        "negative/pack-manifest/inline-contract-body",
+        "negative/pack-manifest/missing-capabilities"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/negative/pack-manifest/inline-contract-body/input.toml",
+        "crates/clouddialect-contracts/fixtures/negative/pack-manifest/inline-contract-body/expected.json",
+        "crates/clouddialect-contracts/fixtures/negative/pack-manifest/missing-capabilities/input.toml",
+        "crates/clouddialect-contracts/fixtures/negative/pack-manifest/missing-capabilities/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.19",
+      "cases": [
+        "negative/pack-manifest/unknown-capability-version",
+        "negative/pack-manifest/duplicate-capability-id"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/negative/pack-manifest/unknown-capability-version/input.toml",
+        "crates/clouddialect-contracts/fixtures/negative/pack-manifest/unknown-capability-version/expected.json",
+        "crates/clouddialect-contracts/fixtures/negative/pack-manifest/duplicate-capability-id/input.toml",
+        "crates/clouddialect-contracts/fixtures/negative/pack-manifest/duplicate-capability-id/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.20",
+      "cases": [
+        "negative/pack-manifest/capability-unknown-field"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/negative/pack-manifest/capability-unknown-field/input.toml",
+        "crates/clouddialect-contracts/fixtures/negative/pack-manifest/capability-unknown-field/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.21",
+      "cases": [
+        "negative/version/unsupported-major",
+        "negative/version/unsupported-minor-newer"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/negative/version/unsupported-major/input.json",
+        "crates/clouddialect-contracts/fixtures/negative/version/unsupported-major/expected.json",
+        "crates/clouddialect-contracts/fixtures/negative/version/unsupported-minor-newer/input.json",
+        "crates/clouddialect-contracts/fixtures/negative/version/unsupported-minor-newer/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.22",
+      "cases": [
+        "adversarial/extension-namespace/reserved-exact-match/correctly-handled",
+        "adversarial/extension-namespace/reserved-exact-match/correctly-rejected"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/reserved-exact-match/correctly-handled/input.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/reserved-exact-match/correctly-handled/expected.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/reserved-exact-match/correctly-rejected/input.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/reserved-exact-match/correctly-rejected/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.23",
+      "cases": [
+        "adversarial/extension-namespace/reserved-uppercase-bypass/correctly-handled",
+        "adversarial/extension-namespace/reserved-uppercase-bypass/correctly-rejected"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/reserved-uppercase-bypass/correctly-handled/input.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/reserved-uppercase-bypass/correctly-handled/expected.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/reserved-uppercase-bypass/correctly-rejected/input.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/reserved-uppercase-bypass/correctly-rejected/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.24",
+      "cases": [
+        "adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-handled",
+        "adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-rejected"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-handled/input.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-handled/expected.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-rejected/input.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-rejected/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.25",
+      "cases": [
+        "adversarial/extension-namespace/namespace-collision/correctly-handled",
+        "adversarial/extension-namespace/namespace-collision/untrusted-claim-author-a"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/namespace-collision/correctly-handled/input.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/namespace-collision/correctly-handled/expected.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/namespace-collision/untrusted-claim-author-a/input.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/namespace-collision/untrusted-claim-author-a/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.26",
+      "cases": [
+        "adversarial/extension-namespace/namespace-collision/untrusted-claim-author-b",
+        "adversarial/extension-namespace/invalid-prefix-formats/correctly-handled"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/namespace-collision/untrusted-claim-author-b/input.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/namespace-collision/untrusted-claim-author-b/expected.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/invalid-prefix-formats/correctly-handled/input.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/invalid-prefix-formats/correctly-handled/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.27",
+      "cases": [
+        "adversarial/extension-namespace/invalid-prefix-formats/digit-start",
+        "adversarial/extension-namespace/invalid-prefix-formats/space"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/invalid-prefix-formats/digit-start/input.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/invalid-prefix-formats/digit-start/expected.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/invalid-prefix-formats/space/input.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/invalid-prefix-formats/space/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.28",
+      "cases": [
+        "adversarial/extension-namespace/invalid-prefix-formats/one-character",
+        "adversarial/extension-namespace/unknown-optional-round-trip/correctly-handled"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/invalid-prefix-formats/one-character/input.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/invalid-prefix-formats/one-character/expected.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/unknown-optional-round-trip/correctly-handled/input.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/unknown-optional-round-trip/correctly-handled/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.29",
+      "cases": [
+        "adversarial/extension-namespace/unknown-optional-round-trip/correctly-rejected",
+        "adversarial/extension-namespace/mandatory-extension-blocks-acceptance/structurally-handled"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/unknown-optional-round-trip/correctly-rejected/input.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/unknown-optional-round-trip/correctly-rejected/expected.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/mandatory-extension-blocks-acceptance/structurally-handled/input.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/mandatory-extension-blocks-acceptance/structurally-handled/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.30",
+      "cases": [
+        "adversarial/extension-namespace/mandatory-extension-blocks-acceptance/semantically-rejected",
+        "adversarial/extension-namespace/override-core-field-attempt/correctly-handled"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/mandatory-extension-blocks-acceptance/semantically-rejected/input.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/mandatory-extension-blocks-acceptance/semantically-rejected/expected.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/override-core-field-attempt/correctly-handled/input.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/override-core-field-attempt/correctly-handled/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.31",
+      "cases": [
+        "adversarial/extension-namespace/override-core-field-attempt/correctly-rejected"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/override-core-field-attempt/correctly-rejected/input.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/override-core-field-attempt/correctly-rejected/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.32",
+      "cases": [
+        "adversarial/p0-authority/x-authority-injection",
+        "adversarial/p0-authority/x-capability-shadow"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/x-authority-injection/input.toml",
+        "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/x-authority-injection/expected.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/x-capability-shadow/input.toml",
+        "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/x-capability-shadow/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.33",
+      "cases": [
+        "adversarial/p0-authority/prohibited-worker-action-requests",
+        "adversarial/p0-authority/forged-approver-claim"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/prohibited-worker-action-requests/input.toml",
+        "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/prohibited-worker-action-requests/expected.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/forged-approver-claim/input.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/forged-approver-claim/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.34",
+      "cases": [
+        "adversarial/p0-authority/forged-origin-claim",
+        "adversarial/p0-authority/incomplete-binding"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/forged-origin-claim/input.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/forged-origin-claim/expected.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/incomplete-binding/input.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/incomplete-binding/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.35",
+      "cases": [
+        "adversarial/p0-authority/replayed-binding-claim"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/replayed-binding-claim/input.json",
+        "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/replayed-binding-claim/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.36",
+      "cases": [
+        "round-trip/extension-field-preservation/behavioral-contract",
+        "round-trip/extension-field-preservation/evidence-record"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/round-trip/extension-field-preservation/behavioral-contract/input.json",
+        "crates/clouddialect-contracts/fixtures/round-trip/extension-field-preservation/behavioral-contract/expected.json",
+        "crates/clouddialect-contracts/fixtures/round-trip/extension-field-preservation/evidence-record/input.json",
+        "crates/clouddialect-contracts/fixtures/round-trip/extension-field-preservation/evidence-record/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.37",
+      "cases": [
+        "round-trip/extension-field-preservation/verification-result"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/round-trip/extension-field-preservation/verification-result/input.json",
+        "crates/clouddialect-contracts/fixtures/round-trip/extension-field-preservation/verification-result/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.38",
+      "cases": [
+        "integration/blocking-gap/unknown-evidence-mandatory-obligation"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/integration/blocking-gap/unknown-evidence-mandatory-obligation/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/blocking-gap/unknown-evidence-mandatory-obligation/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.39",
+      "cases": [
+        "integration/semantic-resolution-failure/manifest-bad-contract-ref"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/integration/semantic-resolution-failure/manifest-bad-contract-ref/input.toml",
+        "crates/clouddialect-contracts/fixtures/integration/semantic-resolution-failure/manifest-bad-contract-ref/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.40",
+      "cases": [
+        "integration/artifact-hash-mismatch/tampered-candidate"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/integration/artifact-hash-mismatch/tampered-candidate/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/artifact-hash-mismatch/tampered-candidate/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.41",
+      "cases": [
+        "integration/offline-resolution/network-disabled",
+        "integration/offline-resolution/unresolvable-ref"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/integration/offline-resolution/network-disabled/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/offline-resolution/network-disabled/expected.json",
+        "crates/clouddialect-contracts/fixtures/integration/offline-resolution/unresolvable-ref/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/offline-resolution/unresolvable-ref/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.42",
+      "cases": [
+        "integration/scoped-store/exact-version",
+        "integration/scoped-store/missing"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/integration/scoped-store/exact-version/input.toml",
+        "crates/clouddialect-contracts/fixtures/integration/scoped-store/exact-version/expected.json",
+        "crates/clouddialect-contracts/fixtures/integration/scoped-store/missing/input.toml",
+        "crates/clouddialect-contracts/fixtures/integration/scoped-store/missing/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.43",
+      "cases": [
+        "integration/scoped-store/ambiguous",
+        "integration/scoped-store/wrong-type"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/integration/scoped-store/ambiguous/input.toml",
+        "crates/clouddialect-contracts/fixtures/integration/scoped-store/ambiguous/expected.json",
+        "crates/clouddialect-contracts/fixtures/integration/scoped-store/wrong-type/input.toml",
+        "crates/clouddialect-contracts/fixtures/integration/scoped-store/wrong-type/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.44",
+      "cases": [
+        "integration/scoped-store/hash-mismatch",
+        "integration/scoped-store/outage"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/integration/scoped-store/hash-mismatch/input.toml",
+        "crates/clouddialect-contracts/fixtures/integration/scoped-store/hash-mismatch/expected.json",
+        "crates/clouddialect-contracts/fixtures/integration/scoped-store/outage/input.toml",
+        "crates/clouddialect-contracts/fixtures/integration/scoped-store/outage/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.45",
+      "cases": [
+        "integration/scoped-store/wrong-returned-version",
+        "integration/scoped-store/wrong-returned-identity"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/integration/scoped-store/wrong-returned-version/input.toml",
+        "crates/clouddialect-contracts/fixtures/integration/scoped-store/wrong-returned-version/expected.json",
+        "crates/clouddialect-contracts/fixtures/integration/scoped-store/wrong-returned-identity/input.toml",
+        "crates/clouddialect-contracts/fixtures/integration/scoped-store/wrong-returned-identity/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.46",
+      "cases": [
+        "integration/scoped-store/same-tenant-cross-project-denial"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/integration/scoped-store/same-tenant-cross-project-denial/input.toml",
+        "crates/clouddialect-contracts/fixtures/integration/scoped-store/same-tenant-cross-project-denial/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.47",
+      "cases": [
+        "integration/catalog/snapshot-environment-immunity"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/integration/catalog/snapshot-environment-immunity/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/catalog/snapshot-environment-immunity/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.48",
+      "cases": [
+        "integration/digest-vectors/sha-256/empty",
+        "integration/digest-vectors/sha-256/abc"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/integration/digest-vectors/sha-256/empty/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/digest-vectors/sha-256/empty/expected.json",
+        "crates/clouddialect-contracts/fixtures/integration/digest-vectors/sha-256/abc/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/digest-vectors/sha-256/abc/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.49",
+      "cases": [
+        "integration/digest-vectors/sha-384/empty",
+        "integration/digest-vectors/sha-384/abc"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/integration/digest-vectors/sha-384/empty/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/digest-vectors/sha-384/empty/expected.json",
+        "crates/clouddialect-contracts/fixtures/integration/digest-vectors/sha-384/abc/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/digest-vectors/sha-384/abc/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.50",
+      "cases": [
+        "integration/digest-vectors/sha-512/empty",
+        "integration/digest-vectors/sha-512/abc"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/integration/digest-vectors/sha-512/empty/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/digest-vectors/sha-512/empty/expected.json",
+        "crates/clouddialect-contracts/fixtures/integration/digest-vectors/sha-512/abc/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/digest-vectors/sha-512/abc/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.51",
+      "cases": [
+        "integration/digest-vectors/sha3-224/empty",
+        "integration/digest-vectors/sha3-224/abc"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/integration/digest-vectors/sha3-224/empty/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/digest-vectors/sha3-224/empty/expected.json",
+        "crates/clouddialect-contracts/fixtures/integration/digest-vectors/sha3-224/abc/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/digest-vectors/sha3-224/abc/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.52",
+      "cases": [
+        "integration/digest-vectors/sha3-256/empty",
+        "integration/digest-vectors/sha3-256/abc"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/integration/digest-vectors/sha3-256/empty/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/digest-vectors/sha3-256/empty/expected.json",
+        "crates/clouddialect-contracts/fixtures/integration/digest-vectors/sha3-256/abc/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/digest-vectors/sha3-256/abc/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.53",
+      "cases": [
+        "integration/verification-consistency/duplicate-test-ids",
+        "integration/verification-consistency/unmapped-obligations"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/integration/verification-consistency/duplicate-test-ids/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/verification-consistency/duplicate-test-ids/expected.json",
+        "crates/clouddialect-contracts/fixtures/integration/verification-consistency/unmapped-obligations/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/verification-consistency/unmapped-obligations/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.54",
+      "cases": [
+        "integration/verification-consistency/invalid-calendar-utc",
+        "integration/verification-consistency/non-z-timestamp"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/integration/verification-consistency/invalid-calendar-utc/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/verification-consistency/invalid-calendar-utc/expected.json",
+        "crates/clouddialect-contracts/fixtures/integration/verification-consistency/non-z-timestamp/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/verification-consistency/non-z-timestamp/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.55",
+      "cases": [
+        "integration/verification-consistency/invalid-hash-length",
+        "integration/verification-consistency/approval-result-id-mismatch"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/integration/verification-consistency/invalid-hash-length/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/verification-consistency/invalid-hash-length/expected.json",
+        "crates/clouddialect-contracts/fixtures/integration/verification-consistency/approval-result-id-mismatch/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/verification-consistency/approval-result-id-mismatch/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.56",
+      "cases": [
+        "integration/verification-consistency/approval-result-version-mismatch"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/integration/verification-consistency/approval-result-version-mismatch/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/verification-consistency/approval-result-version-mismatch/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.57",
+      "cases": [
+        "integration/version-profile/build-metadata",
+        "integration/version-profile/prerelease"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/integration/version-profile/build-metadata/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/version-profile/build-metadata/expected.json",
+        "crates/clouddialect-contracts/fixtures/integration/version-profile/prerelease/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/version-profile/prerelease/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.58",
+      "cases": [
+        "integration/version-profile/leading-zero",
+        "integration/version-profile/unindexed-patch"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/integration/version-profile/leading-zero/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/version-profile/leading-zero/expected.json",
+        "crates/clouddialect-contracts/fixtures/integration/version-profile/unindexed-patch/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/version-profile/unindexed-patch/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.59",
+      "cases": [
+        "integration/version-profile/core-overflow",
+        "integration/version-profile/root-only-newer-minor"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/integration/version-profile/core-overflow/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/version-profile/core-overflow/expected.json",
+        "crates/clouddialect-contracts/fixtures/integration/version-profile/root-only-newer-minor/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/version-profile/root-only-newer-minor/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    },
+    {
+      "id": "3.2.60",
+      "cases": [
+        "integration/version-profile/closed-nested-newer-minor"
+      ],
+      "files": [
+        "crates/clouddialect-contracts/fixtures/integration/version-profile/closed-nested-newer-minor/input.json",
+        "crates/clouddialect-contracts/fixtures/integration/version-profile/closed-nested-newer-minor/expected.json"
+      ],
+      "status": "draft-not-approved",
+      "dependencies": [
+        "3.1",
+        "exact-oracle-freeze",
+        "owner-approval"
+      ]
+    }
+  ],
+  "known_gates": [
+    "Exact diagnostic multisets still need fixture-specific freeze; drafts are not dispatch-ready.",
+    "Namespace-collision rejected-case interpretation needs owner confirmation; no collision authentication invented.",
+    "Native network-disabled qualification not approved; cannot pass from a metadata note.",
+    "Cross-project authorization needs real backend/Spec2 evidence.",
+    "Environment-immunity fixture requires explicit trusted setup representation.",
+    "Forged/replayed/prohibited-action claims distinguish local declarations from actual Spec2 admission/authentication."
+  ]
+}

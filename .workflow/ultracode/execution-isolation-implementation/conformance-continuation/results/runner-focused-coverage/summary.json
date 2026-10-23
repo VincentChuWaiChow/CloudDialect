@@ -1,0 +1,193 @@
+{
+  "scope": "Focused test-only fixture runner and custom main; not complete production/library/full-corpus/native coverage",
+  "files": [
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/tests/conformance.rs",
+      "summary": {
+        "lines": {
+          "count": 43,
+          "covered": 42,
+          "percent": 97.67441860465115
+        },
+        "functions": {
+          "count": 5,
+          "covered": 4,
+          "percent": 80
+        },
+        "instantiations": {
+          "count": 5,
+          "covered": 4,
+          "percent": 80
+        },
+        "regions": {
+          "count": 83,
+          "covered": 80,
+          "notcovered": 3,
+          "percent": 96.3855421686747
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    },
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/tests/support/fixtures.rs",
+      "summary": {
+        "lines": {
+          "count": 432,
+          "covered": 381,
+          "percent": 88.19444444444444
+        },
+        "functions": {
+          "count": 55,
+          "covered": 31,
+          "percent": 56.36363636363636
+        },
+        "instantiations": {
+          "count": 110,
+          "covered": 59,
+          "percent": 53.63636363636364
+        },
+        "regions": {
+          "count": 733,
+          "covered": 635,
+          "notcovered": 98,
+          "percent": 86.63028649386084
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    }
+  ],
+  "objects": [
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/conformance-8578d0c356816383",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/conformance_controls-48dd8c9ee48be0cb",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/structural_validation-fa2fa01b8566d94b"
+  ],
+  "profiles_directory": "/tmp/clouddialect-domain-profiles-luke0e3c",
+  "cli_controls": [
+    {
+      "args": [
+        "--fixture-root",
+        "/tmp/clouddialect-instrumented-cli-n3lwcoo3"
+      ],
+      "exit_code": 0,
+      "expected_success": true,
+      "output": "PASS positive/evidence-record/inferred\n1 conformance fixtures passed\n"
+    },
+    {
+      "args": [
+        "--fixture-root",
+        "/tmp/clouddialect-instrumented-cli-n3lwcoo3",
+        "positive"
+      ],
+      "exit_code": 0,
+      "expected_success": true,
+      "output": "PASS positive/evidence-record/inferred\n1 conformance fixtures passed\n"
+    },
+    {
+      "args": [
+        "--fixture-root",
+        "/tmp/clouddialect-instrumented-cli-n3lwcoo3",
+        "absent"
+      ],
+      "exit_code": 1,
+      "expected_success": false,
+      "output": "no fixtures selected by directory prefix\n"
+    },
+    {
+      "args": [
+        "--fixture-root",
+        "/tmp/clouddialect-instrumented-cli-n3lwcoo3",
+        "../positive"
+      ],
+      "exit_code": 1,
+      "expected_success": false,
+      "output": "invalid fixture directory prefix \"../positive\"\n"
+    },
+    {
+      "args": [
+        "--fixture-root",
+        "/tmp/clouddialect-instrumented-cli-n3lwcoo3",
+        "positive",
+        "negative"
+      ],
+      "exit_code": 1,
+      "expected_success": false,
+      "output": "expected one directory prefix and optional --fixture-root path\n"
+    },
+    {
+      "args": [
+        "--fixture"
+      ],
+      "exit_code": 1,
+      "expected_success": false,
+      "output": "invalid internal fixture arguments\n"
+    },
+    {
+      "args": [
+        "--fixture-root"
+      ],
+      "exit_code": 1,
+      "expected_success": false,
+      "output": "--fixture-root requires a directory\n"
+    },
+    {
+      "args": [
+        "--fixture-root",
+        "/tmp/clouddialect-instrumented-cli-n3lwcoo3",
+        "positive"
+      ],
+      "exit_code": 0,
+      "expected_success": true,
+      "output": "PASS positive/evidence-record/inferred\n1 conformance fixtures passed\n"
+    },
+    {
+      "args": [
+        "--fixture-root",
+        "/tmp/clouddialect-instrumented-cli-n3lwcoo3"
+      ],
+      "exit_code": 1,
+      "expected_success": false,
+      "output": "PASS positive/evidence-record/inferred\n/tmp/clouddialect-instrumented-cli-n3lwcoo3/positive-neighbor/wrong: fixture validator exit status: 1: /tmp/clouddialect-instrumented-cli-n3lwcoo3/positive-neighbor/wrong: outcome: expected \"fail\", actual \"pass\"\n\n"
+    }
+  ],
+  "canonical_helper_source": "/home/raishin/projects/CloudDialect/scripts/verification/contracts-evidence-foundation/measure-domain-coverage.py",
+  "canonical_helper_sha256": "356fc1e7196df129cdf5ec61566e4d9035b5e0e3cf51fdce8a5b08665def5741",
+  "adapter": "Existing canonical run/tool/cache setup used in memory. Test target selection and two-file summary are explicitly focused; no full-suite or path-only-adapter claim.",
+  "lines": {
+    "count": 475,
+    "covered": 423,
+    "percent": 89.05263157894737
+  },
+  "functions": {
+    "count": 60,
+    "covered": 35,
+    "percent": 58.333333333333336
+  },
+  "regions": {
+    "count": 816,
+    "covered": 715,
+    "percent": 87.62254901960785
+  },
+  "additional_actual_phase_matrix": "actual-phase-matrix.json"
+}

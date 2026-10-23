@@ -1,0 +1,18 @@
+{
+  "captured_at": "2026-10-23T19:31:04.699366+00:00",
+  "command": [
+    "rtk",
+    "proxy",
+    "cargo",
+    "test",
+    "--manifest-path",
+    "crates/clouddialect-contracts/Cargo.toml",
+    "--frozen",
+    "--test",
+    "conformance"
+  ],
+  "exit_code": 1,
+  "expected": "nonzero because canonical fixtures directory has not been approved/created",
+  "full_suite_green": false,
+  "log": "default-conformance-closeout.txt"
+}
