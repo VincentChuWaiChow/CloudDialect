@@ -1,0 +1,35 @@
+[
+  {
+    "phase": "red",
+    "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-pr3-diagnostics-target cargo test --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen --offline --test fidelity_mapping --test manifest_semantic",
+    "exit_code": 101,
+    "executed_tests": "fidelity_mapping: 4 passed, 4 failed; Cargo stopped before manifest target",
+    "evidence": "diagnostics-red-fidelity.txt"
+  },
+  {
+    "phase": "red",
+    "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-pr3-diagnostics-target cargo test --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen --offline --test manifest_semantic",
+    "exit_code": 101,
+    "executed_tests": "manifest_semantic: 5 passed, 2 failed",
+    "evidence": "diagnostics-red-manifest.txt"
+  },
+  {
+    "phase": "green-before-format",
+    "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-pr3-diagnostics-target cargo test --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen --offline --test fidelity_mapping --test manifest_semantic",
+    "exit_code": 0,
+    "executed_tests": "fidelity_mapping: 8 passed; manifest_semantic: 7 passed",
+    "evidence": "diagnostics-green-focused.txt"
+  },
+  {
+    "phase": "format",
+    "command": "rtk proxy rustfmt --edition 2024 crates/clouddialect-contracts/src/validator/fidelity.rs crates/clouddialect-contracts/src/manifest/validator.rs crates/clouddialect-contracts/tests/fidelity_mapping.rs crates/clouddialect-contracts/tests/manifest_semantic.rs",
+    "exit_code": 0
+  },
+  {
+    "phase": "green-final",
+    "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-phase-cargo CARGO_TARGET_DIR=/tmp/clouddialect-pr3-diagnostics-target cargo test --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen --offline --test fidelity_mapping --test manifest_semantic",
+    "exit_code": 0,
+    "executed_tests": "fidelity_mapping: 8 passed; manifest_semantic: 7 passed",
+    "evidence": "diagnostics-green-final.txt"
+  }
+]

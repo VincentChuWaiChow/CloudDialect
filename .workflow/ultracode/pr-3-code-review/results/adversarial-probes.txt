@@ -1,0 +1,15 @@
+
+running 5 tests
+catalog serialization: end_of_life_date=null; re-admission=Some(ValidatorError { document_id: None, format_version: None, category: Structural, field_path: None, description: "Catalog index does not match its schema", byte_offset: None })
+test admitted_catalog_serialization_fails_its_own_schema ... ok
+nested resource: indexed=false, actual outcome=Pass, errors=[]
+test nested_resource_identity_shadows_indexed_bytes ... ok
+nested duplicate: structural=Pass; typed_error=Some(Error("duplicate field call_site", line: 1, column: 32))
+test nested_duplicate_core_fields_pass_structure_but_typed_decode_rejects ... ok
+reference failure attribution: [ValidatorError { document_id: Some("io.clouddialect.python.oss-to-s3"), format_version: None, category: Structural, field_path: Some("contracts.upload_object.operation_identity"), description: "Required field is missing", byte_offset: None }]
+test contract_failure_is_reattributed_to_nonexistent_pack_field ... ok
+fidelity path: [ValidatorError { document_id: Some("io.clouddialect.python.oss-to-s3"), format_version: None, category: Semantic, field_path: Some("operations[\"upload_object\"].behavioral_fidelity"), description: "manifest fidelity 'full' but contract obligation \"o1\" has fidelity 'adaptation-required'", byte_offset: None }]
+test fidelity_diagnostic_indexes_an_array_by_string ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+

@@ -1,0 +1,11 @@
+
+running 3 tests
+test opaque_extension_values_and_schema_fragments_are_not_reinterpreted ... ok
+test escaped_duplicate_names_and_duplicates_in_resource_and_test_arrays_fail ... ok
+test nested_core_duplicates_are_rejected_for_all_five_document_kinds ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.30s
+
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.31s
+     Running tests/nested_duplicate_fields.rs (/tmp/clouddialect-phase-target/debug/deps/nested_duplicate_fields-a2bbfedf5b8ea236)

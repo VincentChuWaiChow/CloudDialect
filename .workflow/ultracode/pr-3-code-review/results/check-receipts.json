@@ -1,0 +1,59 @@
+[
+  {
+    "name": "default-cache-attempt",
+    "command": "rtk proxy cargo test --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen --offline",
+    "exit_code": 101,
+    "reason": "Default Cargo cache lacked boon; retried using already-present isolated cache, still frozen/offline. No fetch or dependency mutation."
+  },
+  {
+    "name": "rust-tests",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--offline"
+    ],
+    "env_overrides": {
+      "CARGO_HOME": "/tmp/clouddialect-phase-cargo",
+      "CARGO_TARGET_DIR": "/tmp/clouddialect-phase-target",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "exit_code": 0,
+    "elapsed_seconds": 2.35,
+    "evidence": ".workflow/ultracode/pr-3-code-review/results/rust-tests.txt"
+  },
+  {
+    "name": "python-tests",
+    "command": [
+      "rtk",
+      "proxy",
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "env_overrides": {
+      "CARGO_HOME": "/tmp/clouddialect-phase-cargo",
+      "CARGO_TARGET_DIR": "/tmp/clouddialect-phase-target",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "exit_code": 0,
+    "elapsed_seconds": 0.06,
+    "evidence": ".workflow/ultracode/pr-3-code-review/results/python-tests.txt"
+  },
+  {
+    "name": "adversarial-probes",
+    "command": "rtk proxy rustc --edition=2024 --test /tmp/clouddialect-pr3-review-probes.rs -L dependency=/tmp/clouddialect-phase-target/debug/deps --extern <existing pinned rlibs>; rtk proxy /tmp/clouddialect-pr3-review-probes --nocapture",
+    "exit_code": 0,
+    "observed_cases": 5,
+    "evidence": "results/adversarial-probes.txt",
+    "note": "Probes confirm defects, not fixes. Initial compile needed missing CatalogIndex import; retained in probe-initial-build.txt."
+  }
+]

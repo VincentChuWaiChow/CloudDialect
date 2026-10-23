@@ -1,0 +1,32 @@
+{
+  "head": "10a4717c3b48fb544be568da37fd1eb42e5c4379",
+  "checks": [
+    {
+      "command": [
+        "rtk",
+        "proxy",
+        "git",
+        "diff",
+        "--exit-code",
+        "HEAD",
+        "--"
+      ],
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": [
+        "rtk",
+        "proxy",
+        "git",
+        "diff",
+        "--cached",
+        "--exit-code",
+        "--"
+      ],
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "status": "## feat/execution-isolation...origin/feat/execution-isolation\n?? .workflow/ultracode/pr-3-code-review/\n?? cloud-transformation-framework-research.pdf\n?? research.md\n"
+}

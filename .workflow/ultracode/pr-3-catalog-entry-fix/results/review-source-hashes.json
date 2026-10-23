@@ -1,0 +1,4 @@
+{
+  "crates/clouddialect-contracts/src/schema/catalog.rs": "65320f8fc3566aef793c370a1225a5cd556381ee43d17bb9fff10256bb0f098d",
+  "crates/clouddialect-contracts/tests/catalog_extension_roundtrip.rs": "e4f5c1a4ffe402dcbe6c71afcb87ade7c96cd5b7f8f9c8da199f51ef32800c53"
+}

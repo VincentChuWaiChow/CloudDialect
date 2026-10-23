@@ -1,0 +1,114 @@
+{
+  "production_lines": {
+    "count": 1403,
+    "covered": 1313,
+    "percent": 93.58517462580186
+  },
+  "excluded_inline_test_lines": [
+    {
+      "file": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/loader.rs",
+      "line": 40,
+      "covered": true
+    },
+    {
+      "file": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/loader.rs",
+      "line": 41,
+      "covered": true
+    },
+    {
+      "file": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/loader.rs",
+      "line": 42,
+      "covered": true
+    },
+    {
+      "file": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/loader.rs",
+      "line": 43,
+      "covered": true
+    },
+    {
+      "file": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/loader.rs",
+      "line": 44,
+      "covered": true
+    },
+    {
+      "file": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/loader.rs",
+      "line": 45,
+      "covered": true
+    },
+    {
+      "file": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/loader.rs",
+      "line": 46,
+      "covered": true
+    },
+    {
+      "file": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/loader.rs",
+      "line": 47,
+      "covered": true
+    },
+    {
+      "file": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/loader.rs",
+      "line": 48,
+      "covered": true
+    },
+    {
+      "file": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/loader.rs",
+      "line": 50,
+      "covered": true
+    },
+    {
+      "file": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/loader.rs",
+      "line": 53,
+      "covered": true
+    },
+    {
+      "file": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/loader.rs",
+      "line": 54,
+      "covered": true
+    },
+    {
+      "file": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/loader.rs",
+      "line": 55,
+      "covered": true
+    },
+    {
+      "file": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/loader.rs",
+      "line": 56,
+      "covered": true
+    },
+    {
+      "file": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/loader.rs",
+      "line": 57,
+      "covered": true
+    },
+    {
+      "file": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/loader.rs",
+      "line": 58,
+      "covered": true
+    },
+    {
+      "file": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/loader.rs",
+      "line": 59,
+      "covered": true
+    }
+  ],
+  "production_files": [
+    "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/documents/raw_objects.rs",
+    "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/manifest/mod.rs",
+    "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/manifest/validator.rs",
+    "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/catalog.rs",
+    "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/embedded.rs",
+    "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/loader.rs",
+    "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/snapshot.rs",
+    "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/validator/artifact_hash.rs",
+    "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/validator/document_resolution.rs",
+    "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/validator/extensions.rs",
+    "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/validator/fidelity.rs",
+    "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/validator/mandatory_extensions.rs",
+    "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/validator/mod.rs",
+    "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/validator/structural.rs",
+    "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/validator/version.rs"
+  ],
+  "profiles": "/tmp/clouddialect-pr3-fixes-prof-nx9mfmbq",
+  "object_count": 31,
+  "scope": "Emitted canonical production source line mappings only. Lexical test-copy aliases, dependencies, unmapped DTOs and source-local inline tests excluded. Not branch/native/full-spec/MSRV proof."
+}

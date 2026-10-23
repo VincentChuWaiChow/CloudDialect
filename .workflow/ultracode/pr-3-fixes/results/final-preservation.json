@@ -1,0 +1,25 @@
+{
+  "head_unchanged": "10a4717c3b48fb544be568da37fd1eb42e5c4379",
+  "tracked_changed": [
+    "crates/clouddialect-contracts/src/manifest/validator.rs",
+    "crates/clouddialect-contracts/src/schema/catalog.rs",
+    "crates/clouddialect-contracts/src/validator/fidelity.rs",
+    "crates/clouddialect-contracts/src/validator/structural.rs",
+    "crates/clouddialect-contracts/tests/catalog_extension_roundtrip.rs",
+    "crates/clouddialect-contracts/tests/catalog_loading.rs",
+    "crates/clouddialect-contracts/tests/fidelity_mapping.rs",
+    "crates/clouddialect-contracts/tests/manifest_semantic.rs"
+  ],
+  "new_source": [
+    "crates/clouddialect-contracts/tests/nested_duplicate_fields.rs"
+  ],
+  "other_baseline_hashes_and_links_preserved": true,
+  "index_unchanged": true,
+  "diff_check_exit": 0,
+  "postreview_changes": [
+    "crates/clouddialect-contracts/src/manifest/validator.rs",
+    "crates/clouddialect-contracts/src/validator/fidelity.rs",
+    "crates/clouddialect-contracts/tests/manifest_semantic.rs"
+  ],
+  "status": "## feat/execution-isolation...origin/feat/execution-isolation\n M crates/clouddialect-contracts/src/manifest/validator.rs\n M crates/clouddialect-contracts/src/schema/catalog.rs\n M crates/clouddialect-contracts/src/validator/fidelity.rs\n M crates/clouddialect-contracts/src/validator/structural.rs\n M crates/clouddialect-contracts/tests/catalog_extension_roundtrip.rs\n M crates/clouddialect-contracts/tests/catalog_loading.rs\n M crates/clouddialect-contracts/tests/fidelity_mapping.rs\n M crates/clouddialect-contracts/tests/manifest_semantic.rs\n?? .workflow/ultracode/pr-3-code-review/\n?? .workflow/ultracode/pr-3-fixes/\n?? cloud-transformation-framework-research.pdf\n?? crates/clouddialect-contracts/tests/nested_duplicate_fields.rs\n?? research.md\n"
+}

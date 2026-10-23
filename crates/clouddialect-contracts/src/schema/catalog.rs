@@ -42,6 +42,7 @@ raw_object_model!(
 );
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(try_from = "RawFields")]
 pub struct CatalogEntry {
     pub schema_id: String,
     pub document_type: DocumentKind,
@@ -50,7 +51,17 @@ pub struct CatalogEntry {
     pub status: String,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub end_of_life_date: Option<String>,
+    /// Unknown entry values retain their encoded JSON bytes, not policy authority.
+    /// Struct-literal callers must supply this map, including when it is empty.
+    #[serde(flatten)]
+    pub extensions: RawObject,
 }
+
+raw_object_model!(
+    CatalogEntry,
+    [schema_id, document_type, format_version, catalog_path, status],
+    [end_of_life_date => "end_of_life_date"]
+);
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct ResolverResource {

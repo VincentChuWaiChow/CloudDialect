@@ -1,0 +1,6 @@
+{
+  "crates/clouddialect-contracts/src/validator/fidelity.rs": "817153f063c1e80cfe351c880b8053112a2cc7f5fe2ef2199e46e08194175a3f",
+  "crates/clouddialect-contracts/src/manifest/validator.rs": "8c53f45e36ea900fcf2fbc18b3f731b2e9f34eb49c003256fb728d2d394cd8ed",
+  "crates/clouddialect-contracts/tests/fidelity_mapping.rs": "479eafbac042c5f4d7aa0dceb421fe7bf6009073f4ef9bf5768e99d81071c2a5",
+  "crates/clouddialect-contracts/tests/manifest_semantic.rs": "078f1d0376bf1caa6ffbeb6e62dca3ed15eab8f65eb9709d75fa93cb6c601a6e"
+}

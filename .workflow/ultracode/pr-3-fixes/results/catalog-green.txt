@@ -1,0 +1,36 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.87s
+     Running tests/catalog_extension_roundtrip.rs (/tmp/clouddialect-pr3-catalog-target/debug/deps/catalog_extension_roundtrip-aa004d0384467614)
+
+running 5 tests
+test decoded_duplicate_extension_names_are_rejected_before_inventory_admission ... ok
+test decoded_duplicate_core_names_remain_rejected ... ok
+test typed_and_inventory_decoding_preserve_exact_extension_value_bytes ... ok
+test mandatory_declaration_remains_a_typed_core_field ... ok
+test admitted_catalog_serialization_omits_absent_dates_and_revalidates ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+
+     Running tests/catalog_loading.rs (/tmp/clouddialect-pr3-catalog-target/debug/deps/catalog_loading-0753ce6a911566cf)
+
+running 17 tests
+test nonconflicting_bundles_and_schema_looking_instance_data_remain_supported ... ok
+test indexed_support_resources_and_local_fragments_use_actual_adapter ... ok
+test draft4_ignores_dollar_id_instead_of_treating_it_as_a_resource ... ok
+test indexed_support_roots_cannot_shadow_application_material ... ok
+test format_assertions_are_an_explicit_compiler_setting_not_a_loader_claim ... ok
+test malformed_material_and_invalid_schema_are_not_successful_validation ... ok
+test normalized_builtin_aliases_and_fragment_resource_identifiers_are_rejected ... ok
+test actual_boon_adapter_returns_only_the_owned_snapshot_values ... ok
+test nested_resource_ids_cannot_shadow_indexed_application_or_support_material ... ok
+test collision_probe_uses_pinned_engine_drafts_and_admitted_custom_meta_schemas ... ok
+test ordinary_same_host_resources_are_not_rejected_by_a_host_prefix_rule ... ok
+test unresolved_references_and_unknown_meta_schemas_fail_closed_in_real_compiler ... ok
+test embedded_inventory_bytes_and_digest_match_all_explicit_material ... ok
+test support_mappings_cannot_claim_any_pinned_engine_builtin_resource ... ok
+test hostile_ambient_catalog_overrides_do_not_select_any_runtime_material ... ok
+test unknown_uri_errors_include_exact_uri_without_prefix_or_file_fallback ... ok
+test pinned_engine_compiles_all_embedded_schemas_and_validates_real_catalog_documents ... ok
+
+test result: ok. 17 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.32s
+

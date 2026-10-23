@@ -1,0 +1,37 @@
+
+running 8 tests
+test decoded_duplicate_entry_extension_names_are_rejected ... FAILED
+test decoded_duplicate_extension_names_are_rejected_before_inventory_admission ... ok
+test decoded_duplicate_core_names_remain_rejected ... ok
+test nested_entry_values_survive_typed_inventory_and_revalidated_round_trips ... FAILED
+test typed_and_inventory_decoding_preserve_exact_extension_value_bytes ... ok
+test mandatory_declaration_remains_a_typed_core_field ... ok
+test admitted_catalog_serialization_omits_absent_dates_and_revalidates ... ok
+test entry_core_fields_remain_typed_and_duplicate_aware ... ok
+
+failures:
+
+---- decoded_duplicate_entry_extension_names_are_rejected stdout ----
+
+thread 'decoded_duplicate_entry_extension_names_are_rejected' (157) panicked at tests/catalog_extension_roundtrip.rs:188:9:
+assertion failed: serde_json::from_str::<CatalogIndex>(&bytes).is_err()
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- nested_entry_values_survive_typed_inventory_and_revalidated_round_trips stdout ----
+
+thread 'nested_entry_values_survive_typed_inventory_and_revalidated_round_trips' (161) panicked at tests/catalog_extension_roundtrip.rs:166:17:
+assertion `left == right` failed: acme:payload: entry value lost or rewritten
+  left: None
+ right: Some("{ \"escaped\": \"\\u0061\\/\", \"number\": 1.2300e+04, \"same\": 1, \"same\": 2 }")
+
+
+failures:
+    decoded_duplicate_entry_extension_names_are_rejected
+    nested_entry_values_survive_typed_inventory_and_revalidated_round_trips
+
+test result: FAILED. 6 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.72s
+     Running tests/catalog_extension_roundtrip.rs (/tmp/clouddialect-phase-target/debug/deps/catalog_extension_roundtrip-aa004d0384467614)
+error: test failed, to rerun pass `--test catalog_extension_roundtrip`
