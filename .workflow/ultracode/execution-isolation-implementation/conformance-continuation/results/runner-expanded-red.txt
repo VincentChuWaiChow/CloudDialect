@@ -1,0 +1,30 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.55s
+     Running tests/conformance_controls.rs (/tmp/clouddialect-runtime-target/debug/deps/conformance_controls-2d572dfd683c9da2)
+
+running 9 tests
+test fixture_worker ... ok
+test discovery_rejects_incomplete_ambiguous_and_symlinked_pairs ... ok
+test discovery_filters_components_and_rejects_empty_or_escaping_selection ... ok
+test manifest_dispatch_compares_both_local_error_channels_and_real_semantic_results ... FAILED
+test artifact_hash_uses_boolean_only_and_roundtrip_checks_actual_encoded_values ... ok
+test semantic_and_completeness_phases_use_explicit_synthetic_scoped_store_bytes ... ok
+test wrong_oracles_missing_extra_diagnostics_and_invalid_unions_fail_with_context ... ok
+test structural_outcomes_and_verbatim_warnings_use_real_public_validation ... ok
+test bounded_child_reports_mismatches_and_kills_and_reaps_a_stuck_validator ... ok
+
+failures:
+
+---- manifest_dispatch_compares_both_local_error_channels_and_real_semantic_results stdout ----
+
+thread 'manifest_dispatch_compares_both_local_error_channels_and_real_semantic_results' (203) panicked at tests/conformance_controls.rs:173:84:
+called `Result::unwrap()` on an `Err` value: "/tmp/clouddialect-conformance-c7bbb89e-d89b-4b4f-a939-9a47ef6b575c/manifest: errors: expected 1 entries, actual 0"
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    manifest_dispatch_compares_both_local_error_channels_and_real_semantic_results
+
+test result: FAILED. 8 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.21s
+
+error: test failed, to rerun pass `--test conformance_controls`
