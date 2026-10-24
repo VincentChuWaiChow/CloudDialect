@@ -1,0 +1,52 @@
+{
+  "batch": "3.2.24",
+  "status": "pass",
+  "case_paths": [
+    "adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-handled",
+    "adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-rejected"
+  ],
+  "exact_files": [
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-handled/input.json",
+      "sha256": "3b2e97f9a1ab1c252f0313208f79589325f85ee11b48c432e860121b35efb9ec"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-handled/expected.json",
+      "sha256": "03adf41856146796a305f68432ceecb3f10c4592c1c226ced864ec4f37fd020f"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-rejected/input.json",
+      "sha256": "c44832abe3da546597a9f82a3349fd5c13ff317b6919e9d8052f287f0d775a1c"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-rejected/expected.json",
+      "sha256": "a53f97df8df16e1c6362a4909529b1ae739d66456a9d95de8eabc643bbf6c0ad"
+    }
+  ],
+  "frozen_copies": true,
+  "full_test_command": [
+    "rtk",
+    "proxy",
+    "cargo",
+    "test",
+    "--manifest-path",
+    "crates/clouddialect-contracts/Cargo.toml",
+    "--frozen"
+  ],
+  "exit": 0,
+  "rust_tests_including_doctests": 288,
+  "canonical_fixture_count": 81,
+  "exact_prefix_checks": [
+    {
+      "path": "adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-handled",
+      "exit": 0,
+      "count": 1
+    },
+    {
+      "path": "adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-rejected",
+      "exit": 0,
+      "count": 1
+    }
+  ],
+  "completed_at": "2026-10-24T17:18:51.534318+00:00"
+}
