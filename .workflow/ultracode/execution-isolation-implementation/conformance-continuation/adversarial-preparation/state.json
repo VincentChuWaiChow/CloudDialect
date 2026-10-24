@@ -77,5 +77,6 @@
   "draft_repairs_used": 0,
   "draft_count": 26,
   "draft_files": 52,
-  "canonical_admission_approved": false
+  "canonical_admission_approved": true,
+  "subsequent_delivery": "All26exactpairsadmittedbyadversarial-admission-2026-10-24;historicalpreparationstatus/contractretained"
 }

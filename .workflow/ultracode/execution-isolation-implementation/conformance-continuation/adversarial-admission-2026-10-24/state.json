@@ -2,16 +2,16 @@
   "title": "Approved26pairadmission/checklistreconciliation",
   "slug": "adversarial-admission-2026-10-24",
   "created_at": "2026-10-24T17:13:29Z",
-  "updated_at": "2026-10-24T17:13:29Z",
+  "updated_at": "2026-10-24T17:28:20.941589+00:00",
   "deadline": "2026-10-24T17:58:29Z",
-  "status": "executing",
+  "status": "complete",
   "mode": "delegated",
   "baseline_ref": "84cb6aa0ea45004605d491c915836250c8d57f6f",
   "risk_level": "medium",
   "eval_contract": {
     "level": "inline",
     "path": "plan.md",
-    "status": "ready"
+    "status": "checked"
   },
   "approval": {
     "required": true,
@@ -22,8 +22,8 @@
     "native_agent_available": true,
     "native_agent_planned": true,
     "native_agent_used": true,
-    "agent_count": 1,
-    "wave_count": 1,
+    "agent_count": 2,
+    "wave_count": 2,
     "cumulative_before": 42,
     "planned_limit": 2,
     "no_delegation_reason": ""
@@ -31,23 +31,55 @@
   "packets": [
     {
       "id": "43-checklist-source-audit",
-      "status": "in_progress",
+      "status": "complete",
       "owner": "read-only-agent",
       "write_scope": [],
       "result_path": "results/43-checklist-source-audit.md"
     },
     {
       "id": "44-adversarial-final-review",
-      "status": "pending",
+      "status": "complete",
       "owner": "read-only-agent",
       "write_scope": [],
       "result_path": "results/44-adversarial-final-review.md"
     }
   ],
   "verification": {
-    "status": "pending",
-    "checks": []
+    "status": "narrow-admission-checklistcriteria-pass;fullgoal-incomplete",
+    "checks": [
+      {
+        "name": "14fullfrozenbatches",
+        "status": "pass",
+        "evidence": "results/batch-commits.json;results/batch-*.json"
+      },
+      {
+        "name": "integratedfull-check-lint-python",
+        "status": "pass",
+        "evidence": "results/integrated-checks.json"
+      },
+      {
+        "name": "legacychecker",
+        "status": "known-preexisting-error",
+        "evidence": "results/integrated-checks.json"
+      },
+      {
+        "name": "42selector-oraclecontrols",
+        "status": "pass",
+        "evidence": "results/selector-oracle-controls.json"
+      },
+      {
+        "name": "independent43/44",
+        "status": "pass",
+        "evidence": "results/43-checklist-source-audit.md;results/44-adversarial-final-review.md"
+      },
+      {
+        "name": "scope352hashes",
+        "status": "pass",
+        "evidence": "results/scope-audit.json;results/final-protected-hashes.json"
+      }
+    ]
   },
   "consolidated_repairs_used": 0,
-  "contract_sha256": "7645881b9f0829e66cef5dbfb0d63df3eb448ef0a3d1dd387445496d3ead46c9"
+  "contract_sha256": "7645881b9f0829e66cef5dbfb0d63df3eb448ef0a3d1dd387445496d3ead46c9",
+  "source_or_oracle_repairs": 0
 }

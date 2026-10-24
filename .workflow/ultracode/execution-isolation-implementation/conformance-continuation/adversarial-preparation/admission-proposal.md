@@ -1,3 +1,5 @@
+> Ownerapproved2026-10-24;all26exactpairsarenowadmittedby[thecurrenttranche](../adversarial-admission-2026-10-24/final-report.md). Historicalproposalcounts/exclusionsbelowretaintheiroriginalsnapshot;currentcanonicalcount101. No newpushauthorization.
+
 # Exact adversarial admission proposal — NOT APPROVED
 
 ## Frozen surface

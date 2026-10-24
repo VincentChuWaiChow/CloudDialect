@@ -1,0 +1,509 @@
+{
+  "matched": 42,
+  "checks": [
+    {
+      "name": "prefix:positive",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "positive"
+      ],
+      "exit": 0,
+      "count": 13,
+      "output": "PASS positive/behavioral-contract/minimal-valid\nPASS positive/behavioral-contract/with-behavioral-notes\nPASS positive/behavioral-contract/with-extension-field\nPASS positive/behavioral-contract/with-known-behavior\nPASS positive/behavioral-contract/with-unresolved-assumption-on-dependency\nPASS positive/evidence-record/inferred\nPASS positive/evidence-record/observed\nPASS positive/evidence-record/unknown\nPASS positive/pack-manifest/full-coverage\nPASS positive/pack-manifest/with-extension-section\nPASS positive/pack-manifest/with-unsupported-operation\nPASS positive/verification-result/minimal\nPASS positive/verification-result/with-acceptance\n13 conformance fixtures passed\n"
+    },
+    {
+      "name": "prefix:negative",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "negative"
+      ],
+      "exit": 0,
+      "count": 23,
+      "output": "PASS negative/behavioral-contract/invalid-behavioral-fidelity\nPASS negative/behavioral-contract/missing-id\nPASS negative/behavioral-contract/obligation-no-evidence-no-assumption\nPASS negative/evidence-record/inferred-empty-reasoning-chain\nPASS negative/evidence-record/missing-classification\nPASS negative/evidence-record/unknown-empty-assumptions\nPASS negative/pack-manifest/capability-unknown-field\nPASS negative/pack-manifest/duplicate-capability-id\nPASS negative/pack-manifest/inline-contract-body\nPASS negative/pack-manifest/invalid-behavioral-fidelity\nPASS negative/pack-manifest/missing-capabilities\nPASS negative/pack-manifest/missing-toolchain-for-full-operation\nPASS negative/pack-manifest/unknown-capability-version\nPASS negative/verification-result/acceptance-missing-approver\nPASS negative/verification-result/empty-tests-array\nPASS negative/verification-result/missing-binding\nPASS negative/verification-result/missing-configuration\nPASS negative/verification-result/missing-test-obligation\nPASS negative/verification-result/nonpass-string-failure-description\nPASS negative/verification-result/nonpass-without-failure-description\nPASS negative/verification-result/unknown-hash-algorithm\nPASS negative/version/unsupported-major\nPASS negative/version/unsupported-minor-newer\n23 conformance fixtures passed\n"
+    },
+    {
+      "name": "prefix:round-trip",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "round-trip"
+      ],
+      "exit": 0,
+      "count": 3,
+      "output": "PASS round-trip/extension-field-preservation/behavioral-contract\nPASS round-trip/extension-field-preservation/evidence-record\nPASS round-trip/extension-field-preservation/verification-result\n3 conformance fixtures passed\n"
+    },
+    {
+      "name": "prefix:integration",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "integration"
+      ],
+      "exit": 0,
+      "count": 36,
+      "output": "PASS integration/artifact-hash-mismatch/tampered-candidate\nPASS integration/blocking-gap/unknown-evidence-mandatory-obligation\nPASS integration/digest-vectors/sha-256/abc\nPASS integration/digest-vectors/sha-256/empty\nPASS integration/digest-vectors/sha-384/abc\nPASS integration/digest-vectors/sha-384/empty\nPASS integration/digest-vectors/sha-512/abc\nPASS integration/digest-vectors/sha-512/empty\nPASS integration/digest-vectors/sha3-256/abc\nPASS integration/digest-vectors/sha3-256/empty\nPASS integration/digest-vectors/sha3-512/abc\nPASS integration/digest-vectors/sha3-512/empty\nPASS integration/offline-resolution/unresolvable-ref\nPASS integration/scoped-store/ambiguous\nPASS integration/scoped-store/exact-version\nPASS integration/scoped-store/hash-mismatch\nPASS integration/scoped-store/missing\nPASS integration/scoped-store/outage\nPASS integration/scoped-store/wrong-returned-identity\nPASS integration/scoped-store/wrong-returned-version\nPASS integration/scoped-store/wrong-type\nPASS integration/semantic-resolution-failure/manifest-bad-contract-ref\nPASS integration/verification-consistency/approval-result-id-mismatch\nPASS integration/verification-consistency/approval-result-version-mismatch\nPASS integration/verification-consistency/duplicate-test-ids\nPASS integration/verification-consistency/invalid-calendar-utc\nPASS integration/verification-consistency/invalid-hash-length\nPASS integration/verification-consistency/non-z-timestamp\nPASS integration/verification-consistency/unmapped-obligations\nPASS integration/version-profile/build-metadata\nPASS integration/version-profile/closed-nested-newer-minor\nPASS integration/version-profile/core-overflow\nPASS integration/version-profile/leading-zero\nPASS integration/version-profile/prerelease\nPASS integration/version-profile/root-only-newer-minor\nPASS integration/version-profile/unindexed-patch\n36 conformance fixtures passed\n"
+    },
+    {
+      "name": "prefix:adversarial",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "adversarial"
+      ],
+      "exit": 0,
+      "count": 26,
+      "output": "PASS adversarial/extension-namespace/invalid-prefix-formats/correctly-handled\nPASS adversarial/extension-namespace/invalid-prefix-formats/digit-start\nPASS adversarial/extension-namespace/invalid-prefix-formats/one-character\nPASS adversarial/extension-namespace/invalid-prefix-formats/space\nPASS adversarial/extension-namespace/mandatory-extension-blocks-acceptance/semantically-rejected\nPASS adversarial/extension-namespace/mandatory-extension-blocks-acceptance/structurally-handled\nPASS adversarial/extension-namespace/namespace-collision/correctly-handled\nPASS adversarial/extension-namespace/namespace-collision/untrusted-claim-author-a\nPASS adversarial/extension-namespace/namespace-collision/untrusted-claim-author-b\nPASS adversarial/extension-namespace/override-core-field-attempt/correctly-handled\nPASS adversarial/extension-namespace/override-core-field-attempt/correctly-rejected\nPASS adversarial/extension-namespace/reserved-exact-match/correctly-handled\nPASS adversarial/extension-namespace/reserved-exact-match/correctly-rejected\nPASS adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-handled\nPASS adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-rejected\nPASS adversarial/extension-namespace/reserved-uppercase-bypass/correctly-handled\nPASS adversarial/extension-namespace/reserved-uppercase-bypass/correctly-rejected\nPASS adversarial/extension-namespace/unknown-optional-round-trip/correctly-handled\nPASS adversarial/extension-namespace/unknown-optional-round-trip/correctly-rejected\nPASS adversarial/p0-authority/forged-approver-claim\nPASS adversarial/p0-authority/forged-origin-claim\nPASS adversarial/p0-authority/incomplete-binding\nPASS adversarial/p0-authority/prohibited-worker-action-requests\nPASS adversarial/p0-authority/replayed-binding-claim\nPASS adversarial/p0-authority/x-authority-injection\nPASS adversarial/p0-authority/x-capability-shadow\n26 conformance fixtures passed\n"
+    },
+    {
+      "name": "prefix:adversarial/extension-namespace",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "adversarial/extension-namespace"
+      ],
+      "exit": 0,
+      "count": 19,
+      "output": "PASS adversarial/extension-namespace/invalid-prefix-formats/correctly-handled\nPASS adversarial/extension-namespace/invalid-prefix-formats/digit-start\nPASS adversarial/extension-namespace/invalid-prefix-formats/one-character\nPASS adversarial/extension-namespace/invalid-prefix-formats/space\nPASS adversarial/extension-namespace/mandatory-extension-blocks-acceptance/semantically-rejected\nPASS adversarial/extension-namespace/mandatory-extension-blocks-acceptance/structurally-handled\nPASS adversarial/extension-namespace/namespace-collision/correctly-handled\nPASS adversarial/extension-namespace/namespace-collision/untrusted-claim-author-a\nPASS adversarial/extension-namespace/namespace-collision/untrusted-claim-author-b\nPASS adversarial/extension-namespace/override-core-field-attempt/correctly-handled\nPASS adversarial/extension-namespace/override-core-field-attempt/correctly-rejected\nPASS adversarial/extension-namespace/reserved-exact-match/correctly-handled\nPASS adversarial/extension-namespace/reserved-exact-match/correctly-rejected\nPASS adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-handled\nPASS adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-rejected\nPASS adversarial/extension-namespace/reserved-uppercase-bypass/correctly-handled\nPASS adversarial/extension-namespace/reserved-uppercase-bypass/correctly-rejected\nPASS adversarial/extension-namespace/unknown-optional-round-trip/correctly-handled\nPASS adversarial/extension-namespace/unknown-optional-round-trip/correctly-rejected\n19 conformance fixtures passed\n"
+    },
+    {
+      "name": "prefix:adversarial/p0-authority",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "adversarial/p0-authority"
+      ],
+      "exit": 0,
+      "count": 7,
+      "output": "PASS adversarial/p0-authority/forged-approver-claim\nPASS adversarial/p0-authority/forged-origin-claim\nPASS adversarial/p0-authority/incomplete-binding\nPASS adversarial/p0-authority/prohibited-worker-action-requests\nPASS adversarial/p0-authority/replayed-binding-claim\nPASS adversarial/p0-authority/x-authority-injection\nPASS adversarial/p0-authority/x-capability-shadow\n7 conformance fixtures passed\n"
+    },
+    {
+      "name": "prefix:adversarial/extension-namespace/reserved-exact-match",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "adversarial/extension-namespace/reserved-exact-match"
+      ],
+      "exit": 0,
+      "count": 2,
+      "output": "PASS adversarial/extension-namespace/reserved-exact-match/correctly-handled\nPASS adversarial/extension-namespace/reserved-exact-match/correctly-rejected\n2 conformance fixtures passed\n"
+    },
+    {
+      "name": "prefix:adversarial/extension-namespace/reserved-uppercase-bypass",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "adversarial/extension-namespace/reserved-uppercase-bypass"
+      ],
+      "exit": 0,
+      "count": 2,
+      "output": "PASS adversarial/extension-namespace/reserved-uppercase-bypass/correctly-handled\nPASS adversarial/extension-namespace/reserved-uppercase-bypass/correctly-rejected\n2 conformance fixtures passed\n"
+    },
+    {
+      "name": "prefix:adversarial/extension-namespace/reserved-mixed-case-bypass",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "adversarial/extension-namespace/reserved-mixed-case-bypass"
+      ],
+      "exit": 0,
+      "count": 2,
+      "output": "PASS adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-handled\nPASS adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-rejected\n2 conformance fixtures passed\n"
+    },
+    {
+      "name": "prefix:adversarial/extension-namespace/namespace-collision",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "adversarial/extension-namespace/namespace-collision"
+      ],
+      "exit": 0,
+      "count": 3,
+      "output": "PASS adversarial/extension-namespace/namespace-collision/correctly-handled\nPASS adversarial/extension-namespace/namespace-collision/untrusted-claim-author-a\nPASS adversarial/extension-namespace/namespace-collision/untrusted-claim-author-b\n3 conformance fixtures passed\n"
+    },
+    {
+      "name": "prefix:adversarial/extension-namespace/invalid-prefix-formats",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "adversarial/extension-namespace/invalid-prefix-formats"
+      ],
+      "exit": 0,
+      "count": 4,
+      "output": "PASS adversarial/extension-namespace/invalid-prefix-formats/correctly-handled\nPASS adversarial/extension-namespace/invalid-prefix-formats/digit-start\nPASS adversarial/extension-namespace/invalid-prefix-formats/one-character\nPASS adversarial/extension-namespace/invalid-prefix-formats/space\n4 conformance fixtures passed\n"
+    },
+    {
+      "name": "prefix:adversarial/extension-namespace/unknown-optional-round-trip",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "adversarial/extension-namespace/unknown-optional-round-trip"
+      ],
+      "exit": 0,
+      "count": 2,
+      "output": "PASS adversarial/extension-namespace/unknown-optional-round-trip/correctly-handled\nPASS adversarial/extension-namespace/unknown-optional-round-trip/correctly-rejected\n2 conformance fixtures passed\n"
+    },
+    {
+      "name": "prefix:adversarial/extension-namespace/mandatory-extension-blocks-acceptance",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "adversarial/extension-namespace/mandatory-extension-blocks-acceptance"
+      ],
+      "exit": 0,
+      "count": 2,
+      "output": "PASS adversarial/extension-namespace/mandatory-extension-blocks-acceptance/semantically-rejected\nPASS adversarial/extension-namespace/mandatory-extension-blocks-acceptance/structurally-handled\n2 conformance fixtures passed\n"
+    },
+    {
+      "name": "prefix:adversarial/extension-namespace/override-core-field-attempt",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "adversarial/extension-namespace/override-core-field-attempt"
+      ],
+      "exit": 0,
+      "count": 2,
+      "output": "PASS adversarial/extension-namespace/override-core-field-attempt/correctly-handled\nPASS adversarial/extension-namespace/override-core-field-attempt/correctly-rejected\n2 conformance fixtures passed\n"
+    },
+    {
+      "name": "prefix:guaranteed-zero-adversarial-admission-20261024",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "guaranteed-zero-adversarial-admission-20261024"
+      ],
+      "exit": 1,
+      "count": 0,
+      "output": "no fixtures selected by directory prefix\n"
+    },
+    {
+      "name": "wrong-outcome:adversarial/extension-namespace/reserved-exact-match/correctly-handled",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adv-admission-03lkkt47/0"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-adv-admission-03lkkt47/0: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "name": "wrong-outcome:adversarial/extension-namespace/reserved-exact-match/correctly-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adv-admission-03lkkt47/1"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-adv-admission-03lkkt47/1: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "name": "wrong-outcome:adversarial/extension-namespace/reserved-uppercase-bypass/correctly-handled",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adv-admission-03lkkt47/2"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-adv-admission-03lkkt47/2: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "name": "wrong-outcome:adversarial/extension-namespace/reserved-uppercase-bypass/correctly-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adv-admission-03lkkt47/3"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-adv-admission-03lkkt47/3: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "name": "wrong-outcome:adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-handled",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adv-admission-03lkkt47/4"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-adv-admission-03lkkt47/4: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "name": "wrong-outcome:adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adv-admission-03lkkt47/5"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-adv-admission-03lkkt47/5: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "name": "wrong-outcome:adversarial/extension-namespace/namespace-collision/correctly-handled",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adv-admission-03lkkt47/6"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-adv-admission-03lkkt47/6: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "name": "wrong-outcome:adversarial/extension-namespace/namespace-collision/untrusted-claim-author-a",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adv-admission-03lkkt47/7"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-adv-admission-03lkkt47/7: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "name": "wrong-outcome:adversarial/extension-namespace/namespace-collision/untrusted-claim-author-b",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adv-admission-03lkkt47/8"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-adv-admission-03lkkt47/8: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "name": "wrong-outcome:adversarial/extension-namespace/invalid-prefix-formats/correctly-handled",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adv-admission-03lkkt47/9"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-adv-admission-03lkkt47/9: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "name": "wrong-outcome:adversarial/extension-namespace/invalid-prefix-formats/digit-start",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adv-admission-03lkkt47/10"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-adv-admission-03lkkt47/10: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "name": "wrong-outcome:adversarial/extension-namespace/invalid-prefix-formats/space",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adv-admission-03lkkt47/11"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-adv-admission-03lkkt47/11: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "name": "wrong-outcome:adversarial/extension-namespace/invalid-prefix-formats/one-character",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adv-admission-03lkkt47/12"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-adv-admission-03lkkt47/12: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "name": "wrong-outcome:adversarial/extension-namespace/unknown-optional-round-trip/correctly-handled",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adv-admission-03lkkt47/13"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-adv-admission-03lkkt47/13: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "name": "wrong-outcome:adversarial/extension-namespace/unknown-optional-round-trip/correctly-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adv-admission-03lkkt47/14"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-adv-admission-03lkkt47/14: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "name": "wrong-outcome:adversarial/extension-namespace/mandatory-extension-blocks-acceptance/structurally-handled",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adv-admission-03lkkt47/15"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-adv-admission-03lkkt47/15: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "name": "wrong-outcome:adversarial/extension-namespace/mandatory-extension-blocks-acceptance/semantically-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adv-admission-03lkkt47/16"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-adv-admission-03lkkt47/16: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "name": "wrong-outcome:adversarial/extension-namespace/override-core-field-attempt/correctly-handled",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adv-admission-03lkkt47/17"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-adv-admission-03lkkt47/17: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "name": "wrong-outcome:adversarial/extension-namespace/override-core-field-attempt/correctly-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adv-admission-03lkkt47/18"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-adv-admission-03lkkt47/18: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "name": "wrong-outcome:adversarial/p0-authority/x-authority-injection",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adv-admission-03lkkt47/19"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-adv-admission-03lkkt47/19: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "name": "wrong-outcome:adversarial/p0-authority/x-capability-shadow",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adv-admission-03lkkt47/20"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-adv-admission-03lkkt47/20: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "name": "wrong-outcome:adversarial/p0-authority/prohibited-worker-action-requests",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adv-admission-03lkkt47/21"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-adv-admission-03lkkt47/21: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "name": "wrong-outcome:adversarial/p0-authority/forged-approver-claim",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adv-admission-03lkkt47/22"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-adv-admission-03lkkt47/22: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "name": "wrong-outcome:adversarial/p0-authority/forged-origin-claim",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adv-admission-03lkkt47/23"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-adv-admission-03lkkt47/23: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "name": "wrong-outcome:adversarial/p0-authority/incomplete-binding",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adv-admission-03lkkt47/24"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-adv-admission-03lkkt47/24: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "name": "wrong-outcome:adversarial/p0-authority/replayed-binding-claim",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adv-admission-03lkkt47/25"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-adv-admission-03lkkt47/25: outcome: expected \"fail\", actual \"pass\"\n"
+    }
+  ]
+}

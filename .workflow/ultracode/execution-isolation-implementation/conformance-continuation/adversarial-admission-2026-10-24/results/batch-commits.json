@@ -1,0 +1,72 @@
+[
+  {
+    "batch": "3.2.22",
+    "commit": "20ebd4bfa7a21363e842927f40874fa196811ff0",
+    "canonical": 77
+  },
+  {
+    "batch": "3.2.23",
+    "commit": "6cc62a6c570b410215304c654d45a31d9761bf2a",
+    "canonical": 79
+  },
+  {
+    "batch": "3.2.24",
+    "commit": "eb62553360f0cec5ca51b8b397f21e83cde82c1b",
+    "canonical": 81
+  },
+  {
+    "batch": "3.2.25",
+    "commit": "e497f3710c08895212344d811aeba897f6829363",
+    "canonical": 83
+  },
+  {
+    "batch": "3.2.26",
+    "commit": "719a856d2efe5389960ee3c82e0e033c8a6a694f",
+    "canonical": 85
+  },
+  {
+    "batch": "3.2.27",
+    "commit": "7638013896ba606a21953e20e6e2c7b1101a902b",
+    "canonical": 87
+  },
+  {
+    "batch": "3.2.28",
+    "commit": "74db26bef3eb5013106881b7cf489d904dd9c1b6",
+    "canonical": 89
+  },
+  {
+    "batch": "3.2.29",
+    "commit": "f5b00f908c170b4defafbabbf564ef1cec5d06e6",
+    "canonical": 91
+  },
+  {
+    "batch": "3.2.30",
+    "commit": "d2297895f8abe42ee3e87d256f28aed4939b011a",
+    "canonical": 93
+  },
+  {
+    "batch": "3.2.31",
+    "commit": "43a20850fd49733a39e4208f23546d3e46fdadb5",
+    "canonical": 94
+  },
+  {
+    "batch": "3.2.32",
+    "commit": "40db4ad361863fda0d3c3cca45b98a81a161a84d",
+    "canonical": 96
+  },
+  {
+    "batch": "3.2.33",
+    "commit": "95e57119424eb6d578e22c4fe103c2c477356bf0",
+    "canonical": 98
+  },
+  {
+    "batch": "3.2.34",
+    "commit": "03be3676b428b4e5a2febe53a77ab185b833cad1",
+    "canonical": 100
+  },
+  {
+    "batch": "3.2.35",
+    "commit": "b0e7796c18b9d9402b48c73eaa89eaa46e220f2b",
+    "canonical": 101
+  }
+]

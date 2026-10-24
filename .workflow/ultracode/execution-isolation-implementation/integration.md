@@ -1,3 +1,13 @@
+# Current adversarial admission/checklist delivery —2026-10-24
+
+[Current report](conformance-continuation/adversarial-admission-2026-10-24/final-report.md):
+**101canonicalfixtures**,288Rusttests/11controls/check/Clippy/fmt/15Pythonpass.
+All26approvedpairsadmittedin14full-testedlocalcheckpoints;Task20isnow[x].
+Previousmissingcompletedbatchsupportrowsarealsoreconciled;Task24nearoldline600
+wasalreadycorrectly[x].43/44independentchecklist/content/executionreviewsfound
+noactionableissues;44ran82commands.3qualificationcasesandall21Spec2runtime/
+UD/BGgatesremainopen;Task25traceabilityisnexteligiblework,notdone. Nonewpush.
+
 # Published integration payload —2026-10-24
 
 [Current report](conformance-continuation/integration-admission-2026-10-24/final-report.md):

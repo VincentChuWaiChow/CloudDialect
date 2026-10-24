@@ -1,6 +1,6 @@
 # Implementation Plan: CloudDialect Contracts & Evidence Foundation
 
-**Publication authority:** earlier approvals apply to their historical actions. The current 2026-10-24 approval covers exactly 28 frozen integration pairs, related supporting status and local milestone commits; the user then explicitly requested a Git push of the current branch. The separate 26-pair adversarial admission remains unapproved. No production-library/harness/API/dependency changes, native/provider probes, deployments, releases or runtime-gate closure are authorized by this tranche.
+**Publication authority:** earlier commit/push approvals apply to their historical actions. The current 2026-10-24 approval covers exactly 26 frozen adversarial pairs, related proof-backed checklist/status updates and local milestone commits. The prior branch push is complete; this admission proposal does not authorize another push. No production-library/harness/API/dependency changes, native/provider probes, deployments, releases or runtime-gate closure follow from this tranche.
 
 
 ## Current physical domain layout
@@ -12,7 +12,7 @@ This plan builds the `clouddialect-contracts` Rust crate, its bundled JSON Schem
 
 **Current continuation status (2026-10-22):** user approved P0-A–F for implementation planning, then separately authorized the remaining Spec 1 prerequisite units in [implementation-plan.md](implementation-plan.md), TDD and no commits/probes/pushes/releases. User attests this is a new project and approves document/catalog **1.0.0** and crate API **0.1.0** as the initial MVP versions. This is not an independent external-publication audit or security-gate approval. Exact encoded extension JSON value bytes are required; raw_value on the existing pinned serde_json is separately approved.
 
-**Delivery is partial.** DTOs, schemas, catalog inventory, frozen snapshot/loading, structural JSON validation, local TOML rules and candidate hash equality have bounded verification. JSON/TOML semantics and mandatory blockers have bounded independent review; completeness has 10 focused tests after the approved direct-assumption repair; the bounded runner has 11 controls and 75 admitted canonical fixtures. The harness now compares decoded core verification data as well as exact extension value bytes and structural results. Current execution has parent Rust checks and independently executed bounded runner/control checks, not native or acceptance qualification. Exhaustive conformance and downstream compatibility remain unfinished. See the [current run report](../../../.workflow/ultracode/execution-isolation-implementation/final-report.md) for actual evidence and outstanding work. Canonical task checkmarks are conservative; BG-01 and Spec 2 UD-1–UD-5 remain OPEN.
+**Delivery is partial.** DTOs, schemas, catalog inventory, frozen snapshot/loading, structural JSON validation, local TOML rules and candidate hash equality have bounded verification. JSON/TOML semantics and mandatory blockers have bounded independent review; completeness has 10 focused tests after the approved direct-assumption repair; the bounded runner has 11 controls and 101 admitted canonical fixtures. The harness now compares decoded core verification data as well as exact extension value bytes and structural results. Current execution has parent Rust checks and independently executed bounded runner/control checks, not native or acceptance qualification. Exhaustive conformance and downstream compatibility remain unfinished. See the [current run report](../../../.workflow/ultracode/execution-isolation-implementation/final-report.md) for actual evidence and outstanding work. Canonical task checkmarks are conservative; BG-01 and Spec 2 UD-1–UD-5 remain OPEN.
 
 `BehavioralResult` full implementation, the Rust CLI binary, worker isolation, and Python transformation logic are explicitly out of scope.
 
@@ -488,12 +488,12 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - Each `expected.json` error entry specifies a `category` that matches the actual error category returned.
   - Property 4 (fidelity enum exhaustiveness): `invalid-behavioral-fidelity` fixture confirms an out-of-enum value is rejected.
 
-- [ ] 20. Write adversarial conformance fixtures
-  - Verified supporting harness only (2026-10-24): decoded core verification preservation has an executed fail-to-pass RED/GREEN regression plus binding/candidate, lexical-byte and structural-change controls. The approved local nontrust clarification below does not deliver the still-missing adversarial fixture classes or complete task20.
+- [x] 20. Write adversarial conformance fixtures
+  - Delivered locally2026-10-24: all26approved exact pairs in batches3.2.22–3.2.35 are admitted and verified through the actual runner/full frozen suites. All8namespace classes have local Pass/Fail cases, all6reserved spellings preserve verbatim warnings, exact lexical extension values and decoded core verification outcomes are checked. The seven P0profiles are explicitly5localPass/2Fail—not effective authority, authentication, collision detection or native control enforcement. See the [current admission report](../../../.workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-admission-2026-10-24/final-report.md).
   - Add P0 declaration-versus-grant and verification-claim cases: `[x]` authority injection, prohibited worker actions, forged approver/origin strings and incomplete/replayed bindings. Distinguish manifest/schema rejection from Spec 2 admission/authentication tests; document-only or mocked fixtures cannot prove native control enforcement.
   - Create the following fixture directories under `crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/`. Each directory contains `input.json` and `expected.json`.
   - Requirement 10.7 mandates exactly 8 fixture classes; each class must include at least one case where the validator handles it correctly ("correctly handled") and at least one where it correctly rejects ("correctly rejected"):
-    1. `reserved-exact-match/` — document with `core:field`; expected: `outcome: pass`, one warning with `field_name_verbatim: "core:field"`.
+    1. `reserved-exact-match/` — document with `core:field`; expected: `outcome: pass`, one warning per reserved field with its verbatim name; the approved pair includes both `core:field` and `cdc:field` (two warnings total).
     2. `reserved-uppercase-bypass/` — documents with `CORE:field` and `CDC:field`; expected: each produces a warning; `outcome: pass` (Req 10.3).
     3. `reserved-mixed-case-bypass/` — documents with `Core-Validation:field` and `Cdc-Evidence:field`; expected: each produces a warning; `outcome: pass`.
     4. `namespace-collision/` — two community extension fields using the same prefix `acme:field-a` and `acme:field-b` in one document; both extensions are preserved (no error, since collision is a registry concern, not a structural one). Owner-approved local nontrust profile (2026-10-24): provide two separately validated documents with distinct author/owner claims for the same `acme` prefix, including reserved-qualified ownership claims. Optional claims remain structurally valid; reserved qualified keys produce verbatim warnings. With `required_extensions: ["acme"]`, each independently produces a semantic `blocking-gap` at `required_extensions[0]`. This demonstrates absent trusted implemented semantics—not cross-document conflict detection or authenticated ownership. Prefix conflicts remain registry-governance work.
@@ -510,7 +510,7 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - Invalid-prefix-format fixtures fail structural validation (Req 10.7).
   - Mandatory unknown extension fixture produces a blocker (Req 10.4).
   - Core-field override attempt: core verification outcome is unchanged (Req 10.5).
-  - Property 8 test passes for all five reserved prefix variants.
+  - Property 8 test passes for all six named reserved prefix spellings.
 
 - [ ] 21. Write round-trip and integration fixtures
   - Verified supporting delivery (2026-10-24); full task remains open:
@@ -544,7 +544,7 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - Offline resolution fixture with unresolvable `$schema`: error description contains the exact URI (Req 1.3).
 
 - [ ] 22. Implement conformance fixture runner
-  - Current bounded delivery (2026-10-24): the default runner executes all75 admitted fixtures; exact category/path/boolean controls, prefix counts and zero-selection rejection pass. Complete104-case inventory, real adversarial corpus and actual native/consumer qualification remain unfinished, so this canonical full-suite task stays open despite the delivered bounded runner unit3.1.
+  - Current bounded delivery (2026-10-24): the default runner executes all101 admitted fixtures; exact category/path/boolean controls, prefix counts and zero-selection rejection pass. Complete104-case inventory and actual native/consumer qualification remain unfinished; the local-profile adversarial corpus is delivered, so this canonical full-suite task stays open despite the delivered bounded runner unit3.1.
   - Planning elaboration: register the conformance integration target with `harness = false` and a test-only main/prefix parser as specified in implementation-plan unit 3.1. Cargo's default Rust-test name filter is not a fixture-directory filter; zero selected fixtures must fail. Parent owns Cargo.toml registration; no production binary/CLI is introduced.
   - Dispatch JSON vs TOML semantic phases through the exact P0-E entrypoints; supply explicit synthetic project-scoped store fixtures, never an ambient schema-catalog document search or live backend.
   - Create `crates/clouddialect-contracts/tests/conformance.rs` as an integration test binary.

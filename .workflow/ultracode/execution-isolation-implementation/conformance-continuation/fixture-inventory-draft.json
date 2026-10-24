@@ -1,5 +1,5 @@
 {
-  "status": "75cases/43fullbatches+1partialbatch delivered;26adversarialcases/14batches frozen/verified NOT admitted;3native/backend/setupcases gated",
+  "status": "101cases/57fullbatches+1partialbatch delivered;3native/backend/trusted-setupcases gated; no remaining unapproved prepared pairs",
   "source": "canonical tasks18-21 plus named P0/VC1 follow-ons",
   "case_count": 104,
   "batch_count": 60,
@@ -1138,7 +1138,7 @@
       },
       "notes": "Reserved prefix alone warns, never fails.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -1147,7 +1147,10 @@
       "frozen_draft_sha256": {
         "input.json": "d292a376416912545c4ced7eb001e940431bfcb058102e155fe47fe62133ae85",
         "expected.json": "ec9bb0075a9179ed7a8116bd241171035c8397ebae80f4b576b8c1ce3eb49b67"
-      }
+      },
+      "commit": "20ebd4bfa7a21363e842927f40874fa196811ff0",
+      "delivery_report": "adversarial-admission-2026-10-24/final-report.md",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.22.json"
     },
     {
       "path": "adversarial/extension-namespace/reserved-exact-match/correctly-rejected",
@@ -1170,7 +1173,7 @@
       },
       "notes": "Valid reserved payload claims cannot clear a separately declared unknown mandatory namespace. No rejection merely for reserved spelling.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -1179,7 +1182,10 @@
       "frozen_draft_sha256": {
         "input.json": "5527971538da4b0969d4fdd97a3c6f1f8af182031f1e76987c8e23d305211c64",
         "expected.json": "a53f97df8df16e1c6362a4909529b1ae739d66456a9d95de8eabc643bbf6c0ad"
-      }
+      },
+      "commit": "20ebd4bfa7a21363e842927f40874fa196811ff0",
+      "delivery_report": "adversarial-admission-2026-10-24/final-report.md",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.22.json"
     },
     {
       "path": "adversarial/extension-namespace/reserved-uppercase-bypass/correctly-handled",
@@ -1205,7 +1211,7 @@
       },
       "notes": "Reserved prefix alone warns, never fails.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -1214,7 +1220,10 @@
       "frozen_draft_sha256": {
         "input.json": "2cb68ac06c58824be6c451a17aeecf875fec1baad3ca5d1c107d9f2a82dec0de",
         "expected.json": "b0f2670efdb5b938a7fda5ca50a6d2e46c0a2d77c5c78b3d348282d05be541ae"
-      }
+      },
+      "commit": "6cc62a6c570b410215304c654d45a31d9761bf2a",
+      "delivery_report": "adversarial-admission-2026-10-24/final-report.md",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.23.json"
     },
     {
       "path": "adversarial/extension-namespace/reserved-uppercase-bypass/correctly-rejected",
@@ -1237,7 +1246,7 @@
       },
       "notes": "Valid reserved payload claims cannot clear a separately declared unknown mandatory namespace. No rejection merely for reserved spelling.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -1246,7 +1255,10 @@
       "frozen_draft_sha256": {
         "input.json": "a4c2b9765afe7137f79fd553e56dbed5f29f680cf7b549d40cb3b17de8ca6f69",
         "expected.json": "a53f97df8df16e1c6362a4909529b1ae739d66456a9d95de8eabc643bbf6c0ad"
-      }
+      },
+      "commit": "6cc62a6c570b410215304c654d45a31d9761bf2a",
+      "delivery_report": "adversarial-admission-2026-10-24/final-report.md",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.23.json"
     },
     {
       "path": "adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-handled",
@@ -1272,7 +1284,7 @@
       },
       "notes": "Reserved prefix alone warns, never fails.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -1281,7 +1293,10 @@
       "frozen_draft_sha256": {
         "input.json": "3b2e97f9a1ab1c252f0313208f79589325f85ee11b48c432e860121b35efb9ec",
         "expected.json": "03adf41856146796a305f68432ceecb3f10c4592c1c226ced864ec4f37fd020f"
-      }
+      },
+      "commit": "eb62553360f0cec5ca51b8b397f21e83cde82c1b",
+      "delivery_report": "adversarial-admission-2026-10-24/final-report.md",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.24.json"
     },
     {
       "path": "adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-rejected",
@@ -1304,7 +1319,7 @@
       },
       "notes": "Valid reserved payload claims cannot clear a separately declared unknown mandatory namespace. No rejection merely for reserved spelling.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -1313,7 +1328,10 @@
       "frozen_draft_sha256": {
         "input.json": "c44832abe3da546597a9f82a3349fd5c13ff317b6919e9d8052f287f0d775a1c",
         "expected.json": "a53f97df8df16e1c6362a4909529b1ae739d66456a9d95de8eabc643bbf6c0ad"
-      }
+      },
+      "commit": "eb62553360f0cec5ca51b8b397f21e83cde82c1b",
+      "delivery_report": "adversarial-admission-2026-10-24/final-report.md",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.24.json"
     },
     {
       "path": "adversarial/extension-namespace/namespace-collision/correctly-handled",
@@ -1331,7 +1349,7 @@
       },
       "notes": "Two acme fields preserved, not registry ownership/collision authentication.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -1340,7 +1358,10 @@
       "frozen_draft_sha256": {
         "input.json": "2787777df33632bf19bfde1b739ddfa8b0cb9d78a7b44f3347f1bb974b5f1c23",
         "expected.json": "b13ff786fccf1cd540f53ae532bacf3b66a1fe3cfadf2ecc03e1673692e28f51"
-      }
+      },
+      "commit": "e497f3710c08895212344d811aeba897f6829363",
+      "delivery_report": "adversarial-admission-2026-10-24/final-report.md",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.25.json"
     },
     {
       "path": "adversarial/extension-namespace/namespace-collision/untrusted-claim-author-a",
@@ -1363,7 +1384,7 @@
       },
       "notes": "Owner approved local nontrust profile2026-10-24: independent A/B reserved-qualified claims cannot recognize unknown mandatory acme. Not cross-document conflict detection/authenticated ownership; fixture freeze/admission remains pending.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -1372,7 +1393,10 @@
       "frozen_draft_sha256": {
         "input.json": "df8646f8b7fb624d7f4c15e159af0cdb7ef5150c51f21c04fdcae6fbc682296c",
         "expected.json": "a53f97df8df16e1c6362a4909529b1ae739d66456a9d95de8eabc643bbf6c0ad"
-      }
+      },
+      "commit": "e497f3710c08895212344d811aeba897f6829363",
+      "delivery_report": "adversarial-admission-2026-10-24/final-report.md",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.25.json"
     },
     {
       "path": "adversarial/extension-namespace/namespace-collision/untrusted-claim-author-b",
@@ -1395,7 +1419,7 @@
       },
       "notes": "Owner approved local nontrust profile2026-10-24: independent A/B reserved-qualified claims cannot recognize unknown mandatory acme. Not cross-document conflict detection/authenticated ownership; fixture freeze/admission remains pending.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -1404,7 +1428,10 @@
       "frozen_draft_sha256": {
         "input.json": "728101459fbefe2937188381901b9751e93d0bb0840de39668bb8cbea2f0062c",
         "expected.json": "a53f97df8df16e1c6362a4909529b1ae739d66456a9d95de8eabc643bbf6c0ad"
-      }
+      },
+      "commit": "719a856d2efe5389960ee3c82e0e033c8a6a694f",
+      "delivery_report": "adversarial-admission-2026-10-24/final-report.md",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.26.json"
     },
     {
       "path": "adversarial/extension-namespace/invalid-prefix-formats/correctly-handled",
@@ -1421,7 +1448,7 @@
       },
       "notes": "Valid minimum-two-character ASCII neighbor.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -1430,7 +1457,10 @@
       "frozen_draft_sha256": {
         "input.json": "b37817047acdb67b68cf6e341909d3f5a648e54091f8d49e62a684ba4923000f",
         "expected.json": "cad10a80850a610f6bfe6c8e5e87aa135d5b9ba902b02ef2f7090dbb31e22f8e"
-      }
+      },
+      "commit": "719a856d2efe5389960ee3c82e0e033c8a6a694f",
+      "delivery_report": "adversarial-admission-2026-10-24/final-report.md",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.26.json"
     },
     {
       "path": "adversarial/extension-namespace/invalid-prefix-formats/digit-start",
@@ -1458,7 +1488,7 @@
       },
       "notes": "Named malformed-prefix subcase.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -1467,7 +1497,10 @@
       "frozen_draft_sha256": {
         "input.json": "8e02cbab0d2a66614be5f728a9bc676f8cf8a4e0fa247b64502cfea720808701",
         "expected.json": "455c163b1f280ca656896710967bd76f1e342f3d4e8c0006dbcfba7daf7de5d0"
-      }
+      },
+      "commit": "7638013896ba606a21953e20e6e2c7b1101a902b",
+      "delivery_report": "adversarial-admission-2026-10-24/final-report.md",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.27.json"
     },
     {
       "path": "adversarial/extension-namespace/invalid-prefix-formats/space",
@@ -1495,7 +1528,7 @@
       },
       "notes": "Named malformed-prefix subcase.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -1504,7 +1537,10 @@
       "frozen_draft_sha256": {
         "input.json": "7290782686bcf8d48b3c34e0105ab30773600173e7ed03b2ac0fa7434ab31116",
         "expected.json": "7f641825f11f5128b868a92cb699757625bdbf6efd223eb4c6105a8be3dae116"
-      }
+      },
+      "commit": "7638013896ba606a21953e20e6e2c7b1101a902b",
+      "delivery_report": "adversarial-admission-2026-10-24/final-report.md",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.27.json"
     },
     {
       "path": "adversarial/extension-namespace/invalid-prefix-formats/one-character",
@@ -1532,7 +1568,7 @@
       },
       "notes": "Named malformed-prefix subcase.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -1541,7 +1577,10 @@
       "frozen_draft_sha256": {
         "input.json": "a8fad1b00ebd49e2ea547796cd26d182eceb707ed8e69d80da29f04762e8cb8c",
         "expected.json": "8108b31f1261676d38366302e09c03f85d5824df2e93df74eb75b94ed6704629"
-      }
+      },
+      "commit": "74db26bef3eb5013106881b7cf489d904dd9c1b6",
+      "delivery_report": "adversarial-admission-2026-10-24/final-report.md",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.28.json"
     },
     {
       "path": "adversarial/extension-namespace/unknown-optional-round-trip/correctly-handled",
@@ -1559,7 +1598,7 @@
       },
       "notes": "Escapes/number spelling/inner whitespace and member ordering retained exactly.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -1568,7 +1607,10 @@
       "frozen_draft_sha256": {
         "input.json": "c614e3e900f911082e2b7bb296893829014079e60151930556d2c1a6909c7442",
         "expected.json": "b13ff786fccf1cd540f53ae532bacf3b66a1fe3cfadf2ecc03e1673692e28f51"
-      }
+      },
+      "commit": "74db26bef3eb5013106881b7cf489d904dd9c1b6",
+      "delivery_report": "adversarial-admission-2026-10-24/final-report.md",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.28.json"
     },
     {
       "path": "adversarial/extension-namespace/unknown-optional-round-trip/correctly-rejected",
@@ -1591,7 +1633,7 @@
       },
       "notes": "Optional payload/recognized claim cannot clear explicit mandatory declaration.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -1600,7 +1642,10 @@
       "frozen_draft_sha256": {
         "input.json": "eb0b5499d766bb94e277094e585b3cb9d89f2ed1074c4a40696997520109b042",
         "expected.json": "a53f97df8df16e1c6362a4909529b1ae739d66456a9d95de8eabc643bbf6c0ad"
-      }
+      },
+      "commit": "f5b00f908c170b4defafbabbf564ef1cec5d06e6",
+      "delivery_report": "adversarial-admission-2026-10-24/final-report.md",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.29.json"
     },
     {
       "path": "adversarial/extension-namespace/mandatory-extension-blocks-acceptance/structurally-handled",
@@ -1617,7 +1662,7 @@
       },
       "notes": "Declaration-only structurally valid.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -1626,7 +1671,10 @@
       "frozen_draft_sha256": {
         "input.json": "f539b85432601e83efa4f24da04c33ef5dfe6e5f7f059b9cf891069c22750582",
         "expected.json": "cad10a80850a610f6bfe6c8e5e87aa135d5b9ba902b02ef2f7090dbb31e22f8e"
-      }
+      },
+      "commit": "f5b00f908c170b4defafbabbf564ef1cec5d06e6",
+      "delivery_report": "adversarial-admission-2026-10-24/final-report.md",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.29.json"
     },
     {
       "path": "adversarial/extension-namespace/mandatory-extension-blocks-acceptance/semantically-rejected",
@@ -1649,7 +1697,7 @@
       },
       "notes": "Separate blocker, not structural or behavioral acceptance.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -1658,7 +1706,10 @@
       "frozen_draft_sha256": {
         "input.json": "f539b85432601e83efa4f24da04c33ef5dfe6e5f7f059b9cf891069c22750582",
         "expected.json": "b55cac93941aa90411b96fb214c8bb58d963025092a836632a50d43ba7cf6c78"
-      }
+      },
+      "commit": "d2297895f8abe42ee3e87d256f28aed4939b011a",
+      "delivery_report": "adversarial-admission-2026-10-24/final-report.md",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.30.json"
     },
     {
       "path": "adversarial/extension-namespace/override-core-field-attempt/correctly-handled",
@@ -1676,7 +1727,7 @@
       },
       "notes": "Valid core record plus inert accepted-looking extension; no acceptance authority claim.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -1685,7 +1736,10 @@
       "frozen_draft_sha256": {
         "input.json": "18af2c37d88f58e19648091f9adf2bf3f7c3ccb0f7856c64d0139a6f5d8925db",
         "expected.json": "58cd4b96216f9f037235211706a7b8cebcf27235c61ac9b89bfc85e8d88c0fb7"
-      }
+      },
+      "commit": "d2297895f8abe42ee3e87d256f28aed4939b011a",
+      "delivery_report": "adversarial-admission-2026-10-24/final-report.md",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.30.json"
     },
     {
       "path": "adversarial/extension-namespace/override-core-field-attempt/correctly-rejected",
@@ -1708,7 +1762,7 @@
       },
       "notes": "Extension accepted string must not repair invalid core verification fields.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -1717,7 +1771,10 @@
       "frozen_draft_sha256": {
         "input.json": "c2c6b502b9732e27bdca7ae209c5f2f58cb6cf301f9c99114bde07afec401b98",
         "expected.json": "cada309e1c0454a16676f671e79aa445b55460610e046adabf83b8f5d32e0f84"
-      }
+      },
+      "commit": "43a20850fd49733a39e4208f23546d3e46fdadb5",
+      "delivery_report": "adversarial-admission-2026-10-24/final-report.md",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.31.json"
     },
     {
       "path": "adversarial/p0-authority/x-authority-injection",
@@ -1734,7 +1791,7 @@
       },
       "notes": "[x] accepted/grant strings retained as inert data.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.toml",
         "expected.json"
@@ -1743,7 +1800,10 @@
       "frozen_draft_sha256": {
         "input.toml": "8439b6b61f933bcb7eccbb68c315256cb2b615c6c4099947c9e8d7b3e6ddb67f",
         "expected.json": "553ce3d5557b4f7139810a256e80d4474aae8af8e9bcc9c30608a874362237ee"
-      }
+      },
+      "commit": "40db4ad361863fda0d3c3cca45b98a81a161a84d",
+      "delivery_report": "adversarial-admission-2026-10-24/final-report.md",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.32.json"
     },
     {
       "path": "adversarial/p0-authority/x-capability-shadow",
@@ -1766,7 +1826,7 @@
       },
       "notes": "Direct x core-key shadow rejected.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.toml",
         "expected.json"
@@ -1775,7 +1835,10 @@
       "frozen_draft_sha256": {
         "input.toml": "2f31bd3322dbbf7065f65e0966b6bd539970f35a41f82dd573cca745f0d70180",
         "expected.json": "a2bae2779f195e627e530494d68182a550f9a941c730167892cf98170907bfdc"
-      }
+      },
+      "commit": "40db4ad361863fda0d3c3cca45b98a81a161a84d",
+      "delivery_report": "adversarial-admission-2026-10-24/final-report.md",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.32.json"
     },
     {
       "path": "adversarial/p0-authority/prohibited-worker-action-requests",
@@ -1792,7 +1855,7 @@
       },
       "notes": "approve/deploy/delete declarations parse as requests; actual worker admission denial is Spec2-only, not this pass.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.toml",
         "expected.json"
@@ -1801,7 +1864,10 @@
       "frozen_draft_sha256": {
         "input.toml": "b4517c6415516080919de1c7583c6619c0c269af3f961fa9557fdbb9b7a51244",
         "expected.json": "553ce3d5557b4f7139810a256e80d4474aae8af8e9bcc9c30608a874362237ee"
-      }
+      },
+      "commit": "95e57119424eb6d578e22c4fe103c2c477356bf0",
+      "delivery_report": "adversarial-admission-2026-10-24/final-report.md",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.33.json"
     },
     {
       "path": "adversarial/p0-authority/forged-approver-claim",
@@ -1818,7 +1884,7 @@
       },
       "notes": "Self-consistent strings do not authenticate approval; no Spec1 authentication oracle invented.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -1827,7 +1893,10 @@
       "frozen_draft_sha256": {
         "input.json": "0375abaecd163ac7273b2838ad7f6a99df3df79e665eb242a0fbb15b36316337",
         "expected.json": "8effeff3202f28e001fdfacca54cc1f3c8ae20036511c6a5a8eef9d72acfbe3b"
-      }
+      },
+      "commit": "95e57119424eb6d578e22c4fe103c2c477356bf0",
+      "delivery_report": "adversarial-admission-2026-10-24/final-report.md",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.33.json"
     },
     {
       "path": "adversarial/p0-authority/forged-origin-claim",
@@ -1844,7 +1913,7 @@
       },
       "notes": "Origin string is not independent observation.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -1853,7 +1922,10 @@
       "frozen_draft_sha256": {
         "input.json": "13fac787ef2d4edfde4898eff212cbf92362d8ef4f125d096bf58460ad73af2c",
         "expected.json": "8effeff3202f28e001fdfacca54cc1f3c8ae20036511c6a5a8eef9d72acfbe3b"
-      }
+      },
+      "commit": "03be3676b428b4e5a2febe53a77ab185b833cad1",
+      "delivery_report": "adversarial-admission-2026-10-24/final-report.md",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.34.json"
     },
     {
       "path": "adversarial/p0-authority/incomplete-binding",
@@ -1881,7 +1953,7 @@
       },
       "notes": "Missing run/attempt binding fields fail structurally.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -1890,7 +1962,10 @@
       "frozen_draft_sha256": {
         "input.json": "490a820a624bc1f14aeb5925d23c55777245ea56e45a1b6a0266243e2f531920",
         "expected.json": "a29e3cf217e387af63aa412227f4c7ec9a9257b6574123e6545d6cbcea16be03"
-      }
+      },
+      "commit": "03be3676b428b4e5a2febe53a77ab185b833cad1",
+      "delivery_report": "adversarial-admission-2026-10-24/final-report.md",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.34.json"
     },
     {
       "path": "adversarial/p0-authority/replayed-binding-claim",
@@ -1907,7 +1982,7 @@
       },
       "notes": "Self-consistent replay may pass local consistency; protected-context rejection belongs Spec2.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -1916,7 +1991,10 @@
       "frozen_draft_sha256": {
         "input.json": "047d42fd808ba2e0c4ed3ec33b597ffb5e5c11d885561e261a73205001fe4aa1",
         "expected.json": "8effeff3202f28e001fdfacca54cc1f3c8ae20036511c6a5a8eef9d72acfbe3b"
-      }
+      },
+      "commit": "b0e7796c18b9d9402b48c73eaa89eaa46e220f2b",
+      "delivery_report": "adversarial-admission-2026-10-24/final-report.md",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.35.json"
     },
     {
       "path": "round-trip/extension-field-preservation/behavioral-contract",
@@ -9035,13 +9113,15 @@
         "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/reserved-exact-match/correctly-rejected/input.json",
         "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/reserved-exact-match/correctly-rejected/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
-      "readiness": "adversarial-preparation/verification-controls.json"
+      "readiness": "adversarial-preparation/verification-controls.json",
+      "commit": "20ebd4bfa7a21363e842927f40874fa196811ff0",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.22.json"
     },
     {
       "id": "3.2.23",
@@ -9055,13 +9135,15 @@
         "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/reserved-uppercase-bypass/correctly-rejected/input.json",
         "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/reserved-uppercase-bypass/correctly-rejected/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
-      "readiness": "adversarial-preparation/verification-controls.json"
+      "readiness": "adversarial-preparation/verification-controls.json",
+      "commit": "6cc62a6c570b410215304c654d45a31d9761bf2a",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.23.json"
     },
     {
       "id": "3.2.24",
@@ -9075,13 +9157,15 @@
         "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-rejected/input.json",
         "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-rejected/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
-      "readiness": "adversarial-preparation/verification-controls.json"
+      "readiness": "adversarial-preparation/verification-controls.json",
+      "commit": "eb62553360f0cec5ca51b8b397f21e83cde82c1b",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.24.json"
     },
     {
       "id": "3.2.25",
@@ -9095,13 +9179,15 @@
         "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/namespace-collision/untrusted-claim-author-a/input.json",
         "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/namespace-collision/untrusted-claim-author-a/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
-      "readiness": "adversarial-preparation/verification-controls.json"
+      "readiness": "adversarial-preparation/verification-controls.json",
+      "commit": "e497f3710c08895212344d811aeba897f6829363",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.25.json"
     },
     {
       "id": "3.2.26",
@@ -9115,13 +9201,15 @@
         "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/invalid-prefix-formats/correctly-handled/input.json",
         "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/invalid-prefix-formats/correctly-handled/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
-      "readiness": "adversarial-preparation/verification-controls.json"
+      "readiness": "adversarial-preparation/verification-controls.json",
+      "commit": "719a856d2efe5389960ee3c82e0e033c8a6a694f",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.26.json"
     },
     {
       "id": "3.2.27",
@@ -9135,13 +9223,15 @@
         "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/invalid-prefix-formats/space/input.json",
         "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/invalid-prefix-formats/space/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
-      "readiness": "adversarial-preparation/verification-controls.json"
+      "readiness": "adversarial-preparation/verification-controls.json",
+      "commit": "7638013896ba606a21953e20e6e2c7b1101a902b",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.27.json"
     },
     {
       "id": "3.2.28",
@@ -9155,13 +9245,15 @@
         "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/unknown-optional-round-trip/correctly-handled/input.json",
         "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/unknown-optional-round-trip/correctly-handled/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
-      "readiness": "adversarial-preparation/verification-controls.json"
+      "readiness": "adversarial-preparation/verification-controls.json",
+      "commit": "74db26bef3eb5013106881b7cf489d904dd9c1b6",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.28.json"
     },
     {
       "id": "3.2.29",
@@ -9175,13 +9267,15 @@
         "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/mandatory-extension-blocks-acceptance/structurally-handled/input.json",
         "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/mandatory-extension-blocks-acceptance/structurally-handled/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
-      "readiness": "adversarial-preparation/verification-controls.json"
+      "readiness": "adversarial-preparation/verification-controls.json",
+      "commit": "f5b00f908c170b4defafbabbf564ef1cec5d06e6",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.29.json"
     },
     {
       "id": "3.2.30",
@@ -9195,13 +9289,15 @@
         "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/override-core-field-attempt/correctly-handled/input.json",
         "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/override-core-field-attempt/correctly-handled/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
-      "readiness": "adversarial-preparation/verification-controls.json"
+      "readiness": "adversarial-preparation/verification-controls.json",
+      "commit": "d2297895f8abe42ee3e87d256f28aed4939b011a",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.30.json"
     },
     {
       "id": "3.2.31",
@@ -9212,13 +9308,15 @@
         "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/override-core-field-attempt/correctly-rejected/input.json",
         "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/override-core-field-attempt/correctly-rejected/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
-      "readiness": "adversarial-preparation/verification-controls.json"
+      "readiness": "adversarial-preparation/verification-controls.json",
+      "commit": "43a20850fd49733a39e4208f23546d3e46fdadb5",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.31.json"
     },
     {
       "id": "3.2.32",
@@ -9232,13 +9330,15 @@
         "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/x-capability-shadow/input.toml",
         "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/x-capability-shadow/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
-      "readiness": "adversarial-preparation/verification-controls.json"
+      "readiness": "adversarial-preparation/verification-controls.json",
+      "commit": "40db4ad361863fda0d3c3cca45b98a81a161a84d",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.32.json"
     },
     {
       "id": "3.2.33",
@@ -9252,13 +9352,15 @@
         "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/forged-approver-claim/input.json",
         "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/forged-approver-claim/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
-      "readiness": "adversarial-preparation/verification-controls.json"
+      "readiness": "adversarial-preparation/verification-controls.json",
+      "commit": "95e57119424eb6d578e22c4fe103c2c477356bf0",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.33.json"
     },
     {
       "id": "3.2.34",
@@ -9272,13 +9374,15 @@
         "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/incomplete-binding/input.json",
         "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/incomplete-binding/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
-      "readiness": "adversarial-preparation/verification-controls.json"
+      "readiness": "adversarial-preparation/verification-controls.json",
+      "commit": "03be3676b428b4e5a2febe53a77ab185b833cad1",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.34.json"
     },
     {
       "id": "3.2.35",
@@ -9289,13 +9393,15 @@
         "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/replayed-binding-claim/input.json",
         "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/replayed-binding-claim/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
-      "readiness": "adversarial-preparation/verification-controls.json"
+      "readiness": "adversarial-preparation/verification-controls.json",
+      "commit": "b0e7796c18b9d9402b48c73eaa89eaa46e220f2b",
+      "verification": "adversarial-admission-2026-10-24/results/batch-3.2.35.json"
     },
     {
       "id": "3.2.36",
@@ -9830,17 +9936,17 @@
     }
   ],
   "known_gates": [
-    "The separately prepared26adversarialpairs remain unapproved for canonical admission; three qualification/setup cases remain gated. Approved28integrationpairs are now delivered.",
+    "All101locally testable cases are delivered; three qualification/setup cases remain gated, so corpus104/fullqualification is incomplete.",
     "Namespace local-nontrust clarification is approved; A/Bclaims never prove collision detection/authenticated ownership.",
     "Native network-disabled qualification requires approved observed execution and positive observer control; no note/mock substitution.",
     "Same-tenant cross-project denial requires real trusted backend/Spec2 evidence; synthetic missing-store result is not auth.",
     "Snapshot environment-immunity needs explicitly trusted harness setup; no metadata-only proof.",
     "Forged/replayed/prohibited-action claims distinguish valid local declarations from actual Spec2 admission/authentication."
   ],
-  "delivered_case_count": 75,
-  "delivered_batch_count": 43,
-  "approval_ready_draft_cases": 26,
-  "approval_ready_draft_batches": 14,
+  "delivered_case_count": 101,
+  "delivered_batch_count": 57,
+  "approval_ready_draft_cases": 0,
+  "approval_ready_draft_batches": 0,
   "partially_ready_batches": [],
   "partially_delivered_batches": [
     "3.2.41"
