@@ -1,3 +1,13 @@
+# Published integration payload —2026-10-24
+
+[Current report](conformance-continuation/integration-admission-2026-10-24/final-report.md):
+**75canonicalfixtures** and288Rusttests verified; user-requestednonforcepush
+published payloadSHA `a721914a6260eb1599add5d63c25ecb48b3f5dbb`, independentlymatchedbylive
+gitls-remote, local/upstream0/0. Publicationreceiptisarchivedwiththedataevidence;
+itsownfinalcheckpointSHAwillbeverifiedintheassistantresponse. No merge/release/
+deployment/CI/runtimequalificationclaim. **26adversarialpairadmissionstillpending**;
+3qualification/setupcasesandallSpec2runtime/UD/BGgatesremainopen.
+
 # Current approved integration admission —2026-10-24
 
 [Current report](conformance-continuation/integration-admission-2026-10-24/final-report.md):

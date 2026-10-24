@@ -2,9 +2,9 @@
   "title": "Approved28-pair integration admission and Git push",
   "slug": "integration-admission-2026-10-24",
   "created_at": "2026-10-24T11:39:58Z",
-  "updated_at": "2026-10-24T11:55:54.878518+00:00",
+  "updated_at": "2026-10-24T11:58:16.764858+00:00",
   "deadline": "2026-10-24T12:24:58Z",
-  "status": "verifying",
+  "status": "complete",
   "mode": "delegated",
   "baseline_ref": "89ff7a7a9a7b4c9a149b5263d79950a6b261e44d",
   "risk_level": "medium",
@@ -45,7 +45,7 @@
     }
   ],
   "verification": {
-    "status": "all-narrow-data-checks-pass;publication-pending",
+    "status": "narrow-data-and-requested-payload-publication-verified;fullgoal-incomplete",
     "checks": [
       {
         "name": "15fullfrozenbatches",
@@ -79,8 +79,8 @@
       },
       {
         "name": "requestedpush-liveSHA",
-        "status": "pending",
-        "evidence": "results/remote-preflight.json"
+        "status": "pass",
+        "evidence": "results/publication-receipt.json"
       }
     ]
   },
@@ -88,8 +88,11 @@
   "contract_sha256": "2c4171e80ac363b8c2d6bb0cb4cebf23a171d4c3c7f4019275d213f3e13ae479",
   "publication": {
     "authorized": true,
-    "status": "pending-payload-push",
+    "status": "payload-push-live-SHA-verified",
+    "payload_sha": "a721914a6260eb1599add5d63c25ecb48b3f5dbb",
     "branch": "feat/execution-isolation-runtime",
-    "nonforce": true
+    "nonforce": true,
+    "no_tags_or_submodules": true,
+    "receipt_checkpoint_note": "Final live publication of this evidence-only checkpoint is verified in chat after commit/push."
   }
 }

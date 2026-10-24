@@ -2,8 +2,8 @@
   "title": "Execution-isolation implementation",
   "slug": "execution-isolation-implementation",
   "created_at": "2026-10-22T07:25:44.090021+00:00",
-  "updated_at": "2026-10-24T11:55:54.878518+00:00",
-  "status": "executing",
+  "updated_at": "2026-10-24T11:58:16.764858+00:00",
+  "status": "waiting_for_approval",
   "mode": "delegated",
   "baseline_ref": "3b9cb6bd0ee82dbef3b731a35ce68fc778c4906a",
   "risk_level": "high",
@@ -244,7 +244,7 @@
     }
   ],
   "verification": {
-    "status": "Current narrow tranche:288Rust including7doctests+47fixture oracles/11controls,check/clippy/fmt/15PythonPASS. Independent35static and36actual controls/runnerPASS. Legacy checker8pass1pre-existing error; coverage/MSRV/native/consumer unverified. Historical checks below retain their own evidence dates.",
+    "status": "Currentapproved28pairadmission:288Rust+75fixtureoracles/11controls/check/clippy/fmt/15PythonPASS;41/42independentreviewsPASS;payloadpushandliveSHAverified. Legacychecker8pass1pre-existingerror,coverage/MSRV/native/consumerunverified. Historicalchecksbelowretaintheirdatedscope.",
     "checks": [
       {
         "name": "scaffold",
@@ -1762,8 +1762,8 @@
   },
   "continuation_blocked_audit": {
     "consecutive_no_progress_turns": 0,
-    "condition": "Earlier collision/source-scope decisions resolved; approved bounded tranche complete, full goal unachieved.",
-    "updated_at": "2026-10-24T10:49:22.970666+00:00"
+    "condition": "Approved28pairadmissionandrequestedpayloadGitpushcompleted. Separate26adversarialadmissionquestionstillunanswered;3native/backend/setupcasesandruntimegatesremainopen.",
+    "updated_at": "2026-10-24T11:58:16.764858+00:00"
   },
   "reference_fidelity_wave": {
     "started_at": "2026-10-22T16:07:43Z",
@@ -1810,10 +1810,12 @@
   "current_tranche": {
     "path": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/integration-admission-2026-10-24",
     "deadline": "2026-10-24T12:24:58Z",
-    "status": "verifying-push-pending",
+    "status": "complete",
     "scope": "56exactdatafiles,relatedsupportingstatus,localcommits,currentbranchnonforcepush",
     "report": "conformance-continuation/integration-admission-2026-10-24/final-report.md",
-    "canonical": 75
+    "canonical": 75,
+    "payload_remote_sha": "a721914a6260eb1599add5d63c25ecb48b3f5dbb",
+    "publication": "payloadverified;receiptcheckpointwillbefinallyverifiedinchat"
   },
   "conformance_continuation": {
     "status": "42canonical fixtures verified; tasks18/19delivered, whole goal incomplete",
@@ -1898,7 +1900,7 @@
     "source_native_changes": false
   },
   "integration_admission": {
-    "status": "75canonical-verified-push-pending",
+    "status": "75canonical-verified-and-payload-pushed",
     "report": "conformance-continuation/integration-admission-2026-10-24/final-report.md",
     "approved_pairs": 28,
     "exact_new_files": 56,
@@ -1911,6 +1913,7 @@
       "3.2.41"
     ],
     "source_harness_changes": false,
-    "push_authorized": true
+    "push_authorized": true,
+    "payload_remote_sha": "a721914a6260eb1599add5d63c25ecb48b3f5dbb"
   }
 }
