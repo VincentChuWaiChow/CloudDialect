@@ -3,7 +3,7 @@
   "slug": "execution-isolation-implementation",
   "created_at": "2026-10-22T07:25:44.090021+00:00",
   "updated_at": "2026-10-24T18:03:03.226000+00:00",
-  "status": "executing",
+  "status": "waiting_for_approval",
   "mode": "delegated",
   "baseline_ref": "3b9cb6bd0ee82dbef3b731a35ce68fc778c4906a",
   "risk_level": "high",
@@ -1762,8 +1762,8 @@
   },
   "continuation_blocked_audit": {
     "consecutive_no_progress_turns": 0,
-    "condition": "Approved28pairadmissionandrequestedpayloadGitpushcompleted. Separate26adversarialadmissionquestionstillunanswered;3native/backend/setupcasesandruntimegatesremainopen.",
-    "updated_at": "2026-10-24T11:58:16.764858+00:00"
+    "condition": "All101localcasesandTask20/25delivered. Remaining3.2.47needsboundedtrusted-harnesssetupamendment;3.2.41nativeofflineand3.2.46realbackendcasesneedapprovedenvironment/resources. All actualUD/BG/runtimegatesremainopen. No unapproved26pairscope remains.",
+    "updated_at": "2026-10-24T18:11:08.847180+00:00"
   },
   "reference_fidelity_wave": {
     "started_at": "2026-10-22T16:07:43Z",
@@ -1879,11 +1879,11 @@
     "native_or_remote_actions": false
   },
   "adversarial_preparation": {
-    "status": "26frozen-verified-drafts-not-admitted",
+    "status": "Historical26draftpreparation;all26subsequentlyapproved/admitted;Task20complete",
     "report": "conformance-continuation/adversarial-preparation/final-report.md",
     "proposal": "conformance-continuation/adversarial-preparation/admission-proposal.md",
     "contract_sha256": "7645881b9f0829e66cef5dbfb0d63df3eb448ef0a3d1dd387445496d3ead46c9",
-    "canonical": 47,
+    "canonical": 101,
     "draft_pairs": 26,
     "cumulative_dispatches": 38,
     "source_or_native_changes": false
