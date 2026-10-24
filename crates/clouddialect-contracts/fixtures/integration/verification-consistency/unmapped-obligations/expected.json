@@ -1,0 +1,14 @@
+{
+  "phase": "semantic",
+  "document_kind": "verification-result",
+  "outcome": "fail",
+  "errors": [
+    {
+      "category": "semantic",
+      "field_path": "tests[0].obligation_ids[0]",
+      "description_contains": "Test obligation is absent from the declared binding"
+    }
+  ],
+  "warnings": [],
+  "blockers": []
+}
