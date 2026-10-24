@@ -1,0 +1,53 @@
+{
+  "batch": "3.2.44",
+  "status": "pass",
+  "case_paths": [
+    "integration/scoped-store/hash-mismatch",
+    "integration/scoped-store/outage"
+  ],
+  "exact_files": [
+    {
+      "path": "crates/clouddialect-contracts/fixtures/integration/scoped-store/hash-mismatch/input.toml",
+      "sha256": "853553cc276ad63d09f001f6451d7774229d8b3d7bbc607df1e0b7389e587997"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/integration/scoped-store/hash-mismatch/expected.json",
+      "sha256": "41b897ce933f7b3a9f5659ab1ffd60d593b7b7eb2673d3869ce1e4055321f86d"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/integration/scoped-store/outage/input.toml",
+      "sha256": "853553cc276ad63d09f001f6451d7774229d8b3d7bbc607df1e0b7389e587997"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/integration/scoped-store/outage/expected.json",
+      "sha256": "afffaedeb8d177e07008de3f2719d5dc3d2ac4e06d58e3bb12ba3cb711257408"
+    }
+  ],
+  "frozen_source_copies": true,
+  "full_test_command": [
+    "rtk",
+    "proxy",
+    "cargo",
+    "test",
+    "--manifest-path",
+    "crates/clouddialect-contracts/Cargo.toml",
+    "--frozen"
+  ],
+  "exit": 0,
+  "rust_tests_including_doctests": 288,
+  "canonical_fixture_count": 54,
+  "exact_prefix_checks": [
+    {
+      "path": "integration/scoped-store/hash-mismatch",
+      "exit": 0,
+      "count": 1
+    },
+    {
+      "path": "integration/scoped-store/outage",
+      "exit": 0,
+      "count": 1
+    }
+  ],
+  "scope": "Entire approved bounded data batch",
+  "completed_at": "2026-10-24T11:46:52.287515+00:00"
+}
