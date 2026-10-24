@@ -4,7 +4,7 @@
 
 This is the field-level table required by NFR-2.1 and canonical Task 25, not a
 migration acceptance decision. It covers **148 declared JSON instance paths**
-across five schemas, **40 nested TOML manifest paths**, and a **14-entry Rust API
+across five schemas, **40 nested TOML manifest paths**, and a **30-entry Rust API
 appendix**. Container declarations and conditional-only fields are included;
 shared local schema references are expanded at each consuming instance path.
 Requirement mappings identify the introducing obligation and relevant constraints,
@@ -295,10 +295,18 @@ Paths follow the actual nested Rust manifest declarations. Req 5.8/P0-B requests
 
 ## Rust API appendix: ports, results and frozen schema context
 
-These 14 named API keys supplement, rather than pretend to be fields of, a sixth JSON schema. P0-A result projections and P0-E resolution ports remain non-accepting.
+These 30 named API keys supplement, rather than pretend to be fields of, a sixth JSON schema. P0-A result projections and P0-E resolution ports remain non-accepting.
 
 | Schema | Field path | Requirement | Notes |
 |---|---|---|---|
+| rust-api | `BehavioralResult.candidate_id` | Req 8.6, Req 11.4 | P0-A candidate correlation for this non-accepting projection; the supplied identity is not authenticated candidate provenance. |
+| rust-api | `BehavioralResult.outcome` | Req 8.6 | P0-A Deferred, EvidenceComplete or Blocked only; even EvidenceComplete grants no acceptance or executed-test success. |
+| rust-api | `BehavioralResult.verification_result` | Req 8.6, Req 4.8 | P0-A optional exact DocumentRef; completeness leaves None. A later verifier must bind any populated reference to the same validated immutable result. |
+| rust-api | `BehavioralResult.test_results` | Req 8.6, Req 4.1, Req 4.8 | P0-A TestResult projection; completeness leaves it empty. A later verifier must establish exact equality with the referenced result, not trust serialized test outcomes or origins. |
+| rust-api | `BehavioralResult.blocking_gaps` | Req 3.6, Req 8.6, Req 11.4 | P0-A unresolved obligation diagnostics, not a passing behavioral result; an empty list alone cannot authorize acceptance. |
+| rust-api | `BlockingGap.candidate_id` | Req 8.6, Req 11.4 | P0-A names the candidate associated with this gap; correlation is not identity authentication. |
+| rust-api | `BlockingGap.obligation_id` | Req 8.6, Req 11.4 | P0-A names the affected declared obligation so unknown or unresolved behavior is not silently omitted. |
+| rust-api | `BlockingGap.assumption_text` | Req 8.6, Req 11.4 | P0-A explains the unresolved assumption; text is not an observed-test or approval receipt. |
 | rust-api | `DocumentRef.id` | Req 4.4, Req 5.3, Req 8.3 | P0-A/P0-E exact document identity; parsing a reference neither resolves nor authenticates it. |
 | rust-api | `DocumentRef.format_version` | Req 5.3, Req 6.1, Req 8.3 | P0-E exact document-format version, distinct from pack/catalog/dialect versions. |
 | rust-api | `StoredDocument.reference` | Req 8.3, Req 8.7 | P0-E claimed returned identity/version must match the request and decoded document; trait conformance is not authentication. |
@@ -313,6 +321,25 @@ These 14 named API keys supplement, rather than pretend to be fields of, a sixth
 | rust-api | `check_evidence_completeness` | Req 3.6, Req 8.6, Req 11.4 | P0-A/P0-E non-accepting Deferred/EvidenceComplete/Blocked projection with verification_result=None and empty test_results; gaps retain candidate/obligation/assumption text. |
 | rust-api | `verify_artifact_hash` | Req 4.2, Req 4.6 | Candidate exact-byte digest equality only; a boolean match is not provenance, origin, approval, freshness or acceptance. |
 | rust-api | `CatalogSnapshot` | Req 1.2, Req 9.1, Req 9.4, Req 9.5 | P0-D embedded or explicitly supplied frozen indexed bytes and digest; constructor/digest is not signer admission, environment selection or network-loader authority. |
+| rust-api | `CatalogSnapshot::embedded` | Req 1.2, Req 9.1, Req 9.5 | P0-D constructs the bundled frozen snapshot; constructor success does not prove signed release provenance or actual network-disabled observation. |
+| rust-api | `CatalogSnapshot::from_parts` | Req 1.2, Req 9.4, Req 9.5 | P0-D admits explicit index/schema bytes and validates their complete local relationships; the caller still establishes trusted provenance before supplying them. |
+| rust-api | `CatalogSnapshot::digest` | Req 9.5 | P0-D exposes the frozen content identity for comparison with operator-admitted identity; hash equality is not signer authentication. |
+| rust-api | `CatalogSnapshot::schema_bytes` | Req 9.1, Req 9.2, Req 9.5 | P0-D exact admitted-URI lookup returns borrowed frozen bytes or None, not a live filesystem/network fallback or URI-prefix permission. |
+| rust-api | `CatalogUrlLoader::new` | Req 9.1, Req 9.5 | P0-D gives the catalog loader an explicit owned snapshot; no global environment-based authority selection is implied. |
+| rust-api | `CatalogUrlLoader::load` | Req 9.1, Req 9.2, Req 9.3, Req 9.5 | P0-D UrlLoader port resolves only exact admitted snapshot URIs and decodes their JSON; unlisted references fail rather than selecting another network authority. |
+| rust-api | `Validator::new` | Req 8.1, Req 9.5 | P0-D constructs JSON validation with the explicitly supplied snapshot; construction is not migration acceptance or a trusted-origin attestation. |
+| rust-api | `ManifestValidator::new` | Req 5.1, Req 8.1, Req 9.5 | P0-D constructs TOML local/semantic validation with an explicit snapshot; this does not authenticate the injected store or grant requested capabilities. |
+
+The public `TestResult` members correspond exactly to the existing
+`verification-result.tests[*]` rows (`test_id`, `obligation_ids`, `outcome`,
+`origin_identity`, `failure_description`). `FailureDescription.detail` corresponds
+to `verification-result.tests[*].failure_description.detail`. Those established
+Req 4.1, Req 4.3, Req 4.7 and Req 4.8 mappings also describe the P0-A projection;
+they are not duplicate schemas or permission-bearing wrapper types. The eight
+`BehavioralResult`/`BlockingGap` rows above are separately enumerated from their
+actual Rust declarations by the regression test. The constructors and resolution
+ports supplement the broad snapshot-type row rather than hiding the P0-D public
+boundary behind it.
 
 ## P0 amendment and compatibility boundaries
 

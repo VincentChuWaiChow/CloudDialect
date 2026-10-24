@@ -22,8 +22,8 @@
     "native_agent_available": true,
     "native_agent_planned": true,
     "native_agent_used": true,
-    "agent_count": 2,
-    "wave_count": 1,
+    "agent_count": 3,
+    "wave_count": 2,
     "cumulative_before": 44,
     "planned_limit": 3,
     "no_delegation_reason": ""
@@ -49,7 +49,7 @@
     },
     {
       "id": "47-final-review",
-      "status": "pending",
+      "status": "complete",
       "owner": "read-only-agent",
       "write_scope": [],
       "result_path": "results/47-final-review.md"
@@ -59,6 +59,8 @@
     "status": "pending",
     "checks": []
   },
-  "consolidated_repairs_used": 0,
-  "test_consumer_notes": "AfterREDcheckpoint,mutationcontrols tightenedtochangeexactmappedrowsratherthanpossiblyearlierprose; validatorsnotweakened."
+  "consolidated_repairs_used": 1,
+  "test_consumer_notes": "AfterREDcheckpoint,mutationcontrols tightenedtochangeexactmappedrowsratherthanpossiblyearlierprose; validatorsnotweakened.",
+  "review_outcome": "47oneP2:missing16explicitP0-A/P0-Drows. Reproduced138e88f(twoexecutedfailures),16rowsadded,same-target3GREENpluslintfix. Parentverifiedrepair;no independentpostrepairsignoff.",
+  "corrected_field_rows": 218
 }

@@ -214,9 +214,26 @@
       "check_fidelity_mapping",
       "check_evidence_completeness",
       "verify_artifact_hash",
-      "CatalogSnapshot"
+      "CatalogSnapshot",
+      "BehavioralResult.candidate_id",
+      "BehavioralResult.outcome",
+      "BehavioralResult.verification_result",
+      "BehavioralResult.test_results",
+      "BehavioralResult.blocking_gaps",
+      "BlockingGap.candidate_id",
+      "BlockingGap.obligation_id",
+      "BlockingGap.assumption_text",
+      "CatalogSnapshot::embedded",
+      "CatalogSnapshot::from_parts",
+      "CatalogSnapshot::digest",
+      "CatalogSnapshot::schema_bytes",
+      "CatalogUrlLoader::new",
+      "CatalogUrlLoader::load",
+      "Validator::new",
+      "ManifestValidator::new"
     ]
   },
   "source_revision": "f526e677668eee9abeb5bdd937119b4b87ee3688",
-  "note": "Authoringaid;RusttestindependentlyderivesfiveJSONschemaandnestedmanifestfields. Opaquecontainersnotexpanded."
+  "note": "Authoringaid;RusttestindependentlyderivesfiveJSONschemaandnestedmanifestfields. Opaquecontainersnotexpanded.",
+  "review_correction": "Review47P2: initial14selectedAPIkeysomitted16actualP0-A/P0-Dfields/ports. Projectionfieldsnowderivedfromactualsource;initial202isnotcompletenessdefinition."
 }
