@@ -1,0 +1,17 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.59s
+     Running tests/evidence_completeness.rs (/tmp/clouddialect-runtime-target/debug/deps/evidence_completeness-8864909b9cf8c611)
+
+running 10 tests
+test direct_assumptions_are_reported_even_when_a_root_mandatory_namespace_blocks ... ok
+test direct_and_unknown_evidence_assumptions_identify_every_affected_obligation ... ok
+test active_catalog_context_is_required_and_opaque_extension_values_remain_untouched ... ok
+test mandatory_root_and_evidence_namespaces_block_without_accepting_extension_overrides ... ok
+test each_resource_assumption_blocks_every_declared_obligation_even_with_partial_known_behavior ... ok
+test residual_assumptions_block_even_when_the_evidence_classification_is_known ... ok
+test observed_and_inferred_support_can_be_evidence_complete_but_never_verification ... ok
+test invalid_source_is_deferred_without_invented_obligation_ids_or_store_queries ... ok
+test valid_empty_scope_is_deferred_while_mandatory_semantics_remain_separate ... ok
+test missing_corrupt_wrong_type_and_unavailable_records_are_named_blockers_not_completeness ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.24s

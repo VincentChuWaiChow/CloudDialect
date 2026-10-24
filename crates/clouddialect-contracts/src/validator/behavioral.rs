@@ -52,6 +52,9 @@ pub fn check_evidence_completeness(
                 gap(id, assumption.description.clone());
             }
         }
+        if let Some(assumption) = &obligation.unresolved_assumption {
+            gap(id, assumption.description.clone());
+        }
         for error in &mandatory {
             gap(id, error.description.clone());
         }
@@ -59,9 +62,6 @@ pub fn check_evidence_completeness(
         // Deferred above; their mandatory blockers belong to semantic validation.
         if !mandatory.is_empty() {
             continue;
-        }
-        if let Some(assumption) = &obligation.unresolved_assumption {
-            gap(id, assumption.description.clone());
         }
         for reference in obligation.evidence_refs.iter().flatten() {
             let stored = match resolve_document(
