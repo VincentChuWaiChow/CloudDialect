@@ -18,5 +18,26 @@
     "intended_failure": "Both required Task25 documents physically absent; source-derived consumer tests execute and fail at document read.",
     "log": "results/red.log",
     "test_consumer_packaging": "Column-parser quote handling corrected before RED checkpoint; docs remain absent, same intended executed3fail. No expectation weakening."
+  },
+  "green": {
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--test",
+      "traceability"
+    ],
+    "same_target_as_red": true,
+    "exit": 0,
+    "compiled_executed": true,
+    "passed": 3,
+    "failed": 0,
+    "coverage": "148JSONfields+40TOMLpaths+14APIrows,5gatesand8negativein-memorycontrolassertions",
+    "log": "results/green.log",
+    "test_consumer_note": "Mutationtargetsareexacttable-rows,notpossiblyearlierprose;validatorsnotweakened."
   }
 }

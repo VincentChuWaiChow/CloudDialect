@@ -340,7 +340,7 @@ fn missing_duplicate_orphan_and_fabricated_traceability_is_rejected() {
         ))
         .is_err()
     );
-    assert!(check_fields(&fields.replacen("Req 2.1", "Req 999.1", 1)).is_err());
+    assert!(check_fields(&fields.replace(row, &row.replacen("Req 2.1", "Req 999.1", 1))).is_err());
     let gates = document("gate-to-requirement");
     let row = gates
         .lines()
@@ -348,12 +348,8 @@ fn missing_duplicate_orphan_and_fabricated_traceability_is_rejected() {
         .unwrap();
     assert!(check_gates(&gates.replace(row, "")).is_err());
     assert!(check_gates(&format!("{gates}\n{row}")).is_err());
-    assert!(
-        check_gates(&gates.replace(
-            "`verification-result.tests[*].outcome`",
-            "`verification-result.invented` "
-        ))
-        .is_err()
-    );
-    assert!(check_gates(&gates.replacen("Req 10", "Req 999", 1)).is_err());
+    let field = Regex::new(r"`([^`]+)`").unwrap().captures(row).unwrap()[1].to_owned();
+    let bad_row = row.replacen(&format!("`{field}`"), "`verification-result.invented`", 1);
+    assert!(check_gates(&gates.replace(row, &bad_row)).is_err());
+    assert!(check_gates(&gates.replace(row, &row.replacen("Req 10", "Req 999", 1))).is_err());
 }
