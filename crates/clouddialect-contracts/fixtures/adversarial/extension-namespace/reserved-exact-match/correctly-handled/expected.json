@@ -1,0 +1,17 @@
+{
+  "phase": "structural",
+  "document_kind": "evidence-record",
+  "outcome": "pass",
+  "errors": [],
+  "warnings": [
+    {
+      "field_name_verbatim": "core:field",
+      "description_contains": "reserved for core use"
+    },
+    {
+      "field_name_verbatim": "cdc:field",
+      "description_contains": "reserved for core use"
+    }
+  ],
+  "blockers": []
+}
