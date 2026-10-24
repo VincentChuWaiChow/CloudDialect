@@ -1,0 +1,14 @@
+{
+  "phase": "structural",
+  "document_kind": "evidence-record",
+  "outcome": "fail",
+  "errors": [
+    {
+      "category": "unsupported-version",
+      "field_path": "format_version",
+      "description_contains": "unsupported-version"
+    }
+  ],
+  "warnings": [],
+  "blockers": []
+}
