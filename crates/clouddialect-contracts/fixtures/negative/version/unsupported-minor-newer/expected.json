@@ -1,0 +1,13 @@
+{
+  "phase": "structural",
+  "document_kind": "evidence-record",
+  "outcome": "warn",
+  "errors": [],
+  "warnings": [
+    {
+      "field_name_verbatim": "format_version",
+      "description_contains": "1.99.0"
+    }
+  ],
+  "blockers": []
+}

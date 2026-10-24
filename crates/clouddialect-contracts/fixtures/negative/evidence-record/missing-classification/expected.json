@@ -1,0 +1,14 @@
+{
+  "phase": "structural",
+  "document_kind": "evidence-record",
+  "outcome": "fail",
+  "errors": [
+    {
+      "category": "structural",
+      "field_path": "classification",
+      "description_contains": "Required field is missing"
+    }
+  ],
+  "warnings": [],
+  "blockers": []
+}

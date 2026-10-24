@@ -2,7 +2,7 @@
   "title": "Frozen fixture admission",
   "slug": "admission-2026-10-24",
   "created_at": "2026-10-24T09:08:34+00:00",
-  "updated_at": "2026-10-24T09:16:43.475608+00:00",
+  "updated_at": "2026-10-24T09:20:03.933758+00:00",
   "status": "executing",
   "mode": "delegated",
   "baseline_ref": "283533aff56bb1ade159275e4adb922765ced62e",
@@ -57,5 +57,12 @@
   },
   "deadline": "2026-10-24T09:53:34+00:00",
   "source_repairs_authorized": false,
-  "pushes_authorized": false
+  "pushes_authorized": false,
+  "admitted_canonical_current": 36,
+  "milestones": [
+    {
+      "commit": "04253f5571ca30f8e98e4331111feb4d846d606e",
+      "scope": "12positive pairs,7bounded batches; complete286-test suite after each, canonical13"
+    }
+  ]
 }

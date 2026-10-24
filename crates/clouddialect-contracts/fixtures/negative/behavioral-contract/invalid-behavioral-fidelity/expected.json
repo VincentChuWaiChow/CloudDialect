@@ -1,0 +1,14 @@
+{
+  "phase": "structural",
+  "document_kind": "behavioral-contract",
+  "outcome": "fail",
+  "errors": [
+    {
+      "category": "structural",
+      "field_path": "obligations[0].behavioral_fidelity",
+      "description_contains": "Field does not satisfy the selected schema constraint"
+    }
+  ],
+  "warnings": [],
+  "blockers": []
+}
