@@ -1,6 +1,6 @@
 # Design Document
 
-**Publication authority:** earlier commit/push approvals apply to their historical actions. The 2026-10-24 bounded repair/seed renewal explicitly authorizes local milestone commits, not pushes, native probes, deployments or releases.
+**Publication authority:** earlier commit/push approvals apply to their historical actions. The 2026-10-24 frozen-fixture admission explicitly authorizes local milestone commits and as-needed agents, not source repairs, new dependencies, pushes, native probes, deployments or releases.
 
 
 ## Current physical domain layout
@@ -14,7 +14,7 @@ User requested domain-first organization on2026-10-22. Document DTO implementati
 
 **Current continuation status (2026-10-22):** user approved P0-A–F for implementation planning, then separately authorized the remaining Spec 1 prerequisite units in [implementation-plan.md](implementation-plan.md), TDD and no commits/probes/pushes/releases. User attests this is a new project and approves document/catalog **1.0.0** and crate API **0.1.0** as the initial MVP versions. This is not an independent external-publication audit or security-gate approval. Exact encoded extension JSON value bytes are required; raw_value on the existing pinned serde_json is separately approved.
 
-**Delivery is partial.** DTOs, schemas, catalog inventory, frozen snapshot/loading, structural JSON validation, local TOML rules and candidate hash equality have bounded verification. JSON/TOML semantic validation and mandatory blockers have bounded independent review; completeness has 10 focused tests after the approved direct-assumption repair; the bounded runner has 9 controls and one canonical seed. Current execution is parent-verified with prior static repair/runner review. Exhaustive conformance and delivered downstream compatibility remain unfinished. See the [current run report](../../../.workflow/ultracode/execution-isolation-implementation/final-report.md) for actual evidence and outstanding work. Canonical task checkmarks are conservative; BG-01 and Spec 2 UD-1–UD-5 remain OPEN.
+**Delivery is partial.** DTOs, schemas, catalog inventory, frozen snapshot/loading, structural JSON validation, local TOML rules and candidate hash equality have bounded verification. JSON/TOML semantic validation and mandatory blockers have bounded independent review; completeness has 10 focused tests after the approved direct-assumption repair; the bounded runner has 9 controls and 42 admitted canonical fixtures. Current execution has parent Rust checks and independent bounded fixture-content review, not native or acceptance qualification. Exhaustive conformance and delivered downstream compatibility remain unfinished. See the [current run report](../../../.workflow/ultracode/execution-isolation-implementation/final-report.md) for actual evidence and outstanding work. Canonical task checkmarks are conservative; BG-01 and Spec 2 UD-1–UD-5 remain OPEN.
 
 This design document specifies the technical architecture for the CloudDialect **Contracts & Evidence Foundation** — Spec 1 of 3 in a sequenced set.
 

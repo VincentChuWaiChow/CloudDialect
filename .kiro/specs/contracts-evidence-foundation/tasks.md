@@ -1,6 +1,6 @@
 # Implementation Plan: CloudDialect Contracts & Evidence Foundation
 
-**Publication authority:** earlier commit/push approvals apply to their historical actions. The 2026-10-24 bounded repair/seed renewal explicitly authorizes local milestone commits, not pushes, native probes, deployments or releases.
+**Publication authority:** earlier commit/push approvals apply to their historical actions. The 2026-10-24 frozen-fixture admission explicitly authorizes local milestone commits and as-needed agents, not source repairs, new dependencies, pushes, native probes, deployments or releases.
 
 
 ## Current physical domain layout
@@ -12,7 +12,7 @@ This plan builds the `clouddialect-contracts` Rust crate, its bundled JSON Schem
 
 **Current continuation status (2026-10-22):** user approved P0-A–F for implementation planning, then separately authorized the remaining Spec 1 prerequisite units in [implementation-plan.md](implementation-plan.md), TDD and no commits/probes/pushes/releases. User attests this is a new project and approves document/catalog **1.0.0** and crate API **0.1.0** as the initial MVP versions. This is not an independent external-publication audit or security-gate approval. Exact encoded extension JSON value bytes are required; raw_value on the existing pinned serde_json is separately approved.
 
-**Delivery is partial.** DTOs, schemas, catalog inventory, frozen snapshot/loading, structural JSON validation, local TOML rules and candidate hash equality have bounded verification. JSON/TOML semantics and mandatory blockers have bounded independent review; completeness has 10 focused tests after the approved direct-assumption repair; the bounded runner has 9 controls and one canonical seed. Current execution is parent-verified with prior static repair/runner review. Exhaustive conformance and downstream compatibility remain unfinished. See the [current run report](../../../.workflow/ultracode/execution-isolation-implementation/final-report.md) for actual evidence and outstanding work. Canonical task checkmarks are conservative; BG-01 and Spec 2 UD-1–UD-5 remain OPEN.
+**Delivery is partial.** DTOs, schemas, catalog inventory, frozen snapshot/loading, structural JSON validation, local TOML rules and candidate hash equality have bounded verification. JSON/TOML semantics and mandatory blockers have bounded independent review; completeness has 10 focused tests after the approved direct-assumption repair; the bounded runner has 9 controls and 42 admitted canonical fixtures. Current execution has parent Rust checks and independent bounded fixture-content review, not native or acceptance qualification. Exhaustive conformance and downstream compatibility remain unfinished. See the [current run report](../../../.workflow/ultracode/execution-isolation-implementation/final-report.md) for actual evidence and outstanding work. Canonical task checkmarks are conservative; BG-01 and Spec 2 UD-1–UD-5 remain OPEN.
 
 `BehavioralResult` full implementation, the Rust CLI binary, worker isolation, and Python transformation logic are explicitly out of scope.
 
@@ -434,7 +434,8 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - Manifest `full` + all obligations `equivalent-within-contract` produces `SemanticResult { outcome: Pass }`.
   - Scoped initial-MVP delivery: actual fidelity matrix and ManifestValidator/ValidateManifest semantic method use the owner's explicitly supplied active catalog and scoped store. Stored identity/version/bytes/hash/schema/mandatory semantics are checked before use. Later semantic/completeness delivery is recorded under tasks13/14; this earlier scoped snapshot alone did not deliver those portions. No result accepts a transformation.
 
-- [ ] 18. Write positive conformance fixtures
+- [x] 18. Write positive conformance fixtures
+  - Delivered 2026-10-24: all 13 canonical positives are admitted with exact frozen bytes and pass the actual structural/local runner. Batches 3.2.2–3.2.8 each passed owned-root/prefix checks and the complete 286-test Rust suite. Independent packet31 verified task/P0 content, three required-pair fidelity values, all resource dimensions, P0-C bindings and empty/nonempty P0-B declarations. Synthetic provider/origin/approver/capability fields remain declarations, not observed behavior or authority. See the [admission report](../../../.workflow/ultracode/execution-isolation-implementation/conformance-continuation/admission-2026-10-24/final-report.md).
   - Every verification fixture includes P0-C configuration/binding/digests/test-obligation links; every manifest fixture includes an explicit valid P0-B capabilities table, with both empty and nonempty positive declarations. A minimal pass is structural only, never acceptance.
   - Create the following fixture directories under `crates/clouddialect-contracts/fixtures/positive/`. Each fixture directory contains `input.json` (valid document) and `expected.json` (`{ "outcome": "pass", "phase": "structural", "errors": [], "warnings": [] }`).
   - Fixtures to create (one sub-directory each):
@@ -459,7 +460,8 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - Each `expected.json` specifies `"outcome": "pass"`.
   - Property 4 (fidelity enum exhaustiveness): the `behavioral-contract/minimal-valid` and `behavioral-contract/with-behavioral-notes` fixtures cover at least three distinct `behavioral_fidelity` values collectively.
 
-- [ ] 19. Write negative conformance fixtures
+- [x] 19. Write negative conformance fixtures
+  - Delivered 2026-10-24: all baseline15 plus eight P0 cases are admitted; 22 expected Fail and the required newer-MINOR Warn match exact category/path/description multisets. All 13 bounded batches passed prefix/owned-root and complete Rust checks. Packet32 independently traced the two-diagnostic inferred-reasoning case through schema/pinned engine/adapter, not blind output copying. Typed TOML shape errors retain the actual Unparseable/null-path profile; these fixtures do not prove full error-actionability or native/authentication requirements.
   - Add P0 cases: verification missing-binding, missing-configuration, nonpass-string-failure-description, missing-test-obligation; manifest missing-capabilities, unknown-capability-version, duplicate-capability-id and capability-unknown-field. Record exact structural/local-semantic phase and field paths.
   - Create the following fixture directories under `crates/clouddialect-contracts/fixtures/negative/`. Each contains `input.json` (invalid document) and `expected.json` specifying `"outcome": "fail"` with at least one error entry identifying the `category` and a `description_contains` substring.
   - Fixtures to create:
@@ -510,6 +512,10 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - Property 8 test passes for all five reserved prefix variants.
 
 - [ ] 21. Write round-trip and integration fixtures
+  - Verified supporting delivery (2026-10-24); full task remains open:
+    - [x] All three named typed-document round-trip pairs preserve exact encoded extension value bytes through the actual runner; batches3.2.36–3.2.37 admitted unchanged.
+    - [x] Unknown-evidence blocking, absent manifest reference and tampered candidate integration pairs are admitted in batches3.2.38–3.2.40 with distinct Blocked/semantic Fail/boolean-false oracles. Synthetic stores are not real backend authorization.
+    - The offline/native pair and remaining P0 scoped-store/snapshot/digest/verification/version cases still require implementation or actual approved qualification. No complete task21/native/consumer claim follows.
   - Add P0 scoped-store exact-version/missing/ambiguous/wrong-type/hash-mismatch/outage cases, same-tenant cross-project lookup denial, snapshot environment immunity and digest vectors; verification duplicate test IDs/unmapped obligations/invalid UTC/hash lengths/mismatched approval-result ref. Native project isolation and external observation/authentication remain Spec 2 qualification, not implied by these fixtures.
   - **Round-trip fixtures** — create under `crates/clouddialect-contracts/fixtures/round-trip/extension-field-preservation/`:
     - `behavioral-contract/` — `input.json` has a community extension key `acme:meta`; `expected.json` specifies `outcome: pass` and that the extension field is present byte-for-byte after round-trip. (Property 2, Req 3.5, 10.2)
@@ -532,6 +538,7 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - Offline resolution fixture with unresolvable `$schema`: error description contains the exact URI (Req 1.3).
 
 - [ ] 22. Implement conformance fixture runner
+  - Current bounded delivery (2026-10-24): the default runner executes all42 admitted fixtures; exact category/path/boolean controls, prefix counts and zero-selection rejection pass. Complete104-case inventory, real adversarial corpus and actual native/consumer qualification remain unfinished, so this canonical full-suite task stays open despite the delivered bounded runner unit3.1.
   - Planning elaboration: register the conformance integration target with `harness = false` and a test-only main/prefix parser as specified in implementation-plan unit 3.1. Cargo's default Rust-test name filter is not a fixture-directory filter; zero selected fixtures must fail. Parent owns Cargo.toml registration; no production binary/CLI is introduced.
   - Dispatch JSON vs TOML semantic phases through the exact P0-E entrypoints; supply explicit synthetic project-scoped store fixtures, never an ambient schema-catalog document search or live backend.
   - Create `crates/clouddialect-contracts/tests/conformance.rs` as an integration test binary.

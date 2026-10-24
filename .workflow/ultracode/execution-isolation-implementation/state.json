@@ -2,8 +2,8 @@
   "title": "Execution-isolation implementation",
   "slug": "execution-isolation-implementation",
   "created_at": "2026-10-22T07:25:44.090021+00:00",
-  "updated_at": "2026-10-24T02:59:53.046080+00:00",
-  "status": "executing",
+  "updated_at": "2026-10-24T09:33:27.163169+00:00",
+  "status": "verifying",
   "mode": "delegated",
   "baseline_ref": "3b9cb6bd0ee82dbef3b731a35ce68fc778c4906a",
   "risk_level": "high",
@@ -21,10 +21,10 @@
     "native_agent_available": true,
     "native_agent_planned": true,
     "native_agent_used": true,
-    "agent_count": 30,
+    "agent_count": 33,
     "wave_count": 12,
     "no_delegation_reason": "",
-    "notes": "29and30complete;30cumulative consumed, zero recursion/follow-ups. Review30actual URI/runner no new defect; proposed patch/seed reviewed separately, not applied.",
+    "notes": "Latest user permits as-needed agents; chosen admission packets31/32complete,33running. No recursion/follow-ups; source/native/external actions excluded.",
     "additional_dispatch_limit": 2,
     "additional_dispatches_used": 2,
     "consolidated_repairs_used_current_tranche": 1
@@ -1524,15 +1524,16 @@
     "snapshot_digest_resolver_authentication": "not implemented"
   },
   "current_limits": {
-    "cumulative_dispatch_ceiling": 30,
-    "cumulative_dispatches_used": 30,
+    "cumulative_dispatches_used": 33,
+    "chosen_additional_dispatch_limit": 3,
     "max_concurrent_including_parent": 4,
     "recursion": 0,
     "followup_dispatches": 0,
-    "repair_limit": 1,
-    "repairs_consumed": 1,
-    "deadline": "2026-10-23T20:14:04Z",
-    "started_at": "2026-10-23T18:44:04+00:00"
+    "source_repair_limit": 0,
+    "repairs_consumed": 0,
+    "started_at": "2026-10-24T09:08:34Z",
+    "deadline": "2026-10-24T09:53:34Z",
+    "approval": "user approving all plus as-needed agents; three chosen for this slice, not a new universal cap"
   },
   "ai_rule_location_correction": {
     "requested_by": "Explicit user: AI agent rules should be in .agents/rules",
@@ -1759,9 +1760,9 @@
     "publication_sha": "cd51996c3b2f65adb23aa129d412111b2d12ec6b"
   },
   "continuation_blocked_audit": {
-    "status": "Progress: owner-approved repair/seed executed with actual RED/GREEN, default full implemented suite now green",
+    "status": "Progress:41approved fixtures admitted in25verified batches; independent final review running",
     "consecutive_no_progress_goal_turns": 0,
-    "checked_at": "2026-10-24T02:56:54.886872+00:00"
+    "checked_at": "2026-10-24T09:33:27.163169+00:00"
   },
   "reference_fidelity_wave": {
     "started_at": "2026-10-22T16:07:43Z",
@@ -1805,27 +1806,45 @@
     "current_full_tree_green": true,
     "completeness_implemented": true
   },
-  "current_tranche": "conformance-continuation",
+  "current_tranche": "conformance-continuation/admission-2026-10-24",
   "conformance_continuation": {
     "status": "approved_repair_seed_verified_partial_prerequisite_delivery",
-    "report": "conformance-continuation/renewal-report.md",
+    "report": "conformance-continuation/admission-2026-10-24/final-report.md",
     "current_full_tree_green": false,
     "default_conformance_exit": 0,
     "conventional_rust_passed": 279,
     "doctests_passed": 7,
     "python_passed": 15,
     "known_defect": "reviewer29 direct-assumption omission repaired; no new defect found within this bounded repair",
-    "review": "Prior static proposed-patch/runner review30; current repaired tree parent-verified only",
+    "review": "31/32independent content clean;33final integrated review in progress",
     "dispatches_consumed": 30,
     "pushes_authorized": false,
     "full_goal_complete": false,
     "additional_failclosed_cli_controls": 67,
-    "default_fixture_count": 1,
+    "default_fixture_count": 42,
     "rust_passed_including_doctests": 286,
     "fresh_coverage": "unavailable; matching LLVM tools absent",
     "extra_spec_checker": "8 pass/1 error, unchanged pre-existing blanket checkbox guard",
     "current_failclosed_cli_controls_matched": 67,
     "current_cargo_suite_green": true,
     "current_full_tree_green_reason": "Additional unchanged pre-existing spec-only checker failure; fresh coverage/MSRV not qualified."
+  },
+  "fixture_admission": {
+    "status": "all41admitted; final independent review running",
+    "baseline": "283533a",
+    "approved_frozen_cases": 41,
+    "deadline": "2026-10-24T09:53:34Z",
+    "chosen_new_readonly_agents": 3,
+    "prior_dispatches": 30,
+    "source_or_native_changes_authorized": false,
+    "pushes_authorized": false,
+    "canonical_total": 42,
+    "content_reviews_complete": [
+      31,
+      32
+    ],
+    "final_review": 33,
+    "source_changes": 0,
+    "report": "conformance-continuation/admission-2026-10-24/final-report.md"
   }
 }

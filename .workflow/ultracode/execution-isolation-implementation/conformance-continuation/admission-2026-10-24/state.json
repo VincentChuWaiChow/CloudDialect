@@ -2,8 +2,8 @@
   "title": "Frozen fixture admission",
   "slug": "admission-2026-10-24",
   "created_at": "2026-10-24T09:08:34+00:00",
-  "updated_at": "2026-10-24T09:20:03.933758+00:00",
-  "status": "executing",
+  "updated_at": "2026-10-24T09:33:27.163169+00:00",
+  "status": "verifying",
   "mode": "delegated",
   "baseline_ref": "283533aff56bb1ade159275e4adb922765ced62e",
   "risk_level": "medium",
@@ -21,8 +21,8 @@
     "native_agent_available": true,
     "native_agent_planned": true,
     "native_agent_used": true,
-    "agent_count": 2,
-    "wave_count": 1,
+    "agent_count": 3,
+    "wave_count": 2,
     "prior_dispatches": 30,
     "additional_limit": 3,
     "no_delegation_reason": "",
@@ -45,24 +45,154 @@
     },
     {
       "id": "33-review",
-      "status": "pending",
+      "status": "in_progress",
       "owner": "read-only-agent",
       "write_scope": [],
       "result_path": "results/33-review.md"
     }
   ],
   "verification": {
-    "status": "pending",
-    "checks": []
+    "status": "parent checks pass; independent final review33in progress; known extra-checker failure/coverage-MS RV skipped",
+    "checks": [
+      {
+        "name": "full-tests",
+        "command": [
+          "rtk",
+          "proxy",
+          "cargo",
+          "test",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen"
+        ],
+        "exit_code": 0,
+        "expected_success": true,
+        "log": "full-tests.txt",
+        "rust_tests_passed": 286,
+        "fixture_counts": [
+          42
+        ]
+      },
+      {
+        "name": "check",
+        "command": [
+          "rtk",
+          "proxy",
+          "cargo",
+          "check",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen",
+          "--all-targets"
+        ],
+        "exit_code": 0,
+        "expected_success": true,
+        "log": "check.txt",
+        "rust_tests_passed": 0,
+        "fixture_counts": []
+      },
+      {
+        "name": "clippy",
+        "command": [
+          "rtk",
+          "proxy",
+          "cargo",
+          "clippy",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "exit_code": 0,
+        "expected_success": true,
+        "log": "clippy.txt",
+        "rust_tests_passed": 0,
+        "fixture_counts": []
+      },
+      {
+        "name": "fmt",
+        "command": [
+          "rtk",
+          "proxy",
+          "cargo",
+          "fmt",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--check"
+        ],
+        "exit_code": 0,
+        "expected_success": true,
+        "log": "fmt.txt",
+        "rust_tests_passed": 0,
+        "fixture_counts": []
+      },
+      {
+        "name": "python",
+        "command": [
+          "rtk",
+          "proxy",
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "exit_code": 0,
+        "expected_success": true,
+        "log": "python.txt",
+        "rust_tests_passed": 0,
+        "fixture_counts": []
+      },
+      {
+        "name": "extra-spec-checker",
+        "command": [
+          "rtk",
+          "proxy",
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "scripts/verification/execution-isolation",
+          "-p",
+          "test_*.py",
+          "-v"
+        ],
+        "exit_code": 1,
+        "expected_success": false,
+        "log": "extra-spec-checker.txt",
+        "rust_tests_passed": 0,
+        "fixture_counts": []
+      }
+    ],
+    "scope": "results/scope-audit.json",
+    "controls": "results/canonical-controls.json"
   },
   "deadline": "2026-10-24T09:53:34+00:00",
   "source_repairs_authorized": false,
   "pushes_authorized": false,
-  "admitted_canonical_current": 36,
+  "admitted_canonical_current": 42,
   "milestones": [
     {
       "commit": "04253f5571ca30f8e98e4331111feb4d846d606e",
-      "scope": "12positive pairs,7bounded batches; complete286-test suite after each, canonical13"
+      "scope": "positive12"
+    },
+    {
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "scope": "negative23"
+    },
+    {
+      "commit": "6e918055f75bb9ccb5edd6456dbd5d48c10ade27",
+      "scope": "roundtrip3"
+    },
+    {
+      "commit": "b0fdd1b978ecd8f64811c77e3c33549dff1b2b28",
+      "scope": "integration3"
     }
   ]
 }

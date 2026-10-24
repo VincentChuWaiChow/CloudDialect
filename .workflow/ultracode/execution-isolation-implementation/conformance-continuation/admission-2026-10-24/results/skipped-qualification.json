@@ -1,0 +1,7 @@
+{
+  "fresh_coverage": "not run: matching LLVM coverage tools absent; no installation authorized",
+  "rust_1_88_msrv": "not run: only stable1.99.1 installed; no toolchain installation authorized",
+  "native_provider_backend": "not run: no approved qualification environment/actions; synthetic fixture ports are not proof",
+  "legacy_extra_checker": "current9-test suite retains pre-existing blanket-checkbox failure (8pass/1error); no source repair allowed",
+  "new_dependency_or_source_changes": false
+}

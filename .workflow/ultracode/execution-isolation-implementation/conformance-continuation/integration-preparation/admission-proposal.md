@@ -1,3 +1,12 @@
+# Approved and admitted — 2026-10-24
+
+User approving all/as-needed agents authorized the prepared sets. Exact bytes
+were admitted as `b0fdd1b`; see `../admission-2026-10-24/final-report.md`.
+The proposal below is retained as historical pre-admission scope, not a pending
+question or a new native/source/external action grant.
+
+## Historical proposal follows
+
 # Three non-native integration admission proposal — not approved
 
 Existing bounded batches (two files/input+expected each):

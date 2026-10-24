@@ -1,22 +1,24 @@
-# Integration — in progress
+# Integration
 ## Accepted
-Packet31positive/P0 content and packet32remaining29oracles: no actionable P1/P2.
-Both reviewed frozen inputs/source; packet31also independently validated10JSON
-inputs against current schemas and parsed3TOML. No broad runtime/native proof.
-Exact positive bytes admitted as04253f5after seven owned/prefix/full Rust checks.
+All41frozen cases admitted in25bounded batches;82bytes-exact files,42canonical
+cases.25complete Rust suites and final Cargo/check/Clippy/fmt/Python pass.
+Packets31/32 report no actionable P1/P2; independently checked fixture content,
+source-derived oracles and schema validity, not native/authentication proof.
 ## Rejected
-No source repair, unknown mandatory trust, namespace/approval string authority,
-fake native isolation/backend qualification, full104-case or gate completion.
+No source repair, new deps/versions, unknown mandatory trust, fake native/backend
+qualification, full104-case completion, remote publication or runtime gate closure.
 ## Conflicts
-No actionable content conflict reported by either completed packet.
+No actionable content disagreement in the first two packets; final33pending.
 ## Decisions
-Parent owns deterministic exact copies/shared status/Git. Three reviewers chosen
-under as-needed approval (33cumulative); no recursive/follow-up dispatches.
+Parent retains all writes/Git. Three new read-only packets chosen under as-needed
+approval,33cumulative; no recursion/follow-ups. Exact model/effort unverified.
 ## Final changes
-Pending remaining exact admission groups and combined checks/review33.
+Positive13/negative23/roundtrip3/integration3; tasks18/19done, other62cases and
+all21runtime tasks open. No production/runner/schema/manifest/lock changes.
 ## Verification still needed
-Remaining per-batch complete Cargo checks, full prefixes/lints/Python, frozen final
-review33, scope/task audit. Coverage/MSRV tools unavailable remain explicit.
+Final frozen review33 and closeout audit. Fresh coverage/MSRV tools unavailable;
+legacy extra spec-checker retains its pre-existing8pass/1error. Actual native/
+consumer/traceability/owner handoff remains outside this slice, not waived.
 ## Remaining risks
-Only42of104canonical cases expected after this slice. All21Spec2runtime tasks,
-UD1–UD5/BG-01 and native/backend/consumer/traceability remain open.
+Fixture claims are not policy, observations or acceptance; full original objective
+remains unfinished. AllUD1–UD5/BG-01 remain open, no execution crate exists.

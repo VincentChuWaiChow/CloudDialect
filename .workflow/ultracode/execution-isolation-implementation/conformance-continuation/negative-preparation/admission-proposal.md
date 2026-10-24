@@ -1,3 +1,12 @@
+# Approved and admitted — 2026-10-24
+
+User approving all/as-needed agents authorized the prepared sets. Exact bytes
+were admitted as `88e638a`; see `../admission-2026-10-24/final-report.md`.
+The proposal below is retained as historical pre-admission scope, not a pending
+question or a new native/source/external action grant.
+
+## Historical proposal follows
+
 # Negative fixture admission proposal — not approved/applied
 
 ## Scope and boundaries

@@ -1,3 +1,10 @@
+# Current inventory — 2026-10-24
+
+42 cases/26 batches are delivered; remaining62 cases/34 batches remain incomplete.
+All41prepared drafts were explicitly approved/admitted; no pending admission
+question remains for them. See `admission-2026-10-24/final-report.md`. Prior draft
+readiness notes below are historical; they do not waive remaining gates.
+
 # Inventory status — 2026-10-24
 
 Exactly seed batch 3.2.1 is now approved and delivered (`408af0d`), with unchanged

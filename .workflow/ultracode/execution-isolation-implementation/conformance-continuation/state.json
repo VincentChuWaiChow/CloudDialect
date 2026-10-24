@@ -2,8 +2,8 @@
   "title": "Conformance prerequisite continuation",
   "slug": "conformance-continuation",
   "created_at": "2026-10-23T18:44:04+00:00",
-  "updated_at": "2026-10-24T03:29:12.053951+00:00",
-  "status": "waiting_for_approval",
+  "updated_at": "2026-10-24T09:27:32.701091+00:00",
+  "status": "executing",
   "mode": "delegated",
   "baseline_ref": "5dc25f3f31ce500d17aa2322793d3a970f9b73d9",
   "risk_level": "high",
@@ -183,9 +183,7 @@
       "stage": "docs(conformance): checkpoint review and scoped verification evidence"
     }
   ],
-  "pending_approvals": [
-    "New 45-minute canonical admission tranche: frozen positive batches3.2.2\u20133.2.8, 12 cases/24 files; no production changes or new agents"
-  ],
+  "pending_approvals": [],
   "full_goal_complete": false,
   "current_full_tree_green": false,
   "no_processes_running": true,
@@ -257,5 +255,9 @@
     "canonical_count": 1,
     "new_agents": 0,
     "native_batch_3.2.41": "unprepared; actual approved environment remains required"
-  }
+  },
+  "current_admission": "admission-2026-10-24/state.json",
+  "current_owner_scope": "Explicit approving all:41prepared cases, plus as-needed agents. No source/native/external/gate approval inferred.",
+  "current_canonical_fixture_count": 42,
+  "current_admission_scope": "All41 frozen drafts approved/admitted; only25bounded batches plus prior seed complete. Source/native/external actions excluded."
 }

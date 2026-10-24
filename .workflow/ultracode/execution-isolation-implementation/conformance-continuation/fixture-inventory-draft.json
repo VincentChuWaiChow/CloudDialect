@@ -1,5 +1,5 @@
 {
-  "status": "One approved seed delivered; remaining 103 cases/59 batches are draft incomplete approval/oracle inventory, not a delivered corpus",
+  "status": "42cases/26batches delivered; remaining62cases/34batches still need readiness, approval or actual qualification",
   "source": "canonical tasks18-21 plus named P0/VC1 follow-ons",
   "case_count": 104,
   "batch_count": 60,
@@ -16,7 +16,7 @@
       },
       "notes": "Structural declaration only, never observed behavior/authentication/acceptance. Collectively cover >=3 fidelity labels; S3/PubSub note text is synthetic/unresolved, not asserted provider fact.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -25,7 +25,9 @@
       "frozen_draft_sha256": {
         "input.json": "f4ac5fa2e8cae39cd87eb8af404bd95f724157515abf4abcd4b7e9a89738558c",
         "expected.json": "5fa6d3342faead77edacf3790c758696a2604f34a6f9d97f4905d84407bfa7fe"
-      }
+      },
+      "commit": "04253f5571ca30f8e98e4331111feb4d846d606e",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "positive/behavioral-contract/with-known-behavior",
@@ -39,7 +41,7 @@
       },
       "notes": "Structural declaration only, never observed behavior/authentication/acceptance. Resource dimensions must satisfy approved RC-1 coverage, not retry-only omission.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -48,7 +50,9 @@
       "frozen_draft_sha256": {
         "input.json": "fb13b29bc5e9e62a9a22ffeb752aaa8f18a74d343808de49a228fab10e69747f",
         "expected.json": "5fa6d3342faead77edacf3790c758696a2604f34a6f9d97f4905d84407bfa7fe"
-      }
+      },
+      "commit": "04253f5571ca30f8e98e4331111feb4d846d606e",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "positive/behavioral-contract/with-unresolved-assumption-on-dependency",
@@ -62,7 +66,7 @@
       },
       "notes": "Structural declaration only, never observed behavior/authentication/acceptance. Resource dimensions must satisfy approved RC-1 coverage, not retry-only omission.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -71,7 +75,9 @@
       "frozen_draft_sha256": {
         "input.json": "02f153115152b60c7a8e80065ab45eb055d2cca9ea04e6b29e4396b0c8481bfa",
         "expected.json": "5fa6d3342faead77edacf3790c758696a2604f34a6f9d97f4905d84407bfa7fe"
-      }
+      },
+      "commit": "04253f5571ca30f8e98e4331111feb4d846d606e",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "positive/behavioral-contract/with-behavioral-notes",
@@ -85,7 +91,7 @@
       },
       "notes": "Structural declaration only, never observed behavior/authentication/acceptance. Resource dimensions must satisfy approved RC-1 coverage, not retry-only omission. Collectively cover >=3 fidelity labels; S3/PubSub note text is synthetic/unresolved, not asserted provider fact.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -94,7 +100,9 @@
       "frozen_draft_sha256": {
         "input.json": "f095b4fa109b396c16013bbdc13ad3aebf7c02c987ad5c2a956572f00fd2b1d9",
         "expected.json": "5fa6d3342faead77edacf3790c758696a2604f34a6f9d97f4905d84407bfa7fe"
-      }
+      },
+      "commit": "04253f5571ca30f8e98e4331111feb4d846d606e",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "positive/behavioral-contract/with-extension-field",
@@ -108,7 +116,7 @@
       },
       "notes": "Structural declaration only, never observed behavior/authentication/acceptance.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -117,7 +125,9 @@
       "frozen_draft_sha256": {
         "input.json": "8c4a898b4b042ce683f9e6a68597d9646d5d03313261fc1cd20aa1a2b20a6d4c",
         "expected.json": "5fa6d3342faead77edacf3790c758696a2604f34a6f9d97f4905d84407bfa7fe"
-      }
+      },
+      "commit": "04253f5571ca30f8e98e4331111feb4d846d606e",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "positive/evidence-record/observed",
@@ -131,7 +141,7 @@
       },
       "notes": "Structural declaration only, never observed behavior/authentication/acceptance.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -140,7 +150,9 @@
       "frozen_draft_sha256": {
         "input.json": "0d024291d146446b7874d76879097961a3ae0bee619bb23c486e829ba0fc0f23",
         "expected.json": "cad10a80850a610f6bfe6c8e5e87aa135d5b9ba902b02ef2f7090dbb31e22f8e"
-      }
+      },
+      "commit": "04253f5571ca30f8e98e4331111feb4d846d606e",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "positive/evidence-record/inferred",
@@ -173,7 +185,7 @@
       },
       "notes": "Structural declaration only, never observed behavior/authentication/acceptance.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -182,7 +194,9 @@
       "frozen_draft_sha256": {
         "input.json": "28c0b3c9cf9c5cb4ffa8cf6a87b08e4ea56688d436f7b1635fae00386ce43027",
         "expected.json": "cad10a80850a610f6bfe6c8e5e87aa135d5b9ba902b02ef2f7090dbb31e22f8e"
-      }
+      },
+      "commit": "04253f5571ca30f8e98e4331111feb4d846d606e",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "positive/verification-result/minimal",
@@ -196,7 +210,7 @@
       },
       "notes": "Structural declaration only, never observed behavior/authentication/acceptance.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -205,7 +219,9 @@
       "frozen_draft_sha256": {
         "input.json": "752ac38d6bab7cd2294608debc5a9411ce453541febd02a49023694306b5dc99",
         "expected.json": "cd3bb445c3509617f4fa1b0b9939e2d6cbc8d770fa839582fa1710274278dac2"
-      }
+      },
+      "commit": "04253f5571ca30f8e98e4331111feb4d846d606e",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "positive/verification-result/with-acceptance",
@@ -219,7 +235,7 @@
       },
       "notes": "Structural declaration only, never observed behavior/authentication/acceptance.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -228,7 +244,9 @@
       "frozen_draft_sha256": {
         "input.json": "c5aeeda0653d6f257ab50cbbbcca302319ba1134f50f2c74228c026f05706381",
         "expected.json": "cd3bb445c3509617f4fa1b0b9939e2d6cbc8d770fa839582fa1710274278dac2"
-      }
+      },
+      "commit": "04253f5571ca30f8e98e4331111feb4d846d606e",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "positive/pack-manifest/full-coverage",
@@ -242,7 +260,7 @@
       },
       "notes": "Structural declaration only, never observed behavior/authentication/acceptance. Include P0-B capabilities; full-coverage may use empty requirements, unsupported-operation must carry a nonempty valid request declaration.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.toml",
         "expected.json"
@@ -251,7 +269,9 @@
       "frozen_draft_sha256": {
         "input.toml": "f742ab977ebb74fff102547c3074b3ba9828eaedc7186fb5b153bd7587aead1c",
         "expected.json": "553ce3d5557b4f7139810a256e80d4474aae8af8e9bcc9c30608a874362237ee"
-      }
+      },
+      "commit": "04253f5571ca30f8e98e4331111feb4d846d606e",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "positive/pack-manifest/with-unsupported-operation",
@@ -265,7 +285,7 @@
       },
       "notes": "Structural declaration only, never observed behavior/authentication/acceptance. Include P0-B capabilities; full-coverage may use empty requirements, unsupported-operation must carry a nonempty valid request declaration.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.toml",
         "expected.json"
@@ -274,7 +294,9 @@
       "frozen_draft_sha256": {
         "input.toml": "2915d5dac51fc3e3f9a952a3ca513de36ef5194fc017ef3bd3076b732c10ff1a",
         "expected.json": "553ce3d5557b4f7139810a256e80d4474aae8af8e9bcc9c30608a874362237ee"
-      }
+      },
+      "commit": "04253f5571ca30f8e98e4331111feb4d846d606e",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "positive/pack-manifest/with-extension-section",
@@ -288,7 +310,7 @@
       },
       "notes": "Structural declaration only, never observed behavior/authentication/acceptance. Include P0-B capabilities; full-coverage may use empty requirements, unsupported-operation must carry a nonempty valid request declaration.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.toml",
         "expected.json"
@@ -297,7 +319,9 @@
       "frozen_draft_sha256": {
         "input.toml": "cd52e252a834c17a59efe0a99486c28aecac9aba3ec79532d9054c87d8c658cb",
         "expected.json": "553ce3d5557b4f7139810a256e80d4474aae8af8e9bcc9c30608a874362237ee"
-      }
+      },
+      "commit": "04253f5571ca30f8e98e4331111feb4d846d606e",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "negative/behavioral-contract/missing-id",
@@ -320,7 +344,7 @@
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -329,7 +353,9 @@
       "frozen_draft_sha256": {
         "input.json": "1299d7e9317c93cc253d481e9a46f113bfedf812fe8d61f1a8be6a9b46a72183",
         "expected.json": "e93e638f025c9667fc15f2954316a20cbc84f5b5038877fafb1d4e73ec0f6233"
-      }
+      },
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "negative/behavioral-contract/obligation-no-evidence-no-assumption",
@@ -357,7 +383,7 @@
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -366,7 +392,9 @@
       "frozen_draft_sha256": {
         "input.json": "42103df808fdb97e209b3a39521406954242f9e95c0a65ddb709cb274611f96f",
         "expected.json": "c55458c369415d62c5160be078972b12f4b5d766a224ff146426d447aa5d4446"
-      }
+      },
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "negative/behavioral-contract/invalid-behavioral-fidelity",
@@ -389,7 +417,7 @@
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -398,7 +426,9 @@
       "frozen_draft_sha256": {
         "input.json": "a0149b9ce6310edb6051ef7759a37766002537c60b922a327f4b49b381d91099",
         "expected.json": "2bf8714a5ee6de6f72459c3dedfd911c3d208016bfec5617b265bf0ff79c5541"
-      }
+      },
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "negative/evidence-record/missing-classification",
@@ -421,7 +451,7 @@
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -430,7 +460,9 @@
       "frozen_draft_sha256": {
         "input.json": "e28b041163e90465643214b194ae512697f14035b943f06e215e3c91362a350b",
         "expected.json": "42362692a75eae6a9ba41ff6a8a1da0ba6d5be9134d4d6303ed34976e364994d"
-      }
+      },
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "negative/evidence-record/inferred-empty-reasoning-chain",
@@ -458,7 +490,7 @@
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -467,7 +499,9 @@
       "frozen_draft_sha256": {
         "input.json": "f08e4efcf4b5b2d93f494266caeb28545daa5b05df94bf4081f69e1ea84fc61a",
         "expected.json": "c4d05482b8d122044335060517e05beddfacf1f9b3e38a68632291ea36a982a4"
-      }
+      },
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "negative/evidence-record/unknown-empty-assumptions",
@@ -490,7 +524,7 @@
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -499,7 +533,9 @@
       "frozen_draft_sha256": {
         "input.json": "d6b30e818cbf78e22c6ba468370479ae4e16b3f2289d3948fe8bf42ff266d869",
         "expected.json": "b9b5b8fc352c470dfce64582ecb8ae6d09792a78ce65bc6e4e5c6a8399aba113"
-      }
+      },
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "negative/verification-result/empty-tests-array",
@@ -522,7 +558,7 @@
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -531,7 +567,9 @@
       "frozen_draft_sha256": {
         "input.json": "7be6ca737945136ac112439527fcd99a4de0ea3652c4a3663d07cc3ccd93fd32",
         "expected.json": "336d7325dfc98ba1f6a49c55d24f92165c31d0c2580010eb165c730d45706cd2"
-      }
+      },
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "negative/verification-result/nonpass-without-failure-description",
@@ -554,7 +592,7 @@
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -563,7 +601,9 @@
       "frozen_draft_sha256": {
         "input.json": "d098af0312716caa0709b8a46e1eef8aa33f60f7bd81711c550087cc3cd3e317",
         "expected.json": "cada309e1c0454a16676f671e79aa445b55460610e046adabf83b8f5d32e0f84"
-      }
+      },
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "negative/verification-result/acceptance-missing-approver",
@@ -586,7 +626,7 @@
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -595,7 +635,9 @@
       "frozen_draft_sha256": {
         "input.json": "68ea85d2e8dde2b3fbab454982dc01a678aad482757308c92f6a25843867f46a",
         "expected.json": "2a6577530e563403608e9767cf25f8240609dcf94947bb8eeba58ae94a429c9f"
-      }
+      },
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "negative/verification-result/unknown-hash-algorithm",
@@ -618,7 +660,7 @@
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -627,7 +669,9 @@
       "frozen_draft_sha256": {
         "input.json": "25f6514124ff495c574a4c4b9be150335f0a9cbe4d9a2842979e4c809d536170",
         "expected.json": "0b8357e8635a5988468ac2a06646d795200137f735614f3ca936136b077787b5"
-      }
+      },
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "negative/pack-manifest/missing-toolchain-for-full-operation",
@@ -650,7 +694,7 @@
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.toml",
         "expected.json"
@@ -659,7 +703,9 @@
       "frozen_draft_sha256": {
         "input.toml": "175e59a1eed43785f33048a82c109f9bf8ff80602d23c521906e4a8af8ada963",
         "expected.json": "a67258e923d83bf01a0cfb8019f88a1f748a531c5dde6137d43f8b0698072278"
-      }
+      },
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "negative/pack-manifest/invalid-behavioral-fidelity",
@@ -682,7 +728,7 @@
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.toml",
         "expected.json"
@@ -691,7 +737,9 @@
       "frozen_draft_sha256": {
         "input.toml": "bb812f357eff07710bc374975481899a8add515ee7f1166325520176a26b5790",
         "expected.json": "d3e3799459a3316fceccaae9850d017b641425a8dfd377f7fd5c1e1c161fdfc2"
-      }
+      },
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "negative/pack-manifest/inline-contract-body",
@@ -714,7 +762,7 @@
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.toml",
         "expected.json"
@@ -723,7 +771,9 @@
       "frozen_draft_sha256": {
         "input.toml": "11307f2768bb0d30f822b1800a5e8426b3a0336d2045c3bb9d4b4209c89838b7",
         "expected.json": "d3e3799459a3316fceccaae9850d017b641425a8dfd377f7fd5c1e1c161fdfc2"
-      }
+      },
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "negative/version/unsupported-major",
@@ -746,7 +796,7 @@
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -755,7 +805,9 @@
       "frozen_draft_sha256": {
         "input.json": "f7632714d7024531d04f59bb883095a8b1c0bfb6bfa97cb48a8ce3c464ab267e",
         "expected.json": "ad6ede655dd184613e018345fa4904ad0e1df2f45f57abad08304eb4460cddbc"
-      }
+      },
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "negative/version/unsupported-minor-newer",
@@ -777,7 +829,7 @@
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -786,7 +838,9 @@
       "frozen_draft_sha256": {
         "input.json": "31dcf04f94b6de851c1fd5ddb4f999d468630e55b6d483dcb9c5197e38c698a3",
         "expected.json": "3978b891e723ef1e2d42e0dfa21b5c7c4056dde4c48e4003d6f8c44ca8e97bc8"
-      }
+      },
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "negative/verification-result/missing-binding",
@@ -809,7 +863,7 @@
       },
       "notes": "Named P0 negative; no extension fallback or legacy field swallowing.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -818,7 +872,9 @@
       "frozen_draft_sha256": {
         "input.json": "a701f5cd33170c627a8957a7c3434699a216d9c06b8576ba76ffa2a2709ecaab",
         "expected.json": "66e3a34edccf8fcba97ce8cab64ed5dc00b48ce8dbb87492fe7ab8b51af974a4"
-      }
+      },
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "negative/verification-result/missing-configuration",
@@ -841,7 +897,7 @@
       },
       "notes": "Named P0 negative; no extension fallback or legacy field swallowing.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -850,7 +906,9 @@
       "frozen_draft_sha256": {
         "input.json": "20b6bbcd368a8e0a65313e63dc67cbade1b651d64261a055ac9b842f4cce7494",
         "expected.json": "9684ba9cebe959884a8b5e33a6d3517acb938bed86f919ea598ac6335ad62d9e"
-      }
+      },
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "negative/verification-result/nonpass-string-failure-description",
@@ -873,7 +931,7 @@
       },
       "notes": "Named P0 negative; no extension fallback or legacy field swallowing.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -882,7 +940,9 @@
       "frozen_draft_sha256": {
         "input.json": "d0d30fdeebe68fe8a64b151913f53e48539165b9d17a315586f2f864ee03cedd",
         "expected.json": "01fbec243921a778fbce38fb028940e6a56d048aa7f1b5c986e6e49f82e0c48e"
-      }
+      },
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "negative/verification-result/missing-test-obligation",
@@ -905,7 +965,7 @@
       },
       "notes": "Named P0 negative; no extension fallback or legacy field swallowing.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -914,7 +974,9 @@
       "frozen_draft_sha256": {
         "input.json": "40cf9acb108c14a6bb04cd230f2e0ec6a8a34fb7156a7562492712196e80a00e",
         "expected.json": "282193e1b15320f19722af0a86da80585f1cfb1c9acddddd0b30215b9467f423"
-      }
+      },
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "negative/pack-manifest/missing-capabilities",
@@ -937,7 +999,7 @@
       },
       "notes": "Named P0 negative; no extension fallback or legacy field swallowing.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.toml",
         "expected.json"
@@ -946,7 +1008,9 @@
       "frozen_draft_sha256": {
         "input.toml": "c6fd3db430389d372701c7f97c4446d43a0e3eaa9cbd924189b1528389a67277",
         "expected.json": "d3e3799459a3316fceccaae9850d017b641425a8dfd377f7fd5c1e1c161fdfc2"
-      }
+      },
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "negative/pack-manifest/unknown-capability-version",
@@ -969,7 +1033,7 @@
       },
       "notes": "Named P0 negative; no extension fallback or legacy field swallowing.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.toml",
         "expected.json"
@@ -978,7 +1042,9 @@
       "frozen_draft_sha256": {
         "input.toml": "31408275e907f9ecd294fd97e9d67578000fb0ae6da9f5a3deaec6f6f7f1079f",
         "expected.json": "33495bca9bb0952f7f4c3ffe70395d5b313a515a12e6114212643913920b82b5"
-      }
+      },
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "negative/pack-manifest/duplicate-capability-id",
@@ -1001,7 +1067,7 @@
       },
       "notes": "Named P0 negative; no extension fallback or legacy field swallowing.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.toml",
         "expected.json"
@@ -1010,7 +1076,9 @@
       "frozen_draft_sha256": {
         "input.toml": "9e4a9cd2886f1f034a766aeaacd9ee751ea3509f43619a7abf1833e1378cc874",
         "expected.json": "ecee74aa0009ea52ca8224e5906fab1aa6f787434f3649c8d005ac454054c873"
-      }
+      },
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "negative/pack-manifest/capability-unknown-field",
@@ -1033,7 +1101,7 @@
       },
       "notes": "Named P0 negative; no extension fallback or legacy field swallowing.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.toml",
         "expected.json"
@@ -1042,7 +1110,9 @@
       "frozen_draft_sha256": {
         "input.toml": "ab37a59b798f282de120a000b7c065aab5b2cefacb002acf616e3fd2f58a9a81",
         "expected.json": "d3e3799459a3316fceccaae9850d017b641425a8dfd377f7fd5c1e1c161fdfc2"
-      }
+      },
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "adversarial/extension-namespace/reserved-exact-match/correctly-handled",
@@ -1525,7 +1595,7 @@
       },
       "notes": "Exact encoded qualified extension values, not decoded Value equality.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -1534,7 +1604,9 @@
       "frozen_draft_sha256": {
         "input.json": "5928b42b9494e41a8a2cba7b9e79706181998eeefa57a02ceeceda5940d2edd5",
         "expected.json": "45e725ee95012454db30cfea2b2062612d35f1c7a03a24dc9f080c0d4231eb73"
-      }
+      },
+      "commit": "6e918055f75bb9ccb5edd6456dbd5d48c10ade27",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "round-trip/extension-field-preservation/evidence-record",
@@ -1552,7 +1624,7 @@
       },
       "notes": "Exact encoded qualified extension values, not decoded Value equality.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -1561,7 +1633,9 @@
       "frozen_draft_sha256": {
         "input.json": "4f36ffb3b9caf3cb3c0544f9839357daeaead3af6dbb2439d030c6a94e58bb85",
         "expected.json": "b13ff786fccf1cd540f53ae532bacf3b66a1fe3cfadf2ecc03e1673692e28f51"
-      }
+      },
+      "commit": "6e918055f75bb9ccb5edd6456dbd5d48c10ade27",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "round-trip/extension-field-preservation/verification-result",
@@ -1579,7 +1653,7 @@
       },
       "notes": "Exact encoded qualified extension values, not decoded Value equality.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -1588,7 +1662,9 @@
       "frozen_draft_sha256": {
         "input.json": "3a9214e5cc88ba2a62e1dcf21c25fa5fc63d356c1e8915039b74f643c983d428",
         "expected.json": "58cd4b96216f9f037235211706a7b8cebcf27235c61ac9b89bfc85e8d88c0fb7"
-      }
+      },
+      "commit": "6e918055f75bb9ccb5edd6456dbd5d48c10ade27",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "integration/blocking-gap/unknown-evidence-mandatory-obligation",
@@ -2056,7 +2132,7 @@
       },
       "notes": "No mocked or declaration-only native proof.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -2065,7 +2141,9 @@
       "frozen_draft_sha256": {
         "input.json": "94e111c1d5f1c4cdb9687c31defa45f079881dfc8ccabfbfb2624377566082b7",
         "expected.json": "147abd3b973ca53527601fbb38d86687d3d844e539a65f96d3a616ab7df9029e"
-      }
+      },
+      "commit": "b0fdd1b978ecd8f64811c77e3c33549dff1b2b28",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "integration/semantic-resolution-failure/manifest-bad-contract-ref",
@@ -2086,7 +2164,7 @@
       },
       "notes": "No mocked or declaration-only native proof.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.toml",
         "expected.json"
@@ -2095,7 +2173,9 @@
       "frozen_draft_sha256": {
         "input.toml": "f742ab977ebb74fff102547c3074b3ba9828eaedc7186fb5b153bd7587aead1c",
         "expected.json": "ba1bd80479185d3a5708cfebe54044e61c8127c5a7b2aa48a5e097e6bd4b543d"
-      }
+      },
+      "commit": "b0fdd1b978ecd8f64811c77e3c33549dff1b2b28",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "integration/artifact-hash-mismatch/tampered-candidate",
@@ -2129,7 +2209,7 @@
       },
       "notes": "No mocked or declaration-only native proof.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -2138,7 +2218,9 @@
       "frozen_draft_sha256": {
         "input.json": "752ac38d6bab7cd2294608debc5a9411ce453541febd02a49023694306b5dc99",
         "expected.json": "8a4dfe608c454925726702550b94a85ce5aba9f59ef3d7f79d65f1331d384610"
-      }
+      },
+      "commit": "b0fdd1b978ecd8f64811c77e3c33549dff1b2b28",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "path": "integration/offline-resolution/network-disabled",
@@ -2798,7 +2880,7 @@
         "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-known-behavior/input.json",
         "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-known-behavior/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
@@ -2810,7 +2892,9 @@
         "warnings": [],
         "blockers": []
       },
-      "readiness": "positive-preparation/verification.json"
+      "readiness": "positive-preparation/verification.json",
+      "commit": "04253f5571ca30f8e98e4331111feb4d846d606e",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "id": "3.2.3",
@@ -2824,7 +2908,7 @@
         "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-behavioral-notes/input.json",
         "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-behavioral-notes/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
@@ -2836,7 +2920,9 @@
         "warnings": [],
         "blockers": []
       },
-      "readiness": "positive-preparation/verification.json"
+      "readiness": "positive-preparation/verification.json",
+      "commit": "04253f5571ca30f8e98e4331111feb4d846d606e",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "id": "3.2.4",
@@ -2847,7 +2933,7 @@
         "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-extension-field/input.json",
         "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-extension-field/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
@@ -2859,7 +2945,9 @@
         "warnings": [],
         "blockers": []
       },
-      "readiness": "positive-preparation/verification.json"
+      "readiness": "positive-preparation/verification.json",
+      "commit": "04253f5571ca30f8e98e4331111feb4d846d606e",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "id": "3.2.5",
@@ -2873,7 +2961,7 @@
         "crates/clouddialect-contracts/fixtures/positive/evidence-record/unknown/input.json",
         "crates/clouddialect-contracts/fixtures/positive/evidence-record/unknown/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
@@ -2885,7 +2973,9 @@
         "warnings": [],
         "blockers": []
       },
-      "readiness": "positive-preparation/verification.json"
+      "readiness": "positive-preparation/verification.json",
+      "commit": "04253f5571ca30f8e98e4331111feb4d846d606e",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "id": "3.2.6",
@@ -2899,7 +2989,7 @@
         "crates/clouddialect-contracts/fixtures/positive/verification-result/with-acceptance/input.json",
         "crates/clouddialect-contracts/fixtures/positive/verification-result/with-acceptance/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
@@ -2911,7 +3001,9 @@
         "warnings": [],
         "blockers": []
       },
-      "readiness": "positive-preparation/verification.json"
+      "readiness": "positive-preparation/verification.json",
+      "commit": "04253f5571ca30f8e98e4331111feb4d846d606e",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "id": "3.2.7",
@@ -2925,7 +3017,7 @@
         "crates/clouddialect-contracts/fixtures/positive/pack-manifest/with-unsupported-operation/input.toml",
         "crates/clouddialect-contracts/fixtures/positive/pack-manifest/with-unsupported-operation/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
@@ -2937,7 +3029,9 @@
         "warnings": [],
         "blockers": []
       },
-      "readiness": "positive-preparation/verification.json"
+      "readiness": "positive-preparation/verification.json",
+      "commit": "04253f5571ca30f8e98e4331111feb4d846d606e",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "id": "3.2.8",
@@ -2948,7 +3042,7 @@
         "crates/clouddialect-contracts/fixtures/positive/pack-manifest/with-extension-section/input.toml",
         "crates/clouddialect-contracts/fixtures/positive/pack-manifest/with-extension-section/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
@@ -2960,7 +3054,9 @@
         "warnings": [],
         "blockers": []
       },
-      "readiness": "positive-preparation/verification.json"
+      "readiness": "positive-preparation/verification.json",
+      "commit": "04253f5571ca30f8e98e4331111feb4d846d606e",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "id": "3.2.9",
@@ -2974,14 +3070,16 @@
         "crates/clouddialect-contracts/fixtures/negative/behavioral-contract/obligation-no-evidence-no-assumption/input.json",
         "crates/clouddialect-contracts/fixtures/negative/behavioral-contract/obligation-no-evidence-no-assumption/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
       "readiness": "negative-preparation/verification.json",
-      "exact_oracles": "negative-preparation/contract.json"
+      "exact_oracles": "negative-preparation/contract.json",
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "id": "3.2.10",
@@ -2992,14 +3090,16 @@
         "crates/clouddialect-contracts/fixtures/negative/behavioral-contract/invalid-behavioral-fidelity/input.json",
         "crates/clouddialect-contracts/fixtures/negative/behavioral-contract/invalid-behavioral-fidelity/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
       "readiness": "negative-preparation/verification.json",
-      "exact_oracles": "negative-preparation/contract.json"
+      "exact_oracles": "negative-preparation/contract.json",
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "id": "3.2.11",
@@ -3013,14 +3113,16 @@
         "crates/clouddialect-contracts/fixtures/negative/evidence-record/inferred-empty-reasoning-chain/input.json",
         "crates/clouddialect-contracts/fixtures/negative/evidence-record/inferred-empty-reasoning-chain/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
       "readiness": "negative-preparation/verification.json",
-      "exact_oracles": "negative-preparation/contract.json"
+      "exact_oracles": "negative-preparation/contract.json",
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "id": "3.2.12",
@@ -3031,14 +3133,16 @@
         "crates/clouddialect-contracts/fixtures/negative/evidence-record/unknown-empty-assumptions/input.json",
         "crates/clouddialect-contracts/fixtures/negative/evidence-record/unknown-empty-assumptions/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
       "readiness": "negative-preparation/verification.json",
-      "exact_oracles": "negative-preparation/contract.json"
+      "exact_oracles": "negative-preparation/contract.json",
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "id": "3.2.13",
@@ -3052,14 +3156,16 @@
         "crates/clouddialect-contracts/fixtures/negative/verification-result/nonpass-without-failure-description/input.json",
         "crates/clouddialect-contracts/fixtures/negative/verification-result/nonpass-without-failure-description/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
       "readiness": "negative-preparation/verification.json",
-      "exact_oracles": "negative-preparation/contract.json"
+      "exact_oracles": "negative-preparation/contract.json",
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "id": "3.2.14",
@@ -3073,14 +3179,16 @@
         "crates/clouddialect-contracts/fixtures/negative/verification-result/unknown-hash-algorithm/input.json",
         "crates/clouddialect-contracts/fixtures/negative/verification-result/unknown-hash-algorithm/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
       "readiness": "negative-preparation/verification.json",
-      "exact_oracles": "negative-preparation/contract.json"
+      "exact_oracles": "negative-preparation/contract.json",
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "id": "3.2.15",
@@ -3094,14 +3202,16 @@
         "crates/clouddialect-contracts/fixtures/negative/verification-result/missing-configuration/input.json",
         "crates/clouddialect-contracts/fixtures/negative/verification-result/missing-configuration/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
       "readiness": "negative-preparation/verification.json",
-      "exact_oracles": "negative-preparation/contract.json"
+      "exact_oracles": "negative-preparation/contract.json",
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "id": "3.2.16",
@@ -3115,14 +3225,16 @@
         "crates/clouddialect-contracts/fixtures/negative/verification-result/missing-test-obligation/input.json",
         "crates/clouddialect-contracts/fixtures/negative/verification-result/missing-test-obligation/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
       "readiness": "negative-preparation/verification.json",
-      "exact_oracles": "negative-preparation/contract.json"
+      "exact_oracles": "negative-preparation/contract.json",
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "id": "3.2.17",
@@ -3136,14 +3248,16 @@
         "crates/clouddialect-contracts/fixtures/negative/pack-manifest/invalid-behavioral-fidelity/input.toml",
         "crates/clouddialect-contracts/fixtures/negative/pack-manifest/invalid-behavioral-fidelity/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
       "readiness": "negative-preparation/verification.json",
-      "exact_oracles": "negative-preparation/contract.json"
+      "exact_oracles": "negative-preparation/contract.json",
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "id": "3.2.18",
@@ -3157,14 +3271,16 @@
         "crates/clouddialect-contracts/fixtures/negative/pack-manifest/missing-capabilities/input.toml",
         "crates/clouddialect-contracts/fixtures/negative/pack-manifest/missing-capabilities/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
       "readiness": "negative-preparation/verification.json",
-      "exact_oracles": "negative-preparation/contract.json"
+      "exact_oracles": "negative-preparation/contract.json",
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "id": "3.2.19",
@@ -3178,14 +3294,16 @@
         "crates/clouddialect-contracts/fixtures/negative/pack-manifest/duplicate-capability-id/input.toml",
         "crates/clouddialect-contracts/fixtures/negative/pack-manifest/duplicate-capability-id/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
       "readiness": "negative-preparation/verification.json",
-      "exact_oracles": "negative-preparation/contract.json"
+      "exact_oracles": "negative-preparation/contract.json",
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "id": "3.2.20",
@@ -3196,14 +3314,16 @@
         "crates/clouddialect-contracts/fixtures/negative/pack-manifest/capability-unknown-field/input.toml",
         "crates/clouddialect-contracts/fixtures/negative/pack-manifest/capability-unknown-field/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
       "readiness": "negative-preparation/verification.json",
-      "exact_oracles": "negative-preparation/contract.json"
+      "exact_oracles": "negative-preparation/contract.json",
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "id": "3.2.21",
@@ -3217,14 +3337,16 @@
         "crates/clouddialect-contracts/fixtures/negative/version/unsupported-minor-newer/input.json",
         "crates/clouddialect-contracts/fixtures/negative/version/unsupported-minor-newer/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
       "readiness": "negative-preparation/verification.json",
-      "exact_oracles": "negative-preparation/contract.json"
+      "exact_oracles": "negative-preparation/contract.json",
+      "commit": "88e638a3da0665bd89b473221e5b4f47d366bff4",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "id": "3.2.22",
@@ -3498,14 +3620,16 @@
         "crates/clouddialect-contracts/fixtures/round-trip/extension-field-preservation/evidence-record/input.json",
         "crates/clouddialect-contracts/fixtures/round-trip/extension-field-preservation/evidence-record/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
       "readiness": "roundtrip-preparation/verification.json",
-      "exact_oracles": "roundtrip-preparation/contract.json"
+      "exact_oracles": "roundtrip-preparation/contract.json",
+      "commit": "6e918055f75bb9ccb5edd6456dbd5d48c10ade27",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "id": "3.2.37",
@@ -3516,14 +3640,16 @@
         "crates/clouddialect-contracts/fixtures/round-trip/extension-field-preservation/verification-result/input.json",
         "crates/clouddialect-contracts/fixtures/round-trip/extension-field-preservation/verification-result/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
       "readiness": "roundtrip-preparation/verification.json",
-      "exact_oracles": "roundtrip-preparation/contract.json"
+      "exact_oracles": "roundtrip-preparation/contract.json",
+      "commit": "6e918055f75bb9ccb5edd6456dbd5d48c10ade27",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "id": "3.2.38",
@@ -3534,14 +3660,16 @@
         "crates/clouddialect-contracts/fixtures/integration/blocking-gap/unknown-evidence-mandatory-obligation/input.json",
         "crates/clouddialect-contracts/fixtures/integration/blocking-gap/unknown-evidence-mandatory-obligation/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
       "readiness": "integration-preparation/verification.json",
-      "exact_oracles": "integration-preparation/contract.json"
+      "exact_oracles": "integration-preparation/contract.json",
+      "commit": "b0fdd1b978ecd8f64811c77e3c33549dff1b2b28",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "id": "3.2.39",
@@ -3552,14 +3680,16 @@
         "crates/clouddialect-contracts/fixtures/integration/semantic-resolution-failure/manifest-bad-contract-ref/input.toml",
         "crates/clouddialect-contracts/fixtures/integration/semantic-resolution-failure/manifest-bad-contract-ref/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
       "readiness": "integration-preparation/verification.json",
-      "exact_oracles": "integration-preparation/contract.json"
+      "exact_oracles": "integration-preparation/contract.json",
+      "commit": "b0fdd1b978ecd8f64811c77e3c33549dff1b2b28",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "id": "3.2.40",
@@ -3570,14 +3700,16 @@
         "crates/clouddialect-contracts/fixtures/integration/artifact-hash-mismatch/tampered-candidate/input.json",
         "crates/clouddialect-contracts/fixtures/integration/artifact-hash-mismatch/tampered-candidate/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
       "readiness": "integration-preparation/verification.json",
-      "exact_oracles": "integration-preparation/contract.json"
+      "exact_oracles": "integration-preparation/contract.json",
+      "commit": "b0fdd1b978ecd8f64811c77e3c33549dff1b2b28",
+      "delivery_report": "admission-2026-10-24/final-report.md"
     },
     {
       "id": "3.2.41",
@@ -3956,8 +4088,8 @@
     "Environment-immunity fixture requires explicit trusted setup representation.",
     "Forged/replayed/prohibited-action claims distinguish local declarations from actual Spec2 admission/authentication."
   ],
-  "delivered_case_count": 1,
-  "delivered_batch_count": 1,
-  "approval_ready_draft_cases": 41,
-  "approval_ready_draft_batches": 25
+  "delivered_case_count": 42,
+  "delivered_batch_count": 26,
+  "approval_ready_draft_cases": 0,
+  "approval_ready_draft_batches": 0
 }
