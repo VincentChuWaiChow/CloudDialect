@@ -39,5 +39,24 @@
     "coverage": "148JSONfields+40TOMLpaths+14APIrows,5gatesand8negativein-memorycontrolassertions",
     "log": "results/green.log",
     "test_consumer_note": "Mutationtargetsareexacttable-rows,notpossiblyearlierprose;validatorsnotweakened."
+  },
+  "review_repair_red": {
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--test",
+      "traceability"
+    ],
+    "exit": 101,
+    "compiled_executed": true,
+    "passed": 1,
+    "failed": 2,
+    "intended_failure": "Review47P2: sixteen missing explicitP0-A/P0-D mappings. ProjectionfieldsexpectedfromactualRustdeclarations;selected14-keyappendixnolongerdefinescompleteness.",
+    "log": "results/review-repair-red.log"
   }
 }

@@ -44,8 +44,10 @@ fn json_fields(node: &Value, base: &Value, path: &str, fields: &mut BTreeSet<Str
             json_fields(child, base, &child_path, fields);
         }
     }
-    if node["items"].is_object() {
-        json_fields(&node["items"], base, &format!("{path}[*]"), fields);
+    for keyword in ["items", "contains"] {
+        if node[keyword].is_object() {
+            json_fields(&node[keyword], base, &format!("{path}[*]"), fields);
+        }
     }
     if node["additionalProperties"].is_object() {
         json_fields(
@@ -113,6 +115,23 @@ fn manifest_fields(
     }
 }
 
+fn rust_structs(source: &str) -> BTreeMap<String, Vec<(String, String)>> {
+    let structs = Regex::new(r"(?s)pub struct (\w+)\s*\{(.*?)\n\}").unwrap();
+    let members = Regex::new(r"(?m)^\s*pub (\w+): (.+),$").unwrap();
+    structs
+        .captures_iter(source)
+        .map(|s| {
+            (
+                s[1].to_owned(),
+                members
+                    .captures_iter(&s[2])
+                    .map(|m| (m[1].to_owned(), m[2].to_owned()))
+                    .collect(),
+            )
+        })
+        .collect()
+}
+
 fn expected_fields() -> BTreeSet<(String, String)> {
     let mut expected = BTreeSet::new();
     for name in [
@@ -130,21 +149,7 @@ fn expected_fields() -> BTreeSet<(String, String)> {
         json_fields(&schema, &schema, "", &mut fields);
         expected.extend(fields.into_iter().map(|field| (name.to_owned(), field)));
     }
-    let source = include_str!("../src/manifest/types.rs");
-    let structs = Regex::new(r"(?s)pub struct (\w+)\s*\{(.*?)\n\}").unwrap();
-    let members = Regex::new(r"(?m)^\s*pub (\w+): (.+),$").unwrap();
-    let types = structs
-        .captures_iter(source)
-        .map(|s| {
-            (
-                s[1].to_owned(),
-                members
-                    .captures_iter(&s[2])
-                    .map(|m| (m[1].to_owned(), m[2].to_owned()))
-                    .collect(),
-            )
-        })
-        .collect();
+    let types = rust_structs(include_str!("../src/manifest/types.rs"));
     let mut fields = BTreeSet::new();
     manifest_fields("PackManifest", "", &types, &mut fields);
     expected.extend(
@@ -152,6 +157,14 @@ fn expected_fields() -> BTreeSet<(String, String)> {
             .into_iter()
             .map(|field| ("manifest".to_owned(), field)),
     );
+    let projections = rust_structs(include_str!("../src/documents/verification.rs"));
+    for name in ["BehavioralResult", "BlockingGap"] {
+        expected.extend(
+            projections[name]
+                .iter()
+                .map(|(field, _)| ("rust-api".to_owned(), format!("{name}.{field}"))),
+        );
+    }
     expected.extend(
         [
             "DocumentRef.id",
@@ -168,6 +181,14 @@ fn expected_fields() -> BTreeSet<(String, String)> {
             "check_evidence_completeness",
             "verify_artifact_hash",
             "CatalogSnapshot",
+            "CatalogSnapshot::embedded",
+            "CatalogSnapshot::from_parts",
+            "CatalogSnapshot::digest",
+            "CatalogSnapshot::schema_bytes",
+            "CatalogUrlLoader::new",
+            "CatalogUrlLoader::load",
+            "Validator::new",
+            "ManifestValidator::new",
         ]
         .map(|name| ("rust-api".to_owned(), name.to_owned())),
     );
@@ -198,10 +219,10 @@ fn valid_refs() -> BTreeSet<String> {
                 .map(|m| format!("Req {}", m.as_str()))
                 .unwrap_or_else(|| c[2].to_owned());
             valid.insert(prefix.clone());
-        } else if let Some(c) = item.captures(line) {
-            if !prefix.is_empty() {
-                valid.insert(format!("{prefix}.{}", &c[1]));
-            }
+        } else if let Some(c) = item.captures(line)
+            && !prefix.is_empty()
+        {
+            valid.insert(format!("{prefix}.{}", &c[1]));
         }
     }
     valid
@@ -225,11 +246,9 @@ fn check_fields(text: &str) -> Result<(), String> {
         }
     }
     if actual != expected {
-        return Err(format!(
-            "missing {:?}; orphan {:?}",
-            expected.difference(&actual),
-            actual.difference(&expected)
-        ));
+        let missing: Vec<_> = expected.difference(&actual).collect();
+        let orphan: Vec<_> = actual.difference(&expected).collect();
+        return Err(format!("missing {missing:?}; orphan {orphan:?}"));
     }
     for (schema, path, required) in [
         ("behavioral-contract", "id", "Req 2.1, Req 6.5"),
@@ -325,6 +344,7 @@ fn all_five_gates_match_canonical_requirements_and_declared_fields() {
 #[test]
 fn missing_duplicate_orphan_and_fabricated_traceability_is_rejected() {
     let fields = document("field-to-requirement");
+    check_fields(&fields).unwrap();
     let row = fields
         .lines()
         .find(|line| {
@@ -341,7 +361,18 @@ fn missing_duplicate_orphan_and_fabricated_traceability_is_rejected() {
         .is_err()
     );
     assert!(check_fields(&fields.replace(row, &row.replacen("Req 2.1", "Req 999.1", 1))).is_err());
+    for key in [
+        "BehavioralResult.test_results",
+        "CatalogSnapshot::from_parts",
+    ] {
+        let row = fields
+            .lines()
+            .find(|line| line.contains(&format!("| `{key}` |")))
+            .unwrap();
+        assert!(check_fields(&fields.replace(row, "")).is_err());
+    }
     let gates = document("gate-to-requirement");
+    check_gates(&gates).unwrap();
     let row = gates
         .lines()
         .find(|line| line.starts_with("| AC-05 |"))
