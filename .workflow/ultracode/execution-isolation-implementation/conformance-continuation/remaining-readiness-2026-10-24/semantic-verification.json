@@ -1,0 +1,112 @@
+{
+  "created_at": "2026-10-24T09:47:10.026716+00:00",
+  "checks": 13,
+  "matched": 13,
+  "results": [
+    {
+      "name": "five-semantic-drafts",
+      "exit_code": 0,
+      "expected_count": 5,
+      "expected_error_contains": null,
+      "matched": true,
+      "output": "PASS integration/verification-consistency/approval-result-id-mismatch\nPASS integration/verification-consistency/approval-result-version-mismatch\nPASS integration/verification-consistency/duplicate-test-ids\nPASS integration/verification-consistency/invalid-hash-length\nPASS integration/verification-consistency/unmapped-obligations\n5 conformance fixtures passed\n"
+    },
+    {
+      "name": "exact-prefix:integration/verification-consistency/duplicate-test-ids",
+      "exit_code": 0,
+      "expected_count": 1,
+      "expected_error_contains": null,
+      "matched": true,
+      "output": "PASS integration/verification-consistency/duplicate-test-ids\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "valid-baseline-rejects-fail-oracle:integration/verification-consistency/duplicate-test-ids",
+      "exit_code": 1,
+      "expected_count": null,
+      "expected_error_contains": "outcome: expected \"fail\", actual \"pass\"",
+      "matched": true,
+      "output": "/tmp/clouddialect-consistency-valid-control-scpylipp/integration/verification-consistency/duplicate-test-ids: fixture validator exit status: 1: /tmp/clouddialect-consistency-valid-control-scpylipp/integration/verification-consistency/duplicate-test-ids: outcome: expected \"fail\", actual \"pass\"\n\n"
+    },
+    {
+      "name": "exact-prefix:integration/verification-consistency/unmapped-obligations",
+      "exit_code": 0,
+      "expected_count": 1,
+      "expected_error_contains": null,
+      "matched": true,
+      "output": "PASS integration/verification-consistency/unmapped-obligations\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "valid-baseline-rejects-fail-oracle:integration/verification-consistency/unmapped-obligations",
+      "exit_code": 1,
+      "expected_count": null,
+      "expected_error_contains": "outcome: expected \"fail\", actual \"pass\"",
+      "matched": true,
+      "output": "/tmp/clouddialect-consistency-valid-control-9ko4zw9w/integration/verification-consistency/unmapped-obligations: fixture validator exit status: 1: /tmp/clouddialect-consistency-valid-control-9ko4zw9w/integration/verification-consistency/unmapped-obligations: outcome: expected \"fail\", actual \"pass\"\n\n"
+    },
+    {
+      "name": "exact-prefix:integration/verification-consistency/invalid-hash-length",
+      "exit_code": 0,
+      "expected_count": 1,
+      "expected_error_contains": null,
+      "matched": true,
+      "output": "PASS integration/verification-consistency/invalid-hash-length\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "valid-baseline-rejects-fail-oracle:integration/verification-consistency/invalid-hash-length",
+      "exit_code": 1,
+      "expected_count": null,
+      "expected_error_contains": "outcome: expected \"fail\", actual \"pass\"",
+      "matched": true,
+      "output": "/tmp/clouddialect-consistency-valid-control-d5vmgo1c/integration/verification-consistency/invalid-hash-length: fixture validator exit status: 1: /tmp/clouddialect-consistency-valid-control-d5vmgo1c/integration/verification-consistency/invalid-hash-length: outcome: expected \"fail\", actual \"pass\"\n\n"
+    },
+    {
+      "name": "exact-prefix:integration/verification-consistency/approval-result-id-mismatch",
+      "exit_code": 0,
+      "expected_count": 1,
+      "expected_error_contains": null,
+      "matched": true,
+      "output": "PASS integration/verification-consistency/approval-result-id-mismatch\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "valid-baseline-rejects-fail-oracle:integration/verification-consistency/approval-result-id-mismatch",
+      "exit_code": 1,
+      "expected_count": null,
+      "expected_error_contains": "outcome: expected \"fail\", actual \"pass\"",
+      "matched": true,
+      "output": "/tmp/clouddialect-consistency-valid-control-mi7sc47j/integration/verification-consistency/approval-result-id-mismatch: fixture validator exit status: 1: /tmp/clouddialect-consistency-valid-control-mi7sc47j/integration/verification-consistency/approval-result-id-mismatch: outcome: expected \"fail\", actual \"pass\"\n\n"
+    },
+    {
+      "name": "exact-prefix:integration/verification-consistency/approval-result-version-mismatch",
+      "exit_code": 0,
+      "expected_count": 1,
+      "expected_error_contains": null,
+      "matched": true,
+      "output": "PASS integration/verification-consistency/approval-result-version-mismatch\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "valid-baseline-rejects-fail-oracle:integration/verification-consistency/approval-result-version-mismatch",
+      "exit_code": 1,
+      "expected_count": null,
+      "expected_error_contains": "outcome: expected \"fail\", actual \"pass\"",
+      "matched": true,
+      "output": "/tmp/clouddialect-consistency-valid-control-_02leq93/integration/verification-consistency/approval-result-version-mismatch: fixture validator exit status: 1: /tmp/clouddialect-consistency-valid-control-_02leq93/integration/verification-consistency/approval-result-version-mismatch: outcome: expected \"fail\", actual \"pass\"\n\n"
+    },
+    {
+      "name": "wrong-semantic-category",
+      "exit_code": 1,
+      "expected_count": null,
+      "expected_error_contains": "errors: expected",
+      "matched": true,
+      "output": "/tmp/clouddialect-consistency-category-control-y1tbtmiy/integration/verification-consistency/duplicate-test-ids: fixture validator exit status: 1: /tmp/clouddialect-consistency-category-control-y1tbtmiy/integration/verification-consistency/duplicate-test-ids: errors: expected [Object {\"category\": String(\"structural\"), \"description_contains\": String(\"Test identity is duplicated in this verification result\"), \"field_path\": String(\"tests[1].test_id\")}], actual [Object {\"byte_offset\": Null, \"category\": String(\"semantic\"), \"description\": String(\"Test identity is duplicated in this verification result\"), \"document_id\": String(\"550e8400-e29b-41d4-a716-446655440020\"), \"field_path\": String(\"tests[1].test_id\"), \"format_version\": String(\"1.0.0\")}]\n\n"
+    },
+    {
+      "name": "temporary-composite47",
+      "exit_code": 0,
+      "expected_count": 47,
+      "expected_error_contains": null,
+      "matched": true,
+      "output": "PASS integration/artifact-hash-mismatch/tampered-candidate\nPASS integration/blocking-gap/unknown-evidence-mandatory-obligation\nPASS integration/semantic-resolution-failure/manifest-bad-contract-ref\nPASS integration/verification-consistency/approval-result-id-mismatch\nPASS integration/verification-consistency/approval-result-version-mismatch\nPASS integration/verification-consistency/duplicate-test-ids\nPASS integration/verification-consistency/invalid-hash-length\nPASS integration/verification-consistency/unmapped-obligations\nPASS negative/behavioral-contract/invalid-behavioral-fidelity\nPASS negative/behavioral-contract/missing-id\nPASS negative/behavioral-contract/obligation-no-evidence-no-assumption\nPASS negative/evidence-record/inferred-empty-reasoning-chain\nPASS negative/evidence-record/missing-classification\nPASS negative/evidence-record/unknown-empty-assumptions\nPASS negative/pack-manifest/capability-unknown-field\nPASS negative/pack-manifest/duplicate-capability-id\nPASS negative/pack-manifest/inline-contract-body\nPASS negative/pack-manifest/invalid-behavioral-fidelity\nPASS negative/pack-manifest/missing-capabilities\nPASS negative/pack-manifest/missing-toolchain-for-full-operation\nPASS negative/pack-manifest/unknown-capability-version\nPASS negative/verification-result/acceptance-missing-approver\nPASS negative/verification-result/empty-tests-array\nPASS negative/verification-result/missing-binding\nPASS negative/verification-result/missing-configuration\nPASS negative/verification-result/missing-test-obligation\nPASS negative/verification-result/nonpass-string-failure-description\nPASS negative/verification-result/nonpass-without-failure-description\nPASS negative/verification-result/unknown-hash-algorithm\nPASS negative/version/unsupported-major\nPASS negative/version/unsupported-minor-newer\nPASS positive/behavioral-contract/minimal-valid\nPASS positive/behavioral-contract/with-behavioral-notes\nPASS positive/behavioral-contract/with-extension-field\nPASS positive/behavioral-contract/with-known-behavior\nPASS positive/behavioral-contract/with-unresolved-assumption-on-dependency\nPASS positive/evidence-record/inferred\nPASS positive/evidence-record/observed\nPASS positive/evidence-record/unknown\nPASS positive/pack-manifest/full-coverage\nPASS positive/pack-manifest/with-extension-section\nPASS positive/pack-manifest/with-unsupported-operation\nPASS positive/verification-result/minimal\nPASS positive/verification-result/with-acceptance\nPASS round-trip/extension-field-preservation/behavioral-contract\nPASS round-trip/extension-field-preservation/evidence-record\nPASS round-trip/extension-field-preservation/verification-result\n47 conformance fixtures passed\n"
+    }
+  ],
+  "canonical_actual_count": 42
+}

@@ -2,7 +2,7 @@
   "title": "Execution-isolation implementation",
   "slug": "execution-isolation-implementation",
   "created_at": "2026-10-22T07:25:44.090021+00:00",
-  "updated_at": "2026-10-24T09:39:15.594027+00:00",
+  "updated_at": "2026-10-24T09:52:45.254666+00:00",
   "status": "waiting_for_approval",
   "mode": "delegated",
   "baseline_ref": "3b9cb6bd0ee82dbef3b731a35ce68fc778c4906a",
@@ -21,10 +21,10 @@
     "native_agent_available": true,
     "native_agent_planned": true,
     "native_agent_used": true,
-    "agent_count": 33,
+    "agent_count": 34,
     "wave_count": 12,
     "no_delegation_reason": "",
-    "notes": "Admission31/32content and33integrated review complete; user allows as-needed agents. Three chosen, no recursion/follow-ups/repairs. No source/native/external approval inferred.",
+    "notes": "As-needed approval: admission31\u201333complete; additional read-only readiness34complete, no recursion/follow-ups. No new source/native authorization inferred.",
     "additional_dispatch_limit": 2,
     "additional_dispatches_used": 2,
     "consolidated_repairs_used_current_tranche": 1
@@ -1524,7 +1524,7 @@
     "snapshot_digest_resolver_authentication": "not implemented"
   },
   "current_limits": {
-    "cumulative_dispatches_used": 33,
+    "cumulative_dispatches_used": 34,
     "chosen_additional_dispatch_limit": 3,
     "max_concurrent_including_parent": 4,
     "recursion": 0,
@@ -1533,7 +1533,8 @@
     "repairs_consumed": 0,
     "started_at": "2026-10-24T09:08:34Z",
     "deadline": "2026-10-24T09:53:34Z",
-    "approval": "user approving all plus as-needed agents; three chosen for this slice, not a new universal cap"
+    "approval": "user approving all plus as-needed agents; three chosen for this slice, not a new universal cap",
+    "current_readonly_readiness_additional_limit": 1
   },
   "ai_rule_location_correction": {
     "requested_by": "Explicit user: AI agent rules should be in .agents/rules",
@@ -1806,7 +1807,7 @@
     "current_full_tree_green": true,
     "completeness_implemented": true
   },
-  "current_tranche": "conformance-continuation/admission-2026-10-24",
+  "current_tranche": "conformance-continuation/remaining-readiness-2026-10-24",
   "conformance_continuation": {
     "status": "42canonical fixtures verified; tasks18/19delivered, whole goal incomplete",
     "report": "conformance-continuation/admission-2026-10-24/final-report.md",
@@ -1848,5 +1849,11 @@
     "report": "conformance-continuation/admission-2026-10-24/final-report.md",
     "new_canonical_files": 82,
     "repairs": 0
+  },
+  "remaining_readiness": {
+    "status": "five P0drafts verified; two genuine owner contracts unresolved",
+    "proposal": "conformance-continuation/remaining-readiness-2026-10-24/next-proposal.md",
+    "canonical": 42,
+    "source_changes": 0
   }
 }

@@ -2628,15 +2628,31 @@
       "phase": "semantic",
       "outcome": "fail",
       "oracle": {
-        "exact_multiset": "freeze named semantic paths/descriptions"
+        "phase": "semantic",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "semantic",
+            "field_path": "tests[1].test_id",
+            "description_contains": "Test identity is duplicated in this verification result"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
       },
       "notes": "No fabricated expected observer/authentication context.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "remaining-readiness-2026-10-24/semantic-contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "41ff5bd79569a594a6001d09f37113f4ca6e18902e31753e80aaed302b15ab79",
+        "expected.json": "f9e13cc21e62be450415629e332901dcfd7c640e604a75993694baf1b36d0814"
+      }
     },
     {
       "path": "integration/verification-consistency/unmapped-obligations",
@@ -2644,15 +2660,31 @@
       "phase": "semantic",
       "outcome": "fail",
       "oracle": {
-        "exact_multiset": "freeze named semantic paths/descriptions"
+        "phase": "semantic",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "semantic",
+            "field_path": "tests[0].obligation_ids[0]",
+            "description_contains": "Test obligation is absent from the declared binding"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
       },
       "notes": "No fabricated expected observer/authentication context.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "remaining-readiness-2026-10-24/semantic-contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "504becc049fdcb1b957d20967d505e9af7bc4275bc85b4fa1398ee5639a0b7f2",
+        "expected.json": "a19df99b809c3d49844d9718f1dd7856d67f03c5fea9b08741c86b0f8abcb71b"
+      }
     },
     {
       "path": "integration/verification-consistency/invalid-calendar-utc",
@@ -2692,15 +2724,31 @@
       "phase": "semantic",
       "outcome": "fail",
       "oracle": {
-        "exact_multiset": "freeze named semantic paths/descriptions"
+        "phase": "semantic",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "semantic",
+            "field_path": "candidate.content_hash.value",
+            "description_contains": "Content hash must be lowercase hexadecimal of the algorithm's exact length"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
       },
       "notes": "No fabricated expected observer/authentication context.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "remaining-readiness-2026-10-24/semantic-contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "6e568830ca8f90f37b5e7ffb89aad7b09f624ada761187cc613fea80c96481d3",
+        "expected.json": "c4f3cf0edeff8de0a992f3acb852be11a31c1f7047c1241bb6293ce64ab5f621"
+      }
     },
     {
       "path": "integration/verification-consistency/approval-result-id-mismatch",
@@ -2708,15 +2756,31 @@
       "phase": "semantic",
       "outcome": "fail",
       "oracle": {
-        "exact_multiset": "freeze named semantic paths/descriptions"
+        "phase": "semantic",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "semantic",
+            "field_path": "acceptance.verification_result.id",
+            "description_contains": "Approval reference must identify this exact verification document"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
       },
       "notes": "No fabricated expected observer/authentication context.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "remaining-readiness-2026-10-24/semantic-contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "158a38687269d7e214207abc2ddd2172126607284a25a8619b61a51d473dc793",
+        "expected.json": "5072bb30800a72e542b2f3bc567f15d02ca4cee2e0b8f0ec66dc9c309d9afd15"
+      }
     },
     {
       "path": "integration/verification-consistency/approval-result-version-mismatch",
@@ -2724,15 +2788,31 @@
       "phase": "semantic",
       "outcome": "fail",
       "oracle": {
-        "exact_multiset": "freeze named semantic paths/descriptions"
+        "phase": "semantic",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "semantic",
+            "field_path": "acceptance.verification_result.format_version",
+            "description_contains": "Approval reference must match this exact document-format version"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
       },
       "notes": "No fabricated expected observer/authentication context.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "remaining-readiness-2026-10-24/semantic-contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "9c88f26eb8df9a5ed9278469fc92e3ac5a465577241020951d58db2f4c1e6e54",
+        "expected.json": "3cf87cac5944074b4f60d030c8fc6118101ebe4063f40d6a4ada797806e2e77b"
+      }
     },
     {
       "path": "integration/version-profile/build-metadata",
@@ -3945,12 +4025,13 @@
         "crates/clouddialect-contracts/fixtures/integration/verification-consistency/unmapped-obligations/input.json",
         "crates/clouddialect-contracts/fixtures/integration/verification-consistency/unmapped-obligations/expected.json"
       ],
-      "status": "draft-not-approved",
+      "status": "draft-verified-awaiting-admission-approval",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
-      ]
+      ],
+      "readiness": "remaining-readiness-2026-10-24/semantic-verification.json"
     },
     {
       "id": "3.2.54",
@@ -3983,12 +4064,13 @@
         "crates/clouddialect-contracts/fixtures/integration/verification-consistency/approval-result-id-mismatch/input.json",
         "crates/clouddialect-contracts/fixtures/integration/verification-consistency/approval-result-id-mismatch/expected.json"
       ],
-      "status": "draft-not-approved",
+      "status": "draft-verified-awaiting-admission-approval",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
-      ]
+      ],
+      "readiness": "remaining-readiness-2026-10-24/semantic-verification.json"
     },
     {
       "id": "3.2.56",
@@ -3999,12 +4081,13 @@
         "crates/clouddialect-contracts/fixtures/integration/verification-consistency/approval-result-version-mismatch/input.json",
         "crates/clouddialect-contracts/fixtures/integration/verification-consistency/approval-result-version-mismatch/expected.json"
       ],
-      "status": "draft-not-approved",
+      "status": "draft-verified-awaiting-admission-approval",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
-      ]
+      ],
+      "readiness": "remaining-readiness-2026-10-24/semantic-verification.json"
     },
     {
       "id": "3.2.57",
@@ -4090,6 +4173,6 @@
   ],
   "delivered_case_count": 42,
   "delivered_batch_count": 26,
-  "approval_ready_draft_cases": 0,
-  "approval_ready_draft_batches": 0
+  "approval_ready_draft_cases": 5,
+  "approval_ready_draft_batches": 3
 }

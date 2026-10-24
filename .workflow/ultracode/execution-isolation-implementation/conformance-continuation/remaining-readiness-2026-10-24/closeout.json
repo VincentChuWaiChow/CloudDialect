@@ -1,0 +1,17 @@
+{
+  "captured_at": "2026-10-24T09:52:45.254666+00:00",
+  "independent_readonly_agent": 34,
+  "new_agents_this_pass": 1,
+  "source_data_spec_freeze180_preserved": true,
+  "canonical42_unchanged": true,
+  "new_semantic_drafts": 5,
+  "matched_controls": 13,
+  "full_ready_batches": [
+    "3.2.53",
+    "3.2.55",
+    "3.2.56"
+  ],
+  "partial_batches": [],
+  "native_probes_source_changes": false,
+  "current_deadline_retained": "2026-10-24T09:53:34Z"
+}
