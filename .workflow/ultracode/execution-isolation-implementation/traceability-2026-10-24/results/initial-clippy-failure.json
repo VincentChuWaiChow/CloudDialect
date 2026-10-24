@@ -2,5 +2,5 @@
   "commit": "67d0e6d9c827a27ba55e0654572b680b50120bc2",
   "exit": 101,
   "finding": "Newtest-onlycollapsible_ifatvalid_refs;consolidatedlintfixwithreview47P2,not suppressed",
-  "log": "results/clippy.log"
+  "log": "results/clippy-initial.log"
 }

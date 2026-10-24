@@ -1,3 +1,14 @@
+# Current traceability/checklist delivery —2026-10-24
+
+[Current report](traceability-2026-10-24/final-report.md): **Task25/unit3.5[x]**:
+218field/APIrowsand5canonicalgates,source-derivedtestsandnegativecontrols.
+ActualRED/GREENretained;47reviewP2missing16P0mappingswasreproducedandparent-
+repairedwithanotherRED/GREEN;no independentpostrepairsignoff. Final291Rust+
+101fixtures/check/Clippy/fmt/15Pythonpass. 355protectedhashesmatch;no production/
+harness/schema/dependency/corpuschange. Task20already[x],Task24already[x].
+Threequalification/setupcases,all21Spec2runtime/UD/BGandrealconsumer/release
+workremainopen. Legacychecker8pass/1pre-existingerror;nonewpush.
+
 # Current adversarial admission/checklist delivery —2026-10-24
 
 [Current report](conformance-continuation/adversarial-admission-2026-10-24/final-report.md):

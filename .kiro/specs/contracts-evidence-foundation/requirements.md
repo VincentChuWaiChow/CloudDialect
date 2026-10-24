@@ -523,11 +523,11 @@ The labels below retain the original full-conformance baseline, not a claim that
 
 1. THE Framework_Core SHALL maintain a traceability table mapping each published schema field to the requirement in this document that introduced it.
    - Verification method: Review of traceability table for completeness at each schema release.
-   - Evidence status: `MISSING`
+   - Evidence status: `VERIFIED WITHIN A DECLARED SCOPE` — currentlocal148JSON/40TOMLdeclaredfieldsand30P0API/fieldmappings;source-derivedregressiontestsandparent-verifiedreview47repairpass. Future release-review, realconsumer/owneracceptance andBG-01remainopen.
 
 2. THE Framework_Core SHALL maintain a requirements traceability matrix linking each acceptance gate (AC-01, AC-02, AC-07, AC-09) to the requirements and schema fields that satisfy it.
    - Verification method: Review of traceability matrix for completeness.
-   - Evidence status: `MISSING`
+   - Evidence status: `VERIFIED WITHIN A DECLARED SCOPE` — all5canonicalgates(includingAC-05pertheauthoritativetable/Task25),exactrequirementsetsanddeclaredfieldreferencesverifiedlocally. Thisdoesnotassertthatanyacceptancegatehaspassed.
 
 ### NFR-3: Schema Stability
 

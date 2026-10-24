@@ -2,7 +2,7 @@
   "title": "Execution-isolation implementation",
   "slug": "execution-isolation-implementation",
   "created_at": "2026-10-22T07:25:44.090021+00:00",
-  "updated_at": "2026-10-24T17:28:20.941589+00:00",
+  "updated_at": "2026-10-24T18:03:03.226000+00:00",
   "status": "executing",
   "mode": "delegated",
   "baseline_ref": "3b9cb6bd0ee82dbef3b731a35ce68fc778c4906a",
@@ -21,10 +21,10 @@
     "native_agent_available": true,
     "native_agent_planned": true,
     "native_agent_used": true,
-    "agent_count": 44,
+    "agent_count": 47,
     "wave_count": 12,
     "no_delegation_reason": "",
-    "notes": "43readonlychecklistauditand44independent82actualcommandscomplete. Parentonlywrites/Git;no recursion/followupdispatches.",
+    "notes": "45/46disjointdocworkerscomplete;47readonlyreviewoneP2,source-backedparentrepairverifiedwithrealRED/GREEN. No recursive/followupdispatches or independentpostrepairclaim.",
     "additional_dispatch_limit": 2,
     "additional_dispatches_used": 2,
     "consolidated_repairs_used_current_tranche": 1
@@ -1808,13 +1808,13 @@
     "completeness_implemented": true
   },
   "current_tranche": {
-    "path": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-admission-2026-10-24",
-    "deadline": "2026-10-24T17:58:29Z",
-    "scope": "approved26pairsandproof-backedcheckmarks;no push/source/nativechanges",
+    "path": ".workflow/ultracode/execution-isolation-implementation/traceability-2026-10-24",
     "status": "complete",
-    "canonical": 101,
-    "report": "conformance-continuation/adversarial-admission-2026-10-24/final-report.md",
-    "next_eligible": "Task25/unit3.5traceabilityunderusercontinuationrequest"
+    "deadline": "2026-10-24T18:15:58Z",
+    "scope": "Task25two newdocs+onenewtraceabilitytest,relatedstatus/localcheckpoints;no production/canonical/probe/pushchanges",
+    "report": "traceability-2026-10-24/final-report.md",
+    "Task25checked": true,
+    "unit3_5checked": true
   },
   "conformance_continuation": {
     "status": "42canonical fixtures verified; tasks18/19delivered, whole goal incomplete",
@@ -1925,6 +1925,17 @@
     "gated_cases": 3,
     "report": "conformance-continuation/adversarial-admission-2026-10-24/final-report.md",
     "source_or_harness_changes": false,
+    "new_push": false
+  },
+  "traceability_delivery": {
+    "status": "Task25/3.5localcomplete",
+    "report": "traceability-2026-10-24/final-report.md",
+    "rows": 218,
+    "gates": 5,
+    "rust_tests": 291,
+    "canonical": 101,
+    "reviewP2": "reproduced/repaired,parentverifiedonly",
+    "native_or_BGclosure": false,
     "new_push": false
   }
 }

@@ -1,0 +1,8 @@
+{
+  "coverage": "Freshline/functioncoverageNOTRUN:matchingLLVMtoolsabsent;no percentageclaim. Exhaustive218fieldrowsisnotlinecoverage. No toolinstallauthorized.",
+  "MSRV": "Rust1.88notrun;currentstable1.99.1only",
+  "legacy_checker": "Actualfinal8pass/1pre-existingerror;blanketno-checkmarkrulecannotdistinguishcompletedpreparationfromruntime;notwaivedorfixedbyTask25",
+  "native_backend_provider_authentication_acceptance_consumer_release": "NOTRUN;3qualification/setupcasesandactualowner/consumer/nativeevidencemissing",
+  "publication": "No newpush/merge/release/deploymentauthorizedorperformed",
+  "review": "Initial47reviewfoundP2;postrepairfullchecksareparent-verified,notindependentlyre-reviewed"
+}

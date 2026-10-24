@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "baseline_paths": 352,
+  "unchanged_baseline": 348,
+  "approved_status_changes": [
+    ".kiro/specs/contracts-evidence-foundation/implementation-plan.md",
+    ".kiro/specs/contracts-evidence-foundation/requirements.md",
+    ".kiro/specs/contracts-evidence-foundation/tasks.md",
+    ".kiro/specs/execution-isolation/tasks.md"
+  ],
+  "new_files": [
+    "docs/traceability/field-to-requirement.md",
+    "docs/traceability/gate-to-requirement.md",
+    "crates/clouddialect-contracts/tests/traceability.rs"
+  ],
+  "field_rows": 218,
+  "json_fields": 148,
+  "manifest_fields": 40,
+  "api_fields_ports": 30,
+  "gates": 5,
+  "Spec1Task25checked": true,
+  "unit3_5checked": true,
+  "all21Spec2numbered_tasks_unchecked": true,
+  "3qualificationcases_absent": true,
+  "canonical": 101,
+  "research_preserved": true,
+  "review_repair_parent_verified_only": true,
+  "audit_correction": "Task-IDmentionsinsidecheckednon-numberedsupportingdeliverablesarenotnumberedTaskcompletion. AuditnowanchorsnumberedTASKlines,21allunchecked. No actualruntimecheckboxchanged.",
+  "checked_at": "2026-10-24T18:00:08.354012+00:00",
+  "production_schema_manifest_existing_conformance_harness_dependency_canonical_changes": false
+}

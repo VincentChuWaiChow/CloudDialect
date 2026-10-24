@@ -613,7 +613,8 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - Case-insensitivity of reserved-prefix matching is stated explicitly.
   - The document links to `catalog/extension-registry.json`.
 
-- [ ] 25. Write traceability tables
+- [x] 25. Write traceability tables
+  - Delivered locally2026-10-24: both source-bound tables cover148JSONinstance paths,40nestedmanifest paths and30P0RustAPI/fieldkeys,plusall5canonicalgates. Three regressiontests and negativecontrols pass; review47P2missingP0mappingswere reproduced in138e88fandrepaired/GREENin8fa1886. Full291Rust+101fixture/check/lint/15Pythonchecks pass; no independentpost-repairsignoff or freshcoverage/MSRVclaim. This closes the local traceability artifacts, not the conditional BG-01owner/realconsumer/release obligations below. [Evidence](../../../.workflow/ultracode/execution-isolation-implementation/traceability-2026-10-24/final-report.md).
   - Include P0-A–F fields/APIs and new Req 4.8/5.8/8.6/8.7/9.5; attach owner approval and real consumer/conformance report at the delivered immutable revision before claiming BG-01 compatibility.
   - Create `docs/traceability/field-to-requirement.md` (NFR-2.1):
     - A Markdown table with columns: `Schema`, `Field path`, `Requirement`, `Notes`.

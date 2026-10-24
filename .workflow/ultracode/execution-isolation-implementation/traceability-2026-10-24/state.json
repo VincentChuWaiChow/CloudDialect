@@ -2,16 +2,16 @@
   "title": "Task25traceability",
   "slug": "traceability-2026-10-24",
   "created_at": "2026-10-24T17:30:58Z",
-  "updated_at": "2026-10-24T17:30:58Z",
+  "updated_at": "2026-10-24T18:03:03.226000+00:00",
   "deadline": "2026-10-24T18:15:58Z",
-  "status": "verifying",
+  "status": "complete",
   "mode": "delegated",
   "baseline_ref": "f526e677668eee9abeb5bdd937119b4b87ee3688",
   "risk_level": "medium",
   "eval_contract": {
     "level": "full",
     "path": "eval-contract.md",
-    "status": "ready"
+    "status": "checked"
   },
   "approval": {
     "required": false,
@@ -56,11 +56,40 @@
     }
   ],
   "verification": {
-    "status": "pending",
-    "checks": []
+    "status": "localTask25criteria-pass;fullgoal-incomplete",
+    "checks": [
+      {
+        "name": "initialRED/GREEN",
+        "status": "pass",
+        "evidence": "results/tdd-stages.json"
+      },
+      {
+        "name": "47P2reproducer/repairRED/GREEN",
+        "status": "pass",
+        "evidence": "results/tdd-stages.json;results/47-final-review.md"
+      },
+      {
+        "name": "final291Rust101fixtures/lint/Python",
+        "status": "pass",
+        "evidence": "results/integrated-checks-final.json"
+      },
+      {
+        "name": "legacychecker",
+        "status": "known-preexisting-error",
+        "evidence": "results/integrated-checks-final.json"
+      },
+      {
+        "name": "scope/links/355hashes",
+        "status": "pass",
+        "evidence": "results/final-scope.json;results/final-protected-hashes.json"
+      }
+    ]
   },
   "consolidated_repairs_used": 1,
   "test_consumer_notes": "AfterREDcheckpoint,mutationcontrols tightenedtochangeexactmappedrowsratherthanpossiblyearlierprose; validatorsnotweakened.",
   "review_outcome": "47oneP2:missing16explicitP0-A/P0-Drows. Reproduced138e88f(twoexecutedfailures),16rowsadded,same-target3GREENpluslintfix. Parentverifiedrepair;no independentpostrepairsignoff.",
-  "corrected_field_rows": 218
+  "corrected_field_rows": 218,
+  "new_push": false,
+  "production_or_public_api_changes": false,
+  "new_test_source": "crates/clouddialect-contracts/tests/traceability.rs"
 }
