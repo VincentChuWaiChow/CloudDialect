@@ -1515,17 +1515,26 @@
       "phase": "structural",
       "outcome": "pass",
       "oracle": {
-        "round_trip": true,
+        "phase": "structural",
+        "document_kind": "behavioral-contract",
+        "outcome": "pass",
         "errors": [],
-        "warnings": []
+        "warnings": [],
+        "blockers": [],
+        "round_trip": true
       },
       "notes": "Exact encoded qualified extension values, not decoded Value equality.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "roundtrip-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "5928b42b9494e41a8a2cba7b9e79706181998eeefa57a02ceeceda5940d2edd5",
+        "expected.json": "45e725ee95012454db30cfea2b2062612d35f1c7a03a24dc9f080c0d4231eb73"
+      }
     },
     {
       "path": "round-trip/extension-field-preservation/evidence-record",
@@ -1533,17 +1542,26 @@
       "phase": "structural",
       "outcome": "pass",
       "oracle": {
-        "round_trip": true,
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
         "errors": [],
-        "warnings": []
+        "warnings": [],
+        "blockers": [],
+        "round_trip": true
       },
       "notes": "Exact encoded qualified extension values, not decoded Value equality.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "roundtrip-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "4f36ffb3b9caf3cb3c0544f9839357daeaead3af6dbb2439d030c6a94e58bb85",
+        "expected.json": "b13ff786fccf1cd540f53ae532bacf3b66a1fe3cfadf2ecc03e1673692e28f51"
+      }
     },
     {
       "path": "round-trip/extension-field-preservation/verification-result",
@@ -1551,17 +1569,26 @@
       "phase": "structural",
       "outcome": "pass",
       "oracle": {
-        "round_trip": true,
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "pass",
         "errors": [],
-        "warnings": []
+        "warnings": [],
+        "blockers": [],
+        "round_trip": true
       },
       "notes": "Exact encoded qualified extension values, not decoded Value equality.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "roundtrip-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "3a9214e5cc88ba2a62e1dcf21c25fa5fc63d356c1e8915039b74f643c983d428",
+        "expected.json": "58cd4b96216f9f037235211706a7b8cebcf27235c61ac9b89bfc85e8d88c0fb7"
+      }
     },
     {
       "path": "integration/blocking-gap/unknown-evidence-mandatory-obligation",
@@ -2976,12 +3003,14 @@
         "crates/clouddialect-contracts/fixtures/round-trip/extension-field-preservation/evidence-record/input.json",
         "crates/clouddialect-contracts/fixtures/round-trip/extension-field-preservation/evidence-record/expected.json"
       ],
-      "status": "draft-not-approved",
+      "status": "draft-verified-awaiting-admission-approval",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
-      ]
+      ],
+      "readiness": "roundtrip-preparation/verification.json",
+      "exact_oracles": "roundtrip-preparation/contract.json"
     },
     {
       "id": "3.2.37",
@@ -2992,12 +3021,14 @@
         "crates/clouddialect-contracts/fixtures/round-trip/extension-field-preservation/verification-result/input.json",
         "crates/clouddialect-contracts/fixtures/round-trip/extension-field-preservation/verification-result/expected.json"
       ],
-      "status": "draft-not-approved",
+      "status": "draft-verified-awaiting-admission-approval",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
-      ]
+      ],
+      "readiness": "roundtrip-preparation/verification.json",
+      "exact_oracles": "roundtrip-preparation/contract.json"
     },
     {
       "id": "3.2.38",
@@ -3426,6 +3457,6 @@
   ],
   "delivered_case_count": 1,
   "delivered_batch_count": 1,
-  "approval_ready_draft_cases": 35,
-  "approval_ready_draft_batches": 20
+  "approval_ready_draft_cases": 38,
+  "approval_ready_draft_batches": 22
 }

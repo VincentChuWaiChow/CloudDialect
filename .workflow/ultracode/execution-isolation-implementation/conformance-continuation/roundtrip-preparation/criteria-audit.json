@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-10-24T03:24:19.123711+00:00",
+  "checks": {
+    "all_three_required_document_families": true,
+    "two_bounded_batches_max_four_files": true,
+    "raw_numeric_unicode_whitespace_order_nesting_negativezero": true,
+    "roundtrip_flag_true_exact_structural_kind": true,
+    "frozen_exact_draft_file_hashes": true,
+    "missing_extension_and_plain_baseline_controls": true,
+    "composite39_verified_not_admitted": true,
+    "canonical_still_one_seed": true,
+    "no_crate_catalog_changes_since_repaired_tree": true
+  },
+  "scope": "Exact encoded extension value byte preservation only, not whole-document bytes or acceptance/authentication/native qualification"
+}

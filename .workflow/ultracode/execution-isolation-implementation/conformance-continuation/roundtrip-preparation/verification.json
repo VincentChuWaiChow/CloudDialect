@@ -1,0 +1,89 @@
+{
+  "created_at": "2026-10-24T03:22:14.683006+00:00",
+  "status": "Draft-only actual typed round-trip evidence; no canonical admission",
+  "checks": 10,
+  "matched": 10,
+  "results": [
+    {
+      "name": "all-three-raw-value-roundtrips",
+      "exit_code": 0,
+      "expected_count": 3,
+      "expected_rejection": false,
+      "matched": true,
+      "output": "PASS round-trip/extension-field-preservation/behavioral-contract\nPASS round-trip/extension-field-preservation/evidence-record\nPASS round-trip/extension-field-preservation/verification-result\n3 conformance fixtures passed\n"
+    },
+    {
+      "name": "bounded-batch-3.2.36",
+      "exit_code": 0,
+      "expected_count": 2,
+      "expected_rejection": false,
+      "matched": true,
+      "output": "PASS round-trip/extension-field-preservation/behavioral-contract\nPASS round-trip/extension-field-preservation/evidence-record\n2 conformance fixtures passed\n"
+    },
+    {
+      "name": "bounded-batch-3.2.37",
+      "exit_code": 0,
+      "expected_count": 1,
+      "expected_rejection": false,
+      "matched": true,
+      "output": "PASS round-trip/extension-field-preservation/verification-result\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "missing-extension-rejected-behavioral-contract",
+      "exit_code": 1,
+      "expected_count": null,
+      "expected_rejection": true,
+      "matched": true,
+      "output": "/tmp/clouddialect-roundtrip-control-ehmnyp8s/round-trip/extension-field-preservation/behavioral-contract: fixture validator exit status: 1: /tmp/clouddialect-roundtrip-control-ehmnyp8s/round-trip/extension-field-preservation/behavioral-contract: round-trip extension value bytes missing or changed\n\n"
+    },
+    {
+      "name": "ordinary-valid-baseline-behavioral-contract",
+      "exit_code": 0,
+      "expected_count": 1,
+      "expected_rejection": false,
+      "matched": true,
+      "output": "PASS round-trip/extension-field-preservation/behavioral-contract\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "missing-extension-rejected-evidence-record",
+      "exit_code": 1,
+      "expected_count": null,
+      "expected_rejection": true,
+      "matched": true,
+      "output": "/tmp/clouddialect-roundtrip-control-769wxmj7/round-trip/extension-field-preservation/evidence-record: fixture validator exit status: 1: /tmp/clouddialect-roundtrip-control-769wxmj7/round-trip/extension-field-preservation/evidence-record: round-trip extension value bytes missing or changed\n\n"
+    },
+    {
+      "name": "ordinary-valid-baseline-evidence-record",
+      "exit_code": 0,
+      "expected_count": 1,
+      "expected_rejection": false,
+      "matched": true,
+      "output": "PASS round-trip/extension-field-preservation/evidence-record\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "missing-extension-rejected-verification-result",
+      "exit_code": 1,
+      "expected_count": null,
+      "expected_rejection": true,
+      "matched": true,
+      "output": "/tmp/clouddialect-roundtrip-control-t4zte1h9/round-trip/extension-field-preservation/verification-result: fixture validator exit status: 1: /tmp/clouddialect-roundtrip-control-t4zte1h9/round-trip/extension-field-preservation/verification-result: round-trip extension value bytes missing or changed\n\n"
+    },
+    {
+      "name": "ordinary-valid-baseline-verification-result",
+      "exit_code": 0,
+      "expected_count": 1,
+      "expected_rejection": false,
+      "matched": true,
+      "output": "PASS round-trip/extension-field-preservation/verification-result\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "composite-39-all-prepared-and-seed",
+      "exit_code": 0,
+      "expected_count": 39,
+      "expected_rejection": false,
+      "matched": true,
+      "output": "PASS negative/behavioral-contract/invalid-behavioral-fidelity\nPASS negative/behavioral-contract/missing-id\nPASS negative/behavioral-contract/obligation-no-evidence-no-assumption\nPASS negative/evidence-record/inferred-empty-reasoning-chain\nPASS negative/evidence-record/missing-classification\nPASS negative/evidence-record/unknown-empty-assumptions\nPASS negative/pack-manifest/capability-unknown-field\nPASS negative/pack-manifest/duplicate-capability-id\nPASS negative/pack-manifest/inline-contract-body\nPASS negative/pack-manifest/invalid-behavioral-fidelity\nPASS negative/pack-manifest/missing-capabilities\nPASS negative/pack-manifest/missing-toolchain-for-full-operation\nPASS negative/pack-manifest/unknown-capability-version\nPASS negative/verification-result/acceptance-missing-approver\nPASS negative/verification-result/empty-tests-array\nPASS negative/verification-result/missing-binding\nPASS negative/verification-result/missing-configuration\nPASS negative/verification-result/missing-test-obligation\nPASS negative/verification-result/nonpass-string-failure-description\nPASS negative/verification-result/nonpass-without-failure-description\nPASS negative/verification-result/unknown-hash-algorithm\nPASS negative/version/unsupported-major\nPASS negative/version/unsupported-minor-newer\nPASS positive/behavioral-contract/minimal-valid\nPASS positive/behavioral-contract/with-behavioral-notes\nPASS positive/behavioral-contract/with-extension-field\nPASS positive/behavioral-contract/with-known-behavior\nPASS positive/behavioral-contract/with-unresolved-assumption-on-dependency\nPASS positive/evidence-record/inferred\nPASS positive/evidence-record/observed\nPASS positive/evidence-record/unknown\nPASS positive/pack-manifest/full-coverage\nPASS positive/pack-manifest/with-extension-section\nPASS positive/pack-manifest/with-unsupported-operation\nPASS positive/verification-result/minimal\nPASS positive/verification-result/with-acceptance\nPASS round-trip/extension-field-preservation/behavioral-contract\nPASS round-trip/extension-field-preservation/evidence-record\nPASS round-trip/extension-field-preservation/verification-result\n39 conformance fixtures passed\n"
+    }
+  ],
+  "canonical_fixture_count": 1
+}
