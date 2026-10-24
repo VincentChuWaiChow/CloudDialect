@@ -1,0 +1,39 @@
+{
+  "batch": "3.2.60",
+  "status": "pass",
+  "case_paths": [
+    "integration/version-profile/closed-nested-newer-minor"
+  ],
+  "exact_files": [
+    {
+      "path": "crates/clouddialect-contracts/fixtures/integration/version-profile/closed-nested-newer-minor/input.json",
+      "sha256": "d36bb557492b827d5a7e79cc4e79a5179903015cf6926bcad8c1635f797d203d"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/integration/version-profile/closed-nested-newer-minor/expected.json",
+      "sha256": "19c8d7c0467793cdd85010dd4e255bfda4b098a3af6eb2c4d623e403d977ee03"
+    }
+  ],
+  "frozen_source_copies": true,
+  "full_test_command": [
+    "rtk",
+    "proxy",
+    "cargo",
+    "test",
+    "--manifest-path",
+    "crates/clouddialect-contracts/Cargo.toml",
+    "--frozen"
+  ],
+  "exit": 0,
+  "rust_tests_including_doctests": 288,
+  "canonical_fixture_count": 75,
+  "exact_prefix_checks": [
+    {
+      "path": "integration/version-profile/closed-nested-newer-minor",
+      "exit": 0,
+      "count": 1
+    }
+  ],
+  "scope": "Entire approved bounded data batch",
+  "completed_at": "2026-10-24T11:49:25.739844+00:00"
+}
