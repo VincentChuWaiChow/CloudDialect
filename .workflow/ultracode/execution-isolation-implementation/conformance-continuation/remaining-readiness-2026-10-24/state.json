@@ -1,5 +1,5 @@
 {
-  "status": "waiting_for_approval",
+  "status": "complete",
   "approval": "User as-needed agent approval; safe read-only/local draft continuation only",
   "new_readonly_agents": 1,
   "cumulative_dispatches": 34,
@@ -21,5 +21,6 @@
     ],
     "partial_batches": []
   },
-  "owner_decisions": "Collision contract clarification and test-harness core projection assertion"
+  "owner_decisions": "Collision contract clarification and test-harness core projection assertion",
+  "closeout": "Preparation only; both owner decisions approved2026-10-24, then five exact drafts admitted by separate core-preservation-2026-10-24 tranche. Historical deadline not extended."
 }

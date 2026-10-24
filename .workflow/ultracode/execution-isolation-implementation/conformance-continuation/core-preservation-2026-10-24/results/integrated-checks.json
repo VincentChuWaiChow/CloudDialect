@@ -1,0 +1,89 @@
+[
+  {
+    "name": "check",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "check",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--all-targets"
+    ],
+    "exit": 0,
+    "status": "pass",
+    "log": "results/check.log"
+  },
+  {
+    "name": "clippy",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "clippy",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--all-targets",
+      "--",
+      "-D",
+      "warnings"
+    ],
+    "exit": 0,
+    "status": "pass",
+    "log": "results/clippy.log"
+  },
+  {
+    "name": "fmt",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "fmt",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--check"
+    ],
+    "exit": 0,
+    "status": "pass",
+    "log": "results/fmt.log"
+  },
+  {
+    "name": "python",
+    "command": [
+      "rtk",
+      "proxy",
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exit": 0,
+    "status": "pass",
+    "log": "results/python.log"
+  },
+  {
+    "name": "legacy-spec-checker",
+    "command": [
+      "rtk",
+      "proxy",
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/verification/execution-isolation",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit": 1,
+    "status": "known-preexisting-failure",
+    "log": "results/legacy-spec-checker.log",
+    "boundary": "Same unchanged checker rejects pre-existing checked supporting deliverables; numbered runtime tasks still open"
+  }
+]

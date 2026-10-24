@@ -2,8 +2,8 @@
   "title": "Execution-isolation implementation",
   "slug": "execution-isolation-implementation",
   "created_at": "2026-10-22T07:25:44.090021+00:00",
-  "updated_at": "2026-10-24T10:36:56Z",
-  "status": "executing",
+  "updated_at": "2026-10-24T10:49:22.970666+00:00",
+  "status": "waiting_for_approval",
   "mode": "delegated",
   "baseline_ref": "3b9cb6bd0ee82dbef3b731a35ce68fc778c4906a",
   "risk_level": "high",
@@ -21,10 +21,10 @@
     "native_agent_available": true,
     "native_agent_planned": true,
     "native_agent_used": true,
-    "agent_count": 35,
+    "agent_count": 36,
     "wave_count": 12,
     "no_delegation_reason": "",
-    "notes": "Explicit as-needed authorization;35read-only frozen-oracle review running; parent retains all writes/Git. No recursion/follow-up dispatches.",
+    "notes": "As-needed delegation approved;35frozen-oracle review and36integrated final review complete. Two read-only sidecars this tranche; no recursion/follow-up dispatches. Parent owns writes/Git; exact model/effort/authentication unverified.",
     "additional_dispatch_limit": 2,
     "additional_dispatches_used": 2,
     "consolidated_repairs_used_current_tranche": 1
@@ -244,7 +244,7 @@
     }
   ],
   "verification": {
-    "status": "215integration+2unit+7doctests/check/fmt/Clippy/15Python/8selectedP0content pass;1229/1312productionlines;26static no actionable findings before private-module rename; full JSONsemantic/completeness/conformance/BG01/native incomplete.",
+    "status": "Current narrow tranche:288Rust including7doctests+47fixture oracles/11controls,check/clippy/fmt/15PythonPASS. Independent35static and36actual controls/runnerPASS. Legacy checker8pass1pre-existing error; coverage/MSRV/native/consumer unverified. Historical checks below retain their own evidence dates.",
     "checks": [
       {
         "name": "scaffold",
@@ -1761,9 +1761,9 @@
     "publication_sha": "cd51996c3b2f65adb23aa129d412111b2d12ec6b"
   },
   "continuation_blocked_audit": {
-    "status": "Progress:41frozen cases admitted/verified; tasks18/19checked, allruntimegates remain open",
-    "consecutive_no_progress_goal_turns": 0,
-    "checked_at": "2026-10-24T09:39:15.594027+00:00"
+    "consecutive_no_progress_turns": 0,
+    "condition": "Earlier collision/source-scope decisions resolved; approved bounded tranche complete, full goal unachieved.",
+    "updated_at": "2026-10-24T10:49:22.970666+00:00"
   },
   "reference_fidelity_wave": {
     "started_at": "2026-10-22T16:07:43Z",
@@ -1810,7 +1810,13 @@
   "current_tranche": {
     "path": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/core-preservation-2026-10-24",
     "deadline": "2026-10-24T11:21:56Z",
-    "scope": "two harness files, five frozen pairs and related approved clarification/status docs; local commits"
+    "scope": "two harness files, five frozen pairs and related approved clarification/status docs; local commits",
+    "status": "complete",
+    "report": "conformance-continuation/core-preservation-2026-10-24/final-report.md",
+    "canonical": 47,
+    "rust_tests": 288,
+    "runner_controls": 11,
+    "next_scope": "Remaining adversarial fixture freeze/admission requires separately bounded scope; no runtime gate closure"
   },
   "conformance_continuation": {
     "status": "42canonical fixtures verified; tasks18/19delivered, whole goal incomplete",
@@ -1855,9 +1861,23 @@
     "repairs": 0
   },
   "remaining_readiness": {
-    "status": "five P0drafts verified; two genuine owner contracts unresolved",
+    "status": "Historical preparation complete; both owner decisions approved and five exact pairs admitted in subsequent tranche",
     "proposal": "conformance-continuation/remaining-readiness-2026-10-24/next-proposal.md",
-    "canonical": 42,
-    "source_changes": 0
+    "canonical": 47,
+    "source_changes": 0,
+    "report": "conformance-continuation/core-preservation-2026-10-24/final-report.md"
+  },
+  "core_preservation_delivery": {
+    "status": "approved-bounded-local-tranche-complete",
+    "report": "conformance-continuation/core-preservation-2026-10-24/final-report.md",
+    "production_changes": false,
+    "harness_files": 2,
+    "new_fixture_pairs": 5,
+    "canonical": 47,
+    "remaining_corpus_cases": 57,
+    "cumulative_dispatches": 36,
+    "review_source_repairs": 0,
+    "packaging_corrections": 1,
+    "native_or_remote_actions": false
   }
 }

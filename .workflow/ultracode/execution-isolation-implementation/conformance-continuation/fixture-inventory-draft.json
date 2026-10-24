@@ -1,5 +1,5 @@
 {
-  "status": "42cases/26batches delivered; remaining62cases/34batches still need readiness, approval or actual qualification",
+  "status": "47cases/29batches delivered; remaining57cases/31batches still need readiness, approval or actual qualification",
   "source": "canonical tasks18-21 plus named P0/VC1 follow-ons",
   "case_count": 104,
   "batch_count": 60,
@@ -1259,8 +1259,8 @@
           }
         ]
       },
-      "notes": "Two independent reserved-prefix owner claims for acme do not recognize required acme semantics. This is not a collision detector; confirm canonical rejection interpretation before approval.",
-      "gate": "owner-oracle-clarification",
+      "notes": "Owner approved local nontrust profile2026-10-24: independent A/B reserved-qualified claims cannot recognize unknown mandatory acme. Not cross-document conflict detection/authenticated ownership; fixture freeze/admission remains pending.",
+      "gate": "code-approval",
       "status": "draft-not-dispatched",
       "files": [
         "input.json",
@@ -1280,8 +1280,8 @@
           }
         ]
       },
-      "notes": "Two independent reserved-prefix owner claims for acme do not recognize required acme semantics. This is not a collision detector; confirm canonical rejection interpretation before approval.",
-      "gate": "owner-oracle-clarification",
+      "notes": "Owner approved local nontrust profile2026-10-24: independent A/B reserved-qualified claims cannot recognize unknown mandatory acme. Not cross-document conflict detection/authenticated ownership; fixture freeze/admission remains pending.",
+      "gate": "code-approval",
       "status": "draft-not-dispatched",
       "files": [
         "input.json",
@@ -2643,7 +2643,7 @@
       },
       "notes": "No fabricated expected observer/authentication context.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -2652,7 +2652,10 @@
       "frozen_draft_sha256": {
         "input.json": "41ff5bd79569a594a6001d09f37113f4ca6e18902e31753e80aaed302b15ab79",
         "expected.json": "f9e13cc21e62be450415629e332901dcfd7c640e604a75993694baf1b36d0814"
-      }
+      },
+      "verification": "core-preservation-2026-10-24/results/batch-3.2.53.json",
+      "commit": "6c07a7e",
+      "delivery_report": "core-preservation-2026-10-24/final-report.md"
     },
     {
       "path": "integration/verification-consistency/unmapped-obligations",
@@ -2675,7 +2678,7 @@
       },
       "notes": "No fabricated expected observer/authentication context.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -2684,7 +2687,10 @@
       "frozen_draft_sha256": {
         "input.json": "504becc049fdcb1b957d20967d505e9af7bc4275bc85b4fa1398ee5639a0b7f2",
         "expected.json": "a19df99b809c3d49844d9718f1dd7856d67f03c5fea9b08741c86b0f8abcb71b"
-      }
+      },
+      "verification": "core-preservation-2026-10-24/results/batch-3.2.53.json",
+      "commit": "6c07a7e",
+      "delivery_report": "core-preservation-2026-10-24/final-report.md"
     },
     {
       "path": "integration/verification-consistency/invalid-calendar-utc",
@@ -2739,7 +2745,7 @@
       },
       "notes": "No fabricated expected observer/authentication context.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -2748,7 +2754,10 @@
       "frozen_draft_sha256": {
         "input.json": "6e568830ca8f90f37b5e7ffb89aad7b09f624ada761187cc613fea80c96481d3",
         "expected.json": "c4f3cf0edeff8de0a992f3acb852be11a31c1f7047c1241bb6293ce64ab5f621"
-      }
+      },
+      "verification": "core-preservation-2026-10-24/results/batch-3.2.55.json",
+      "commit": "e25f59d",
+      "delivery_report": "core-preservation-2026-10-24/final-report.md"
     },
     {
       "path": "integration/verification-consistency/approval-result-id-mismatch",
@@ -2771,7 +2780,7 @@
       },
       "notes": "No fabricated expected observer/authentication context.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -2780,7 +2789,10 @@
       "frozen_draft_sha256": {
         "input.json": "158a38687269d7e214207abc2ddd2172126607284a25a8619b61a51d473dc793",
         "expected.json": "5072bb30800a72e542b2f3bc567f15d02ca4cee2e0b8f0ec66dc9c309d9afd15"
-      }
+      },
+      "verification": "core-preservation-2026-10-24/results/batch-3.2.55.json",
+      "commit": "e25f59d",
+      "delivery_report": "core-preservation-2026-10-24/final-report.md"
     },
     {
       "path": "integration/verification-consistency/approval-result-version-mismatch",
@@ -2803,7 +2815,7 @@
       },
       "notes": "No fabricated expected observer/authentication context.",
       "gate": "code-approval",
-      "status": "draft-verified-not-admitted",
+      "status": "delivered-approved-frozen-fixture",
       "files": [
         "input.json",
         "expected.json"
@@ -2812,7 +2824,10 @@
       "frozen_draft_sha256": {
         "input.json": "9c88f26eb8df9a5ed9278469fc92e3ac5a465577241020951d58db2f4c1e6e54",
         "expected.json": "3cf87cac5944074b4f60d030c8fc6118101ebe4063f40d6a4ada797806e2e77b"
-      }
+      },
+      "verification": "core-preservation-2026-10-24/results/batch-3.2.56.json",
+      "commit": "ccc36d8",
+      "delivery_report": "core-preservation-2026-10-24/final-report.md"
     },
     {
       "path": "integration/version-profile/build-metadata",
@@ -4025,13 +4040,15 @@
         "crates/clouddialect-contracts/fixtures/integration/verification-consistency/unmapped-obligations/input.json",
         "crates/clouddialect-contracts/fixtures/integration/verification-consistency/unmapped-obligations/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
-      "readiness": "remaining-readiness-2026-10-24/semantic-verification.json"
+      "readiness": "remaining-readiness-2026-10-24/semantic-verification.json",
+      "verification": "core-preservation-2026-10-24/results/batch-3.2.53.json",
+      "commit": "6c07a7e"
     },
     {
       "id": "3.2.54",
@@ -4064,13 +4081,15 @@
         "crates/clouddialect-contracts/fixtures/integration/verification-consistency/approval-result-id-mismatch/input.json",
         "crates/clouddialect-contracts/fixtures/integration/verification-consistency/approval-result-id-mismatch/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
-      "readiness": "remaining-readiness-2026-10-24/semantic-verification.json"
+      "readiness": "remaining-readiness-2026-10-24/semantic-verification.json",
+      "verification": "core-preservation-2026-10-24/results/batch-3.2.55.json",
+      "commit": "e25f59d"
     },
     {
       "id": "3.2.56",
@@ -4081,13 +4100,15 @@
         "crates/clouddialect-contracts/fixtures/integration/verification-consistency/approval-result-version-mismatch/input.json",
         "crates/clouddialect-contracts/fixtures/integration/verification-consistency/approval-result-version-mismatch/expected.json"
       ],
-      "status": "draft-verified-awaiting-admission-approval",
+      "status": "delivered-approved-frozen-fixture",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
       ],
-      "readiness": "remaining-readiness-2026-10-24/semantic-verification.json"
+      "readiness": "remaining-readiness-2026-10-24/semantic-verification.json",
+      "verification": "core-preservation-2026-10-24/results/batch-3.2.56.json",
+      "commit": "ccc36d8"
     },
     {
       "id": "3.2.57",
@@ -4165,14 +4186,14 @@
   ],
   "known_gates": [
     "Exact diagnostic multisets still need fixture-specific freeze; drafts are not dispatch-ready.",
-    "Namespace-collision rejected-case interpretation needs owner confirmation; no collision authentication invented.",
+    "Namespace local-nontrust clarification approved2026-10-24; exact fixture freeze/admission remains pending, with no collision authentication inferred.",
     "Native network-disabled qualification not approved; cannot pass from a metadata note.",
     "Cross-project authorization needs real backend/Spec2 evidence.",
     "Environment-immunity fixture requires explicit trusted setup representation.",
     "Forged/replayed/prohibited-action claims distinguish local declarations from actual Spec2 admission/authentication."
   ],
-  "delivered_case_count": 42,
-  "delivered_batch_count": 26,
-  "approval_ready_draft_cases": 5,
-  "approval_ready_draft_batches": 3
+  "delivered_case_count": 47,
+  "delivered_batch_count": 29,
+  "approval_ready_draft_cases": 0,
+  "approval_ready_draft_batches": 0
 }

@@ -454,6 +454,7 @@ The labels below retain the original full-conformance baseline, not a claim that
    - Unknown mandatory extension attempting to unlock acceptance: verifier must block.
    - Extension attempting to override a core verification result field: core outcome is unchanged.
    - Verification method: All eight fixture classes are present in the adversarial suite; each class includes at least one passing (correctly handled) and one failing (correctly rejected) case.
+   - Owner-approved local nontrust clarification (2026-10-24): for the collision class, two separately validated documents may claim the same `acme` prefix through distinct author/owner payloads, including reserved-qualified ownership claims. Optional claims remain structurally valid with verbatim warnings for reserved keys; unknown mandatory `acme` independently produces a semantic `blocking-gap` in each document. This is rejection of unrecognized mandatory semantics, not cross-document conflict detection or authenticated ownership; prefix conflicts remain registry-governance work. This clarification is not fixture-delivery evidence.
    - Evidence status: `MISSING`
 
 ---

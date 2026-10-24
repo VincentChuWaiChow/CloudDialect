@@ -1679,7 +1679,7 @@ The conformance fixture suite maps to requirements as follows:
 | `adversarial/extension-namespace/reserved-exact-match` | Reserved namespace via exact match (`core:field`) |
 | `adversarial/extension-namespace/reserved-uppercase-bypass` | Reserved namespace via uppercase (`CORE:field`, `CDC:field`) |
 | `adversarial/extension-namespace/reserved-mixed-case-bypass` | Reserved via mixed case (`Core-Validation:field`, `Cdc-Evidence:field`) |
-| `adversarial/extension-namespace/namespace-collision` | Two community extensions using the same prefix |
+| `adversarial/extension-namespace/namespace-collision` | Preserve same-prefix fields; owner-approved local nontrust profile (2026-10-24): separate A/B ownership claims cannot recognize unknown mandatory `acme`. Optional claims remain structurally valid with reserved-key warnings; each unknown mandatory declaration independently blocks. Not cross-document conflict detection or authenticated ownership; conflicts remain registry governance. |
 | `adversarial/extension-namespace/invalid-prefix-formats` | Digit-start, space-in-prefix, length-one prefix |
 | `adversarial/extension-namespace/unknown-optional-round-trip` | Extension present, unmodified, non-influencing after round-trip |
 | `adversarial/extension-namespace/mandatory-extension-blocks-acceptance` | Unknown mandatory extension produces blocker |

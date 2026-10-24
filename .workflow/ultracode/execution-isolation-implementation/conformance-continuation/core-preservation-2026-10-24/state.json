@@ -2,16 +2,16 @@
   "title": "Approved core preservation and five-pair admission",
   "slug": "core-preservation-2026-10-24",
   "created_at": "2026-10-24T10:36:56Z",
-  "updated_at": "2026-10-24T10:36:56Z",
+  "updated_at": "2026-10-24T10:48:42.980180+00:00",
   "deadline": "2026-10-24T11:21:56Z",
-  "status": "executing",
+  "status": "complete",
   "mode": "delegated",
   "baseline_ref": "d19c5d4a96a61eb4b9c3f35220cd9b16b201fd74",
   "risk_level": "medium",
   "eval_contract": {
     "level": "inline",
     "path": "plan.md",
-    "status": "ready"
+    "status": "checked"
   },
   "approval": {
     "required": true,
@@ -22,8 +22,8 @@
     "native_agent_available": true,
     "native_agent_planned": true,
     "native_agent_used": true,
-    "agent_count": 1,
-    "wave_count": 1,
+    "agent_count": 2,
+    "wave_count": 2,
     "cumulative_before": 34,
     "planned_tranche_limit": 2,
     "no_delegation_reason": ""
@@ -31,22 +31,72 @@
   "packets": [
     {
       "id": "35-frozen-oracle-nontrust",
-      "status": "in_progress",
+      "status": "complete",
       "owner": "read-only-agent",
       "write_scope": [],
       "result_path": "results/35-frozen-oracle-nontrust.md"
     },
     {
       "id": "36-integrated-review",
-      "status": "pending",
+      "status": "complete",
       "owner": "read-only-agent",
       "write_scope": [],
       "result_path": "results/36-integrated-review.md"
     }
   ],
   "verification": {
-    "status": "pending",
-    "checks": []
+    "status": "narrow-local-criteria-pass;known-preexisting-legacy-error;coverage-msrv-native-unverified",
+    "checks": [
+      {
+        "name": "runtime-red",
+        "status": "pass",
+        "evidence": "results/tdd-stages.json"
+      },
+      {
+        "name": "same-target-green",
+        "status": "pass",
+        "evidence": "results/tdd-stages.json"
+      },
+      {
+        "name": "three-complete-frozen-batches",
+        "status": "pass",
+        "evidence": "results/batch-3.2.{53,55,56}.json"
+      },
+      {
+        "name": "check-clippy-fmt-python",
+        "status": "pass",
+        "evidence": "results/integrated-checks.json"
+      },
+      {
+        "name": "legacy-spec-checker",
+        "status": "known-preexisting-failure",
+        "evidence": "results/integrated-checks.json"
+      },
+      {
+        "name": "selector-controls",
+        "status": "pass",
+        "evidence": "results/selector-controls.json"
+      },
+      {
+        "name": "independent-review",
+        "status": "pass",
+        "evidence": "results/35-frozen-oracle-nontrust.md;results/36-integrated-review.md"
+      },
+      {
+        "name": "scope-freeze",
+        "status": "pass",
+        "evidence": "results/scope-audit.json;results/final-protected-hashes.json"
+      }
+    ]
   },
-  "review_repairs_used": 0
+  "review_repairs_used": 0,
+  "scope": {
+    "two_harness_files": true,
+    "exact_fixture_pairs": 5,
+    "canonical": 47,
+    "related_document_status_changes_only": true,
+    "runtime_tasks_complete": 0,
+    "no_push_or_probes": true
+  },
+  "packaging_repairs": 1
 }

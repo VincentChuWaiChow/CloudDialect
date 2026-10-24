@@ -1,3 +1,7 @@
+> Historical proposal: both decisions were explicitly approved on2026-10-24.
+> Delivered by the separate [bounded harness/five-pair tranche](../core-preservation-2026-10-24/final-report.md).
+> The earlier deadline was not extended; approval started a new45-minute scope.
+
 # Proposed next local tranche — requires fresh explicit approval
 
 ## Decisions first

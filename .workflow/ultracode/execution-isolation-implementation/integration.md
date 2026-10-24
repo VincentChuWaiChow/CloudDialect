@@ -1,3 +1,22 @@
+# Current bounded harness and five-pair delivery — 2026-10-24
+
+[Current bounded report](conformance-continuation/core-preservation-2026-10-24/final-report.md):
+executed runtime RED then GREEN adds decoded core verification preservation while
+retaining exact extension bytes and structural checks. Five frozen P0 semantic
+pairs are admitted unchanged: **47 canonical fixtures**, **288 Rust tests**
+including seven doctests, and **11 runner controls** pass. Check/Clippy/fmt and
+15 repository Python tests pass. Reviewers35/36 found no actionable P1/P2;
+36 independently ran11 controls/47 fixtures and five wrong-oracle rejections.
+Owner-approved namespace local nontrust is explicit, not conflict detection or
+authenticated ownership. Current scope audit preserves176 baseline files and
+permits only six harness/spec-status changes plus10 exact new fixture files;
+192 final hashes are frozen. Legacy checker remains8 pass/1 pre-existing error;
+fresh coverage/MSRV and native/consumer qualification remain unverified.
+Remaining57 inventory cases, all21 Spec2 numbered tasks and UD/BG gates stay
+open. Local checkpoints only; no push, production changes or native probes.
+
+## Earlier snapshots below are historical
+
 # Current frozen fixture admission — 2026-10-24
 
 [Admission evidence](conformance-continuation/admission-2026-10-24/final-report.md): all41 approved drafts are now canonical,42total.
