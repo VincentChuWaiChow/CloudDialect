@@ -1,0 +1,28 @@
+{
+  "batch": "3.2.56",
+  "status": "pass",
+  "cases": [
+    {
+      "path": "integration/verification-consistency/approval-result-version-mismatch",
+      "files": {
+        "crates/clouddialect-contracts/fixtures/integration/verification-consistency/approval-result-version-mismatch/input.json": "9c88f26eb8df9a5ed9278469fc92e3ac5a465577241020951d58db2f4c1e6e54",
+        "crates/clouddialect-contracts/fixtures/integration/verification-consistency/approval-result-version-mismatch/expected.json": "3cf87cac5944074b4f60d030c8fc6118101ebe4063f40d6a4ada797806e2e77b"
+      }
+    }
+  ],
+  "exact_frozen_copies": true,
+  "command": [
+    "rtk",
+    "proxy",
+    "cargo",
+    "test",
+    "--manifest-path",
+    "crates/clouddialect-contracts/Cargo.toml",
+    "--frozen"
+  ],
+  "exit": 0,
+  "rust_tests_including_doctests": 288,
+  "canonical_fixtures": 47,
+  "log": "results/batch-3.2.56.log",
+  "completed_at": "2026-10-24T10:43:28.004344+00:00"
+}
