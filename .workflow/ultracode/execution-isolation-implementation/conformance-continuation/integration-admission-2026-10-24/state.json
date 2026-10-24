@@ -2,16 +2,16 @@
   "title": "Approved28-pair integration admission and Git push",
   "slug": "integration-admission-2026-10-24",
   "created_at": "2026-10-24T11:39:58Z",
-  "updated_at": "2026-10-24T11:39:58Z",
+  "updated_at": "2026-10-24T11:55:54.878518+00:00",
   "deadline": "2026-10-24T12:24:58Z",
-  "status": "executing",
+  "status": "verifying",
   "mode": "delegated",
   "baseline_ref": "89ff7a7a9a7b4c9a149b5263d79950a6b261e44d",
   "risk_level": "medium",
   "eval_contract": {
     "level": "inline",
     "path": "plan.md",
-    "status": "ready"
+    "status": "checked"
   },
   "approval": {
     "required": true,
@@ -22,8 +22,8 @@
     "native_agent_available": true,
     "native_agent_planned": true,
     "native_agent_used": true,
-    "agent_count": 1,
-    "wave_count": 1,
+    "agent_count": 2,
+    "wave_count": 2,
     "cumulative_before": 40,
     "planned_limit": 2,
     "no_delegation_reason": ""
@@ -31,23 +31,65 @@
   "packets": [
     {
       "id": "41-frozen-integration-audit",
-      "status": "in_progress",
+      "status": "complete",
       "owner": "read-only-agent",
       "write_scope": [],
       "result_path": "results/41-frozen-integration-audit.md"
     },
     {
       "id": "42-final-integration-admission-review",
-      "status": "pending",
+      "status": "complete",
       "owner": "read-only-agent",
       "write_scope": [],
       "result_path": "results/42-final-integration-admission-review.md"
     }
   ],
   "verification": {
-    "status": "pending",
-    "checks": []
+    "status": "all-narrow-data-checks-pass;publication-pending",
+    "checks": [
+      {
+        "name": "15fullfrozenbatches",
+        "status": "pass",
+        "evidence": "results/batch-commits.json;results/batch-*.json"
+      },
+      {
+        "name": "integratedfull-lint-python",
+        "status": "pass",
+        "evidence": "results/integrated-checks.json"
+      },
+      {
+        "name": "legacy-spec-checker",
+        "status": "known-preexisting-error",
+        "evidence": "results/integrated-checks.json"
+      },
+      {
+        "name": "18selector-oraclecontrols",
+        "status": "pass",
+        "evidence": "results/selector-oracle-controls.json"
+      },
+      {
+        "name": "independent41/42",
+        "status": "pass",
+        "evidence": "results/41-frozen-integration-audit.md;results/42-final-integration-admission-review.md"
+      },
+      {
+        "name": "scope300hashes",
+        "status": "pass",
+        "evidence": "results/scope-audit.json;results/final-protected-hashes.json"
+      },
+      {
+        "name": "requestedpush-liveSHA",
+        "status": "pending",
+        "evidence": "results/remote-preflight.json"
+      }
+    ]
   },
   "consolidated_repairs_used": 0,
-  "contract_sha256": "2c4171e80ac363b8c2d6bb0cb4cebf23a171d4c3c7f4019275d213f3e13ae479"
+  "contract_sha256": "2c4171e80ac363b8c2d6bb0cb4cebf23a171d4c3c7f4019275d213f3e13ae479",
+  "publication": {
+    "authorized": true,
+    "status": "pending-payload-push",
+    "branch": "feat/execution-isolation-runtime",
+    "nonforce": true
+  }
 }

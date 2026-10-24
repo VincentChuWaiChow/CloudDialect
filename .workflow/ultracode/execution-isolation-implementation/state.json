@@ -2,7 +2,7 @@
   "title": "Execution-isolation implementation",
   "slug": "execution-isolation-implementation",
   "created_at": "2026-10-22T07:25:44.090021+00:00",
-  "updated_at": "2026-10-24T11:39:58Z",
+  "updated_at": "2026-10-24T11:55:54.878518+00:00",
   "status": "executing",
   "mode": "delegated",
   "baseline_ref": "3b9cb6bd0ee82dbef3b731a35ce68fc778c4906a",
@@ -21,10 +21,10 @@
     "native_agent_available": true,
     "native_agent_planned": true,
     "native_agent_used": true,
-    "agent_count": 41,
+    "agent_count": 42,
     "wave_count": 12,
     "no_delegation_reason": "",
-    "notes": "Approved28pairadmission:41read-onlycontentauditactive, parentwrites/Git.42plannedfinalreview. No recursion/follow-updispatches.",
+    "notes": "41/42read-onlyreviewscomplete;42independently75fixtures/11controls/46commands. ParentownsGit; no recursion/follow-updispatches.",
     "additional_dispatch_limit": 2,
     "additional_dispatches_used": 2,
     "consolidated_repairs_used_current_tranche": 1
@@ -1810,8 +1810,10 @@
   "current_tranche": {
     "path": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/integration-admission-2026-10-24",
     "deadline": "2026-10-24T12:24:58Z",
-    "status": "executing",
-    "scope": "56exactdatafiles,relatedsupportingstatus,localcommits,currentbranchnonforcepush"
+    "status": "verifying-push-pending",
+    "scope": "56exactdatafiles,relatedsupportingstatus,localcommits,currentbranchnonforcepush",
+    "report": "conformance-continuation/integration-admission-2026-10-24/final-report.md",
+    "canonical": 75
   },
   "conformance_continuation": {
     "status": "42canonical fixtures verified; tasks18/19delivered, whole goal incomplete",
@@ -1886,13 +1888,29 @@
     "source_or_native_changes": false
   },
   "remaining_integration_preparation": {
-    "status": "28exactverifieddraftpairs-not-admitted",
+    "status": "Historical28draftpreparation; all28subsequentlyapprovedandadmitted;3qualification/setupcasesstillgated",
     "report": "conformance-continuation/remaining-integration-preparation/final-report.md",
     "proposal": "conformance-continuation/remaining-integration-preparation/admission-proposal.md",
     "contract_sha256": "2c4171e80ac363b8c2d6bb0cb4cebf23a171d4c3c7f4019275d213f3e13ae479",
     "all_ready_drafts": 54,
-    "canonical": 47,
+    "canonical": 75,
     "gated_cases": 3,
     "source_native_changes": false
+  },
+  "integration_admission": {
+    "status": "75canonical-verified-push-pending",
+    "report": "conformance-continuation/integration-admission-2026-10-24/final-report.md",
+    "approved_pairs": 28,
+    "exact_new_files": 56,
+    "canonical": 75,
+    "rust_tests": 288,
+    "separate_unapproved_drafts": 26,
+    "gated_cases": 3,
+    "full_batches": 43,
+    "partial_batches": [
+      "3.2.41"
+    ],
+    "source_harness_changes": false,
+    "push_authorized": true
   }
 }

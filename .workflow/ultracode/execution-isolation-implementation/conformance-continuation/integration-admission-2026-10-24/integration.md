@@ -1,0 +1,15 @@
+# Integration
+## Accepted
+Exact28pairs/56filesin15boundedgroups; eachfullfrozenCargo288Rust+growingfixturecountandnewexactprefixpass,15reachabledata-checkpoints. Final75fixturefullsuite/check/Clippy/fmt/15Pythonpass.41sourceauditand42independent75fixtures/11controls/46commandsacceptedwithnoactionableP1/P2.
+## Rejected
+No26adversarialcanonicaladmissionfromseparatequestion. No nativehalf3.2.41completion, syntheticstoreauthorization, hashacceptance, UTCauthenticationorfullSpec1/2completion.
+## Conflicts
+Nonein source/data. Stale42/47counts inrequirements/task22/progresscorrectedwithinapprovedsupportingstatusscope, notsource/oraclerepair. Initialremote-refapprovalreviewtimedoutbeforeprocesscreation; singlepermittedretryranexit0andconfirmedbranchabsent.
+## Decisions
+Currentuserexplicitlyapproves28pairadmissionandseparatelygitcommit/pushcurrentbranch. Exactbranchref/nonforceonly, no tags/merge/release/deployment. ParentownsGit; finalremoteSHAproofafterpayloadcheckpoint.
+## Final changes
+56exactcanonicaldatafiles, three relatedstatusdocs andworkflowevidence. 241protectedbaselinefilesunchanged;300finalhashesfrozen. Research/unapproveddraftspreserved.
+## Verification still needed
+RequestedpushandliveexactremoteSHAcomparisonpendingafterthisrecordcheckpoint. No qualificationorremaining26pairadmissionapprovalinferred.
+## Remaining risks
+Legacychecker8pass/1pre-existingerror, nofreshcoverage/MSRV. Threegatednative/backend/trustedsetupcasesandUD/BGremainopen; fullgoalunachieved.

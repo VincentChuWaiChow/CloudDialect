@@ -1,3 +1,5 @@
+> Approved by the owner2026-10-24; exact28pairs subsequently admitted by [this tranche](../integration-admission-2026-10-24/final-report.md). Historical proposal and exclusion wording below are retained; later explicitGitpushrequest supersedes only the earlier no-push restriction. Separate26pairadmission remains unapproved.
+
 # Additional integration admission proposal — NOT APPROVED
 
 ## Exact frozen data

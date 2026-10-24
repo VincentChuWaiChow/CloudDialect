@@ -1,3 +1,16 @@
+# Current approved integration admission —2026-10-24
+
+[Current report](conformance-continuation/integration-admission-2026-10-24/final-report.md):
+28approvedpairs are now admittedunchanged: **75canonicalfixtures**,288Rusttests
+including7doctests,and11controls pass. Every15boundedgroup hadcompletefrozen
+tests andlocalcheckpoint. Check/Clippy/fmt/15Python pass; independent42executes
+75fixtures/11controls pluswrongoracle/prefix/decoychecks, no actionablefindings.
+43fullbatches+onlyunresolvable-refhalf3.2.41delivered. **26adversarialpairsremain
+unapproved**,3qualification/setupcasesabsent,all21Spec2tasks/UD/BGopen.
+CurrentGitpushisexplicitlyauthorized andwillbeindependentlySHA-verified after
+thispayloadcheckpoint; no source/harness/dependency/native/releasechanges.
+Legacychecker8pass/1pre-existingerror; freshcoverage/MSRV/nativeunverified.
+
 # Current remaining integration readiness —2026-10-24
 
 [Latest draft report](conformance-continuation/remaining-integration-preparation/final-report.md):
