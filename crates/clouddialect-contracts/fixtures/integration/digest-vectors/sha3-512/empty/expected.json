@@ -1,0 +1,9 @@
+{
+  "phase": "artifact-hash",
+  "document_kind": "verification-result",
+  "errors": [],
+  "warnings": [],
+  "blockers": [],
+  "expected_match": true,
+  "candidate_bytes": []
+}
