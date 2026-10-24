@@ -1,0 +1,63 @@
+{
+  "title": "Task25traceability",
+  "slug": "traceability-2026-10-24",
+  "created_at": "2026-10-24T17:30:58Z",
+  "updated_at": "2026-10-24T17:30:58Z",
+  "deadline": "2026-10-24T18:15:58Z",
+  "status": "executing",
+  "mode": "delegated",
+  "baseline_ref": "f526e677668eee9abeb5bdd937119b4b87ee3688",
+  "risk_level": "medium",
+  "eval_contract": {
+    "level": "full",
+    "path": "eval-contract.md",
+    "status": "ready"
+  },
+  "approval": {
+    "required": false,
+    "granted": null,
+    "notes": "OrdinaryTask25underusercontinueandpriorSpec1prerequisiteauthorization;no native/consumer/pushapprovalinferred"
+  },
+  "delegation": {
+    "native_agent_available": true,
+    "native_agent_planned": true,
+    "native_agent_used": false,
+    "agent_count": 0,
+    "wave_count": 0,
+    "cumulative_before": 44,
+    "planned_limit": 3,
+    "no_delegation_reason": ""
+  },
+  "packets": [
+    {
+      "id": "45-field-document",
+      "status": "pending",
+      "owner": "write-capable-agent",
+      "write_scope": [
+        "docs/traceability/field-to-requirement.md"
+      ],
+      "result_path": "results/45-field-document.md"
+    },
+    {
+      "id": "46-gate-document",
+      "status": "pending",
+      "owner": "write-capable-agent",
+      "write_scope": [
+        "docs/traceability/gate-to-requirement.md"
+      ],
+      "result_path": "results/46-gate-document.md"
+    },
+    {
+      "id": "47-final-review",
+      "status": "pending",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/47-final-review.md"
+    }
+  ],
+  "verification": {
+    "status": "pending",
+    "checks": []
+  },
+  "consolidated_repairs_used": 0
+}

@@ -1,0 +1,22 @@
+{
+  "red": {
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--test",
+      "traceability"
+    ],
+    "exit": 101,
+    "compiled_executed": true,
+    "passed": 0,
+    "failed": 3,
+    "intended_failure": "Both required Task25 documents physically absent; source-derived consumer tests execute and fail at document read.",
+    "log": "results/red.log",
+    "test_consumer_packaging": "Column-parser quote handling corrected before RED checkpoint; docs remain absent, same intended executed3fail. No expectation weakening."
+  }
+}
