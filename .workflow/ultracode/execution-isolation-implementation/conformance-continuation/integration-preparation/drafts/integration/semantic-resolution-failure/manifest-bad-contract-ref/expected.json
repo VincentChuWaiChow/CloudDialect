@@ -1,0 +1,12 @@
+{
+  "document_kind": "manifest",
+  "phase": "semantic",
+  "outcome": "fail",
+  "errors": [
+    {
+      "category": "unresolvable-reference",
+      "field_path": "contracts.upload_object.id",
+      "description_contains": "Referenced document was not found in the supplied scope"
+    }
+  ]
+}

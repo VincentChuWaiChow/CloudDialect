@@ -2,7 +2,7 @@
   "title": "Conformance prerequisite continuation",
   "slug": "conformance-continuation",
   "created_at": "2026-10-23T18:44:04+00:00",
-  "updated_at": "2026-10-24T03:24:19.126918+00:00",
+  "updated_at": "2026-10-24T03:29:12.053951+00:00",
   "status": "waiting_for_approval",
   "mode": "delegated",
   "baseline_ref": "5dc25f3f31ce500d17aa2322793d3a970f9b73d9",
@@ -248,5 +248,14 @@
     "temporary_composite_count": 39,
     "canonical_count": 1,
     "new_agents": 0
+  },
+  "integration_preparation": {
+    "status": "three non-native drafts; 11 actual checks matched; not admitted",
+    "proposal": "integration-preparation/admission-proposal.md",
+    "checks": "integration-preparation/verification.json",
+    "temporary_composite_count": 42,
+    "canonical_count": 1,
+    "new_agents": 0,
+    "native_batch_3.2.41": "unprepared; actual approved environment remains required"
   }
 }

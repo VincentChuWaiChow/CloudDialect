@@ -1,0 +1,25 @@
+{
+  "document_kind": "verification-result",
+  "phase": "artifact-hash",
+  "expected_match": false,
+  "candidate_bytes": [
+    116,
+    97,
+    109,
+    112,
+    101,
+    114,
+    101,
+    100,
+    45,
+    99,
+    97,
+    110,
+    100,
+    105,
+    100,
+    97,
+    116,
+    101
+  ]
+}
