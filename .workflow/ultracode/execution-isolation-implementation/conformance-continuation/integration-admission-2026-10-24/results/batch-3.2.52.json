@@ -1,0 +1,53 @@
+{
+  "batch": "3.2.52",
+  "status": "pass",
+  "case_paths": [
+    "integration/digest-vectors/sha3-256/empty",
+    "integration/digest-vectors/sha3-256/abc"
+  ],
+  "exact_files": [
+    {
+      "path": "crates/clouddialect-contracts/fixtures/integration/digest-vectors/sha3-256/empty/input.json",
+      "sha256": "ad56f5973ea5c9cfa3d6fda024138b0488cb6ef4c064f5fde125eca0e0bb4e8a"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/integration/digest-vectors/sha3-256/empty/expected.json",
+      "sha256": "2373c8a84af9cf9a4614d9254d2017f68f10c8f593c6c7057226f649d685259f"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/integration/digest-vectors/sha3-256/abc/input.json",
+      "sha256": "0e2e36023edaa67bd55a250da04db8ccebd0515a0e4b046af311dd30a4ed0f09"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/integration/digest-vectors/sha3-256/abc/expected.json",
+      "sha256": "f788acc37ae8baf4d6d504aa23928676d653734af7cffc89747c3a95583ef0dc"
+    }
+  ],
+  "frozen_source_copies": true,
+  "full_test_command": [
+    "rtk",
+    "proxy",
+    "cargo",
+    "test",
+    "--manifest-path",
+    "crates/clouddialect-contracts/Cargo.toml",
+    "--frozen"
+  ],
+  "exit": 0,
+  "rust_tests_including_doctests": 288,
+  "canonical_fixture_count": 66,
+  "exact_prefix_checks": [
+    {
+      "path": "integration/digest-vectors/sha3-256/empty",
+      "exit": 0,
+      "count": 1
+    },
+    {
+      "path": "integration/digest-vectors/sha3-256/abc",
+      "exit": 0,
+      "count": 1
+    }
+  ],
+  "scope": "Entire approved bounded data batch",
+  "completed_at": "2026-10-24T11:48:14.723154+00:00"
+}
