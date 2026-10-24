@@ -1,0 +1,38 @@
+{
+  "batch": "3.2.31",
+  "status": "pass",
+  "case_paths": [
+    "adversarial/extension-namespace/override-core-field-attempt/correctly-rejected"
+  ],
+  "exact_files": [
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/override-core-field-attempt/correctly-rejected/input.json",
+      "sha256": "c2c6b502b9732e27bdca7ae209c5f2f58cb6cf301f9c99114bde07afec401b98"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/override-core-field-attempt/correctly-rejected/expected.json",
+      "sha256": "cada309e1c0454a16676f671e79aa445b55460610e046adabf83b8f5d32e0f84"
+    }
+  ],
+  "frozen_copies": true,
+  "full_test_command": [
+    "rtk",
+    "proxy",
+    "cargo",
+    "test",
+    "--manifest-path",
+    "crates/clouddialect-contracts/Cargo.toml",
+    "--frozen"
+  ],
+  "exit": 0,
+  "rust_tests_including_doctests": 288,
+  "canonical_fixture_count": 94,
+  "exact_prefix_checks": [
+    {
+      "path": "adversarial/extension-namespace/override-core-field-attempt/correctly-rejected",
+      "exit": 0,
+      "count": 1
+    }
+  ],
+  "completed_at": "2026-10-24T17:21:02.182663+00:00"
+}

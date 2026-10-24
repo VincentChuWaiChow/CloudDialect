@@ -1,0 +1,89 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440020",
+  "format_version": "1.0.0",
+  "candidate": {
+    "identity": "synthetic-fixture-candidate",
+    "content_hash": {
+      "algorithm": "sha-256",
+      "value": "080222280ea867d5c16518fe06dfc5460ac69b7151ccd30e41fe21da2fc6d44a"
+    }
+  },
+  "configuration": {
+    "identity": "synthetic-fixture-configuration",
+    "content_hash": {
+      "algorithm": "sha-256",
+      "value": "3cea7a567d466ec371c1db1316e914db5317f9cb5be72f673be6eb453d461b73"
+    }
+  },
+  "pack": {
+    "id": "io.fixture.synthetic-pack",
+    "version": "1.0.0",
+    "content_hash": {
+      "algorithm": "sha-256",
+      "value": "09d23d0e0989566209eaf408d6df8cd6183c3b36078a1e6543bca02ca48edd89"
+    }
+  },
+  "toolchain": {
+    "id": "unverified-fixture-toolchain",
+    "version": "1.0.0",
+    "content_hash": {
+      "algorithm": "sha-256",
+      "value": "1e7c30eb102d2ddb5fa265e789c093055230abbb37683b5abace8a9c56f8fc99"
+    }
+  },
+  "binding": {
+    "tenant_id": "synthetic-tenant",
+    "project_id": "synthetic-project",
+    "run_id": "synthetic-run",
+    "attempt_id": "synthetic-attempt",
+    "input": {
+      "identity": "synthetic-fixture-input",
+      "content_hash": {
+        "algorithm": "sha-256",
+        "value": "9a3b79b9cbd42ef877c30ef9aac22131fbb6e132c04e5fc9472e2cbbf06c3a22"
+      }
+    },
+    "dependencies": {
+      "identity": "synthetic-fixture-dependencies",
+      "content_hash": {
+        "algorithm": "sha-256",
+        "value": "cacaa2bddcb81c0e0cea8daa1513c3c644661edbd10889560121d7fea6f30a23"
+      }
+    },
+    "suite": {
+      "identity": "synthetic-fixture-suite",
+      "content_hash": {
+        "algorithm": "sha-256",
+        "value": "ab41c23fdd6d85a9bcd8264653053960235420d1f30bb630b80a1c9336ef0b04"
+      }
+    },
+    "oracle": {
+      "identity": "synthetic-fixture-oracle",
+      "content_hash": {
+        "algorithm": "sha-256",
+        "value": "90ed8931aa5fbe06dca53f10f10a1217139c435070c65184451891b8a4cb845d"
+      }
+    },
+    "policy": {
+      "identity": "synthetic-fixture-policy",
+      "content_hash": {
+        "algorithm": "sha-256",
+        "value": "b97a10dd5a495422758cd07d76a532d7443492cbe9f075cca90987b13026865d"
+      }
+    },
+    "obligation_ids": [
+      "upload-object"
+    ]
+  },
+  "tests": [
+    {
+      "test_id": "synthetic-test-1",
+      "obligation_ids": [
+        "upload-object"
+      ],
+      "outcome": "fail",
+      "origin_identity": "unverified-fixture-origin-claim"
+    }
+  ],
+  "acme:verification-status": "accepted"
+}
