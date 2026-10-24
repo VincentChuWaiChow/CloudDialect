@@ -1,0 +1,20 @@
+{
+  "destination": "origin refs/heads/feat/execution-isolation-runtime",
+  "repository": "VincentChuWaiChow/CloudDialect",
+  "command": [
+    "rtk",
+    "proxy",
+    "git",
+    "ls-remote",
+    "--heads",
+    "origin",
+    "refs/heads/feat/execution-isolation-runtime"
+  ],
+  "exit": 0,
+  "output": "",
+  "remote_branch_absent": true,
+  "first_attempt": "Automatic permission reviewer timed out before process creation; retried once as explicitly permitted by tool error. Retry executed and returned empty exact ref listing.",
+  "no_force": true,
+  "context7_docs": "resolve git -> /git/htmldocs -> query explicit refspec/nonforce/remoteSHA; https://github.com/git/htmldocs/blob/gh-pages/git-push.html",
+  "checked_at": "2026-10-24T11:45:07.025342+00:00"
+}
