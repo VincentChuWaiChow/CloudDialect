@@ -1,0 +1,148 @@
+{
+  "captured_at": "2026-10-24T03:14:05.978815+00:00",
+  "source_contract": "initial-contract.json",
+  "cases": 23,
+  "matched": 22,
+  "mismatches": 1,
+  "results": [
+    {
+      "path": "negative/behavioral-contract/missing-id",
+      "exit_code": 0,
+      "oracle_matched": true,
+      "output": "PASS negative/behavioral-contract/missing-id\n1 conformance fixtures passed\n"
+    },
+    {
+      "path": "negative/behavioral-contract/obligation-no-evidence-no-assumption",
+      "exit_code": 0,
+      "oracle_matched": true,
+      "output": "PASS negative/behavioral-contract/obligation-no-evidence-no-assumption\n1 conformance fixtures passed\n"
+    },
+    {
+      "path": "negative/behavioral-contract/invalid-behavioral-fidelity",
+      "exit_code": 0,
+      "oracle_matched": true,
+      "output": "PASS negative/behavioral-contract/invalid-behavioral-fidelity\n1 conformance fixtures passed\n"
+    },
+    {
+      "path": "negative/evidence-record/missing-classification",
+      "exit_code": 0,
+      "oracle_matched": true,
+      "output": "PASS negative/evidence-record/missing-classification\n1 conformance fixtures passed\n"
+    },
+    {
+      "path": "negative/evidence-record/inferred-empty-reasoning-chain",
+      "exit_code": 1,
+      "oracle_matched": false,
+      "output": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/evidence-record/inferred-empty-reasoning-chain: fixture validator exit status: 1: .workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/evidence-record/inferred-empty-reasoning-chain: errors: expected 1 entries, actual 2\n\n"
+    },
+    {
+      "path": "negative/evidence-record/unknown-empty-assumptions",
+      "exit_code": 0,
+      "oracle_matched": true,
+      "output": "PASS negative/evidence-record/unknown-empty-assumptions\n1 conformance fixtures passed\n"
+    },
+    {
+      "path": "negative/verification-result/empty-tests-array",
+      "exit_code": 0,
+      "oracle_matched": true,
+      "output": "PASS negative/verification-result/empty-tests-array\n1 conformance fixtures passed\n"
+    },
+    {
+      "path": "negative/verification-result/nonpass-without-failure-description",
+      "exit_code": 0,
+      "oracle_matched": true,
+      "output": "PASS negative/verification-result/nonpass-without-failure-description\n1 conformance fixtures passed\n"
+    },
+    {
+      "path": "negative/verification-result/acceptance-missing-approver",
+      "exit_code": 0,
+      "oracle_matched": true,
+      "output": "PASS negative/verification-result/acceptance-missing-approver\n1 conformance fixtures passed\n"
+    },
+    {
+      "path": "negative/verification-result/unknown-hash-algorithm",
+      "exit_code": 0,
+      "oracle_matched": true,
+      "output": "PASS negative/verification-result/unknown-hash-algorithm\n1 conformance fixtures passed\n"
+    },
+    {
+      "path": "negative/verification-result/missing-binding",
+      "exit_code": 0,
+      "oracle_matched": true,
+      "output": "PASS negative/verification-result/missing-binding\n1 conformance fixtures passed\n"
+    },
+    {
+      "path": "negative/verification-result/missing-configuration",
+      "exit_code": 0,
+      "oracle_matched": true,
+      "output": "PASS negative/verification-result/missing-configuration\n1 conformance fixtures passed\n"
+    },
+    {
+      "path": "negative/verification-result/nonpass-string-failure-description",
+      "exit_code": 0,
+      "oracle_matched": true,
+      "output": "PASS negative/verification-result/nonpass-string-failure-description\n1 conformance fixtures passed\n"
+    },
+    {
+      "path": "negative/verification-result/missing-test-obligation",
+      "exit_code": 0,
+      "oracle_matched": true,
+      "output": "PASS negative/verification-result/missing-test-obligation\n1 conformance fixtures passed\n"
+    },
+    {
+      "path": "negative/pack-manifest/missing-toolchain-for-full-operation",
+      "exit_code": 0,
+      "oracle_matched": true,
+      "output": "PASS negative/pack-manifest/missing-toolchain-for-full-operation\n1 conformance fixtures passed\n"
+    },
+    {
+      "path": "negative/pack-manifest/invalid-behavioral-fidelity",
+      "exit_code": 0,
+      "oracle_matched": true,
+      "output": "PASS negative/pack-manifest/invalid-behavioral-fidelity\n1 conformance fixtures passed\n"
+    },
+    {
+      "path": "negative/pack-manifest/inline-contract-body",
+      "exit_code": 0,
+      "oracle_matched": true,
+      "output": "PASS negative/pack-manifest/inline-contract-body\n1 conformance fixtures passed\n"
+    },
+    {
+      "path": "negative/pack-manifest/missing-capabilities",
+      "exit_code": 0,
+      "oracle_matched": true,
+      "output": "PASS negative/pack-manifest/missing-capabilities\n1 conformance fixtures passed\n"
+    },
+    {
+      "path": "negative/pack-manifest/unknown-capability-version",
+      "exit_code": 0,
+      "oracle_matched": true,
+      "output": "PASS negative/pack-manifest/unknown-capability-version\n1 conformance fixtures passed\n"
+    },
+    {
+      "path": "negative/pack-manifest/duplicate-capability-id",
+      "exit_code": 0,
+      "oracle_matched": true,
+      "output": "PASS negative/pack-manifest/duplicate-capability-id\n1 conformance fixtures passed\n"
+    },
+    {
+      "path": "negative/pack-manifest/capability-unknown-field",
+      "exit_code": 0,
+      "oracle_matched": true,
+      "output": "PASS negative/pack-manifest/capability-unknown-field\n1 conformance fixtures passed\n"
+    },
+    {
+      "path": "negative/version/unsupported-major",
+      "exit_code": 0,
+      "oracle_matched": true,
+      "output": "PASS negative/version/unsupported-major\n1 conformance fixtures passed\n"
+    },
+    {
+      "path": "negative/version/unsupported-minor-newer",
+      "exit_code": 0,
+      "oracle_matched": true,
+      "output": "PASS negative/version/unsupported-minor-newer\n1 conformance fixtures passed\n"
+    }
+  ],
+  "no_oracle_revision_yet": true
+}

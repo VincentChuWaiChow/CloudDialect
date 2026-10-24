@@ -305,16 +305,31 @@
       "phase": "structural",
       "outcome": "fail",
       "oracle": {
-        "required_category": "structural",
-        "exact_multiset": "must freeze after constructing named fixture, before dispatch approval"
+        "phase": "structural",
+        "document_kind": "behavioral-contract",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "id",
+            "description_contains": "Required field is missing"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "negative-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "1299d7e9317c93cc253d481e9a46f113bfedf812fe8d61f1a8be6a9b46a72183",
+        "expected.json": "e93e638f025c9667fc15f2954316a20cbc84f5b5038877fafb1d4e73ec0f6233"
+      }
     },
     {
       "path": "negative/behavioral-contract/obligation-no-evidence-no-assumption",
@@ -322,16 +337,36 @@
       "phase": "structural",
       "outcome": "fail",
       "oracle": {
-        "required_category": "structural",
-        "exact_multiset": "must freeze after constructing named fixture, before dispatch approval"
+        "phase": "structural",
+        "document_kind": "behavioral-contract",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "obligations[0].evidence_refs",
+            "description_contains": "Required field is missing"
+          },
+          {
+            "category": "structural",
+            "field_path": "obligations[0].unresolved_assumption",
+            "description_contains": "Required field is missing"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "negative-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "42103df808fdb97e209b3a39521406954242f9e95c0a65ddb709cb274611f96f",
+        "expected.json": "c55458c369415d62c5160be078972b12f4b5d766a224ff146426d447aa5d4446"
+      }
     },
     {
       "path": "negative/behavioral-contract/invalid-behavioral-fidelity",
@@ -339,16 +374,31 @@
       "phase": "structural",
       "outcome": "fail",
       "oracle": {
-        "required_category": "structural",
-        "exact_multiset": "must freeze after constructing named fixture, before dispatch approval"
+        "phase": "structural",
+        "document_kind": "behavioral-contract",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "obligations[0].behavioral_fidelity",
+            "description_contains": "Field does not satisfy the selected schema constraint"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "negative-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "a0149b9ce6310edb6051ef7759a37766002537c60b922a327f4b49b381d91099",
+        "expected.json": "2bf8714a5ee6de6f72459c3dedfd911c3d208016bfec5617b265bf0ff79c5541"
+      }
     },
     {
       "path": "negative/evidence-record/missing-classification",
@@ -356,16 +406,31 @@
       "phase": "structural",
       "outcome": "fail",
       "oracle": {
-        "required_category": "structural",
-        "exact_multiset": "must freeze after constructing named fixture, before dispatch approval"
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "classification",
+            "description_contains": "Required field is missing"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "negative-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "e28b041163e90465643214b194ae512697f14035b943f06e215e3c91362a350b",
+        "expected.json": "42362692a75eae6a9ba41ff6a8a1da0ba6d5be9134d4d6303ed34976e364994d"
+      }
     },
     {
       "path": "negative/evidence-record/inferred-empty-reasoning-chain",
@@ -373,16 +438,36 @@
       "phase": "structural",
       "outcome": "fail",
       "oracle": {
-        "required_category": "structural",
-        "exact_multiset": "must freeze after constructing named fixture, before dispatch approval"
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "reasoning_chain",
+            "description_contains": "Field does not satisfy the selected schema constraint"
+          },
+          {
+            "category": "structural",
+            "field_path": "reasoning_chain",
+            "description_contains": "Field is not permitted by the selected schema"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "negative-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "f08e4efcf4b5b2d93f494266caeb28545daa5b05df94bf4081f69e1ea84fc61a",
+        "expected.json": "c4d05482b8d122044335060517e05beddfacf1f9b3e38a68632291ea36a982a4"
+      }
     },
     {
       "path": "negative/evidence-record/unknown-empty-assumptions",
@@ -390,16 +475,31 @@
       "phase": "structural",
       "outcome": "fail",
       "oracle": {
-        "required_category": "structural",
-        "exact_multiset": "must freeze after constructing named fixture, before dispatch approval"
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "unresolved_assumptions",
+            "description_contains": "Field does not satisfy the selected schema constraint"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "negative-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "d6b30e818cbf78e22c6ba468370479ae4e16b3f2289d3948fe8bf42ff266d869",
+        "expected.json": "b9b5b8fc352c470dfce64582ecb8ae6d09792a78ce65bc6e4e5c6a8399aba113"
+      }
     },
     {
       "path": "negative/verification-result/empty-tests-array",
@@ -407,16 +507,31 @@
       "phase": "structural",
       "outcome": "fail",
       "oracle": {
-        "required_category": "structural",
-        "exact_multiset": "must freeze after constructing named fixture, before dispatch approval"
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "tests",
+            "description_contains": "Field does not satisfy the selected schema constraint"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "negative-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "7be6ca737945136ac112439527fcd99a4de0ea3652c4a3663d07cc3ccd93fd32",
+        "expected.json": "336d7325dfc98ba1f6a49c55d24f92165c31d0c2580010eb165c730d45706cd2"
+      }
     },
     {
       "path": "negative/verification-result/nonpass-without-failure-description",
@@ -424,16 +539,31 @@
       "phase": "structural",
       "outcome": "fail",
       "oracle": {
-        "required_category": "structural",
-        "exact_multiset": "must freeze after constructing named fixture, before dispatch approval"
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "tests[0].failure_description",
+            "description_contains": "Required field is missing"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "negative-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "d098af0312716caa0709b8a46e1eef8aa33f60f7bd81711c550087cc3cd3e317",
+        "expected.json": "cada309e1c0454a16676f671e79aa445b55460610e046adabf83b8f5d32e0f84"
+      }
     },
     {
       "path": "negative/verification-result/acceptance-missing-approver",
@@ -441,16 +571,31 @@
       "phase": "structural",
       "outcome": "fail",
       "oracle": {
-        "required_category": "structural",
-        "exact_multiset": "must freeze after constructing named fixture, before dispatch approval"
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "acceptance.approver_identities",
+            "description_contains": "Required field is missing"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "negative-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "68ea85d2e8dde2b3fbab454982dc01a678aad482757308c92f6a25843867f46a",
+        "expected.json": "2a6577530e563403608e9767cf25f8240609dcf94947bb8eeba58ae94a429c9f"
+      }
     },
     {
       "path": "negative/verification-result/unknown-hash-algorithm",
@@ -458,16 +603,31 @@
       "phase": "structural",
       "outcome": "fail",
       "oracle": {
-        "required_category": "structural",
-        "exact_multiset": "must freeze after constructing named fixture, before dispatch approval"
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "candidate.content_hash.algorithm",
+            "description_contains": "Field does not satisfy the selected schema constraint"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "negative-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "25f6514124ff495c574a4c4b9be150335f0a9cbe4d9a2842979e4c809d536170",
+        "expected.json": "0b8357e8635a5988468ac2a06646d795200137f735614f3ca936136b077787b5"
+      }
     },
     {
       "path": "negative/pack-manifest/missing-toolchain-for-full-operation",
@@ -475,16 +635,31 @@
       "phase": "structural",
       "outcome": "fail",
       "oracle": {
-        "required_category": "freeze actual local error category",
-        "exact_multiset": "must freeze after constructing named fixture, before dispatch approval"
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "semantic",
+            "field_path": "toolchain",
+            "description_contains": "Full or partial operations require a nonempty toolchain"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.toml",
         "expected.json"
-      ]
+      ],
+      "readiness": "negative-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.toml": "175e59a1eed43785f33048a82c109f9bf8ff80602d23c521906e4a8af8ada963",
+        "expected.json": "a67258e923d83bf01a0cfb8019f88a1f748a531c5dde6137d43f8b0698072278"
+      }
     },
     {
       "path": "negative/pack-manifest/invalid-behavioral-fidelity",
@@ -492,16 +667,31 @@
       "phase": "structural",
       "outcome": "fail",
       "oracle": {
-        "required_category": "freeze actual local error category",
-        "exact_multiset": "must freeze after constructing named fixture, before dispatch approval"
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "unparseable",
+            "field_path": null,
+            "description_contains": "Manifest could not decode as the required TOML structure"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.toml",
         "expected.json"
-      ]
+      ],
+      "readiness": "negative-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.toml": "bb812f357eff07710bc374975481899a8add515ee7f1166325520176a26b5790",
+        "expected.json": "d3e3799459a3316fceccaae9850d017b641425a8dfd377f7fd5c1e1c161fdfc2"
+      }
     },
     {
       "path": "negative/pack-manifest/inline-contract-body",
@@ -509,16 +699,31 @@
       "phase": "structural",
       "outcome": "fail",
       "oracle": {
-        "required_category": "freeze actual local error category",
-        "exact_multiset": "must freeze after constructing named fixture, before dispatch approval"
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "unparseable",
+            "field_path": null,
+            "description_contains": "Manifest could not decode as the required TOML structure"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.toml",
         "expected.json"
-      ]
+      ],
+      "readiness": "negative-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.toml": "11307f2768bb0d30f822b1800a5e8426b3a0336d2045c3bb9d4b4209c89838b7",
+        "expected.json": "d3e3799459a3316fceccaae9850d017b641425a8dfd377f7fd5c1e1c161fdfc2"
+      }
     },
     {
       "path": "negative/version/unsupported-major",
@@ -526,16 +731,31 @@
       "phase": "structural",
       "outcome": "fail",
       "oracle": {
-        "required_category": "unsupported-major-version",
-        "exact_multiset": "must freeze after constructing named fixture, before dispatch approval"
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "unsupported-major-version",
+            "field_path": "format_version",
+            "description_contains": "unsupported-major-version \"99.0.0\"; see .kiro/specs/contracts-evidence-foundation/requirements.md#requirement-7-compatibility-policy"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "negative-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "f7632714d7024531d04f59bb883095a8b1c0bfb6bfa97cb48a8ce3c464ab267e",
+        "expected.json": "ad6ede655dd184613e018345fa4904ad0e1df2f45f57abad08304eb4460cddbc"
+      }
     },
     {
       "path": "negative/version/unsupported-minor-newer",
@@ -543,21 +763,30 @@
       "phase": "structural",
       "outcome": "warn",
       "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "warn",
         "errors": [],
         "warnings": [
           {
             "field_name_verbatim": "format_version",
             "description_contains": "1.99.0"
           }
-        ]
+        ],
+        "blockers": []
       },
       "notes": "Preserve exact actual categories/paths; do not normalize warning into failure or acceptance.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "negative-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "31dcf04f94b6de851c1fd5ddb4f999d468630e55b6d483dcb9c5197e38c698a3",
+        "expected.json": "3978b891e723ef1e2d42e0dfa21b5c7c4056dde4c48e4003d6f8c44ca8e97bc8"
+      }
     },
     {
       "path": "negative/verification-result/missing-binding",
@@ -565,15 +794,31 @@
       "phase": "structural",
       "outcome": "fail",
       "oracle": {
-        "exact_multiset": "freeze precise structural/local-semantic errors before dispatch"
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "binding",
+            "description_contains": "Required field is missing"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
       },
       "notes": "Named P0 negative; no extension fallback or legacy field swallowing.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "negative-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "a701f5cd33170c627a8957a7c3434699a216d9c06b8576ba76ffa2a2709ecaab",
+        "expected.json": "66e3a34edccf8fcba97ce8cab64ed5dc00b48ce8dbb87492fe7ab8b51af974a4"
+      }
     },
     {
       "path": "negative/verification-result/missing-configuration",
@@ -581,15 +826,31 @@
       "phase": "structural",
       "outcome": "fail",
       "oracle": {
-        "exact_multiset": "freeze precise structural/local-semantic errors before dispatch"
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "configuration",
+            "description_contains": "Required field is missing"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
       },
       "notes": "Named P0 negative; no extension fallback or legacy field swallowing.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "negative-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "20b6bbcd368a8e0a65313e63dc67cbade1b651d64261a055ac9b842f4cce7494",
+        "expected.json": "9684ba9cebe959884a8b5e33a6d3517acb938bed86f919ea598ac6335ad62d9e"
+      }
     },
     {
       "path": "negative/verification-result/nonpass-string-failure-description",
@@ -597,15 +858,31 @@
       "phase": "structural",
       "outcome": "fail",
       "oracle": {
-        "exact_multiset": "freeze precise structural/local-semantic errors before dispatch"
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "tests[0].failure_description",
+            "description_contains": "Field does not satisfy the selected schema constraint"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
       },
       "notes": "Named P0 negative; no extension fallback or legacy field swallowing.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "negative-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "d0d30fdeebe68fe8a64b151913f53e48539165b9d17a315586f2f864ee03cedd",
+        "expected.json": "01fbec243921a778fbce38fb028940e6a56d048aa7f1b5c986e6e49f82e0c48e"
+      }
     },
     {
       "path": "negative/verification-result/missing-test-obligation",
@@ -613,15 +890,31 @@
       "phase": "structural",
       "outcome": "fail",
       "oracle": {
-        "exact_multiset": "freeze precise structural/local-semantic errors before dispatch"
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "tests[0].obligation_ids",
+            "description_contains": "Required field is missing"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
       },
       "notes": "Named P0 negative; no extension fallback or legacy field swallowing.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "negative-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "40cf9acb108c14a6bb04cd230f2e0ec6a8a34fb7156a7562492712196e80a00e",
+        "expected.json": "282193e1b15320f19722af0a86da80585f1cfb1c9acddddd0b30215b9467f423"
+      }
     },
     {
       "path": "negative/pack-manifest/missing-capabilities",
@@ -629,15 +922,31 @@
       "phase": "structural",
       "outcome": "fail",
       "oracle": {
-        "exact_multiset": "freeze precise structural/local-semantic errors before dispatch"
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "unparseable",
+            "field_path": null,
+            "description_contains": "Manifest could not decode as the required TOML structure"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
       },
       "notes": "Named P0 negative; no extension fallback or legacy field swallowing.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.toml",
         "expected.json"
-      ]
+      ],
+      "readiness": "negative-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.toml": "c6fd3db430389d372701c7f97c4446d43a0e3eaa9cbd924189b1528389a67277",
+        "expected.json": "d3e3799459a3316fceccaae9850d017b641425a8dfd377f7fd5c1e1c161fdfc2"
+      }
     },
     {
       "path": "negative/pack-manifest/unknown-capability-version",
@@ -645,15 +954,31 @@
       "phase": "structural",
       "outcome": "fail",
       "oracle": {
-        "exact_multiset": "freeze precise structural/local-semantic errors before dispatch"
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "unsupported-version",
+            "field_path": "capabilities.format_version",
+            "description_contains": "Capability declaration version is not supported"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
       },
       "notes": "Named P0 negative; no extension fallback or legacy field swallowing.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.toml",
         "expected.json"
-      ]
+      ],
+      "readiness": "negative-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.toml": "31408275e907f9ecd294fd97e9d67578000fb0ae6da9f5a3deaec6f6f7f1079f",
+        "expected.json": "33495bca9bb0952f7f4c3ffe70395d5b313a515a12e6114212643913920b82b5"
+      }
     },
     {
       "path": "negative/pack-manifest/duplicate-capability-id",
@@ -661,15 +986,31 @@
       "phase": "structural",
       "outcome": "fail",
       "oracle": {
-        "exact_multiset": "freeze precise structural/local-semantic errors before dispatch"
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "semantic",
+            "field_path": "capabilities.requirements[1].id",
+            "description_contains": "Capability requirement identifier must be unique"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
       },
       "notes": "Named P0 negative; no extension fallback or legacy field swallowing.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.toml",
         "expected.json"
-      ]
+      ],
+      "readiness": "negative-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.toml": "9e4a9cd2886f1f034a766aeaacd9ee751ea3509f43619a7abf1833e1378cc874",
+        "expected.json": "ecee74aa0009ea52ca8224e5906fab1aa6f787434f3649c8d005ac454054c873"
+      }
     },
     {
       "path": "negative/pack-manifest/capability-unknown-field",
@@ -677,15 +1018,31 @@
       "phase": "structural",
       "outcome": "fail",
       "oracle": {
-        "exact_multiset": "freeze precise structural/local-semantic errors before dispatch"
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "unparseable",
+            "field_path": null,
+            "description_contains": "Manifest could not decode as the required TOML structure"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
       },
       "notes": "Named P0 negative; no extension fallback or legacy field swallowing.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.toml",
         "expected.json"
-      ]
+      ],
+      "readiness": "negative-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.toml": "ab37a59b798f282de120a000b7c065aab5b2cefacb002acf616e3fd2f58a9a81",
+        "expected.json": "d3e3799459a3316fceccaae9850d017b641425a8dfd377f7fd5c1e1c161fdfc2"
+      }
     },
     {
       "path": "adversarial/extension-namespace/reserved-exact-match/correctly-handled",
@@ -2095,12 +2452,14 @@
         "crates/clouddialect-contracts/fixtures/negative/behavioral-contract/obligation-no-evidence-no-assumption/input.json",
         "crates/clouddialect-contracts/fixtures/negative/behavioral-contract/obligation-no-evidence-no-assumption/expected.json"
       ],
-      "status": "draft-not-approved",
+      "status": "draft-verified-awaiting-admission-approval",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
-      ]
+      ],
+      "readiness": "negative-preparation/verification.json",
+      "exact_oracles": "negative-preparation/contract.json"
     },
     {
       "id": "3.2.10",
@@ -2111,12 +2470,14 @@
         "crates/clouddialect-contracts/fixtures/negative/behavioral-contract/invalid-behavioral-fidelity/input.json",
         "crates/clouddialect-contracts/fixtures/negative/behavioral-contract/invalid-behavioral-fidelity/expected.json"
       ],
-      "status": "draft-not-approved",
+      "status": "draft-verified-awaiting-admission-approval",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
-      ]
+      ],
+      "readiness": "negative-preparation/verification.json",
+      "exact_oracles": "negative-preparation/contract.json"
     },
     {
       "id": "3.2.11",
@@ -2130,12 +2491,14 @@
         "crates/clouddialect-contracts/fixtures/negative/evidence-record/inferred-empty-reasoning-chain/input.json",
         "crates/clouddialect-contracts/fixtures/negative/evidence-record/inferred-empty-reasoning-chain/expected.json"
       ],
-      "status": "draft-not-approved",
+      "status": "draft-verified-awaiting-admission-approval",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
-      ]
+      ],
+      "readiness": "negative-preparation/verification.json",
+      "exact_oracles": "negative-preparation/contract.json"
     },
     {
       "id": "3.2.12",
@@ -2146,12 +2509,14 @@
         "crates/clouddialect-contracts/fixtures/negative/evidence-record/unknown-empty-assumptions/input.json",
         "crates/clouddialect-contracts/fixtures/negative/evidence-record/unknown-empty-assumptions/expected.json"
       ],
-      "status": "draft-not-approved",
+      "status": "draft-verified-awaiting-admission-approval",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
-      ]
+      ],
+      "readiness": "negative-preparation/verification.json",
+      "exact_oracles": "negative-preparation/contract.json"
     },
     {
       "id": "3.2.13",
@@ -2165,12 +2530,14 @@
         "crates/clouddialect-contracts/fixtures/negative/verification-result/nonpass-without-failure-description/input.json",
         "crates/clouddialect-contracts/fixtures/negative/verification-result/nonpass-without-failure-description/expected.json"
       ],
-      "status": "draft-not-approved",
+      "status": "draft-verified-awaiting-admission-approval",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
-      ]
+      ],
+      "readiness": "negative-preparation/verification.json",
+      "exact_oracles": "negative-preparation/contract.json"
     },
     {
       "id": "3.2.14",
@@ -2184,12 +2551,14 @@
         "crates/clouddialect-contracts/fixtures/negative/verification-result/unknown-hash-algorithm/input.json",
         "crates/clouddialect-contracts/fixtures/negative/verification-result/unknown-hash-algorithm/expected.json"
       ],
-      "status": "draft-not-approved",
+      "status": "draft-verified-awaiting-admission-approval",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
-      ]
+      ],
+      "readiness": "negative-preparation/verification.json",
+      "exact_oracles": "negative-preparation/contract.json"
     },
     {
       "id": "3.2.15",
@@ -2203,12 +2572,14 @@
         "crates/clouddialect-contracts/fixtures/negative/verification-result/missing-configuration/input.json",
         "crates/clouddialect-contracts/fixtures/negative/verification-result/missing-configuration/expected.json"
       ],
-      "status": "draft-not-approved",
+      "status": "draft-verified-awaiting-admission-approval",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
-      ]
+      ],
+      "readiness": "negative-preparation/verification.json",
+      "exact_oracles": "negative-preparation/contract.json"
     },
     {
       "id": "3.2.16",
@@ -2222,12 +2593,14 @@
         "crates/clouddialect-contracts/fixtures/negative/verification-result/missing-test-obligation/input.json",
         "crates/clouddialect-contracts/fixtures/negative/verification-result/missing-test-obligation/expected.json"
       ],
-      "status": "draft-not-approved",
+      "status": "draft-verified-awaiting-admission-approval",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
-      ]
+      ],
+      "readiness": "negative-preparation/verification.json",
+      "exact_oracles": "negative-preparation/contract.json"
     },
     {
       "id": "3.2.17",
@@ -2241,12 +2614,14 @@
         "crates/clouddialect-contracts/fixtures/negative/pack-manifest/invalid-behavioral-fidelity/input.toml",
         "crates/clouddialect-contracts/fixtures/negative/pack-manifest/invalid-behavioral-fidelity/expected.json"
       ],
-      "status": "draft-not-approved",
+      "status": "draft-verified-awaiting-admission-approval",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
-      ]
+      ],
+      "readiness": "negative-preparation/verification.json",
+      "exact_oracles": "negative-preparation/contract.json"
     },
     {
       "id": "3.2.18",
@@ -2260,12 +2635,14 @@
         "crates/clouddialect-contracts/fixtures/negative/pack-manifest/missing-capabilities/input.toml",
         "crates/clouddialect-contracts/fixtures/negative/pack-manifest/missing-capabilities/expected.json"
       ],
-      "status": "draft-not-approved",
+      "status": "draft-verified-awaiting-admission-approval",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
-      ]
+      ],
+      "readiness": "negative-preparation/verification.json",
+      "exact_oracles": "negative-preparation/contract.json"
     },
     {
       "id": "3.2.19",
@@ -2279,12 +2656,14 @@
         "crates/clouddialect-contracts/fixtures/negative/pack-manifest/duplicate-capability-id/input.toml",
         "crates/clouddialect-contracts/fixtures/negative/pack-manifest/duplicate-capability-id/expected.json"
       ],
-      "status": "draft-not-approved",
+      "status": "draft-verified-awaiting-admission-approval",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
-      ]
+      ],
+      "readiness": "negative-preparation/verification.json",
+      "exact_oracles": "negative-preparation/contract.json"
     },
     {
       "id": "3.2.20",
@@ -2295,12 +2674,14 @@
         "crates/clouddialect-contracts/fixtures/negative/pack-manifest/capability-unknown-field/input.toml",
         "crates/clouddialect-contracts/fixtures/negative/pack-manifest/capability-unknown-field/expected.json"
       ],
-      "status": "draft-not-approved",
+      "status": "draft-verified-awaiting-admission-approval",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
-      ]
+      ],
+      "readiness": "negative-preparation/verification.json",
+      "exact_oracles": "negative-preparation/contract.json"
     },
     {
       "id": "3.2.21",
@@ -2314,12 +2695,14 @@
         "crates/clouddialect-contracts/fixtures/negative/version/unsupported-minor-newer/input.json",
         "crates/clouddialect-contracts/fixtures/negative/version/unsupported-minor-newer/expected.json"
       ],
-      "status": "draft-not-approved",
+      "status": "draft-verified-awaiting-admission-approval",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
-      ]
+      ],
+      "readiness": "negative-preparation/verification.json",
+      "exact_oracles": "negative-preparation/contract.json"
     },
     {
       "id": "3.2.22",
@@ -3043,6 +3426,6 @@
   ],
   "delivered_case_count": 1,
   "delivered_batch_count": 1,
-  "approval_ready_draft_cases": 12,
-  "approval_ready_draft_batches": 7
+  "approval_ready_draft_cases": 35,
+  "approval_ready_draft_batches": 20
 }

@@ -1,0 +1,6 @@
+{
+  "created_at": "2026-10-24T03:14:42.288674+00:00",
+  "purpose": "Deliberately incorrect temporary oracle exposes diagnostic array for analysis, not an admitted expectation or a production RED",
+  "exit_code": 1,
+  "output": "/tmp/clouddialect-negative-diagnostic-5sq8isvl/case: fixture validator exit status: 1: /tmp/clouddialect-negative-diagnostic-5sq8isvl/case: errors: expected [Object {\"category\": String(\"structural\"), \"field_path\": String(\"__diagnostic_inspection_only__\")}, Object {\"category\": String(\"structural\"), \"field_path\": String(\"__diagnostic_inspection_only__\")}], actual [Object {\"byte_offset\": Null, \"category\": String(\"structural\"), \"description\": String(\"Field does not satisfy the selected schema constraint\"), \"document_id\": String(\"550e8400-e29b-41d4-a716-446655440000\"), \"field_path\": String(\"reasoning_chain\"), \"format_version\": String(\"1.0.0\")}, Object {\"byte_offset\": Null, \"category\": String(\"structural\"), \"description\": String(\"Field is not permitted by the selected schema\"), \"document_id\": String(\"550e8400-e29b-41d4-a716-446655440000\"), \"field_path\": String(\"reasoning_chain\"), \"format_version\": String(\"1.0.0\")}]\n\n"
+}

@@ -1,0 +1,630 @@
+{
+  "created_at": "2026-10-24T03:16:16.170513+00:00",
+  "status": "Revised source-derived exact multisets fixed before final verification; no canonical admission",
+  "baseline": "9067a213377196c73208e4f1b0f2982f74eab8fc",
+  "cases": [
+    {
+      "path": "negative/behavioral-contract/missing-id",
+      "document_kind": "behavioral-contract",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "behavioral-contract",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "id",
+            "description_contains": "Required field is missing"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "basis": "Task19 exact missing-id category/path; root required id.",
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/behavioral-contract/missing-id/input.json": "1299d7e9317c93cc253d481e9a46f113bfedf812fe8d61f1a8be6a9b46a72183",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/behavioral-contract/missing-id/expected.json": "e93e638f025c9667fc15f2954316a20cbc84f5b5038877fafb1d4e73ec0f6233"
+      },
+      "status": "frozen-draft-not-admitted",
+      "batch": "3.2.9"
+    },
+    {
+      "path": "negative/behavioral-contract/obligation-no-evidence-no-assumption",
+      "document_kind": "behavioral-contract",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "behavioral-contract",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "obligations[0].evidence_refs",
+            "description_contains": "Required field is missing"
+          },
+          {
+            "category": "structural",
+            "field_path": "obligations[0].unresolved_assumption",
+            "description_contains": "Required field is missing"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "basis": "Two failed oneOf branches each lack their named required support; collect_errors recursively emits required leaf fields.",
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/behavioral-contract/obligation-no-evidence-no-assumption/input.json": "42103df808fdb97e209b3a39521406954242f9e95c0a65ddb709cb274611f96f",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/behavioral-contract/obligation-no-evidence-no-assumption/expected.json": "c55458c369415d62c5160be078972b12f4b5d766a224ff146426d447aa5d4446"
+      },
+      "status": "frozen-draft-not-admitted",
+      "batch": "3.2.9"
+    },
+    {
+      "path": "negative/behavioral-contract/invalid-behavioral-fidelity",
+      "document_kind": "behavioral-contract",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "behavioral-contract",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "obligations[0].behavioral_fidelity",
+            "description_contains": "Field does not satisfy the selected schema constraint"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "basis": "Closed five-value enum.",
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/behavioral-contract/invalid-behavioral-fidelity/input.json": "a0149b9ce6310edb6051ef7759a37766002537c60b922a327f4b49b381d91099",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/behavioral-contract/invalid-behavioral-fidelity/expected.json": "2bf8714a5ee6de6f72459c3dedfd911c3d208016bfec5617b265bf0ff79c5541"
+      },
+      "status": "frozen-draft-not-admitted",
+      "batch": "3.2.10"
+    },
+    {
+      "path": "negative/evidence-record/missing-classification",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "classification",
+            "description_contains": "Required field is missing"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "basis": "Root required classification; existing provenance satisfies the vacuous observed conditional to avoid unrelated defects.",
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/evidence-record/missing-classification/input.json": "e28b041163e90465643214b194ae512697f14035b943f06e215e3c91362a350b",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/evidence-record/missing-classification/expected.json": "42362692a75eae6a9ba41ff6a8a1da0ba6d5be9134d4d6303ed34976e364994d"
+      },
+      "status": "frozen-draft-not-admitted",
+      "batch": "3.2.11"
+    },
+    {
+      "path": "negative/evidence-record/inferred-empty-reasoning-chain",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "reasoning_chain",
+            "description_contains": "Field does not satisfy the selected schema constraint"
+          },
+          {
+            "category": "structural",
+            "field_path": "reasoning_chain",
+            "description_contains": "Field is not permitted by the selected schema"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "basis": "Inferred then reasoning_chain minItems1. Failed conditional annotations leave reasoning_chain unevaluated at the closed root; pinned source adds the second false-schema diagnostic.",
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/evidence-record/inferred-empty-reasoning-chain/input.json": "f08e4efcf4b5b2d93f494266caeb28545daa5b05df94bf4081f69e1ea84fc61a",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/evidence-record/inferred-empty-reasoning-chain/expected.json": "c4d05482b8d122044335060517e05beddfacf1f9b3e38a68632291ea36a982a4"
+      },
+      "status": "frozen-draft-not-admitted",
+      "batch": "3.2.11"
+    },
+    {
+      "path": "negative/evidence-record/unknown-empty-assumptions",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "unresolved_assumptions",
+            "description_contains": "Field does not satisfy the selected schema constraint"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "basis": "Unknown conditional minItems1.",
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/evidence-record/unknown-empty-assumptions/input.json": "d6b30e818cbf78e22c6ba468370479ae4e16b3f2289d3948fe8bf42ff266d869",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/evidence-record/unknown-empty-assumptions/expected.json": "b9b5b8fc352c470dfce64582ecb8ae6d09792a78ce65bc6e4e5c6a8399aba113"
+      },
+      "status": "frozen-draft-not-admitted",
+      "batch": "3.2.12"
+    },
+    {
+      "path": "negative/verification-result/empty-tests-array",
+      "document_kind": "verification-result",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "tests",
+            "description_contains": "Field does not satisfy the selected schema constraint"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "basis": "tests minItems1.",
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/empty-tests-array/input.json": "7be6ca737945136ac112439527fcd99a4de0ea3652c4a3663d07cc3ccd93fd32",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/empty-tests-array/expected.json": "336d7325dfc98ba1f6a49c55d24f92165c31d0c2580010eb165c730d45706cd2"
+      },
+      "status": "frozen-draft-not-admitted",
+      "batch": "3.2.13"
+    },
+    {
+      "path": "negative/verification-result/nonpass-without-failure-description",
+      "document_kind": "verification-result",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "tests[0].failure_description",
+            "description_contains": "Required field is missing"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "basis": "Nonpass test then requires failure_description.",
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/nonpass-without-failure-description/input.json": "d098af0312716caa0709b8a46e1eef8aa33f60f7bd81711c550087cc3cd3e317",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/nonpass-without-failure-description/expected.json": "cada309e1c0454a16676f671e79aa445b55460610e046adabf83b8f5d32e0f84"
+      },
+      "status": "frozen-draft-not-admitted",
+      "batch": "3.2.13"
+    },
+    {
+      "path": "negative/verification-result/acceptance-missing-approver",
+      "document_kind": "verification-result",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "acceptance.approver_identities",
+            "description_contains": "Required field is missing"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "basis": "Acceptance required claimed approver array, not authenticated approval.",
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/acceptance-missing-approver/input.json": "68ea85d2e8dde2b3fbab454982dc01a678aad482757308c92f6a25843867f46a",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/acceptance-missing-approver/expected.json": "2a6577530e563403608e9767cf25f8240609dcf94947bb8eeba58ae94a429c9f"
+      },
+      "status": "frozen-draft-not-admitted",
+      "batch": "3.2.14"
+    },
+    {
+      "path": "negative/verification-result/unknown-hash-algorithm",
+      "document_kind": "verification-result",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "candidate.content_hash.algorithm",
+            "description_contains": "Field does not satisfy the selected schema constraint"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "basis": "Closed supported digest algorithm enum.",
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/unknown-hash-algorithm/input.json": "25f6514124ff495c574a4c4b9be150335f0a9cbe4d9a2842979e4c809d536170",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/unknown-hash-algorithm/expected.json": "0b8357e8635a5988468ac2a06646d795200137f735614f3ca936136b077787b5"
+      },
+      "status": "frozen-draft-not-admitted",
+      "batch": "3.2.14"
+    },
+    {
+      "path": "negative/verification-result/missing-binding",
+      "document_kind": "verification-result",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "binding",
+            "description_contains": "Required field is missing"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "basis": "P0-C required root binding.",
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/missing-binding/input.json": "a701f5cd33170c627a8957a7c3434699a216d9c06b8576ba76ffa2a2709ecaab",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/missing-binding/expected.json": "66e3a34edccf8fcba97ce8cab64ed5dc00b48ce8dbb87492fe7ab8b51af974a4"
+      },
+      "status": "frozen-draft-not-admitted",
+      "batch": "3.2.15"
+    },
+    {
+      "path": "negative/verification-result/missing-configuration",
+      "document_kind": "verification-result",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "configuration",
+            "description_contains": "Required field is missing"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "basis": "P0-C required root configuration.",
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/missing-configuration/input.json": "20b6bbcd368a8e0a65313e63dc67cbade1b651d64261a055ac9b842f4cce7494",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/missing-configuration/expected.json": "9684ba9cebe959884a8b5e33a6d3517acb938bed86f919ea598ac6335ad62d9e"
+      },
+      "status": "frozen-draft-not-admitted",
+      "batch": "3.2.15"
+    },
+    {
+      "path": "negative/verification-result/nonpass-string-failure-description",
+      "document_kind": "verification-result",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "tests[0].failure_description",
+            "description_contains": "Field does not satisfy the selected schema constraint"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "basis": "P0-C failure_description must be the closed structured object, not a legacy string.",
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/nonpass-string-failure-description/input.json": "d0d30fdeebe68fe8a64b151913f53e48539165b9d17a315586f2f864ee03cedd",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/nonpass-string-failure-description/expected.json": "01fbec243921a778fbce38fb028940e6a56d048aa7f1b5c986e6e49f82e0c48e"
+      },
+      "status": "frozen-draft-not-admitted",
+      "batch": "3.2.16"
+    },
+    {
+      "path": "negative/verification-result/missing-test-obligation",
+      "document_kind": "verification-result",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "tests[0].obligation_ids",
+            "description_contains": "Required field is missing"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "basis": "P0-C every test requires obligation_ids.",
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/missing-test-obligation/input.json": "40cf9acb108c14a6bb04cd230f2e0ec6a8a34fb7156a7562492712196e80a00e",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/missing-test-obligation/expected.json": "282193e1b15320f19722af0a86da80585f1cfb1c9acddddd0b30215b9467f423"
+      },
+      "status": "frozen-draft-not-admitted",
+      "batch": "3.2.16"
+    },
+    {
+      "path": "negative/pack-manifest/missing-toolchain-for-full-operation",
+      "document_kind": "manifest",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "semantic",
+            "field_path": "toolchain",
+            "description_contains": "Full or partial operations require a nonempty toolchain"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "basis": "ManifestValidator nonempty-toolchain local rule for full operation.",
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/pack-manifest/missing-toolchain-for-full-operation/input.toml": "175e59a1eed43785f33048a82c109f9bf8ff80602d23c521906e4a8af8ada963",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/pack-manifest/missing-toolchain-for-full-operation/expected.json": "a67258e923d83bf01a0cfb8019f88a1f748a531c5dde6137d43f8b0698072278"
+      },
+      "status": "frozen-draft-not-admitted",
+      "batch": "3.2.17"
+    },
+    {
+      "path": "negative/pack-manifest/invalid-behavioral-fidelity",
+      "document_kind": "manifest",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "unparseable",
+            "field_path": null,
+            "description_contains": "Manifest could not decode as the required TOML structure"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "basis": "Typed TOML ManifestFidelity closed enum; local decoder uses Unparseable/null path for rejected DTO shape.",
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/pack-manifest/invalid-behavioral-fidelity/input.toml": "bb812f357eff07710bc374975481899a8add515ee7f1166325520176a26b5790",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/pack-manifest/invalid-behavioral-fidelity/expected.json": "d3e3799459a3316fceccaae9850d017b641425a8dfd377f7fd5c1e1c161fdfc2"
+      },
+      "status": "frozen-draft-not-admitted",
+      "batch": "3.2.17"
+    },
+    {
+      "path": "negative/pack-manifest/inline-contract-body",
+      "document_kind": "manifest",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "unparseable",
+            "field_path": null,
+            "description_contains": "Manifest could not decode as the required TOML structure"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "basis": "contracts.upload_object reference rejects unknown inline obligations via deny_unknown_fields; decoder error safely masks parser payload.",
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/pack-manifest/inline-contract-body/input.toml": "11307f2768bb0d30f822b1800a5e8426b3a0336d2045c3bb9d4b4209c89838b7",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/pack-manifest/inline-contract-body/expected.json": "d3e3799459a3316fceccaae9850d017b641425a8dfd377f7fd5c1e1c161fdfc2"
+      },
+      "status": "frozen-draft-not-admitted",
+      "batch": "3.2.18"
+    },
+    {
+      "path": "negative/pack-manifest/missing-capabilities",
+      "document_kind": "manifest",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "unparseable",
+            "field_path": null,
+            "description_contains": "Manifest could not decode as the required TOML structure"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "basis": "PackManifest required P0-B capabilities field; missing typed field is decoder error.",
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/pack-manifest/missing-capabilities/input.toml": "c6fd3db430389d372701c7f97c4446d43a0e3eaa9cbd924189b1528389a67277",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/pack-manifest/missing-capabilities/expected.json": "d3e3799459a3316fceccaae9850d017b641425a8dfd377f7fd5c1e1c161fdfc2"
+      },
+      "status": "frozen-draft-not-admitted",
+      "batch": "3.2.18"
+    },
+    {
+      "path": "negative/pack-manifest/unknown-capability-version",
+      "document_kind": "manifest",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "unsupported-version",
+            "field_path": "capabilities.format_version",
+            "description_contains": "Capability declaration version is not supported"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "basis": "Exact admitted capability version profile, distinct from general pack SemVer syntax.",
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/pack-manifest/unknown-capability-version/input.toml": "31408275e907f9ecd294fd97e9d67578000fb0ae6da9f5a3deaec6f6f7f1079f",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/pack-manifest/unknown-capability-version/expected.json": "33495bca9bb0952f7f4c3ffe70395d5b313a515a12e6114212643913920b82b5"
+      },
+      "status": "frozen-draft-not-admitted",
+      "batch": "3.2.19"
+    },
+    {
+      "path": "negative/pack-manifest/duplicate-capability-id",
+      "document_kind": "manifest",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "semantic",
+            "field_path": "capabilities.requirements[1].id",
+            "description_contains": "Capability requirement identifier must be unique"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "basis": "ManifestValidator unique capability ID set; both entries otherwise locally valid.",
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/pack-manifest/duplicate-capability-id/input.toml": "9e4a9cd2886f1f034a766aeaacd9ee751ea3509f43619a7abf1833e1378cc874",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/pack-manifest/duplicate-capability-id/expected.json": "ecee74aa0009ea52ca8224e5906fab1aa6f787434f3649c8d005ac454054c873"
+      },
+      "status": "frozen-draft-not-admitted",
+      "batch": "3.2.19"
+    },
+    {
+      "path": "negative/pack-manifest/capability-unknown-field",
+      "document_kind": "manifest",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "unparseable",
+            "field_path": null,
+            "description_contains": "Manifest could not decode as the required TOML structure"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "basis": "CapabilityRequirement deny_unknown_fields; closed requested-capability DTO, no extension fallback.",
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/pack-manifest/capability-unknown-field/input.toml": "ab37a59b798f282de120a000b7c065aab5b2cefacb002acf616e3fd2f58a9a81",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/pack-manifest/capability-unknown-field/expected.json": "d3e3799459a3316fceccaae9850d017b641425a8dfd377f7fd5c1e1c161fdfc2"
+      },
+      "status": "frozen-draft-not-admitted",
+      "batch": "3.2.20"
+    },
+    {
+      "path": "negative/version/unsupported-major",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "unsupported-major-version",
+            "field_path": "format_version",
+            "description_contains": "unsupported-major-version \"99.0.0\"; see .kiro/specs/contracts-evidence-foundation/requirements.md#requirement-7-compatibility-policy"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "basis": "Canonical task19 requires unsupported-major-version at format_version; source early version guard. Strengthened substring also covers required compatibility-document reference; exact source early version guard text.",
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/version/unsupported-major/input.json": "f7632714d7024531d04f59bb883095a8b1c0bfb6bfa97cb48a8ce3c464ab267e",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/version/unsupported-major/expected.json": "ad6ede655dd184613e018345fa4904ad0e1df2f45f57abad08304eb4460cddbc"
+      },
+      "status": "frozen-draft-not-admitted",
+      "batch": "3.2.21"
+    },
+    {
+      "path": "negative/version/unsupported-minor-newer",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "warn",
+        "errors": [],
+        "warnings": [
+          {
+            "field_name_verbatim": "format_version",
+            "description_contains": "1.99.0"
+          }
+        ],
+        "blockers": []
+      },
+      "basis": "Canonical approved root-only newer stable MINOR fallback warns, not fail or acceptance.",
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/version/unsupported-minor-newer/input.json": "31dcf04f94b6de851c1fd5ddb4f999d468630e55b6d483dcb9c5197e38c698a3",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/version/unsupported-minor-newer/expected.json": "3978b891e723ef1e2d42e0dfa21b5c7c4056dde4c48e4003d6f8c44ca8e97bc8"
+      },
+      "status": "frozen-draft-not-admitted",
+      "batch": "3.2.21"
+    }
+  ],
+  "sources": {
+    ".kiro/specs/contracts-evidence-foundation/tasks.md": "61368aab0999886c6174670036497defc30748797a519992a816a7c9724c1b4e",
+    ".kiro/specs/contracts-evidence-foundation/requirements.md": "0661b986d02452b9d87f90fac0f9842baadc50d257ab8b0c5096d5ac7779256e",
+    ".kiro/specs/contracts-evidence-foundation/design.md": "03689e9ff40afa45b34e68312abab27f469c6cc087b89cc80638775ff8e70d30",
+    "crates/clouddialect-contracts/src/validator/structural.rs": "5671449f115fb1aa258372269ba046948d7aaa91c9cb366a8ad50a209e6ee14b",
+    "crates/clouddialect-contracts/src/manifest/validator.rs": "9fd00bd67f5ae3b24ac2b7607d7948ed92e5a5c842d0d01aaca8838ef711c33a",
+    "crates/clouddialect-contracts/src/manifest/types.rs": "bef4faeedc7f282dbed57674e57e1582516ae8121b048037e25a4b96dc815ae2",
+    "catalog/schemas/behavioral-contract/1.0/schema.json": "4a159debf540e781bb4dfed001e31f6c68915876ab0bc9cd9f52ffb143f77f53",
+    "catalog/schemas/evidence-record/1.0/schema.json": "d25acf15e02251188dfca4f34774699a326de1c8ef629c226f34cba6c6158df3",
+    "catalog/schemas/verification-result/1.0/schema.json": "c6246397e248f89fecae1639ae838153a88946b9cdfa15dde15de1b3e6b06ba9"
+  },
+  "case_count": 23,
+  "batch_count": 13,
+  "claims": "22 fail plus one warn; malformed typed manifest structure currently uses decoder category unparseable/null field path. No broad acceptance/security/native claim.",
+  "oracle_revision": "oracle-refinement.json",
+  "compatibility_reference_strengthened_before_recheck": true
+}

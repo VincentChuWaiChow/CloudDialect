@@ -1,0 +1,9 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440000",
+  "format_version": "1.99.0",
+  "claim": "A source claim inferred from the stated reasoning.",
+  "classification": "inferred",
+  "reasoning_chain": [
+    "Explicit inference; not an authenticated observation."
+  ]
+}

@@ -2,7 +2,7 @@
   "title": "Conformance prerequisite continuation",
   "slug": "conformance-continuation",
   "created_at": "2026-10-23T18:44:04+00:00",
-  "updated_at": "2026-10-24T03:08:58.311010+00:00",
+  "updated_at": "2026-10-24T03:19:25.475180+00:00",
   "status": "waiting_for_approval",
   "mode": "delegated",
   "baseline_ref": "5dc25f3f31ce500d17aa2322793d3a970f9b73d9",
@@ -229,6 +229,15 @@
     "status": "19 actual temporary-root checks matched; 12 drafts ready, not admitted",
     "proposal": "positive-preparation/admission-proposal.md",
     "checks": "positive-preparation/verification.json",
+    "canonical_count": 1,
+    "new_agents": 0
+  },
+  "negative_preparation": {
+    "status": "23 cases frozen and 41 actual controls matched; not admitted",
+    "initial_oracle_match": "22/23; one source-justified draft correction retained",
+    "proposal": "negative-preparation/admission-proposal.md",
+    "checks": "negative-preparation/verification.json",
+    "no_new_approval_question": "Positive admission question still pending; negative proposal does not expand it",
     "canonical_count": 1,
     "new_agents": 0
   }

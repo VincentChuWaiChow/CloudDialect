@@ -1,0 +1,369 @@
+{
+  "created_at": "2026-10-24T03:17:50.542687+00:00",
+  "status": "Verified frozen draft oracles, not approved canonical admission",
+  "case_count": 23,
+  "expected_fail_cases": 22,
+  "expected_warn_cases": 1,
+  "batch_count": 13,
+  "checks": 41,
+  "matched": 41,
+  "results": [
+    {
+      "name": "all-negative-drafts",
+      "exit_code": 0,
+      "expected_rejection": false,
+      "expected_count": 23,
+      "matched": true,
+      "output": "PASS negative/behavioral-contract/invalid-behavioral-fidelity\nPASS negative/behavioral-contract/missing-id\nPASS negative/behavioral-contract/obligation-no-evidence-no-assumption\nPASS negative/evidence-record/inferred-empty-reasoning-chain\nPASS negative/evidence-record/missing-classification\nPASS negative/evidence-record/unknown-empty-assumptions\nPASS negative/pack-manifest/capability-unknown-field\nPASS negative/pack-manifest/duplicate-capability-id\nPASS negative/pack-manifest/inline-contract-body\nPASS negative/pack-manifest/invalid-behavioral-fidelity\nPASS negative/pack-manifest/missing-capabilities\nPASS negative/pack-manifest/missing-toolchain-for-full-operation\nPASS negative/pack-manifest/unknown-capability-version\nPASS negative/verification-result/acceptance-missing-approver\nPASS negative/verification-result/empty-tests-array\nPASS negative/verification-result/missing-binding\nPASS negative/verification-result/missing-configuration\nPASS negative/verification-result/missing-test-obligation\nPASS negative/verification-result/nonpass-string-failure-description\nPASS negative/verification-result/nonpass-without-failure-description\nPASS negative/verification-result/unknown-hash-algorithm\nPASS negative/version/unsupported-major\nPASS negative/version/unsupported-minor-newer\n23 conformance fixtures passed\n"
+    },
+    {
+      "name": "bounded-batch-3.2.9",
+      "exit_code": 0,
+      "expected_rejection": false,
+      "expected_count": 2,
+      "matched": true,
+      "output": "PASS negative/behavioral-contract/missing-id\nPASS negative/behavioral-contract/obligation-no-evidence-no-assumption\n2 conformance fixtures passed\n"
+    },
+    {
+      "name": "bounded-batch-3.2.10",
+      "exit_code": 0,
+      "expected_rejection": false,
+      "expected_count": 1,
+      "matched": true,
+      "output": "PASS negative/behavioral-contract/invalid-behavioral-fidelity\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "bounded-batch-3.2.11",
+      "exit_code": 0,
+      "expected_rejection": false,
+      "expected_count": 2,
+      "matched": true,
+      "output": "PASS negative/evidence-record/inferred-empty-reasoning-chain\nPASS negative/evidence-record/missing-classification\n2 conformance fixtures passed\n"
+    },
+    {
+      "name": "bounded-batch-3.2.12",
+      "exit_code": 0,
+      "expected_rejection": false,
+      "expected_count": 1,
+      "matched": true,
+      "output": "PASS negative/evidence-record/unknown-empty-assumptions\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "bounded-batch-3.2.13",
+      "exit_code": 0,
+      "expected_rejection": false,
+      "expected_count": 2,
+      "matched": true,
+      "output": "PASS negative/verification-result/empty-tests-array\nPASS negative/verification-result/nonpass-without-failure-description\n2 conformance fixtures passed\n"
+    },
+    {
+      "name": "bounded-batch-3.2.14",
+      "exit_code": 0,
+      "expected_rejection": false,
+      "expected_count": 2,
+      "matched": true,
+      "output": "PASS negative/verification-result/acceptance-missing-approver\nPASS negative/verification-result/unknown-hash-algorithm\n2 conformance fixtures passed\n"
+    },
+    {
+      "name": "bounded-batch-3.2.15",
+      "exit_code": 0,
+      "expected_rejection": false,
+      "expected_count": 2,
+      "matched": true,
+      "output": "PASS negative/verification-result/missing-binding\nPASS negative/verification-result/missing-configuration\n2 conformance fixtures passed\n"
+    },
+    {
+      "name": "bounded-batch-3.2.16",
+      "exit_code": 0,
+      "expected_rejection": false,
+      "expected_count": 2,
+      "matched": true,
+      "output": "PASS negative/verification-result/missing-test-obligation\nPASS negative/verification-result/nonpass-string-failure-description\n2 conformance fixtures passed\n"
+    },
+    {
+      "name": "bounded-batch-3.2.17",
+      "exit_code": 0,
+      "expected_rejection": false,
+      "expected_count": 2,
+      "matched": true,
+      "output": "PASS negative/pack-manifest/invalid-behavioral-fidelity\nPASS negative/pack-manifest/missing-toolchain-for-full-operation\n2 conformance fixtures passed\n"
+    },
+    {
+      "name": "bounded-batch-3.2.18",
+      "exit_code": 0,
+      "expected_rejection": false,
+      "expected_count": 2,
+      "matched": true,
+      "output": "PASS negative/pack-manifest/inline-contract-body\nPASS negative/pack-manifest/missing-capabilities\n2 conformance fixtures passed\n"
+    },
+    {
+      "name": "bounded-batch-3.2.19",
+      "exit_code": 0,
+      "expected_rejection": false,
+      "expected_count": 2,
+      "matched": true,
+      "output": "PASS negative/pack-manifest/duplicate-capability-id\nPASS negative/pack-manifest/unknown-capability-version\n2 conformance fixtures passed\n"
+    },
+    {
+      "name": "bounded-batch-3.2.20",
+      "exit_code": 0,
+      "expected_rejection": false,
+      "expected_count": 1,
+      "matched": true,
+      "output": "PASS negative/pack-manifest/capability-unknown-field\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "bounded-batch-3.2.21",
+      "exit_code": 0,
+      "expected_rejection": false,
+      "expected_count": 2,
+      "matched": true,
+      "output": "PASS negative/version/unsupported-major\nPASS negative/version/unsupported-minor-newer\n2 conformance fixtures passed\n"
+    },
+    {
+      "name": "valid-derivative-rejects-negative-oracle:negative/behavioral-contract/missing-id",
+      "exit_code": 1,
+      "expected_rejection": true,
+      "expected_count": null,
+      "matched": true,
+      "output": "/tmp/clouddialect-negative-positive-control-7d4br32t/negative/behavioral-contract/missing-id: fixture validator exit status: 1: /tmp/clouddialect-negative-positive-control-7d4br32t/negative/behavioral-contract/missing-id: outcome: expected \"fail\", actual \"pass\"\n\n",
+      "rejection_is_exact_oracle_mismatch_not_setup_failure": true
+    },
+    {
+      "name": "valid-derivative-rejects-negative-oracle:negative/behavioral-contract/obligation-no-evidence-no-assumption",
+      "exit_code": 1,
+      "expected_rejection": true,
+      "expected_count": null,
+      "matched": true,
+      "output": "/tmp/clouddialect-negative-positive-control-jxx5si9b/negative/behavioral-contract/obligation-no-evidence-no-assumption: fixture validator exit status: 1: /tmp/clouddialect-negative-positive-control-jxx5si9b/negative/behavioral-contract/obligation-no-evidence-no-assumption: outcome: expected \"fail\", actual \"pass\"\n\n",
+      "rejection_is_exact_oracle_mismatch_not_setup_failure": true
+    },
+    {
+      "name": "valid-derivative-rejects-negative-oracle:negative/behavioral-contract/invalid-behavioral-fidelity",
+      "exit_code": 1,
+      "expected_rejection": true,
+      "expected_count": null,
+      "matched": true,
+      "output": "/tmp/clouddialect-negative-positive-control-0yhj_hkn/negative/behavioral-contract/invalid-behavioral-fidelity: fixture validator exit status: 1: /tmp/clouddialect-negative-positive-control-0yhj_hkn/negative/behavioral-contract/invalid-behavioral-fidelity: outcome: expected \"fail\", actual \"pass\"\n\n",
+      "rejection_is_exact_oracle_mismatch_not_setup_failure": true
+    },
+    {
+      "name": "valid-derivative-rejects-negative-oracle:negative/evidence-record/missing-classification",
+      "exit_code": 1,
+      "expected_rejection": true,
+      "expected_count": null,
+      "matched": true,
+      "output": "/tmp/clouddialect-negative-positive-control-ofh0tyei/negative/evidence-record/missing-classification: fixture validator exit status: 1: /tmp/clouddialect-negative-positive-control-ofh0tyei/negative/evidence-record/missing-classification: outcome: expected \"fail\", actual \"pass\"\n\n",
+      "rejection_is_exact_oracle_mismatch_not_setup_failure": true
+    },
+    {
+      "name": "valid-derivative-rejects-negative-oracle:negative/evidence-record/inferred-empty-reasoning-chain",
+      "exit_code": 1,
+      "expected_rejection": true,
+      "expected_count": null,
+      "matched": true,
+      "output": "/tmp/clouddialect-negative-positive-control-o60vmsrq/negative/evidence-record/inferred-empty-reasoning-chain: fixture validator exit status: 1: /tmp/clouddialect-negative-positive-control-o60vmsrq/negative/evidence-record/inferred-empty-reasoning-chain: outcome: expected \"fail\", actual \"pass\"\n\n",
+      "rejection_is_exact_oracle_mismatch_not_setup_failure": true
+    },
+    {
+      "name": "valid-derivative-rejects-negative-oracle:negative/evidence-record/unknown-empty-assumptions",
+      "exit_code": 1,
+      "expected_rejection": true,
+      "expected_count": null,
+      "matched": true,
+      "output": "/tmp/clouddialect-negative-positive-control-0pl1tcg_/negative/evidence-record/unknown-empty-assumptions: fixture validator exit status: 1: /tmp/clouddialect-negative-positive-control-0pl1tcg_/negative/evidence-record/unknown-empty-assumptions: outcome: expected \"fail\", actual \"pass\"\n\n",
+      "rejection_is_exact_oracle_mismatch_not_setup_failure": true
+    },
+    {
+      "name": "valid-derivative-rejects-negative-oracle:negative/verification-result/empty-tests-array",
+      "exit_code": 1,
+      "expected_rejection": true,
+      "expected_count": null,
+      "matched": true,
+      "output": "/tmp/clouddialect-negative-positive-control-ndww8f_t/negative/verification-result/empty-tests-array: fixture validator exit status: 1: /tmp/clouddialect-negative-positive-control-ndww8f_t/negative/verification-result/empty-tests-array: outcome: expected \"fail\", actual \"pass\"\n\n",
+      "rejection_is_exact_oracle_mismatch_not_setup_failure": true
+    },
+    {
+      "name": "valid-derivative-rejects-negative-oracle:negative/verification-result/nonpass-without-failure-description",
+      "exit_code": 1,
+      "expected_rejection": true,
+      "expected_count": null,
+      "matched": true,
+      "output": "/tmp/clouddialect-negative-positive-control-swat0xnh/negative/verification-result/nonpass-without-failure-description: fixture validator exit status: 1: /tmp/clouddialect-negative-positive-control-swat0xnh/negative/verification-result/nonpass-without-failure-description: outcome: expected \"fail\", actual \"pass\"\n\n",
+      "rejection_is_exact_oracle_mismatch_not_setup_failure": true
+    },
+    {
+      "name": "valid-derivative-rejects-negative-oracle:negative/verification-result/acceptance-missing-approver",
+      "exit_code": 1,
+      "expected_rejection": true,
+      "expected_count": null,
+      "matched": true,
+      "output": "/tmp/clouddialect-negative-positive-control-jrz51d78/negative/verification-result/acceptance-missing-approver: fixture validator exit status: 1: /tmp/clouddialect-negative-positive-control-jrz51d78/negative/verification-result/acceptance-missing-approver: outcome: expected \"fail\", actual \"pass\"\n\n",
+      "rejection_is_exact_oracle_mismatch_not_setup_failure": true
+    },
+    {
+      "name": "valid-derivative-rejects-negative-oracle:negative/verification-result/unknown-hash-algorithm",
+      "exit_code": 1,
+      "expected_rejection": true,
+      "expected_count": null,
+      "matched": true,
+      "output": "/tmp/clouddialect-negative-positive-control-ve8pc3g9/negative/verification-result/unknown-hash-algorithm: fixture validator exit status: 1: /tmp/clouddialect-negative-positive-control-ve8pc3g9/negative/verification-result/unknown-hash-algorithm: outcome: expected \"fail\", actual \"pass\"\n\n",
+      "rejection_is_exact_oracle_mismatch_not_setup_failure": true
+    },
+    {
+      "name": "valid-derivative-rejects-negative-oracle:negative/verification-result/missing-binding",
+      "exit_code": 1,
+      "expected_rejection": true,
+      "expected_count": null,
+      "matched": true,
+      "output": "/tmp/clouddialect-negative-positive-control-96qrdn6j/negative/verification-result/missing-binding: fixture validator exit status: 1: /tmp/clouddialect-negative-positive-control-96qrdn6j/negative/verification-result/missing-binding: outcome: expected \"fail\", actual \"pass\"\n\n",
+      "rejection_is_exact_oracle_mismatch_not_setup_failure": true
+    },
+    {
+      "name": "valid-derivative-rejects-negative-oracle:negative/verification-result/missing-configuration",
+      "exit_code": 1,
+      "expected_rejection": true,
+      "expected_count": null,
+      "matched": true,
+      "output": "/tmp/clouddialect-negative-positive-control-0q9wumjx/negative/verification-result/missing-configuration: fixture validator exit status: 1: /tmp/clouddialect-negative-positive-control-0q9wumjx/negative/verification-result/missing-configuration: outcome: expected \"fail\", actual \"pass\"\n\n",
+      "rejection_is_exact_oracle_mismatch_not_setup_failure": true
+    },
+    {
+      "name": "valid-derivative-rejects-negative-oracle:negative/verification-result/nonpass-string-failure-description",
+      "exit_code": 1,
+      "expected_rejection": true,
+      "expected_count": null,
+      "matched": true,
+      "output": "/tmp/clouddialect-negative-positive-control-8_0xxep2/negative/verification-result/nonpass-string-failure-description: fixture validator exit status: 1: /tmp/clouddialect-negative-positive-control-8_0xxep2/negative/verification-result/nonpass-string-failure-description: outcome: expected \"fail\", actual \"pass\"\n\n",
+      "rejection_is_exact_oracle_mismatch_not_setup_failure": true
+    },
+    {
+      "name": "valid-derivative-rejects-negative-oracle:negative/verification-result/missing-test-obligation",
+      "exit_code": 1,
+      "expected_rejection": true,
+      "expected_count": null,
+      "matched": true,
+      "output": "/tmp/clouddialect-negative-positive-control-m2hnbbpc/negative/verification-result/missing-test-obligation: fixture validator exit status: 1: /tmp/clouddialect-negative-positive-control-m2hnbbpc/negative/verification-result/missing-test-obligation: outcome: expected \"fail\", actual \"pass\"\n\n",
+      "rejection_is_exact_oracle_mismatch_not_setup_failure": true
+    },
+    {
+      "name": "valid-derivative-rejects-negative-oracle:negative/pack-manifest/missing-toolchain-for-full-operation",
+      "exit_code": 1,
+      "expected_rejection": true,
+      "expected_count": null,
+      "matched": true,
+      "output": "/tmp/clouddialect-negative-positive-control-t57gukto/negative/pack-manifest/missing-toolchain-for-full-operation: fixture validator exit status: 1: /tmp/clouddialect-negative-positive-control-t57gukto/negative/pack-manifest/missing-toolchain-for-full-operation: outcome: expected \"fail\", actual \"pass\"\n\n",
+      "rejection_is_exact_oracle_mismatch_not_setup_failure": true
+    },
+    {
+      "name": "valid-derivative-rejects-negative-oracle:negative/pack-manifest/invalid-behavioral-fidelity",
+      "exit_code": 1,
+      "expected_rejection": true,
+      "expected_count": null,
+      "matched": true,
+      "output": "/tmp/clouddialect-negative-positive-control-srasg76n/negative/pack-manifest/invalid-behavioral-fidelity: fixture validator exit status: 1: /tmp/clouddialect-negative-positive-control-srasg76n/negative/pack-manifest/invalid-behavioral-fidelity: outcome: expected \"fail\", actual \"pass\"\n\n",
+      "rejection_is_exact_oracle_mismatch_not_setup_failure": true
+    },
+    {
+      "name": "valid-derivative-rejects-negative-oracle:negative/pack-manifest/inline-contract-body",
+      "exit_code": 1,
+      "expected_rejection": true,
+      "expected_count": null,
+      "matched": true,
+      "output": "/tmp/clouddialect-negative-positive-control-hd2el75y/negative/pack-manifest/inline-contract-body: fixture validator exit status: 1: /tmp/clouddialect-negative-positive-control-hd2el75y/negative/pack-manifest/inline-contract-body: outcome: expected \"fail\", actual \"pass\"\n\n",
+      "rejection_is_exact_oracle_mismatch_not_setup_failure": true
+    },
+    {
+      "name": "valid-derivative-rejects-negative-oracle:negative/pack-manifest/missing-capabilities",
+      "exit_code": 1,
+      "expected_rejection": true,
+      "expected_count": null,
+      "matched": true,
+      "output": "/tmp/clouddialect-negative-positive-control-qpvuqxfy/negative/pack-manifest/missing-capabilities: fixture validator exit status: 1: /tmp/clouddialect-negative-positive-control-qpvuqxfy/negative/pack-manifest/missing-capabilities: outcome: expected \"fail\", actual \"pass\"\n\n",
+      "rejection_is_exact_oracle_mismatch_not_setup_failure": true
+    },
+    {
+      "name": "valid-derivative-rejects-negative-oracle:negative/pack-manifest/unknown-capability-version",
+      "exit_code": 1,
+      "expected_rejection": true,
+      "expected_count": null,
+      "matched": true,
+      "output": "/tmp/clouddialect-negative-positive-control-o3c_3sn3/negative/pack-manifest/unknown-capability-version: fixture validator exit status: 1: /tmp/clouddialect-negative-positive-control-o3c_3sn3/negative/pack-manifest/unknown-capability-version: outcome: expected \"fail\", actual \"pass\"\n\n",
+      "rejection_is_exact_oracle_mismatch_not_setup_failure": true
+    },
+    {
+      "name": "valid-derivative-rejects-negative-oracle:negative/pack-manifest/duplicate-capability-id",
+      "exit_code": 1,
+      "expected_rejection": true,
+      "expected_count": null,
+      "matched": true,
+      "output": "/tmp/clouddialect-negative-positive-control-r9edklch/negative/pack-manifest/duplicate-capability-id: fixture validator exit status: 1: /tmp/clouddialect-negative-positive-control-r9edklch/negative/pack-manifest/duplicate-capability-id: outcome: expected \"fail\", actual \"pass\"\n\n",
+      "rejection_is_exact_oracle_mismatch_not_setup_failure": true
+    },
+    {
+      "name": "valid-derivative-rejects-negative-oracle:negative/pack-manifest/capability-unknown-field",
+      "exit_code": 1,
+      "expected_rejection": true,
+      "expected_count": null,
+      "matched": true,
+      "output": "/tmp/clouddialect-negative-positive-control-1vz3ejqn/negative/pack-manifest/capability-unknown-field: fixture validator exit status: 1: /tmp/clouddialect-negative-positive-control-1vz3ejqn/negative/pack-manifest/capability-unknown-field: outcome: expected \"fail\", actual \"pass\"\n\n",
+      "rejection_is_exact_oracle_mismatch_not_setup_failure": true
+    },
+    {
+      "name": "valid-derivative-rejects-negative-oracle:negative/version/unsupported-major",
+      "exit_code": 1,
+      "expected_rejection": true,
+      "expected_count": null,
+      "matched": true,
+      "output": "/tmp/clouddialect-negative-positive-control-ffpziwsy/negative/version/unsupported-major: fixture validator exit status: 1: /tmp/clouddialect-negative-positive-control-ffpziwsy/negative/version/unsupported-major: outcome: expected \"fail\", actual \"pass\"\n\n",
+      "rejection_is_exact_oracle_mismatch_not_setup_failure": true
+    },
+    {
+      "name": "valid-derivative-rejects-negative-oracle:negative/version/unsupported-minor-newer",
+      "exit_code": 1,
+      "expected_rejection": true,
+      "expected_count": null,
+      "matched": true,
+      "output": "/tmp/clouddialect-negative-positive-control-f_jpc8ni/negative/version/unsupported-minor-newer: fixture validator exit status: 1: /tmp/clouddialect-negative-positive-control-f_jpc8ni/negative/version/unsupported-minor-newer: outcome: expected \"warn\", actual \"pass\"\n\n",
+      "rejection_is_exact_oracle_mismatch_not_setup_failure": true
+    },
+    {
+      "name": "wrong-category",
+      "exit_code": 1,
+      "expected_rejection": true,
+      "expected_count": null,
+      "matched": true,
+      "output": "/tmp/clouddialect-negative-oracle-control-5juhwl0n/negative/behavioral-contract/missing-id: fixture validator exit status: 1: /tmp/clouddialect-negative-oracle-control-5juhwl0n/negative/behavioral-contract/missing-id: errors: expected [Object {\"category\": String(\"semantic\"), \"description_contains\": String(\"Required field is missing\"), \"field_path\": String(\"id\")}], actual [Object {\"byte_offset\": Null, \"category\": String(\"structural\"), \"description\": String(\"Required field is missing\"), \"document_id\": Null, \"field_path\": String(\"id\"), \"format_version\": String(\"1.0.0\")}]\n\n",
+      "rejection_is_exact_oracle_mismatch_not_setup_failure": true
+    },
+    {
+      "name": "wrong-path",
+      "exit_code": 1,
+      "expected_rejection": true,
+      "expected_count": null,
+      "matched": true,
+      "output": "/tmp/clouddialect-negative-oracle-control-p3wn2ovc/negative/pack-manifest/unknown-capability-version: fixture validator exit status: 1: /tmp/clouddialect-negative-oracle-control-p3wn2ovc/negative/pack-manifest/unknown-capability-version: errors: expected [Object {\"category\": String(\"unsupported-version\"), \"description_contains\": String(\"Capability declaration version is not supported\"), \"field_path\": String(\"pack.version\")}], actual [Object {\"byte_offset\": Null, \"category\": String(\"unsupported-version\"), \"description\": String(\"Capability declaration version is not supported\"), \"document_id\": String(\"io.fixture.synthetic-pack\"), \"field_path\": String(\"capabilities.format_version\"), \"format_version\": Null}]\n\n",
+      "rejection_is_exact_oracle_mismatch_not_setup_failure": true
+    },
+    {
+      "name": "warn-not-fail",
+      "exit_code": 1,
+      "expected_rejection": true,
+      "expected_count": null,
+      "matched": true,
+      "output": "/tmp/clouddialect-negative-oracle-control-5okfmplj/negative/version/unsupported-minor-newer: fixture validator exit status: 1: /tmp/clouddialect-negative-oracle-control-5okfmplj/negative/version/unsupported-minor-newer: outcome: expected \"fail\", actual \"warn\"\n\n",
+      "rejection_is_exact_oracle_mismatch_not_setup_failure": true
+    },
+    {
+      "name": "full-negative-recheck-with-compatibility-reference",
+      "exit_code": 0,
+      "expected_count": 23,
+      "expected_rejection": false,
+      "matched": true,
+      "output": "PASS negative/behavioral-contract/invalid-behavioral-fidelity\nPASS negative/behavioral-contract/missing-id\nPASS negative/behavioral-contract/obligation-no-evidence-no-assumption\nPASS negative/evidence-record/inferred-empty-reasoning-chain\nPASS negative/evidence-record/missing-classification\nPASS negative/evidence-record/unknown-empty-assumptions\nPASS negative/pack-manifest/capability-unknown-field\nPASS negative/pack-manifest/duplicate-capability-id\nPASS negative/pack-manifest/inline-contract-body\nPASS negative/pack-manifest/invalid-behavioral-fidelity\nPASS negative/pack-manifest/missing-capabilities\nPASS negative/pack-manifest/missing-toolchain-for-full-operation\nPASS negative/pack-manifest/unknown-capability-version\nPASS negative/verification-result/acceptance-missing-approver\nPASS negative/verification-result/empty-tests-array\nPASS negative/verification-result/missing-binding\nPASS negative/verification-result/missing-configuration\nPASS negative/verification-result/missing-test-obligation\nPASS negative/verification-result/nonpass-string-failure-description\nPASS negative/verification-result/nonpass-without-failure-description\nPASS negative/verification-result/unknown-hash-algorithm\nPASS negative/version/unsupported-major\nPASS negative/version/unsupported-minor-newer\n23 conformance fixtures passed\n"
+    }
+  ],
+  "canonical_fixture_count": 1,
+  "executable_sha256": "5e6347020992e301d580db91c0eaf60ddb347bfb86c4f6ff5e936226173e763a",
+  "strict_rejection_context_verified": true
+}
