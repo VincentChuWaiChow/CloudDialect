@@ -1,0 +1,81 @@
+{
+  "title": "Adversarial draft preparation",
+  "slug": "adversarial-preparation",
+  "created_at": "2026-10-24T10:52:04.353010+00:00",
+  "updated_at": "2026-10-24T10:59:30.509572+00:00",
+  "deadline": "2026-10-24T11:21:56Z",
+  "status": "complete",
+  "mode": "delegated",
+  "baseline_ref": "30862a88fad6687a11e50b9d60b62adb55388050",
+  "risk_level": "medium",
+  "eval_contract": {
+    "level": "inline",
+    "path": "plan.md",
+    "status": "checked"
+  },
+  "approval": {
+    "required": false,
+    "granted": null,
+    "notes": "Read-only/local drafts only; exact canonical admission unapproved"
+  },
+  "delegation": {
+    "native_agent_available": true,
+    "native_agent_planned": true,
+    "native_agent_used": true,
+    "agent_count": 2,
+    "wave_count": 2,
+    "cumulative_before": 36,
+    "planned_limit": 2,
+    "no_delegation_reason": ""
+  },
+  "packets": [
+    {
+      "id": "37-p0-authority-oracles",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/37-p0-authority-oracles.md"
+    },
+    {
+      "id": "38-adversarial-final-review",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/38-adversarial-final-review.md"
+    }
+  ],
+  "verification": {
+    "status": "draft-readiness-pass-not-admitted",
+    "checks": [
+      {
+        "name": "original26",
+        "status": "pass",
+        "evidence": "verification-initial.json"
+      },
+      {
+        "name": "parent65controls",
+        "status": "pass",
+        "evidence": "verification-controls.json"
+      },
+      {
+        "name": "content-schema-hashes105",
+        "status": "pass",
+        "evidence": "criteria-audit.json"
+      },
+      {
+        "name": "independent37/38",
+        "status": "pass",
+        "evidence": "results/37-p0-authority-oracles.md;results/38-adversarial-final-review.md"
+      },
+      {
+        "name": "scope-preservation",
+        "status": "pass",
+        "evidence": "results/final-scope.json"
+      }
+    ]
+  },
+  "draft_repairs_used": 0,
+  "draft_count": 26,
+  "draft_files": 52,
+  "canonical_admission_approved": false
+}

@@ -1,0 +1,19 @@
+{
+  "phase": "structural",
+  "document_kind": "evidence-record",
+  "outcome": "fail",
+  "errors": [
+    {
+      "category": "structural",
+      "field_path": "[\"a:field\"]",
+      "description_contains": "Field is not permitted by the selected schema"
+    },
+    {
+      "category": "structural",
+      "field_path": "[\"a:field\"]",
+      "description_contains": "Extension prefix must match [A-Za-z][A-Za-z0-9-]+"
+    }
+  ],
+  "warnings": [],
+  "blockers": []
+}

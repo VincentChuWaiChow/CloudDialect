@@ -1,0 +1,590 @@
+{
+  "created_at": "2026-10-24T10:53:39.759814+00:00",
+  "status": "26 exact source-derived draft oracles frozen before actual runner execution; canonical admission NOT approved",
+  "cases": [
+    {
+      "path": "adversarial/extension-namespace/reserved-exact-match/correctly-handled",
+      "batch": "3.2.22",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [
+          {
+            "field_name_verbatim": "core:field",
+            "description_contains": "reserved for core use"
+          },
+          {
+            "field_name_verbatim": "cdc:field",
+            "description_contains": "reserved for core use"
+          }
+        ],
+        "blockers": []
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/reserved-exact-match/correctly-handled/input.json": "d292a376416912545c4ced7eb001e940431bfcb058102e155fe47fe62133ae85",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/reserved-exact-match/correctly-handled/expected.json": "ec9bb0075a9179ed7a8116bd241171035c8397ebae80f4b576b8c1ce3eb49b67"
+      },
+      "notes": "Reserved prefix alone warns, never fails."
+    },
+    {
+      "path": "adversarial/extension-namespace/reserved-exact-match/correctly-rejected",
+      "batch": "3.2.22",
+      "oracle": {
+        "phase": "semantic",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "blocking-gap",
+            "field_path": "required_extensions[0]",
+            "description_contains": "Unrecognized mandatory extension namespace \"acme\"; acceptance is blocked"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/reserved-exact-match/correctly-rejected/input.json": "5527971538da4b0969d4fdd97a3c6f1f8af182031f1e76987c8e23d305211c64",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/reserved-exact-match/correctly-rejected/expected.json": "a53f97df8df16e1c6362a4909529b1ae739d66456a9d95de8eabc643bbf6c0ad"
+      },
+      "notes": "Valid reserved payload claims cannot clear a separately declared unknown mandatory namespace. No rejection merely for reserved spelling."
+    },
+    {
+      "path": "adversarial/extension-namespace/reserved-uppercase-bypass/correctly-handled",
+      "batch": "3.2.23",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [
+          {
+            "field_name_verbatim": "CORE:field",
+            "description_contains": "reserved for core use"
+          },
+          {
+            "field_name_verbatim": "CDC:field",
+            "description_contains": "reserved for core use"
+          }
+        ],
+        "blockers": []
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/reserved-uppercase-bypass/correctly-handled/input.json": "2cb68ac06c58824be6c451a17aeecf875fec1baad3ca5d1c107d9f2a82dec0de",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/reserved-uppercase-bypass/correctly-handled/expected.json": "b0f2670efdb5b938a7fda5ca50a6d2e46c0a2d77c5c78b3d348282d05be541ae"
+      },
+      "notes": "Reserved prefix alone warns, never fails."
+    },
+    {
+      "path": "adversarial/extension-namespace/reserved-uppercase-bypass/correctly-rejected",
+      "batch": "3.2.23",
+      "oracle": {
+        "phase": "semantic",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "blocking-gap",
+            "field_path": "required_extensions[0]",
+            "description_contains": "Unrecognized mandatory extension namespace \"acme\"; acceptance is blocked"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/reserved-uppercase-bypass/correctly-rejected/input.json": "a4c2b9765afe7137f79fd553e56dbed5f29f680cf7b549d40cb3b17de8ca6f69",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/reserved-uppercase-bypass/correctly-rejected/expected.json": "a53f97df8df16e1c6362a4909529b1ae739d66456a9d95de8eabc643bbf6c0ad"
+      },
+      "notes": "Valid reserved payload claims cannot clear a separately declared unknown mandatory namespace. No rejection merely for reserved spelling."
+    },
+    {
+      "path": "adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-handled",
+      "batch": "3.2.24",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [
+          {
+            "field_name_verbatim": "Core-Validation:field",
+            "description_contains": "reserved for core use"
+          },
+          {
+            "field_name_verbatim": "Cdc-Evidence:field",
+            "description_contains": "reserved for core use"
+          }
+        ],
+        "blockers": []
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-handled/input.json": "3b2e97f9a1ab1c252f0313208f79589325f85ee11b48c432e860121b35efb9ec",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-handled/expected.json": "03adf41856146796a305f68432ceecb3f10c4592c1c226ced864ec4f37fd020f"
+      },
+      "notes": "Reserved prefix alone warns, never fails."
+    },
+    {
+      "path": "adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-rejected",
+      "batch": "3.2.24",
+      "oracle": {
+        "phase": "semantic",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "blocking-gap",
+            "field_path": "required_extensions[0]",
+            "description_contains": "Unrecognized mandatory extension namespace \"acme\"; acceptance is blocked"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-rejected/input.json": "c44832abe3da546597a9f82a3349fd5c13ff317b6919e9d8052f287f0d775a1c",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-rejected/expected.json": "a53f97df8df16e1c6362a4909529b1ae739d66456a9d95de8eabc643bbf6c0ad"
+      },
+      "notes": "Valid reserved payload claims cannot clear a separately declared unknown mandatory namespace. No rejection merely for reserved spelling."
+    },
+    {
+      "path": "adversarial/extension-namespace/namespace-collision/correctly-handled",
+      "batch": "3.2.25",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": [],
+        "round_trip": true
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/namespace-collision/correctly-handled/input.json": "2787777df33632bf19bfde1b739ddfa8b0cb9d78a7b44f3347f1bb974b5f1c23",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/namespace-collision/correctly-handled/expected.json": "b13ff786fccf1cd540f53ae532bacf3b66a1fe3cfadf2ecc03e1673692e28f51"
+      },
+      "notes": "Two acme fields preserved, not registry ownership/collision authentication."
+    },
+    {
+      "path": "adversarial/extension-namespace/namespace-collision/untrusted-claim-author-a",
+      "batch": "3.2.25",
+      "oracle": {
+        "phase": "semantic",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "blocking-gap",
+            "field_path": "required_extensions[0]",
+            "description_contains": "Unrecognized mandatory extension namespace \"acme\"; acceptance is blocked"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/namespace-collision/untrusted-claim-author-a/input.json": "df8646f8b7fb624d7f4c15e159af0cdb7ef5150c51f21c04fdcae6fbc682296c",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/namespace-collision/untrusted-claim-author-a/expected.json": "a53f97df8df16e1c6362a4909529b1ae739d66456a9d95de8eabc643bbf6c0ad"
+      },
+      "notes": "Owner approved local nontrust profile2026-10-24: independent A/B reserved-qualified claims cannot recognize unknown mandatory acme. Not cross-document conflict detection/authenticated ownership; fixture freeze/admission remains pending."
+    },
+    {
+      "path": "adversarial/extension-namespace/namespace-collision/untrusted-claim-author-b",
+      "batch": "3.2.26",
+      "oracle": {
+        "phase": "semantic",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "blocking-gap",
+            "field_path": "required_extensions[0]",
+            "description_contains": "Unrecognized mandatory extension namespace \"acme\"; acceptance is blocked"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/namespace-collision/untrusted-claim-author-b/input.json": "728101459fbefe2937188381901b9751e93d0bb0840de39668bb8cbea2f0062c",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/namespace-collision/untrusted-claim-author-b/expected.json": "a53f97df8df16e1c6362a4909529b1ae739d66456a9d95de8eabc643bbf6c0ad"
+      },
+      "notes": "Owner approved local nontrust profile2026-10-24: independent A/B reserved-qualified claims cannot recognize unknown mandatory acme. Not cross-document conflict detection/authenticated ownership; fixture freeze/admission remains pending."
+    },
+    {
+      "path": "adversarial/extension-namespace/invalid-prefix-formats/correctly-handled",
+      "batch": "3.2.26",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/invalid-prefix-formats/correctly-handled/input.json": "b37817047acdb67b68cf6e341909d3f5a648e54091f8d49e62a684ba4923000f",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/invalid-prefix-formats/correctly-handled/expected.json": "cad10a80850a610f6bfe6c8e5e87aa135d5b9ba902b02ef2f7090dbb31e22f8e"
+      },
+      "notes": "Valid minimum-two-character ASCII neighbor."
+    },
+    {
+      "path": "adversarial/extension-namespace/invalid-prefix-formats/digit-start",
+      "batch": "3.2.27",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "[\"1bad:field\"]",
+            "description_contains": "Field is not permitted by the selected schema"
+          },
+          {
+            "category": "structural",
+            "field_path": "[\"1bad:field\"]",
+            "description_contains": "Extension prefix must match [A-Za-z][A-Za-z0-9-]+"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/invalid-prefix-formats/digit-start/input.json": "8e02cbab0d2a66614be5f728a9bc676f8cf8a4e0fa247b64502cfea720808701",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/invalid-prefix-formats/digit-start/expected.json": "455c163b1f280ca656896710967bd76f1e342f3d4e8c0006dbcfba7daf7de5d0"
+      },
+      "notes": "Named malformed-prefix subcase."
+    },
+    {
+      "path": "adversarial/extension-namespace/invalid-prefix-formats/space",
+      "batch": "3.2.27",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "[\"bad field:val\"]",
+            "description_contains": "Field is not permitted by the selected schema"
+          },
+          {
+            "category": "structural",
+            "field_path": "[\"bad field:val\"]",
+            "description_contains": "Extension prefix must match [A-Za-z][A-Za-z0-9-]+"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/invalid-prefix-formats/space/input.json": "7290782686bcf8d48b3c34e0105ab30773600173e7ed03b2ac0fa7434ab31116",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/invalid-prefix-formats/space/expected.json": "7f641825f11f5128b868a92cb699757625bdbf6efd223eb4c6105a8be3dae116"
+      },
+      "notes": "Named malformed-prefix subcase."
+    },
+    {
+      "path": "adversarial/extension-namespace/invalid-prefix-formats/one-character",
+      "batch": "3.2.28",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "[\"a:field\"]",
+            "description_contains": "Field is not permitted by the selected schema"
+          },
+          {
+            "category": "structural",
+            "field_path": "[\"a:field\"]",
+            "description_contains": "Extension prefix must match [A-Za-z][A-Za-z0-9-]+"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/invalid-prefix-formats/one-character/input.json": "a8fad1b00ebd49e2ea547796cd26d182eceb707ed8e69d80da29f04762e8cb8c",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/invalid-prefix-formats/one-character/expected.json": "8108b31f1261676d38366302e09c03f85d5824df2e93df74eb75b94ed6704629"
+      },
+      "notes": "Named malformed-prefix subcase."
+    },
+    {
+      "path": "adversarial/extension-namespace/unknown-optional-round-trip/correctly-handled",
+      "batch": "3.2.28",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": [],
+        "round_trip": true
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/unknown-optional-round-trip/correctly-handled/input.json": "c614e3e900f911082e2b7bb296893829014079e60151930556d2c1a6909c7442",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/unknown-optional-round-trip/correctly-handled/expected.json": "b13ff786fccf1cd540f53ae532bacf3b66a1fe3cfadf2ecc03e1673692e28f51"
+      },
+      "notes": "Escapes/number spelling/inner whitespace and member ordering retained exactly."
+    },
+    {
+      "path": "adversarial/extension-namespace/unknown-optional-round-trip/correctly-rejected",
+      "batch": "3.2.29",
+      "oracle": {
+        "phase": "semantic",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "blocking-gap",
+            "field_path": "required_extensions[0]",
+            "description_contains": "Unrecognized mandatory extension namespace \"acme\"; acceptance is blocked"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/unknown-optional-round-trip/correctly-rejected/input.json": "eb0b5499d766bb94e277094e585b3cb9d89f2ed1074c4a40696997520109b042",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/unknown-optional-round-trip/correctly-rejected/expected.json": "a53f97df8df16e1c6362a4909529b1ae739d66456a9d95de8eabc643bbf6c0ad"
+      },
+      "notes": "Optional payload/recognized claim cannot clear explicit mandatory declaration."
+    },
+    {
+      "path": "adversarial/extension-namespace/mandatory-extension-blocks-acceptance/structurally-handled",
+      "batch": "3.2.29",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/mandatory-extension-blocks-acceptance/structurally-handled/input.json": "f539b85432601e83efa4f24da04c33ef5dfe6e5f7f059b9cf891069c22750582",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/mandatory-extension-blocks-acceptance/structurally-handled/expected.json": "cad10a80850a610f6bfe6c8e5e87aa135d5b9ba902b02ef2f7090dbb31e22f8e"
+      },
+      "notes": "Declaration-only structurally valid."
+    },
+    {
+      "path": "adversarial/extension-namespace/mandatory-extension-blocks-acceptance/semantically-rejected",
+      "batch": "3.2.30",
+      "oracle": {
+        "phase": "semantic",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "blocking-gap",
+            "field_path": "required_extensions[0]",
+            "description_contains": "Unrecognized mandatory extension namespace \"unknown-ns\"; acceptance is blocked"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/mandatory-extension-blocks-acceptance/semantically-rejected/input.json": "f539b85432601e83efa4f24da04c33ef5dfe6e5f7f059b9cf891069c22750582",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/mandatory-extension-blocks-acceptance/semantically-rejected/expected.json": "b55cac93941aa90411b96fb214c8bb58d963025092a836632a50d43ba7cf6c78"
+      },
+      "notes": "Separate blocker, not structural or behavioral acceptance."
+    },
+    {
+      "path": "adversarial/extension-namespace/override-core-field-attempt/correctly-handled",
+      "batch": "3.2.30",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": [],
+        "round_trip": true
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/override-core-field-attempt/correctly-handled/input.json": "18af2c37d88f58e19648091f9adf2bf3f7c3ccb0f7856c64d0139a6f5d8925db",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/override-core-field-attempt/correctly-handled/expected.json": "58cd4b96216f9f037235211706a7b8cebcf27235c61ac9b89bfc85e8d88c0fb7"
+      },
+      "notes": "Valid core record plus inert accepted-looking extension; no acceptance authority claim."
+    },
+    {
+      "path": "adversarial/extension-namespace/override-core-field-attempt/correctly-rejected",
+      "batch": "3.2.31",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "tests[0].failure_description",
+            "description_contains": "Required field is missing"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/override-core-field-attempt/correctly-rejected/input.json": "c2c6b502b9732e27bdca7ae209c5f2f58cb6cf301f9c99114bde07afec401b98",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/extension-namespace/override-core-field-attempt/correctly-rejected/expected.json": "cada309e1c0454a16676f671e79aa445b55460610e046adabf83b8f5d32e0f84"
+      },
+      "notes": "Extension accepted string must not repair invalid core verification fields."
+    },
+    {
+      "path": "adversarial/p0-authority/x-authority-injection",
+      "batch": "3.2.32",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/p0-authority/x-authority-injection/input.toml": "8439b6b61f933bcb7eccbb68c315256cb2b615c6c4099947c9e8d7b3e6ddb67f",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/p0-authority/x-authority-injection/expected.json": "553ce3d5557b4f7139810a256e80d4474aae8af8e9bcc9c30608a874362237ee"
+      },
+      "notes": "[x] accepted/grant strings retained as inert data."
+    },
+    {
+      "path": "adversarial/p0-authority/x-capability-shadow",
+      "batch": "3.2.32",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "semantic",
+            "field_path": "x.capabilities",
+            "description_contains": "Extension field must not shadow a core top-level key"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/p0-authority/x-capability-shadow/input.toml": "2f31bd3322dbbf7065f65e0966b6bd539970f35a41f82dd573cca745f0d70180",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/p0-authority/x-capability-shadow/expected.json": "a2bae2779f195e627e530494d68182a550f9a941c730167892cf98170907bfdc"
+      },
+      "notes": "Direct x core-key shadow rejected."
+    },
+    {
+      "path": "adversarial/p0-authority/prohibited-worker-action-requests",
+      "batch": "3.2.33",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/p0-authority/prohibited-worker-action-requests/input.toml": "b4517c6415516080919de1c7583c6619c0c269af3f961fa9557fdbb9b7a51244",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/p0-authority/prohibited-worker-action-requests/expected.json": "553ce3d5557b4f7139810a256e80d4474aae8af8e9bcc9c30608a874362237ee"
+      },
+      "notes": "approve/deploy/delete declarations parse as requests; actual worker admission denial is Spec2-only, not this pass."
+    },
+    {
+      "path": "adversarial/p0-authority/forged-approver-claim",
+      "batch": "3.2.33",
+      "oracle": {
+        "phase": "semantic",
+        "document_kind": "verification-result",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/p0-authority/forged-approver-claim/input.json": "0375abaecd163ac7273b2838ad7f6a99df3df79e665eb242a0fbb15b36316337",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/p0-authority/forged-approver-claim/expected.json": "8effeff3202f28e001fdfacca54cc1f3c8ae20036511c6a5a8eef9d72acfbe3b"
+      },
+      "notes": "Self-consistent strings do not authenticate approval; no Spec1 authentication oracle invented."
+    },
+    {
+      "path": "adversarial/p0-authority/forged-origin-claim",
+      "batch": "3.2.34",
+      "oracle": {
+        "phase": "semantic",
+        "document_kind": "verification-result",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/p0-authority/forged-origin-claim/input.json": "13fac787ef2d4edfde4898eff212cbf92362d8ef4f125d096bf58460ad73af2c",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/p0-authority/forged-origin-claim/expected.json": "8effeff3202f28e001fdfacca54cc1f3c8ae20036511c6a5a8eef9d72acfbe3b"
+      },
+      "notes": "Origin string is not independent observation."
+    },
+    {
+      "path": "adversarial/p0-authority/incomplete-binding",
+      "batch": "3.2.34",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "binding.run_id",
+            "description_contains": "Required field is missing"
+          },
+          {
+            "category": "structural",
+            "field_path": "binding.attempt_id",
+            "description_contains": "Required field is missing"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/p0-authority/incomplete-binding/input.json": "490a820a624bc1f14aeb5925d23c55777245ea56e45a1b6a0266243e2f531920",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/p0-authority/incomplete-binding/expected.json": "a29e3cf217e387af63aa412227f4c7ec9a9257b6574123e6545d6cbcea16be03"
+      },
+      "notes": "Missing run/attempt binding fields fail structurally."
+    },
+    {
+      "path": "adversarial/p0-authority/replayed-binding-claim",
+      "batch": "3.2.35",
+      "oracle": {
+        "phase": "semantic",
+        "document_kind": "verification-result",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/p0-authority/replayed-binding-claim/input.json": "047d42fd808ba2e0c4ed3ec33b597ffb5e5c11d885561e261a73205001fe4aa1",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts/adversarial/p0-authority/replayed-binding-claim/expected.json": "8effeff3202f28e001fdfacca54cc1f3c8ae20036511c6a5a8eef9d72acfbe3b"
+      },
+      "notes": "Self-consistent replay may pass local consistency; protected-context rejection belongs Spec2."
+    }
+  ],
+  "source_hashes": {
+    "crates/clouddialect-contracts/tests/support/fixtures.rs": "4b1fe53c187724fe82d793eddb9d52b4904b5f6a96c1a07caa98984cae0a3967",
+    "crates/clouddialect-contracts/tests/conformance_controls.rs": "2e74d0415239b604939f083f45d8f8e7e2002dfc9bc99c6b01237c2aa1be16eb",
+    "crates/clouddialect-contracts/src/validator/extensions.rs": "52b61926c7c57b40f05fc6d08ad42bbea9f7f06deef4c2f50bab58eca906fc49",
+    "crates/clouddialect-contracts/src/validator/mandatory_extensions.rs": "935a55a8a7236fea03383ceb3300159eafb872cefa865ced2e3a6511e25964e9",
+    "crates/clouddialect-contracts/src/validator/semantic.rs": "06097648e746166fee8f4070529ee9c04f9aed35782fc9a16b2a8220781f6b96",
+    "crates/clouddialect-contracts/src/validator/structural.rs": "5671449f115fb1aa258372269ba046948d7aaa91c9cb366a8ad50a209e6ee14b",
+    "crates/clouddialect-contracts/src/validator/verification_semantics.rs": "e5ff3e871ae242c9737c9850411198fbc8ac5d96babae7f80182555c9f728ca5",
+    "crates/clouddialect-contracts/src/manifest/types.rs": "bef4faeedc7f282dbed57674e57e1582516ae8121b048037e25a4b96dc815ae2",
+    "crates/clouddialect-contracts/src/manifest/validator.rs": "9fd00bd67f5ae3b24ac2b7607d7948ed92e5a5c842d0d01aaca8838ef711c33a",
+    "catalog/schemas/evidence-record/1.0/schema.json": "d25acf15e02251188dfca4f34774699a326de1c8ef629c226f34cba6c6158df3",
+    "catalog/schemas/verification-result/1.0/schema.json": "c6246397e248f89fecae1639ae838153a88946b9cdfa15dde15de1b3e6b06ba9"
+  },
+  "boundary": "No production changes, trust/ownership/conflict detection, native/acceptance or task20completion inferred"
+}

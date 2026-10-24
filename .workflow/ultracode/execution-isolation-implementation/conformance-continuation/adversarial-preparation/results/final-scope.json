@@ -1,0 +1,12 @@
+{
+  "status": "pass",
+  "protected_hashes_unchanged": 192,
+  "draft_hashes_unchanged": 52,
+  "source_hashes_unchanged": 11,
+  "canonical_count": 47,
+  "approved_for_admission": false,
+  "contract_sha256": "7645881b9f0829e66cef5dbfb0d63df3eb448ef0a3d1dd387445496d3ead46c9",
+  "binary_sha256": "d76c57c0384ae866971ee1c29eec30ba3ea9b767a45a10a6af12b0d5c6a8dd5d",
+  "changed_scope": "workflow-only drafts/evidence/inventory/status",
+  "checked_at": "2026-10-24T10:59:30.509572+00:00"
+}

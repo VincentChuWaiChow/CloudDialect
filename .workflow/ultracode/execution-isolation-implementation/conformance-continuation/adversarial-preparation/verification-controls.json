@@ -1,0 +1,919 @@
+{
+  "ran_at": "2026-10-24T10:55:56.646994+00:00",
+  "contract_sha256": "7645881b9f0829e66cef5dbfb0d63df3eb448ef0a3d1dd387445496d3ead46c9",
+  "matched": 65,
+  "checks": [
+    {
+      "label": "wrong-outcome:adversarial/extension-namespace/reserved-exact-match/correctly-handled",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "wrong-outcome:adversarial/extension-namespace/reserved-exact-match/correctly-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "label": "wrong-outcome:adversarial/extension-namespace/reserved-uppercase-bypass/correctly-handled",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "wrong-outcome:adversarial/extension-namespace/reserved-uppercase-bypass/correctly-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "label": "wrong-outcome:adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-handled",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "wrong-outcome:adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "label": "wrong-outcome:adversarial/extension-namespace/namespace-collision/correctly-handled",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "wrong-outcome:adversarial/extension-namespace/namespace-collision/untrusted-claim-author-a",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "label": "wrong-outcome:adversarial/extension-namespace/namespace-collision/untrusted-claim-author-b",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "label": "wrong-outcome:adversarial/extension-namespace/invalid-prefix-formats/correctly-handled",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "wrong-outcome:adversarial/extension-namespace/invalid-prefix-formats/digit-start",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "label": "wrong-outcome:adversarial/extension-namespace/invalid-prefix-formats/space",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "label": "wrong-outcome:adversarial/extension-namespace/invalid-prefix-formats/one-character",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "label": "wrong-outcome:adversarial/extension-namespace/unknown-optional-round-trip/correctly-handled",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "wrong-outcome:adversarial/extension-namespace/unknown-optional-round-trip/correctly-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "label": "wrong-outcome:adversarial/extension-namespace/mandatory-extension-blocks-acceptance/structurally-handled",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "wrong-outcome:adversarial/extension-namespace/mandatory-extension-blocks-acceptance/semantically-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "label": "wrong-outcome:adversarial/extension-namespace/override-core-field-attempt/correctly-handled",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "wrong-outcome:adversarial/extension-namespace/override-core-field-attempt/correctly-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "label": "wrong-outcome:adversarial/p0-authority/x-authority-injection",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "wrong-outcome:adversarial/p0-authority/x-capability-shadow",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "label": "wrong-outcome:adversarial/p0-authority/prohibited-worker-action-requests",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "wrong-outcome:adversarial/p0-authority/forged-approver-claim",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "wrong-outcome:adversarial/p0-authority/forged-origin-claim",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "wrong-outcome:adversarial/p0-authority/incomplete-binding",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "label": "wrong-outcome:adversarial/p0-authority/replayed-binding-claim",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/wrong: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "structural-counterpart:adversarial/extension-namespace/reserved-exact-match/correctly-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "repaired-valid:adversarial/extension-namespace/reserved-exact-match/correctly-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "old-fail-oracle-rejects-repair:adversarial/extension-namespace/reserved-exact-match/correctly-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "structural-counterpart:adversarial/extension-namespace/reserved-uppercase-bypass/correctly-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "repaired-valid:adversarial/extension-namespace/reserved-uppercase-bypass/correctly-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "old-fail-oracle-rejects-repair:adversarial/extension-namespace/reserved-uppercase-bypass/correctly-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "structural-counterpart:adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "repaired-valid:adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "old-fail-oracle-rejects-repair:adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "structural-counterpart:adversarial/extension-namespace/namespace-collision/untrusted-claim-author-a",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "repaired-valid:adversarial/extension-namespace/namespace-collision/untrusted-claim-author-a",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "old-fail-oracle-rejects-repair:adversarial/extension-namespace/namespace-collision/untrusted-claim-author-a",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "structural-counterpart:adversarial/extension-namespace/namespace-collision/untrusted-claim-author-b",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "repaired-valid:adversarial/extension-namespace/namespace-collision/untrusted-claim-author-b",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "old-fail-oracle-rejects-repair:adversarial/extension-namespace/namespace-collision/untrusted-claim-author-b",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "repaired-valid:adversarial/extension-namespace/invalid-prefix-formats/digit-start",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "old-fail-oracle-rejects-repair:adversarial/extension-namespace/invalid-prefix-formats/digit-start",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "repaired-valid:adversarial/extension-namespace/invalid-prefix-formats/space",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "old-fail-oracle-rejects-repair:adversarial/extension-namespace/invalid-prefix-formats/space",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "repaired-valid:adversarial/extension-namespace/invalid-prefix-formats/one-character",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "old-fail-oracle-rejects-repair:adversarial/extension-namespace/invalid-prefix-formats/one-character",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "structural-counterpart:adversarial/extension-namespace/unknown-optional-round-trip/correctly-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "repaired-valid:adversarial/extension-namespace/unknown-optional-round-trip/correctly-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "old-fail-oracle-rejects-repair:adversarial/extension-namespace/unknown-optional-round-trip/correctly-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "structural-counterpart:adversarial/extension-namespace/mandatory-extension-blocks-acceptance/semantically-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "repaired-valid:adversarial/extension-namespace/mandatory-extension-blocks-acceptance/semantically-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "old-fail-oracle-rejects-repair:adversarial/extension-namespace/mandatory-extension-blocks-acceptance/semantically-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "repaired-valid:adversarial/extension-namespace/override-core-field-attempt/correctly-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "old-fail-oracle-rejects-repair:adversarial/extension-namespace/override-core-field-attempt/correctly-rejected",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "repaired-valid:adversarial/p0-authority/x-capability-shadow",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "old-fail-oracle-rejects-repair:adversarial/p0-authority/x-capability-shadow",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "repaired-valid:adversarial/p0-authority/incomplete-binding",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "old-fail-oracle-rejects-repair:adversarial/p0-authority/incomplete-binding",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-adversarial-prep-ik1uk8b0/repair: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "draft-default",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture-root",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": 26,
+      "output": "PASS adversarial/extension-namespace/invalid-prefix-formats/correctly-handled\nPASS adversarial/extension-namespace/invalid-prefix-formats/digit-start\nPASS adversarial/extension-namespace/invalid-prefix-formats/one-character\nPASS adversarial/extension-namespace/invalid-prefix-formats/space\nPASS adversarial/extension-namespace/mandatory-extension-blocks-acceptance/semantically-rejected\nPASS adversarial/extension-namespace/mandatory-extension-blocks-acceptance/structurally-handled\nPASS adversarial/extension-namespace/namespace-collision/correctly-handled\nPASS adversarial/extension-namespace/namespace-collision/untrusted-claim-author-a\nPASS adversarial/extension-namespace/namespace-collision/untrusted-claim-author-b\nPASS adversarial/extension-namespace/override-core-field-attempt/correctly-handled\nPASS adversarial/extension-namespace/override-core-field-attempt/correctly-rejected\nPASS adversarial/extension-namespace/reserved-exact-match/correctly-handled\nPASS adversarial/extension-namespace/reserved-exact-match/correctly-rejected\nPASS adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-handled\nPASS adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-rejected\nPASS adversarial/extension-namespace/reserved-uppercase-bypass/correctly-handled\nPASS adversarial/extension-namespace/reserved-uppercase-bypass/correctly-rejected\nPASS adversarial/extension-namespace/unknown-optional-round-trip/correctly-handled\nPASS adversarial/extension-namespace/unknown-optional-round-trip/correctly-rejected\nPASS adversarial/p0-authority/forged-approver-claim\nPASS adversarial/p0-authority/forged-origin-claim\nPASS adversarial/p0-authority/incomplete-binding\nPASS adversarial/p0-authority/prohibited-worker-action-requests\nPASS adversarial/p0-authority/replayed-binding-claim\nPASS adversarial/p0-authority/x-authority-injection\nPASS adversarial/p0-authority/x-capability-shadow\n26 conformance fixtures passed\n"
+    },
+    {
+      "label": "namespace-prefix",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture-root",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts",
+        "adversarial/extension-namespace"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": 19,
+      "output": "PASS adversarial/extension-namespace/invalid-prefix-formats/correctly-handled\nPASS adversarial/extension-namespace/invalid-prefix-formats/digit-start\nPASS adversarial/extension-namespace/invalid-prefix-formats/one-character\nPASS adversarial/extension-namespace/invalid-prefix-formats/space\nPASS adversarial/extension-namespace/mandatory-extension-blocks-acceptance/semantically-rejected\nPASS adversarial/extension-namespace/mandatory-extension-blocks-acceptance/structurally-handled\nPASS adversarial/extension-namespace/namespace-collision/correctly-handled\nPASS adversarial/extension-namespace/namespace-collision/untrusted-claim-author-a\nPASS adversarial/extension-namespace/namespace-collision/untrusted-claim-author-b\nPASS adversarial/extension-namespace/override-core-field-attempt/correctly-handled\nPASS adversarial/extension-namespace/override-core-field-attempt/correctly-rejected\nPASS adversarial/extension-namespace/reserved-exact-match/correctly-handled\nPASS adversarial/extension-namespace/reserved-exact-match/correctly-rejected\nPASS adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-handled\nPASS adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-rejected\nPASS adversarial/extension-namespace/reserved-uppercase-bypass/correctly-handled\nPASS adversarial/extension-namespace/reserved-uppercase-bypass/correctly-rejected\nPASS adversarial/extension-namespace/unknown-optional-round-trip/correctly-handled\nPASS adversarial/extension-namespace/unknown-optional-round-trip/correctly-rejected\n19 conformance fixtures passed\n"
+    },
+    {
+      "label": "authority-prefix",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture-root",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts",
+        "adversarial/p0-authority"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": 7,
+      "output": "PASS adversarial/p0-authority/forged-approver-claim\nPASS adversarial/p0-authority/forged-origin-claim\nPASS adversarial/p0-authority/incomplete-binding\nPASS adversarial/p0-authority/prohibited-worker-action-requests\nPASS adversarial/p0-authority/replayed-binding-claim\nPASS adversarial/p0-authority/x-authority-injection\nPASS adversarial/p0-authority/x-capability-shadow\n7 conformance fixtures passed\n"
+    },
+    {
+      "label": "zero-selection",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture-root",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-preparation/drafts",
+        "guaranteed-zero-adversarial-20261024"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "no fixtures selected by directory prefix\n"
+    },
+    {
+      "label": "temporary-composite-only",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture-root",
+        "/tmp/clouddialect-adversarial-prep-ik1uk8b0/composite"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": 73,
+      "output": "PASS adversarial/extension-namespace/invalid-prefix-formats/correctly-handled\nPASS adversarial/extension-namespace/invalid-prefix-formats/digit-start\nPASS adversarial/extension-namespace/invalid-prefix-formats/one-character\nPASS adversarial/extension-namespace/invalid-prefix-formats/space\nPASS adversarial/extension-namespace/mandatory-extension-blocks-acceptance/semantically-rejected\nPASS adversarial/extension-namespace/mandatory-extension-blocks-acceptance/structurally-handled\nPASS adversarial/extension-namespace/namespace-collision/correctly-handled\nPASS adversarial/extension-namespace/namespace-collision/untrusted-claim-author-a\nPASS adversarial/extension-namespace/namespace-collision/untrusted-claim-author-b\nPASS adversarial/extension-namespace/override-core-field-attempt/correctly-handled\nPASS adversarial/extension-namespace/override-core-field-attempt/correctly-rejected\nPASS adversarial/extension-namespace/reserved-exact-match/correctly-handled\nPASS adversarial/extension-namespace/reserved-exact-match/correctly-rejected\nPASS adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-handled\nPASS adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-rejected\nPASS adversarial/extension-namespace/reserved-uppercase-bypass/correctly-handled\nPASS adversarial/extension-namespace/reserved-uppercase-bypass/correctly-rejected\nPASS adversarial/extension-namespace/unknown-optional-round-trip/correctly-handled\nPASS adversarial/extension-namespace/unknown-optional-round-trip/correctly-rejected\nPASS adversarial/p0-authority/forged-approver-claim\nPASS adversarial/p0-authority/forged-origin-claim\nPASS adversarial/p0-authority/incomplete-binding\nPASS adversarial/p0-authority/prohibited-worker-action-requests\nPASS adversarial/p0-authority/replayed-binding-claim\nPASS adversarial/p0-authority/x-authority-injection\nPASS adversarial/p0-authority/x-capability-shadow\nPASS integration/artifact-hash-mismatch/tampered-candidate\nPASS integration/blocking-gap/unknown-evidence-mandatory-obligation\nPASS integration/semantic-resolution-failure/manifest-bad-contract-ref\nPASS integration/verification-consistency/approval-result-id-mismatch\nPASS integration/verification-consistency/approval-result-version-mismatch\nPASS integration/verification-consistency/duplicate-test-ids\nPASS integration/verification-consistency/invalid-hash-length\nPASS integration/verification-consistency/unmapped-obligations\nPASS negative/behavioral-contract/invalid-behavioral-fidelity\nPASS negative/behavioral-contract/missing-id\nPASS negative/behavioral-contract/obligation-no-evidence-no-assumption\nPASS negative/evidence-record/inferred-empty-reasoning-chain\nPASS negative/evidence-record/missing-classification\nPASS negative/evidence-record/unknown-empty-assumptions\nPASS negative/pack-manifest/capability-unknown-field\nPASS negative/pack-manifest/duplicate-capability-id\nPASS negative/pack-manifest/inline-contract-body\nPASS negative/pack-manifest/invalid-behavioral-fidelity\nPASS negative/pack-manifest/missing-capabilities\nPASS negative/pack-manifest/missing-toolchain-for-full-operation\nPASS negative/pack-manifest/unknown-capability-version\nPASS negative/verification-result/acceptance-missing-approver\nPASS negative/verification-result/empty-tests-array\nPASS negative/verification-result/missing-binding\nPASS negative/verification-result/missing-configuration\nPASS negative/verification-result/missing-test-obligation\nPASS negative/verification-result/nonpass-string-failure-description\nPASS negative/verification-result/nonpass-without-failure-description\nPASS negative/verification-result/unknown-hash-algorithm\nPASS negative/version/unsupported-major\nPASS negative/version/unsupported-minor-newer\nPASS positive/behavioral-contract/minimal-valid\nPASS positive/behavioral-contract/with-behavioral-notes\nPASS positive/behavioral-contract/with-extension-field\nPASS positive/behavioral-contract/with-known-behavior\nPASS positive/behavioral-contract/with-unresolved-assumption-on-dependency\nPASS positive/evidence-record/inferred\nPASS positive/evidence-record/observed\nPASS positive/evidence-record/unknown\nPASS positive/pack-manifest/full-coverage\nPASS positive/pack-manifest/with-extension-section\nPASS positive/pack-manifest/with-unsupported-operation\nPASS positive/verification-result/minimal\nPASS positive/verification-result/with-acceptance\nPASS round-trip/extension-field-preservation/behavioral-contract\nPASS round-trip/extension-field-preservation/evidence-record\nPASS round-trip/extension-field-preservation/verification-result\n73 conformance fixtures passed\n"
+    },
+    {
+      "label": "unchanged-canonical",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": 47,
+      "output": "PASS integration/artifact-hash-mismatch/tampered-candidate\nPASS integration/blocking-gap/unknown-evidence-mandatory-obligation\nPASS integration/semantic-resolution-failure/manifest-bad-contract-ref\nPASS integration/verification-consistency/approval-result-id-mismatch\nPASS integration/verification-consistency/approval-result-version-mismatch\nPASS integration/verification-consistency/duplicate-test-ids\nPASS integration/verification-consistency/invalid-hash-length\nPASS integration/verification-consistency/unmapped-obligations\nPASS negative/behavioral-contract/invalid-behavioral-fidelity\nPASS negative/behavioral-contract/missing-id\nPASS negative/behavioral-contract/obligation-no-evidence-no-assumption\nPASS negative/evidence-record/inferred-empty-reasoning-chain\nPASS negative/evidence-record/missing-classification\nPASS negative/evidence-record/unknown-empty-assumptions\nPASS negative/pack-manifest/capability-unknown-field\nPASS negative/pack-manifest/duplicate-capability-id\nPASS negative/pack-manifest/inline-contract-body\nPASS negative/pack-manifest/invalid-behavioral-fidelity\nPASS negative/pack-manifest/missing-capabilities\nPASS negative/pack-manifest/missing-toolchain-for-full-operation\nPASS negative/pack-manifest/unknown-capability-version\nPASS negative/verification-result/acceptance-missing-approver\nPASS negative/verification-result/empty-tests-array\nPASS negative/verification-result/missing-binding\nPASS negative/verification-result/missing-configuration\nPASS negative/verification-result/missing-test-obligation\nPASS negative/verification-result/nonpass-string-failure-description\nPASS negative/verification-result/nonpass-without-failure-description\nPASS negative/verification-result/unknown-hash-algorithm\nPASS negative/version/unsupported-major\nPASS negative/version/unsupported-minor-newer\nPASS positive/behavioral-contract/minimal-valid\nPASS positive/behavioral-contract/with-behavioral-notes\nPASS positive/behavioral-contract/with-extension-field\nPASS positive/behavioral-contract/with-known-behavior\nPASS positive/behavioral-contract/with-unresolved-assumption-on-dependency\nPASS positive/evidence-record/inferred\nPASS positive/evidence-record/observed\nPASS positive/evidence-record/unknown\nPASS positive/pack-manifest/full-coverage\nPASS positive/pack-manifest/with-extension-section\nPASS positive/pack-manifest/with-unsupported-operation\nPASS positive/verification-result/minimal\nPASS positive/verification-result/with-acceptance\nPASS round-trip/extension-field-preservation/behavioral-contract\nPASS round-trip/extension-field-preservation/evidence-record\nPASS round-trip/extension-field-preservation/verification-result\n47 conformance fixtures passed\n"
+    }
+  ],
+  "note": "Temporary73is not canonical admission. Repaired and wrong-oracle controls do not authenticate claims; canonical47unchanged."
+}

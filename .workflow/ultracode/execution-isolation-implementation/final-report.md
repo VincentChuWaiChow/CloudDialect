@@ -1,3 +1,15 @@
+# Current adversarial draft readiness —2026-10-24
+
+[Draft-readiness report](conformance-continuation/adversarial-preparation/final-report.md):
+26 exact adversarial pairs across14batches are frozen and verified, **not admitted**.
+All26 source-derived original oracles and65parent controls match; reviewer38
+independently executes65controls, with no actionable findings.105content/schema/
+hash assertions pass;192protected hashes unchanged, **canonical remains47**.
+All8namespace classes and7P0claim profiles retain explicit nontrust boundaries.
+Exact52-file admission is proposed separately; no source/spec/native changes or
+push. Full goal, task20, remaining57canonical corpus cases and allSpec2gates stay
+open. Earlier delivery reports below remain historical with their stated scope.
+
 # Current bounded harness and five-pair delivery — 2026-10-24
 
 [Current bounded report](conformance-continuation/core-preservation-2026-10-24/final-report.md):
