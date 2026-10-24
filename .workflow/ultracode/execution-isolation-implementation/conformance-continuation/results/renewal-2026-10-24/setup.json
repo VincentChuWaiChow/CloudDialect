@@ -7,5 +7,20 @@
   "manifest_and_lock_unchanged": true,
   "toolchain": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
   "cargo": "cargo 1.99.1 (5f94df478 2026-08-27)",
-  "captured_at": "2026-10-24T02:50:11.432823+00:00"
+  "captured_at": "2026-10-24T02:50:11.432823+00:00",
+  "network_fetch_command": [
+    "rtk",
+    "proxy",
+    "cargo",
+    "fetch",
+    "--manifest-path",
+    "crates/clouddialect-contracts/Cargo.toml",
+    "--locked"
+  ],
+  "intended_cargo_home": "/tmp/clouddialect-runtime-cargo",
+  "all_test_and_build_cargo_home": "/tmp/clouddialect-runtime-cargo",
+  "docs_sources": [
+    "https://github.com/rust-lang/cargo/blob/master/doc/book/src/commands/cargo-fetch.md",
+    "https://github.com/rust-lang/cargo/blob/master/doc/man/generated_txt/cargo-metadata.txt"
+  ]
 }

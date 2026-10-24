@@ -1,3 +1,14 @@
+# Current bounded renewal — 2026-10-24
+
+[Repair/seed report](conformance-continuation/renewal-report.md): approved
+completeness diagnostic repair `03738e4`/`0396883` and exact seed `408af0d` are
+verified locally. Full default Cargo tests pass 286 Rust tests plus 1 fixture;
+check/fmt/Clippy and 15 Python checks pass. Fresh coverage, remaining full corpus,
+traceability/consumer/native handoff and all 21 Spec 2 tasks/gates remain open.
+Additional spec-only checker: 8 pass/1 pre-existing error; fresh coverage/MSRV
+remain unverified. No pushes, releases or native probes. Earlier snapshots below
+are historical.
+
 # Current tranche integration
 
 See [current partial handoff](conformance-continuation/integration.md). Current default

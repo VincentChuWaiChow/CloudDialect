@@ -1,0 +1,16 @@
+[
+  {
+    "name": "repository Python after status",
+    "exit_code": 0,
+    "tests_passed": 15,
+    "log": "python-after-status.txt"
+  },
+  {
+    "name": "extra spec-checker suite",
+    "exit_code": 1,
+    "tests_passed": 8,
+    "tests_errored": 1,
+    "log": "spec-checker-tests.txt",
+    "baseline_comparison": "spec-checker-baseline-comparison.json"
+  }
+]

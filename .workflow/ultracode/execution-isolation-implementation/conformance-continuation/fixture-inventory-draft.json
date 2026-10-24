@@ -1,5 +1,5 @@
 {
-  "status": "DRAFT INCOMPLETE APPROVAL/ORACLE INVENTORY, not a delivered corpus",
+  "status": "One approved seed delivered; remaining 103 cases/59 batches are draft incomplete approval/oracle inventory, not a delivered corpus",
   "source": "canonical tasks18-21 plus named P0/VC1 follow-ons",
   "case_count": 104,
   "batch_count": 60,
@@ -124,11 +124,12 @@
       },
       "notes": "Structural declaration only, never observed behavior/authentication/acceptance.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "delivered-approved-seed",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "commit": "408af0d79e4e7210da930126d247426676cf7342"
     },
     {
       "path": "positive/evidence-record/unknown",
@@ -1835,7 +1836,7 @@
         "crates/clouddialect-contracts/fixtures/positive/evidence-record/inferred/input.json",
         "crates/clouddialect-contracts/fixtures/positive/evidence-record/inferred/expected.json"
       ],
-      "status": "explicit-seed-approval-pending",
+      "status": "delivered-approved-seed",
       "phase": "structural",
       "document_kind": "evidence-record",
       "oracle": {
@@ -1843,7 +1844,8 @@
         "errors": [],
         "warnings": [],
         "blockers": []
-      }
+      },
+      "commit": "408af0d79e4e7210da930126d247426676cf7342"
     },
     {
       "id": "3.2.2",
@@ -2929,5 +2931,7 @@
     "Cross-project authorization needs real backend/Spec2 evidence.",
     "Environment-immunity fixture requires explicit trusted setup representation.",
     "Forged/replayed/prohibited-action claims distinguish local declarations from actual Spec2 admission/authentication."
-  ]
+  ],
+  "delivered_case_count": 1,
+  "delivered_batch_count": 1
 }

@@ -2,8 +2,8 @@
   "title": "Conformance prerequisite continuation",
   "slug": "conformance-continuation",
   "created_at": "2026-10-23T18:44:04+00:00",
-  "updated_at": "2026-10-24T02:48:08.305813+00:00",
-  "status": "executing",
+  "updated_at": "2026-10-24T02:59:53.045499+00:00",
+  "status": "waiting_for_approval",
   "mode": "delegated",
   "baseline_ref": "5dc25f3f31ce500d17aa2322793d3a970f9b73d9",
   "risk_level": "high",
@@ -46,61 +46,101 @@
     }
   ],
   "verification": {
-    "status": "partial: conventional checks pass, default conformance fails missing corpus, broad coverage gate incomplete, known P2 repair pending",
+    "status": "current implemented default suite green; full corpus/coverage/native/consumer remain incomplete",
     "checks": [
       {
-        "name": "conventional Rust and doctests",
-        "command": "Exact target list in results/final-regression-checks.json",
-        "required": true,
-        "status": "pass",
-        "evidence": "278 conventional + 7 doctests"
+        "name": "full-tests",
+        "command": [
+          "rtk",
+          "proxy",
+          "cargo",
+          "test",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen"
+        ],
+        "exit_code": 0,
+        "log": "full-tests.txt",
+        "rust_tests_passed": 286,
+        "fixture_counts": [
+          1
+        ]
       },
       {
-        "name": "Python",
-        "command": "rtk proxy python3 -m unittest discover -s tests -v",
-        "required": true,
-        "status": "pass",
-        "evidence": "15 checks; results/python-tests.txt"
+        "name": "check",
+        "command": [
+          "rtk",
+          "proxy",
+          "cargo",
+          "check",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen",
+          "--all-targets"
+        ],
+        "exit_code": 0,
+        "log": "check.txt",
+        "rust_tests_passed": 0,
+        "fixture_counts": []
       },
       {
-        "name": "all-target check/fmt/Clippy",
-        "required": true,
-        "status": "trust-prior",
-        "evidence": "results/runner-final-build-checks.json; current reviewed source unchanged"
+        "name": "clippy",
+        "command": [
+          "rtk",
+          "proxy",
+          "cargo",
+          "clippy",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "exit_code": 0,
+        "log": "clippy.txt",
+        "rust_tests_passed": 0,
+        "fixture_counts": []
       },
       {
-        "name": "default conformance",
-        "command": "rtk proxy cargo test --manifest-path crates/clouddialect-contracts/Cargo.toml --frozen --test conformance",
-        "required": true,
-        "status": "fail",
-        "evidence": "exit 1; results/default-conformance-closeout.json"
+        "name": "fmt",
+        "command": [
+          "rtk",
+          "proxy",
+          "cargo",
+          "fmt",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--check"
+        ],
+        "exit_code": 0,
+        "log": "fmt.txt",
+        "rust_tests_passed": 0,
+        "fixture_counts": []
       },
       {
-        "name": "coverage gate",
-        "required": true,
-        "status": "fail",
-        "evidence": "Focused only: line89.05%, function58.33%; results/runner-focused-coverage/summary.json"
-      },
-      {
-        "name": "frozen independent review30",
-        "required": true,
-        "status": "pass",
-        "evidence": "29 independent tests; no new URI/runner findings; 13 hashes match"
-      },
-      {
-        "name": "native/backend/consumer/MSRV qualification",
-        "required": true,
-        "status": "skipped",
-        "evidence": "not run, not authorized/delivered in this tranche"
-      },
-      {
-        "name": "additional fail-closed actual CLI matrix",
-        "command": "rtk proxy <recorded-conformance-executable> --fixture-root <temporary-root> [prefix]",
-        "required": false,
-        "status": "pass",
-        "evidence": "67/67 matched: 5 positive, 62 expected rejections; results/runner-failclosed-results.json; reviewed hashes unchanged"
+        "name": "python",
+        "command": [
+          "rtk",
+          "proxy",
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "exit_code": 0,
+        "log": "python.txt",
+        "rust_tests_passed": 0,
+        "fixture_counts": []
       }
-    ]
+    ],
+    "additional_controls": "results/renewal-2026-10-24/seed-checks.json",
+    "coverage": "results/renewal-2026-10-24/coverage-availability.json",
+    "additional_documentation_checks": "results/renewal-2026-10-24/documentation-checks.json"
   },
   "deadline": "2026-10-23T20:14:04Z",
   "commits_authorized": true,
@@ -147,7 +187,7 @@
   "full_goal_complete": false,
   "current_full_tree_green": false,
   "no_processes_running": true,
-  "current_safe_runner_verification": "Bounded additional matrix complete. Next implementation/corpus action still requires pending owner answers; no process/agent live.",
+  "current_safe_runner_verification": "Approved repair/seed and integrated checks complete. Remaining fixture scheduling container needs expanded/approved batches; native/consumer/coverage gates open.",
   "renewal": {
     "approval": "explicit user approve, consolidated repair+seed 45-minute question",
     "start": "2026-10-24T02:47:02+00:00",
@@ -155,9 +195,32 @@
     "additional_agents": 0,
     "cumulative_dispatches": 30,
     "known_repair_limit": 1,
-    "known_repairs_applied": 0,
+    "known_repairs_applied": 1,
     "pushes_authorized": false,
-    "status": "regression next",
-    "plan": "renewal-plan.md"
-  }
+    "status": "bounded_items_verified_full_goal_unfinished",
+    "plan": "renewal-plan.md",
+    "checks": "results/renewal-2026-10-24/integrated-checks.json",
+    "report": "renewal-report.md",
+    "fresh_coverage": "skipped: matching LLVM tools unavailable",
+    "new_independent_review": false,
+    "commits": [
+      {
+        "sha": "03738e46780c58bae7053743a5083f84590b8968",
+        "stage": "test(contracts): reproduce omitted direct-assumption blocking gaps"
+      },
+      {
+        "sha": "039688301b23b1b351c94e87fb4410ee6bfc1134",
+        "stage": "fix(contracts): retain direct assumptions beside mandatory blockers"
+      },
+      {
+        "sha": "408af0d79e4e7210da930126d247426676cf7342",
+        "stage": "test(conformance): admit approved inferred-evidence seed"
+      }
+    ],
+    "extra_checker": "pre-existing failure: 8 pass/1 error; same 8 supporting checkmarks at baseline/current; checker unchanged",
+    "failclosed_cli_matched": 67,
+    "postreview_hash_disposition": "11 unchanged, 2 deliberately changed by approved repair; no fresh independent signoff"
+  },
+  "current_cargo_suite_green": true,
+  "current_full_tree_green_reason": "Default Cargo/check/fmt/Clippy and repository Python pass; additional pre-existing spec-only checker fails and fresh coverage/MSRV remain unverified."
 }

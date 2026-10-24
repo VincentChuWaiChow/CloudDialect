@@ -1,0 +1,26 @@
+test_consistent_but_cyclic_graph_rejected (test_check_spec.SpecGraderTests.test_consistent_but_cyclic_graph_rejected) ... ok
+test_dropped_dependency_edge_rejected (test_check_spec.SpecGraderTests.test_dropped_dependency_edge_rejected) ... ok
+test_false_evidence_status_rejected (test_check_spec.SpecGraderTests.test_false_evidence_status_rejected) ... ok
+test_false_implementation_completion_rejected (test_check_spec.SpecGraderTests.test_false_implementation_completion_rejected) ... ok
+test_missing_document_rejected (test_check_spec.SpecGraderTests.test_missing_document_rejected) ... ok
+test_missing_shall_rejected (test_check_spec.SpecGraderTests.test_missing_shall_rejected) ... ok
+test_orphan_design_rejected (test_check_spec.SpecGraderTests.test_orphan_design_rejected) ... ok
+test_parallel_file_collision_rejected (test_check_spec.SpecGraderTests.test_parallel_file_collision_rejected) ... ok
+test_valid_documents_pass (test_check_spec.SpecGraderTests.test_valid_documents_pass) ... ERROR
+
+======================================================================
+ERROR: test_valid_documents_pass (test_check_spec.SpecGraderTests.test_valid_documents_pass)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/raishin/projects/CloudDialect/scripts/verification/execution-isolation/test_check_spec.py", line 39, in test_valid_documents_pass
+    check_spec.main()
+  File "/home/raishin/projects/CloudDialect/scripts/verification/execution-isolation/check_spec.py", line 66, in main
+    require(not re.search(r"\[[xX~\-]\]", tasks), "no implementation tasks marked complete")
+  File "/home/raishin/projects/CloudDialect/scripts/verification/execution-isolation/check_spec.py", line 17, in require
+    raise SystemExit(f"FAIL: {message}")
+SystemExit: FAIL: no implementation tasks marked complete
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.383s
+
+FAILED (errors=1)

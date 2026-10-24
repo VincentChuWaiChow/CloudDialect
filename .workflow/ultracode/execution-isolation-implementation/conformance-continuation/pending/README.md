@@ -1,11 +1,10 @@
-# Pending owner decisions — drafts, not admitted implementation
+# Formerly pending artifacts — approved/applied 2026-10-24
 
-The exact two-file completeness repair patch and canonical inferred-evidence
-seed pair are proposed for review only. Neither has been applied to production
-source/the repository fixtures directory. Separate owner answers are pending.
-The patch's regression must be applied/executed/committed RED first, then the
-source move/GREEN; do not apply both and fabricate a RED receipt.
+User approved the consolidated 45-minute renewal. The regression was applied and
+executed RED first (`03738e4`), then the source move/GREEN (`0396883`). These draft
+bytes are retained as the earlier static-review evidence, not a second code copy.
 
-The seed is valid test data and may be used as an explicitly selected temporary
-control root. It is not the default corpus or evidence of observed workload
-behavior. Copy to the exact canonical fixture path only after explicit approval.
+The exact seed bytes were admitted at the canonical fixture path in `408af0d`.
+Default and positive selection each execute 1 fixture; zero selection fails. It is
+not the complete required corpus or evidence of observed workload behavior.
+See `../renewal-report.md`; no push/native/consumer/gate closure is implied.

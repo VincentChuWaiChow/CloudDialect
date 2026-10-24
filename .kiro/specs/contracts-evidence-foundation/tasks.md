@@ -1,6 +1,6 @@
 # Implementation Plan: CloudDialect Contracts & Evidence Foundation
 
-**Publication authority:** earlier commit/push approvals apply to their historical actions. The current2026-10-23 continuation explicitly authorizes frequent local commits, not pushes, native probes, deployments or releases.
+**Publication authority:** earlier commit/push approvals apply to their historical actions. The 2026-10-24 bounded repair/seed renewal explicitly authorizes local milestone commits, not pushes, native probes, deployments or releases.
 
 
 ## Current physical domain layout
@@ -12,7 +12,7 @@ This plan builds the `clouddialect-contracts` Rust crate, its bundled JSON Schem
 
 **Current continuation status (2026-10-22):** user approved P0-A–F for implementation planning, then separately authorized the remaining Spec 1 prerequisite units in [implementation-plan.md](implementation-plan.md), TDD and no commits/probes/pushes/releases. User attests this is a new project and approves document/catalog **1.0.0** and crate API **0.1.0** as the initial MVP versions. This is not an independent external-publication audit or security-gate approval. Exact encoded extension JSON value bytes are required; raw_value on the existing pinned serde_json is separately approved.
 
-**Delivery is partial.** DTOs, schemas, catalog inventory, frozen snapshot/loading, structural JSON validation, local TOML rules and candidate hash equality have bounded verification. JSON/TOML semantics and mandatory blockers have bounded independent review; completeness has9focused tests and parent-only audit. Exhaustive conformance and downstream compatibility remain unfinished. See the [current run report](../../../.workflow/ultracode/execution-isolation-implementation/final-report.md) for actual evidence and outstanding work. Canonical task checkmarks are conservative; BG-01 and Spec 2 UD-1–UD-5 remain OPEN.
+**Delivery is partial.** DTOs, schemas, catalog inventory, frozen snapshot/loading, structural JSON validation, local TOML rules and candidate hash equality have bounded verification. JSON/TOML semantics and mandatory blockers have bounded independent review; completeness has 10 focused tests after the approved direct-assumption repair; the bounded runner has 9 controls and one canonical seed. Current execution is parent-verified with prior static repair/runner review. Exhaustive conformance and downstream compatibility remain unfinished. See the [current run report](../../../.workflow/ultracode/execution-isolation-implementation/final-report.md) for actual evidence and outstanding work. Canonical task checkmarks are conservative; BG-01 and Spec 2 UD-1–UD-5 remain OPEN.
 
 `BehavioralResult` full implementation, the Rust CLI binary, worker isolation, and Python transformation logic are explicitly out of scope.
 
@@ -329,8 +329,8 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - `SemanticResult` has no field implying behavioral correctness (Req 8.2).
   - Property 4: `validate_structural` pass and `validate_semantic` fail can coexist on the same document without contradiction.
 
-- [ ] 14. Implement blocking-gap report and artifact hash staleness detection
-  - Reopened2026-10-23 after reviewer29: root mandatory blockers currently hide an obligation’s own unresolved assumption, contrary to the always-report rule. Outcome stays Blocked, but diagnostics are incomplete. A bounded two-file TDD repair is requested; no fix or whole-task completion presumed.
+- [x] 14. Implement blocking-gap report and artifact hash staleness detection
+  - Repaired 2026-10-24 under explicit bounded approval: actual regression RED `03738e4` reported 2 gaps instead of 4; minimal branch move/GREEN `0396883` preserves direct assumptions, root blockers, zero store calls and the non-accepting projection. All 10 completeness tests, 6 artifact-hash tests and the full implemented suite pass. Reviewer 30 statically reviewed the proposed patch before application; current execution/integration is parent-verified, not independently re-reviewed. Full corpus, fresh coverage, consumer/native qualification and BG-01 remain separate and incomplete.
   - Delivered2026-10-23: explicit-context completeness helper with9focused tests and prior all-five-algorithm artifact helper with6tests; full integrated checks pass. Completeness has parent-only audit after reviewer28/allocation exhaustion, not independent review. EvidenceComplete is never behavioral verification or acceptance; full conformance/consumer/native handoff remain separate.
   - Create `crates/clouddialect-contracts/src/validator/behavioral.rs`.
   - Implement `check_evidence_completeness(contract: &BehavioralContract, candidate_id: &str, store: &dyn DocumentStore, validator: &Validator) -> BehavioralResult` using P0-E scoped validated evidence records:

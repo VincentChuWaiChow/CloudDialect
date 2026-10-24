@@ -1,3 +1,11 @@
+# Current renewal orchestration — 2026-10-24
+
+Parent-only execution under the approved [45-minute renewal](renewal-plan.md).
+No new agents/follow-ups; the 30 cumulative allocation is exhausted. Regression
+RED → commit → minimal fix/GREEN → commit → exact seed/control verification →
+commit → integrated checks/status audit. No independent post-repair review or
+fresh coverage is claimed. Earlier reviewer packets below are historical.
+
 # Orchestration
 ## Parent critical path
 Commit prior verified work; URI TDD fix; runner cases/implementation; integration.

@@ -1,3 +1,13 @@
+# Current renewal — 2026-10-24
+
+[Verified bounded repair/seed report](renewal-report.md) and
+[renewal audit](renewal-audit.md) supersede the pending-repair/default-failure
+status below: actual RED/GREEN, 10 completeness tests, default suite 286 Rust
+checks plus 1 fixture, check/fmt/Clippy and 15 Python pass. Fresh coverage, full
+corpus/native/consumer and all Spec 2 gates remain unfinished.
+
+## Earlier continuation snapshot — historical
+
 # Conformance continuation — partial delivery
 
 ## Outcome

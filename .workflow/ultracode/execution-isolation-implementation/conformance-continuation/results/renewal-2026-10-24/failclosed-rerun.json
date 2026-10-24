@@ -1,0 +1,428 @@
+{
+  "captured_at": "2026-10-24T02:57:52.469976+00:00",
+  "case_definitions": "../runner-failclosed-cases.json",
+  "case_definitions_sha256": "66581b33e29965eac4d98af59b2a47cd0339e1137cb3af683fdbfff9bf6f5ad1",
+  "executable": "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+  "executable_sha256": "5e6347020992e301d580db91c0eaf60ddb347bfb86c4f6ff5e936226173e763a",
+  "metadata_command": [
+    "rtk",
+    "proxy",
+    "cargo",
+    "test",
+    "--manifest-path",
+    "crates/clouddialect-contracts/Cargo.toml",
+    "--frozen",
+    "--test",
+    "conformance",
+    "--no-run",
+    "--message-format=json"
+  ],
+  "total": 67,
+  "matched": 67,
+  "positive_controls": 5,
+  "negative_controls": 62,
+  "results": [
+    {
+      "name": "baseline-valid",
+      "exit_code": 0,
+      "matched": true,
+      "output": "PASS positive/case\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "metadata-missing-phase",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-e_7rilw4/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-e_7rilw4/positive/case: invalid expected.json: missing field `phase` at line 1 column 55\n\n"
+    },
+    {
+      "name": "metadata-missing-document_kind",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-81kx_nkt/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-81kx_nkt/positive/case: invalid expected.json: missing field `document_kind` at line 1 column 42\n\n"
+    },
+    {
+      "name": "metadata-unknown-field",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-pal2e0oc/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-pal2e0oc/positive/case: invalid expected.json: unknown field `typo`, expected one of `phase`, `document_kind`, `outcome`, `expected_match`, `candidate_id`, `candidate_bytes`, `errors`, `warnings`, `blockers`, `store`, `store_error`, `round_trip` at line 1 column 85\n\n"
+    },
+    {
+      "name": "metadata-unknown-kind",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-m4lwmfxy/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-m4lwmfxy/positive/case: invalid document_kind: unknown variant `unknown`, expected one of `behavioral-contract`, `evidence-record`, `verification-result`, `catalog-index`, `extension-registry`\n\n"
+    },
+    {
+      "name": "metadata-invalid-json",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-k2kuzwxr/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-k2kuzwxr/positive/case: invalid expected.json: EOF while parsing an object at line 1 column 1\n\n"
+    },
+    {
+      "name": "metadata-array-not-object",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-ued3vxxb/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-ued3vxxb/positive/case: invalid expected.json: invalid length 0, expected struct Expected with 12 elements at line 1 column 2\n\n"
+    },
+    {
+      "name": "invalid-union-unknown-evidence-record-pass",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-ep1aitmi/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-ep1aitmi/positive/case: unsupported phase/document_kind combination\n\n"
+    },
+    {
+      "name": "invalid-union-behavioral-evidence-record-deferred",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-wtebm_rt/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-wtebm_rt/positive/case: unsupported phase/document_kind combination\n\n"
+    },
+    {
+      "name": "invalid-union-artifact-hash-evidence-record-pass",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-w8_d6epr/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-w8_d6epr/positive/case: unsupported phase/document_kind combination\n\n"
+    },
+    {
+      "name": "invalid-union-structural-manifest-warn",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-6v3gxdcu/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-6v3gxdcu/positive/case: unsupported phase-specific outcome or hash fields\n\n"
+    },
+    {
+      "name": "invalid-union-semantic-evidence-record-warn",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-yxwbgo0q/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-yxwbgo0q/positive/case: unsupported phase-specific outcome or hash fields\n\n"
+    },
+    {
+      "name": "invalid-union-structural-evidence-record-blocked",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-o1wsfp08/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-o1wsfp08/positive/case: unsupported phase-specific outcome or hash fields\n\n"
+    },
+    {
+      "name": "hash-field-in-structural-expected_match-None",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-w3kmypcc/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-w3kmypcc/positive/case: unsupported phase-specific outcome or hash fields\n\n"
+    },
+    {
+      "name": "hash-field-in-structural-expected_match-False",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-a75l566o/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-a75l566o/positive/case: unsupported phase-specific outcome or hash fields\n\n"
+    },
+    {
+      "name": "hash-field-in-structural-candidate_bytes-None",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-d0otf52p/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-d0otf52p/positive/case: unsupported phase-specific outcome or hash fields\n\n"
+    },
+    {
+      "name": "hash-field-in-structural-candidate_bytes-[]",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-62gwv2yq/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-62gwv2yq/positive/case: unsupported phase-specific outcome or hash fields\n\n"
+    },
+    {
+      "name": "hash-missing-expected_match",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-h2n5aq_p/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-h2n5aq_p/positive/case: artifact-hash requires expected_match/candidate_bytes and no outcome\n\n"
+    },
+    {
+      "name": "hash-missing-candidate_bytes",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-kcnrssuk/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-kcnrssuk/positive/case: artifact-hash requires expected_match/candidate_bytes and no outcome\n\n"
+    },
+    {
+      "name": "hash-outcome-null-presence",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-ctspc5m0/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-ctspc5m0/positive/case: artifact-hash requires expected_match/candidate_bytes and no outcome\n\n"
+    },
+    {
+      "name": "behavioral-missing-candidate",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-53h7jisi/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-53h7jisi/positive/case: candidate_id is required only for behavioral completeness\n\n"
+    },
+    {
+      "name": "structural-extraneous-candidate",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-hurv9582/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-hurv9582/positive/case: candidate_id is required only for behavioral completeness\n\n"
+    },
+    {
+      "name": "structural-extraneous-store",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-oorr4bo_/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-oorr4bo_/positive/case: store context is supported only for semantic/completeness fixtures\n\n"
+    },
+    {
+      "name": "roundtrip-no-extension",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-jv0qxtop/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-jv0qxtop/positive/case: round-trip extension value bytes missing or changed\n\n"
+    },
+    {
+      "name": "roundtrip-wrong-phase",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-_bt3u62x/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-_bt3u62x/positive/case: round_trip requires structural JSON document DTO validation\n\n"
+    },
+    {
+      "name": "roundtrip-wrong-kind",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-xyhe4stp/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-xyhe4stp/positive/case: round_trip requires structural JSON document DTO validation\n\n"
+    },
+    {
+      "name": "roundtrip-positive",
+      "exit_code": 0,
+      "matched": true,
+      "output": "PASS positive/case\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "error-positive",
+      "exit_code": 0,
+      "matched": true,
+      "output": "PASS positive/case\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "error-missing-category",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-gnz93511/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-gnz93511/positive/case: invalid errors expectation fields\n\n"
+    },
+    {
+      "name": "error-unknown-category",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-uwd94bw7/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-uwd94bw7/positive/case: unknown variant `invalid-category`, expected one of `structural`, `semantic`, `version`, `unresolvable-reference`, `unparseable`, `unsupported-version`, `unsupported-major-version`, `unsupported`, `blocking-gap`\n\n"
+    },
+    {
+      "name": "error-unknown-field",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-g4fl6ful/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-g4fl6ful/positive/case: invalid errors expectation fields\n\n"
+    },
+    {
+      "name": "error-invalid-description",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-dkmekwm1/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-dkmekwm1/positive/case: invalid errors expectation fields\n\n"
+    },
+    {
+      "name": "error-invalid-path",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-5fxar9xc/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-5fxar9xc/positive/case: invalid errors expectation fields\n\n"
+    },
+    {
+      "name": "error-wrong-category",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-okcgu8yd/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-okcgu8yd/positive/case: errors: expected [Object {\"category\": String(\"structural\"), \"description_contains\": String(\"unknown-schema\"), \"field_path\": String(\"$schema\")}], actual [Object {\"byte_offset\": Null, \"category\": String(\"unresolvable-reference\"), \"description\": String(\"Instance $schema URI \\\"https://example.com/unknown-schema\\\" must exactly match the selected admitted kind/version URI\"), \"document_id\": String(\"550e8400-e29b-41d4-a716-446655440000\"), \"field_path\": String(\"$schema\"), \"format_version\": String(\"1.0.0\")}]\n\n"
+    },
+    {
+      "name": "error-null-path-mismatch",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-rk9mb9oj/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-rk9mb9oj/positive/case: errors: expected [Object {\"category\": String(\"unresolvable-reference\"), \"description_contains\": String(\"unknown-schema\"), \"field_path\": Null}], actual [Object {\"byte_offset\": Null, \"category\": String(\"unresolvable-reference\"), \"description\": String(\"Instance $schema URI \\\"https://example.com/unknown-schema\\\" must exactly match the selected admitted kind/version URI\"), \"document_id\": String(\"550e8400-e29b-41d4-a716-446655440000\"), \"field_path\": String(\"$schema\"), \"format_version\": String(\"1.0.0\")}]\n\n"
+    },
+    {
+      "name": "error-wrong-path",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-z6p644fn/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-z6p644fn/positive/case: errors: expected [Object {\"category\": String(\"unresolvable-reference\"), \"description_contains\": String(\"unknown-schema\"), \"field_path\": String(\"wrong\")}], actual [Object {\"byte_offset\": Null, \"category\": String(\"unresolvable-reference\"), \"description\": String(\"Instance $schema URI \\\"https://example.com/unknown-schema\\\" must exactly match the selected admitted kind/version URI\"), \"document_id\": String(\"550e8400-e29b-41d4-a716-446655440000\"), \"field_path\": String(\"$schema\"), \"format_version\": String(\"1.0.0\")}]\n\n"
+    },
+    {
+      "name": "error-wrong-description",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-rbcqdlnp/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-rbcqdlnp/positive/case: errors: expected [Object {\"category\": String(\"unresolvable-reference\"), \"description_contains\": String(\"absent-text\"), \"field_path\": String(\"$schema\")}], actual [Object {\"byte_offset\": Null, \"category\": String(\"unresolvable-reference\"), \"description\": String(\"Instance $schema URI \\\"https://example.com/unknown-schema\\\" must exactly match the selected admitted kind/version URI\"), \"document_id\": String(\"550e8400-e29b-41d4-a716-446655440000\"), \"field_path\": String(\"$schema\"), \"format_version\": String(\"1.0.0\")}]\n\n"
+    },
+    {
+      "name": "error-scalar",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-f9mbcxz_/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-f9mbcxz_/positive/case: errors expectation must be an object\n\n"
+    },
+    {
+      "name": "error-missing",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-ycy_ai8_/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-ycy_ai8_/positive/case: errors: expected 0 entries, actual 1\n\n"
+    },
+    {
+      "name": "error-extra",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-_1d246iq/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-_1d246iq/positive/case: errors: expected 2 entries, actual 1\n\n"
+    },
+    {
+      "name": "warning-positive",
+      "exit_code": 0,
+      "matched": true,
+      "output": "PASS positive/case\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "warning-missing-key",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-9hkn4iv2/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-9hkn4iv2/positive/case: invalid warnings expectation fields\n\n"
+    },
+    {
+      "name": "warning-wrong-key",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-yl8k9i_1/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-yl8k9i_1/positive/case: warnings: expected [Object {\"description_contains\": String(\"reserved for core use\"), \"field_name_verbatim\": String(\"core:field\")}], actual [Object {\"description\": String(\"prefix 'CORE' is reserved for core use\"), \"field_name_verbatim\": String(\"CORE:field\")}]\n\n"
+    },
+    {
+      "name": "warning-unknown-field",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-enp3f8vl/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-enp3f8vl/positive/case: invalid warnings expectation fields\n\n"
+    },
+    {
+      "name": "warning-invalid-description",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-cmim3boi/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-cmim3boi/positive/case: invalid warnings expectation fields\n\n"
+    },
+    {
+      "name": "warning-scalar",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-1tii0jqe/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-1tii0jqe/positive/case: warnings expectation must be an object\n\n"
+    },
+    {
+      "name": "blocker-positive",
+      "exit_code": 0,
+      "matched": true,
+      "output": "PASS positive/case\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "blocker-missing-id",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-m4eunjpl/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-m4eunjpl/positive/case: invalid blockers expectation fields\n\n"
+    },
+    {
+      "name": "blocker-wrong-id",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-vhrz7muo/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-vhrz7muo/positive/case: blockers: expected [Object {\"assumption_text_contains\": String(\"unknown\"), \"obligation_id\": String(\"wrong\")}], actual [Object {\"assumption_text\": String(\"unknown\"), \"candidate_id\": String(\"candidate\"), \"obligation_id\": String(\"o1\")}]\n\n"
+    },
+    {
+      "name": "blocker-unknown-field",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-iu0jbcwo/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-iu0jbcwo/positive/case: invalid blockers expectation fields\n\n"
+    },
+    {
+      "name": "blocker-invalid-description",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-xa68tar0/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-xa68tar0/positive/case: invalid blockers expectation fields\n\n"
+    },
+    {
+      "name": "blocker-scalar",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-renewal-control-k0bjf47k/positive/case: fixture validator exit status: 1: /tmp/clouddialect-renewal-control-k0bjf47k/positive/case: blockers expectation must be an object\n\n"
+    },
+    {
+      "name": "discovery-input-only",
+      "exit_code": 1,
+      "matched": true,
+      "output": "incomplete, ambiguous or non-leaf fixture: /tmp/clouddialect-renewal-control-1c7h6jh3/positive/case\n"
+    },
+    {
+      "name": "discovery-oracle-only",
+      "exit_code": 1,
+      "matched": true,
+      "output": "incomplete, ambiguous or non-leaf fixture: /tmp/clouddialect-renewal-control-tghu8n6o/positive/case\n"
+    },
+    {
+      "name": "discovery-dual-input",
+      "exit_code": 1,
+      "matched": true,
+      "output": "incomplete, ambiguous or non-leaf fixture: /tmp/clouddialect-renewal-control-sz50zpre/positive/case\n"
+    },
+    {
+      "name": "discovery-non-leaf",
+      "exit_code": 1,
+      "matched": true,
+      "output": "incomplete, ambiguous or non-leaf fixture: /tmp/clouddialect-renewal-control-g4cr8pz6/positive/case\n"
+    },
+    {
+      "name": "discovery-symlink-file",
+      "exit_code": 1,
+      "matched": true,
+      "output": "symlink in fixture tree: /tmp/clouddialect-renewal-control-1unjybe5/positive/case/link\n"
+    },
+    {
+      "name": "discovery-symlink-directory",
+      "exit_code": 1,
+      "matched": true,
+      "output": "symlink in fixture tree: /tmp/clouddialect-renewal-control-cj3obutx/linked\n"
+    },
+    {
+      "name": "discovery-fifo-entry",
+      "exit_code": 1,
+      "matched": true,
+      "output": "non-regular fixture entry: /tmp/clouddialect-renewal-control-bq7fav5p/positive/case/pipe\n"
+    },
+    {
+      "name": "invalid-prefix-''",
+      "exit_code": 1,
+      "matched": true,
+      "output": "invalid fixture directory prefix \"\"\n"
+    },
+    {
+      "name": "invalid-prefix-'..'",
+      "exit_code": 1,
+      "matched": true,
+      "output": "invalid fixture directory prefix \"..\"\n"
+    },
+    {
+      "name": "invalid-prefix-'positive/../case'",
+      "exit_code": 1,
+      "matched": true,
+      "output": "invalid fixture directory prefix \"positive/../case\"\n"
+    },
+    {
+      "name": "invalid-prefix-'positive//case'",
+      "exit_code": 1,
+      "matched": true,
+      "output": "invalid fixture directory prefix \"positive//case\"\n"
+    },
+    {
+      "name": "invalid-prefix-'/positive'",
+      "exit_code": 1,
+      "matched": true,
+      "output": "invalid fixture directory prefix \"/positive\"\n"
+    },
+    {
+      "name": "invalid-prefix-'positive\\\\case'",
+      "exit_code": 1,
+      "matched": true,
+      "output": "invalid fixture directory prefix \"positive\\\\case\"\n"
+    },
+    {
+      "name": "invalid-prefix-'positive/./case'",
+      "exit_code": 1,
+      "matched": true,
+      "output": "invalid fixture directory prefix \"positive/./case\"\n"
+    },
+    {
+      "name": "empty-tree",
+      "exit_code": 1,
+      "matched": true,
+      "output": "no fixtures discovered under /tmp/clouddialect-renewal-control-ackzgevr\n"
+    }
+  ]
+}

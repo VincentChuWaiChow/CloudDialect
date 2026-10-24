@@ -1,3 +1,12 @@
+# Inventory status — 2026-10-24
+
+Exactly seed batch 3.2.1 is now approved and delivered (`408af0d`), with unchanged
+reviewed bytes and actual default/positive count 1. The remaining 103 cases in
+59 batches are still draft/unapproved with the oracle/environment gates below.
+No single-seed or green default-suite claim completes the full required corpus.
+
+## Historical inventory/readiness draft follows
+
 # Required fixture inventory — draft, not implementation approval
 
 Source: canonical Spec1tasks18–21 and their named P0/VC1 additions. This inventory

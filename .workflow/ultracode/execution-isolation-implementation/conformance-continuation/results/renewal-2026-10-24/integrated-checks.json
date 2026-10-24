@@ -1,0 +1,94 @@
+{
+  "captured_at": "2026-10-24T02:52:44.575288+00:00",
+  "checks": [
+    {
+      "name": "full-tests",
+      "command": [
+        "rtk",
+        "proxy",
+        "cargo",
+        "test",
+        "--manifest-path",
+        "crates/clouddialect-contracts/Cargo.toml",
+        "--frozen"
+      ],
+      "exit_code": 0,
+      "log": "full-tests.txt",
+      "rust_tests_passed": 286,
+      "fixture_counts": [
+        1
+      ]
+    },
+    {
+      "name": "check",
+      "command": [
+        "rtk",
+        "proxy",
+        "cargo",
+        "check",
+        "--manifest-path",
+        "crates/clouddialect-contracts/Cargo.toml",
+        "--frozen",
+        "--all-targets"
+      ],
+      "exit_code": 0,
+      "log": "check.txt",
+      "rust_tests_passed": 0,
+      "fixture_counts": []
+    },
+    {
+      "name": "clippy",
+      "command": [
+        "rtk",
+        "proxy",
+        "cargo",
+        "clippy",
+        "--manifest-path",
+        "crates/clouddialect-contracts/Cargo.toml",
+        "--frozen",
+        "--all-targets",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "log": "clippy.txt",
+      "rust_tests_passed": 0,
+      "fixture_counts": []
+    },
+    {
+      "name": "fmt",
+      "command": [
+        "rtk",
+        "proxy",
+        "cargo",
+        "fmt",
+        "--manifest-path",
+        "crates/clouddialect-contracts/Cargo.toml",
+        "--check"
+      ],
+      "exit_code": 0,
+      "log": "fmt.txt",
+      "rust_tests_passed": 0,
+      "fixture_counts": []
+    },
+    {
+      "name": "python",
+      "command": [
+        "rtk",
+        "proxy",
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "python.txt",
+      "rust_tests_passed": 0,
+      "fixture_counts": []
+    }
+  ]
+}
