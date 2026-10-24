@@ -1,0 +1,5 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.57s
+     Running tests/conformance.rs (/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613)
+PASS positive/evidence-record/inferred
+1 conformance fixtures passed
