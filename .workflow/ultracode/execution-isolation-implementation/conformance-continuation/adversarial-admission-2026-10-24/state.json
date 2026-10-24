@@ -1,0 +1,53 @@
+{
+  "title": "Approved26pairadmission/checklistreconciliation",
+  "slug": "adversarial-admission-2026-10-24",
+  "created_at": "2026-10-24T17:13:29Z",
+  "updated_at": "2026-10-24T17:13:29Z",
+  "deadline": "2026-10-24T17:58:29Z",
+  "status": "executing",
+  "mode": "delegated",
+  "baseline_ref": "84cb6aa0ea45004605d491c915836250c8d57f6f",
+  "risk_level": "medium",
+  "eval_contract": {
+    "level": "inline",
+    "path": "plan.md",
+    "status": "ready"
+  },
+  "approval": {
+    "required": true,
+    "granted": true,
+    "notes": "Explicit26pairapprovalandcontinue/checkoffrequest;localcommitsonly,no newpush/probes/sourcechanges"
+  },
+  "delegation": {
+    "native_agent_available": true,
+    "native_agent_planned": true,
+    "native_agent_used": true,
+    "agent_count": 1,
+    "wave_count": 1,
+    "cumulative_before": 42,
+    "planned_limit": 2,
+    "no_delegation_reason": ""
+  },
+  "packets": [
+    {
+      "id": "43-checklist-source-audit",
+      "status": "in_progress",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/43-checklist-source-audit.md"
+    },
+    {
+      "id": "44-adversarial-final-review",
+      "status": "pending",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/44-adversarial-final-review.md"
+    }
+  ],
+  "verification": {
+    "status": "pending",
+    "checks": []
+  },
+  "consolidated_repairs_used": 0,
+  "contract_sha256": "7645881b9f0829e66cef5dbfb0d63df3eb448ef0a3d1dd387445496d3ead46c9"
+}

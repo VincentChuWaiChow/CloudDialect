@@ -2,8 +2,8 @@
   "title": "Execution-isolation implementation",
   "slug": "execution-isolation-implementation",
   "created_at": "2026-10-22T07:25:44.090021+00:00",
-  "updated_at": "2026-10-24T11:58:16.764858+00:00",
-  "status": "waiting_for_approval",
+  "updated_at": "2026-10-24T17:17:21.039057+00:00",
+  "status": "executing",
   "mode": "delegated",
   "baseline_ref": "3b9cb6bd0ee82dbef3b731a35ce68fc778c4906a",
   "risk_level": "high",
@@ -15,16 +15,16 @@
   "approval": {
     "required": true,
     "granted": true,
-    "notes": "Approved28integrationpairs only; then explicitcommit/pushrequest.26adversarialpairs andruntime/native/release not authorized."
+    "notes": "Userapproved26pairadmissionandcontinue/checkoffactualtask.md. Localcommitsallowed; no newpush/probes/runtimegateclosure."
   },
   "delegation": {
     "native_agent_available": true,
     "native_agent_planned": true,
     "native_agent_used": true,
-    "agent_count": 42,
+    "agent_count": 43,
     "wave_count": 12,
     "no_delegation_reason": "",
-    "notes": "41/42read-onlyreviewscomplete;42independently75fixtures/11controls/46commands. ParentownsGit; no recursion/follow-updispatches.",
+    "notes": "43read-onlychecklistauditactive,44plannedfinalreview;parentwritesdata/status/Git;no recursion/follow-updispatches.",
     "additional_dispatch_limit": 2,
     "additional_dispatches_used": 2,
     "consolidated_repairs_used_current_tranche": 1
@@ -1808,14 +1808,10 @@
     "completeness_implemented": true
   },
   "current_tranche": {
-    "path": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/integration-admission-2026-10-24",
-    "deadline": "2026-10-24T12:24:58Z",
-    "status": "complete",
-    "scope": "56exactdatafiles,relatedsupportingstatus,localcommits,currentbranchnonforcepush",
-    "report": "conformance-continuation/integration-admission-2026-10-24/final-report.md",
-    "canonical": 75,
-    "payload_remote_sha": "a721914a6260eb1599add5d63c25ecb48b3f5dbb",
-    "publication": "payloadverified;receiptcheckpointwillbefinallyverifiedinchat"
+    "path": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-admission-2026-10-24",
+    "deadline": "2026-10-24T17:58:29Z",
+    "scope": "approved26pairsandproof-backedcheckmarks;no push/source/nativechanges",
+    "status": "executing"
   },
   "conformance_continuation": {
     "status": "42canonical fixtures verified; tasks18/19delivered, whole goal incomplete",

@@ -1,0 +1,12 @@
+{
+  "public_registry_subdirectories_copied": [
+    "src",
+    "cache",
+    "index"
+  ],
+  "source": "user Cargo publicregistrycache only",
+  "destination": "/tmp/clouddialect-runtime-cargo",
+  "network_fetch": false,
+  "auth_or_personal_config_copied": false,
+  "next_check": "cargo test --frozen with explicitisolatedCargoHome/Target"
+}
