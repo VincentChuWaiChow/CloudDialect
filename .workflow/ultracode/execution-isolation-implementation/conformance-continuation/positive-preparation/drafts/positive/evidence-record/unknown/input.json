@@ -1,0 +1,13 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440002",
+  "format_version": "1.0.0",
+  "claim": "Synthetic behavior remains unresolved.",
+  "classification": "unknown",
+  "unresolved_assumptions": [
+    {
+      "assumption_id": "provider-behavior-unmeasured",
+      "description": "Provider behavior for this synthetic fixture is not established.",
+      "reason": "No native or provider qualification evidence is supplied."
+    }
+  ]
+}

@@ -2,7 +2,7 @@
   "title": "Conformance prerequisite continuation",
   "slug": "conformance-continuation",
   "created_at": "2026-10-23T18:44:04+00:00",
-  "updated_at": "2026-10-24T02:59:53.045499+00:00",
+  "updated_at": "2026-10-24T03:08:58.311010+00:00",
   "status": "waiting_for_approval",
   "mode": "delegated",
   "baseline_ref": "5dc25f3f31ce500d17aa2322793d3a970f9b73d9",
@@ -183,7 +183,9 @@
       "stage": "docs(conformance): checkpoint review and scoped verification evidence"
     }
   ],
-  "pending_approvals": [],
+  "pending_approvals": [
+    "New 45-minute canonical admission tranche: frozen positive batches3.2.2\u20133.2.8, 12 cases/24 files; no production changes or new agents"
+  ],
   "full_goal_complete": false,
   "current_full_tree_green": false,
   "no_processes_running": true,
@@ -222,5 +224,12 @@
     "postreview_hash_disposition": "11 unchanged, 2 deliberately changed by approved repair; no fresh independent signoff"
   },
   "current_cargo_suite_green": true,
-  "current_full_tree_green_reason": "Default Cargo/check/fmt/Clippy and repository Python pass; additional pre-existing spec-only checker fails and fresh coverage/MSRV remain unverified."
+  "current_full_tree_green_reason": "Default Cargo/check/fmt/Clippy and repository Python pass; additional pre-existing spec-only checker fails and fresh coverage/MSRV remain unverified.",
+  "positive_preparation": {
+    "status": "19 actual temporary-root checks matched; 12 drafts ready, not admitted",
+    "proposal": "positive-preparation/admission-proposal.md",
+    "checks": "positive-preparation/verification.json",
+    "canonical_count": 1,
+    "new_agents": 0
+  }
 }

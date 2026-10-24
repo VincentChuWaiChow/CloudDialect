@@ -16,11 +16,16 @@
       },
       "notes": "Structural declaration only, never observed behavior/authentication/acceptance. Collectively cover >=3 fidelity labels; S3/PubSub note text is synthetic/unresolved, not asserted provider fact.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "positive-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "f4ac5fa2e8cae39cd87eb8af404bd95f724157515abf4abcd4b7e9a89738558c",
+        "expected.json": "5fa6d3342faead77edacf3790c758696a2604f34a6f9d97f4905d84407bfa7fe"
+      }
     },
     {
       "path": "positive/behavioral-contract/with-known-behavior",
@@ -34,11 +39,16 @@
       },
       "notes": "Structural declaration only, never observed behavior/authentication/acceptance. Resource dimensions must satisfy approved RC-1 coverage, not retry-only omission.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "positive-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "fb13b29bc5e9e62a9a22ffeb752aaa8f18a74d343808de49a228fab10e69747f",
+        "expected.json": "5fa6d3342faead77edacf3790c758696a2604f34a6f9d97f4905d84407bfa7fe"
+      }
     },
     {
       "path": "positive/behavioral-contract/with-unresolved-assumption-on-dependency",
@@ -52,11 +62,16 @@
       },
       "notes": "Structural declaration only, never observed behavior/authentication/acceptance. Resource dimensions must satisfy approved RC-1 coverage, not retry-only omission.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "positive-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "02f153115152b60c7a8e80065ab45eb055d2cca9ea04e6b29e4396b0c8481bfa",
+        "expected.json": "5fa6d3342faead77edacf3790c758696a2604f34a6f9d97f4905d84407bfa7fe"
+      }
     },
     {
       "path": "positive/behavioral-contract/with-behavioral-notes",
@@ -70,11 +85,16 @@
       },
       "notes": "Structural declaration only, never observed behavior/authentication/acceptance. Resource dimensions must satisfy approved RC-1 coverage, not retry-only omission. Collectively cover >=3 fidelity labels; S3/PubSub note text is synthetic/unresolved, not asserted provider fact.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "positive-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "f095b4fa109b396c16013bbdc13ad3aebf7c02c987ad5c2a956572f00fd2b1d9",
+        "expected.json": "5fa6d3342faead77edacf3790c758696a2604f34a6f9d97f4905d84407bfa7fe"
+      }
     },
     {
       "path": "positive/behavioral-contract/with-extension-field",
@@ -88,11 +108,16 @@
       },
       "notes": "Structural declaration only, never observed behavior/authentication/acceptance.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "positive-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "8c4a898b4b042ce683f9e6a68597d9646d5d03313261fc1cd20aa1a2b20a6d4c",
+        "expected.json": "5fa6d3342faead77edacf3790c758696a2604f34a6f9d97f4905d84407bfa7fe"
+      }
     },
     {
       "path": "positive/evidence-record/observed",
@@ -106,11 +131,16 @@
       },
       "notes": "Structural declaration only, never observed behavior/authentication/acceptance.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "positive-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "0d024291d146446b7874d76879097961a3ae0bee619bb23c486e829ba0fc0f23",
+        "expected.json": "cad10a80850a610f6bfe6c8e5e87aa135d5b9ba902b02ef2f7090dbb31e22f8e"
+      }
     },
     {
       "path": "positive/evidence-record/inferred",
@@ -143,11 +173,16 @@
       },
       "notes": "Structural declaration only, never observed behavior/authentication/acceptance.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "positive-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "28c0b3c9cf9c5cb4ffa8cf6a87b08e4ea56688d436f7b1635fae00386ce43027",
+        "expected.json": "cad10a80850a610f6bfe6c8e5e87aa135d5b9ba902b02ef2f7090dbb31e22f8e"
+      }
     },
     {
       "path": "positive/verification-result/minimal",
@@ -161,11 +196,16 @@
       },
       "notes": "Structural declaration only, never observed behavior/authentication/acceptance.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "positive-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "752ac38d6bab7cd2294608debc5a9411ce453541febd02a49023694306b5dc99",
+        "expected.json": "cd3bb445c3509617f4fa1b0b9939e2d6cbc8d770fa839582fa1710274278dac2"
+      }
     },
     {
       "path": "positive/verification-result/with-acceptance",
@@ -179,11 +219,16 @@
       },
       "notes": "Structural declaration only, never observed behavior/authentication/acceptance.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.json",
         "expected.json"
-      ]
+      ],
+      "readiness": "positive-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.json": "c5aeeda0653d6f257ab50cbbbcca302319ba1134f50f2c74228c026f05706381",
+        "expected.json": "cd3bb445c3509617f4fa1b0b9939e2d6cbc8d770fa839582fa1710274278dac2"
+      }
     },
     {
       "path": "positive/pack-manifest/full-coverage",
@@ -197,11 +242,16 @@
       },
       "notes": "Structural declaration only, never observed behavior/authentication/acceptance. Include P0-B capabilities; full-coverage may use empty requirements, unsupported-operation must carry a nonempty valid request declaration.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.toml",
         "expected.json"
-      ]
+      ],
+      "readiness": "positive-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.toml": "f742ab977ebb74fff102547c3074b3ba9828eaedc7186fb5b153bd7587aead1c",
+        "expected.json": "553ce3d5557b4f7139810a256e80d4474aae8af8e9bcc9c30608a874362237ee"
+      }
     },
     {
       "path": "positive/pack-manifest/with-unsupported-operation",
@@ -215,11 +265,16 @@
       },
       "notes": "Structural declaration only, never observed behavior/authentication/acceptance. Include P0-B capabilities; full-coverage may use empty requirements, unsupported-operation must carry a nonempty valid request declaration.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.toml",
         "expected.json"
-      ]
+      ],
+      "readiness": "positive-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.toml": "2915d5dac51fc3e3f9a952a3ca513de36ef5194fc017ef3bd3076b732c10ff1a",
+        "expected.json": "553ce3d5557b4f7139810a256e80d4474aae8af8e9bcc9c30608a874362237ee"
+      }
     },
     {
       "path": "positive/pack-manifest/with-extension-section",
@@ -233,11 +288,16 @@
       },
       "notes": "Structural declaration only, never observed behavior/authentication/acceptance. Include P0-B capabilities; full-coverage may use empty requirements, unsupported-operation must carry a nonempty valid request declaration.",
       "gate": "code-approval",
-      "status": "draft-not-dispatched",
+      "status": "draft-verified-not-admitted",
       "files": [
         "input.toml",
         "expected.json"
-      ]
+      ],
+      "readiness": "positive-preparation/contract.json",
+      "frozen_draft_sha256": {
+        "input.toml": "cd52e252a834c17a59efe0a99486c28aecac9aba3ec79532d9054c87d8c658cb",
+        "expected.json": "553ce3d5557b4f7139810a256e80d4474aae8af8e9bcc9c30608a874362237ee"
+      }
     },
     {
       "path": "negative/behavioral-contract/missing-id",
@@ -1859,12 +1919,19 @@
         "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-known-behavior/input.json",
         "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-known-behavior/expected.json"
       ],
-      "status": "draft-not-approved",
+      "status": "draft-verified-awaiting-admission-approval",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
-      ]
+      ],
+      "oracle": {
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "readiness": "positive-preparation/verification.json"
     },
     {
       "id": "3.2.3",
@@ -1878,12 +1945,19 @@
         "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-behavioral-notes/input.json",
         "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-behavioral-notes/expected.json"
       ],
-      "status": "draft-not-approved",
+      "status": "draft-verified-awaiting-admission-approval",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
-      ]
+      ],
+      "oracle": {
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "readiness": "positive-preparation/verification.json"
     },
     {
       "id": "3.2.4",
@@ -1894,12 +1968,19 @@
         "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-extension-field/input.json",
         "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-extension-field/expected.json"
       ],
-      "status": "draft-not-approved",
+      "status": "draft-verified-awaiting-admission-approval",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
-      ]
+      ],
+      "oracle": {
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "readiness": "positive-preparation/verification.json"
     },
     {
       "id": "3.2.5",
@@ -1913,12 +1994,19 @@
         "crates/clouddialect-contracts/fixtures/positive/evidence-record/unknown/input.json",
         "crates/clouddialect-contracts/fixtures/positive/evidence-record/unknown/expected.json"
       ],
-      "status": "draft-not-approved",
+      "status": "draft-verified-awaiting-admission-approval",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
-      ]
+      ],
+      "oracle": {
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "readiness": "positive-preparation/verification.json"
     },
     {
       "id": "3.2.6",
@@ -1932,12 +2020,19 @@
         "crates/clouddialect-contracts/fixtures/positive/verification-result/with-acceptance/input.json",
         "crates/clouddialect-contracts/fixtures/positive/verification-result/with-acceptance/expected.json"
       ],
-      "status": "draft-not-approved",
+      "status": "draft-verified-awaiting-admission-approval",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
-      ]
+      ],
+      "oracle": {
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "readiness": "positive-preparation/verification.json"
     },
     {
       "id": "3.2.7",
@@ -1951,12 +2046,19 @@
         "crates/clouddialect-contracts/fixtures/positive/pack-manifest/with-unsupported-operation/input.toml",
         "crates/clouddialect-contracts/fixtures/positive/pack-manifest/with-unsupported-operation/expected.json"
       ],
-      "status": "draft-not-approved",
+      "status": "draft-verified-awaiting-admission-approval",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
-      ]
+      ],
+      "oracle": {
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "readiness": "positive-preparation/verification.json"
     },
     {
       "id": "3.2.8",
@@ -1967,12 +2069,19 @@
         "crates/clouddialect-contracts/fixtures/positive/pack-manifest/with-extension-section/input.toml",
         "crates/clouddialect-contracts/fixtures/positive/pack-manifest/with-extension-section/expected.json"
       ],
-      "status": "draft-not-approved",
+      "status": "draft-verified-awaiting-admission-approval",
       "dependencies": [
         "3.1",
         "exact-oracle-freeze",
         "owner-approval"
-      ]
+      ],
+      "oracle": {
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "readiness": "positive-preparation/verification.json"
     },
     {
       "id": "3.2.9",
@@ -2933,5 +3042,7 @@
     "Forged/replayed/prohibited-action claims distinguish local declarations from actual Spec2 admission/authentication."
   ],
   "delivered_case_count": 1,
-  "delivered_batch_count": 1
+  "delivered_batch_count": 1,
+  "approval_ready_draft_cases": 12,
+  "approval_ready_draft_batches": 7
 }

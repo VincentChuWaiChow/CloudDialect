@@ -1,0 +1,323 @@
+{
+  "created_at": "2026-10-24T03:06:13.544844+00:00",
+  "baseline": "d8e5ebe3c51e196100490e7d4fc0a78c362b9561",
+  "status": "DRAFT: content/oracles fixed before actual temporary-root execution; canonical admission not authorized",
+  "scope": "12 remaining positive cases, 7 bounded batches 3.2.2-3.2.8; no production/source/canonical corpus change",
+  "expected_batch_counts": [
+    2,
+    2,
+    1,
+    2,
+    2,
+    2,
+    1
+  ],
+  "fidelity_labels_across_required_pair": [
+    "adaptation-required",
+    "architectural-change-required",
+    "equivalent-within-contract"
+  ],
+  "cases": [
+    {
+      "path": "positive/behavioral-contract/minimal-valid",
+      "batch": "3.2.2",
+      "document_kind": "behavioral-contract",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "behavioral-contract",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "draft_files": [
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/behavioral-contract/minimal-valid/input.json",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/behavioral-contract/minimal-valid/expected.json"
+      ],
+      "sha256": {
+        "input.json": "f4ac5fa2e8cae39cd87eb8af404bd95f724157515abf4abcd4b7e9a89738558c",
+        "expected.json": "5fa6d3342faead77edacf3790c758696a2604f34a6f9d97f4905d84407bfa7fe"
+      },
+      "canonical_destination": "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/minimal-valid",
+      "status": "draft-not-admitted"
+    },
+    {
+      "path": "positive/behavioral-contract/with-known-behavior",
+      "batch": "3.2.2",
+      "document_kind": "behavioral-contract",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "behavioral-contract",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "draft_files": [
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/behavioral-contract/with-known-behavior/input.json",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/behavioral-contract/with-known-behavior/expected.json"
+      ],
+      "sha256": {
+        "input.json": "fb13b29bc5e9e62a9a22ffeb752aaa8f18a74d343808de49a228fab10e69747f",
+        "expected.json": "5fa6d3342faead77edacf3790c758696a2604f34a6f9d97f4905d84407bfa7fe"
+      },
+      "canonical_destination": "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-known-behavior",
+      "status": "draft-not-admitted"
+    },
+    {
+      "path": "positive/behavioral-contract/with-unresolved-assumption-on-dependency",
+      "batch": "3.2.3",
+      "document_kind": "behavioral-contract",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "behavioral-contract",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "draft_files": [
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/behavioral-contract/with-unresolved-assumption-on-dependency/input.json",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/behavioral-contract/with-unresolved-assumption-on-dependency/expected.json"
+      ],
+      "sha256": {
+        "input.json": "02f153115152b60c7a8e80065ab45eb055d2cca9ea04e6b29e4396b0c8481bfa",
+        "expected.json": "5fa6d3342faead77edacf3790c758696a2604f34a6f9d97f4905d84407bfa7fe"
+      },
+      "canonical_destination": "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-unresolved-assumption-on-dependency",
+      "status": "draft-not-admitted"
+    },
+    {
+      "path": "positive/behavioral-contract/with-behavioral-notes",
+      "batch": "3.2.3",
+      "document_kind": "behavioral-contract",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "behavioral-contract",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "draft_files": [
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/behavioral-contract/with-behavioral-notes/input.json",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/behavioral-contract/with-behavioral-notes/expected.json"
+      ],
+      "sha256": {
+        "input.json": "f095b4fa109b396c16013bbdc13ad3aebf7c02c987ad5c2a956572f00fd2b1d9",
+        "expected.json": "5fa6d3342faead77edacf3790c758696a2604f34a6f9d97f4905d84407bfa7fe"
+      },
+      "canonical_destination": "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-behavioral-notes",
+      "status": "draft-not-admitted"
+    },
+    {
+      "path": "positive/behavioral-contract/with-extension-field",
+      "batch": "3.2.4",
+      "document_kind": "behavioral-contract",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "behavioral-contract",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "draft_files": [
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/behavioral-contract/with-extension-field/input.json",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/behavioral-contract/with-extension-field/expected.json"
+      ],
+      "sha256": {
+        "input.json": "8c4a898b4b042ce683f9e6a68597d9646d5d03313261fc1cd20aa1a2b20a6d4c",
+        "expected.json": "5fa6d3342faead77edacf3790c758696a2604f34a6f9d97f4905d84407bfa7fe"
+      },
+      "canonical_destination": "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-extension-field",
+      "status": "draft-not-admitted"
+    },
+    {
+      "path": "positive/evidence-record/observed",
+      "batch": "3.2.5",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "draft_files": [
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/evidence-record/observed/input.json",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/evidence-record/observed/expected.json"
+      ],
+      "sha256": {
+        "input.json": "0d024291d146446b7874d76879097961a3ae0bee619bb23c486e829ba0fc0f23",
+        "expected.json": "cad10a80850a610f6bfe6c8e5e87aa135d5b9ba902b02ef2f7090dbb31e22f8e"
+      },
+      "canonical_destination": "crates/clouddialect-contracts/fixtures/positive/evidence-record/observed",
+      "status": "draft-not-admitted"
+    },
+    {
+      "path": "positive/evidence-record/unknown",
+      "batch": "3.2.5",
+      "document_kind": "evidence-record",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "draft_files": [
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/evidence-record/unknown/input.json",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/evidence-record/unknown/expected.json"
+      ],
+      "sha256": {
+        "input.json": "28c0b3c9cf9c5cb4ffa8cf6a87b08e4ea56688d436f7b1635fae00386ce43027",
+        "expected.json": "cad10a80850a610f6bfe6c8e5e87aa135d5b9ba902b02ef2f7090dbb31e22f8e"
+      },
+      "canonical_destination": "crates/clouddialect-contracts/fixtures/positive/evidence-record/unknown",
+      "status": "draft-not-admitted"
+    },
+    {
+      "path": "positive/verification-result/minimal",
+      "batch": "3.2.6",
+      "document_kind": "verification-result",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "draft_files": [
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/verification-result/minimal/input.json",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/verification-result/minimal/expected.json"
+      ],
+      "sha256": {
+        "input.json": "752ac38d6bab7cd2294608debc5a9411ce453541febd02a49023694306b5dc99",
+        "expected.json": "cd3bb445c3509617f4fa1b0b9939e2d6cbc8d770fa839582fa1710274278dac2"
+      },
+      "canonical_destination": "crates/clouddialect-contracts/fixtures/positive/verification-result/minimal",
+      "status": "draft-not-admitted"
+    },
+    {
+      "path": "positive/verification-result/with-acceptance",
+      "batch": "3.2.6",
+      "document_kind": "verification-result",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "draft_files": [
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/verification-result/with-acceptance/input.json",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/verification-result/with-acceptance/expected.json"
+      ],
+      "sha256": {
+        "input.json": "c5aeeda0653d6f257ab50cbbbcca302319ba1134f50f2c74228c026f05706381",
+        "expected.json": "cd3bb445c3509617f4fa1b0b9939e2d6cbc8d770fa839582fa1710274278dac2"
+      },
+      "canonical_destination": "crates/clouddialect-contracts/fixtures/positive/verification-result/with-acceptance",
+      "status": "draft-not-admitted"
+    },
+    {
+      "path": "positive/pack-manifest/full-coverage",
+      "batch": "3.2.7",
+      "document_kind": "manifest",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "draft_files": [
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/pack-manifest/full-coverage/input.toml",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/pack-manifest/full-coverage/expected.json"
+      ],
+      "sha256": {
+        "input.toml": "f742ab977ebb74fff102547c3074b3ba9828eaedc7186fb5b153bd7587aead1c",
+        "expected.json": "553ce3d5557b4f7139810a256e80d4474aae8af8e9bcc9c30608a874362237ee"
+      },
+      "canonical_destination": "crates/clouddialect-contracts/fixtures/positive/pack-manifest/full-coverage",
+      "status": "draft-not-admitted"
+    },
+    {
+      "path": "positive/pack-manifest/with-unsupported-operation",
+      "batch": "3.2.7",
+      "document_kind": "manifest",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "draft_files": [
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/pack-manifest/with-unsupported-operation/input.toml",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/pack-manifest/with-unsupported-operation/expected.json"
+      ],
+      "sha256": {
+        "input.toml": "2915d5dac51fc3e3f9a952a3ca513de36ef5194fc017ef3bd3076b732c10ff1a",
+        "expected.json": "553ce3d5557b4f7139810a256e80d4474aae8af8e9bcc9c30608a874362237ee"
+      },
+      "canonical_destination": "crates/clouddialect-contracts/fixtures/positive/pack-manifest/with-unsupported-operation",
+      "status": "draft-not-admitted"
+    },
+    {
+      "path": "positive/pack-manifest/with-extension-section",
+      "batch": "3.2.8",
+      "document_kind": "manifest",
+      "phase": "structural",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      },
+      "draft_files": [
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/pack-manifest/with-extension-section/input.toml",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/pack-manifest/with-extension-section/expected.json"
+      ],
+      "sha256": {
+        "input.toml": "cd52e252a834c17a59efe0a99486c28aecac9aba3ec79532d9054c87d8c658cb",
+        "expected.json": "553ce3d5557b4f7139810a256e80d4474aae8af8e9bcc9c30608a874362237ee"
+      },
+      "canonical_destination": "crates/clouddialect-contracts/fixtures/positive/pack-manifest/with-extension-section",
+      "status": "draft-not-admitted"
+    }
+  ],
+  "sources": {
+    ".kiro/specs/contracts-evidence-foundation/requirements.md": "0661b986d02452b9d87f90fac0f9842baadc50d257ab8b0c5096d5ac7779256e",
+    ".kiro/specs/contracts-evidence-foundation/design.md": "03689e9ff40afa45b34e68312abab27f469c6cc087b89cc80638775ff8e70d30",
+    ".kiro/specs/contracts-evidence-foundation/tasks.md": "61368aab0999886c6174670036497defc30748797a519992a816a7c9724c1b4e",
+    ".kiro/specs/contracts-evidence-foundation/implementation-plan.md": "96b231af205fb0671b4d7002beb677b6d83f4d50b46928d9bf611e44405170c9",
+    "catalog/schemas/behavioral-contract/1.0/schema.json": "4a159debf540e781bb4dfed001e31f6c68915876ab0bc9cd9f52ffb143f77f53",
+    "catalog/schemas/evidence-record/1.0/schema.json": "d25acf15e02251188dfca4f34774699a326de1c8ef629c226f34cba6c6158df3",
+    "catalog/schemas/verification-result/1.0/schema.json": "c6246397e248f89fecae1639ae838153a88946b9cdfa15dde15de1b3e6b06ba9",
+    "crates/clouddialect-contracts/src/manifest/types.rs": "bef4faeedc7f282dbed57674e57e1582516ae8121b048037e25a4b96dc815ae2",
+    "crates/clouddialect-contracts/src/manifest/validator.rs": "9fd00bd67f5ae3b24ac2b7607d7948ed92e5a5c842d0d01aaca8838ef711c33a",
+    "crates/clouddialect-contracts/tests/support/fixtures.rs": "018cd496ee84166caac4e2d1d8ffb40784f9e9202b6c6333352f71d0445181e8"
+  },
+  "claims": "All structural/local validation only. Provider-note strings, observed/provenance/origin/approval fields and capabilities are synthetic declarations, not authority or authenticated evidence."
+}

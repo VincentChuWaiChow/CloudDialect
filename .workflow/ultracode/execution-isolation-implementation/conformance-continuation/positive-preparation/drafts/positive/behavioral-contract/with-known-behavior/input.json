@@ -1,0 +1,32 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440011",
+  "format_version": "1.0.0",
+  "operation_identity": {
+    "call_site": "synthetic.fixture.upload"
+  },
+  "inputs": {},
+  "outputs": {},
+  "side_effects": [],
+  "resource_dependencies": [
+    {
+      "identity": "synthetic-logical-store",
+      "permissions": [],
+      "configuration": {},
+      "known_behavior": {
+        "ordering": "Synthetic fixture declaration for ordering; not an observed provider guarantee.",
+        "consistency": "Synthetic fixture declaration for consistency; not an observed provider guarantee.",
+        "retry": "Synthetic fixture declaration for retry; not an observed provider guarantee.",
+        "failure": "Synthetic fixture declaration for failure; not an observed provider guarantee."
+      }
+    }
+  ],
+  "obligations": [
+    {
+      "obligation_id": "upload-object",
+      "behavioral_fidelity": "equivalent-within-contract",
+      "evidence_refs": [
+        "550e8400-e29b-41d4-a716-446655440001"
+      ]
+    }
+  ]
+}

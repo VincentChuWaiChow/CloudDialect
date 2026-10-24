@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-10-24T03:07:14.311315+00:00",
+  "expected": "Each derivative must fail the retained structural-pass oracle, with outcome expected pass/actual fail. These are temporary runner controls, not canonical negative corpus cases.",
+  "cases": [
+    {
+      "name": "missing-obligation-support",
+      "source": "positive/behavioral-contract/minimal-valid",
+      "mutation": "remove obligation evidence_refs",
+      "expected_success": false
+    },
+    {
+      "name": "missing-known-consistency",
+      "source": "positive/behavioral-contract/with-known-behavior",
+      "mutation": "remove known_behavior.consistency",
+      "expected_success": false
+    },
+    {
+      "name": "missing-assumption-discriminator",
+      "source": "positive/behavioral-contract/with-unresolved-assumption-on-dependency",
+      "mutation": "remove resource assumption behavior",
+      "expected_success": false
+    },
+    {
+      "name": "missing-note-reference",
+      "source": "positive/behavioral-contract/with-behavioral-notes",
+      "mutation": "remove behavioral_notes[0].evidence_ref",
+      "expected_success": false
+    },
+    {
+      "name": "observed-missing-provenance",
+      "source": "positive/evidence-record/observed",
+      "mutation": "remove provenance",
+      "expected_success": false
+    },
+    {
+      "name": "verification-no-tests",
+      "source": "positive/verification-result/minimal",
+      "mutation": "set tests=[]",
+      "expected_success": false
+    },
+    {
+      "name": "acceptance-no-approvers",
+      "source": "positive/verification-result/with-acceptance",
+      "mutation": "remove acceptance.approver_identities",
+      "expected_success": false
+    },
+    {
+      "name": "full-missing-toolchain",
+      "source": "positive/pack-manifest/full-coverage",
+      "mutation": "remove toolchain table",
+      "expected_success": false
+    },
+    {
+      "name": "unknown-capability-action",
+      "source": "positive/pack-manifest/with-extension-section",
+      "mutation": "set action to all",
+      "expected_success": false
+    }
+  ]
+}
