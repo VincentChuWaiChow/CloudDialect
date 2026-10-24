@@ -382,3 +382,31 @@ fn active_catalog_context_is_required_and_opaque_extension_values_remain_untouch
     assert_eq!(contract.extensions["acme:opaque"].get(), opaque);
     assert!(result.verification_result.is_none() && result.test_results.is_empty());
 }
+
+#[test]
+fn direct_assumptions_are_reported_even_when_a_root_mandatory_namespace_blocks() {
+    let mut contract = contract();
+    contract.required_extensions = Some(vec!["acme".into()]);
+    for (index, obligation) in contract.obligations.iter_mut().enumerate() {
+        obligation.evidence_refs = None;
+        obligation.unresolved_assumption = Some(
+            serde_json::from_value(json!({
+                "assumption_id":format!("local-{index}"),
+                "description":format!("direct uncertainty {index}"),
+                "reason":"not observed"
+            }))
+            .unwrap(),
+        );
+    }
+    let store = store();
+    let result = check(&contract, &store);
+    assert_eq!(result.outcome, BehavioralOutcome::Blocked);
+    assert_eq!(result.blocking_gaps.len(), 4);
+    assert_eq!(store.calls.get(), 0);
+    for (index, obligation) in contract.obligations.iter().enumerate() {
+        assert!(result.blocking_gaps.iter().any(|gap| {
+            gap.obligation_id == obligation.obligation_id
+                && gap.assumption_text == format!("direct uncertainty {index}")
+        }));
+    }
+}

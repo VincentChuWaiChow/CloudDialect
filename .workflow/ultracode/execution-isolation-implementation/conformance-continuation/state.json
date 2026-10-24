@@ -2,8 +2,8 @@
   "title": "Conformance prerequisite continuation",
   "slug": "conformance-continuation",
   "created_at": "2026-10-23T18:44:04+00:00",
-  "updated_at": "2026-10-23T19:38:32.085305+00:00",
-  "status": "waiting_for_approval",
+  "updated_at": "2026-10-24T02:48:08.305813+00:00",
+  "status": "executing",
   "mode": "delegated",
   "baseline_ref": "5dc25f3f31ce500d17aa2322793d3a970f9b73d9",
   "risk_level": "high",
@@ -143,12 +143,21 @@
       "stage": "docs(conformance): checkpoint review and scoped verification evidence"
     }
   ],
-  "pending_approvals": [
-    "one additional two-file completeness diagnostic repair",
-    "seed fixture3.2.1:positive/evidence-record/inferred input+expected"
-  ],
+  "pending_approvals": [],
   "full_goal_complete": false,
   "current_full_tree_green": false,
   "no_processes_running": true,
-  "current_safe_runner_verification": "Bounded additional matrix complete. Next implementation/corpus action still requires pending owner answers; no process/agent live."
+  "current_safe_runner_verification": "Bounded additional matrix complete. Next implementation/corpus action still requires pending owner answers; no process/agent live.",
+  "renewal": {
+    "approval": "explicit user approve, consolidated repair+seed 45-minute question",
+    "start": "2026-10-24T02:47:02+00:00",
+    "deadline": "2026-10-24T03:32:02+00:00",
+    "additional_agents": 0,
+    "cumulative_dispatches": 30,
+    "known_repair_limit": 1,
+    "known_repairs_applied": 0,
+    "pushes_authorized": false,
+    "status": "regression next",
+    "plan": "renewal-plan.md"
+  }
 }

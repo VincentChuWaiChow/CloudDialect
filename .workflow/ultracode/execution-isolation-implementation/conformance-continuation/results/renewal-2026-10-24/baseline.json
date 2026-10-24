@@ -1,0 +1,13 @@
+{
+  "head": "88661158dbee284e84f4e01073f93609d7f124f8",
+  "start": "2026-10-24T02:47:02+00:00",
+  "deadline": "2026-10-24T03:32:02+00:00",
+  "files": {
+    "crates/clouddialect-contracts/src/validator/behavioral.rs": "66680c0b94e63cce9c33c526ab7b9c234248735387907e9f00b98ca5184a2718",
+    "crates/clouddialect-contracts/tests/evidence_completeness.rs": "50e5e35a41febad318b053b68ec59ad3f8b62e1659bd57a2b367ca365439b489",
+    "crates/clouddialect-contracts/Cargo.toml": "dff170779fc937037132ed8aad30dbeec650e0a27d53b6303436721f6fe38ca4",
+    "crates/clouddialect-contracts/Cargo.lock": "f2534f3d967742bea48605978d2c3408d2eb3842430b0441a09cf28766c9cf3f",
+    "research.md": "dac1b1907059187912cafdb3c9b168ff388ce75099a011a9750b37ff44cbd110",
+    "cloud-transformation-framework-research.pdf": "b2b31aa20cb4aac5f971433c9a33d467c3910e1a50f4da807b93cfdc17b926e5"
+  }
+}

@@ -1,0 +1,112 @@
+   Compiling proc-macro2 v1.0.107
+   Compiling unicode-ident v1.0.27
+   Compiling quote v1.0.47
+   Compiling stable_deref_trait v1.2.1
+   Compiling litemap v0.8.3
+   Compiling writeable v0.6.4
+   Compiling cfg-if v1.0.5
+   Compiling serde_core v1.0.229
+   Compiling utf8_iter v1.0.4
+   Compiling icu_properties_data v2.3.0
+   Compiling libc v0.2.191
+   Compiling icu_normalizer_data v2.3.0
+   Compiling typenum v1.20.1
+   Compiling memchr v2.8.3
+   Compiling smallvec v1.16.3
+   Compiling zerocopy v0.8.63
+   Compiling getrandom v0.3.4
+   Compiling version_check v0.9.5
+   Compiling ref-cast v1.0.27
+   Compiling zmij v1.0.23
+   Compiling regex-syntax v0.8.11
+   Compiling serde v1.0.229
+   Compiling percent-encoding v2.3.2
+   Compiling ahash v0.8.12
+   Compiling aho-corasick v1.1.5
+   Compiling getrandom v0.4.3
+   Compiling serde_json v1.0.154
+   Compiling form_urlencoded v1.2.2
+   Compiling winnow v1.0.4
+   Compiling once_cell v1.21.4
+   Compiling itoa v1.0.18
+   Compiling hybrid-array v0.4.15
+   Compiling borrow-or-share v0.2.4
+   Compiling keccak v0.2.2
+   Compiling sponge-cursor v0.1.0
+   Compiling cpufeatures v0.3.1
+   Compiling base64 v0.22.1
+   Compiling syn v3.0.9
+   Compiling appendlist v1.4.0
+   Compiling toml_parser v1.1.5+spec-1.1.0
+   Compiling include_dir_macros v0.7.4
+   Compiling toml_writer v1.1.3+spec-1.1.0
+   Compiling winnow v0.7.15
+   Compiling semver v1.0.28
+   Compiling crypto-common v0.2.2
+   Compiling block-buffer v0.12.1
+   Compiling include_dir v0.7.4
+   Compiling uuid v1.28.0
+   Compiling digest v0.11.3
+   Compiling regex-automata v0.4.18
+   Compiling sha2 v0.11.1
+   Compiling sha3 v0.12.0
+   Compiling toml_datetime v0.7.5+spec-1.1.0
+   Compiling serde_spanned v1.1.2
+   Compiling toml v0.9.9+spec-1.0.0
+   Compiling synstructure v0.14.0
+   Compiling zerovec-derive v0.11.6
+   Compiling displaydoc v0.2.7
+   Compiling ref-cast-impl v1.0.27
+   Compiling serde_derive v1.0.229
+   Compiling zerofrom-derive v0.1.8
+   Compiling yoke-derive v0.8.4
+   Compiling fluent-uri v0.3.2
+   Compiling zerofrom v0.1.8
+   Compiling yoke v0.8.3
+   Compiling regex v1.13.1
+   Compiling zerovec v0.11.8
+   Compiling zerotrie v0.2.5
+   Compiling tinystr v0.8.4
+   Compiling potential_utf v0.1.6
+   Compiling icu_collections v2.3.0
+   Compiling icu_locale_core v2.3.0
+   Compiling icu_provider v2.3.1
+   Compiling icu_normalizer v2.3.0
+   Compiling icu_properties v2.3.0
+   Compiling idna_adapter v1.2.2
+   Compiling idna v1.1.0
+   Compiling url v2.5.8
+   Compiling boon v0.6.1
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 7.18s
+     Running tests/evidence_completeness.rs (/tmp/clouddialect-runtime-target/debug/deps/evidence_completeness-8864909b9cf8c611)
+
+running 10 tests
+test direct_assumptions_are_reported_even_when_a_root_mandatory_namespace_blocks ... FAILED
+test direct_and_unknown_evidence_assumptions_identify_every_affected_obligation ... ok
+test active_catalog_context_is_required_and_opaque_extension_values_remain_untouched ... ok
+test mandatory_root_and_evidence_namespaces_block_without_accepting_extension_overrides ... ok
+test each_resource_assumption_blocks_every_declared_obligation_even_with_partial_known_behavior ... ok
+test observed_and_inferred_support_can_be_evidence_complete_but_never_verification ... ok
+test residual_assumptions_block_even_when_the_evidence_classification_is_known ... ok
+test invalid_source_is_deferred_without_invented_obligation_ids_or_store_queries ... ok
+test valid_empty_scope_is_deferred_while_mandatory_semantics_remain_separate ... ok
+test missing_corrupt_wrong_type_and_unavailable_records_are_named_blockers_not_completeness ... ok
+
+failures:
+
+---- direct_assumptions_are_reported_even_when_a_root_mandatory_namespace_blocks stdout ----
+
+thread 'direct_assumptions_are_reported_even_when_a_root_mandatory_namespace_blocks' (1565) panicked at tests/evidence_completeness.rs:404:5:
+assertion `left == right` failed
+  left: 2
+ right: 4
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    direct_assumptions_are_reported_even_when_a_root_mandatory_namespace_blocks
+
+test result: FAILED. 9 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.24s
+
+error: test failed, to rerun pass `--test evidence_completeness`
