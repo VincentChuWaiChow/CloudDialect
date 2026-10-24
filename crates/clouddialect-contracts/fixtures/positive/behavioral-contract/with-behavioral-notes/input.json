@@ -1,0 +1,39 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440013",
+  "format_version": "1.0.0",
+  "operation_identity": {
+    "call_site": "synthetic.fixture.upload"
+  },
+  "inputs": {},
+  "outputs": {},
+  "side_effects": [],
+  "resource_dependencies": [],
+  "obligations": [
+    {
+      "obligation_id": "etag-assessment",
+      "behavioral_fidelity": "adaptation-required",
+      "evidence_refs": [
+        "550e8400-e29b-41d4-a716-446655440002"
+      ]
+    },
+    {
+      "obligation_id": "delivery-assessment",
+      "behavioral_fidelity": "architectural-change-required",
+      "evidence_refs": [
+        "550e8400-e29b-41d4-a716-446655440002"
+      ]
+    }
+  ],
+  "behavioral_notes": [
+    {
+      "note_type": "unresolved-s3-etag-checksum-semantics",
+      "description": "Synthetic unresolved topic: S3 ETag checksum semantics need exact workload/provider-version evidence; no checksum equivalence is asserted.",
+      "evidence_ref": "550e8400-e29b-41d4-a716-446655440002"
+    },
+    {
+      "note_type": "unresolved-pubsub-exactly-once-delivery",
+      "description": "Synthetic unresolved topic: Pub/Sub exactly-once delivery needs exact workload/provider-version evidence; no delivery guarantee is asserted.",
+      "evidence_ref": "550e8400-e29b-41d4-a716-446655440002"
+    }
+  ]
+}

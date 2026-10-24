@@ -1,0 +1,1755 @@
+{
+  "created_at": "2026-10-24T09:08:34+00:00",
+  "deadline": "2026-10-24T09:53:34+00:00",
+  "baseline_ref": "283533aff56bb1ade159275e4adb922765ced62e",
+  "approval": "User approving all followed by permission for as many agents as needed/careful allowed actions. Scope explicitly announced as four prepared sets (41 drafts); no broader external/source/native approval inferred.",
+  "case_count": 41,
+  "batch_count": 25,
+  "new_canonical_files": 82,
+  "expected_final_canonical_count": 42,
+  "cases": [
+    {
+      "path": "positive/behavioral-contract/minimal-valid",
+      "batch": "3.2.2",
+      "group": "positive-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/behavioral-contract/minimal-valid/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/minimal-valid/input.json",
+          "sha256": "f4ac5fa2e8cae39cd87eb8af404bd95f724157515abf4abcd4b7e9a89738558c"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/behavioral-contract/minimal-valid/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/minimal-valid/expected.json",
+          "sha256": "5fa6d3342faead77edacf3790c758696a2604f34a6f9d97f4905d84407bfa7fe"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "behavioral-contract",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "positive/behavioral-contract/with-known-behavior",
+      "batch": "3.2.2",
+      "group": "positive-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/behavioral-contract/with-known-behavior/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-known-behavior/input.json",
+          "sha256": "fb13b29bc5e9e62a9a22ffeb752aaa8f18a74d343808de49a228fab10e69747f"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/behavioral-contract/with-known-behavior/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-known-behavior/expected.json",
+          "sha256": "5fa6d3342faead77edacf3790c758696a2604f34a6f9d97f4905d84407bfa7fe"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "behavioral-contract",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "positive/behavioral-contract/with-unresolved-assumption-on-dependency",
+      "batch": "3.2.3",
+      "group": "positive-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/behavioral-contract/with-unresolved-assumption-on-dependency/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-unresolved-assumption-on-dependency/input.json",
+          "sha256": "02f153115152b60c7a8e80065ab45eb055d2cca9ea04e6b29e4396b0c8481bfa"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/behavioral-contract/with-unresolved-assumption-on-dependency/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-unresolved-assumption-on-dependency/expected.json",
+          "sha256": "5fa6d3342faead77edacf3790c758696a2604f34a6f9d97f4905d84407bfa7fe"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "behavioral-contract",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "positive/behavioral-contract/with-behavioral-notes",
+      "batch": "3.2.3",
+      "group": "positive-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/behavioral-contract/with-behavioral-notes/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-behavioral-notes/input.json",
+          "sha256": "f095b4fa109b396c16013bbdc13ad3aebf7c02c987ad5c2a956572f00fd2b1d9"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/behavioral-contract/with-behavioral-notes/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-behavioral-notes/expected.json",
+          "sha256": "5fa6d3342faead77edacf3790c758696a2604f34a6f9d97f4905d84407bfa7fe"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "behavioral-contract",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "positive/behavioral-contract/with-extension-field",
+      "batch": "3.2.4",
+      "group": "positive-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/behavioral-contract/with-extension-field/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-extension-field/input.json",
+          "sha256": "8c4a898b4b042ce683f9e6a68597d9646d5d03313261fc1cd20aa1a2b20a6d4c"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/behavioral-contract/with-extension-field/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/positive/behavioral-contract/with-extension-field/expected.json",
+          "sha256": "5fa6d3342faead77edacf3790c758696a2604f34a6f9d97f4905d84407bfa7fe"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "behavioral-contract",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "positive/evidence-record/observed",
+      "batch": "3.2.5",
+      "group": "positive-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/evidence-record/observed/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/positive/evidence-record/observed/input.json",
+          "sha256": "0d024291d146446b7874d76879097961a3ae0bee619bb23c486e829ba0fc0f23"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/evidence-record/observed/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/positive/evidence-record/observed/expected.json",
+          "sha256": "cad10a80850a610f6bfe6c8e5e87aa135d5b9ba902b02ef2f7090dbb31e22f8e"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "positive/evidence-record/unknown",
+      "batch": "3.2.5",
+      "group": "positive-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/evidence-record/unknown/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/positive/evidence-record/unknown/input.json",
+          "sha256": "28c0b3c9cf9c5cb4ffa8cf6a87b08e4ea56688d436f7b1635fae00386ce43027"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/evidence-record/unknown/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/positive/evidence-record/unknown/expected.json",
+          "sha256": "cad10a80850a610f6bfe6c8e5e87aa135d5b9ba902b02ef2f7090dbb31e22f8e"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "positive/verification-result/minimal",
+      "batch": "3.2.6",
+      "group": "positive-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/verification-result/minimal/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/positive/verification-result/minimal/input.json",
+          "sha256": "752ac38d6bab7cd2294608debc5a9411ce453541febd02a49023694306b5dc99"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/verification-result/minimal/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/positive/verification-result/minimal/expected.json",
+          "sha256": "cd3bb445c3509617f4fa1b0b9939e2d6cbc8d770fa839582fa1710274278dac2"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "positive/verification-result/with-acceptance",
+      "batch": "3.2.6",
+      "group": "positive-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/verification-result/with-acceptance/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/positive/verification-result/with-acceptance/input.json",
+          "sha256": "c5aeeda0653d6f257ab50cbbbcca302319ba1134f50f2c74228c026f05706381"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/verification-result/with-acceptance/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/positive/verification-result/with-acceptance/expected.json",
+          "sha256": "cd3bb445c3509617f4fa1b0b9939e2d6cbc8d770fa839582fa1710274278dac2"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "positive/pack-manifest/full-coverage",
+      "batch": "3.2.7",
+      "group": "positive-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/pack-manifest/full-coverage/input.toml",
+          "destination": "crates/clouddialect-contracts/fixtures/positive/pack-manifest/full-coverage/input.toml",
+          "sha256": "f742ab977ebb74fff102547c3074b3ba9828eaedc7186fb5b153bd7587aead1c"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/pack-manifest/full-coverage/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/positive/pack-manifest/full-coverage/expected.json",
+          "sha256": "553ce3d5557b4f7139810a256e80d4474aae8af8e9bcc9c30608a874362237ee"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "positive/pack-manifest/with-unsupported-operation",
+      "batch": "3.2.7",
+      "group": "positive-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/pack-manifest/with-unsupported-operation/input.toml",
+          "destination": "crates/clouddialect-contracts/fixtures/positive/pack-manifest/with-unsupported-operation/input.toml",
+          "sha256": "2915d5dac51fc3e3f9a952a3ca513de36ef5194fc017ef3bd3076b732c10ff1a"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/pack-manifest/with-unsupported-operation/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/positive/pack-manifest/with-unsupported-operation/expected.json",
+          "sha256": "553ce3d5557b4f7139810a256e80d4474aae8af8e9bcc9c30608a874362237ee"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "positive/pack-manifest/with-extension-section",
+      "batch": "3.2.8",
+      "group": "positive-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/pack-manifest/with-extension-section/input.toml",
+          "destination": "crates/clouddialect-contracts/fixtures/positive/pack-manifest/with-extension-section/input.toml",
+          "sha256": "cd52e252a834c17a59efe0a99486c28aecac9aba3ec79532d9054c87d8c658cb"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/pack-manifest/with-extension-section/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/positive/pack-manifest/with-extension-section/expected.json",
+          "sha256": "553ce3d5557b4f7139810a256e80d4474aae8af8e9bcc9c30608a874362237ee"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "negative/behavioral-contract/missing-id",
+      "batch": "3.2.9",
+      "group": "negative-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/behavioral-contract/missing-id/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/behavioral-contract/missing-id/input.json",
+          "sha256": "1299d7e9317c93cc253d481e9a46f113bfedf812fe8d61f1a8be6a9b46a72183"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/behavioral-contract/missing-id/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/behavioral-contract/missing-id/expected.json",
+          "sha256": "e93e638f025c9667fc15f2954316a20cbc84f5b5038877fafb1d4e73ec0f6233"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "behavioral-contract",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "id",
+            "description_contains": "Required field is missing"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "negative/behavioral-contract/obligation-no-evidence-no-assumption",
+      "batch": "3.2.9",
+      "group": "negative-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/behavioral-contract/obligation-no-evidence-no-assumption/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/behavioral-contract/obligation-no-evidence-no-assumption/input.json",
+          "sha256": "42103df808fdb97e209b3a39521406954242f9e95c0a65ddb709cb274611f96f"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/behavioral-contract/obligation-no-evidence-no-assumption/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/behavioral-contract/obligation-no-evidence-no-assumption/expected.json",
+          "sha256": "c55458c369415d62c5160be078972b12f4b5d766a224ff146426d447aa5d4446"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "behavioral-contract",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "obligations[0].evidence_refs",
+            "description_contains": "Required field is missing"
+          },
+          {
+            "category": "structural",
+            "field_path": "obligations[0].unresolved_assumption",
+            "description_contains": "Required field is missing"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "negative/behavioral-contract/invalid-behavioral-fidelity",
+      "batch": "3.2.10",
+      "group": "negative-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/behavioral-contract/invalid-behavioral-fidelity/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/behavioral-contract/invalid-behavioral-fidelity/input.json",
+          "sha256": "a0149b9ce6310edb6051ef7759a37766002537c60b922a327f4b49b381d91099"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/behavioral-contract/invalid-behavioral-fidelity/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/behavioral-contract/invalid-behavioral-fidelity/expected.json",
+          "sha256": "2bf8714a5ee6de6f72459c3dedfd911c3d208016bfec5617b265bf0ff79c5541"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "behavioral-contract",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "obligations[0].behavioral_fidelity",
+            "description_contains": "Field does not satisfy the selected schema constraint"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "negative/evidence-record/missing-classification",
+      "batch": "3.2.11",
+      "group": "negative-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/evidence-record/missing-classification/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/evidence-record/missing-classification/input.json",
+          "sha256": "e28b041163e90465643214b194ae512697f14035b943f06e215e3c91362a350b"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/evidence-record/missing-classification/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/evidence-record/missing-classification/expected.json",
+          "sha256": "42362692a75eae6a9ba41ff6a8a1da0ba6d5be9134d4d6303ed34976e364994d"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "classification",
+            "description_contains": "Required field is missing"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "negative/evidence-record/inferred-empty-reasoning-chain",
+      "batch": "3.2.11",
+      "group": "negative-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/evidence-record/inferred-empty-reasoning-chain/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/evidence-record/inferred-empty-reasoning-chain/input.json",
+          "sha256": "f08e4efcf4b5b2d93f494266caeb28545daa5b05df94bf4081f69e1ea84fc61a"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/evidence-record/inferred-empty-reasoning-chain/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/evidence-record/inferred-empty-reasoning-chain/expected.json",
+          "sha256": "c4d05482b8d122044335060517e05beddfacf1f9b3e38a68632291ea36a982a4"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "reasoning_chain",
+            "description_contains": "Field does not satisfy the selected schema constraint"
+          },
+          {
+            "category": "structural",
+            "field_path": "reasoning_chain",
+            "description_contains": "Field is not permitted by the selected schema"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "negative/evidence-record/unknown-empty-assumptions",
+      "batch": "3.2.12",
+      "group": "negative-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/evidence-record/unknown-empty-assumptions/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/evidence-record/unknown-empty-assumptions/input.json",
+          "sha256": "d6b30e818cbf78e22c6ba468370479ae4e16b3f2289d3948fe8bf42ff266d869"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/evidence-record/unknown-empty-assumptions/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/evidence-record/unknown-empty-assumptions/expected.json",
+          "sha256": "b9b5b8fc352c470dfce64582ecb8ae6d09792a78ce65bc6e4e5c6a8399aba113"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "unresolved_assumptions",
+            "description_contains": "Field does not satisfy the selected schema constraint"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "negative/verification-result/empty-tests-array",
+      "batch": "3.2.13",
+      "group": "negative-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/empty-tests-array/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/verification-result/empty-tests-array/input.json",
+          "sha256": "7be6ca737945136ac112439527fcd99a4de0ea3652c4a3663d07cc3ccd93fd32"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/empty-tests-array/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/verification-result/empty-tests-array/expected.json",
+          "sha256": "336d7325dfc98ba1f6a49c55d24f92165c31d0c2580010eb165c730d45706cd2"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "tests",
+            "description_contains": "Field does not satisfy the selected schema constraint"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "negative/verification-result/nonpass-without-failure-description",
+      "batch": "3.2.13",
+      "group": "negative-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/nonpass-without-failure-description/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/verification-result/nonpass-without-failure-description/input.json",
+          "sha256": "d098af0312716caa0709b8a46e1eef8aa33f60f7bd81711c550087cc3cd3e317"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/nonpass-without-failure-description/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/verification-result/nonpass-without-failure-description/expected.json",
+          "sha256": "cada309e1c0454a16676f671e79aa445b55460610e046adabf83b8f5d32e0f84"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "tests[0].failure_description",
+            "description_contains": "Required field is missing"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "negative/verification-result/acceptance-missing-approver",
+      "batch": "3.2.14",
+      "group": "negative-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/acceptance-missing-approver/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/verification-result/acceptance-missing-approver/input.json",
+          "sha256": "68ea85d2e8dde2b3fbab454982dc01a678aad482757308c92f6a25843867f46a"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/acceptance-missing-approver/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/verification-result/acceptance-missing-approver/expected.json",
+          "sha256": "2a6577530e563403608e9767cf25f8240609dcf94947bb8eeba58ae94a429c9f"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "acceptance.approver_identities",
+            "description_contains": "Required field is missing"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "negative/verification-result/unknown-hash-algorithm",
+      "batch": "3.2.14",
+      "group": "negative-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/unknown-hash-algorithm/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/verification-result/unknown-hash-algorithm/input.json",
+          "sha256": "25f6514124ff495c574a4c4b9be150335f0a9cbe4d9a2842979e4c809d536170"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/unknown-hash-algorithm/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/verification-result/unknown-hash-algorithm/expected.json",
+          "sha256": "0b8357e8635a5988468ac2a06646d795200137f735614f3ca936136b077787b5"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "candidate.content_hash.algorithm",
+            "description_contains": "Field does not satisfy the selected schema constraint"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "negative/verification-result/missing-binding",
+      "batch": "3.2.15",
+      "group": "negative-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/missing-binding/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/verification-result/missing-binding/input.json",
+          "sha256": "a701f5cd33170c627a8957a7c3434699a216d9c06b8576ba76ffa2a2709ecaab"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/missing-binding/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/verification-result/missing-binding/expected.json",
+          "sha256": "66e3a34edccf8fcba97ce8cab64ed5dc00b48ce8dbb87492fe7ab8b51af974a4"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "binding",
+            "description_contains": "Required field is missing"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "negative/verification-result/missing-configuration",
+      "batch": "3.2.15",
+      "group": "negative-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/missing-configuration/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/verification-result/missing-configuration/input.json",
+          "sha256": "20b6bbcd368a8e0a65313e63dc67cbade1b651d64261a055ac9b842f4cce7494"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/missing-configuration/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/verification-result/missing-configuration/expected.json",
+          "sha256": "9684ba9cebe959884a8b5e33a6d3517acb938bed86f919ea598ac6335ad62d9e"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "configuration",
+            "description_contains": "Required field is missing"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "negative/verification-result/nonpass-string-failure-description",
+      "batch": "3.2.16",
+      "group": "negative-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/nonpass-string-failure-description/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/verification-result/nonpass-string-failure-description/input.json",
+          "sha256": "d0d30fdeebe68fe8a64b151913f53e48539165b9d17a315586f2f864ee03cedd"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/nonpass-string-failure-description/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/verification-result/nonpass-string-failure-description/expected.json",
+          "sha256": "01fbec243921a778fbce38fb028940e6a56d048aa7f1b5c986e6e49f82e0c48e"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "tests[0].failure_description",
+            "description_contains": "Field does not satisfy the selected schema constraint"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "negative/verification-result/missing-test-obligation",
+      "batch": "3.2.16",
+      "group": "negative-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/missing-test-obligation/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/verification-result/missing-test-obligation/input.json",
+          "sha256": "40cf9acb108c14a6bb04cd230f2e0ec6a8a34fb7156a7562492712196e80a00e"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/verification-result/missing-test-obligation/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/verification-result/missing-test-obligation/expected.json",
+          "sha256": "282193e1b15320f19722af0a86da80585f1cfb1c9acddddd0b30215b9467f423"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "structural",
+            "field_path": "tests[0].obligation_ids",
+            "description_contains": "Required field is missing"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "negative/pack-manifest/missing-toolchain-for-full-operation",
+      "batch": "3.2.17",
+      "group": "negative-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/pack-manifest/missing-toolchain-for-full-operation/input.toml",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/pack-manifest/missing-toolchain-for-full-operation/input.toml",
+          "sha256": "175e59a1eed43785f33048a82c109f9bf8ff80602d23c521906e4a8af8ada963"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/pack-manifest/missing-toolchain-for-full-operation/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/pack-manifest/missing-toolchain-for-full-operation/expected.json",
+          "sha256": "a67258e923d83bf01a0cfb8019f88a1f748a531c5dde6137d43f8b0698072278"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "semantic",
+            "field_path": "toolchain",
+            "description_contains": "Full or partial operations require a nonempty toolchain"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "negative/pack-manifest/invalid-behavioral-fidelity",
+      "batch": "3.2.17",
+      "group": "negative-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/pack-manifest/invalid-behavioral-fidelity/input.toml",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/pack-manifest/invalid-behavioral-fidelity/input.toml",
+          "sha256": "bb812f357eff07710bc374975481899a8add515ee7f1166325520176a26b5790"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/pack-manifest/invalid-behavioral-fidelity/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/pack-manifest/invalid-behavioral-fidelity/expected.json",
+          "sha256": "d3e3799459a3316fceccaae9850d017b641425a8dfd377f7fd5c1e1c161fdfc2"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "unparseable",
+            "field_path": null,
+            "description_contains": "Manifest could not decode as the required TOML structure"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "negative/pack-manifest/inline-contract-body",
+      "batch": "3.2.18",
+      "group": "negative-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/pack-manifest/inline-contract-body/input.toml",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/pack-manifest/inline-contract-body/input.toml",
+          "sha256": "11307f2768bb0d30f822b1800a5e8426b3a0336d2045c3bb9d4b4209c89838b7"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/pack-manifest/inline-contract-body/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/pack-manifest/inline-contract-body/expected.json",
+          "sha256": "d3e3799459a3316fceccaae9850d017b641425a8dfd377f7fd5c1e1c161fdfc2"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "unparseable",
+            "field_path": null,
+            "description_contains": "Manifest could not decode as the required TOML structure"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "negative/pack-manifest/missing-capabilities",
+      "batch": "3.2.18",
+      "group": "negative-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/pack-manifest/missing-capabilities/input.toml",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/pack-manifest/missing-capabilities/input.toml",
+          "sha256": "c6fd3db430389d372701c7f97c4446d43a0e3eaa9cbd924189b1528389a67277"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/pack-manifest/missing-capabilities/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/pack-manifest/missing-capabilities/expected.json",
+          "sha256": "d3e3799459a3316fceccaae9850d017b641425a8dfd377f7fd5c1e1c161fdfc2"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "unparseable",
+            "field_path": null,
+            "description_contains": "Manifest could not decode as the required TOML structure"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "negative/pack-manifest/unknown-capability-version",
+      "batch": "3.2.19",
+      "group": "negative-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/pack-manifest/unknown-capability-version/input.toml",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/pack-manifest/unknown-capability-version/input.toml",
+          "sha256": "31408275e907f9ecd294fd97e9d67578000fb0ae6da9f5a3deaec6f6f7f1079f"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/pack-manifest/unknown-capability-version/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/pack-manifest/unknown-capability-version/expected.json",
+          "sha256": "33495bca9bb0952f7f4c3ffe70395d5b313a515a12e6114212643913920b82b5"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "unsupported-version",
+            "field_path": "capabilities.format_version",
+            "description_contains": "Capability declaration version is not supported"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "negative/pack-manifest/duplicate-capability-id",
+      "batch": "3.2.19",
+      "group": "negative-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/pack-manifest/duplicate-capability-id/input.toml",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/pack-manifest/duplicate-capability-id/input.toml",
+          "sha256": "9e4a9cd2886f1f034a766aeaacd9ee751ea3509f43619a7abf1833e1378cc874"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/pack-manifest/duplicate-capability-id/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/pack-manifest/duplicate-capability-id/expected.json",
+          "sha256": "ecee74aa0009ea52ca8224e5906fab1aa6f787434f3649c8d005ac454054c873"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "semantic",
+            "field_path": "capabilities.requirements[1].id",
+            "description_contains": "Capability requirement identifier must be unique"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "negative/pack-manifest/capability-unknown-field",
+      "batch": "3.2.20",
+      "group": "negative-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/pack-manifest/capability-unknown-field/input.toml",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/pack-manifest/capability-unknown-field/input.toml",
+          "sha256": "ab37a59b798f282de120a000b7c065aab5b2cefacb002acf616e3fd2f58a9a81"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/pack-manifest/capability-unknown-field/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/pack-manifest/capability-unknown-field/expected.json",
+          "sha256": "d3e3799459a3316fceccaae9850d017b641425a8dfd377f7fd5c1e1c161fdfc2"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "manifest",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "unparseable",
+            "field_path": null,
+            "description_contains": "Manifest could not decode as the required TOML structure"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "negative/version/unsupported-major",
+      "batch": "3.2.21",
+      "group": "negative-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/version/unsupported-major/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/version/unsupported-major/input.json",
+          "sha256": "f7632714d7024531d04f59bb883095a8b1c0bfb6bfa97cb48a8ce3c464ab267e"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/version/unsupported-major/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/version/unsupported-major/expected.json",
+          "sha256": "ad6ede655dd184613e018345fa4904ad0e1df2f45f57abad08304eb4460cddbc"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "unsupported-major-version",
+            "field_path": "format_version",
+            "description_contains": "unsupported-major-version \"99.0.0\"; see .kiro/specs/contracts-evidence-foundation/requirements.md#requirement-7-compatibility-policy"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      }
+    },
+    {
+      "path": "negative/version/unsupported-minor-newer",
+      "batch": "3.2.21",
+      "group": "negative-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/version/unsupported-minor-newer/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/version/unsupported-minor-newer/input.json",
+          "sha256": "31dcf04f94b6de851c1fd5ddb4f999d468630e55b6d483dcb9c5197e38c698a3"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/negative-preparation/drafts/negative/version/unsupported-minor-newer/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/negative/version/unsupported-minor-newer/expected.json",
+          "sha256": "3978b891e723ef1e2d42e0dfa21b5c7c4056dde4c48e4003d6f8c44ca8e97bc8"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "warn",
+        "errors": [],
+        "warnings": [
+          {
+            "field_name_verbatim": "format_version",
+            "description_contains": "1.99.0"
+          }
+        ],
+        "blockers": []
+      }
+    },
+    {
+      "path": "round-trip/extension-field-preservation/behavioral-contract",
+      "batch": "3.2.36",
+      "group": "roundtrip-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/roundtrip-preparation/drafts/round-trip/extension-field-preservation/behavioral-contract/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/round-trip/extension-field-preservation/behavioral-contract/input.json",
+          "sha256": "5928b42b9494e41a8a2cba7b9e79706181998eeefa57a02ceeceda5940d2edd5"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/roundtrip-preparation/drafts/round-trip/extension-field-preservation/behavioral-contract/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/round-trip/extension-field-preservation/behavioral-contract/expected.json",
+          "sha256": "45e725ee95012454db30cfea2b2062612d35f1c7a03a24dc9f080c0d4231eb73"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "behavioral-contract",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": [],
+        "round_trip": true
+      }
+    },
+    {
+      "path": "round-trip/extension-field-preservation/evidence-record",
+      "batch": "3.2.36",
+      "group": "roundtrip-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/roundtrip-preparation/drafts/round-trip/extension-field-preservation/evidence-record/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/round-trip/extension-field-preservation/evidence-record/input.json",
+          "sha256": "4f36ffb3b9caf3cb3c0544f9839357daeaead3af6dbb2439d030c6a94e58bb85"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/roundtrip-preparation/drafts/round-trip/extension-field-preservation/evidence-record/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/round-trip/extension-field-preservation/evidence-record/expected.json",
+          "sha256": "b13ff786fccf1cd540f53ae532bacf3b66a1fe3cfadf2ecc03e1673692e28f51"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": [],
+        "round_trip": true
+      }
+    },
+    {
+      "path": "round-trip/extension-field-preservation/verification-result",
+      "batch": "3.2.37",
+      "group": "roundtrip-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/roundtrip-preparation/drafts/round-trip/extension-field-preservation/verification-result/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/round-trip/extension-field-preservation/verification-result/input.json",
+          "sha256": "3a9214e5cc88ba2a62e1dcf21c25fa5fc63d356c1e8915039b74f643c983d428"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/roundtrip-preparation/drafts/round-trip/extension-field-preservation/verification-result/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/round-trip/extension-field-preservation/verification-result/expected.json",
+          "sha256": "58cd4b96216f9f037235211706a7b8cebcf27235c61ac9b89bfc85e8d88c0fb7"
+        }
+      ],
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": [],
+        "round_trip": true
+      }
+    },
+    {
+      "path": "integration/blocking-gap/unknown-evidence-mandatory-obligation",
+      "batch": "3.2.38",
+      "group": "integration-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/integration-preparation/drafts/integration/blocking-gap/unknown-evidence-mandatory-obligation/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/integration/blocking-gap/unknown-evidence-mandatory-obligation/input.json",
+          "sha256": "94e111c1d5f1c4cdb9687c31defa45f079881dfc8ccabfbfb2624377566082b7"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/integration-preparation/drafts/integration/blocking-gap/unknown-evidence-mandatory-obligation/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/integration/blocking-gap/unknown-evidence-mandatory-obligation/expected.json",
+          "sha256": "147abd3b973ca53527601fbb38d86687d3d844e539a65f96d3a616ab7df9029e"
+        }
+      ],
+      "oracle": {
+        "document_kind": "behavioral-contract",
+        "phase": "behavioral",
+        "outcome": "blocked",
+        "candidate_id": "synthetic-candidate",
+        "store": [
+          {
+            "lookup_id": "550e8400-e29b-41d4-a716-446655440002",
+            "lookup_version": "1.0.0",
+            "reference": {
+              "id": "550e8400-e29b-41d4-a716-446655440002",
+              "format_version": "1.0.0"
+            },
+            "content_hash": {
+              "algorithm": "sha-256",
+              "value": "28c0b3c9cf9c5cb4ffa8cf6a87b08e4ea56688d436f7b1635fae00386ce43027"
+            },
+            "bytes": [
+              123,
+              10,
+              32,
+              32,
+              34,
+              105,
+              100,
+              34,
+              58,
+              32,
+              34,
+              53,
+              53,
+              48,
+              101,
+              56,
+              52,
+              48,
+              48,
+              45,
+              101,
+              50,
+              57,
+              98,
+              45,
+              52,
+              49,
+              100,
+              52,
+              45,
+              97,
+              55,
+              49,
+              54,
+              45,
+              52,
+              52,
+              54,
+              54,
+              53,
+              53,
+              52,
+              52,
+              48,
+              48,
+              48,
+              50,
+              34,
+              44,
+              10,
+              32,
+              32,
+              34,
+              102,
+              111,
+              114,
+              109,
+              97,
+              116,
+              95,
+              118,
+              101,
+              114,
+              115,
+              105,
+              111,
+              110,
+              34,
+              58,
+              32,
+              34,
+              49,
+              46,
+              48,
+              46,
+              48,
+              34,
+              44,
+              10,
+              32,
+              32,
+              34,
+              99,
+              108,
+              97,
+              105,
+              109,
+              34,
+              58,
+              32,
+              34,
+              83,
+              121,
+              110,
+              116,
+              104,
+              101,
+              116,
+              105,
+              99,
+              32,
+              98,
+              101,
+              104,
+              97,
+              118,
+              105,
+              111,
+              114,
+              32,
+              114,
+              101,
+              109,
+              97,
+              105,
+              110,
+              115,
+              32,
+              117,
+              110,
+              114,
+              101,
+              115,
+              111,
+              108,
+              118,
+              101,
+              100,
+              46,
+              34,
+              44,
+              10,
+              32,
+              32,
+              34,
+              99,
+              108,
+              97,
+              115,
+              115,
+              105,
+              102,
+              105,
+              99,
+              97,
+              116,
+              105,
+              111,
+              110,
+              34,
+              58,
+              32,
+              34,
+              117,
+              110,
+              107,
+              110,
+              111,
+              119,
+              110,
+              34,
+              44,
+              10,
+              32,
+              32,
+              34,
+              117,
+              110,
+              114,
+              101,
+              115,
+              111,
+              108,
+              118,
+              101,
+              100,
+              95,
+              97,
+              115,
+              115,
+              117,
+              109,
+              112,
+              116,
+              105,
+              111,
+              110,
+              115,
+              34,
+              58,
+              32,
+              91,
+              10,
+              32,
+              32,
+              32,
+              32,
+              123,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              34,
+              97,
+              115,
+              115,
+              117,
+              109,
+              112,
+              116,
+              105,
+              111,
+              110,
+              95,
+              105,
+              100,
+              34,
+              58,
+              32,
+              34,
+              112,
+              114,
+              111,
+              118,
+              105,
+              100,
+              101,
+              114,
+              45,
+              98,
+              101,
+              104,
+              97,
+              118,
+              105,
+              111,
+              114,
+              45,
+              117,
+              110,
+              109,
+              101,
+              97,
+              115,
+              117,
+              114,
+              101,
+              100,
+              34,
+              44,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              34,
+              100,
+              101,
+              115,
+              99,
+              114,
+              105,
+              112,
+              116,
+              105,
+              111,
+              110,
+              34,
+              58,
+              32,
+              34,
+              80,
+              114,
+              111,
+              118,
+              105,
+              100,
+              101,
+              114,
+              32,
+              98,
+              101,
+              104,
+              97,
+              118,
+              105,
+              111,
+              114,
+              32,
+              102,
+              111,
+              114,
+              32,
+              116,
+              104,
+              105,
+              115,
+              32,
+              115,
+              121,
+              110,
+              116,
+              104,
+              101,
+              116,
+              105,
+              99,
+              32,
+              102,
+              105,
+              120,
+              116,
+              117,
+              114,
+              101,
+              32,
+              105,
+              115,
+              32,
+              110,
+              111,
+              116,
+              32,
+              101,
+              115,
+              116,
+              97,
+              98,
+              108,
+              105,
+              115,
+              104,
+              101,
+              100,
+              46,
+              34,
+              44,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              34,
+              114,
+              101,
+              97,
+              115,
+              111,
+              110,
+              34,
+              58,
+              32,
+              34,
+              78,
+              111,
+              32,
+              110,
+              97,
+              116,
+              105,
+              118,
+              101,
+              32,
+              111,
+              114,
+              32,
+              112,
+              114,
+              111,
+              118,
+              105,
+              100,
+              101,
+              114,
+              32,
+              113,
+              117,
+              97,
+              108,
+              105,
+              102,
+              105,
+              99,
+              97,
+              116,
+              105,
+              111,
+              110,
+              32,
+              101,
+              118,
+              105,
+              100,
+              101,
+              110,
+              99,
+              101,
+              32,
+              105,
+              115,
+              32,
+              115,
+              117,
+              112,
+              112,
+              108,
+              105,
+              101,
+              100,
+              46,
+              34,
+              10,
+              32,
+              32,
+              32,
+              32,
+              125,
+              10,
+              32,
+              32,
+              93,
+              10,
+              125,
+              10
+            ]
+          }
+        ],
+        "blockers": [
+          {
+            "obligation_id": "upload-object",
+            "assumption_text_contains": "Provider behavior for this synthetic fixture is not established."
+          }
+        ]
+      }
+    },
+    {
+      "path": "integration/semantic-resolution-failure/manifest-bad-contract-ref",
+      "batch": "3.2.39",
+      "group": "integration-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/integration-preparation/drafts/integration/semantic-resolution-failure/manifest-bad-contract-ref/input.toml",
+          "destination": "crates/clouddialect-contracts/fixtures/integration/semantic-resolution-failure/manifest-bad-contract-ref/input.toml",
+          "sha256": "f742ab977ebb74fff102547c3074b3ba9828eaedc7186fb5b153bd7587aead1c"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/integration-preparation/drafts/integration/semantic-resolution-failure/manifest-bad-contract-ref/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/integration/semantic-resolution-failure/manifest-bad-contract-ref/expected.json",
+          "sha256": "ba1bd80479185d3a5708cfebe54044e61c8127c5a7b2aa48a5e097e6bd4b543d"
+        }
+      ],
+      "oracle": {
+        "document_kind": "manifest",
+        "phase": "semantic",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "unresolvable-reference",
+            "field_path": "contracts.upload_object.id",
+            "description_contains": "Referenced document was not found in the supplied scope"
+          }
+        ]
+      }
+    },
+    {
+      "path": "integration/artifact-hash-mismatch/tampered-candidate",
+      "batch": "3.2.40",
+      "group": "integration-preparation",
+      "files": [
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/integration-preparation/drafts/integration/artifact-hash-mismatch/tampered-candidate/input.json",
+          "destination": "crates/clouddialect-contracts/fixtures/integration/artifact-hash-mismatch/tampered-candidate/input.json",
+          "sha256": "752ac38d6bab7cd2294608debc5a9411ce453541febd02a49023694306b5dc99"
+        },
+        {
+          "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/integration-preparation/drafts/integration/artifact-hash-mismatch/tampered-candidate/expected.json",
+          "destination": "crates/clouddialect-contracts/fixtures/integration/artifact-hash-mismatch/tampered-candidate/expected.json",
+          "sha256": "8a4dfe608c454925726702550b94a85ce5aba9f59ef3d7f79d65f1331d384610"
+        }
+      ],
+      "oracle": {
+        "document_kind": "verification-result",
+        "phase": "artifact-hash",
+        "expected_match": false,
+        "candidate_bytes": [
+          116,
+          97,
+          109,
+          112,
+          101,
+          114,
+          101,
+          100,
+          45,
+          99,
+          97,
+          110,
+          100,
+          105,
+          100,
+          97,
+          116,
+          101
+        ]
+      }
+    }
+  ],
+  "baseline_preserved_files": {
+    ".agents/rules/engineering.md": "4bce257ce86bcf01f68c8af280a50e54079d71c0cc070f201f48defef1c7e721",
+    "AGENTS.md": "4bce257ce86bcf01f68c8af280a50e54079d71c0cc070f201f48defef1c7e721",
+    "catalog/extension-registry.json": "572d7da1ded3b14294776aaa6395236c214b44799fbb385926b12ff76ddfb7ff",
+    "catalog/index.json": "695e026957c83c31f0e03b0b05428bccf5097df02c1b4d7f7fe04c4b8f3298ce",
+    "catalog/schemas/behavioral-contract/1.0/schema.json": "4a159debf540e781bb4dfed001e31f6c68915876ab0bc9cd9f52ffb143f77f53",
+    "catalog/schemas/catalog-index/1.0/schema.json": "7c231690c96aa107fe192f6256c6eefbfae7cbb859a55364590738e824395e29",
+    "catalog/schemas/evidence-record/1.0/schema.json": "d25acf15e02251188dfca4f34774699a326de1c8ef629c226f34cba6c6158df3",
+    "catalog/schemas/extension-registry/1.0/schema.json": "f968ec530254a23012f6e4941dd21b02870eb48ad6a97ed19a6b101ca6069c2d",
+    "catalog/schemas/verification-result/1.0/schema.json": "c6246397e248f89fecae1639ae838153a88946b9cdfa15dde15de1b3e6b06ba9",
+    "crates/clouddialect-contracts/Cargo.lock": "f2534f3d967742bea48605978d2c3408d2eb3842430b0441a09cf28766c9cf3f",
+    "crates/clouddialect-contracts/Cargo.toml": "dff170779fc937037132ed8aad30dbeec650e0a27d53b6303436721f6fe38ca4",
+    "crates/clouddialect-contracts/fixtures/positive/evidence-record/inferred/expected.json": "cad10a80850a610f6bfe6c8e5e87aa135d5b9ba902b02ef2f7090dbb31e22f8e",
+    "crates/clouddialect-contracts/fixtures/positive/evidence-record/inferred/input.json": "09ed9d3a83f0f2662c4fa62ab78d757083c4fc9ac5a3b816ef90994f6a6cb0ca",
+    "crates/clouddialect-contracts/src/documents/behavioral_contract.rs": "4c3ca8d1791941802d8e42fd69aecf45c76261f753e28ea2466a6a275ddefc33",
+    "crates/clouddialect-contracts/src/documents/evidence.rs": "f288448d7eebe80bf1e0e3b08e9e98bdb0daf5d76cac799905c7cd0774a560d3",
+    "crates/clouddialect-contracts/src/documents/mod.rs": "b2bc421ecedf30c04594110ef938670d1806ef61790c23a82e19c731968e2981",
+    "crates/clouddialect-contracts/src/documents/raw_objects.rs": "a74f0343ea388f17305681140403c9b95af5cc22d8df617a221b559b7747b630",
+    "crates/clouddialect-contracts/src/documents/references.rs": "7f15716a8651d106a8a4591c96007e79db2e80ab06336329463fca655df0552f",
+    "crates/clouddialect-contracts/src/documents/verification.rs": "9af5596d1b9a578f31a77404983c1b5ce63452bfdc8d642ed3e8c6a0d0ae2a07",
+    "crates/clouddialect-contracts/src/errors/diagnostics.rs": "561f49278f8e57aa245e28fa48150a3524d4ab7662867300626289d871da750e",
+    "crates/clouddialect-contracts/src/errors/mod.rs": "2be7e102ca99e5bf9993111273138a2f91512c1089667b0749e1363a29dd9352",
+    "crates/clouddialect-contracts/src/errors/phase.rs": "ba8cd5807ce2bae661d2acc13e861c2c493cefc1d7fb0340e9c5265a121416f2",
+    "crates/clouddialect-contracts/src/lib.rs": "8864bef26c293b1ebf7106ccc98192cd726201086d4514beb2c6313b624e8a7c",
+    "crates/clouddialect-contracts/src/manifest/mod.rs": "e59256efe626f9f2fe2788ee5125b060d0aa73298ca6f6ea40348b82676ffe1b",
+    "crates/clouddialect-contracts/src/manifest/types.rs": "bef4faeedc7f282dbed57674e57e1582516ae8121b048037e25a4b96dc815ae2",
+    "crates/clouddialect-contracts/src/manifest/validator.rs": "9fd00bd67f5ae3b24ac2b7607d7948ed92e5a5c842d0d01aaca8838ef711c33a",
+    "crates/clouddialect-contracts/src/schema/catalog.rs": "65320f8fc3566aef793c370a1225a5cd556381ee43d17bb9fff10256bb0f098d",
+    "crates/clouddialect-contracts/src/schema/embedded.rs": "71c8298ccbb5e9b9cefbcca195c3895fd34bbfdc669e398ff66a5153211e6409",
+    "crates/clouddialect-contracts/src/schema/loader.rs": "4ed72eb6225635a27c5b4eb46fee867f8707a754e14e2f291dd6bef1af557f27",
+    "crates/clouddialect-contracts/src/schema/mod.rs": "ca541a9f37bd6667595ddc64635cdf9f1a9835508b1d5fef4eeb2f518f2e9985",
+    "crates/clouddialect-contracts/src/schema/snapshot.rs": "873c8932116777ed7fe385ef4d8794c2a5c6727294c9a51831af82a791416fd1",
+    "crates/clouddialect-contracts/src/validator/artifact_hash.rs": "a9424ad80835e861a9ddabd65405560e05053eb543ec5b0fb72cd279c38f8e7d",
+    "crates/clouddialect-contracts/src/validator/behavioral.rs": "afe72a1fe89efbdd3e98e786a3d43f1480659b66919ebea5acb889456878feb0",
+    "crates/clouddialect-contracts/src/validator/document_resolution.rs": "037e7a9b49a3dc2910c0965d44eaf2522a901d0c1bcdf5940f8d467226d9f2ad",
+    "crates/clouddialect-contracts/src/validator/extensions.rs": "52b61926c7c57b40f05fc6d08ad42bbea9f7f06deef4c2f50bab58eca906fc49",
+    "crates/clouddialect-contracts/src/validator/fidelity.rs": "b6aeb561856371d9bf24ef28cc01a467487762353a17efcfb16291b19e86b70b",
+    "crates/clouddialect-contracts/src/validator/mandatory_extensions.rs": "935a55a8a7236fea03383ceb3300159eafb872cefa865ced2e3a6511e25964e9",
+    "crates/clouddialect-contracts/src/validator/mod.rs": "ee7dfd4a5ddea598e9c2a092b6fa371cd5e976498b185b0b2e47d3ef265368b4",
+    "crates/clouddialect-contracts/src/validator/semantic.rs": "06097648e746166fee8f4070529ee9c04f9aed35782fc9a16b2a8220781f6b96",
+    "crates/clouddialect-contracts/src/validator/structural.rs": "5671449f115fb1aa258372269ba046948d7aaa91c9cb366a8ad50a209e6ee14b",
+    "crates/clouddialect-contracts/src/validator/verification_semantics.rs": "e5ff3e871ae242c9737c9850411198fbc8ac5d96babae7f80182555c9f728ca5",
+    "crates/clouddialect-contracts/src/validator/version.rs": "ad60f449560dc039f4e723be50a46737580aab987ae731dbf9cbf8b2e2fcf8ba",
+    "crates/clouddialect-contracts/tests/artifact_hash.rs": "1bcc7c0f4b911c00aeb16e5ce10839d552689ddd97e7d2f873ba9a9f4e0a30f1",
+    "crates/clouddialect-contracts/tests/behavioral_schema.rs": "7e6bd15acd16ba9197c981a3fddfc111167137e46baa7bd8ee32ad63e11822bb",
+    "crates/clouddialect-contracts/tests/catalog_extension_roundtrip.rs": "e4f5c1a4ffe402dcbe6c71afcb87ade7c96cd5b7f8f9c8da199f51ef32800c53",
+    "crates/clouddialect-contracts/tests/catalog_index.rs": "f23c68c3aa931f3444a68284b365d8dbb1047b417bd99d09623abde617f9820f",
+    "crates/clouddialect-contracts/tests/catalog_loading.rs": "7f1f92f82365496539003b267ef1540413d3d60cfc6e27e53b8571df9f6aab9b",
+    "crates/clouddialect-contracts/tests/catalog_schemas.rs": "78a1c7fb0f62efd01d796f7cf00d28d11c738b7995dd7d6818497e80c66de443",
+    "crates/clouddialect-contracts/tests/catalog_snapshot.rs": "6bc70f94c140771651897e800f04b99ce5f9902acefd5e82a674b0d7baf11363",
+    "crates/clouddialect-contracts/tests/compatibility_policy.rs": "05f5d6317536ed6dc2f5b645be2e00f165dc1a0abb57c861b9f5a7302c7a2779",
+    "crates/clouddialect-contracts/tests/conformance.rs": "888837642c79e575a56b9a33b1957cbcac47cc12582d511720c68ff064c562ba",
+    "crates/clouddialect-contracts/tests/conformance_controls.rs": "6afb1f76ea32d09fc3012a1cef8584784553ccde1b0205f03cff96a1b55cadb6",
+    "crates/clouddialect-contracts/tests/document_resolution.rs": "9c548bc4c14edbb67e6139823ac436fdd30f4466d0bdf742ba1dbaef13b807e9",
+    "crates/clouddialect-contracts/tests/evidence_completeness.rs": "53d3da024e00d7f2bd82e6daaa90b5565e42e4264530bf969d2a35c6d7157ef8",
+    "crates/clouddialect-contracts/tests/evidence_schema.rs": "ac6ccec452dbc778a071752b742af10e6a90146a494c867df3fb799e5c046a01",
+    "crates/clouddialect-contracts/tests/extension_policy.rs": "90d9482908934f62348a290cb948d0966315bff935f2ca8d95869ee684304857",
+    "crates/clouddialect-contracts/tests/extension_validation.rs": "65110ccbdaa0eb29cdfd77bc486a6001e981b17b8081dbab76bd4aff1d4ac2a5",
+    "crates/clouddialect-contracts/tests/fidelity_mapping.rs": "98a7db051a7a6ea10edc1eae14815102877f210afa49f3c39693653ee1796b52",
+    "crates/clouddialect-contracts/tests/mandatory_extension_blockers.rs": "b6712487242fd8b739520c25eaf6ae496b0b828b665444eff80d474c2ceff7f8",
+    "crates/clouddialect-contracts/tests/manifest_api.rs": "3b8570d168c5b57d1e15c5850afa616fec27a07da85f94cfebc87c6ac9d39331",
+    "crates/clouddialect-contracts/tests/manifest_evidence.rs": "e74e5092d7b219c1e9b80600dcb9fe87258b071afae02bb86d947abe83b6af78",
+    "crates/clouddialect-contracts/tests/manifest_semantic.rs": "82a1c91bc595eb10b2ab79cf8927ab5907af93862e32413c7a8946b6590a8d3c",
+    "crates/clouddialect-contracts/tests/manifest_types.rs": "cbb5d34e204e1ac9fbc7168bde0cef0c0474e7105623097364d3ed04c8f267cf",
+    "crates/clouddialect-contracts/tests/manifest_validation.rs": "cc0244582cbd26d6f6d465140d2d9a2aa8ab85f54b987417b0343a7d113e1df5",
+    "crates/clouddialect-contracts/tests/nested_duplicate_fields.rs": "a20db01f7a743d7b1a27de5bcca056f6cd687ad3711a4f6e84cdb6ffb5d5b166",
+    "crates/clouddialect-contracts/tests/phase_results.rs": "7101fee950c523d29e5f796f63a7bb04e53d92912c9195375b0acd0c2fcd067d",
+    "crates/clouddialect-contracts/tests/public_api_compatibility.rs": "e784f9dbc868d01179bf46f924f270f64ff1675e8b63d75e782e810b88dbfe9f",
+    "crates/clouddialect-contracts/tests/reference_contracts.rs": "a8cc329bf1d8516c664cc5ca77ea65a14530bb1d747fb1f69ab3245e4e96eb87",
+    "crates/clouddialect-contracts/tests/required_extension_catalogs.rs": "40c002d51f51215a7f86272a7cdf10f0ca6165fde2e70b485a52d9955b296f2e",
+    "crates/clouddialect-contracts/tests/required_extension_models.rs": "fd4c7fc437128c6c9768586e49fb41812ba74eac698feb97931ff7f15111a83b",
+    "crates/clouddialect-contracts/tests/required_extensions.rs": "aa62bf7309136bc5545788b63ddfbceb3580b418238bb2be9491d9f51448e51d",
+    "crates/clouddialect-contracts/tests/schema_harness.rs": "f84d5724c8eec04fa7949b2a6387966360e6bec86b02e3f51ea8df182364497e",
+    "crates/clouddialect-contracts/tests/semantic_validation.rs": "2ff7edaae1116e7040270e6c39ba4f5e73327b4a17e611e8d83a3a209b2aeb88",
+    "crates/clouddialect-contracts/tests/source_document_models.rs": "23085fc0fd2a70a8a02f80bd4f645e4b8d9b8ec2034737f369df7ac187636438",
+    "crates/clouddialect-contracts/tests/structural_validation.rs": "8f72a2ed919b82adeb6a60b72f45c771dc2c5ea5af243444c7894a0f2091d677",
+    "crates/clouddialect-contracts/tests/support/documents.rs": "0027d334b3875f8b3f58614db5effee82b63ca56971513a7611cad3c044dd06e",
+    "crates/clouddialect-contracts/tests/support/fixtures.rs": "018cd496ee84166caac4e2d1d8ffb40784f9e9202b6c6333352f71d0445181e8",
+    "crates/clouddialect-contracts/tests/support/mod.rs": "16262e32603dd81e90ef8fcdf083e2b1d4379a65761f2e68d45fc2248f3fd75c",
+    "crates/clouddialect-contracts/tests/verification_models.rs": "35169978bd4fb252d80609a72f3d20a2b300d072418164612ad65955118b204f",
+    "crates/clouddialect-contracts/tests/verification_schema.rs": "7ac20e5687f90a3979802573923a040f186b9b75055883c80a387050aa7a7333",
+    "crates/clouddialect-contracts/tests/verification_semantics.rs": "553b84250541310e9f3c9f84e0f253b4ec278c4c28837a38c2757329ef1af27a",
+    "crates/clouddialect-contracts/tests/version_compatibility.rs": "8c9029f1d97e333171b601f3fe8684ec1a71fd6aa51d34d58f4f11accc88d760",
+    "scripts/README.md": "b2eeaec0c5cb04a656b3940f72281949c7bfefe7dd65acd2c53314b573b76a72",
+    "scripts/verification/contracts-evidence-foundation/measure-domain-coverage.py": "356fc1e7196df129cdf5ec61566e4d9035b5e0e3cf51fdce8a5b08665def5741",
+    "scripts/verification/contracts-evidence-foundation/verify-p0.py": "9d3db9e26797cab17aa28cf42f1eac7438bc7370132074eee10d635379ff2bcb",
+    "scripts/verification/contracts-evidence-foundation/verify-planning.py": "2b36310b2ef0883b5e7f0520ba47453a73b6d0f35cce51b7a5fb387408c3309f",
+    "scripts/verification/execution-isolation/check_spec.py": "55f2558824191e0596bcd4687394f175df70f1962eab5d0826b2c9c2571c823f",
+    "scripts/verification/execution-isolation/reproduce-document-checks.sh": "9e631c2adc4abed63d75919ce4109d843622480b8642377b2e830ff558fd2a06",
+    "scripts/verification/execution-isolation/test_check_spec.py": "9f2f35eb4ae8ac830a526eb560e3600370104d1c7a84c6c23c438123ba5c199b",
+    "scripts/verification/python-oss-to-s3-pack/check_docs.py": "4e8fd839ba73426262c7219604eb490f7a5ee1c7cc413883005a3c2ea2f6a2a3"
+  },
+  "research": {
+    "research.md": "dac1b1907059187912cafdb3c9b168ff388ce75099a011a9750b37ff44cbd110",
+    "cloud-transformation-framework-research.pdf": "b2b31aa20cb4aac5f971433c9a33d467c3910e1a50f4da807b93cfdc17b926e5"
+  }
+}

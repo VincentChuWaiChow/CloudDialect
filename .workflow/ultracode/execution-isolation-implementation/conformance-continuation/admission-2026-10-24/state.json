@@ -1,0 +1,61 @@
+{
+  "title": "Frozen fixture admission",
+  "slug": "admission-2026-10-24",
+  "created_at": "2026-10-24T09:08:34+00:00",
+  "updated_at": "2026-10-24T09:16:43.475608+00:00",
+  "status": "executing",
+  "mode": "delegated",
+  "baseline_ref": "283533aff56bb1ade159275e4adb922765ced62e",
+  "risk_level": "medium",
+  "eval_contract": {
+    "level": "inline",
+    "path": "plan.md",
+    "status": "ready"
+  },
+  "approval": {
+    "required": true,
+    "granted": true,
+    "notes": "User approving all followed by permission for as many agents as needed/careful allowed actions. Scope explicitly announced as four prepared sets (41 drafts); no broader external/source/native approval inferred."
+  },
+  "delegation": {
+    "native_agent_available": true,
+    "native_agent_planned": true,
+    "native_agent_used": true,
+    "agent_count": 2,
+    "wave_count": 1,
+    "prior_dispatches": 30,
+    "additional_limit": 3,
+    "no_delegation_reason": "",
+    "notes": "Parent copies data;3useful independent read-only packets selected, not unbounded fan-out."
+  },
+  "packets": [
+    {
+      "id": "31-review",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/31-review.md"
+    },
+    {
+      "id": "32-review",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/32-review.md"
+    },
+    {
+      "id": "33-review",
+      "status": "pending",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/33-review.md"
+    }
+  ],
+  "verification": {
+    "status": "pending",
+    "checks": []
+  },
+  "deadline": "2026-10-24T09:53:34+00:00",
+  "source_repairs_authorized": false,
+  "pushes_authorized": false
+}

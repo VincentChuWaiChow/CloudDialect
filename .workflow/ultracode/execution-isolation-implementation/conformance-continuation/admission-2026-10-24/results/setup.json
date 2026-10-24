@@ -1,0 +1,9 @@
+{
+  "captured_at": "2026-10-24T09:11:59.038339+00:00",
+  "restored_existing_locked_packages": 100,
+  "isolated_cargo_home": "/tmp/clouddialect-runtime-cargo",
+  "network_fetch": false,
+  "copied_only": "public registry src/cache/index, no credentials or personal config",
+  "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+  "cargo": "cargo 1.99.1 (5f94df478 2026-08-27)"
+}
