@@ -1,0 +1,81 @@
+{
+  "title": "Remaining integration draft preparation",
+  "slug": "remaining-integration-preparation",
+  "created_at": "2026-10-24T11:02:27.917011+00:00",
+  "updated_at": "2026-10-24T11:10:42.754896+00:00",
+  "deadline": "2026-10-24T11:21:56Z",
+  "status": "complete",
+  "mode": "delegated",
+  "baseline_ref": "08532c17e6158f7790ecd5c2d4e8c6ff0458c4d6",
+  "risk_level": "medium",
+  "eval_contract": {
+    "level": "inline",
+    "path": "plan.md",
+    "status": "checked"
+  },
+  "approval": {
+    "required": false,
+    "granted": null,
+    "notes": "Safe workflow drafts only; admission/source/native actions not authorized"
+  },
+  "delegation": {
+    "native_agent_available": true,
+    "native_agent_planned": true,
+    "native_agent_used": true,
+    "agent_count": 2,
+    "wave_count": 2,
+    "cumulative_before": 38,
+    "planned_limit": 2,
+    "no_delegation_reason": ""
+  },
+  "packets": [
+    {
+      "id": "39-store-utc-source",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/39-store-utc-source.md"
+    },
+    {
+      "id": "40-remaining-draft-final",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/40-remaining-draft-final.md"
+    }
+  ],
+  "verification": {
+    "status": "draft-readiness-pass-not-admitted",
+    "checks": [
+      {
+        "name": "original28",
+        "status": "pass",
+        "evidence": "verification-initial.json"
+      },
+      {
+        "name": "86controls",
+        "status": "pass",
+        "evidence": "verification-controls.json"
+      },
+      {
+        "name": "94content-vector-hashes",
+        "status": "pass",
+        "evidence": "criteria-audit.json"
+      },
+      {
+        "name": "independent39/40",
+        "status": "pass",
+        "evidence": "results/39-store-utc-source.md;results/40-remaining-draft-final.md"
+      },
+      {
+        "name": "finalscope",
+        "status": "pass",
+        "evidence": "results/final-scope.json"
+      }
+    ]
+  },
+  "draft_repairs_used": 0,
+  "driver_corrections": 1,
+  "canonical_admission_approved": false,
+  "frozen_draft_repairs": 0
+}

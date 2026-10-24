@@ -1,0 +1,382 @@
+{
+  "matched": 94,
+  "checks": [
+    {
+      "criterion": "exactapprovedfivevectoralgorithms",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/offline-resolution/unresolvable-ref/input.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/offline-resolution/unresolvable-ref/expected.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/scoped-store/exact-version/input.toml",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/scoped-store/exact-version/expected.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/scoped-store/missing/input.toml",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/scoped-store/missing/expected.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/scoped-store/ambiguous/input.toml",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/scoped-store/ambiguous/expected.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/scoped-store/wrong-type/input.toml",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/scoped-store/wrong-type/expected.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/scoped-store/hash-mismatch/input.toml",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/scoped-store/hash-mismatch/expected.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/scoped-store/outage/input.toml",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/scoped-store/outage/expected.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/scoped-store/wrong-returned-version/input.toml",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/scoped-store/wrong-returned-version/expected.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/scoped-store/wrong-returned-identity/input.toml",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/scoped-store/wrong-returned-identity/expected.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha-256/empty/input.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha-256/empty/expected.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "literal-independent-vector:integration/digest-vectors/sha-256/empty",
+      "status": "pass"
+    },
+    {
+      "criterion": "hash-oracle-no-invented-outcome:integration/digest-vectors/sha-256/empty",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha-256/abc/input.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha-256/abc/expected.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "literal-independent-vector:integration/digest-vectors/sha-256/abc",
+      "status": "pass"
+    },
+    {
+      "criterion": "hash-oracle-no-invented-outcome:integration/digest-vectors/sha-256/abc",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha-384/empty/input.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha-384/empty/expected.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "literal-independent-vector:integration/digest-vectors/sha-384/empty",
+      "status": "pass"
+    },
+    {
+      "criterion": "hash-oracle-no-invented-outcome:integration/digest-vectors/sha-384/empty",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha-384/abc/input.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha-384/abc/expected.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "literal-independent-vector:integration/digest-vectors/sha-384/abc",
+      "status": "pass"
+    },
+    {
+      "criterion": "hash-oracle-no-invented-outcome:integration/digest-vectors/sha-384/abc",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha-512/empty/input.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha-512/empty/expected.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "literal-independent-vector:integration/digest-vectors/sha-512/empty",
+      "status": "pass"
+    },
+    {
+      "criterion": "hash-oracle-no-invented-outcome:integration/digest-vectors/sha-512/empty",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha-512/abc/input.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha-512/abc/expected.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "literal-independent-vector:integration/digest-vectors/sha-512/abc",
+      "status": "pass"
+    },
+    {
+      "criterion": "hash-oracle-no-invented-outcome:integration/digest-vectors/sha-512/abc",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha3-512/empty/input.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha3-512/empty/expected.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "literal-independent-vector:integration/digest-vectors/sha3-512/empty",
+      "status": "pass"
+    },
+    {
+      "criterion": "hash-oracle-no-invented-outcome:integration/digest-vectors/sha3-512/empty",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha3-512/abc/input.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha3-512/abc/expected.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "literal-independent-vector:integration/digest-vectors/sha3-512/abc",
+      "status": "pass"
+    },
+    {
+      "criterion": "hash-oracle-no-invented-outcome:integration/digest-vectors/sha3-512/abc",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha3-256/empty/input.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha3-256/empty/expected.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "literal-independent-vector:integration/digest-vectors/sha3-256/empty",
+      "status": "pass"
+    },
+    {
+      "criterion": "hash-oracle-no-invented-outcome:integration/digest-vectors/sha3-256/empty",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha3-256/abc/input.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha3-256/abc/expected.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "literal-independent-vector:integration/digest-vectors/sha3-256/abc",
+      "status": "pass"
+    },
+    {
+      "criterion": "hash-oracle-no-invented-outcome:integration/digest-vectors/sha3-256/abc",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/verification-consistency/invalid-calendar-utc/input.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/verification-consistency/invalid-calendar-utc/expected.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/verification-consistency/non-z-timestamp/input.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/verification-consistency/non-z-timestamp/expected.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/version-profile/build-metadata/input.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/version-profile/build-metadata/expected.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/version-profile/prerelease/input.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/version-profile/prerelease/expected.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/version-profile/leading-zero/input.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/version-profile/leading-zero/expected.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/version-profile/unindexed-patch/input.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/version-profile/unindexed-patch/expected.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/version-profile/core-overflow/input.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/version-profile/core-overflow/expected.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/version-profile/root-only-newer-minor/input.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/version-profile/root-only-newer-minor/expected.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/version-profile/closed-nested-newer-minor/input.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "frozen:.workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/version-profile/closed-nested-newer-minor/expected.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "calendarinvalidindependentdatetime",
+      "status": "pass"
+    },
+    {
+      "criterion": "nonZisvalidcalendarbutnotnormalizedZ",
+      "status": "pass"
+    },
+    {
+      "criterion": "source:crates/clouddialect-contracts/src/validator/version.rs",
+      "status": "pass"
+    },
+    {
+      "criterion": "source:crates/clouddialect-contracts/src/validator/structural.rs",
+      "status": "pass"
+    },
+    {
+      "criterion": "source:crates/clouddialect-contracts/src/validator/document_resolution.rs",
+      "status": "pass"
+    },
+    {
+      "criterion": "source:crates/clouddialect-contracts/src/validator/artifact_hash.rs",
+      "status": "pass"
+    },
+    {
+      "criterion": "source:crates/clouddialect-contracts/src/validator/fidelity.rs",
+      "status": "pass"
+    },
+    {
+      "criterion": "source:crates/clouddialect-contracts/src/validator/semantic.rs",
+      "status": "pass"
+    },
+    {
+      "criterion": "source:crates/clouddialect-contracts/src/validator/verification_semantics.rs",
+      "status": "pass"
+    },
+    {
+      "criterion": "source:crates/clouddialect-contracts/src/manifest/validator.rs",
+      "status": "pass"
+    },
+    {
+      "criterion": "source:crates/clouddialect-contracts/tests/support/fixtures.rs",
+      "status": "pass"
+    },
+    {
+      "criterion": "source:crates/clouddialect-contracts/tests/artifact_hash.rs",
+      "status": "pass"
+    },
+    {
+      "criterion": "source:catalog/schemas/verification-result/1.0/schema.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "source:catalog/schemas/behavioral-contract/1.0/schema.json",
+      "status": "pass"
+    },
+    {
+      "criterion": "all192protectedhashes",
+      "status": "pass"
+    },
+    {
+      "criterion": "canonical47",
+      "status": "pass"
+    },
+    {
+      "criterion": "3gatesnotsyntheticreplacement",
+      "status": "pass"
+    }
+  ],
+  "python_datetime_formatchecker": "Unavailable date-time checker disclosed by39; calendar checked with datetime, actual Boon behavior checked by runner. No claim that Python jsonschema enforced date-time."
+}

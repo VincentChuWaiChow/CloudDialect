@@ -1,3 +1,14 @@
+# Current remaining integration readiness —2026-10-24
+
+[Latest draft report](conformance-continuation/remaining-integration-preparation/final-report.md):
+28moreexactpairs are frozen/verified, **not admitted**. All28original+86parent
+controls pass; reviewer40independently executes82controls and recomputes10vectors.
+DraftinventorySHA3-224typo is corrected to approvedSHA3-512withoutsourcechange.
+**Canonical remains47**;54totalpreparedpairs await exactadmissionapproval;
+3native/backend/trusted-setupcasesremainabsent/gated. Temporarycombined101is
+notcanonicaldelivery. Oneparentdrivercorrection, nofrozenoracle/sourcechanges.
+All21Spec2numberedtasks,UD/BGandfullSpec1consumer/qualificationremainopen.
+
 # Current adversarial draft readiness —2026-10-24
 
 [Draft-readiness report](conformance-continuation/adversarial-preparation/final-report.md):

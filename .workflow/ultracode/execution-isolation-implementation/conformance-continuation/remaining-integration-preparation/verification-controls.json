@@ -1,0 +1,1215 @@
+{
+  "ran_at": "2026-10-24T11:08:05.480975+00:00",
+  "contract_sha256": "2c4171e80ac363b8c2d6bb0cb4cebf23a171d4c3c7f4019275d213f3e13ae479",
+  "matched": 86,
+  "checks": [
+    {
+      "label": "wrong-oracle:integration/offline-resolution/unresolvable-ref",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "label": "repaired-baseline:integration/offline-resolution/unresolvable-ref",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "old-fail-expectations-reject-repaired-setup:integration/offline-resolution/unresolvable-ref",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "wrong-oracle:integration/scoped-store/exact-version",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "wrong-oracle:integration/scoped-store/missing",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "label": "repaired-baseline:integration/scoped-store/missing",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "old-fail-expectations-reject-repaired-setup:integration/scoped-store/missing",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "wrong-oracle:integration/scoped-store/ambiguous",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "label": "repaired-baseline:integration/scoped-store/ambiguous",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "old-fail-expectations-reject-repaired-setup:integration/scoped-store/ambiguous",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "wrong-oracle:integration/scoped-store/wrong-type",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "label": "repaired-baseline:integration/scoped-store/wrong-type",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "old-fail-expectations-reject-repaired-setup:integration/scoped-store/wrong-type",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "wrong-oracle:integration/scoped-store/hash-mismatch",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "label": "repaired-baseline:integration/scoped-store/hash-mismatch",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "old-fail-expectations-reject-repaired-setup:integration/scoped-store/hash-mismatch",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "wrong-oracle:integration/scoped-store/outage",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "label": "repaired-baseline:integration/scoped-store/outage",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "old-fail-expectations-reject-repaired-setup:integration/scoped-store/outage",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "wrong-oracle:integration/scoped-store/wrong-returned-version",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "label": "repaired-baseline:integration/scoped-store/wrong-returned-version",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "old-fail-expectations-reject-repaired-setup:integration/scoped-store/wrong-returned-version",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "wrong-oracle:integration/scoped-store/wrong-returned-identity",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "label": "repaired-baseline:integration/scoped-store/wrong-returned-identity",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "old-fail-expectations-reject-repaired-setup:integration/scoped-store/wrong-returned-identity",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "wrong-oracle:integration/digest-vectors/sha-256/empty",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: expected_match: expected false, actual true\n"
+    },
+    {
+      "label": "tampered-bytes-false:integration/digest-vectors/sha-256/empty",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "tampered-bytes-cannot-match:integration/digest-vectors/sha-256/empty",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: expected_match: expected true, actual false\n"
+    },
+    {
+      "label": "wrong-oracle:integration/digest-vectors/sha-256/abc",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: expected_match: expected false, actual true\n"
+    },
+    {
+      "label": "tampered-bytes-false:integration/digest-vectors/sha-256/abc",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "tampered-bytes-cannot-match:integration/digest-vectors/sha-256/abc",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: expected_match: expected true, actual false\n"
+    },
+    {
+      "label": "wrong-oracle:integration/digest-vectors/sha-384/empty",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: expected_match: expected false, actual true\n"
+    },
+    {
+      "label": "tampered-bytes-false:integration/digest-vectors/sha-384/empty",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "tampered-bytes-cannot-match:integration/digest-vectors/sha-384/empty",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: expected_match: expected true, actual false\n"
+    },
+    {
+      "label": "wrong-oracle:integration/digest-vectors/sha-384/abc",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: expected_match: expected false, actual true\n"
+    },
+    {
+      "label": "tampered-bytes-false:integration/digest-vectors/sha-384/abc",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "tampered-bytes-cannot-match:integration/digest-vectors/sha-384/abc",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: expected_match: expected true, actual false\n"
+    },
+    {
+      "label": "wrong-oracle:integration/digest-vectors/sha-512/empty",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: expected_match: expected false, actual true\n"
+    },
+    {
+      "label": "tampered-bytes-false:integration/digest-vectors/sha-512/empty",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "tampered-bytes-cannot-match:integration/digest-vectors/sha-512/empty",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: expected_match: expected true, actual false\n"
+    },
+    {
+      "label": "wrong-oracle:integration/digest-vectors/sha-512/abc",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: expected_match: expected false, actual true\n"
+    },
+    {
+      "label": "tampered-bytes-false:integration/digest-vectors/sha-512/abc",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "tampered-bytes-cannot-match:integration/digest-vectors/sha-512/abc",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: expected_match: expected true, actual false\n"
+    },
+    {
+      "label": "wrong-oracle:integration/digest-vectors/sha3-512/empty",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: expected_match: expected false, actual true\n"
+    },
+    {
+      "label": "tampered-bytes-false:integration/digest-vectors/sha3-512/empty",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "tampered-bytes-cannot-match:integration/digest-vectors/sha3-512/empty",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: expected_match: expected true, actual false\n"
+    },
+    {
+      "label": "wrong-oracle:integration/digest-vectors/sha3-512/abc",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: expected_match: expected false, actual true\n"
+    },
+    {
+      "label": "tampered-bytes-false:integration/digest-vectors/sha3-512/abc",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "tampered-bytes-cannot-match:integration/digest-vectors/sha3-512/abc",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: expected_match: expected true, actual false\n"
+    },
+    {
+      "label": "wrong-oracle:integration/digest-vectors/sha3-256/empty",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: expected_match: expected false, actual true\n"
+    },
+    {
+      "label": "tampered-bytes-false:integration/digest-vectors/sha3-256/empty",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "tampered-bytes-cannot-match:integration/digest-vectors/sha3-256/empty",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: expected_match: expected true, actual false\n"
+    },
+    {
+      "label": "wrong-oracle:integration/digest-vectors/sha3-256/abc",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: expected_match: expected false, actual true\n"
+    },
+    {
+      "label": "tampered-bytes-false:integration/digest-vectors/sha3-256/abc",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "tampered-bytes-cannot-match:integration/digest-vectors/sha3-256/abc",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: expected_match: expected true, actual false\n"
+    },
+    {
+      "label": "wrong-oracle:integration/verification-consistency/invalid-calendar-utc",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "label": "repaired-baseline:integration/verification-consistency/invalid-calendar-utc",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "old-fail-expectations-reject-repaired-setup:integration/verification-consistency/invalid-calendar-utc",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "wrong-oracle:integration/verification-consistency/non-z-timestamp",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "label": "repaired-baseline:integration/verification-consistency/non-z-timestamp",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "old-fail-expectations-reject-repaired-setup:integration/verification-consistency/non-z-timestamp",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "wrong-oracle:integration/version-profile/build-metadata",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "wrong-oracle:integration/version-profile/prerelease",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "label": "repaired-baseline:integration/version-profile/prerelease",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "old-fail-expectations-reject-repaired-setup:integration/version-profile/prerelease",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "wrong-oracle:integration/version-profile/leading-zero",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "label": "repaired-baseline:integration/version-profile/leading-zero",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "old-fail-expectations-reject-repaired-setup:integration/version-profile/leading-zero",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "wrong-oracle:integration/version-profile/unindexed-patch",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "label": "repaired-baseline:integration/version-profile/unindexed-patch",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "old-fail-expectations-reject-repaired-setup:integration/version-profile/unindexed-patch",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "wrong-oracle:integration/version-profile/core-overflow",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "label": "repaired-baseline:integration/version-profile/core-overflow",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "old-fail-expectations-reject-repaired-setup:integration/version-profile/core-overflow",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "label": "wrong-oracle:integration/version-profile/root-only-newer-minor",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"fail\", actual \"warn\"\n"
+    },
+    {
+      "label": "wrong-oracle:integration/version-profile/closed-nested-newer-minor",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "label": "repaired-baseline:integration/version-profile/closed-nested-newer-minor",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "old-fail-expectations-reject-repaired-setup:integration/version-profile/closed-nested-newer-minor",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/case"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "/tmp/clouddialect-remaining-integration-qvq75tot/case: outcome: expected \"fail\", actual \"warn\"\n"
+    },
+    {
+      "label": "exact-version-ignores-other-version-decoy",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/version-decoy"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": null,
+      "output": ""
+    },
+    {
+      "label": "draft-default",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture-root",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": 28,
+      "output": "PASS integration/digest-vectors/sha-256/abc\nPASS integration/digest-vectors/sha-256/empty\nPASS integration/digest-vectors/sha-384/abc\nPASS integration/digest-vectors/sha-384/empty\nPASS integration/digest-vectors/sha-512/abc\nPASS integration/digest-vectors/sha-512/empty\nPASS integration/digest-vectors/sha3-256/abc\nPASS integration/digest-vectors/sha3-256/empty\nPASS integration/digest-vectors/sha3-512/abc\nPASS integration/digest-vectors/sha3-512/empty\nPASS integration/offline-resolution/unresolvable-ref\nPASS integration/scoped-store/ambiguous\nPASS integration/scoped-store/exact-version\nPASS integration/scoped-store/hash-mismatch\nPASS integration/scoped-store/missing\nPASS integration/scoped-store/outage\nPASS integration/scoped-store/wrong-returned-identity\nPASS integration/scoped-store/wrong-returned-version\nPASS integration/scoped-store/wrong-type\nPASS integration/verification-consistency/invalid-calendar-utc\nPASS integration/verification-consistency/non-z-timestamp\nPASS integration/version-profile/build-metadata\nPASS integration/version-profile/closed-nested-newer-minor\nPASS integration/version-profile/core-overflow\nPASS integration/version-profile/leading-zero\nPASS integration/version-profile/prerelease\nPASS integration/version-profile/root-only-newer-minor\nPASS integration/version-profile/unindexed-patch\n28 conformance fixtures passed\n"
+    },
+    {
+      "label": "prefix:integration/scoped-store",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture-root",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts",
+        "integration/scoped-store"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": 8,
+      "output": "PASS integration/scoped-store/ambiguous\nPASS integration/scoped-store/exact-version\nPASS integration/scoped-store/hash-mismatch\nPASS integration/scoped-store/missing\nPASS integration/scoped-store/outage\nPASS integration/scoped-store/wrong-returned-identity\nPASS integration/scoped-store/wrong-returned-version\nPASS integration/scoped-store/wrong-type\n8 conformance fixtures passed\n"
+    },
+    {
+      "label": "prefix:integration/digest-vectors",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture-root",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts",
+        "integration/digest-vectors"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": 10,
+      "output": "PASS integration/digest-vectors/sha-256/abc\nPASS integration/digest-vectors/sha-256/empty\nPASS integration/digest-vectors/sha-384/abc\nPASS integration/digest-vectors/sha-384/empty\nPASS integration/digest-vectors/sha-512/abc\nPASS integration/digest-vectors/sha-512/empty\nPASS integration/digest-vectors/sha3-256/abc\nPASS integration/digest-vectors/sha3-256/empty\nPASS integration/digest-vectors/sha3-512/abc\nPASS integration/digest-vectors/sha3-512/empty\n10 conformance fixtures passed\n"
+    },
+    {
+      "label": "prefix:integration/version-profile",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture-root",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts",
+        "integration/version-profile"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": 7,
+      "output": "PASS integration/version-profile/build-metadata\nPASS integration/version-profile/closed-nested-newer-minor\nPASS integration/version-profile/core-overflow\nPASS integration/version-profile/leading-zero\nPASS integration/version-profile/prerelease\nPASS integration/version-profile/root-only-newer-minor\nPASS integration/version-profile/unindexed-patch\n7 conformance fixtures passed\n"
+    },
+    {
+      "label": "zero-selection",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture-root",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts",
+        "guaranteed-zero-remaining-integration-20261024"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "count": null,
+      "output": "no fixtures selected by directory prefix\n"
+    },
+    {
+      "label": "canonical-unchanged",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": 47,
+      "output": "PASS integration/artifact-hash-mismatch/tampered-candidate\nPASS integration/blocking-gap/unknown-evidence-mandatory-obligation\nPASS integration/semantic-resolution-failure/manifest-bad-contract-ref\nPASS integration/verification-consistency/approval-result-id-mismatch\nPASS integration/verification-consistency/approval-result-version-mismatch\nPASS integration/verification-consistency/duplicate-test-ids\nPASS integration/verification-consistency/invalid-hash-length\nPASS integration/verification-consistency/unmapped-obligations\nPASS negative/behavioral-contract/invalid-behavioral-fidelity\nPASS negative/behavioral-contract/missing-id\nPASS negative/behavioral-contract/obligation-no-evidence-no-assumption\nPASS negative/evidence-record/inferred-empty-reasoning-chain\nPASS negative/evidence-record/missing-classification\nPASS negative/evidence-record/unknown-empty-assumptions\nPASS negative/pack-manifest/capability-unknown-field\nPASS negative/pack-manifest/duplicate-capability-id\nPASS negative/pack-manifest/inline-contract-body\nPASS negative/pack-manifest/invalid-behavioral-fidelity\nPASS negative/pack-manifest/missing-capabilities\nPASS negative/pack-manifest/missing-toolchain-for-full-operation\nPASS negative/pack-manifest/unknown-capability-version\nPASS negative/verification-result/acceptance-missing-approver\nPASS negative/verification-result/empty-tests-array\nPASS negative/verification-result/missing-binding\nPASS negative/verification-result/missing-configuration\nPASS negative/verification-result/missing-test-obligation\nPASS negative/verification-result/nonpass-string-failure-description\nPASS negative/verification-result/nonpass-without-failure-description\nPASS negative/verification-result/unknown-hash-algorithm\nPASS negative/version/unsupported-major\nPASS negative/version/unsupported-minor-newer\nPASS positive/behavioral-contract/minimal-valid\nPASS positive/behavioral-contract/with-behavioral-notes\nPASS positive/behavioral-contract/with-extension-field\nPASS positive/behavioral-contract/with-known-behavior\nPASS positive/behavioral-contract/with-unresolved-assumption-on-dependency\nPASS positive/evidence-record/inferred\nPASS positive/evidence-record/observed\nPASS positive/evidence-record/unknown\nPASS positive/pack-manifest/full-coverage\nPASS positive/pack-manifest/with-extension-section\nPASS positive/pack-manifest/with-unsupported-operation\nPASS positive/verification-result/minimal\nPASS positive/verification-result/with-acceptance\nPASS round-trip/extension-field-preservation/behavioral-contract\nPASS round-trip/extension-field-preservation/evidence-record\nPASS round-trip/extension-field-preservation/verification-result\n47 conformance fixtures passed\n"
+    },
+    {
+      "label": "temporary-composite-only",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture-root",
+        "/tmp/clouddialect-remaining-integration-qvq75tot/composite"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "count": 101,
+      "output": "PASS adversarial/extension-namespace/invalid-prefix-formats/correctly-handled\nPASS adversarial/extension-namespace/invalid-prefix-formats/digit-start\nPASS adversarial/extension-namespace/invalid-prefix-formats/one-character\nPASS adversarial/extension-namespace/invalid-prefix-formats/space\nPASS adversarial/extension-namespace/mandatory-extension-blocks-acceptance/semantically-rejected\nPASS adversarial/extension-namespace/mandatory-extension-blocks-acceptance/structurally-handled\nPASS adversarial/extension-namespace/namespace-collision/correctly-handled\nPASS adversarial/extension-namespace/namespace-collision/untrusted-claim-author-a\nPASS adversarial/extension-namespace/namespace-collision/untrusted-claim-author-b\nPASS adversarial/extension-namespace/override-core-field-attempt/correctly-handled\nPASS adversarial/extension-namespace/override-core-field-attempt/correctly-rejected\nPASS adversarial/extension-namespace/reserved-exact-match/correctly-handled\nPASS adversarial/extension-namespace/reserved-exact-match/correctly-rejected\nPASS adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-handled\nPASS adversarial/extension-namespace/reserved-mixed-case-bypass/correctly-rejected\nPASS adversarial/extension-namespace/reserved-uppercase-bypass/correctly-handled\nPASS adversarial/extension-namespace/reserved-uppercase-bypass/correctly-rejected\nPASS adversarial/extension-namespace/unknown-optional-round-trip/correctly-handled\nPASS adversarial/extension-namespace/unknown-optional-round-trip/correctly-rejected\nPASS adversarial/p0-authority/forged-approver-claim\nPASS adversarial/p0-authority/forged-origin-claim\nPASS adversarial/p0-authority/incomplete-binding\nPASS adversarial/p0-authority/prohibited-worker-action-requests\nPASS adversarial/p0-authority/replayed-binding-claim\nPASS adversarial/p0-authority/x-authority-injection\nPASS adversarial/p0-authority/x-capability-shadow\nPASS integration/artifact-hash-mismatch/tampered-candidate\nPASS integration/blocking-gap/unknown-evidence-mandatory-obligation\nPASS integration/digest-vectors/sha-256/abc\nPASS integration/digest-vectors/sha-256/empty\nPASS integration/digest-vectors/sha-384/abc\nPASS integration/digest-vectors/sha-384/empty\nPASS integration/digest-vectors/sha-512/abc\nPASS integration/digest-vectors/sha-512/empty\nPASS integration/digest-vectors/sha3-256/abc\nPASS integration/digest-vectors/sha3-256/empty\nPASS integration/digest-vectors/sha3-512/abc\nPASS integration/digest-vectors/sha3-512/empty\nPASS integration/offline-resolution/unresolvable-ref\nPASS integration/scoped-store/ambiguous\nPASS integration/scoped-store/exact-version\nPASS integration/scoped-store/hash-mismatch\nPASS integration/scoped-store/missing\nPASS integration/scoped-store/outage\nPASS integration/scoped-store/wrong-returned-identity\nPASS integration/scoped-store/wrong-returned-version\nPASS integration/scoped-store/wrong-type\nPASS integration/semantic-resolution-failure/manifest-bad-contract-ref\nPASS integration/verification-consistency/approval-result-id-mismatch\nPASS integration/verification-consistency/approval-result-version-mismatch\nPASS integration/verification-consistency/duplicate-test-ids\nPASS integration/verification-consistency/invalid-calendar-utc\nPASS integration/verification-consistency/invalid-hash-length\nPASS integration/verification-consistency/non-z-timestamp\nPASS integration/verification-consistency/unmapped-obligations\nPASS integration/version-profile/build-metadata\nPASS integration/version-profile/closed-nested-newer-minor\nPASS integration/version-profile/core-overflow\nPASS integration/version-profile/leading-zero\nPASS integration/version-profile/prerelease\nPASS integration/version-profile/root-only-newer-minor\nPASS integration/version-profile/unindexed-patch\nPASS negative/behavioral-contract/invalid-behavioral-fidelity\nPASS negative/behavioral-contract/missing-id\nPASS negative/behavioral-contract/obligation-no-evidence-no-assumption\nPASS negative/evidence-record/inferred-empty-reasoning-chain\nPASS negative/evidence-record/missing-classification\nPASS negative/evidence-record/unknown-empty-assumptions\nPASS negative/pack-manifest/capability-unknown-field\nPASS negative/pack-manifest/duplicate-capability-id\nPASS negative/pack-manifest/inline-contract-body\nPASS negative/pack-manifest/invalid-behavioral-fidelity\nPASS negative/pack-manifest/missing-capabilities\nPASS negative/pack-manifest/missing-toolchain-for-full-operation\nPASS negative/pack-manifest/unknown-capability-version\nPASS negative/verification-result/acceptance-missing-approver\nPASS negative/verification-result/empty-tests-array\nPASS negative/verification-result/missing-binding\nPASS negative/verification-result/missing-configuration\nPASS negative/verification-result/missing-test-obligation\nPASS negative/verification-result/nonpass-string-failure-description\nPASS negative/verification-result/nonpass-without-failure-description\nPASS negative/verification-result/unknown-hash-algorithm\nPASS negative/version/unsupported-major\nPASS negative/version/unsupported-minor-newer\nPASS positive/behavioral-contract/minimal-valid\nPASS positive/behavioral-contract/with-behavioral-notes\nPASS positive/behavioral-contract/with-extension-field\nPASS positive/behavioral-contract/with-known-behavior\nPASS positive/behavioral-contract/with-unresolved-assumption-on-dependency\nPASS positive/evidence-record/inferred\nPASS positive/evidence-record/observed\nPASS positive/evidence-record/unknown\nPASS positive/pack-manifest/full-coverage\nPASS positive/pack-manifest/with-extension-section\nPASS positive/pack-manifest/with-unsupported-operation\nPASS positive/verification-result/minimal\nPASS positive/verification-result/with-acceptance\nPASS round-trip/extension-field-preservation/behavioral-contract\nPASS round-trip/extension-field-preservation/evidence-record\nPASS round-trip/extension-field-preservation/verification-result\n101 conformance fixtures passed\n"
+    }
+  ],
+  "driver_corrections": 1,
+  "boundary": "Temporary101notcanonical47;3native/backend/setupcasesgated. No source/harness/frozen-oracle changes."
+}

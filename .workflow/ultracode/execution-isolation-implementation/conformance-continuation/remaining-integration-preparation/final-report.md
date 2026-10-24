@@ -1,0 +1,16 @@
+# Final report — remaining integration preparation
+## Outcome
+28locallytestable pairs/56files across14fullyreadybatches plus1partialbatch are frozen/verified, NOT admitted. Canonical47unchanged. Combined54readydrafts would yield101cases only after separatelyapprovedactualadmission;3qualification/setupcasesremainabsent/gated.
+## What changed
+8syntheticstorecases,10digestvectors,7versionprofiles,2UTCcases,1unknownschemaURI. CorrectedunapproveddraftSHA3-224typo to approvedSHA3-512, preserving104totalcases andfivealgorithmprofile. No productionfeatureorcaseeasier-substitution. Partial3.2.41onlypreparesunresolvable-ref; native networkdisabledcaseuntouched.
+## Verification
+28originalactualrunnerchecks matchsource-frozenoracles.86parentcontrols pass:28wrongexpectations,15repairednegatives+15oldfailureexpectationrejections,10tamperfalse+10oldtrue-rejections,1other-versiondecoy,7selection/compositechecks. Temporary101only;canonical47stillpasses.
+94content/vector/hashassertions includeall10literalstandardvectorsindependentlyrecomputedwithhashlib. Source12/draft56/protected192hashes unchanged. Reviewer39independentsource/schema/datetimeaudit;40independentlyexecutes82actualcalls and10hashlibvectors, no actionableP1/P2. 40cumulative dispatches; current two reviewers are read-only, with no recursion/followupdispatches.
+## Final audit
+Oneparentcontrol-drivercorrectiondisclosed:repairsetupwasinadvertentlyrestoredwithoriginaloracle; correctedonlydriverandsamefullcontrolsrerun. Zerofrozenoracle/sourcechanges. PythonFormatCheckerlacksdate-timehere; noformat-enforcementclaim; datetimeandactualBoonrunnerverifycalendarbehavior. Exactscopehashauditprotectsresearch/canonical/source/spec. Parentretainswrites/Git; localcheckpointonly.
+## Skipped checks
+No newCargo/build/fullcanonicalsuiteduringworkflowdraft-onlyphase; previousverifiedbinaryused. No newcoverage/MSRV/native/backend/projectauth/snapshotsetup/provider/acceptance/consumerqualification. Priorlegacychecker8pass/1errornotrerun/repaired/waived.
+## Remaining risks
+Threegates: observednetworkdisabledqualification, realcrossprojectbackenddenial, trustedcatalogenvironmentsetup. All21Spec2numberedtasksandUD/BGremainopen; budgets/environmentunqualified. No task21/22completionclaim.
+## Next useful step
+Ownerreviewofexactadmissionproposal;26adversarialadmissionquestionisindependent. Do notauto-admitfromdraftreadiness.

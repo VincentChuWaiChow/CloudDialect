@@ -1,0 +1,343 @@
+{
+  "contract_sha256": "2c4171e80ac363b8c2d6bb0cb4cebf23a171d4c3c7f4019275d213f3e13ae479",
+  "ran_at": "2026-10-24T11:05:04.418619+00:00",
+  "matched": 28,
+  "checks": [
+    {
+      "path": "integration/offline-resolution/unresolvable-ref",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/offline-resolution/unresolvable-ref"
+      ],
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "path": "integration/scoped-store/exact-version",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/scoped-store/exact-version"
+      ],
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "path": "integration/scoped-store/missing",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/scoped-store/missing"
+      ],
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "path": "integration/scoped-store/ambiguous",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/scoped-store/ambiguous"
+      ],
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "path": "integration/scoped-store/wrong-type",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/scoped-store/wrong-type"
+      ],
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "path": "integration/scoped-store/hash-mismatch",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/scoped-store/hash-mismatch"
+      ],
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "path": "integration/scoped-store/outage",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/scoped-store/outage"
+      ],
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "path": "integration/scoped-store/wrong-returned-version",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/scoped-store/wrong-returned-version"
+      ],
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "path": "integration/scoped-store/wrong-returned-identity",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/scoped-store/wrong-returned-identity"
+      ],
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "path": "integration/digest-vectors/sha-256/empty",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha-256/empty"
+      ],
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "path": "integration/digest-vectors/sha-256/abc",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha-256/abc"
+      ],
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "path": "integration/digest-vectors/sha-384/empty",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha-384/empty"
+      ],
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "path": "integration/digest-vectors/sha-384/abc",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha-384/abc"
+      ],
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "path": "integration/digest-vectors/sha-512/empty",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha-512/empty"
+      ],
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "path": "integration/digest-vectors/sha-512/abc",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha-512/abc"
+      ],
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "path": "integration/digest-vectors/sha3-512/empty",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha3-512/empty"
+      ],
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "path": "integration/digest-vectors/sha3-512/abc",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha3-512/abc"
+      ],
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "path": "integration/digest-vectors/sha3-256/empty",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha3-256/empty"
+      ],
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "path": "integration/digest-vectors/sha3-256/abc",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/digest-vectors/sha3-256/abc"
+      ],
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "path": "integration/verification-consistency/invalid-calendar-utc",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/verification-consistency/invalid-calendar-utc"
+      ],
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "path": "integration/verification-consistency/non-z-timestamp",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/verification-consistency/non-z-timestamp"
+      ],
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "path": "integration/version-profile/build-metadata",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/version-profile/build-metadata"
+      ],
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "path": "integration/version-profile/prerelease",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/version-profile/prerelease"
+      ],
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "path": "integration/version-profile/leading-zero",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/version-profile/leading-zero"
+      ],
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "path": "integration/version-profile/unindexed-patch",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/version-profile/unindexed-patch"
+      ],
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "path": "integration/version-profile/core-overflow",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/version-profile/core-overflow"
+      ],
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "path": "integration/version-profile/root-only-newer-minor",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/version-profile/root-only-newer-minor"
+      ],
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "path": "integration/version-profile/closed-nested-newer-minor",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-integration-preparation/drafts/integration/version-profile/closed-nested-newer-minor"
+      ],
+      "exit": 0,
+      "output": ""
+    }
+  ]
+}
