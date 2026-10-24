@@ -1,0 +1,53 @@
+{
+  "batch": "3.2.59",
+  "status": "pass",
+  "case_paths": [
+    "integration/version-profile/core-overflow",
+    "integration/version-profile/root-only-newer-minor"
+  ],
+  "exact_files": [
+    {
+      "path": "crates/clouddialect-contracts/fixtures/integration/version-profile/core-overflow/input.json",
+      "sha256": "587feacf5c288c4569bfcb7d13fef32f7a6bbc15acb51b82c8a56b70cad5cccd"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/integration/version-profile/core-overflow/expected.json",
+      "sha256": "45784ba451000f7f4eecc6fb159925caa6a631a923acb00cf4bb5d401f95b28d"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/integration/version-profile/root-only-newer-minor/input.json",
+      "sha256": "b79f40b8b55afa2d91e17bbceba1e78fda3e6795f2b70ce54b43d8fe12579f4f"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/integration/version-profile/root-only-newer-minor/expected.json",
+      "sha256": "14bef2a69db64b2a9cc9082e0b6d9047af8061b131f98570e4dc92bfb81f0f95"
+    }
+  ],
+  "frozen_source_copies": true,
+  "full_test_command": [
+    "rtk",
+    "proxy",
+    "cargo",
+    "test",
+    "--manifest-path",
+    "crates/clouddialect-contracts/Cargo.toml",
+    "--frozen"
+  ],
+  "exit": 0,
+  "rust_tests_including_doctests": 288,
+  "canonical_fixture_count": 74,
+  "exact_prefix_checks": [
+    {
+      "path": "integration/version-profile/core-overflow",
+      "exit": 0,
+      "count": 1
+    },
+    {
+      "path": "integration/version-profile/root-only-newer-minor",
+      "exit": 0,
+      "count": 1
+    }
+  ],
+  "scope": "Entire approved bounded data batch",
+  "completed_at": "2026-10-24T11:49:12.297759+00:00"
+}

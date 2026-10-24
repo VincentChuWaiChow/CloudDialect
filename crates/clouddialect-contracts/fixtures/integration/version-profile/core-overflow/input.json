@@ -1,0 +1,10 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440001",
+  "format_version": "18446744073709551616.0.0",
+  "claim": "Synthetic declared observation only; structural validity does not authenticate it.",
+  "classification": "observed",
+  "provenance": {
+    "source_artifact_identity": "unverified-fixture-source",
+    "analysis_tool_identity": "unverified-fixture-analysis-tool"
+  }
+}
