@@ -1,0 +1,38 @@
+{
+  "batch": "3.2.35",
+  "status": "pass",
+  "case_paths": [
+    "adversarial/p0-authority/replayed-binding-claim"
+  ],
+  "exact_files": [
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/replayed-binding-claim/input.json",
+      "sha256": "047d42fd808ba2e0c4ed3ec33b597ffb5e5c11d885561e261a73205001fe4aa1"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/replayed-binding-claim/expected.json",
+      "sha256": "8effeff3202f28e001fdfacca54cc1f3c8ae20036511c6a5a8eef9d72acfbe3b"
+    }
+  ],
+  "frozen_copies": true,
+  "full_test_command": [
+    "rtk",
+    "proxy",
+    "cargo",
+    "test",
+    "--manifest-path",
+    "crates/clouddialect-contracts/Cargo.toml",
+    "--frozen"
+  ],
+  "exit": 0,
+  "rust_tests_including_doctests": 288,
+  "canonical_fixture_count": 101,
+  "exact_prefix_checks": [
+    {
+      "path": "adversarial/p0-authority/replayed-binding-claim",
+      "exit": 0,
+      "count": 1
+    }
+  ],
+  "completed_at": "2026-10-24T17:22:14.083008+00:00"
+}
