@@ -323,6 +323,79 @@ fn artifact_hash_uses_boolean_only_and_roundtrip_checks_actual_encoded_values() 
     fixtures::check_fixture(&tree.fixture("case", raw.as_bytes(), oracle)).unwrap();
 }
 
+#[test]
+fn roundtrip_rejects_core_verification_rewrites_even_when_structure_is_unchanged() {
+    use clouddialect_contracts::*;
+    let validator = Validator::new(CatalogSnapshot::embedded().unwrap());
+    let mut record: VerificationResult = serde_json::from_str(include_str!(
+        "../fixtures/round-trip/extension-field-preservation/verification-result/input.json"
+    ))
+    .unwrap();
+    record.tests[0].outcome = TestOutcome::Fail;
+    record.tests[0].failure_description = Some(FailureDescription {
+        detail: "Synthetic failing test must not become accepted".to_owned(),
+    });
+    let input = serde_json::to_vec(&record).unwrap();
+    fixtures::check_round_trip(DocumentKind::VerificationResult, &input, &input, &validator)
+        .unwrap();
+    for field in ["tests", "binding", "candidate"] {
+        let mut changed = record.clone();
+        match field {
+            "tests" => {
+                changed.tests[0].outcome = TestOutcome::Pass;
+                changed.tests[0].failure_description = None;
+            }
+            "binding" => changed.binding.run_id = "different-synthetic-run".to_owned(),
+            "candidate" => changed.candidate.identity = "different-synthetic-candidate".to_owned(),
+            _ => unreachable!(),
+        }
+        let encoded = serde_json::to_vec(&changed).unwrap();
+        let before = validator.validate_structural(DocumentKind::VerificationResult, &input);
+        let after = validator.validate_structural(DocumentKind::VerificationResult, &encoded);
+        assert_eq!(before.outcome, StructuralOutcome::Pass);
+        assert_eq!(before, after, "{field}");
+        let error = fixtures::check_round_trip(
+            DocumentKind::VerificationResult,
+            &input,
+            &encoded,
+            &validator,
+        )
+        .expect_err("structural equality must not hide a core verification rewrite");
+        assert!(error.contains("core verification"), "{field}: {error}");
+    }
+}
+
+#[test]
+fn roundtrip_still_rejects_lexical_extension_changes_and_structural_changes() {
+    use clouddialect_contracts::*;
+    let validator = Validator::new(CatalogSnapshot::embedded().unwrap());
+    let input = include_str!(
+        "../fixtures/round-trip/extension-field-preservation/verification-result/input.json"
+    );
+    let changed = input.replace("1e+04", "1E+04");
+    assert_eq!(
+        serde_json::from_str::<Value>(input).unwrap(),
+        serde_json::from_str::<Value>(&changed).unwrap()
+    );
+    let error = fixtures::check_round_trip(
+        DocumentKind::VerificationResult,
+        input.as_bytes(),
+        changed.as_bytes(),
+        &validator,
+    )
+    .unwrap_err();
+    assert!(error.contains("extension value bytes"), "{error}");
+    let changed = input.replace("\"format_version\": \"1.0.0\"", "\"format_version\": \"99.0.0\"");
+    let error = fixtures::check_round_trip(
+        DocumentKind::VerificationResult,
+        input.as_bytes(),
+        changed.as_bytes(),
+        &validator,
+    )
+    .unwrap_err();
+    assert!(error.contains("structural result"), "{error}");
+}
+
 fn child(mode: &str, fixture: &Path) -> Command {
     let mut command = Command::new(std::env::current_exe().unwrap());
     command
