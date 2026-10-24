@@ -429,6 +429,17 @@ pub fn check_round_trip(
     if validator.validate_structural(kind, input) != validator.validate_structural(kind, encoded) {
         return Err("round-trip structural result changed".to_owned());
     }
+    if kind == DocumentKind::VerificationResult {
+        let core = |bytes: &[u8]| -> Result<Value, String> {
+            let mut record: VerificationResult =
+                serde_json::from_slice(bytes).map_err(|e| e.to_string())?;
+            record.extensions.clear();
+            serde_json::to_value(record).map_err(|e| e.to_string())
+        };
+        if core(input)? != core(encoded)? {
+            return Err("round-trip core verification data changed".to_owned());
+        }
+    }
     Ok(())
 }
 

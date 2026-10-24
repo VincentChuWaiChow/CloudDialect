@@ -30,5 +30,25 @@
     "failed": 1,
     "intended_failure": "fail-to-pass core rewrite undetected; no structural or extension difference",
     "log": "results/red.log"
+  },
+  "green": {
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--test",
+      "conformance_controls"
+    ],
+    "same_as_red": true,
+    "exit": 0,
+    "compiled_executed": true,
+    "passed": 11,
+    "failed": 0,
+    "guard": "All decoded typed core verification fields compared; extensions independently retain lexical bytes",
+    "log": "results/green.log"
   }
 }

@@ -385,7 +385,10 @@ fn roundtrip_still_rejects_lexical_extension_changes_and_structural_changes() {
     )
     .unwrap_err();
     assert!(error.contains("extension value bytes"), "{error}");
-    let changed = input.replace("\"format_version\": \"1.0.0\"", "\"format_version\": \"99.0.0\"");
+    let changed = input.replace(
+        "\"format_version\": \"1.0.0\"",
+        "\"format_version\": \"99.0.0\"",
+    );
     let error = fixtures::check_round_trip(
         DocumentKind::VerificationResult,
         input.as_bytes(),
