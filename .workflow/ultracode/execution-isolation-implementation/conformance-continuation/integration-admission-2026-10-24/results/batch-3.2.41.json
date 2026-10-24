@@ -1,0 +1,39 @@
+{
+  "batch": "3.2.41",
+  "status": "pass",
+  "case_paths": [
+    "integration/offline-resolution/unresolvable-ref"
+  ],
+  "exact_files": [
+    {
+      "path": "crates/clouddialect-contracts/fixtures/integration/offline-resolution/unresolvable-ref/input.json",
+      "sha256": "e335a4085982c6bd8b7b2bd436d4feb7614f826a0426f4a55cdd04c995d04a38"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/integration/offline-resolution/unresolvable-ref/expected.json",
+      "sha256": "abfb52f71cf921969ca01c2dd295a9602012bf6b72f821c4d2acd5cbda8d090a"
+    }
+  ],
+  "frozen_source_copies": true,
+  "full_test_command": [
+    "rtk",
+    "proxy",
+    "cargo",
+    "test",
+    "--manifest-path",
+    "crates/clouddialect-contracts/Cargo.toml",
+    "--frozen"
+  ],
+  "exit": 0,
+  "rust_tests_including_doctests": 288,
+  "canonical_fixture_count": 48,
+  "exact_prefix_checks": [
+    {
+      "path": "integration/offline-resolution/unresolvable-ref",
+      "exit": 0,
+      "count": 1
+    }
+  ],
+  "scope": "Only approved unresolvable-ref half; native sibling absent",
+  "completed_at": "2026-10-24T11:46:12.076584+00:00"
+}
