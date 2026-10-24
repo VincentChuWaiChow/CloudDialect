@@ -1,0 +1,19 @@
+{
+  "phase": "structural",
+  "document_kind": "verification-result",
+  "outcome": "fail",
+  "errors": [
+    {
+      "category": "structural",
+      "field_path": "binding.run_id",
+      "description_contains": "Required field is missing"
+    },
+    {
+      "category": "structural",
+      "field_path": "binding.attempt_id",
+      "description_contains": "Required field is missing"
+    }
+  ],
+  "warnings": [],
+  "blockers": []
+}
