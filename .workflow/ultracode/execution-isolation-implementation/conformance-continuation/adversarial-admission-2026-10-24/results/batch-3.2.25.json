@@ -1,0 +1,52 @@
+{
+  "batch": "3.2.25",
+  "status": "pass",
+  "case_paths": [
+    "adversarial/extension-namespace/namespace-collision/correctly-handled",
+    "adversarial/extension-namespace/namespace-collision/untrusted-claim-author-a"
+  ],
+  "exact_files": [
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/namespace-collision/correctly-handled/input.json",
+      "sha256": "2787777df33632bf19bfde1b739ddfa8b0cb9d78a7b44f3347f1bb974b5f1c23"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/namespace-collision/correctly-handled/expected.json",
+      "sha256": "b13ff786fccf1cd540f53ae532bacf3b66a1fe3cfadf2ecc03e1673692e28f51"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/namespace-collision/untrusted-claim-author-a/input.json",
+      "sha256": "df8646f8b7fb624d7f4c15e159af0cdb7ef5150c51f21c04fdcae6fbc682296c"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/namespace-collision/untrusted-claim-author-a/expected.json",
+      "sha256": "a53f97df8df16e1c6362a4909529b1ae739d66456a9d95de8eabc643bbf6c0ad"
+    }
+  ],
+  "frozen_copies": true,
+  "full_test_command": [
+    "rtk",
+    "proxy",
+    "cargo",
+    "test",
+    "--manifest-path",
+    "crates/clouddialect-contracts/Cargo.toml",
+    "--frozen"
+  ],
+  "exit": 0,
+  "rust_tests_including_doctests": 288,
+  "canonical_fixture_count": 83,
+  "exact_prefix_checks": [
+    {
+      "path": "adversarial/extension-namespace/namespace-collision/correctly-handled",
+      "exit": 0,
+      "count": 1
+    },
+    {
+      "path": "adversarial/extension-namespace/namespace-collision/untrusted-claim-author-a",
+      "exit": 0,
+      "count": 1
+    }
+  ],
+  "completed_at": "2026-10-24T17:19:09.298046+00:00"
+}
