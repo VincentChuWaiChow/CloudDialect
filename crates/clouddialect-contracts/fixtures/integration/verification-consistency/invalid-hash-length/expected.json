@@ -1,0 +1,14 @@
+{
+  "phase": "semantic",
+  "document_kind": "verification-result",
+  "outcome": "fail",
+  "errors": [
+    {
+      "category": "semantic",
+      "field_path": "candidate.content_hash.value",
+      "description_contains": "Content hash must be lowercase hexadecimal of the algorithm's exact length"
+    }
+  ],
+  "warnings": [],
+  "blockers": []
+}
