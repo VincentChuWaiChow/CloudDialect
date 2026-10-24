@@ -2,15 +2,15 @@
   "title": "Frozen fixture admission",
   "slug": "admission-2026-10-24",
   "created_at": "2026-10-24T09:08:34+00:00",
-  "updated_at": "2026-10-24T09:33:27.163169+00:00",
-  "status": "verifying",
+  "updated_at": "2026-10-24T09:39:15.594027+00:00",
+  "status": "complete",
   "mode": "delegated",
   "baseline_ref": "283533aff56bb1ade159275e4adb922765ced62e",
   "risk_level": "medium",
   "eval_contract": {
     "level": "inline",
     "path": "plan.md",
-    "status": "ready"
+    "status": "checked"
   },
   "approval": {
     "required": true,
@@ -45,14 +45,14 @@
     },
     {
       "id": "33-review",
-      "status": "in_progress",
+      "status": "complete",
       "owner": "read-only-agent",
       "write_scope": [],
       "result_path": "results/33-review.md"
     }
   ],
   "verification": {
-    "status": "parent checks pass; independent final review33in progress; known extra-checker failure/coverage-MS RV skipped",
+    "status": "bounded admission verified;42oracles/286Rust/15Python/lints and independent review pass; full goal incomplete, legacy failure and skipped qualification explicit",
     "checks": [
       {
         "name": "full-tests",
@@ -194,5 +194,16 @@
       "commit": "b0fdd1b978ecd8f64811c77e3c33549dff1b2b28",
       "scope": "integration3"
     }
-  ]
+  ],
+  "independent_review_result": "results/33-review.md",
+  "full_goal_complete": false,
+  "no_source_data_spec_changes_after_final_freeze": true,
+  "repairs_applied": 0,
+  "known_remaining": {
+    "inventory_cases": 62,
+    "spec2_numbered_tasks": 21,
+    "native_qualification": "not run",
+    "fresh_coverage_msrv": "not run",
+    "extra_spec_checker": "pre-existing8pass/1error"
+  }
 }

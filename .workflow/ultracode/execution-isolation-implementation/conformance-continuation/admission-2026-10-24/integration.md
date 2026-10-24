@@ -8,7 +8,7 @@ source-derived oracles and schema validity, not native/authentication proof.
 No source repair, new deps/versions, unknown mandatory trust, fake native/backend
 qualification, full104-case completion, remote publication or runtime gate closure.
 ## Conflicts
-No actionable content disagreement in the first two packets; final33pending.
+No actionable content/integration disagreement in any of the three packets.
 ## Decisions
 Parent retains all writes/Git. Three new read-only packets chosen under as-needed
 approval,33cumulative; no recursion/follow-ups. Exact model/effort unverified.
@@ -16,7 +16,8 @@ approval,33cumulative; no recursion/follow-ups. Exact model/effort unverified.
 Positive13/negative23/roundtrip3/integration3; tasks18/19done, other62cases and
 all21runtime tasks open. No production/runner/schema/manifest/lock changes.
 ## Verification still needed
-Final frozen review33 and closeout audit. Fresh coverage/MSRV tools unavailable;
+Final frozen review33 and closeout audit pass, including independently executed
+full286-test suite+42oracles and180unchanged hashes. Fresh coverage/MSRV tools unavailable;
 legacy extra spec-checker retains its pre-existing8pass/1error. Actual native/
 consumer/traceability/owner handoff remains outside this slice, not waived.
 ## Remaining risks

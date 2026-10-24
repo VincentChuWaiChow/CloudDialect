@@ -2,8 +2,8 @@
   "title": "Conformance prerequisite continuation",
   "slug": "conformance-continuation",
   "created_at": "2026-10-23T18:44:04+00:00",
-  "updated_at": "2026-10-24T09:27:32.701091+00:00",
-  "status": "executing",
+  "updated_at": "2026-10-24T09:39:15.594027+00:00",
+  "status": "waiting_for_approval",
   "mode": "delegated",
   "baseline_ref": "5dc25f3f31ce500d17aa2322793d3a970f9b73d9",
   "risk_level": "high",
@@ -259,5 +259,7 @@
   "current_admission": "admission-2026-10-24/state.json",
   "current_owner_scope": "Explicit approving all:41prepared cases, plus as-needed agents. No source/native/external/gate approval inferred.",
   "current_canonical_fixture_count": 42,
-  "current_admission_scope": "All41 frozen drafts approved/admitted; only25bounded batches plus prior seed complete. Source/native/external actions excluded."
+  "current_admission_scope": "All41 frozen drafts approved/admitted; only25bounded batches plus prior seed complete. Source/native/external actions excluded.",
+  "current_admission_status": "41-case admission verified,42canonical total; no pending approval for these cases",
+  "remaining_required_decisions": "Remaining62case contracts/native/tooling/traceability/consumer and allUD/BG evidence; no broader scope inferred."
 }

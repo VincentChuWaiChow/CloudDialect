@@ -2,8 +2,8 @@
   "title": "Execution-isolation implementation",
   "slug": "execution-isolation-implementation",
   "created_at": "2026-10-22T07:25:44.090021+00:00",
-  "updated_at": "2026-10-24T09:33:27.163169+00:00",
-  "status": "verifying",
+  "updated_at": "2026-10-24T09:39:15.594027+00:00",
+  "status": "waiting_for_approval",
   "mode": "delegated",
   "baseline_ref": "3b9cb6bd0ee82dbef3b731a35ce68fc778c4906a",
   "risk_level": "high",
@@ -24,7 +24,7 @@
     "agent_count": 33,
     "wave_count": 12,
     "no_delegation_reason": "",
-    "notes": "Latest user permits as-needed agents; chosen admission packets31/32complete,33running. No recursion/follow-ups; source/native/external actions excluded.",
+    "notes": "Admission31/32content and33integrated review complete; user allows as-needed agents. Three chosen, no recursion/follow-ups/repairs. No source/native/external approval inferred.",
     "additional_dispatch_limit": 2,
     "additional_dispatches_used": 2,
     "consolidated_repairs_used_current_tranche": 1
@@ -1760,9 +1760,9 @@
     "publication_sha": "cd51996c3b2f65adb23aa129d412111b2d12ec6b"
   },
   "continuation_blocked_audit": {
-    "status": "Progress:41approved fixtures admitted in25verified batches; independent final review running",
+    "status": "Progress:41frozen cases admitted/verified; tasks18/19checked, allruntimegates remain open",
     "consecutive_no_progress_goal_turns": 0,
-    "checked_at": "2026-10-24T09:33:27.163169+00:00"
+    "checked_at": "2026-10-24T09:39:15.594027+00:00"
   },
   "reference_fidelity_wave": {
     "started_at": "2026-10-22T16:07:43Z",
@@ -1808,7 +1808,7 @@
   },
   "current_tranche": "conformance-continuation/admission-2026-10-24",
   "conformance_continuation": {
-    "status": "approved_repair_seed_verified_partial_prerequisite_delivery",
+    "status": "42canonical fixtures verified; tasks18/19delivered, whole goal incomplete",
     "report": "conformance-continuation/admission-2026-10-24/final-report.md",
     "current_full_tree_green": false,
     "default_conformance_exit": 0,
@@ -1816,7 +1816,7 @@
     "doctests_passed": 7,
     "python_passed": 15,
     "known_defect": "reviewer29 direct-assumption omission repaired; no new defect found within this bounded repair",
-    "review": "31/32independent content clean;33final integrated review in progress",
+    "review": "Independent31/32content and33full integrated execution clean;180hashes preserved",
     "dispatches_consumed": 30,
     "pushes_authorized": false,
     "full_goal_complete": false,
@@ -1827,10 +1827,10 @@
     "extra_spec_checker": "8 pass/1 error, unchanged pre-existing blanket checkbox guard",
     "current_failclosed_cli_controls_matched": 67,
     "current_cargo_suite_green": true,
-    "current_full_tree_green_reason": "Additional unchanged pre-existing spec-only checker failure; fresh coverage/MSRV not qualified."
+    "current_full_tree_green_reason": "Known pre-existing legacy spec-checker error and missing fresh coverage/MSRV/native/consumer evidence."
   },
   "fixture_admission": {
-    "status": "all41admitted; final independent review running",
+    "status": "bounded41-case admission complete; full objective unfinished",
     "baseline": "283533a",
     "approved_frozen_cases": 41,
     "deadline": "2026-10-24T09:53:34Z",
@@ -1843,8 +1843,10 @@
       31,
       32
     ],
-    "final_review": 33,
+    "final_review": "33complete: no actionable P1/P2; independently286Rust+42oracles/9controls/180hashes",
     "source_changes": 0,
-    "report": "conformance-continuation/admission-2026-10-24/final-report.md"
+    "report": "conformance-continuation/admission-2026-10-24/final-report.md",
+    "new_canonical_files": 82,
+    "repairs": 0
   }
 }

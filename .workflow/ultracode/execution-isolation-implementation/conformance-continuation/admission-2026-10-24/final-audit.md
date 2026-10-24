@@ -1,4 +1,4 @@
-# Admission audit — final reviewer pending
+# Admission audit — verified bounded slice
 
 | Criterion | Result | Evidence |
 | --- | --- | --- |
@@ -10,8 +10,8 @@
 | Positive13/task18 content | PASS | Independent31 + actual Rust/prefix checks |
 | Negative23/task19 content | PASS | Independent32 +22Fail/1Warn exact oracles |
 | Roundtrip/integration full task21 | PARTIAL |3typed +3nonnative; native/P0cases remain |
-| Production/lock/schema/research preservation | PASS |90protected baseline files; final scope audit pending |
-| Independent integrated reviewer33 | PENDING | not claimed yet |
+| Production/lock/schema/research preservation | PASS |90protected baseline files; scope audit and independent after-hash verification pass |
+| Independent integrated reviewer33 | PASS | Full286Rust+42oracles;9controls;180hashes; prefix/zero/wrong-oracle controls |
 | Fresh coverage/Rust1.88 | UNVERIFIED | tools not installed; no installation authorized |
 | Additional legacy spec-checker | FAIL pre-existing |8pass/1error; unchanged blanket checkbox predicate |
 | Full104-case / traceability/consumer/native | MISS |62cases and required qualification outstanding |
