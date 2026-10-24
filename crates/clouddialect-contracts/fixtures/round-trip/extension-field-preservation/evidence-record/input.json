@@ -1,0 +1,10 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440000",
+  "format_version": "1.0.0",
+  "claim": "A source claim inferred from the stated reasoning.",
+  "classification": "inferred",
+  "reasoning_chain": [
+    "Explicit inference; not an authenticated observation."
+  ],
+  "acme:meta": { "number":1e+04, "text":"\u0061", "nested":[ 2, {"n":-0.0, "accepted":true} ] }
+}

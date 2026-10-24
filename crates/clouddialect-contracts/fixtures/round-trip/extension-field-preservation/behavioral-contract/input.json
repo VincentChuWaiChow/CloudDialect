@@ -1,0 +1,21 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440010",
+  "format_version": "1.0.0",
+  "operation_identity": {
+    "call_site": "synthetic.fixture.upload"
+  },
+  "inputs": {},
+  "outputs": {},
+  "side_effects": [],
+  "resource_dependencies": [],
+  "obligations": [
+    {
+      "obligation_id": "upload-object",
+      "behavioral_fidelity": "equivalent-within-contract",
+      "evidence_refs": [
+        "550e8400-e29b-41d4-a716-446655440001"
+      ]
+    }
+  ],
+  "acme:meta": { "number":1e+04, "text":"\u0061", "nested":[ 2, {"n":-0.0, "accepted":true} ] }
+}
