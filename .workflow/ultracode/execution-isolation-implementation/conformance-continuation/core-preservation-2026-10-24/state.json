@@ -1,0 +1,52 @@
+{
+  "title": "Approved core preservation and five-pair admission",
+  "slug": "core-preservation-2026-10-24",
+  "created_at": "2026-10-24T10:36:56Z",
+  "updated_at": "2026-10-24T10:36:56Z",
+  "deadline": "2026-10-24T11:21:56Z",
+  "status": "executing",
+  "mode": "delegated",
+  "baseline_ref": "d19c5d4a96a61eb4b9c3f35220cd9b16b201fd74",
+  "risk_level": "medium",
+  "eval_contract": {
+    "level": "inline",
+    "path": "plan.md",
+    "status": "ready"
+  },
+  "approval": {
+    "required": true,
+    "granted": true,
+    "notes": "Both exact pending questions approved; local commits only"
+  },
+  "delegation": {
+    "native_agent_available": true,
+    "native_agent_planned": true,
+    "native_agent_used": true,
+    "agent_count": 1,
+    "wave_count": 1,
+    "cumulative_before": 34,
+    "planned_tranche_limit": 2,
+    "no_delegation_reason": ""
+  },
+  "packets": [
+    {
+      "id": "35-frozen-oracle-nontrust",
+      "status": "in_progress",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/35-frozen-oracle-nontrust.md"
+    },
+    {
+      "id": "36-integrated-review",
+      "status": "pending",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/36-integrated-review.md"
+    }
+  ],
+  "verification": {
+    "status": "pending",
+    "checks": []
+  },
+  "review_repairs_used": 0
+}

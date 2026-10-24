@@ -410,14 +410,23 @@ fn round_trip(kind: DocumentKind, input: &[u8], validator: &Validator) -> Result
         _ => unreachable!("typed round-trip kind validated above"),
     }
     .map_err(|e| e.to_string())?;
+    check_round_trip(kind, input, &encoded, validator)
+}
+
+pub fn check_round_trip(
+    kind: DocumentKind,
+    input: &[u8],
+    encoded: &[u8],
+    validator: &Validator,
+) -> Result<(), String> {
     let mut before = BTreeMap::new();
     let mut after = BTreeMap::new();
     extension_values(input, "$", &mut before)?;
-    extension_values(&encoded, "$", &mut after)?;
+    extension_values(encoded, "$", &mut after)?;
     if before.is_empty() || before != after {
         return Err("round-trip extension value bytes missing or changed".to_owned());
     }
-    if validator.validate_structural(kind, input) != validator.validate_structural(kind, &encoded) {
+    if validator.validate_structural(kind, input) != validator.validate_structural(kind, encoded) {
         return Err("round-trip structural result changed".to_owned());
     }
     Ok(())

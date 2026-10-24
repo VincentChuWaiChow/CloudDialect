@@ -2,8 +2,8 @@
   "title": "Execution-isolation implementation",
   "slug": "execution-isolation-implementation",
   "created_at": "2026-10-22T07:25:44.090021+00:00",
-  "updated_at": "2026-10-24T09:52:45.254666+00:00",
-  "status": "waiting_for_approval",
+  "updated_at": "2026-10-24T10:36:56Z",
+  "status": "executing",
   "mode": "delegated",
   "baseline_ref": "3b9cb6bd0ee82dbef3b731a35ce68fc778c4906a",
   "risk_level": "high",
@@ -14,17 +14,17 @@
   },
   "approval": {
     "required": true,
-    "granted": false,
-    "notes": "Explicit next-tranche approval+frequent commits received; local commits authorized, no pushes/native/release or runtime-gate closure."
+    "granted": true,
+    "notes": "Both exact local harness/fixture and local-nontrust decisions approved2026-10-24; no push/native/release or runtime gate closure."
   },
   "delegation": {
     "native_agent_available": true,
     "native_agent_planned": true,
     "native_agent_used": true,
-    "agent_count": 34,
+    "agent_count": 35,
     "wave_count": 12,
     "no_delegation_reason": "",
-    "notes": "As-needed approval: admission31\u201333complete; additional read-only readiness34complete, no recursion/follow-ups. No new source/native authorization inferred.",
+    "notes": "Explicit as-needed authorization;35read-only frozen-oracle review running; parent retains all writes/Git. No recursion/follow-up dispatches.",
     "additional_dispatch_limit": 2,
     "additional_dispatches_used": 2,
     "consolidated_repairs_used_current_tranche": 1
@@ -1807,7 +1807,11 @@
     "current_full_tree_green": true,
     "completeness_implemented": true
   },
-  "current_tranche": "conformance-continuation/remaining-readiness-2026-10-24",
+  "current_tranche": {
+    "path": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/core-preservation-2026-10-24",
+    "deadline": "2026-10-24T11:21:56Z",
+    "scope": "two harness files, five frozen pairs and related approved clarification/status docs; local commits"
+  },
   "conformance_continuation": {
     "status": "42canonical fixtures verified; tasks18/19delivered, whole goal incomplete",
     "report": "conformance-continuation/admission-2026-10-24/final-report.md",
