@@ -1,0 +1,31 @@
+{
+  "scope": "Parent structural checks for planning-only lab continuation; not execution qualification",
+  "date": "2026-10-29",
+  "command": "rtk proxy python3 (inline assertions) and wrapped git diff --check",
+  "checks": {
+    "protected_laptop_excluded": "PASS",
+    "no_target_or_provider_selected": "PASS",
+    "no_scope_escalation": "PASS",
+    "no_runtime_or_gate_authority": "PASS",
+    "ud5_unmeasured_unapproved": "PASS",
+    "21_numbered_tasks_still_open": "PASS",
+    "six_gate_records_remain_open": "PASS",
+    "no_execution_crate": "PASS",
+    "ceiling_and_cpu_units_explicit": "PASS",
+    "no_copy_paste_provisioning_commands": "PASS",
+    "protected_hashes_unchanged": "PASS",
+    "local_links_resolve": "PASS",
+    "git_diff_check": "PASS"
+  },
+  "protected_file_count": 290,
+  "native_or_provider_probes_run": false,
+  "rust_retest": "SKIPPED: no Rust/source/API/schema changes; prior audit results remain historical",
+  "remaining_unverified": [
+    "selected provider/account/region/operator",
+    "current price and approved spend",
+    "exact artifact pins and command manifest",
+    "actual KVM/Firecracker compatibility",
+    "enforcement/observer/cleanup evidence"
+  ],
+  "independent_post_correction_reread": false
+}

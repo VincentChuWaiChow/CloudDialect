@@ -1,0 +1,456 @@
+{
+  "source_revision": "5b3dfa6954805cfbeba3e9724803dac064ba48e6",
+  "scope": "Current repository artifacts, actual local upstream checks and gate records; no native/owner acceptance inferred.",
+  "tasks": [
+    {
+      "task": "TASK-001",
+      "number": "1.1",
+      "title": "Prepare isolation and verifier-observation decision evidence",
+      "checked": false,
+      "completion": "UNVERIFIED",
+      "reason": "UD-1 still OPEN; selected profile, security/operations approval and native observer/containment evidence absent from the gate record.",
+      "declared_artifacts": [
+        {
+          "path": ".kiro/specs/execution-isolation/decisions/UD-1-isolation.md",
+          "present": true
+        },
+        {
+          "path": ".kiro/specs/execution-isolation/qualification/isolation-plan.md",
+          "present": true
+        }
+      ]
+    },
+    {
+      "task": "TASK-002",
+      "number": "1.2",
+      "title": "Prepare versioned IPC decision evidence",
+      "checked": false,
+      "completion": "UNVERIFIED",
+      "reason": "UD-2 still OPEN; exact approved wire/schema/error bounds and actual interoperability evidence are not delivered.",
+      "declared_artifacts": [
+        {
+          "path": ".kiro/specs/execution-isolation/decisions/UD-2-ipc.md",
+          "present": true
+        },
+        {
+          "path": ".kiro/specs/execution-isolation/qualification/ipc-cases.md",
+          "present": true
+        }
+      ]
+    },
+    {
+      "task": "TASK-003",
+      "number": "1.3",
+      "title": "Prepare scoped credential delivery decision evidence",
+      "checked": false,
+      "completion": "UNVERIFIED",
+      "reason": "UD-3 still OPEN; selected provider/use mechanism, measured lifetime/revocation guarantees and owner approval are not recorded.",
+      "declared_artifacts": [
+        {
+          "path": ".kiro/specs/execution-isolation/decisions/UD-3-credentials.md",
+          "present": true
+        },
+        {
+          "path": ".kiro/specs/execution-isolation/qualification/credential-cases.md",
+          "present": true
+        }
+      ]
+    },
+    {
+      "task": "TASK-004",
+      "number": "1.4",
+      "title": "Prepare persistence, retention and restore decision evidence",
+      "checked": false,
+      "completion": "UNVERIFIED",
+      "reason": "UD-4 still OPEN; approved backend, data-class retention and real tested-restore evidence are missing.",
+      "declared_artifacts": [
+        {
+          "path": ".kiro/specs/execution-isolation/decisions/UD-4-persistence.md",
+          "present": true
+        },
+        {
+          "path": ".kiro/specs/execution-isolation/qualification/restore-cases.md",
+          "present": true
+        }
+      ]
+    },
+    {
+      "task": "TASK-005",
+      "number": "1.5",
+      "title": "Measure a reference workload and propose finite budgets",
+      "checked": false,
+      "completion": "MISS",
+      "reason": "UD-5 budget artifact explicitly has measured=false, measurements=[], approved_limits=null and owner_approvals=[].",
+      "declared_artifacts": [
+        {
+          "path": ".kiro/specs/execution-isolation/decisions/UD-5-budgets.md",
+          "present": true
+        },
+        {
+          "path": ".kiro/specs/execution-isolation/qualification/budget-measurements.json",
+          "present": true
+        }
+      ]
+    },
+    {
+      "task": "TASK-006",
+      "number": "1.6",
+      "title": "Reconcile and verify the Spec 1 dependency contract",
+      "checked": false,
+      "completion": "UNVERIFIED",
+      "reason": "Bounded upstream source/type/fixture verification passes, but complete Spec2 consumer qualification and upstream/core accepted handoff are not recorded; actual license scan fails.",
+      "declared_artifacts": [
+        {
+          "path": ".kiro/specs/execution-isolation/decisions/BG-01-upstream.md",
+          "present": true
+        },
+        {
+          "path": ".kiro/specs/execution-isolation/qualification/upstream-compatibility.md",
+          "present": true
+        }
+      ]
+    },
+    {
+      "task": "TASK-007",
+      "number": "1.7",
+      "title": "Re-gate the approved design and establish the minimal compile/test foundation",
+      "checked": false,
+      "completion": "MISS",
+      "reason": "Execution foundation crate/files absent; all UD/BG prerequisites and separate implementation authorization still gate this work.",
+      "declared_artifacts": [
+        {
+          "path": "crates/clouddialect-execution/Cargo.toml",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/Cargo.lock",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/src/lib.rs",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/src/model.rs",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/tests/contracts.rs",
+          "present": false
+        }
+      ]
+    },
+    {
+      "task": "TASK-008",
+      "number": "2.1",
+      "title": "Implement bounded protocol handling and lifecycle orchestration",
+      "checked": false,
+      "completion": "MISS",
+      "reason": "No execution supervisor/IPC implementation or focused execution tests exist at the planned paths; upstream helper cleanup is not this module.",
+      "declared_artifacts": [
+        {
+          "path": "crates/clouddialect-execution/src/supervisor.rs",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/tests/supervisor.rs",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/tests/fixtures/protocol-cases.json",
+          "present": false
+        }
+      ]
+    },
+    {
+      "task": "TASK-009",
+      "number": "3.1",
+      "title": "Implement the approved execution-domain adapter",
+      "checked": false,
+      "completion": "MISS",
+      "reason": "No selected native isolation adapter/probe files or approved supported profile; mock/process-helper results do not qualify containment.",
+      "declared_artifacts": [
+        {
+          "path": "crates/clouddialect-execution/src/isolation.rs",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/tests/isolation.rs",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/tests/fixtures/isolation-probes.rs",
+          "present": false
+        }
+      ]
+    },
+    {
+      "task": "TASK-010",
+      "number": "4.1",
+      "title": "Implement reservation, consumption and recovery accounting",
+      "checked": false,
+      "completion": "MISS",
+      "reason": "No runtime budget ledger/recovery accounting implementation; measured approved limits are absent.",
+      "declared_artifacts": [
+        {
+          "path": "crates/clouddialect-execution/src/budget.rs",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/tests/budget.rs",
+          "present": false
+        }
+      ]
+    },
+    {
+      "task": "TASK-011",
+      "number": "5.1",
+      "title": "Implement external authorization and immutable admission",
+      "checked": false,
+      "completion": "MISS",
+      "reason": "No external authorization/admission implementation; upstream capability declarations and schemas are not grants.",
+      "declared_artifacts": [
+        {
+          "path": "crates/clouddialect-execution/src/policy.rs",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/tests/policy.rs",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/tests/fixtures/admission-cases.json",
+          "present": false
+        }
+      ]
+    },
+    {
+      "task": "TASK-012",
+      "number": "6.1",
+      "title": "Implement the approved credential-use facility",
+      "checked": false,
+      "completion": "MISS",
+      "reason": "No approved credential-use implementation/lifecycle proof; decision and synthetic-case documents are plans only.",
+      "declared_artifacts": [
+        {
+          "path": "crates/clouddialect-execution/src/credentials.rs",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/tests/credentials.rs",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/tests/fixtures/credential-cases.json",
+          "present": false
+        }
+      ]
+    },
+    {
+      "task": "TASK-013",
+      "number": "7.1",
+      "title": "Implement concrete tool and route authorization",
+      "checked": false,
+      "completion": "MISS",
+      "reason": "No concrete tool/egress guard implementation; declarative injection cases are not enforcement evidence.",
+      "declared_artifacts": [
+        {
+          "path": "crates/clouddialect-execution/src/egress.rs",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/tests/egress.rs",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/tests/fixtures/injection-cases.json",
+          "present": false
+        }
+      ]
+    },
+    {
+      "task": "TASK-014",
+      "number": "8.1",
+      "title": "Implement scoped storage and deletion-aware restore",
+      "checked": false,
+      "completion": "MISS",
+      "reason": "No scoped project backend/cache/retention implementation or deletion-aware restore tests; synthetic Spec1 stores do not qualify real access controls.",
+      "declared_artifacts": [
+        {
+          "path": "crates/clouddialect-execution/src/project.rs",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/tests/project.rs",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/tests/fixtures/project-cases.json",
+          "present": false
+        }
+      ]
+    },
+    {
+      "task": "TASK-015",
+      "number": "9.1",
+      "title": "Implement trusted verification control using delivered contracts",
+      "checked": false,
+      "completion": "MISS",
+      "reason": "No trusted execution verifier; upstream non-accepting completeness/results and document consistency do not authenticate behavioral observations or approvals.",
+      "declared_artifacts": [
+        {
+          "path": "crates/clouddialect-execution/src/verifier.rs",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/tests/verifier.rs",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/tests/fixtures/verification-cases.json",
+          "present": false
+        }
+      ]
+    },
+    {
+      "task": "TASK-016",
+      "number": "10.1",
+      "title": "Implement the approved audit persistence contract",
+      "checked": false,
+      "completion": "MISS",
+      "reason": "No approved audit backend, real persistence implementation or durability/failure tests.",
+      "declared_artifacts": [
+        {
+          "path": "crates/clouddialect-execution/src/audit.rs",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/tests/audit.rs",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/tests/fixtures/audit-cases.json",
+          "present": false
+        }
+      ]
+    },
+    {
+      "task": "TASK-017",
+      "number": "11.1",
+      "title": "Implement ordered cancellation, recovery and acceptance commitment",
+      "checked": false,
+      "completion": "MISS",
+      "reason": "No execution checkpoint/recovery/ordered acceptance state machine or integrated fault injection.",
+      "declared_artifacts": [
+        {
+          "path": "crates/clouddialect-execution/src/recovery.rs",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/tests/recovery.rs",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/tests/fixtures/checkpoint-cases.json",
+          "present": false
+        }
+      ]
+    },
+    {
+      "task": "TASK-018",
+      "number": "12.1",
+      "title": "Wire the real modules and verify end-to-end authority boundaries",
+      "checked": false,
+      "completion": "MISS",
+      "reason": "No execution modules/coordinator or real integrated selected-adapter positive/negative qualification path.",
+      "declared_artifacts": [
+        {
+          "path": "crates/clouddialect-execution/src/lib.rs",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/src/coordinator.rs",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/tests/integrated.rs",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/Cargo.toml",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/Cargo.lock",
+          "present": false
+        }
+      ]
+    },
+    {
+      "task": "TASK-019",
+      "number": "12.2",
+      "title": "Qualify AC-05 and AC-08 under adversarial failure injection",
+      "checked": false,
+      "completion": "MISS",
+      "reason": "AC-05/AC-08 are MISSING; no real integrated checkpoint/forged-result failure-injection report or executable tests.",
+      "declared_artifacts": [
+        {
+          "path": "crates/clouddialect-execution/tests/acceptance_adversarial.rs",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/tests/interruption.rs",
+          "present": false
+        },
+        {
+          "path": ".kiro/specs/execution-isolation/qualification/ac-05-ac-08.md",
+          "present": false
+        }
+      ]
+    },
+    {
+      "task": "TASK-020",
+      "number": "12.3",
+      "title": "Qualify AC-06 and measured limits on the selected profile",
+      "checked": false,
+      "completion": "MISS",
+      "reason": "AC-06 remains MISSING; no approved-profile containment, positive-controlled network observation or measured-limit qualification.",
+      "declared_artifacts": [
+        {
+          "path": "crates/clouddialect-execution/tests/containment_adversarial.rs",
+          "present": false
+        },
+        {
+          "path": "crates/clouddialect-execution/tests/offline.rs",
+          "present": false
+        },
+        {
+          "path": ".kiro/specs/execution-isolation/qualification/ac-06-profile.md",
+          "present": false
+        }
+      ]
+    },
+    {
+      "task": "TASK-021",
+      "number": "12.4",
+      "title": "Verify restore/runbooks and produce release-readiness evidence",
+      "checked": false,
+      "completion": "MISS",
+      "reason": "No execution restore/runbook/release-readiness delivery; native AC reports, signing and license review are unresolved.",
+      "declared_artifacts": [
+        {
+          "path": "docs/execution-isolation-runbook.md",
+          "present": false
+        },
+        {
+          "path": ".kiro/specs/execution-isolation/qualification/restore-report.md",
+          "present": false
+        },
+        {
+          "path": ".kiro/specs/execution-isolation/qualification/release-readiness.md",
+          "present": false
+        }
+      ]
+    }
+  ]
+}

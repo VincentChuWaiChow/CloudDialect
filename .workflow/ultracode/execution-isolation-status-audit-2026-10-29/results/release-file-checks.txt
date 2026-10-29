@@ -1,0 +1,12 @@
+test_design_uses_the_same_supported_policy (__main__.ReleaseToolingTests.test_design_uses_the_same_supported_policy) ... ok
+test_nested_manifest_and_current_license_policy (__main__.ReleaseToolingTests.test_nested_manifest_and_current_license_policy) ... ok
+test_ordered_pre_release_gate (__main__.ReleaseToolingTests.test_ordered_pre_release_gate) ... ok
+test_placeholder_is_comment_only_not_a_key (__main__.ReleaseToolingTests.test_placeholder_is_comment_only_not_a_key) ... ok
+test_sbom_procedure_and_cli_mismatch_are_explicit (__main__.ReleaseToolingTests.test_sbom_procedure_and_cli_mismatch_are_explicit) ... ok
+test_signing_and_offline_verification (__main__.ReleaseToolingTests.test_signing_and_offline_verification) ... ok
+test_supported_allow_only_license_policy (__main__.ReleaseToolingTests.test_supported_allow_only_license_policy) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.003s
+
+OK

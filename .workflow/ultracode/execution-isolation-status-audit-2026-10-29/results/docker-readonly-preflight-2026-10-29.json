@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-29",
+  "scope": "Owner-approved read-only Docker context inspection and version/platform query only for an explicitly bound local Unix-socket endpoint",
+  "timeout_seconds_per_command": 10,
+  "commands": [
+    {
+      "label": "docker context show",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "label": "docker context inspect current endpoint",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "label": "docker version server platform",
+      "exit_code": 1,
+      "timed_out": false
+    }
+  ],
+  "stop_reason": "docker version server platform: access_denied; raw diagnostics not exported; no retry or privilege fallback",
+  "qualified_profile": false,
+  "disposable_environment_admitted": false,
+  "native_action_authorized": false,
+  "ambient_endpoint_override_present": false,
+  "endpoint_transport": "unix",
+  "local_unix_endpoint_confirmed": true,
+  "daemon_query_attempted": true,
+  "daemon_response_received": false,
+  "daemon_contact_confirmation": "No successful daemon response; actual contact not inferred from an attempted query.",
+  "further_actions_performed": false
+}

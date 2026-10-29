@@ -1,8 +1,30 @@
 # BG-01 — actual upstream readiness
 
-Status: **OPEN — partial dependency delivery, incomplete qualification/handoff**. TASK-006, reconciled 2026-10-23. No upstream/core compatibility acceptance or gate closure is recorded. REQ-001/004/008; DES-004/008.
+Status: **OPEN — partial dependency delivery, incomplete qualification/handoff**. TASK-006, reconciled 2026-10-29. No upstream/core compatibility acceptance or gate closure is recorded. REQ-001/004/008; DES-004/008.
 
-## Current local delivery — not an accepted dependency revision
+## Current bounded delivery — 2026-10-29, not owner-accepted
+
+The audited immutable source is `5b3dfa6954805cfbeba3e9724803dac064ba48e6`.
+The existing contracts crate passes frozen/offline tests: **291 Rust cases,
+including 7 doctests, plus 101 fixture oracles**; build, formatting and
+warning-denying Clippy pass. Completeness has 10 focused tests. The runner-control
+target has 10 substantive controls and one subprocess helper (11 reported cases).
+Actual source/tests cover non-accepting phases, real catalog/reference/hash rules,
+core-data and exact extension-byte regression controls, public type identity and
+source-bound traceability. Synthetic stores and helper processes prove neither
+backend authorization, independent observation authenticity nor domain isolation.
+
+The [current audit and exact commands](../../../../.workflow/ultracode/execution-isolation-status-audit-2026-10-29/final-report.md)
+supersede the old uncommitted-source/count descriptions below. Fresh coverage,
+complete required/native conformance, actual Spec 2 consumer qualification and
+the complete upstream/core acceptance record remain unverified. The current
+dependency license scan exits 4; the owner retained the seven-license policy
+pending review. No new license allowance or readiness approval follows.
+
+## Historical local delivery — 2026-10-23, superseded snapshot
+
+All source/review/count statements in this section describe that earlier
+snapshot only, not the present dependency or accepted integration evidence.
 
 Baseline `5dc25f3f31ce500d17aa2322793d3a970f9b73d9` plus the current uncommitted semantic continuation is the inspected source state. The user approved crate API **0.1.0** and document/catalog **1.0.0** as initial MVP versions; that version decision is not BG-01 compatibility approval. See the [continuation report and exact source hashes](../../../../.workflow/ultracode/execution-isolation-implementation/semantic-continuation/final-report.md).
 

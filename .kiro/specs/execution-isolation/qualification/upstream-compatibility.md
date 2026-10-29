@@ -2,7 +2,26 @@
 
 Status: **INCOMPLETE** — partial implementation now exists; complete conformance, native qualification and upstream/core owner acceptance remain outstanding. Package 0.1.0 alone does not establish API compatibility.
 
-## Current bounded evidence — 2026-10-23
+## Current bounded evidence — 2026-10-29
+
+At immutable source `5b3dfa6954805cfbeba3e9724803dac064ba48e6`, the parent
+re-ran the actual contracts crate: **291 Rust cases (7 doctests included),
+101 conformance fixtures, build, formatting and warning-denying Clippy pass**.
+Completeness has 10 focused cases; the runner-control target reports 11 cases,
+of which 10 are substantive controls and one is a subprocess helper. Public-path
+type identity and negative conversion doctests provide real bounded consumer/type
+evidence, not a delivered Spec 2 runtime consumer or authenticated acceptance.
+
+See the [fresh task audit and command outputs](../../../../.workflow/ultracode/execution-isolation-status-audit-2026-10-29/final-report.md).
+The scan against the unchanged seven-license policy exits 4 on actual findings;
+owner review remains required. No measured coverage, approved native profile,
+runtime crate, real backend/credential/restore proof or upstream/core acceptance
+record exists in this audited delivery. BG-01 and TASK-006 stay open.
+
+## Historical bounded evidence — 2026-10-23, superseded snapshot
+
+The following observations/counts are retained as history only; use the dated
+current audit above for present source and execution evidence.
 
 The [current BG-01 inventory](../decisions/BG-01-upstream.md) replaces the historical absence claim below. Baseline `5dc25f3` plus uncommitted semantic changes includes real JSON/TOML semantic methods, verification-link rules, all-five-kind mandatory blockers and transitive contract/evidence checks using the active catalog and explicitly scoped store. Current unit/integration checks are recorded with exact source hashes in the [continuation report](../../../../.workflow/ultracode/execution-isolation-implementation/semantic-continuation/final-report.md).
 
