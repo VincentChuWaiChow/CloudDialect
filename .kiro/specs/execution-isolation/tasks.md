@@ -16,6 +16,12 @@ UD-1–UD-5 and BG-01 still lack the required owner approvals/qualification.
 Completed decision preparation and separately authorized upstream Spec 1 work
 remain checked only as supporting deliverables, not completed runtime tasks.
 
+Subsequent delivery at `1446fe89d16c44e2f1408685895d5cc746cc61e2` is now checked
+under 1.1: the manual metadata preflight workflow and its **24 passing synthetic
+offline tests**. There are **11 completed supporting deliverables**. The workflow
+has not been dispatched, and no native qualification, numbered-task completion
+or gate closure is implied by this delivery.
+
 The parent re-ran the existing contracts crate: **291 passing Rust test cases
 (including 7 doctests), plus 101 conformance fixtures**; build, formatting and
 warning-denying Clippy pass. Completeness has 10 focused tests. The runner-control
@@ -50,8 +56,9 @@ The checked supporting items under 1.1–1.6 identify what is actually delivered
     - Estimate: 4h timebox. Dependencies: none; no prerequisite on other decision packets.
     - Design: DES-001, DES-002, DES-008.
     - _Requirements: REQ-001, REQ-002, REQ-005, REQ-008_
-    - Completed supporting deliverable:
-      - [x] Drafted the [isolation/verifier-observation comparison and residual risks](decisions/UD-1-isolation.md) and [qualification plan](qualification/isolation-plan.md). Owner selection, supported-profile approval and native evidence remain outstanding.
+    - Completed supporting deliverables:
+      - [x] Drafted the [isolation/verifier-observation comparison and residual risks](decisions/UD-1-isolation.md) and [qualification plan](qualification/isolation-plan.md). Checkpoint A's candidate direction is approved; supported-profile approval and native evidence remain outstanding.
+      - [x] Delivered the [manual-only hosted metadata preflight workflow](../../../.github/workflows/isolation-preflight.yml) and [synthetic offline contract tests](../../../scripts/verification/execution-isolation/test_hosted_preflight.py), committed in `1446fe8`; all 24 tests pass. The collector reads only allowlisted metadata without opening KVM. No GitHub workflow run, usable-KVM evidence or isolation qualification exists; TASK-001 and UD-1 remain open.
   - [ ] 1.2 TASK-002 Prepare versioned IPC decision evidence
     - Define proposed negotiation, framing, messages, bounded parsing/backpressure, correlation and cancellation only during this future decision task. Compare the JSON-RPC-over-stdio recommendation with requirements; do not treat JSON-RPC as transport authorization.
     - Files: `decisions/UD-2-ipc.md`, `qualification/ipc-cases.md` under this spec directory.
