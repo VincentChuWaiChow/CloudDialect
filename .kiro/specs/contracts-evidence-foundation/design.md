@@ -1960,7 +1960,14 @@ No network access is required. The public key in the repository is the sole trus
 
 ### License Screening
 
-**Tooling:** `cargo-deny` with a deny list.
+**Tooling:** `cargo-deny` 0.16.0 or later with an explicit allow-only policy.
+
+**Owner-approved migration (2026-10-28):** Current cargo-deny removed the legacy
+`deny` and `copyleft` fields. Preserve the original seven allowed expressions;
+all other licenses are denied by default. This includes `GPL-2.0`, `GPL-3.0`,
+`AGPL-1.0`, `AGPL-3.0`, `SSPL-1.0`, `LGPL-2.0`, `LGPL-2.1`, `LGPL-3.0`
+and other unlisted copyleft licenses. Unlicensed crates are also errors. No
+license exceptions, private-crate exclusions or dependency changes are implied.
 
 `cargo-deny` analyzes `Cargo.lock` and checks each dependency's declared license against a policy. The policy is expressed in `deny.toml` at the repository root.
 
@@ -1977,19 +1984,6 @@ allow = [
     "ISC",
     "Unicode-DFS-2016",
 ]
-
-deny = [
-    "GPL-2.0",
-    "GPL-3.0",
-    "AGPL-1.0",
-    "AGPL-3.0",
-    "SSPL-1.0",
-    "LGPL-2.0",
-    "LGPL-2.1",
-    "LGPL-3.0",
-]
-
-copyleft = "deny"
 ```
 
 **Pre-release check:**
@@ -1998,9 +1992,24 @@ copyleft = "deny"
 cargo deny check licenses
 ```
 
-If any dependency carries a license in the deny list, `cargo-deny` exits non-zero and outputs a named incompatibility report identifying the dependency name, version, and license. This output is the "named incompatibility report" required by Requirement 12.3.
+For the standalone crate and root policy (cargo-deny 0.20.2 CLI):
 
-The check runs in CI and as a manual pre-release gate documented in `MAINTAINER-CHECKLIST.md`. No release artifact is published until `cargo deny check licenses` exits zero. Traceability: Requirement 12.3.
+```sh
+rtk proxy cargo deny --manifest-path crates/clouddialect-contracts/Cargo.toml \
+  --config deny.toml check licenses
+```
+
+If a dependency's SPDX expression cannot be satisfied using allowed licenses,
+`cargo-deny` exits non-zero and outputs a named incompatibility report identifying
+the dependency name, version, and license. An allowed `OR` alternative may satisfy
+the expression; every required `AND` term must be allowed. This output is the
+"named incompatibility report" required by Requirement 12.3. Missing tools or
+configuration errors never count as a successful scan.
+
+The manual pre-release gate is documented in `release/README.md`. CI enforcement
+requires separate implementation and is not claimed by task 26. No release
+artifact is published until `cargo deny check licenses` exits zero. Traceability:
+Requirement 12.3.
 
 ### Traceability Artifacts
 

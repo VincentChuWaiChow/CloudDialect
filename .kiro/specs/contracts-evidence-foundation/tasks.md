@@ -632,7 +632,9 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - All requirement references match requirement IDs from the requirements document.
 
 - [ ] 26. Add release tooling configuration and documentation
-  - Create `deny.toml` at the repository root with a `[licenses]` section allowing `MIT`, `Apache-2.0`, `Apache-2.0 WITH LLVM-exception`, `BSD-2-Clause`, `BSD-3-Clause`, `ISC`, `Unicode-DFS-2016` and denying `GPL-2.0`, `GPL-3.0`, `AGPL-1.0`, `AGPL-3.0`, `SSPL-1.0`, `LGPL-2.0`, `LGPL-2.1`, `LGPL-3.0` with `copyleft = "deny"` (Req 12.3).
+  - Owner decision 2026-10-29: keep the seven-license policy unchanged; leave release blocked pending license review. No `MIT-0`/`Unicode-3.0` additions, custom-license clarification or exclusions are approved. Task 26 remains unchecked.
+  - Local files delivered 2026-10-28: [policy](../../../deny.toml), [release procedures](../../../release/README.md), and comment-only [public-key placeholder](../../../release/minisign.pub). The owner approved current cargo-deny allow-only migration and matching spec edits on 2026-10-28. Seven structural checks and 101 conformance fixtures pass. Real cargo-deny 0.20.2 scanning exits 4 with [named findings](../../../.workflow/ultracode/release-tooling/results/license-incompatibilities.json): `MIT-0`, `Unicode-3.0`, and scanner-unknown custom root license. The checkbox stays open pending owner license-policy review and a zero-exit scan; no dependency/lockfile changes, release, SBOM, signature or actual key is claimed. [Evidence](../../../.workflow/ultracode/release-tooling/migration-report.md).
+  - Create `deny.toml` at the repository root with a supported cargo-deny 0.16.0+ `[licenses]` allow-only section allowing `MIT`, `Apache-2.0`, `Apache-2.0 WITH LLVM-exception`, `BSD-2-Clause`, `BSD-3-Clause`, `ISC`, `Unicode-DFS-2016`; all other licenses are denied by default, including `GPL-2.0`, `GPL-3.0`, `AGPL-1.0`, `AGPL-3.0`, `SSPL-1.0`, `LGPL-2.0`, `LGPL-2.1`, `LGPL-3.0` and other unlisted copyleft licenses. Do not use the removed `deny` or `copyleft` fields or add implicit exceptions (Req 12.3).
   - Create `release/README.md` documenting:
     - **SBOM generation**: command `cargo cyclonedx --format json --output-file release/sbom.cdx.json` and what it produces (Req 12.1).
     - **Artifact signing**: commands for signing (`minisign -S ...`) and verifying (`minisign -V -p release/minisign.pub ...`) with explanation that verification requires no network access (Req 12.2).
@@ -643,10 +645,10 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - _Requirements: Req 12.1, Req 12.2, Req 12.3_
 
   **Acceptance criteria:**
-  - `deny.toml` is present at repository root and contains both the allow and deny license lists (Req 12.3).
+  - `deny.toml` is present at repository root with the exact seven-expression allow-only policy, no removed `deny`/`copyleft` fields and no license exceptions; all other licenses are denied by default (Req 12.3).
   - `release/README.md` documents all three release tooling procedures (SBOM, signing, license screening).
   - `release/minisign.pub` is present in the repository (Req 12.2).
-  - `cargo deny check licenses` exits zero on the initial crate scaffold (no deny-listed licenses in bootstrap dependencies).
+  - `cargo deny check licenses` using the explicit standalone manifest and root policy exits zero on the current locked crate; license diagnostics are not bypassed through dependency, license-label or exception changes.
 
 ---
 
