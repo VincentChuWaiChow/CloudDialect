@@ -1,0 +1,9 @@
+Re-extracting code files in . (no LLM needed)...
+[graphify watch] 53 file(s) not classified (no supported extension or shebang), skipped: .config.kiro, .gitattributes, .gitignore, NOTICE, completeness-diagnostic-repair.patch, deny.toml (+47 more)
+  AST extraction: 4/4 uncached files (100%)
+  warning: 5 code file(s) yielded no symbols (0.00 MB) — a data file, or source this extractor models no symbols for: crates/clouddialect-contracts/Cargo.toml, crates/clouddialect-contracts/src/documents/mod.rs, crates/clouddialect-contracts/src/errors/mod.rs, crates/clouddialect-contracts/src/lib.rs, crates/clouddialect-contracts/src/schema/mod.rs
+[graphify watch] community set changed since labeling (0 saved labels, 844 communities now; renamed 28 community(ies) by their hub). Run `graphify label` to refresh names with the LLM.
+[graphify watch] Rebuilt: 3437 nodes, 4373 edges, 844 communities
+[graphify watch] graph.json, graph.html and GRAPH_REPORT.md updated in graphify-out
+Code graph updated. For doc/paper/image changes run /graphify --update in your AI assistant.
+Tip: set GEMINI_API_KEY or GOOGLE_API_KEY to use Gemini for semantic extraction.

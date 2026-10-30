@@ -2,7 +2,50 @@
 
 Status: **OPEN — partial dependency delivery, incomplete qualification/handoff**. TASK-006, reconciled 2026-10-29. No upstream/core compatibility acceptance or gate closure is recorded. REQ-001/004/008; DES-004/008.
 
-## Current bounded delivery — 2026-10-29, not owner-accepted
+## Offline handoff preparation — 2026-10-30, not owner-accepted
+
+Inspected upstream revision: `8ba032e662153828267c6242d9773b1b77e8bb93`.
+The standalone crate is `clouddialect-contracts` **0.1.0**, edition 2024,
+Rust minimum 1.88, `publish = false`; the catalog/document format is **1.0.0**.
+The approved work changes no upstream source, schema, dependency, lock or license.
+These identities describe existing bytes, not a release or compatibility approval.
+
+The [bounded handoff evidence](../qualification/upstream-compatibility.md#offline-handoff-preparation--2026-10-30)
+now supplies exact schema IDs/hashes, source hashes, typed signatures, a successful
+compile-only consumer, three expected compiler rejections and **44 passing
+in-memory tests across seven selected targets**. No execution crate, mock runtime,
+provider, Docker/KVM probe or native runner was needed. The default Cargo cache
+was missing `boon` (exit 101); the recorded existing offline cache succeeded
+without fetching dependencies. Full suite/conformance/coverage/license scans were
+not rerun; the older results below remain dated evidence only.
+
+### Delivered boundary and required Spec 2 disposition
+
+| Delivered public surface | Exact source contract / consumer rule | Still not supplied |
+|---|---|---|
+| `Validate` / `Validator` | `validate_structural(kind, &[u8]) -> StructuralResult`; `validate_semantic(kind, &[u8], &dyn DocumentStore) -> SemanticResult`. `Validator::new(CatalogSnapshot)` fixes the catalog. Both phases are independently invoked. | Structural `Pass/Warn` cannot substitute for semantic checking; neither phase accepts a candidate. |
+| `check_evidence_completeness` | `(&BehavioralContract, &str, &dyn DocumentStore, &Validator) -> BehavioralResult`. Fields: `candidate_id`, `outcome`, `verification_result`, `test_results`, `blocking_gaps`. | Completeness leaves verification absent/tests empty. `Deferred`, `EvidenceComplete`, `Blocked` are all non-accepting. No `Accepted`/`Passed` behavioral variant exists. |
+| `DocumentStore` | `get(&self, id: &str, format_version: Option<&str>) -> Result<Option<StoredDocument>, ValidatorError>`. Core supplies a tenant/project-bound port. `Ok(None)` is missing; `Err` is a resolution failure. | Trait implementation does not authenticate caller/project. Contract references require an exact version; evidence-only `None` must uniquely resolve, not choose an arbitrary latest record. |
+| `ManifestValidator` / capabilities | Separate local TOML and scoped semantic methods. `CapabilityRequirement` has `id`, `operation_id`, `action`, `resource`, `purpose`; the resource is an opaque logical alias. | Declared read/write/execute/network/model/propose/approve/deploy/delete actions grant nothing, including optional `x` data. No fallback from unmet mandatory capability/extension support. |
+| `VerificationResult` | Required candidate, pack, toolchain, configuration, binding and tests; optional acceptance record. Binding includes tenant/project/run/attempt plus input/dependencies/suite/oracle/policy and obligation IDs. | IDs, test origins and approval strings are claims. Core must independently check current policy, protected expected bindings, observations, approvals, remaining budgets and cleanup. |
+| `CatalogSnapshot` / `CatalogUrlLoader` | Embedded or explicit admitted `from_parts` bytes; exact-URI lookup; immutable content digest. No ambient loader override. | Content identity is not provenance/approval. Actual network-disabled isolation and trusted admission remain unqualified. |
+| Diagnostics / extensions | `errors` and root exports preserve the same definitions; structured validator diagnostics and raw extension values stay upstream-owned. | Untrusted raw descriptions are transient-only, with bounded typed processing. Map to approved bounded categories before any persistence, log, model or export; UD-4 does not permit raw diagnostic retention. Do not invent `ValidatorError` variants, drop exact extension bytes or treat extensions as grants. |
+
+**Proposed outcome mapping, not implemented dispatch logic:** structural or semantic
+failure stops dependent admission. Behavioral `Blocked` stops progression;
+`Deferred` is unevaluated; `EvidenceComplete` permits only consideration of a
+separately authorized verification step, never acceptance or automatic launch.
+Missing/unknown/failed/skipped/stale verification obligations prevent acceptance;
+`TestOutcome::Pass` alone is insufficient. Actual acceptance still requires the
+full ordered core gate in DES-008/010. No existing DTO creates that authority.
+
+**Approval ledger:** upstream owner identity/sign-off — **MISSING**; core consumer
+compatibility sign-off — **MISSING**; actual Spec 2 consumer/native conformance —
+**NOT RUN**; release/license clearance — **NOT CLEARED**. This preparation does not
+close BG-01 or task 1.6, and does not authorize task 1.7. Recheck identities on any
+upstream change rather than relying on the package version alone.
+
+## Historical bounded delivery — 2026-10-29, not owner-accepted
 
 The audited immutable source is `5b3dfa6954805cfbeba3e9724803dac064ba48e6`.
 The existing contracts crate passes frozen/offline tests: **291 Rust cases,

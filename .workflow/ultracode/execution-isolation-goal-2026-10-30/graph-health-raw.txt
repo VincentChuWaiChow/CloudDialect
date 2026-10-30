@@ -1,0 +1,41 @@
+[graphify] MultiDiGraph edge-collapse diagnostic
+input: <in-memory>
+input_stage: provided JSON (normal graph.json is post-build)
+effective_directed: <direct-call>
+nodes: 4137
+unverified_code_nodes: 0
+raw_edges: 5433
+valid_candidate_edges: 4794
+missing_endpoint_edges: 0
+dangling_endpoint_edges: 639
+external_reference_edges: 0
+self_loop_edges: 8
+exact_duplicate_edges: 2
+directed_unique_endpoint_pairs: 4741
+directed_same_endpoint_collapsed_edges: 53
+undirected_unique_endpoint_pairs: 4736
+undirected_same_endpoint_collapsed_edges: 58
+same_endpoint_group_count: 43
+relation_variant_groups: 11
+source_file_variant_groups: 0
+source_location_variant_groups: 26
+context_variant_groups: 8
+post_build_graph_type: Graph
+post_build_edges: 5307
+producer_suppression_sites: 12
+producer_suppression_examples:
+  - L1785 seen_ids arity=unknown
+  - L2349 seen_ids arity=unknown
+  - L2351 seen_doc_refs arity=unknown
+  - L3018 seen_ids arity=unknown
+  - L3165 seen_ids arity=unknown
+  - L4175 seen_keys arity=unknown
+  - L4361 seen_keys arity=unknown
+  - L7452 seen_ids arity=unknown
+examples:
+  - crates_clouddialect_contracts_src_documents_verification_verificationbinding -> crates_clouddialect_contracts_src_documents_verification_artifactref edges=5 relations=['references'] locations=['L59', 'L60', 'L61', 'L62', 'L63'] contexts=['field']
+  - kiro_specs_execution_isolation_decisions_ud_1_isolation_source_document -> kiro_specs_execution_isolation_qualification_isolation_plan_source_document edges=5 relations=['references'] locations=['Line 107', 'Line 24', 'Line 40', 'Line 43', 'Line 47'] contexts=['']
+  - crates_clouddialect_contracts_src_documents_behavioral_contract_behavioralcontract -> crates_clouddialect_contracts_src_documents_behavioral_contract_rs_rawobject edges=3 relations=['references'] locations=['L135', 'L136', 'L143'] contexts=['field']
+  - crates_clouddialect_contracts_tests_support_fixtures_expected -> crates_clouddialect_contracts_tests_support_fixtures_rs_value edges=3 relations=['references'] locations=['L111', 'L113', 'L115'] contexts=['generic_arg']
+  - workflow_ultracode_execution_isolation_status_audit_2026_10_29_final_report_source_document -> kiro_specs_execution_isolation_qualification_isolation_plan_source_document edges=3 relations=['references'] locations=['Line 28', 'Line 53', 'Line 72'] contexts=['']
+note: normal graph.json is post-build; raw producer loss must be measured earlier.

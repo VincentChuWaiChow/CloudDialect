@@ -1,0 +1,29 @@
+test_collection_deadline_blocks_and_disarms_alarm (test_hosted_preflight.CollectorTests.test_collection_deadline_blocks_and_disarms_alarm) ... ok
+test_denied_kvm_metadata_blocks (test_hosted_preflight.CollectorTests.test_denied_kvm_metadata_blocks) ... ok
+test_kernel_control_characters_block_without_echo (test_hosted_preflight.CollectorTests.test_kernel_control_characters_block_without_echo) ... ok
+test_kernel_length_boundary (test_hosted_preflight.CollectorTests.test_kernel_length_boundary) ... ok
+test_malformed_image_version_blocks_without_echo (test_hosted_preflight.CollectorTests.test_malformed_image_version_blocks_without_echo) ... ok
+test_missing_image_os_blocks_before_device_metadata (test_hosted_preflight.CollectorTests.test_missing_image_os_blocks_before_device_metadata) ... ok
+test_missing_image_version_blocks (test_hosted_preflight.CollectorTests.test_missing_image_version_blocks) ... ok
+test_missing_kvm_node_blocks (test_hosted_preflight.CollectorTests.test_missing_kvm_node_blocks) ... ok
+test_output_limit_includes_newline_and_accepts_exact_boundary (test_hosted_preflight.CollectorTests.test_output_limit_includes_newline_and_accepts_exact_boundary) ... ok
+test_oversized_kernel_identity_blocks (test_hosted_preflight.CollectorTests.test_oversized_kernel_identity_blocks) ... ok
+test_oversized_output_is_replaced_not_truncated_into_success (test_hosted_preflight.CollectorTests.test_oversized_output_is_replaced_not_truncated_into_success) ... ok
+test_regular_file_is_not_kvm_character_device (test_hosted_preflight.CollectorTests.test_regular_file_is_not_kvm_character_device) ... ok
+test_symlink_is_not_followed_or_accepted (test_hosted_preflight.CollectorTests.test_symlink_is_not_followed_or_accepted) ... ok
+test_unavailable_uname_sanitizes_error (test_hosted_preflight.CollectorTests.test_unavailable_uname_sanitizes_error) ... ok
+test_unexpected_error_has_no_traceback_or_diagnostics (test_hosted_preflight.CollectorTests.test_unexpected_error_has_no_traceback_or_diagnostics) ... ok
+test_unsupported_architecture_blocks (test_hosted_preflight.CollectorTests.test_unsupported_architecture_blocks) ... ok
+test_unsupported_os_blocks (test_hosted_preflight.CollectorTests.test_unsupported_os_blocks) ... ok
+test_valid_metadata_is_observation_not_qualification (test_hosted_preflight.CollectorTests.test_valid_metadata_is_observation_not_qualification) ... ok
+test_wrong_image_os_blocks_without_echo (test_hosted_preflight.CollectorTests.test_wrong_image_os_blocks_without_echo) ... ok
+test_manual_only_workflow_envelope (test_hosted_preflight.WorkflowContractTests.test_manual_only_workflow_envelope) ... ok
+test_only_standard_library_and_approved_os_calls (test_hosted_preflight.WorkflowContractTests.test_only_standard_library_and_approved_os_calls) ... ok
+test_synthetic_loader_rejects_definition_time_host_probe (test_hosted_preflight.WorkflowContractTests.test_synthetic_loader_rejects_definition_time_host_probe) ... ok
+test_synthetic_loader_rejects_top_level_host_probe (test_hosted_preflight.WorkflowContractTests.test_synthetic_loader_rejects_top_level_host_probe) ... ok
+test_synthetic_loader_rejects_unapproved_import (test_hosted_preflight.WorkflowContractTests.test_synthetic_loader_rejects_unapproved_import) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.030s
+
+OK

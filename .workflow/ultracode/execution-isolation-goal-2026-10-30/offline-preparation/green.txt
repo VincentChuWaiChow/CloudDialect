@@ -1,0 +1,8 @@
+test_handoff_does_not_reintroduce_raw_diagnostic_retention (test_offline_proposals.OfflineProposalTests.test_handoff_does_not_reintroduce_raw_diagnostic_retention) ... ok
+test_ipc_schema_and_examples (test_offline_proposals.OfflineProposalTests.test_ipc_schema_and_examples) ... ok
+test_numbered_tasks_and_gates_stay_open (test_offline_proposals.OfflineProposalTests.test_numbered_tasks_and_gates_stay_open) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.055s
+
+OK

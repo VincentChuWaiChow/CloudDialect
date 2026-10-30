@@ -1,0 +1,14 @@
+{
+  "status": "KNOWN_STALE_GRADER",
+  "scope": "Baseline and current both reject supporting checkboxes. Negative suite not counted: baseline validity is absent. Checker unchanged.",
+  "checks": [
+    {
+      "tree": "baseline_HEAD",
+      "result": "FAIL: no implementation tasks marked complete"
+    },
+    {
+      "tree": "current",
+      "result": "FAIL: no implementation tasks marked complete"
+    }
+  ]
+}

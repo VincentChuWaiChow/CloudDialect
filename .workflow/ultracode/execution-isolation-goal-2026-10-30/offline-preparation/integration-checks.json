@@ -1,0 +1,9 @@
+{
+  "synthetic_payload_hashes_and_lengths": "PASS",
+  "credential_case_ids_20_rows_dispatch_arithmetic": "PASS (expectations, not measured dispatches)",
+  "nine_unapproved_retention_rows_12_restore_cases": "PASS (coverage, not durability)",
+  "15_supporting_deliverables": "PASS",
+  "38_upstream_files_match_immutable_revision": "PASS",
+  "requirements_design_unchanged": "PASS",
+  "runtime_crate_absent": "PASS"
+}

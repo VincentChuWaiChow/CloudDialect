@@ -1,0 +1,17 @@
+test_ipc_schema_and_examples (test_offline_proposals.OfflineProposalTests.test_ipc_schema_and_examples) ... FAIL
+test_numbered_tasks_and_gates_stay_open (test_offline_proposals.OfflineProposalTests.test_numbered_tasks_and_gates_stay_open) ... ok
+
+======================================================================
+FAIL: test_ipc_schema_and_examples (test_offline_proposals.OfflineProposalTests.test_ipc_schema_and_examples)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/scripts/verification/execution-isolation/test_offline_proposals.py", line 33, in test_ipc_schema_and_examples
+    schema = proposal("decisions/UD-2-ipc.md", "ipc-schema")
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/scripts/verification/execution-isolation/test_offline_proposals.py", line 27, in proposal
+    raise AssertionError(f"expected one {name} JSON block, got {len(blocks)}")
+AssertionError: expected one ipc-schema JSON block, got 0
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+FAILED (failures=1)
