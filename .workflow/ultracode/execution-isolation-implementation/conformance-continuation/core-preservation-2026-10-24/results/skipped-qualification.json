@@ -1,0 +1,7 @@
+{
+  "fresh_coverage": "SKIPPED: installed components list lacks matching llvm-tools; no new tools/dependencies authorized. No current coverage claim.",
+  "rust_1_88_msrv": "SKIPPED: only stable1.99.1 installed; no new toolchain installation authorized.",
+  "native_provider_backend_authentication_acceptance_consumer": "NOT RUN: no approved environment or trusted external qualification; local claims do not close UD/BG.",
+  "push_release_deployment": "NOT AUTHORIZED; not run",
+  "legacy_checker": "Actual8pass/1pre-existing error; blanket no-checkmarks assertion rejects unchanged Spec2 supporting marks; neither repaired nor waived."
+}

@@ -1,0 +1,35 @@
+{
+  "payload_sha": "a721914a6260eb1599add5d63c25ecb48b3f5dbb",
+  "ref": "refs/heads/feat/execution-isolation-runtime",
+  "push_exit": 0,
+  "live_ls_remote_exit": 0,
+  "verified_at": "2026-10-24 11:57:00 UTC",
+  "repository": "VincentChuWaiChow/CloudDialect",
+  "branch": "feat/execution-isolation-runtime",
+  "push_command": [
+    "rtk",
+    "proxy",
+    "git",
+    "push",
+    "--set-upstream",
+    "--no-follow-tags",
+    "--recurse-submodules=no",
+    "origin",
+    "HEAD:refs/heads/feat/execution-isolation-runtime"
+  ],
+  "verification_command": [
+    "rtk",
+    "proxy",
+    "git",
+    "ls-remote",
+    "--heads",
+    "origin",
+    "refs/heads/feat/execution-isolation-runtime"
+  ],
+  "local_upstream_divergence": {
+    "ahead": 0,
+    "behind": 0
+  },
+  "scope": "Verified data/status payload published. This receipt will be committed/pushed separately; the final live comparison of that evidence-only checkpoint is reported in chat, not self-referentially in this file.",
+  "ci_release_runtime_proof": false
+}

@@ -1,0 +1,13 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.33s
+   Doc-tests clouddialect_contracts
+
+running 7 tests
+test src/schema/snapshot.rs - schema::snapshot::CatalogSnapshot (line 13) - compile fail ... ok
+test src/errors/phase.rs - errors::phase::StructuralResult (line 26) - compile fail ... ok
+test src/documents/verification.rs - documents::verification::BehavioralResult (line 122) - compile fail ... ok
+test src/documents/verification.rs - documents::verification::BehavioralResult (line 126) - compile fail ... ok
+test src/errors/phase.rs - errors::phase::SemanticResult (line 45) - compile fail ... ok
+test src/documents/verification.rs - documents::verification::BehavioralResult (line 118) - compile fail ... ok
+test src/documents/verification.rs - documents::verification::BehavioralResult (line 130) - compile fail ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.24s

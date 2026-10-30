@@ -1,0 +1,11 @@
+{
+  "status": "skipped",
+  "reason": "Matching LLVM 23.1.1 coverage utilities are not installed; previous /tmp tools and profiles are absent. No new tool installation is authorized by this bounded renewal.",
+  "found": [],
+  "canonical_script": "scripts/verification/contracts-evidence-foundation/measure-domain-coverage.py",
+  "canonical_script_sha256": "356fc1e7196df129cdf5ec61566e4d9035b5e0e3cf51fdce8a5b08665def5741",
+  "new_coverage_percentage": null,
+  "historical_runner_line_percent": 89.05263157894737,
+  "historical_runner_function_percent": 58.333333333333336,
+  "historical_results_are_not_current_repaired_tree_coverage": true
+}

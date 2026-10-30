@@ -1,0 +1,15 @@
+{
+  "crates/clouddialect-contracts/src/validator/structural.rs": "5671449f115fb1aa258372269ba046948d7aaa91c9cb366a8ad50a209e6ee14b",
+  "crates/clouddialect-contracts/tests/structural_validation.rs": "8f72a2ed919b82adeb6a60b72f45c771dc2c5ea5af243444c7894a0f2091d677",
+  "crates/clouddialect-contracts/Cargo.toml": "dff170779fc937037132ed8aad30dbeec650e0a27d53b6303436721f6fe38ca4",
+  "crates/clouddialect-contracts/Cargo.lock": "f2534f3d967742bea48605978d2c3408d2eb3842430b0441a09cf28766c9cf3f",
+  "crates/clouddialect-contracts/tests/conformance.rs": "888837642c79e575a56b9a33b1957cbcac47cc12582d511720c68ff064c562ba",
+  "crates/clouddialect-contracts/tests/conformance_controls.rs": "6afb1f76ea32d09fc3012a1cef8584784553ccde1b0205f03cff96a1b55cadb6",
+  "crates/clouddialect-contracts/tests/support/fixtures.rs": "018cd496ee84166caac4e2d1d8ffb40784f9e9202b6c6333352f71d0445181e8",
+  "crates/clouddialect-contracts/src/validator/behavioral.rs": "66680c0b94e63cce9c33c526ab7b9c234248735387907e9f00b98ca5184a2718",
+  "crates/clouddialect-contracts/tests/evidence_completeness.rs": "50e5e35a41febad318b053b68ec59ad3f8b62e1659bd57a2b367ca365439b489",
+  ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/runner-contract.md": "165989aad3633bc4687a9f1cf6999b785617c6329ab9f2094af91f84ba9ff504",
+  ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/pending/completeness-diagnostic-repair.patch": "be7b18792b3d8db772159cacdf8d389065109f6cb0f8933208427a5328f09bee",
+  ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/pending/seed/positive/evidence-record/inferred/input.json": "09ed9d3a83f0f2662c4fa62ab78d757083c4fc9ac5a3b816ef90994f6a6cb0ca",
+  ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/pending/seed/positive/evidence-record/inferred/expected.json": "cad10a80850a610f6bfe6c8e5e87aa135d5b9ba902b02ef2f7090dbb31e22f8e"
+}

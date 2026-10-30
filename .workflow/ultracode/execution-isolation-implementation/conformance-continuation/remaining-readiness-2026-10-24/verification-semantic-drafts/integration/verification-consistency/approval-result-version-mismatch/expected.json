@@ -1,0 +1,14 @@
+{
+  "phase": "semantic",
+  "document_kind": "verification-result",
+  "outcome": "fail",
+  "errors": [
+    {
+      "category": "semantic",
+      "field_path": "acceptance.verification_result.format_version",
+      "description_contains": "Approval reference must match this exact document-format version"
+    }
+  ],
+  "warnings": [],
+  "blockers": []
+}

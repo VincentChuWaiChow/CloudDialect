@@ -1,0 +1,97 @@
+{
+  "created_at": "2026-10-24T03:28:03.201206+00:00",
+  "checks": 11,
+  "matched": 11,
+  "results": [
+    {
+      "name": "three-nonnative-integration-drafts",
+      "exit_code": 0,
+      "expected_count": 3,
+      "expected_error_contains": null,
+      "matched": true,
+      "output": "PASS integration/artifact-hash-mismatch/tampered-candidate\nPASS integration/blocking-gap/unknown-evidence-mandatory-obligation\nPASS integration/semantic-resolution-failure/manifest-bad-contract-ref\n3 conformance fixtures passed\n"
+    },
+    {
+      "name": "batch-3.2.38",
+      "exit_code": 0,
+      "expected_count": 1,
+      "expected_error_contains": null,
+      "matched": true,
+      "output": "PASS integration/blocking-gap/unknown-evidence-mandatory-obligation\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "wrong-oracle-3.2.38",
+      "exit_code": 1,
+      "expected_count": null,
+      "expected_error_contains": "blockers: expected",
+      "matched": true,
+      "output": "/tmp/clouddialect-integration-control-nfllvs4v/integration/blocking-gap/unknown-evidence-mandatory-obligation: fixture validator exit status: 1: /tmp/clouddialect-integration-control-nfllvs4v/integration/blocking-gap/unknown-evidence-mandatory-obligation: blockers: expected [Object {\"assumption_text_contains\": String(\"Provider behavior for this synthetic fixture is not established.\"), \"obligation_id\": String(\"wrong-obligation\")}], actual [Object {\"assumption_text\": String(\"Provider behavior for this synthetic fixture is not established.\"), \"candidate_id\": String(\"synthetic-candidate\"), \"obligation_id\": String(\"upload-object\")}]\n\n"
+    },
+    {
+      "name": "outage-cannot-pretend-original-evidence-gap",
+      "exit_code": 1,
+      "expected_count": null,
+      "expected_error_contains": "blockers: expected",
+      "matched": true,
+      "output": "/tmp/clouddialect-integration-control-nfllvs4v/integration/blocking-gap/unknown-evidence-mandatory-obligation: fixture validator exit status: 1: /tmp/clouddialect-integration-control-nfllvs4v/integration/blocking-gap/unknown-evidence-mandatory-obligation: blockers: expected [Object {\"assumption_text_contains\": String(\"Provider behavior for this synthetic fixture is not established.\"), \"obligation_id\": String(\"upload-object\")}], actual [Object {\"assumption_text\": String(\"Evidence \\\"550e8400-e29b-41d4-a716-446655440002\\\": Referenced document could not be resolved in the supplied scope\"), \"candidate_id\": String(\"synthetic-candidate\"), \"obligation_id\": String(\"upload-object\")}]\n\n"
+    },
+    {
+      "name": "batch-3.2.39",
+      "exit_code": 0,
+      "expected_count": 1,
+      "expected_error_contains": null,
+      "matched": true,
+      "output": "PASS integration/semantic-resolution-failure/manifest-bad-contract-ref\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "wrong-oracle-3.2.39",
+      "exit_code": 1,
+      "expected_count": null,
+      "expected_error_contains": "errors: expected",
+      "matched": true,
+      "output": "/tmp/clouddialect-integration-control-9b4mi9h_/integration/semantic-resolution-failure/manifest-bad-contract-ref: fixture validator exit status: 1: /tmp/clouddialect-integration-control-9b4mi9h_/integration/semantic-resolution-failure/manifest-bad-contract-ref: errors: expected [Object {\"category\": String(\"structural\"), \"description_contains\": String(\"Referenced document was not found in the supplied scope\"), \"field_path\": String(\"contracts.upload_object.id\")}], actual [Object {\"byte_offset\": Null, \"category\": String(\"unresolvable-reference\"), \"description\": String(\"Referenced document was not found in the supplied scope (referenced document \\\"synthetic-contract-reference\\\", format version \\\"1.0.0\\\")\"), \"document_id\": String(\"io.fixture.synthetic-pack\"), \"field_path\": String(\"contracts.upload_object.id\"), \"format_version\": Null}]\n\n"
+    },
+    {
+      "name": "batch-3.2.40",
+      "exit_code": 0,
+      "expected_count": 1,
+      "expected_error_contains": null,
+      "matched": true,
+      "output": "PASS integration/artifact-hash-mismatch/tampered-candidate\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "wrong-oracle-3.2.40",
+      "exit_code": 1,
+      "expected_count": null,
+      "expected_error_contains": "expected_match: expected true, actual false",
+      "matched": true,
+      "output": "/tmp/clouddialect-integration-control-i3aqshfg/integration/artifact-hash-mismatch/tampered-candidate: fixture validator exit status: 1: /tmp/clouddialect-integration-control-i3aqshfg/integration/artifact-hash-mismatch/tampered-candidate: expected_match: expected true, actual false\n\n"
+    },
+    {
+      "name": "genuine-bytes-reject-false-oracle",
+      "exit_code": 1,
+      "expected_count": null,
+      "expected_error_contains": "expected_match: expected false, actual true",
+      "matched": true,
+      "output": "/tmp/clouddialect-integration-control-i3aqshfg/integration/artifact-hash-mismatch/tampered-candidate: fixture validator exit status: 1: /tmp/clouddialect-integration-control-i3aqshfg/integration/artifact-hash-mismatch/tampered-candidate: expected_match: expected false, actual true\n\n"
+    },
+    {
+      "name": "genuine-bytes-boolean-true",
+      "exit_code": 0,
+      "expected_count": 1,
+      "expected_error_contains": null,
+      "matched": true,
+      "output": "PASS integration/artifact-hash-mismatch/tampered-candidate\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "composite42-local-drafts-plus-seed",
+      "exit_code": 0,
+      "expected_count": 42,
+      "expected_error_contains": null,
+      "matched": true,
+      "output": "PASS integration/artifact-hash-mismatch/tampered-candidate\nPASS integration/blocking-gap/unknown-evidence-mandatory-obligation\nPASS integration/semantic-resolution-failure/manifest-bad-contract-ref\nPASS negative/behavioral-contract/invalid-behavioral-fidelity\nPASS negative/behavioral-contract/missing-id\nPASS negative/behavioral-contract/obligation-no-evidence-no-assumption\nPASS negative/evidence-record/inferred-empty-reasoning-chain\nPASS negative/evidence-record/missing-classification\nPASS negative/evidence-record/unknown-empty-assumptions\nPASS negative/pack-manifest/capability-unknown-field\nPASS negative/pack-manifest/duplicate-capability-id\nPASS negative/pack-manifest/inline-contract-body\nPASS negative/pack-manifest/invalid-behavioral-fidelity\nPASS negative/pack-manifest/missing-capabilities\nPASS negative/pack-manifest/missing-toolchain-for-full-operation\nPASS negative/pack-manifest/unknown-capability-version\nPASS negative/verification-result/acceptance-missing-approver\nPASS negative/verification-result/empty-tests-array\nPASS negative/verification-result/missing-binding\nPASS negative/verification-result/missing-configuration\nPASS negative/verification-result/missing-test-obligation\nPASS negative/verification-result/nonpass-string-failure-description\nPASS negative/verification-result/nonpass-without-failure-description\nPASS negative/verification-result/unknown-hash-algorithm\nPASS negative/version/unsupported-major\nPASS negative/version/unsupported-minor-newer\nPASS positive/behavioral-contract/minimal-valid\nPASS positive/behavioral-contract/with-behavioral-notes\nPASS positive/behavioral-contract/with-extension-field\nPASS positive/behavioral-contract/with-known-behavior\nPASS positive/behavioral-contract/with-unresolved-assumption-on-dependency\nPASS positive/evidence-record/inferred\nPASS positive/evidence-record/observed\nPASS positive/evidence-record/unknown\nPASS positive/pack-manifest/full-coverage\nPASS positive/pack-manifest/with-extension-section\nPASS positive/pack-manifest/with-unsupported-operation\nPASS positive/verification-result/minimal\nPASS positive/verification-result/with-acceptance\nPASS round-trip/extension-field-preservation/behavioral-contract\nPASS round-trip/extension-field-preservation/evidence-record\nPASS round-trip/extension-field-preservation/verification-result\n42 conformance fixtures passed\n"
+    }
+  ],
+  "canonical_fixture_count": 1,
+  "network_or_backend_qualification_run": false
+}

@@ -1,0 +1,15 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+error[E0425]: cannot find function `check_evidence_completeness` in this scope
+  --> tests/evidence_completeness.rs:86:18
+   |
+86 |     let result = check_evidence_completeness(contract, CANDIDATE, store, &validator);
+   |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `check_evidence_completeness` in this scope
+   --> tests/evidence_completeness.rs:347:18
+    |
+347 |     let result = check_evidence_completeness(&contract, CANDIDATE, &store(), &strict);
+    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+For more information about this error, try `rustc --explain E0425`.
+error: could not compile `clouddialect-contracts` (test "evidence_completeness") due to 2 previous errors

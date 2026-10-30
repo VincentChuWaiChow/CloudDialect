@@ -2,8 +2,8 @@
   "title": "Execution-isolation implementation",
   "slug": "execution-isolation-implementation",
   "created_at": "2026-10-22T07:25:44.090021+00:00",
-  "updated_at": "2026-10-22T17:30:20.033316+00:00",
-  "status": "executing",
+  "updated_at": "2026-10-24T18:03:03.226000+00:00",
+  "status": "waiting_for_approval",
   "mode": "delegated",
   "baseline_ref": "3b9cb6bd0ee82dbef3b731a35ce68fc778c4906a",
   "risk_level": "high",
@@ -14,19 +14,20 @@
   },
   "approval": {
     "required": true,
-    "granted": false,
-    "notes": "Implementation, initial MVP versions, exact extension feature and three direct pins/profile separately approved; latest user explicitly authorizes domain organization/rules plus git commit/push. No native probes/releases/security-gate closure."
+    "granted": true,
+    "notes": "Userapproved26pairadmissionandcontinue/checkoffactualtask.md. Localcommitsallowed; no newpush/probes/runtimegateclosure."
   },
   "delegation": {
     "native_agent_available": true,
     "native_agent_planned": true,
     "native_agent_used": true,
-    "agent_count": 26,
+    "agent_count": 47,
     "wave_count": 12,
     "no_delegation_reason": "",
-    "notes": "Owner approved26cumulative;24reference/25catalog raw write workers complete;26final readonly active. No recursion/followup dispatches. Original17:37:43UTC deadline retained.",
-    "additional_dispatch_limit": 3,
-    "additional_dispatches_used": 3
+    "notes": "45/46disjointdocworkerscomplete;47readonlyreviewoneP2,source-backedparentrepairverifiedwithrealRED/GREEN. No recursive/followupdispatches or independentpostrepairclaim.",
+    "additional_dispatch_limit": 2,
+    "additional_dispatches_used": 2,
+    "consolidated_repairs_used_current_tranche": 1
   },
   "packets": [
     {
@@ -226,10 +227,24 @@
       "owner": "readonly-agent",
       "write_scope": [],
       "result_path": "results/26-reference-fidelity-review.md"
+    },
+    {
+      "id": "27-contract-audit",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "semantic-continuation/results/27-contract-audit.md"
+    },
+    {
+      "id": "28-integration-review",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "semantic-continuation/results/28-integration-review.md"
     }
   ],
   "verification": {
-    "status": "215integration+2unit+7doctests/check/fmt/Clippy/15Python/8selectedP0content pass;1229/1312productionlines;26static no actionable findings before private-module rename; full JSONsemantic/completeness/conformance/BG01/native incomplete.",
+    "status": "Currentapproved28pairadmission:288Rust+75fixtureoracles/11controls/check/clippy/fmt/15PythonPASS;41/42independentreviewsPASS;payloadpushandliveSHAverified. Legacychecker8pass1pre-existingerror,coverage/MSRV/native/consumerunverified. Historicalchecksbelowretaintheirdatedscope.",
     "checks": [
       {
         "name": "scaffold",
@@ -1237,7 +1252,15 @@
         "evidence": ".workflow/ultracode/execution-isolation-implementation/results/version-structural-verified-diff.txt",
         "raw_path": "/tmp/clouddialect-version-structural-verified-diff.txt"
       }
-    ]
+    ],
+    "latest_continuation": {
+      "status": "Current implemented tree GREEN:275Rust/15Python/check/fmt/Clippy/94.54% emitted production lines. Full conformance/native/consumer not delivered.",
+      "report": "semantic-continuation/final-report.md",
+      "checks": "semantic-continuation/results/complete-checks.json",
+      "coverage": "semantic-continuation/results/complete-coverage/domain-coverage-summary.json",
+      "completeness_implemented": true,
+      "review_boundary": "reviewer28semantic/compatibility only; later extension/completeness parent-audited"
+    }
   },
   "limits": {
     "cumulative_dispatches": 3,
@@ -1501,14 +1524,17 @@
     "snapshot_digest_resolver_authentication": "not implemented"
   },
   "current_limits": {
-    "cumulative_dispatch_ceiling": 26,
-    "cumulative_dispatches_used": 26,
+    "cumulative_dispatches_used": 34,
+    "chosen_additional_dispatch_limit": 3,
     "max_concurrent_including_parent": 4,
     "recursion": 0,
     "followup_dispatches": 0,
-    "repair_limit": 1,
-    "repairs_consumed": 1,
-    "deadline": "2026-10-22T17:37:43Z"
+    "source_repair_limit": 0,
+    "repairs_consumed": 0,
+    "started_at": "2026-10-24T09:08:34Z",
+    "deadline": "2026-10-24T09:53:34Z",
+    "approval": "user approving all plus as-needed agents; three chosen for this slice, not a new universal cap",
+    "current_readonly_readiness_additional_limit": 1
   },
   "ai_rule_location_correction": {
     "requested_by": "Explicit user: AI agent rules should be in .agents/rules",
@@ -1735,8 +1761,9 @@
     "publication_sha": "cd51996c3b2f65adb23aa129d412111b2d12ec6b"
   },
   "continuation_blocked_audit": {
-    "status": "owner approvals received; resumed fresh blocked audit",
-    "consecutive_goal_turns_verified": 0
+    "consecutive_no_progress_turns": 0,
+    "condition": "All101localcasesandTask20/25delivered. Remaining3.2.47needsboundedtrusted-harnesssetupamendment;3.2.41nativeofflineand3.2.46realbackendcasesneedapprovedenvironment/resources. All actualUD/BG/runtimegatesremainopen. No unapproved26pairscope remains.",
+    "updated_at": "2026-10-24T18:11:08.847180+00:00"
   },
   "reference_fidelity_wave": {
     "started_at": "2026-10-22T16:07:43Z",
@@ -1764,5 +1791,151 @@
     "review": "26static no actionable findings at e40c6d9, no independent postrename signoff",
     "report": "reference-fidelity-report.md",
     "publication_receipt": "/tmp/clouddialect-reference-fidelity-publication.json"
+  },
+  "semantic_continuation": {
+    "status": "semantic_completeness_policy_verified_full_goal_incomplete",
+    "report": "semantic-continuation/final-report.md",
+    "implemented_units": [
+      "2.9",
+      "2.10",
+      "3.3",
+      "3.4"
+    ],
+    "completeness_disposition": "Explicit owner-approved invalid/valid-empty Deferred; resource assumptions map to every obligation",
+    "known_preexisting_blocker": "mismatching instance schema diagnostic omits URI",
+    "full_goal_complete": false,
+    "current_full_tree_green": true,
+    "completeness_implemented": true
+  },
+  "current_tranche": {
+    "path": ".workflow/ultracode/execution-isolation-implementation/traceability-2026-10-24",
+    "status": "complete",
+    "deadline": "2026-10-24T18:15:58Z",
+    "scope": "Task25two newdocs+onenewtraceabilitytest,relatedstatus/localcheckpoints;no production/canonical/probe/pushchanges",
+    "report": "traceability-2026-10-24/final-report.md",
+    "Task25checked": true,
+    "unit3_5checked": true
+  },
+  "conformance_continuation": {
+    "status": "42canonical fixtures verified; tasks18/19delivered, whole goal incomplete",
+    "report": "conformance-continuation/admission-2026-10-24/final-report.md",
+    "current_full_tree_green": false,
+    "default_conformance_exit": 0,
+    "conventional_rust_passed": 279,
+    "doctests_passed": 7,
+    "python_passed": 15,
+    "known_defect": "reviewer29 direct-assumption omission repaired; no new defect found within this bounded repair",
+    "review": "Independent31/32content and33full integrated execution clean;180hashes preserved",
+    "dispatches_consumed": 30,
+    "pushes_authorized": false,
+    "full_goal_complete": false,
+    "additional_failclosed_cli_controls": 67,
+    "default_fixture_count": 42,
+    "rust_passed_including_doctests": 286,
+    "fresh_coverage": "unavailable; matching LLVM tools absent",
+    "extra_spec_checker": "8 pass/1 error, unchanged pre-existing blanket checkbox guard",
+    "current_failclosed_cli_controls_matched": 67,
+    "current_cargo_suite_green": true,
+    "current_full_tree_green_reason": "Known pre-existing legacy spec-checker error and missing fresh coverage/MSRV/native/consumer evidence."
+  },
+  "fixture_admission": {
+    "status": "bounded41-case admission complete; full objective unfinished",
+    "baseline": "283533a",
+    "approved_frozen_cases": 41,
+    "deadline": "2026-10-24T09:53:34Z",
+    "chosen_new_readonly_agents": 3,
+    "prior_dispatches": 30,
+    "source_or_native_changes_authorized": false,
+    "pushes_authorized": false,
+    "canonical_total": 42,
+    "content_reviews_complete": [
+      31,
+      32
+    ],
+    "final_review": "33complete: no actionable P1/P2; independently286Rust+42oracles/9controls/180hashes",
+    "source_changes": 0,
+    "report": "conformance-continuation/admission-2026-10-24/final-report.md",
+    "new_canonical_files": 82,
+    "repairs": 0
+  },
+  "remaining_readiness": {
+    "status": "Historical preparation complete; both owner decisions approved and five exact pairs admitted in subsequent tranche",
+    "proposal": "conformance-continuation/remaining-readiness-2026-10-24/next-proposal.md",
+    "canonical": 47,
+    "source_changes": 0,
+    "report": "conformance-continuation/core-preservation-2026-10-24/final-report.md"
+  },
+  "core_preservation_delivery": {
+    "status": "approved-bounded-local-tranche-complete",
+    "report": "conformance-continuation/core-preservation-2026-10-24/final-report.md",
+    "production_changes": false,
+    "harness_files": 2,
+    "new_fixture_pairs": 5,
+    "canonical": 47,
+    "remaining_corpus_cases": 57,
+    "cumulative_dispatches": 36,
+    "review_source_repairs": 0,
+    "packaging_corrections": 1,
+    "native_or_remote_actions": false
+  },
+  "adversarial_preparation": {
+    "status": "Historical26draftpreparation;all26subsequentlyapproved/admitted;Task20complete",
+    "report": "conformance-continuation/adversarial-preparation/final-report.md",
+    "proposal": "conformance-continuation/adversarial-preparation/admission-proposal.md",
+    "contract_sha256": "7645881b9f0829e66cef5dbfb0d63df3eb448ef0a3d1dd387445496d3ead46c9",
+    "canonical": 101,
+    "draft_pairs": 26,
+    "cumulative_dispatches": 38,
+    "source_or_native_changes": false
+  },
+  "remaining_integration_preparation": {
+    "status": "Historical28draftpreparation; all28subsequentlyapprovedandadmitted;3qualification/setupcasesstillgated",
+    "report": "conformance-continuation/remaining-integration-preparation/final-report.md",
+    "proposal": "conformance-continuation/remaining-integration-preparation/admission-proposal.md",
+    "contract_sha256": "2c4171e80ac363b8c2d6bb0cb4cebf23a171d4c3c7f4019275d213f3e13ae479",
+    "all_ready_drafts": 54,
+    "canonical": 75,
+    "gated_cases": 3,
+    "source_native_changes": false
+  },
+  "integration_admission": {
+    "status": "75canonical-verified-and-payload-pushed",
+    "report": "conformance-continuation/integration-admission-2026-10-24/final-report.md",
+    "approved_pairs": 28,
+    "exact_new_files": 56,
+    "canonical": 75,
+    "rust_tests": 288,
+    "separate_unapproved_drafts": 26,
+    "gated_cases": 3,
+    "full_batches": 43,
+    "partial_batches": [
+      "3.2.41"
+    ],
+    "source_harness_changes": false,
+    "push_authorized": true,
+    "payload_remote_sha": "a721914a6260eb1599add5d63c25ecb48b3f5dbb"
+  },
+  "adversarial_admission": {
+    "status": "26exactpairsdeliveredandTask20checked",
+    "canonical": 101,
+    "full_batches": 57,
+    "partial_batches": [
+      "3.2.41"
+    ],
+    "gated_cases": 3,
+    "report": "conformance-continuation/adversarial-admission-2026-10-24/final-report.md",
+    "source_or_harness_changes": false,
+    "new_push": false
+  },
+  "traceability_delivery": {
+    "status": "Task25/3.5localcomplete",
+    "report": "traceability-2026-10-24/final-report.md",
+    "rows": 218,
+    "gates": 5,
+    "rust_tests": 291,
+    "canonical": 101,
+    "reviewP2": "reproduced/repaired,parentverifiedonly",
+    "native_or_BGclosure": false,
+    "new_push": false
   }
 }

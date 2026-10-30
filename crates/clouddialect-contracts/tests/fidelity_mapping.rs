@@ -80,8 +80,7 @@ impl DocumentStore for Store {
 
 fn contract(fidelity: &str) -> Value {
     let mut value = documents::minimal_documents()[0].1.clone();
-    value["obligations"] =
-        json!([{"obligation_id":"o1","behavioral_fidelity":fidelity,"evidence_refs":[ID]}]);
+    value["obligations"] = json!([{"obligation_id":"o1","behavioral_fidelity":fidelity,"unresolved_assumption":{"assumption_id":"a1","description":"unknown","reason":"not observed"}}]);
     value
 }
 

@@ -1,0 +1,52 @@
+{
+  "batch": "3.2.32",
+  "status": "pass",
+  "case_paths": [
+    "adversarial/p0-authority/x-authority-injection",
+    "adversarial/p0-authority/x-capability-shadow"
+  ],
+  "exact_files": [
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/x-authority-injection/input.toml",
+      "sha256": "8439b6b61f933bcb7eccbb68c315256cb2b615c6c4099947c9e8d7b3e6ddb67f"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/x-authority-injection/expected.json",
+      "sha256": "553ce3d5557b4f7139810a256e80d4474aae8af8e9bcc9c30608a874362237ee"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/x-capability-shadow/input.toml",
+      "sha256": "2f31bd3322dbbf7065f65e0966b6bd539970f35a41f82dd573cca745f0d70180"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/x-capability-shadow/expected.json",
+      "sha256": "a2bae2779f195e627e530494d68182a550f9a941c730167892cf98170907bfdc"
+    }
+  ],
+  "frozen_copies": true,
+  "full_test_command": [
+    "rtk",
+    "proxy",
+    "cargo",
+    "test",
+    "--manifest-path",
+    "crates/clouddialect-contracts/Cargo.toml",
+    "--frozen"
+  ],
+  "exit": 0,
+  "rust_tests_including_doctests": 288,
+  "canonical_fixture_count": 96,
+  "exact_prefix_checks": [
+    {
+      "path": "adversarial/p0-authority/x-authority-injection",
+      "exit": 0,
+      "count": 1
+    },
+    {
+      "path": "adversarial/p0-authority/x-capability-shadow",
+      "exit": 0,
+      "count": 1
+    }
+  ],
+  "completed_at": "2026-10-24T17:21:19.861705+00:00"
+}

@@ -1,0 +1,8 @@
+{
+  "coverage": "SKIPPED: matchingllvm-toolsnotinstalled;historicalmetricsnotcurrentproof",
+  "rust_1_88_msrv": "SKIPPED: onlystable1.99.1installed",
+  "legacy_checker": "Actuallyrerun8pass/1pre-existingerror:blanketno-checkmarksassertionrejectsexistingSpec2supportmarks;notfixed/waived",
+  "native_backend_provider_authentication_acceptance_consumer": "NOT RUN;3qualification/setupcasesandactualUD/BGevidencemissing",
+  "publication": "No newpush/merge/release/deploymentauthorizedorperformed",
+  "cache": "/tmpcleared;onlypublicsrc/cache/indexrestoredtoisolatedCargoHome,noconfig/credentials/networkfetch"
+}

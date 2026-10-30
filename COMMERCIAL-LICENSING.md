@@ -31,7 +31,39 @@ No commercial rights are granted until **both parties sign a commercial license*
 
 ## Fees
 
-Commercial fees are **negotiated**, not assumed. Possible models include an annual per-product fee, a per-customer fee, an OEM arrangement or a revenue-share royalty. No royalty percentage, minimum payment, currency or audit right is imposed merely by this informational document.
+### Standard nonexclusive resale proposal
+
+The owner-selected standard proposal for new **nonexclusive resale** agreements
+is a **10% royalty on Covered Receipts**, reported and paid monthly, within
+**30 calendar days after month-end**.
+
+**Covered Receipts** means payments actually collected from customers for the
+CloudDialect resale offerings expressly named in the signed agreement, less
+only actual refunds of those payments and separately collected VAT/sales taxes
+payable to the tax authority. This is a revenue base, not profit, and excludes
+unrelated company revenue. Salaries, marketing, overhead and other operating
+costs are not royalty deductions.
+
+- Agree allocation rules for bundles and collection through affiliates before
+  signing; the CloudDialect portion must not simply be assigned zero.
+- Complete the currency, exchange-rate method, refund adjustments, monthly
+  statement contents, records retention and proportionate audit process in the
+  signed agreement. No minimum or cap is invented by this proposal.
+- Price any hosting, support or maintenance obligations separately; the royalty
+  does not promise unlimited services.
+
+For example, 10,000 in Covered Receipts produces a royalty of 1,000 in the agreed
+currency. It is not a share of company ownership or unrelated future revenue.
+
+Other commercial uses remain subject to separately negotiated terms; this
+proposal must not be treated as a blanket 10% rate or a change to the Community
+License's commercial-use boundary. Any alternative resale arrangement requires
+the Licensor's express agreement in the signed agreement.
+
+This informational proposal does not impose a payment obligation or grant
+commercial rights by itself. Complete the agreement and obtain qualified legal
+review before execution. Existing agreements are not amended by this proposal;
+any change to existing agreements requires its own agreed amendment.
 
 ## Attribution
 

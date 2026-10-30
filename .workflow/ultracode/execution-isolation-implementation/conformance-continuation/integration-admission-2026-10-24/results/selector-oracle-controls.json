@@ -1,0 +1,222 @@
+{
+  "matched": 18,
+  "checks": [
+    {
+      "name": "prefix:positive",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "positive"
+      ],
+      "exit": 0,
+      "count": 13,
+      "output": "PASS positive/behavioral-contract/minimal-valid\nPASS positive/behavioral-contract/with-behavioral-notes\nPASS positive/behavioral-contract/with-extension-field\nPASS positive/behavioral-contract/with-known-behavior\nPASS positive/behavioral-contract/with-unresolved-assumption-on-dependency\nPASS positive/evidence-record/inferred\nPASS positive/evidence-record/observed\nPASS positive/evidence-record/unknown\nPASS positive/pack-manifest/full-coverage\nPASS positive/pack-manifest/with-extension-section\nPASS positive/pack-manifest/with-unsupported-operation\nPASS positive/verification-result/minimal\nPASS positive/verification-result/with-acceptance\n13 conformance fixtures passed\n"
+    },
+    {
+      "name": "prefix:negative",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "negative"
+      ],
+      "exit": 0,
+      "count": 23,
+      "output": "PASS negative/behavioral-contract/invalid-behavioral-fidelity\nPASS negative/behavioral-contract/missing-id\nPASS negative/behavioral-contract/obligation-no-evidence-no-assumption\nPASS negative/evidence-record/inferred-empty-reasoning-chain\nPASS negative/evidence-record/missing-classification\nPASS negative/evidence-record/unknown-empty-assumptions\nPASS negative/pack-manifest/capability-unknown-field\nPASS negative/pack-manifest/duplicate-capability-id\nPASS negative/pack-manifest/inline-contract-body\nPASS negative/pack-manifest/invalid-behavioral-fidelity\nPASS negative/pack-manifest/missing-capabilities\nPASS negative/pack-manifest/missing-toolchain-for-full-operation\nPASS negative/pack-manifest/unknown-capability-version\nPASS negative/verification-result/acceptance-missing-approver\nPASS negative/verification-result/empty-tests-array\nPASS negative/verification-result/missing-binding\nPASS negative/verification-result/missing-configuration\nPASS negative/verification-result/missing-test-obligation\nPASS negative/verification-result/nonpass-string-failure-description\nPASS negative/verification-result/nonpass-without-failure-description\nPASS negative/verification-result/unknown-hash-algorithm\nPASS negative/version/unsupported-major\nPASS negative/version/unsupported-minor-newer\n23 conformance fixtures passed\n"
+    },
+    {
+      "name": "prefix:round-trip",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "round-trip"
+      ],
+      "exit": 0,
+      "count": 3,
+      "output": "PASS round-trip/extension-field-preservation/behavioral-contract\nPASS round-trip/extension-field-preservation/evidence-record\nPASS round-trip/extension-field-preservation/verification-result\n3 conformance fixtures passed\n"
+    },
+    {
+      "name": "prefix:integration",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "integration"
+      ],
+      "exit": 0,
+      "count": 36,
+      "output": "PASS integration/artifact-hash-mismatch/tampered-candidate\nPASS integration/blocking-gap/unknown-evidence-mandatory-obligation\nPASS integration/digest-vectors/sha-256/abc\nPASS integration/digest-vectors/sha-256/empty\nPASS integration/digest-vectors/sha-384/abc\nPASS integration/digest-vectors/sha-384/empty\nPASS integration/digest-vectors/sha-512/abc\nPASS integration/digest-vectors/sha-512/empty\nPASS integration/digest-vectors/sha3-256/abc\nPASS integration/digest-vectors/sha3-256/empty\nPASS integration/digest-vectors/sha3-512/abc\nPASS integration/digest-vectors/sha3-512/empty\nPASS integration/offline-resolution/unresolvable-ref\nPASS integration/scoped-store/ambiguous\nPASS integration/scoped-store/exact-version\nPASS integration/scoped-store/hash-mismatch\nPASS integration/scoped-store/missing\nPASS integration/scoped-store/outage\nPASS integration/scoped-store/wrong-returned-identity\nPASS integration/scoped-store/wrong-returned-version\nPASS integration/scoped-store/wrong-type\nPASS integration/semantic-resolution-failure/manifest-bad-contract-ref\nPASS integration/verification-consistency/approval-result-id-mismatch\nPASS integration/verification-consistency/approval-result-version-mismatch\nPASS integration/verification-consistency/duplicate-test-ids\nPASS integration/verification-consistency/invalid-calendar-utc\nPASS integration/verification-consistency/invalid-hash-length\nPASS integration/verification-consistency/non-z-timestamp\nPASS integration/verification-consistency/unmapped-obligations\nPASS integration/version-profile/build-metadata\nPASS integration/version-profile/closed-nested-newer-minor\nPASS integration/version-profile/core-overflow\nPASS integration/version-profile/leading-zero\nPASS integration/version-profile/prerelease\nPASS integration/version-profile/root-only-newer-minor\nPASS integration/version-profile/unindexed-patch\n36 conformance fixtures passed\n"
+    },
+    {
+      "name": "prefix:integration/scoped-store",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "integration/scoped-store"
+      ],
+      "exit": 0,
+      "count": 8,
+      "output": "PASS integration/scoped-store/ambiguous\nPASS integration/scoped-store/exact-version\nPASS integration/scoped-store/hash-mismatch\nPASS integration/scoped-store/missing\nPASS integration/scoped-store/outage\nPASS integration/scoped-store/wrong-returned-identity\nPASS integration/scoped-store/wrong-returned-version\nPASS integration/scoped-store/wrong-type\n8 conformance fixtures passed\n"
+    },
+    {
+      "name": "prefix:integration/digest-vectors",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "integration/digest-vectors"
+      ],
+      "exit": 0,
+      "count": 10,
+      "output": "PASS integration/digest-vectors/sha-256/abc\nPASS integration/digest-vectors/sha-256/empty\nPASS integration/digest-vectors/sha-384/abc\nPASS integration/digest-vectors/sha-384/empty\nPASS integration/digest-vectors/sha-512/abc\nPASS integration/digest-vectors/sha-512/empty\nPASS integration/digest-vectors/sha3-256/abc\nPASS integration/digest-vectors/sha3-256/empty\nPASS integration/digest-vectors/sha3-512/abc\nPASS integration/digest-vectors/sha3-512/empty\n10 conformance fixtures passed\n"
+    },
+    {
+      "name": "prefix:integration/version-profile",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "integration/version-profile"
+      ],
+      "exit": 0,
+      "count": 7,
+      "output": "PASS integration/version-profile/build-metadata\nPASS integration/version-profile/closed-nested-newer-minor\nPASS integration/version-profile/core-overflow\nPASS integration/version-profile/leading-zero\nPASS integration/version-profile/prerelease\nPASS integration/version-profile/root-only-newer-minor\nPASS integration/version-profile/unindexed-patch\n7 conformance fixtures passed\n"
+    },
+    {
+      "name": "prefix:integration/verification-consistency",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "integration/verification-consistency"
+      ],
+      "exit": 0,
+      "count": 7,
+      "output": "PASS integration/verification-consistency/approval-result-id-mismatch\nPASS integration/verification-consistency/approval-result-version-mismatch\nPASS integration/verification-consistency/duplicate-test-ids\nPASS integration/verification-consistency/invalid-calendar-utc\nPASS integration/verification-consistency/invalid-hash-length\nPASS integration/verification-consistency/non-z-timestamp\nPASS integration/verification-consistency/unmapped-obligations\n7 conformance fixtures passed\n"
+    },
+    {
+      "name": "prefix:integration/offline-resolution",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "integration/offline-resolution"
+      ],
+      "exit": 0,
+      "count": 1,
+      "output": "PASS integration/offline-resolution/unresolvable-ref\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "prefix:adversarial",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "adversarial"
+      ],
+      "exit": 1,
+      "count": 0,
+      "output": "no fixtures selected by directory prefix\n"
+    },
+    {
+      "name": "prefix:guaranteed-zero-integration-admission-20261024",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "guaranteed-zero-integration-admission-20261024"
+      ],
+      "exit": 1,
+      "count": 0,
+      "output": "no fixtures selected by directory prefix\n"
+    },
+    {
+      "name": "missing-not-pass",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-admission-controls-i7l31_ba/missing-not-pass"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-admission-controls-i7l31_ba/missing-not-pass: outcome: expected \"pass\", actual \"fail\"\n"
+    },
+    {
+      "name": "resolved-not-fail",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-admission-controls-i7l31_ba/resolved-not-fail"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-admission-controls-i7l31_ba/resolved-not-fail: outcome: expected \"fail\", actual \"pass\"\n"
+    },
+    {
+      "name": "sha3-512-boolean",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-admission-controls-i7l31_ba/sha3-512-boolean"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-admission-controls-i7l31_ba/sha3-512-boolean: expected_match: expected false, actual true\n"
+    },
+    {
+      "name": "utc-category-not-semantic",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-admission-controls-i7l31_ba/utc-category-not-semantic"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-admission-controls-i7l31_ba/utc-category-not-semantic: errors: expected [Object {\"category\": String(\"semantic\"), \"description_contains\": String(\"Field does not satisfy its declared format\"), \"field_path\": String(\"acceptance.timestamp\")}], actual [Object {\"byte_offset\": Null, \"category\": String(\"structural\"), \"description\": String(\"Field does not satisfy its declared format\"), \"document_id\": String(\"550e8400-e29b-41d4-a716-446655440021\"), \"field_path\": String(\"acceptance.timestamp\"), \"format_version\": String(\"1.0.0\")}]\n"
+    },
+    {
+      "name": "nested-addition-not-warn",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-admission-controls-i7l31_ba/nested-addition-not-warn"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-admission-controls-i7l31_ba/nested-addition-not-warn: outcome: expected \"warn\", actual \"fail\"\n"
+    },
+    {
+      "name": "hash-no-invented-outcome",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-admission-controls-i7l31_ba/hash-no-invented-outcome"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-admission-controls-i7l31_ba/hash-no-invented-outcome: artifact-hash requires expected_match/candidate_bytes and no outcome\n"
+    },
+    {
+      "name": "tampered-candidate-cannot-match",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "--fixture",
+        "/tmp/clouddialect-admission-controls-i7l31_ba/tampered-candidate-cannot-match"
+      ],
+      "exit": 1,
+      "output": "/tmp/clouddialect-admission-controls-i7l31_ba/tampered-candidate-cannot-match: expected_match: expected true, actual false\n"
+    }
+  ],
+  "boundary": "Adversarial canonical prefix correctly selects zero because26draftadmissionnotapproved"
+}

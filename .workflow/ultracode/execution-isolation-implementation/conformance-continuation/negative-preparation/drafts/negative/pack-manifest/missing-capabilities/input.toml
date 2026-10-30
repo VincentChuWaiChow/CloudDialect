@@ -1,0 +1,32 @@
+# Synthetic declaration only: no capability grant, behavioral proof or acceptance.
+[pack]
+id = "io.fixture.synthetic-pack"
+version = "1.0.0"
+name = "Synthetic positive fixture"
+description = "Local TOML structure/rules only; no provider or execution claims."
+[source]
+cloud = "synthetic-source"
+service = "synthetic-object-store"
+language = "python"
+language_version_range = ">=3.8.0, <4.0.0"
+[target]
+cloud = "synthetic-target"
+service = "synthetic-object-store"
+[schema_refs]
+contract_schema_version = "1.0.0"
+evidence_record_schema_version = "1.0.0"
+verification_result_schema_version = "1.0.0"
+[compatibility]
+catalog_min = "1.0.0"
+catalog_max = "1.0.0"
+[[operations]]
+id = "upload_object"
+behavioral_fidelity = "full"
+assumptions = []
+limitations = []
+[[toolchain]]
+name = "synthetic-tool-declaration"
+version_range = ">=1.0.0, <2.0.0"
+[contracts.upload_object]
+id = "synthetic-contract-reference"
+format_version = "1.0.0"

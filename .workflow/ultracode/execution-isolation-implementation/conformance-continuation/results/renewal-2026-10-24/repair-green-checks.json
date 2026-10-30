@@ -1,0 +1,32 @@
+[
+  {
+    "name": "completeness-green",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--test",
+      "evidence_completeness"
+    ],
+    "exit_code": 0,
+    "log": "completeness-green.txt"
+  },
+  {
+    "name": "repair-fmt",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "fmt",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--check"
+    ],
+    "exit_code": 0,
+    "log": "repair-fmt.txt"
+  }
+]

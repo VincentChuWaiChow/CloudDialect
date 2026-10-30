@@ -1,0 +1,16 @@
+{
+  "captured_at": "2026-10-24T03:29:12.050531+00:00",
+  "checks": {
+    "three_explicit_non_accepting_phase_oracles": true,
+    "candidate_obligation_assumption_named": true,
+    "stored_unknown_bytes_identity_hash_consistent": true,
+    "semantic_exact_referring_field": true,
+    "independent_tampered_hash_mismatch": true,
+    "genuine_candidate_baseline_matches": true,
+    "synthetic_store_not_real_backend_evidence": true,
+    "all_exact_file_source_hashes_preserved": true,
+    "canonical_corpus_still_one": true,
+    "no_production_schema_changes": true
+  },
+  "limits": "No real backend scope enforcement, network isolation, observation authenticity, live provider, acceptance or native qualification proof."
+}

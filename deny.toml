@@ -1,0 +1,13 @@
+# Task 26 / Req 12.3: supported cargo-deny allow-only policy (0.16.0+).
+# All other licenses are denied by default, including GPL/AGPL/SSPL/LGPL.
+# Do not restore the removed deny/copyleft fields. See release/README.md.
+[licenses]
+allow = [
+    "MIT",
+    "Apache-2.0",
+    "Apache-2.0 WITH LLVM-exception",
+    "BSD-2-Clause",
+    "BSD-3-Clause",
+    "ISC",
+    "Unicode-DFS-2016",
+]

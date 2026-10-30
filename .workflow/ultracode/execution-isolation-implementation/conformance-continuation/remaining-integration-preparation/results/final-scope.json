@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "protected192unchanged": true,
+  "previous52adversarialdraftfilesunchanged": true,
+  "current56draftfilesunchanged": true,
+  "source12unchanged": true,
+  "contract_sha256": "2c4171e80ac363b8c2d6bb0cb4cebf23a171d4c3c7f4019275d213f3e13ae479",
+  "canonical": 47,
+  "tracked_diff_workflow_only": true,
+  "inventory_cases": 104,
+  "ready_not_admitted_cases": 54,
+  "three_gated_cases_absent": true,
+  "checked_at": "2026-10-24T11:10:42.754896+00:00"
+}

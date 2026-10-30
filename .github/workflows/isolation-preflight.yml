@@ -1,0 +1,113 @@
+name: Isolation metadata preflight
+on: workflow_dispatch
+permissions: {}
+concurrency:
+  group: isolation-metadata-preflight
+  cancel-in-progress: false
+jobs:
+  metadata:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 2
+    steps:
+      - name: Collect allowlisted public metadata
+        shell: python
+        run: |
+          # This workflow and its logs are public. Do not add private metadata.
+          # The collection/output limits do not bound GitHub's platform logs.
+          import json
+          import os
+          import re
+          import signal
+          import stat
+          import sys
+
+          OUTPUT_LIMIT_BYTES = 65536
+
+          class MetadataBlocked(Exception):
+              pass
+
+          class DeadlineExceeded(Exception):
+              pass
+
+          def collection_deadline(_number, _frame):
+              raise DeadlineExceeded()
+
+          def blocked_record(reason):
+              return {
+                  "scope": "host-metadata-only",
+                  "qualification": "NOT_EVALUATED",
+                  "kvm_opened": False,
+                  "status": "BLOCKED",
+                  "reason": reason,
+              }
+
+          def collect_metadata():
+              image_os = os.environ.get("ImageOS", "")
+              image_version = os.environ.get("ImageVersion", "")
+              if image_os != "ubuntu24" or not re.fullmatch(
+                  r"[0-9]{8}\.[0-9]{1,10}(?:\.[0-9]{1,10})?", image_version
+              ):
+                  raise MetadataBlocked("runner_identity_invalid")
+              identity = os.uname()
+              if identity.system != "Linux" or identity.machine != "x86_64":
+                  raise MetadataBlocked("unsupported_host")
+              if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._+\-]{0,127}", identity.release):
+                  raise MetadataBlocked("kernel_identity_invalid")
+              try:
+                  node = os.stat("/dev/kvm", follow_symlinks=False)
+              except FileNotFoundError:
+                  raise MetadataBlocked("kvm_node_missing") from None
+              except PermissionError:
+                  raise MetadataBlocked("kvm_metadata_denied") from None
+              if not stat.S_ISCHR(node.st_mode):
+                  raise MetadataBlocked("kvm_not_character_device")
+              return {
+                  "kernel": {
+                      "system": identity.system,
+                      "release": identity.release,
+                      "architecture": identity.machine,
+                  },
+                  "runner_image": {"os": image_os, "version": image_version},
+                  "kvm_character_device_visible": True,
+              }
+
+          def write_record(record):
+              line = json.dumps(record, sort_keys=True, separators=(",", ":"))
+              if len(line.encode("utf-8")) + 1 > OUTPUT_LIMIT_BYTES:
+                  record = blocked_record("output_limit")
+                  line = json.dumps(record, sort_keys=True, separators=(",", ":"))
+              try:
+                  sys.stdout.write(line + "\n")
+              except Exception:
+                  return 1
+              return 0 if record["status"] == "OBSERVED" else 1
+
+          def main():
+              # Cooperative collection-only deadline: it excludes serialization
+              # and output. The separate two-minute job timeout is configured,
+              # not measured here; synthetic alarms prove no elapsed-time bound.
+              try:
+                  signal.signal(signal.SIGALRM, collection_deadline)
+                  signal.alarm(10)
+                  record = {
+                      "scope": "host-metadata-only",
+                      "qualification": "NOT_EVALUATED",
+                      "kvm_opened": False,
+                      "status": "OBSERVED",
+                      "metadata": collect_metadata(),
+                  }
+              except DeadlineExceeded:
+                  record = blocked_record("collection_timeout")
+              except MetadataBlocked as error:
+                  record = blocked_record(error.args[0])
+              except Exception:
+                  record = blocked_record("metadata_unavailable")
+              finally:
+                  try:
+                      signal.alarm(0)
+                  except Exception:
+                      record = blocked_record("deadline_control_failed")
+              return write_record(record)
+
+          if __name__ == "__main__":
+              raise SystemExit(main())

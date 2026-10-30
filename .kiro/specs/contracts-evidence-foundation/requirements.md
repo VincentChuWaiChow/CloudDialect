@@ -1,6 +1,6 @@
 # Requirements Document
 
-**Later publication action approval:** the user explicitly requested git commit and git push for this work. Those actions are now authorized; the earlier no-commit/no-push implementation limit is historical. Native probes, deployment and releases remain unauthorized.
+**Publication authority:** earlier commit/push approvals apply to their historical actions. The current 2026-10-24 approval covers exactly 26 frozen adversarial pairs, related proof-backed checklist/status updates and local milestone commits. The prior branch push is complete; this admission proposal does not authorize another push. No production-library/harness/API/dependency changes, native/provider probes, deployments, releases or runtime-gate closure follow from this tranche.
 
 
 ## Introduction
@@ -13,7 +13,7 @@ This spec does not define Rust CLI behavior, worker isolation, transformation lo
 
 **Current continuation status (2026-10-22):** user approved P0-A–F for implementation planning, then separately authorized the remaining Spec 1 prerequisite units in [implementation-plan.md](implementation-plan.md), TDD and no commits/probes/pushes/releases. User attests this is a new project and approves document/catalog **1.0.0** and crate API **0.1.0** as the initial MVP versions. This is not an independent external-publication audit or security-gate approval. Exact encoded extension JSON value bytes are required; raw_value on the existing pinned serde_json is separately approved.
 
-**Delivery is partial.** DTOs, schemas, catalog inventory, frozen snapshot/loading, structural JSON validation, local TOML rules and candidate hash equality have bounded verification. JSON semantic/completeness validation, full mandatory-blocker integration, exhaustive conformance and delivered downstream compatibility remain unfinished; scoped fidelity/TOML semantic delivery is recorded in the current report. See the [current run report](../../../.workflow/ultracode/execution-isolation-implementation/final-report.md) for actual evidence and outstanding work. Canonical task checkmarks are conservative; BG-01 and Spec 2 UD-1–UD-5 remain OPEN.
+**Delivery is partial.** DTOs, schemas, catalog inventory, frozen snapshot/loading, structural JSON validation, local TOML rules and candidate hash equality have bounded verification. JSON/TOML semantic validation, verification-link rules and all-five-kind mandatory blockers now have integrated tests and bounded independent review; TOML/fidelity also traverses referenced contract evidence. Compatibility and extension convention documents have source-tested MVP profiles (extension document parent-audited only). Evidence completeness has 10 focused tests after the approved direct-assumption repair; the bounded runner has 11 controls and 101 admitted canonical fixtures. Current execution has parent Rust checks and independent bounded fixture-content review, not native or acceptance qualification; exhaustive conformance and delivered downstream compatibility remain unfinished. See the [current run report](../../../.workflow/ultracode/execution-isolation-implementation/final-report.md) for actual evidence and outstanding work. Canonical task checkmarks are scoped; BG-01 and Spec 2 UD-1–UD-5 remain OPEN.
 
 **Evidence status convention used in this document:**
 Every requirement carries one of four evidence status labels reflecting where each requirement stands in the development lifecycle:
@@ -454,6 +454,7 @@ The labels below retain the original full-conformance baseline, not a claim that
    - Unknown mandatory extension attempting to unlock acceptance: verifier must block.
    - Extension attempting to override a core verification result field: core outcome is unchanged.
    - Verification method: All eight fixture classes are present in the adversarial suite; each class includes at least one passing (correctly handled) and one failing (correctly rejected) case.
+   - Owner-approved local nontrust clarification (2026-10-24): for the collision class, two separately validated documents may claim the same `acme` prefix through distinct author/owner payloads, including reserved-qualified ownership claims. Optional claims remain structurally valid with verbatim warnings for reserved keys; unknown mandatory `acme` independently produces a semantic `blocking-gap` in each document. This is rejection of unrecognized mandatory semantics, not cross-document conflict detection or authenticated ownership; prefix conflicts remain registry-governance work. This clarification is not fixture-delivery evidence.
    - Evidence status: `MISSING`
 
 ---
@@ -522,11 +523,11 @@ The labels below retain the original full-conformance baseline, not a claim that
 
 1. THE Framework_Core SHALL maintain a traceability table mapping each published schema field to the requirement in this document that introduced it.
    - Verification method: Review of traceability table for completeness at each schema release.
-   - Evidence status: `MISSING`
+   - Evidence status: `VERIFIED WITHIN A DECLARED SCOPE` — currentlocal148JSON/40TOMLdeclaredfieldsand30P0API/fieldmappings;source-derivedregressiontestsandparent-verifiedreview47repairpass. Future release-review, realconsumer/owneracceptance andBG-01remainopen.
 
 2. THE Framework_Core SHALL maintain a requirements traceability matrix linking each acceptance gate (AC-01, AC-02, AC-07, AC-09) to the requirements and schema fields that satisfy it.
    - Verification method: Review of traceability matrix for completeness.
-   - Evidence status: `MISSING`
+   - Evidence status: `VERIFIED WITHIN A DECLARED SCOPE` — all5canonicalgates(includingAC-05pertheauthoritativetable/Task25),exactrequirementsetsanddeclaredfieldreferencesverifiedlocally. Thisdoesnotassertthatanyacceptancegatehaspassed.
 
 ### NFR-3: Schema Stability
 

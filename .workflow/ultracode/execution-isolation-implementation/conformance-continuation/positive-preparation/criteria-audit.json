@@ -1,0 +1,25 @@
+{
+  "captured_at": "2026-10-24T03:09:52.997763+00:00",
+  "scope": "Canonical task18 content requirements against frozen drafts/current seed, not actual provider/native/security authority proof",
+  "checks": {
+    "minimal_exactly_one_evidence_supported_obligation": true,
+    "known_retry_and_all_dimensions_present": true,
+    "unresolved_dependency_has_valid_per_dimension_coverage": true,
+    "two_required_note_topics_explicitly_unresolved": true,
+    "required_pair_three_distinct_fidelity_values": true,
+    "community_extension_present": true,
+    "observed_provenance_required_fields": true,
+    "inferred_admitted_seed_one_reasoning_step": true,
+    "unknown_one_assumption": true,
+    "verification_required_p0c_fields": true,
+    "acceptance_contains_claimed_approver_utc_and_exact_self_ref": true,
+    "full_one_full_operation_nonempty_toolchain": true,
+    "unsupported_operation_explicit": true,
+    "extension_section_one_pair": true,
+    "p0b_all_three_manifests_declared": true,
+    "p0b_empty_and_nonempty_positive_declarations": true,
+    "capability_operation_link_matches": true,
+    "structural_only_no_behavioral_authority": true,
+    "canonical_still_only_admitted_seed": true
+  }
+}

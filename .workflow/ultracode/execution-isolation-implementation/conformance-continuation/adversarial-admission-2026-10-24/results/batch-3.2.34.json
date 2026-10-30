@@ -1,0 +1,52 @@
+{
+  "batch": "3.2.34",
+  "status": "pass",
+  "case_paths": [
+    "adversarial/p0-authority/forged-origin-claim",
+    "adversarial/p0-authority/incomplete-binding"
+  ],
+  "exact_files": [
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/forged-origin-claim/input.json",
+      "sha256": "13fac787ef2d4edfde4898eff212cbf92362d8ef4f125d096bf58460ad73af2c"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/forged-origin-claim/expected.json",
+      "sha256": "8effeff3202f28e001fdfacca54cc1f3c8ae20036511c6a5a8eef9d72acfbe3b"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/incomplete-binding/input.json",
+      "sha256": "490a820a624bc1f14aeb5925d23c55777245ea56e45a1b6a0266243e2f531920"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/incomplete-binding/expected.json",
+      "sha256": "a29e3cf217e387af63aa412227f4c7ec9a9257b6574123e6545d6cbcea16be03"
+    }
+  ],
+  "frozen_copies": true,
+  "full_test_command": [
+    "rtk",
+    "proxy",
+    "cargo",
+    "test",
+    "--manifest-path",
+    "crates/clouddialect-contracts/Cargo.toml",
+    "--frozen"
+  ],
+  "exit": 0,
+  "rust_tests_including_doctests": 288,
+  "canonical_fixture_count": 100,
+  "exact_prefix_checks": [
+    {
+      "path": "adversarial/p0-authority/forged-origin-claim",
+      "exit": 0,
+      "count": 1
+    },
+    {
+      "path": "adversarial/p0-authority/incomplete-binding",
+      "exit": 0,
+      "count": 1
+    }
+  ],
+  "completed_at": "2026-10-24T17:21:56.268505+00:00"
+}

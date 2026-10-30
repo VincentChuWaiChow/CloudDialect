@@ -1,0 +1,27 @@
+{
+  "captured_at": "2026-10-23T19:33:55.746512+00:00",
+  "review30_freeze": {
+    "crates/clouddialect-contracts/src/validator/structural.rs": true,
+    "crates/clouddialect-contracts/tests/structural_validation.rs": true,
+    "crates/clouddialect-contracts/Cargo.toml": true,
+    "crates/clouddialect-contracts/Cargo.lock": true,
+    "crates/clouddialect-contracts/tests/conformance.rs": true,
+    "crates/clouddialect-contracts/tests/conformance_controls.rs": true,
+    "crates/clouddialect-contracts/tests/support/fixtures.rs": true,
+    "crates/clouddialect-contracts/src/validator/behavioral.rs": true,
+    "crates/clouddialect-contracts/tests/evidence_completeness.rs": true,
+    ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/runner-contract.md": true,
+    ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/pending/completeness-diagnostic-repair.patch": true,
+    ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/pending/seed/positive/evidence-record/inferred/input.json": true,
+    ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/pending/seed/positive/evidence-record/inferred/expected.json": true
+  },
+  "research_preserved": {
+    "research.md": true,
+    "cloud-transformation-framework-research.pdf": true
+  },
+  "execution_crate_exists": false,
+  "spec2_numbered_tasks": 21,
+  "spec2_numbered_completed": 0,
+  "native_probes_run": false,
+  "push_performed": false
+}

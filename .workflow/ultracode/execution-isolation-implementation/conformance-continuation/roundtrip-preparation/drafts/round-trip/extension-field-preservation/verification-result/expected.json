@@ -1,0 +1,9 @@
+{
+  "phase": "structural",
+  "document_kind": "verification-result",
+  "outcome": "pass",
+  "errors": [],
+  "warnings": [],
+  "blockers": [],
+  "round_trip": true
+}

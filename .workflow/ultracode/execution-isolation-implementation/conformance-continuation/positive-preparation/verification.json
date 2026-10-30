@@ -1,0 +1,240 @@
+{
+  "created_at": "2026-10-24T03:07:16.670413+00:00",
+  "status": "ready-for-owner-review; not canonical admission",
+  "executable": "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+  "executable_sha256": "5e6347020992e301d580db91c0eaf60ddb347bfb86c4f6ff5e936226173e763a",
+  "checks": 19,
+  "matched": 19,
+  "results": [
+    {
+      "name": "draft-all-12",
+      "arguments": [
+        "--fixture-root",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts"
+      ],
+      "exit_code": 0,
+      "expected_count": 12,
+      "expected_rejection": false,
+      "matched": true,
+      "output": "PASS positive/behavioral-contract/minimal-valid\nPASS positive/behavioral-contract/with-behavioral-notes\nPASS positive/behavioral-contract/with-extension-field\nPASS positive/behavioral-contract/with-known-behavior\nPASS positive/behavioral-contract/with-unresolved-assumption-on-dependency\nPASS positive/evidence-record/observed\nPASS positive/evidence-record/unknown\nPASS positive/pack-manifest/full-coverage\nPASS positive/pack-manifest/with-extension-section\nPASS positive/pack-manifest/with-unsupported-operation\nPASS positive/verification-result/minimal\nPASS positive/verification-result/with-acceptance\n12 conformance fixtures passed\n"
+    },
+    {
+      "name": "draft-contract-prefix",
+      "arguments": [
+        "--fixture-root",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts",
+        "positive/behavioral-contract"
+      ],
+      "exit_code": 0,
+      "expected_count": 5,
+      "expected_rejection": false,
+      "matched": true,
+      "output": "PASS positive/behavioral-contract/minimal-valid\nPASS positive/behavioral-contract/with-behavioral-notes\nPASS positive/behavioral-contract/with-extension-field\nPASS positive/behavioral-contract/with-known-behavior\nPASS positive/behavioral-contract/with-unresolved-assumption-on-dependency\n5 conformance fixtures passed\n"
+    },
+    {
+      "name": "bounded-batch-3.2.2",
+      "arguments": [
+        "--fixture-root",
+        "/tmp/clouddialect-positive-batch-rpkuvuoq"
+      ],
+      "exit_code": 0,
+      "expected_count": 2,
+      "expected_rejection": false,
+      "matched": true,
+      "output": "PASS positive/behavioral-contract/minimal-valid\nPASS positive/behavioral-contract/with-known-behavior\n2 conformance fixtures passed\n"
+    },
+    {
+      "name": "bounded-batch-3.2.3",
+      "arguments": [
+        "--fixture-root",
+        "/tmp/clouddialect-positive-batch-4wjxefkq"
+      ],
+      "exit_code": 0,
+      "expected_count": 2,
+      "expected_rejection": false,
+      "matched": true,
+      "output": "PASS positive/behavioral-contract/with-behavioral-notes\nPASS positive/behavioral-contract/with-unresolved-assumption-on-dependency\n2 conformance fixtures passed\n"
+    },
+    {
+      "name": "bounded-batch-3.2.4",
+      "arguments": [
+        "--fixture-root",
+        "/tmp/clouddialect-positive-batch-bu3n3xjp"
+      ],
+      "exit_code": 0,
+      "expected_count": 1,
+      "expected_rejection": false,
+      "matched": true,
+      "output": "PASS positive/behavioral-contract/with-extension-field\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "bounded-batch-3.2.5",
+      "arguments": [
+        "--fixture-root",
+        "/tmp/clouddialect-positive-batch-8o0gy097"
+      ],
+      "exit_code": 0,
+      "expected_count": 2,
+      "expected_rejection": false,
+      "matched": true,
+      "output": "PASS positive/evidence-record/observed\nPASS positive/evidence-record/unknown\n2 conformance fixtures passed\n"
+    },
+    {
+      "name": "bounded-batch-3.2.6",
+      "arguments": [
+        "--fixture-root",
+        "/tmp/clouddialect-positive-batch-nwjtxcr_"
+      ],
+      "exit_code": 0,
+      "expected_count": 2,
+      "expected_rejection": false,
+      "matched": true,
+      "output": "PASS positive/verification-result/minimal\nPASS positive/verification-result/with-acceptance\n2 conformance fixtures passed\n"
+    },
+    {
+      "name": "bounded-batch-3.2.7",
+      "arguments": [
+        "--fixture-root",
+        "/tmp/clouddialect-positive-batch-mmyr_l_o"
+      ],
+      "exit_code": 0,
+      "expected_count": 2,
+      "expected_rejection": false,
+      "matched": true,
+      "output": "PASS positive/pack-manifest/full-coverage\nPASS positive/pack-manifest/with-unsupported-operation\n2 conformance fixtures passed\n"
+    },
+    {
+      "name": "bounded-batch-3.2.8",
+      "arguments": [
+        "--fixture-root",
+        "/tmp/clouddialect-positive-batch-2vjfdtjy"
+      ],
+      "exit_code": 0,
+      "expected_count": 1,
+      "expected_rejection": false,
+      "matched": true,
+      "output": "PASS positive/pack-manifest/with-extension-section\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "composite-13-including-admitted-seed",
+      "arguments": [
+        "--fixture-root",
+        "/tmp/clouddialect-positive-composite-4kel4qie"
+      ],
+      "exit_code": 0,
+      "expected_count": 13,
+      "expected_rejection": false,
+      "matched": true,
+      "output": "PASS positive/behavioral-contract/minimal-valid\nPASS positive/behavioral-contract/with-behavioral-notes\nPASS positive/behavioral-contract/with-extension-field\nPASS positive/behavioral-contract/with-known-behavior\nPASS positive/behavioral-contract/with-unresolved-assumption-on-dependency\nPASS positive/evidence-record/inferred\nPASS positive/evidence-record/observed\nPASS positive/evidence-record/unknown\nPASS positive/pack-manifest/full-coverage\nPASS positive/pack-manifest/with-extension-section\nPASS positive/pack-manifest/with-unsupported-operation\nPASS positive/verification-result/minimal\nPASS positive/verification-result/with-acceptance\n13 conformance fixtures passed\n"
+    },
+    {
+      "name": "negative-control-missing-obligation-support",
+      "arguments": [
+        "--fixture-root",
+        "/tmp/clouddialect-positive-invalid-eo0vgx2l"
+      ],
+      "exit_code": 1,
+      "expected_count": null,
+      "expected_rejection": true,
+      "matched": true,
+      "output": "/tmp/clouddialect-positive-invalid-eo0vgx2l/positive/behavioral-contract/minimal-valid: fixture validator exit status: 1: /tmp/clouddialect-positive-invalid-eo0vgx2l/positive/behavioral-contract/minimal-valid: outcome: expected \"pass\", actual \"fail\"\n\n"
+    },
+    {
+      "name": "negative-control-missing-known-consistency",
+      "arguments": [
+        "--fixture-root",
+        "/tmp/clouddialect-positive-invalid-_mgyoyba"
+      ],
+      "exit_code": 1,
+      "expected_count": null,
+      "expected_rejection": true,
+      "matched": true,
+      "output": "/tmp/clouddialect-positive-invalid-_mgyoyba/positive/behavioral-contract/with-known-behavior: fixture validator exit status: 1: /tmp/clouddialect-positive-invalid-_mgyoyba/positive/behavioral-contract/with-known-behavior: outcome: expected \"pass\", actual \"fail\"\n\n"
+    },
+    {
+      "name": "negative-control-missing-assumption-discriminator",
+      "arguments": [
+        "--fixture-root",
+        "/tmp/clouddialect-positive-invalid-uu9hwwtm"
+      ],
+      "exit_code": 1,
+      "expected_count": null,
+      "expected_rejection": true,
+      "matched": true,
+      "output": "/tmp/clouddialect-positive-invalid-uu9hwwtm/positive/behavioral-contract/with-unresolved-assumption-on-dependency: fixture validator exit status: 1: /tmp/clouddialect-positive-invalid-uu9hwwtm/positive/behavioral-contract/with-unresolved-assumption-on-dependency: outcome: expected \"pass\", actual \"fail\"\n\n"
+    },
+    {
+      "name": "negative-control-missing-note-reference",
+      "arguments": [
+        "--fixture-root",
+        "/tmp/clouddialect-positive-invalid-c_t81hwk"
+      ],
+      "exit_code": 1,
+      "expected_count": null,
+      "expected_rejection": true,
+      "matched": true,
+      "output": "/tmp/clouddialect-positive-invalid-c_t81hwk/positive/behavioral-contract/with-behavioral-notes: fixture validator exit status: 1: /tmp/clouddialect-positive-invalid-c_t81hwk/positive/behavioral-contract/with-behavioral-notes: outcome: expected \"pass\", actual \"fail\"\n\n"
+    },
+    {
+      "name": "negative-control-observed-missing-provenance",
+      "arguments": [
+        "--fixture-root",
+        "/tmp/clouddialect-positive-invalid-tvc7rsw6"
+      ],
+      "exit_code": 1,
+      "expected_count": null,
+      "expected_rejection": true,
+      "matched": true,
+      "output": "/tmp/clouddialect-positive-invalid-tvc7rsw6/positive/evidence-record/observed: fixture validator exit status: 1: /tmp/clouddialect-positive-invalid-tvc7rsw6/positive/evidence-record/observed: outcome: expected \"pass\", actual \"fail\"\n\n"
+    },
+    {
+      "name": "negative-control-verification-no-tests",
+      "arguments": [
+        "--fixture-root",
+        "/tmp/clouddialect-positive-invalid-ipu7fjs_"
+      ],
+      "exit_code": 1,
+      "expected_count": null,
+      "expected_rejection": true,
+      "matched": true,
+      "output": "/tmp/clouddialect-positive-invalid-ipu7fjs_/positive/verification-result/minimal: fixture validator exit status: 1: /tmp/clouddialect-positive-invalid-ipu7fjs_/positive/verification-result/minimal: outcome: expected \"pass\", actual \"fail\"\n\n"
+    },
+    {
+      "name": "negative-control-acceptance-no-approvers",
+      "arguments": [
+        "--fixture-root",
+        "/tmp/clouddialect-positive-invalid-lh3whtrv"
+      ],
+      "exit_code": 1,
+      "expected_count": null,
+      "expected_rejection": true,
+      "matched": true,
+      "output": "/tmp/clouddialect-positive-invalid-lh3whtrv/positive/verification-result/with-acceptance: fixture validator exit status: 1: /tmp/clouddialect-positive-invalid-lh3whtrv/positive/verification-result/with-acceptance: outcome: expected \"pass\", actual \"fail\"\n\n"
+    },
+    {
+      "name": "negative-control-full-missing-toolchain",
+      "arguments": [
+        "--fixture-root",
+        "/tmp/clouddialect-positive-invalid-f4x7k008"
+      ],
+      "exit_code": 1,
+      "expected_count": null,
+      "expected_rejection": true,
+      "matched": true,
+      "output": "/tmp/clouddialect-positive-invalid-f4x7k008/positive/pack-manifest/full-coverage: fixture validator exit status: 1: /tmp/clouddialect-positive-invalid-f4x7k008/positive/pack-manifest/full-coverage: outcome: expected \"pass\", actual \"fail\"\n\n"
+    },
+    {
+      "name": "negative-control-unknown-capability-action",
+      "arguments": [
+        "--fixture-root",
+        "/tmp/clouddialect-positive-invalid-o0shmuid"
+      ],
+      "exit_code": 1,
+      "expected_count": null,
+      "expected_rejection": true,
+      "matched": true,
+      "output": "/tmp/clouddialect-positive-invalid-o0shmuid/positive/pack-manifest/with-extension-section: fixture validator exit status: 1: /tmp/clouddialect-positive-invalid-o0shmuid/positive/pack-manifest/with-extension-section: outcome: expected \"pass\", actual \"fail\"\n\n"
+    }
+  ],
+  "canonical_positive_count_still": 1
+}

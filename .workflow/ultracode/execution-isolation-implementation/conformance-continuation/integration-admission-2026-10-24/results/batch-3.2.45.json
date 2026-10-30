@@ -1,0 +1,53 @@
+{
+  "batch": "3.2.45",
+  "status": "pass",
+  "case_paths": [
+    "integration/scoped-store/wrong-returned-version",
+    "integration/scoped-store/wrong-returned-identity"
+  ],
+  "exact_files": [
+    {
+      "path": "crates/clouddialect-contracts/fixtures/integration/scoped-store/wrong-returned-version/input.toml",
+      "sha256": "853553cc276ad63d09f001f6451d7774229d8b3d7bbc607df1e0b7389e587997"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/integration/scoped-store/wrong-returned-version/expected.json",
+      "sha256": "3ce780f1b22473d3c8f8b4545390698d33ed99c192a3d60291d07ec7c6db7a35"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/integration/scoped-store/wrong-returned-identity/input.toml",
+      "sha256": "853553cc276ad63d09f001f6451d7774229d8b3d7bbc607df1e0b7389e587997"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/integration/scoped-store/wrong-returned-identity/expected.json",
+      "sha256": "5c014e646cb80a35afce60943e9ee2a9417e51127c2ae060a9d6f0dfa1126fb2"
+    }
+  ],
+  "frozen_source_copies": true,
+  "full_test_command": [
+    "rtk",
+    "proxy",
+    "cargo",
+    "test",
+    "--manifest-path",
+    "crates/clouddialect-contracts/Cargo.toml",
+    "--frozen"
+  ],
+  "exit": 0,
+  "rust_tests_including_doctests": 288,
+  "canonical_fixture_count": 56,
+  "exact_prefix_checks": [
+    {
+      "path": "integration/scoped-store/wrong-returned-version",
+      "exit": 0,
+      "count": 1
+    },
+    {
+      "path": "integration/scoped-store/wrong-returned-identity",
+      "exit": 0,
+      "count": 1
+    }
+  ],
+  "scope": "Entire approved bounded data batch",
+  "completed_at": "2026-10-24T11:47:05.893985+00:00"
+}

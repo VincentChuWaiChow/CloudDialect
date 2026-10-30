@@ -1,0 +1,14 @@
+{
+  "phase": "structural",
+  "document_kind": "evidence-record",
+  "outcome": "fail",
+  "errors": [
+    {
+      "category": "unresolvable-reference",
+      "field_path": "$schema",
+      "description_contains": "https://example.com/unknown-schema"
+    }
+  ],
+  "warnings": [],
+  "blockers": []
+}

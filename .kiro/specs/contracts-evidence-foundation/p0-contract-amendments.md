@@ -44,6 +44,8 @@ TestResult exactly projects a validated verification document test entry. Non-pa
 
 Spec 1 `check_evidence_completeness` sets `verification_result = None`, `test_results = []`, and Deferred (not evaluated), Blocked (gaps), or EvidenceComplete (known source-evidence gaps absent). Spec 2 may populate the result reference/test projection only from the same validated immutable VerificationResult. The projection must match that document exactly. Every missing/unknown/failed/skipped/stale/fabricated/mismatched mandatory obligation is represented by BlockingGap or an agreed upstream diagnostic; none is accepted. A document/result with no source-evidence gaps is still **not** proof of behavior.
 
+Owner-approved completeness profile (2026-10-23): an unvalidatable supplied contract or valid zero-obligation scope returns non-accepting Deferred without fabricated obligation IDs, store access or new result fields. Empty-scope mandatory blockers remain in separate semantic results. Each resource unresolved assumption blocks every declared obligation; observed/inferred residual assumptions block their supported obligations. This is explicit owner disposition, not inferred success or a schema change.
+
 No BehavioralOutcome authorizes acceptance, including EvidenceComplete with passing-looking test entries. Spec 2 independently validates observation origin, complete protected obligations/tests, current immutable bindings, approval authority/policy/budget/cleanup and durable ordered commitment. Serialized `origin_identity`, approver IDs or hashes are claims, not authentication receipts. No From/Into conversions between the three phase results.
 
 ## B. Capability declaration

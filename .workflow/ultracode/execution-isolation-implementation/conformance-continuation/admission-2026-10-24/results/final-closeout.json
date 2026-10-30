@@ -1,0 +1,28 @@
+{
+  "captured_at": "2026-10-24T09:39:15.594027+00:00",
+  "protected_freeze_hashes_verified": 180,
+  "new_exact_copies": 82,
+  "canonical_fixture_count": 42,
+  "spec1_new_completed": [
+    18,
+    19
+  ],
+  "spec1_incomplete": [
+    20,
+    21,
+    22
+  ],
+  "spec2_numbered_complete": 0,
+  "new_agents_used": 3,
+  "cumulative_agent_dispatches": 33,
+  "recursion": 0,
+  "followup_dispatches": 0,
+  "repairs": 0,
+  "actual_independent_reviews": [
+    31,
+    32,
+    33
+  ],
+  "new_source_dependencies_native_external_actions": false,
+  "full_goal_complete": false
+}

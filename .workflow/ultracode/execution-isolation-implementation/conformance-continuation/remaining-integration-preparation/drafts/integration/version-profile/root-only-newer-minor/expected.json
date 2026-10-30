@@ -1,0 +1,17 @@
+{
+  "phase": "structural",
+  "document_kind": "evidence-record",
+  "outcome": "warn",
+  "errors": [],
+  "warnings": [
+    {
+      "field_name_verbatim": "format_version",
+      "description_contains": "Newer MINOR \"1.1.0\""
+    },
+    {
+      "field_name_verbatim": "future_field",
+      "description_contains": "Root field at future_field was not validated by the base schema"
+    }
+  ],
+  "blockers": []
+}

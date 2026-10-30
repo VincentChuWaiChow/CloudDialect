@@ -1,0 +1,25 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "cargo",
+    "test",
+    "--manifest-path",
+    "crates/clouddialect-contracts/Cargo.toml",
+    "--frozen"
+  ],
+  "exit": 0,
+  "rust_tests": 291,
+  "fixtures": 101,
+  "protected_hashes_match": 355,
+  "checkpoint_reachability": [
+    "eb230b3",
+    "67d0e6d",
+    "138e88f",
+    "8fa1886",
+    "b73a5a7"
+  ],
+  "source_changes_after_finalchecks": false,
+  "remaining": "threequalification/setupcases;actualowner/consumer/runtime/releasegates",
+  "new_push": false
+}

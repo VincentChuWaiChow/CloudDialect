@@ -1,0 +1,32 @@
+{
+  "status": "READY_FOR_OWNER_REVIEW",
+  "goal": "NOT_COMPLETE; runtime gates open",
+  "approval_scope": "Four offline preparation workstreams only",
+  "dispatches": 4,
+  "parent_repairs": 1,
+  "recursive_dispatches": 0,
+  "review": "PASS; one P2 corrected and reread",
+  "checks": {
+    "draft_tests": "PASS 3 checks / 36 IPC vectors",
+    "hosted_preflight_synthetic": "PASS 24",
+    "selected_rust": "PASS 44",
+    "compile_probe": "PASS positive and 3 expected compiler rejections",
+    "historical_document_grader": "MISS known baseline/current stale checkbox rule",
+    "upstream_identity": "PASS 38 source/catalog/manifest/lock files unchanged",
+    "changed_file_scope_links_whitespace": "PASS",
+    "runtime_security_qualification": "UNVERIFIED / NOT RUN"
+  },
+  "changed_file_sha256": {
+    ".kiro/specs/execution-isolation/decisions/BG-01-upstream.md": "1971117b6d5a83115800c2c211ab66e609fd9e89727a208fd02d52e73d4567ff",
+    ".kiro/specs/execution-isolation/decisions/UD-2-ipc.md": "37e68a5e6d42ee3913e602a50444bc176aefaa41f931e264405e0cd804ec69e8",
+    ".kiro/specs/execution-isolation/decisions/UD-3-credentials.md": "3b93a593fbf3eb2cc54e1965ba1f7b61135a8d02f6e5c9400ca087ed6c624fdf",
+    ".kiro/specs/execution-isolation/decisions/UD-4-persistence.md": "cc82a56cacc68dc9ddff1a235d0b02ba6af76698720721705afcad186fa4cebb",
+    ".kiro/specs/execution-isolation/qualification/credential-cases.md": "f0364b0869275bb7f71e9643f1699bcf0df609874526a6db0e87478308b3bf0c",
+    ".kiro/specs/execution-isolation/qualification/ipc-cases.md": "5f435fa5f02402f86cc7b464e56ef953683fceca3e1a9c04728664e2ab6242bb",
+    ".kiro/specs/execution-isolation/qualification/restore-cases.md": "571ed935e6151af5096db57a3e5ca553af29c6db7cabdba797292f63a88383d4",
+    ".kiro/specs/execution-isolation/qualification/upstream-compatibility.md": "899b016579e4d3e5810ac2dfa394d13a9c7818fe852498d339a8a8bde4669a44",
+    ".kiro/specs/execution-isolation/tasks.md": "da5c444e348292d3e93ee1c942581b51b80f2bc84b6c02b7cb24895acc598cfa",
+    "scripts/verification/execution-isolation/test_offline_proposals.py": "65cc6cd7e510e1687cc3e2d410ceb023098374ef4cae2d6418b897d2bfe62dac",
+    "scripts/verification/execution-isolation/upstream_signatures.rs": "eea5e12b2a61216358caf368e0ff7613f7ff37df0b6c77fa69ac9ef14b91e28f"
+  }
+}

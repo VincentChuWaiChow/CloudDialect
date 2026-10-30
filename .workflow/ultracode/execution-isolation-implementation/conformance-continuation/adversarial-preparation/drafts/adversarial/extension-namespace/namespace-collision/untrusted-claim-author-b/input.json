@@ -1,0 +1,21 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440004",
+  "format_version": "1.0.0",
+  "claim": "Synthetic declared observation only; structural validity does not authenticate it.",
+  "classification": "observed",
+  "provenance": {
+    "source_artifact_identity": "unverified-fixture-source",
+    "analysis_tool_identity": "unverified-fixture-analysis-tool"
+  },
+  "core:namespace-owner": {
+    "namespace_prefix": "acme",
+    "owner": "unverified-author-b",
+    "recognized": true
+  },
+  "acme:owner": {
+    "owner": "unverified-author-b"
+  },
+  "required_extensions": [
+    "acme"
+  ]
+}

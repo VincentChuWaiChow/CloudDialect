@@ -1,0 +1,646 @@
+error[rejected]: failed to satisfy license requirements
+   ┌─ /tmp/clouddialect-release-tooling-verification/cargo-home/registry/src/index.crates.io-1949cf8c6b5b557f/borrow-or-share-0.2.4/Cargo.toml:32:12
+   │
+32 │ license = "MIT-0"
+   │            ━━━━━
+   │            │
+   │            rejected: license is not explicitly allowed
+   │
+   ├ MIT-0 - MIT No Attribution:
+   ├   - OSI approved
+   ├ borrow-or-share v0.2.4
+     └── fluent-uri v0.3.2
+         └── boon v0.6.1
+             └── clouddialect-contracts v0.1.0
+
+warning[no-license-field]: license expression was not specified in manifest for crate 'clouddialect-contracts = 0.1.0'
+ ├ clouddialect-contracts v0.1.0
+
+warning[gather-failure]:
+  ┌─ path+file://<REPOSITORY>/crates/clouddialect-contracts#0.1.0-synthesized.toml:6:144
+  │
+6 │     { path = "<REPOSITORY>/crates/clouddialect-contracts/../../LICENSE.md", hash = 0x54d5b945, score = 0.11 },
+  │                                                                                                                                                ──── low confidence in the license text
+  │
+  ├ clouddialect-contracts v0.1.0 (*)
+
+warning[unlicensed]: a valid license expression could not be retrieved for the crate
+  ┌─ path+file://<REPOSITORY>/crates/clouddialect-contracts#0.1.0-synthesized.toml:2:9
+  │
+2 │ name = "clouddialect-contracts"
+  │         ━━━━━━━━━━━━━━━━━━━━━━
+  │
+  ├ clouddialect-contracts v0.1.0 (*)
+
+error[unlicensed]: clouddialect-contracts = 0.1.0 is unlicensed
+ ├ clouddialect-contracts v0.1.0 (*)
+
+error[rejected]: failed to satisfy license requirements
+   ┌─ /tmp/clouddialect-release-tooling-verification/cargo-home/registry/src/index.crates.io-1949cf8c6b5b557f/icu_collections-2.3.0/Cargo.toml:48:12
+   │
+48 │ license = "Unicode-3.0"
+   │            ━━━━━━━━━━━
+   │            │
+   │            rejected: license is not explicitly allowed
+   │
+   ├ Unicode-3.0 - Unicode License v3:
+   ├   - OSI approved
+   ├ icu_collections v2.3.0
+     ├── icu_normalizer v2.3.0
+     │   └── idna_adapter v1.2.2
+     │       └── idna v1.1.0
+     │           ├── boon v0.6.1
+     │           │   └── clouddialect-contracts v0.1.0
+     │           └── url v2.5.8
+     │               └── boon v0.6.1 (*)
+     └── icu_properties v2.3.0
+         └── idna_adapter v1.2.2 (*)
+
+error[rejected]: failed to satisfy license requirements
+   ┌─ /tmp/clouddialect-release-tooling-verification/cargo-home/registry/src/index.crates.io-1949cf8c6b5b557f/icu_locale_core-2.3.0/Cargo.toml:49:12
+   │
+49 │ license = "Unicode-3.0"
+   │            ━━━━━━━━━━━
+   │            │
+   │            rejected: license is not explicitly allowed
+   │
+   ├ Unicode-3.0 - Unicode License v3:
+   ├   - OSI approved
+   ├ icu_locale_core v2.3.0
+     ├── icu_properties v2.3.0
+     │   └── idna_adapter v1.2.2
+     │       └── idna v1.1.0
+     │           ├── boon v0.6.1
+     │           │   └── clouddialect-contracts v0.1.0
+     │           └── url v2.5.8
+     │               └── boon v0.6.1 (*)
+     └── icu_provider v2.3.1
+         ├── icu_normalizer v2.3.0
+         │   └── idna_adapter v1.2.2 (*)
+         └── icu_properties v2.3.0 (*)
+
+error[rejected]: failed to satisfy license requirements
+   ┌─ /tmp/clouddialect-release-tooling-verification/cargo-home/registry/src/index.crates.io-1949cf8c6b5b557f/icu_normalizer-2.3.0/Cargo.toml:49:12
+   │
+49 │ license = "Unicode-3.0"
+   │            ━━━━━━━━━━━
+   │            │
+   │            rejected: license is not explicitly allowed
+   │
+   ├ Unicode-3.0 - Unicode License v3:
+   ├   - OSI approved
+   ├ icu_normalizer v2.3.0
+     └── idna_adapter v1.2.2
+         └── idna v1.1.0
+             ├── boon v0.6.1
+             │   └── clouddialect-contracts v0.1.0
+             └── url v2.5.8
+                 └── boon v0.6.1 (*)
+
+error[rejected]: failed to satisfy license requirements
+   ┌─ /tmp/clouddialect-release-tooling-verification/cargo-home/registry/src/index.crates.io-1949cf8c6b5b557f/icu_normalizer_data-2.3.0/Cargo.toml:48:12
+   │
+48 │ license = "Unicode-3.0"
+   │            ━━━━━━━━━━━
+   │            │
+   │            rejected: license is not explicitly allowed
+   │
+   ├ Unicode-3.0 - Unicode License v3:
+   ├   - OSI approved
+   ├ icu_normalizer_data v2.3.0
+     └── icu_normalizer v2.3.0
+         └── idna_adapter v1.2.2
+             └── idna v1.1.0
+                 ├── boon v0.6.1
+                 │   └── clouddialect-contracts v0.1.0
+                 └── url v2.5.8
+                     └── boon v0.6.1 (*)
+
+error[rejected]: failed to satisfy license requirements
+   ┌─ /tmp/clouddialect-release-tooling-verification/cargo-home/registry/src/index.crates.io-1949cf8c6b5b557f/icu_properties-2.3.0/Cargo.toml:48:12
+   │
+48 │ license = "Unicode-3.0"
+   │            ━━━━━━━━━━━
+   │            │
+   │            rejected: license is not explicitly allowed
+   │
+   ├ Unicode-3.0 - Unicode License v3:
+   ├   - OSI approved
+   ├ icu_properties v2.3.0
+     └── idna_adapter v1.2.2
+         └── idna v1.1.0
+             ├── boon v0.6.1
+             │   └── clouddialect-contracts v0.1.0
+             └── url v2.5.8
+                 └── boon v0.6.1 (*)
+
+error[rejected]: failed to satisfy license requirements
+   ┌─ /tmp/clouddialect-release-tooling-verification/cargo-home/registry/src/index.crates.io-1949cf8c6b5b557f/icu_properties_data-2.3.0/Cargo.toml:48:12
+   │
+48 │ license = "Unicode-3.0"
+   │            ━━━━━━━━━━━
+   │            │
+   │            rejected: license is not explicitly allowed
+   │
+   ├ Unicode-3.0 - Unicode License v3:
+   ├   - OSI approved
+   ├ icu_properties_data v2.3.0
+     └── icu_properties v2.3.0
+         └── idna_adapter v1.2.2
+             └── idna v1.1.0
+                 ├── boon v0.6.1
+                 │   └── clouddialect-contracts v0.1.0
+                 └── url v2.5.8
+                     └── boon v0.6.1 (*)
+
+error[rejected]: failed to satisfy license requirements
+   ┌─ /tmp/clouddialect-release-tooling-verification/cargo-home/registry/src/index.crates.io-1949cf8c6b5b557f/icu_provider-2.3.1/Cargo.toml:48:12
+   │
+48 │ license = "Unicode-3.0"
+   │            ━━━━━━━━━━━
+   │            │
+   │            rejected: license is not explicitly allowed
+   │
+   ├ Unicode-3.0 - Unicode License v3:
+   ├   - OSI approved
+   ├ icu_provider v2.3.1
+     ├── icu_normalizer v2.3.0
+     │   └── idna_adapter v1.2.2
+     │       └── idna v1.1.0
+     │           ├── boon v0.6.1
+     │           │   └── clouddialect-contracts v0.1.0
+     │           └── url v2.5.8
+     │               └── boon v0.6.1 (*)
+     └── icu_properties v2.3.0
+         └── idna_adapter v1.2.2 (*)
+
+error[rejected]: failed to satisfy license requirements
+   ┌─ /tmp/clouddialect-release-tooling-verification/cargo-home/registry/src/index.crates.io-1949cf8c6b5b557f/litemap-0.8.3/Cargo.toml:45:12
+   │
+45 │ license = "Unicode-3.0"
+   │            ━━━━━━━━━━━
+   │            │
+   │            rejected: license is not explicitly allowed
+   │
+   ├ Unicode-3.0 - Unicode License v3:
+   ├   - OSI approved
+   ├ litemap v0.8.3
+     └── icu_locale_core v2.3.0
+         ├── icu_properties v2.3.0
+         │   └── idna_adapter v1.2.2
+         │       └── idna v1.1.0
+         │           ├── boon v0.6.1
+         │           │   └── clouddialect-contracts v0.1.0
+         │           └── url v2.5.8
+         │               └── boon v0.6.1 (*)
+         └── icu_provider v2.3.1
+             ├── icu_normalizer v2.3.0
+             │   └── idna_adapter v1.2.2 (*)
+             └── icu_properties v2.3.0 (*)
+
+error[rejected]: failed to satisfy license requirements
+   ┌─ /tmp/clouddialect-release-tooling-verification/cargo-home/registry/src/index.crates.io-1949cf8c6b5b557f/potential_utf-0.1.6/Cargo.toml:48:12
+   │
+48 │ license = "Unicode-3.0"
+   │            ━━━━━━━━━━━
+   │            │
+   │            rejected: license is not explicitly allowed
+   │
+   ├ Unicode-3.0 - Unicode License v3:
+   ├   - OSI approved
+   ├ potential_utf v0.1.6
+     └── icu_collections v2.3.0
+         ├── icu_normalizer v2.3.0
+         │   └── idna_adapter v1.2.2
+         │       └── idna v1.1.0
+         │           ├── boon v0.6.1
+         │           │   └── clouddialect-contracts v0.1.0
+         │           └── url v2.5.8
+         │               └── boon v0.6.1 (*)
+         └── icu_properties v2.3.0
+             └── idna_adapter v1.2.2 (*)
+
+error[rejected]: failed to satisfy license requirements
+   ┌─ /tmp/clouddialect-release-tooling-verification/cargo-home/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.4/Cargo.toml:44:12
+   │
+44 │ license = "Unicode-3.0"
+   │            ━━━━━━━━━━━
+   │            │
+   │            rejected: license is not explicitly allowed
+   │
+   ├ Unicode-3.0 - Unicode License v3:
+   ├   - OSI approved
+   ├ tinystr v0.8.4
+     └── icu_locale_core v2.3.0
+         ├── icu_properties v2.3.0
+         │   └── idna_adapter v1.2.2
+         │       └── idna v1.1.0
+         │           ├── boon v0.6.1
+         │           │   └── clouddialect-contracts v0.1.0
+         │           └── url v2.5.8
+         │               └── boon v0.6.1 (*)
+         └── icu_provider v2.3.1
+             ├── icu_normalizer v2.3.0
+             │   └── idna_adapter v1.2.2 (*)
+             └── icu_properties v2.3.0 (*)
+
+error[rejected]: failed to satisfy license requirements
+   ┌─ /tmp/clouddialect-release-tooling-verification/cargo-home/registry/src/index.crates.io-1949cf8c6b5b557f/unicode-ident-1.0.27/Cargo.toml:36:36
+   │
+36 │ license = "(MIT OR Apache-2.0) AND Unicode-3.0"
+   │            ────────────────────────━━━━━━━━━━━
+   │                                    │
+   │                                    rejected: license is not explicitly allowed
+   │
+   ├ Unicode-3.0 - Unicode License v3:
+   ├   - OSI approved
+   ├ unicode-ident v1.0.27
+     ├── proc-macro2 v1.0.107
+     │   ├── displaydoc v0.2.7
+     │   │   ├── icu_collections v2.3.0
+     │   │   │   ├── icu_normalizer v2.3.0
+     │   │   │   │   └── idna_adapter v1.2.2
+     │   │   │   │       └── idna v1.1.0
+     │   │   │   │           ├── boon v0.6.1
+     │   │   │   │           │   └── clouddialect-contracts v0.1.0
+     │   │   │   │           └── url v2.5.8
+     │   │   │   │               └── boon v0.6.1 (*)
+     │   │   │   └── icu_properties v2.3.0
+     │   │   │       └── idna_adapter v1.2.2 (*)
+     │   │   ├── icu_locale_core v2.3.0
+     │   │   │   ├── icu_properties v2.3.0 (*)
+     │   │   │   └── icu_provider v2.3.1
+     │   │   │       ├── icu_normalizer v2.3.0 (*)
+     │   │   │       └── icu_properties v2.3.0 (*)
+     │   │   ├── icu_properties v2.3.0 (*)
+     │   │   ├── icu_provider v2.3.1 (*)
+     │   │   ├── tinystr v0.8.4
+     │   │   │   └── icu_locale_core v2.3.0 (*)
+     │   │   └── zerotrie v0.2.5
+     │   │       ├── icu_properties v2.3.0 (*)
+     │   │       └── icu_provider v2.3.1 (*)
+     │   ├── include_dir_macros v0.7.4
+     │   │   └── include_dir v0.7.4
+     │   │       └── clouddialect-contracts v0.1.0 (*)
+     │   ├── quote v1.0.47
+     │   │   ├── displaydoc v0.2.7 (*)
+     │   │   ├── include_dir_macros v0.7.4 (*)
+     │   │   ├── ref-cast-impl v1.0.27
+     │   │   │   └── ref-cast v1.0.27
+     │   │   │       └── fluent-uri v0.3.2
+     │   │   │           └── boon v0.6.1 (*)
+     │   │   ├── serde_derive v1.0.229
+     │   │   │   └── serde v1.0.229
+     │   │   │       ├── boon v0.6.1 (*)
+     │   │   │       └── clouddialect-contracts v0.1.0 (*)
+     │   │   ├── syn v3.0.9
+     │   │   │   ├── displaydoc v0.2.7 (*)
+     │   │   │   ├── ref-cast-impl v1.0.27 (*)
+     │   │   │   ├── serde_derive v1.0.229 (*)
+     │   │   │   ├── synstructure v0.14.0
+     │   │   │   │   ├── yoke-derive v0.8.4
+     │   │   │   │   │   └── yoke v0.8.3
+     │   │   │   │   │       ├── icu_collections v2.3.0 (*)
+     │   │   │   │   │       ├── icu_provider v2.3.1 (*)
+     │   │   │   │   │       ├── zerotrie v0.2.5 (*)
+     │   │   │   │   │       └── zerovec v0.11.8
+     │   │   │   │   │           ├── icu_collections v2.3.0 (*)
+     │   │   │   │   │           ├── icu_locale_core v2.3.0 (*)
+     │   │   │   │   │           ├── icu_normalizer v2.3.0 (*)
+     │   │   │   │   │           ├── icu_properties v2.3.0 (*)
+     │   │   │   │   │           ├── icu_provider v2.3.1 (*)
+     │   │   │   │   │           ├── potential_utf v0.1.6
+     │   │   │   │   │           │   └── icu_collections v2.3.0 (*)
+     │   │   │   │   │           └── tinystr v0.8.4 (*)
+     │   │   │   │   └── zerofrom-derive v0.1.8
+     │   │   │   │       └── zerofrom v0.1.8
+     │   │   │   │           ├── icu_collections v2.3.0 (*)
+     │   │   │   │           ├── icu_provider v2.3.1 (*)
+     │   │   │   │           ├── yoke v0.8.3 (*)
+     │   │   │   │           ├── zerotrie v0.2.5 (*)
+     │   │   │   │           └── zerovec v0.11.8 (*)
+     │   │   │   ├── yoke-derive v0.8.4 (*)
+     │   │   │   ├── zerofrom-derive v0.1.8 (*)
+     │   │   │   └── zerovec-derive v0.11.6
+     │   │   │       └── zerovec v0.11.8 (*)
+     │   │   ├── synstructure v0.14.0 (*)
+     │   │   ├── yoke-derive v0.8.4 (*)
+     │   │   ├── zerofrom-derive v0.1.8 (*)
+     │   │   └── zerovec-derive v0.11.6 (*)
+     │   ├── ref-cast-impl v1.0.27 (*)
+     │   ├── serde_derive v1.0.229 (*)
+     │   ├── syn v3.0.9 (*)
+     │   ├── synstructure v0.14.0 (*)
+     │   ├── yoke-derive v0.8.4 (*)
+     │   ├── zerofrom-derive v0.1.8 (*)
+     │   └── zerovec-derive v0.11.6 (*)
+     └── syn v3.0.9 (*)
+
+error[rejected]: failed to satisfy license requirements
+   ┌─ /tmp/clouddialect-release-tooling-verification/cargo-home/registry/src/index.crates.io-1949cf8c6b5b557f/writeable-0.6.4/Cargo.toml:43:12
+   │
+43 │ license = "Unicode-3.0"
+   │            ━━━━━━━━━━━
+   │            │
+   │            rejected: license is not explicitly allowed
+   │
+   ├ Unicode-3.0 - Unicode License v3:
+   ├   - OSI approved
+   ├ writeable v0.6.4
+     ├── icu_locale_core v2.3.0
+     │   ├── icu_properties v2.3.0
+     │   │   └── idna_adapter v1.2.2
+     │   │       └── idna v1.1.0
+     │   │           ├── boon v0.6.1
+     │   │           │   └── clouddialect-contracts v0.1.0
+     │   │           └── url v2.5.8
+     │   │               └── boon v0.6.1 (*)
+     │   └── icu_provider v2.3.1
+     │       ├── icu_normalizer v2.3.0
+     │       │   └── idna_adapter v1.2.2 (*)
+     │       └── icu_properties v2.3.0 (*)
+     └── icu_provider v2.3.1 (*)
+
+error[rejected]: failed to satisfy license requirements
+   ┌─ /tmp/clouddialect-release-tooling-verification/cargo-home/registry/src/index.crates.io-1949cf8c6b5b557f/yoke-0.8.3/Cargo.toml:49:12
+   │
+49 │ license = "Unicode-3.0"
+   │            ━━━━━━━━━━━
+   │            │
+   │            rejected: license is not explicitly allowed
+   │
+   ├ Unicode-3.0 - Unicode License v3:
+   ├   - OSI approved
+   ├ yoke v0.8.3
+     ├── icu_collections v2.3.0
+     │   ├── icu_normalizer v2.3.0
+     │   │   └── idna_adapter v1.2.2
+     │   │       └── idna v1.1.0
+     │   │           ├── boon v0.6.1
+     │   │           │   └── clouddialect-contracts v0.1.0
+     │   │           └── url v2.5.8
+     │   │               └── boon v0.6.1 (*)
+     │   └── icu_properties v2.3.0
+     │       └── idna_adapter v1.2.2 (*)
+     ├── icu_provider v2.3.1
+     │   ├── icu_normalizer v2.3.0 (*)
+     │   └── icu_properties v2.3.0 (*)
+     ├── zerotrie v0.2.5
+     │   ├── icu_properties v2.3.0 (*)
+     │   └── icu_provider v2.3.1 (*)
+     └── zerovec v0.11.8
+         ├── icu_collections v2.3.0 (*)
+         ├── icu_locale_core v2.3.0
+         │   ├── icu_properties v2.3.0 (*)
+         │   └── icu_provider v2.3.1 (*)
+         ├── icu_normalizer v2.3.0 (*)
+         ├── icu_properties v2.3.0 (*)
+         ├── icu_provider v2.3.1 (*)
+         ├── potential_utf v0.1.6
+         │   └── icu_collections v2.3.0 (*)
+         └── tinystr v0.8.4
+             └── icu_locale_core v2.3.0 (*)
+
+error[rejected]: failed to satisfy license requirements
+   ┌─ /tmp/clouddialect-release-tooling-verification/cargo-home/registry/src/index.crates.io-1949cf8c6b5b557f/yoke-derive-0.8.4/Cargo.toml:39:12
+   │
+39 │ license = "Unicode-3.0"
+   │            ━━━━━━━━━━━
+   │            │
+   │            rejected: license is not explicitly allowed
+   │
+   ├ Unicode-3.0 - Unicode License v3:
+   ├   - OSI approved
+   ├ yoke-derive v0.8.4
+     └── yoke v0.8.3
+         ├── icu_collections v2.3.0
+         │   ├── icu_normalizer v2.3.0
+         │   │   └── idna_adapter v1.2.2
+         │   │       └── idna v1.1.0
+         │   │           ├── boon v0.6.1
+         │   │           │   └── clouddialect-contracts v0.1.0
+         │   │           └── url v2.5.8
+         │   │               └── boon v0.6.1 (*)
+         │   └── icu_properties v2.3.0
+         │       └── idna_adapter v1.2.2 (*)
+         ├── icu_provider v2.3.1
+         │   ├── icu_normalizer v2.3.0 (*)
+         │   └── icu_properties v2.3.0 (*)
+         ├── zerotrie v0.2.5
+         │   ├── icu_properties v2.3.0 (*)
+         │   └── icu_provider v2.3.1 (*)
+         └── zerovec v0.11.8
+             ├── icu_collections v2.3.0 (*)
+             ├── icu_locale_core v2.3.0
+             │   ├── icu_properties v2.3.0 (*)
+             │   └── icu_provider v2.3.1 (*)
+             ├── icu_normalizer v2.3.0 (*)
+             ├── icu_properties v2.3.0 (*)
+             ├── icu_provider v2.3.1 (*)
+             ├── potential_utf v0.1.6
+             │   └── icu_collections v2.3.0 (*)
+             └── tinystr v0.8.4
+                 └── icu_locale_core v2.3.0 (*)
+
+error[rejected]: failed to satisfy license requirements
+   ┌─ /tmp/clouddialect-release-tooling-verification/cargo-home/registry/src/index.crates.io-1949cf8c6b5b557f/zerofrom-0.1.8/Cargo.toml:47:12
+   │
+47 │ license = "Unicode-3.0"
+   │            ━━━━━━━━━━━
+   │            │
+   │            rejected: license is not explicitly allowed
+   │
+   ├ Unicode-3.0 - Unicode License v3:
+   ├   - OSI approved
+   ├ zerofrom v0.1.8
+     ├── icu_collections v2.3.0
+     │   ├── icu_normalizer v2.3.0
+     │   │   └── idna_adapter v1.2.2
+     │   │       └── idna v1.1.0
+     │   │           ├── boon v0.6.1
+     │   │           │   └── clouddialect-contracts v0.1.0
+     │   │           └── url v2.5.8
+     │   │               └── boon v0.6.1 (*)
+     │   └── icu_properties v2.3.0
+     │       └── idna_adapter v1.2.2 (*)
+     ├── icu_provider v2.3.1
+     │   ├── icu_normalizer v2.3.0 (*)
+     │   └── icu_properties v2.3.0 (*)
+     ├── yoke v0.8.3
+     │   ├── icu_collections v2.3.0 (*)
+     │   ├── icu_provider v2.3.1 (*)
+     │   ├── zerotrie v0.2.5
+     │   │   ├── icu_properties v2.3.0 (*)
+     │   │   └── icu_provider v2.3.1 (*)
+     │   └── zerovec v0.11.8
+     │       ├── icu_collections v2.3.0 (*)
+     │       ├── icu_locale_core v2.3.0
+     │       │   ├── icu_properties v2.3.0 (*)
+     │       │   └── icu_provider v2.3.1 (*)
+     │       ├── icu_normalizer v2.3.0 (*)
+     │       ├── icu_properties v2.3.0 (*)
+     │       ├── icu_provider v2.3.1 (*)
+     │       ├── potential_utf v0.1.6
+     │       │   └── icu_collections v2.3.0 (*)
+     │       └── tinystr v0.8.4
+     │           └── icu_locale_core v2.3.0 (*)
+     ├── zerotrie v0.2.5 (*)
+     └── zerovec v0.11.8 (*)
+
+error[rejected]: failed to satisfy license requirements
+   ┌─ /tmp/clouddialect-release-tooling-verification/cargo-home/registry/src/index.crates.io-1949cf8c6b5b557f/zerofrom-derive-0.1.8/Cargo.toml:38:12
+   │
+38 │ license = "Unicode-3.0"
+   │            ━━━━━━━━━━━
+   │            │
+   │            rejected: license is not explicitly allowed
+   │
+   ├ Unicode-3.0 - Unicode License v3:
+   ├   - OSI approved
+   ├ zerofrom-derive v0.1.8
+     └── zerofrom v0.1.8
+         ├── icu_collections v2.3.0
+         │   ├── icu_normalizer v2.3.0
+         │   │   └── idna_adapter v1.2.2
+         │   │       └── idna v1.1.0
+         │   │           ├── boon v0.6.1
+         │   │           │   └── clouddialect-contracts v0.1.0
+         │   │           └── url v2.5.8
+         │   │               └── boon v0.6.1 (*)
+         │   └── icu_properties v2.3.0
+         │       └── idna_adapter v1.2.2 (*)
+         ├── icu_provider v2.3.1
+         │   ├── icu_normalizer v2.3.0 (*)
+         │   └── icu_properties v2.3.0 (*)
+         ├── yoke v0.8.3
+         │   ├── icu_collections v2.3.0 (*)
+         │   ├── icu_provider v2.3.1 (*)
+         │   ├── zerotrie v0.2.5
+         │   │   ├── icu_properties v2.3.0 (*)
+         │   │   └── icu_provider v2.3.1 (*)
+         │   └── zerovec v0.11.8
+         │       ├── icu_collections v2.3.0 (*)
+         │       ├── icu_locale_core v2.3.0
+         │       │   ├── icu_properties v2.3.0 (*)
+         │       │   └── icu_provider v2.3.1 (*)
+         │       ├── icu_normalizer v2.3.0 (*)
+         │       ├── icu_properties v2.3.0 (*)
+         │       ├── icu_provider v2.3.1 (*)
+         │       ├── potential_utf v0.1.6
+         │       │   └── icu_collections v2.3.0 (*)
+         │       └── tinystr v0.8.4
+         │           └── icu_locale_core v2.3.0 (*)
+         ├── zerotrie v0.2.5 (*)
+         └── zerovec v0.11.8 (*)
+
+error[rejected]: failed to satisfy license requirements
+   ┌─ /tmp/clouddialect-release-tooling-verification/cargo-home/registry/src/index.crates.io-1949cf8c6b5b557f/zerotrie-0.2.5/Cargo.toml:50:12
+   │
+50 │ license = "Unicode-3.0"
+   │            ━━━━━━━━━━━
+   │            │
+   │            rejected: license is not explicitly allowed
+   │
+   ├ Unicode-3.0 - Unicode License v3:
+   ├   - OSI approved
+   ├ zerotrie v0.2.5
+     ├── icu_properties v2.3.0
+     │   └── idna_adapter v1.2.2
+     │       └── idna v1.1.0
+     │           ├── boon v0.6.1
+     │           │   └── clouddialect-contracts v0.1.0
+     │           └── url v2.5.8
+     │               └── boon v0.6.1 (*)
+     └── icu_provider v2.3.1
+         ├── icu_normalizer v2.3.0
+         │   └── idna_adapter v1.2.2 (*)
+         └── icu_properties v2.3.0 (*)
+
+error[rejected]: failed to satisfy license requirements
+   ┌─ /tmp/clouddialect-release-tooling-verification/cargo-home/registry/src/index.crates.io-1949cf8c6b5b557f/zerovec-0.11.8/Cargo.toml:50:12
+   │
+50 │ license = "Unicode-3.0"
+   │            ━━━━━━━━━━━
+   │            │
+   │            rejected: license is not explicitly allowed
+   │
+   ├ Unicode-3.0 - Unicode License v3:
+   ├   - OSI approved
+   ├ zerovec v0.11.8
+     ├── icu_collections v2.3.0
+     │   ├── icu_normalizer v2.3.0
+     │   │   └── idna_adapter v1.2.2
+     │   │       └── idna v1.1.0
+     │   │           ├── boon v0.6.1
+     │   │           │   └── clouddialect-contracts v0.1.0
+     │   │           └── url v2.5.8
+     │   │               └── boon v0.6.1 (*)
+     │   └── icu_properties v2.3.0
+     │       └── idna_adapter v1.2.2 (*)
+     ├── icu_locale_core v2.3.0
+     │   ├── icu_properties v2.3.0 (*)
+     │   └── icu_provider v2.3.1
+     │       ├── icu_normalizer v2.3.0 (*)
+     │       └── icu_properties v2.3.0 (*)
+     ├── icu_normalizer v2.3.0 (*)
+     ├── icu_properties v2.3.0 (*)
+     ├── icu_provider v2.3.1 (*)
+     ├── potential_utf v0.1.6
+     │   └── icu_collections v2.3.0 (*)
+     └── tinystr v0.8.4
+         └── icu_locale_core v2.3.0 (*)
+
+error[rejected]: failed to satisfy license requirements
+   ┌─ /tmp/clouddialect-release-tooling-verification/cargo-home/registry/src/index.crates.io-1949cf8c6b5b557f/zerovec-derive-0.11.6/Cargo.toml:38:12
+   │
+38 │ license = "Unicode-3.0"
+   │            ━━━━━━━━━━━
+   │            │
+   │            rejected: license is not explicitly allowed
+   │
+   ├ Unicode-3.0 - Unicode License v3:
+   ├   - OSI approved
+   ├ zerovec-derive v0.11.6
+     └── zerovec v0.11.8
+         ├── icu_collections v2.3.0
+         │   ├── icu_normalizer v2.3.0
+         │   │   └── idna_adapter v1.2.2
+         │   │       └── idna v1.1.0
+         │   │           ├── boon v0.6.1
+         │   │           │   └── clouddialect-contracts v0.1.0
+         │   │           └── url v2.5.8
+         │   │               └── boon v0.6.1 (*)
+         │   └── icu_properties v2.3.0
+         │       └── idna_adapter v1.2.2 (*)
+         ├── icu_locale_core v2.3.0
+         │   ├── icu_properties v2.3.0 (*)
+         │   └── icu_provider v2.3.1
+         │       ├── icu_normalizer v2.3.0 (*)
+         │       └── icu_properties v2.3.0 (*)
+         ├── icu_normalizer v2.3.0 (*)
+         ├── icu_properties v2.3.0 (*)
+         ├── icu_provider v2.3.1 (*)
+         ├── potential_utf v0.1.6
+         │   └── icu_collections v2.3.0 (*)
+         └── tinystr v0.8.4
+             └── icu_locale_core v2.3.0 (*)
+
+warning[license-not-encountered]: license was not encountered
+   ┌─ <REPOSITORY>/deny.toml:10:6
+   │
+10 │     "BSD-3-Clause",
+   │      ━━━━━━━━━━━━ unmatched license allowance
+
+warning[license-not-encountered]: license was not encountered
+   ┌─ <REPOSITORY>/deny.toml:11:6
+   │
+11 │     "ISC",
+   │      ━━━ unmatched license allowance
+
+warning[license-not-encountered]: license was not encountered
+   ┌─ <REPOSITORY>/deny.toml:12:6
+   │
+12 │     "Unicode-DFS-2016",
+   │      ━━━━━━━━━━━━━━━━ unmatched license allowance
+
+licenses FAILED

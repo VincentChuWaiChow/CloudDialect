@@ -1,0 +1,46 @@
+{
+  "captured_at": "2026-10-24T02:58:30.169730+00:00",
+  "branch": "feat/execution-isolation-runtime",
+  "baseline": "88661158dbee284e84f4e01073f93609d7f124f8",
+  "approved_changed_crate_paths": [
+    "crates/clouddialect-contracts/fixtures/positive/evidence-record/inferred/expected.json",
+    "crates/clouddialect-contracts/fixtures/positive/evidence-record/inferred/input.json",
+    "crates/clouddialect-contracts/src/validator/behavioral.rs",
+    "crates/clouddialect-contracts/tests/evidence_completeness.rs"
+  ],
+  "production_exact_reviewed_branch_move": true,
+  "manifest_lock_and_research_preserved": {
+    "crates/clouddialect-contracts/Cargo.toml": true,
+    "crates/clouddialect-contracts/Cargo.lock": true,
+    "research.md": true,
+    "cloud-transformation-framework-research.pdf": true
+  },
+  "review30_hashes": {
+    "crates/clouddialect-contracts/src/validator/structural.rs": true,
+    "crates/clouddialect-contracts/tests/structural_validation.rs": true,
+    "crates/clouddialect-contracts/Cargo.toml": true,
+    "crates/clouddialect-contracts/Cargo.lock": true,
+    "crates/clouddialect-contracts/tests/conformance.rs": true,
+    "crates/clouddialect-contracts/tests/conformance_controls.rs": true,
+    "crates/clouddialect-contracts/tests/support/fixtures.rs": true,
+    "crates/clouddialect-contracts/src/validator/behavioral.rs": false,
+    "crates/clouddialect-contracts/tests/evidence_completeness.rs": false,
+    ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/runner-contract.md": true,
+    ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/pending/completeness-diagnostic-repair.patch": true,
+    ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/pending/seed/positive/evidence-record/inferred/input.json": true,
+    ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/pending/seed/positive/evidence-record/inferred/expected.json": true
+  },
+  "expected_postreview_changed_files": 2,
+  "new_independent_postrepair_review": false,
+  "canonical_fixture_files": [
+    "crates/clouddialect-contracts/fixtures/positive/evidence-record/inferred/expected.json",
+    "crates/clouddialect-contracts/fixtures/positive/evidence-record/inferred/input.json"
+  ],
+  "spec2_numbered_tasks": 21,
+  "spec2_completed": 0,
+  "execution_crate_exists": false,
+  "push_performed": false,
+  "native_or_provider_probe_run": false,
+  "new_agent_dispatches": 0,
+  "red_green_seed_commits_reachable": true
+}

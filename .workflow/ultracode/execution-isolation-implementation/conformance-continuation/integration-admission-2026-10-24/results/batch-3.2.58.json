@@ -1,0 +1,53 @@
+{
+  "batch": "3.2.58",
+  "status": "pass",
+  "case_paths": [
+    "integration/version-profile/leading-zero",
+    "integration/version-profile/unindexed-patch"
+  ],
+  "exact_files": [
+    {
+      "path": "crates/clouddialect-contracts/fixtures/integration/version-profile/leading-zero/input.json",
+      "sha256": "7a593cb751f6b69a2d7975e96cefb4e56f4224ebbaf7473002325db8c1d23e51"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/integration/version-profile/leading-zero/expected.json",
+      "sha256": "3e0e094c5be96cee96e6d6d7164b777537040d731d365ea63b1cbee5ca80c9e7"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/integration/version-profile/unindexed-patch/input.json",
+      "sha256": "c8b7abe94b855eb1c6c60fe7f16519d28d63ec475279ae706b98778d088addf3"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/integration/version-profile/unindexed-patch/expected.json",
+      "sha256": "45784ba451000f7f4eecc6fb159925caa6a631a923acb00cf4bb5d401f95b28d"
+    }
+  ],
+  "frozen_source_copies": true,
+  "full_test_command": [
+    "rtk",
+    "proxy",
+    "cargo",
+    "test",
+    "--manifest-path",
+    "crates/clouddialect-contracts/Cargo.toml",
+    "--frozen"
+  ],
+  "exit": 0,
+  "rust_tests_including_doctests": 288,
+  "canonical_fixture_count": 72,
+  "exact_prefix_checks": [
+    {
+      "path": "integration/version-profile/leading-zero",
+      "exit": 0,
+      "count": 1
+    },
+    {
+      "path": "integration/version-profile/unindexed-patch",
+      "exit": 0,
+      "count": 1
+    }
+  ],
+  "scope": "Entire approved bounded data batch",
+  "completed_at": "2026-10-24T11:48:57.376707+00:00"
+}

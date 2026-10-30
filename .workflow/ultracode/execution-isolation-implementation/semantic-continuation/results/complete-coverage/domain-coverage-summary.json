@@ -1,0 +1,747 @@
+{
+  "production_files": [
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/documents/raw_objects.rs",
+      "summary": {
+        "lines": {
+          "count": 39,
+          "covered": 39,
+          "percent": 100
+        },
+        "functions": {
+          "count": 7,
+          "covered": 7,
+          "percent": 100
+        },
+        "instantiations": {
+          "count": 107,
+          "covered": 84,
+          "percent": 78.50467289719626
+        },
+        "regions": {
+          "count": 61,
+          "covered": 58,
+          "notcovered": 3,
+          "percent": 95.08196721311475
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    },
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/manifest/mod.rs",
+      "summary": {
+        "lines": {
+          "count": 10,
+          "covered": 10,
+          "percent": 100
+        },
+        "functions": {
+          "count": 2,
+          "covered": 2,
+          "percent": 100
+        },
+        "instantiations": {
+          "count": 4,
+          "covered": 2,
+          "percent": 50
+        },
+        "regions": {
+          "count": 11,
+          "covered": 11,
+          "notcovered": 0,
+          "percent": 100
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    },
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/manifest/validator.rs",
+      "summary": {
+        "lines": {
+          "count": 308,
+          "covered": 304,
+          "percent": 98.7012987012987
+        },
+        "functions": {
+          "count": 21,
+          "covered": 17,
+          "percent": 80.95238095238095
+        },
+        "instantiations": {
+          "count": 42,
+          "covered": 17,
+          "percent": 40.476190476190474
+        },
+        "regions": {
+          "count": 353,
+          "covered": 343,
+          "notcovered": 10,
+          "percent": 97.16713881019831
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    },
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/catalog.rs",
+      "summary": {
+        "lines": {
+          "count": 246,
+          "covered": 235,
+          "percent": 95.52845528455285
+        },
+        "functions": {
+          "count": 26,
+          "covered": 23,
+          "percent": 88.46153846153845
+        },
+        "instantiations": {
+          "count": 52,
+          "covered": 36,
+          "percent": 69.23076923076923
+        },
+        "regions": {
+          "count": 343,
+          "covered": 328,
+          "notcovered": 15,
+          "percent": 95.6268221574344
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    },
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/embedded.rs",
+      "summary": {
+        "lines": {
+          "count": 36,
+          "covered": 35,
+          "percent": 97.22222222222221
+        },
+        "functions": {
+          "count": 8,
+          "covered": 7,
+          "percent": 87.5
+        },
+        "instantiations": {
+          "count": 16,
+          "covered": 10,
+          "percent": 62.5
+        },
+        "regions": {
+          "count": 65,
+          "covered": 62,
+          "notcovered": 3,
+          "percent": 95.38461538461539
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    },
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/loader.rs",
+      "summary": {
+        "lines": {
+          "count": 30,
+          "covered": 30,
+          "percent": 100
+        },
+        "functions": {
+          "count": 5,
+          "covered": 5,
+          "percent": 100
+        },
+        "instantiations": {
+          "count": 8,
+          "covered": 8,
+          "percent": 100
+        },
+        "regions": {
+          "count": 48,
+          "covered": 47,
+          "notcovered": 1,
+          "percent": 97.91666666666666
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    },
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/schema/snapshot.rs",
+      "summary": {
+        "lines": {
+          "count": 60,
+          "covered": 51,
+          "percent": 85
+        },
+        "functions": {
+          "count": 9,
+          "covered": 8,
+          "percent": 88.88888888888889
+        },
+        "instantiations": {
+          "count": 18,
+          "covered": 13,
+          "percent": 72.22222222222221
+        },
+        "regions": {
+          "count": 81,
+          "covered": 72,
+          "notcovered": 9,
+          "percent": 88.88888888888889
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    },
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/validator/artifact_hash.rs",
+      "summary": {
+        "lines": {
+          "count": 20,
+          "covered": 20,
+          "percent": 100
+        },
+        "functions": {
+          "count": 4,
+          "covered": 4,
+          "percent": 100
+        },
+        "instantiations": {
+          "count": 16,
+          "covered": 12,
+          "percent": 75
+        },
+        "regions": {
+          "count": 39,
+          "covered": 39,
+          "notcovered": 0,
+          "percent": 100
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    },
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/validator/behavioral.rs",
+      "summary": {
+        "lines": {
+          "count": 83,
+          "covered": 74,
+          "percent": 89.1566265060241
+        },
+        "functions": {
+          "count": 2,
+          "covered": 2,
+          "percent": 100
+        },
+        "instantiations": {
+          "count": 4,
+          "covered": 2,
+          "percent": 50
+        },
+        "regions": {
+          "count": 111,
+          "covered": 103,
+          "notcovered": 8,
+          "percent": 92.7927927927928
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    },
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/validator/document_resolution.rs",
+      "summary": {
+        "lines": {
+          "count": 109,
+          "covered": 96,
+          "percent": 88.07339449541286
+        },
+        "functions": {
+          "count": 8,
+          "covered": 7,
+          "percent": 87.5
+        },
+        "instantiations": {
+          "count": 16,
+          "covered": 7,
+          "percent": 43.75
+        },
+        "regions": {
+          "count": 114,
+          "covered": 104,
+          "notcovered": 10,
+          "percent": 91.22807017543859
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    },
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/validator/extensions.rs",
+      "summary": {
+        "lines": {
+          "count": 38,
+          "covered": 38,
+          "percent": 100
+        },
+        "functions": {
+          "count": 3,
+          "covered": 3,
+          "percent": 100
+        },
+        "instantiations": {
+          "count": 6,
+          "covered": 3,
+          "percent": 50
+        },
+        "regions": {
+          "count": 56,
+          "covered": 56,
+          "notcovered": 0,
+          "percent": 100
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    },
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/validator/fidelity.rs",
+      "summary": {
+        "lines": {
+          "count": 100,
+          "covered": 90,
+          "percent": 90
+        },
+        "functions": {
+          "count": 5,
+          "covered": 3,
+          "percent": 60
+        },
+        "instantiations": {
+          "count": 10,
+          "covered": 3,
+          "percent": 30
+        },
+        "regions": {
+          "count": 124,
+          "covered": 109,
+          "notcovered": 15,
+          "percent": 87.90322580645162
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    },
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/validator/mandatory_extensions.rs",
+      "summary": {
+        "lines": {
+          "count": 43,
+          "covered": 33,
+          "percent": 76.74418604651163
+        },
+        "functions": {
+          "count": 3,
+          "covered": 3,
+          "percent": 100
+        },
+        "instantiations": {
+          "count": 6,
+          "covered": 3,
+          "percent": 50
+        },
+        "regions": {
+          "count": 44,
+          "covered": 34,
+          "notcovered": 10,
+          "percent": 77.27272727272727
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    },
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/validator/mod.rs",
+      "summary": {
+        "lines": {
+          "count": 15,
+          "covered": 15,
+          "percent": 100
+        },
+        "functions": {
+          "count": 2,
+          "covered": 2,
+          "percent": 100
+        },
+        "instantiations": {
+          "count": 4,
+          "covered": 2,
+          "percent": 50
+        },
+        "regions": {
+          "count": 13,
+          "covered": 13,
+          "notcovered": 0,
+          "percent": 100
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    },
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/validator/semantic.rs",
+      "summary": {
+        "lines": {
+          "count": 83,
+          "covered": 83,
+          "percent": 100
+        },
+        "functions": {
+          "count": 5,
+          "covered": 5,
+          "percent": 100
+        },
+        "instantiations": {
+          "count": 10,
+          "covered": 5,
+          "percent": 50
+        },
+        "regions": {
+          "count": 132,
+          "covered": 131,
+          "notcovered": 1,
+          "percent": 99.24242424242425
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    },
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/validator/structural.rs",
+      "summary": {
+        "lines": {
+          "count": 381,
+          "covered": 359,
+          "percent": 94.22572178477691
+        },
+        "functions": {
+          "count": 18,
+          "covered": 18,
+          "percent": 100
+        },
+        "instantiations": {
+          "count": 36,
+          "covered": 18,
+          "percent": 50
+        },
+        "regions": {
+          "count": 609,
+          "covered": 570,
+          "notcovered": 39,
+          "percent": 93.59605911330048
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    },
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/validator/verification_semantics.rs",
+      "summary": {
+        "lines": {
+          "count": 112,
+          "covered": 105,
+          "percent": 93.75
+        },
+        "functions": {
+          "count": 3,
+          "covered": 3,
+          "percent": 100
+        },
+        "instantiations": {
+          "count": 6,
+          "covered": 3,
+          "percent": 50
+        },
+        "regions": {
+          "count": 129,
+          "covered": 120,
+          "notcovered": 9,
+          "percent": 93.02325581395348
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    },
+    {
+      "filename": "/home/raishin/projects/CloudDialect/crates/clouddialect-contracts/src/validator/version.rs",
+      "summary": {
+        "lines": {
+          "count": 44,
+          "covered": 44,
+          "percent": 100
+        },
+        "functions": {
+          "count": 8,
+          "covered": 8,
+          "percent": 100
+        },
+        "instantiations": {
+          "count": 16,
+          "covered": 8,
+          "percent": 50
+        },
+        "regions": {
+          "count": 64,
+          "covered": 64,
+          "notcovered": 0,
+          "percent": 100
+        },
+        "branches": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        }
+      }
+    }
+  ],
+  "production_totals": {
+    "lines": {
+      "count": 1757,
+      "covered": 1661,
+      "percent": 94.53614114968697
+    },
+    "functions": {
+      "count": 139,
+      "covered": 127,
+      "percent": 91.36690647482014
+    },
+    "regions": {
+      "count": 2397,
+      "covered": 2264,
+      "percent": 94.45139758030872
+    }
+  },
+  "objects": [
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/artifact_hash-d2119d201a4eee87",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/behavioral_schema-7ae9252b3219faf9",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/catalog_extension_roundtrip-6c25e77501446a56",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/catalog_index-ad856dede90249de",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/catalog_loading-4100cf06e5565b33",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/catalog_schemas-0d6e22f7e147aaf8",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/catalog_snapshot-ad64e43f9c3d39f0",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/clouddialect_contracts-6605992efdf07329",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/compatibility_policy-51d8ecb134b58475",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/conformance-8578d0c356816383",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/document_resolution-22bd851a83559318",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/evidence_completeness-acf555a1c64a1021",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/evidence_schema-f68f70413b3ae17c",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/extension_policy-aebf5fe0bab36726",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/extension_validation-7c20bbf46152d229",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/fidelity_mapping-6027e19bf7e5a7a9",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/mandatory_extension_blockers-f674770caa79ae41",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/manifest_api-75530174de386632",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/manifest_evidence-0ec4e650d59f8369",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/manifest_semantic-2afa967636b95f40",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/manifest_types-c2a7814f60309259",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/manifest_validation-024fad37efe96a42",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/nested_duplicate_fields-8c35254a4e5c31cf",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/phase_results-68e789a47189adcf",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/public_api_compatibility-671c3c907113d0a8",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/reference_contracts-9b5505e6dac5d91b",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/required_extension_catalogs-3feabe3b632d82bc",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/required_extension_models-e25419ef3b7e7013",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/required_extensions-566f5079071feac5",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/schema_harness-902096b2a524bc0e",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/semantic_validation-a8b491d010541cec",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/source_document_models-b71b80c49c26b615",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/structural_validation-fa2fa01b8566d94b",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/verification_models-8dde92cbaf7dc767",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/verification_schema-e0c61a540e1e3a83",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/verification_semantics-cf2605726382e86e",
+    "/tmp/clouddialect-runtime-coverage-target/debug/deps/version_compatibility-b5fd35edad16ebcd"
+  ],
+  "profiles_directory": "/tmp/clouddialect-domain-profiles-t7qdsqg5",
+  "threshold": 80,
+  "scope": "Emitted production mappings only; tests/dependencies/unmapped DTOs excluded. No branch, whole-spec or native runtime coverage claimed."
+}

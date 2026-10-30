@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-29",
+  "target_identifier": "local laptop",
+  "owner_reported_os": "Linux",
+  "scope": "Approved read-only inspection of the available terminal environment only; physical laptop/host equivalence remains unverified.",
+  "checks": {
+    "uname": {
+      "argv": [
+        "uname",
+        "-srm"
+      ],
+      "exit_code": 0,
+      "stdout": "Linux 7.0.0-38-generic x86_64",
+      "stderr": ""
+    },
+    "docker_cli": {
+      "method": "shutil.which(\"docker\") \u2014 locate executable only",
+      "found": true,
+      "path": "/usr/bin/docker"
+    },
+    "kvm_device": {
+      "method": "stat metadata only; device never opened",
+      "path": "/dev/kvm",
+      "visibility": "not_visible",
+      "is_character_device": false,
+      "outside_restricted_sandbox": {
+        "method": "Permission-reviewed repeat of stat metadata only; no device open",
+        "result": "KVM_CHAR_DEVICE_VISIBLE",
+        "exit_code": 0,
+        "is_character_device": true
+      }
+    }
+  },
+  "not_performed": [
+    "Docker CLI/daemon invocation",
+    "KVM device open/ioctl",
+    "sudo or privilege changes",
+    "image pull/build/export",
+    "container or VM launch",
+    "network changes",
+    "native containment/escape/budget probes"
+  ],
+  "qualified_profile": false,
+  "disposable_environment_admitted": false,
+  "gate_closed": false,
+  "result_summary": "Linux/x86_64 terminal and Docker CLI found. KVM node hidden in restricted view but visible as a character device outside it. KVM opening, API capabilities, Docker daemon and disposable environment remain unverified."
+}

@@ -1,6 +1,6 @@
 # Design Document
 
-**Later publication action approval:** the user explicitly requested git commit and git push for this work. Those actions are now authorized; the earlier no-commit/no-push implementation limit is historical. Native probes, deployment and releases remain unauthorized.
+**Publication authority:** earlier commit/push approvals apply to their historical actions. The 2026-10-24 frozen-fixture admission explicitly authorizes local milestone commits and as-needed agents, not source repairs, new dependencies, pushes, native probes, deployments or releases.
 
 
 ## Current physical domain layout
@@ -14,7 +14,7 @@ User requested domain-first organization on2026-10-22. Document DTO implementati
 
 **Current continuation status (2026-10-22):** user approved P0-A–F for implementation planning, then separately authorized the remaining Spec 1 prerequisite units in [implementation-plan.md](implementation-plan.md), TDD and no commits/probes/pushes/releases. User attests this is a new project and approves document/catalog **1.0.0** and crate API **0.1.0** as the initial MVP versions. This is not an independent external-publication audit or security-gate approval. Exact encoded extension JSON value bytes are required; raw_value on the existing pinned serde_json is separately approved.
 
-**Delivery is partial.** DTOs, schemas, catalog inventory, frozen snapshot/loading, structural JSON validation, local TOML rules and candidate hash equality have bounded verification. JSON semantic/completeness validation, full mandatory-blocker integration, exhaustive conformance and delivered downstream compatibility remain unfinished; scoped fidelity/TOML semantic delivery is recorded in the current report. See the [current run report](../../../.workflow/ultracode/execution-isolation-implementation/final-report.md) for actual evidence and outstanding work. Canonical task checkmarks are conservative; BG-01 and Spec 2 UD-1–UD-5 remain OPEN.
+**Delivery is partial.** DTOs, schemas, catalog inventory, frozen snapshot/loading, structural JSON validation, local TOML rules and candidate hash equality have bounded verification. JSON/TOML semantic validation and mandatory blockers have bounded independent review; completeness has 10 focused tests after the approved direct-assumption repair; the bounded runner has 9 controls and 42 admitted canonical fixtures. Current execution has parent Rust checks and independent bounded fixture-content review, not native or acceptance qualification. Exhaustive conformance and delivered downstream compatibility remain unfinished. See the [current run report](../../../.workflow/ultracode/execution-isolation-implementation/final-report.md) for actual evidence and outstanding work. Canonical task checkmarks are conservative; BG-01 and Spec 2 UD-1–UD-5 remain OPEN.
 
 This design document specifies the technical architecture for the CloudDialect **Contracts & Evidence Foundation** — Spec 1 of 3 in a sequenced set.
 
@@ -779,7 +779,7 @@ Annotated JSON Schema skeleton (key fields with types and constraints):
 
 ### 4.3 Verification Result
 
-**P0-C initial MVP schema artifact implemented under separate code/version approvals; semantic and authority checks remain unfinished.** Configuration is a reference to exact immutable secret-free bytes. Artifact bindings and approval/origin strings are untrusted claims until checked against independent trusted context; JSON Schema cannot authenticate them. P0-C specifies semantic checks for digest lengths, unique test IDs, obligation membership, UTC time and matching document references.
+**P0-C initial MVP schema and bounded semantic checks implemented under separate code/version approvals; authority checks remain Spec 2 work.** Configuration is a reference to exact immutable secret-free bytes. Artifact bindings and approval/origin strings are untrusted claims until checked against independent trusted context; JSON Schema cannot authenticate them. The semantic continuation checks digest lengths, unique test IDs, obligation membership, UTC time and matching document references; complete conformance and independent review remain outstanding.
 
 ```json
 {
@@ -1679,7 +1679,7 @@ The conformance fixture suite maps to requirements as follows:
 | `adversarial/extension-namespace/reserved-exact-match` | Reserved namespace via exact match (`core:field`) |
 | `adversarial/extension-namespace/reserved-uppercase-bypass` | Reserved namespace via uppercase (`CORE:field`, `CDC:field`) |
 | `adversarial/extension-namespace/reserved-mixed-case-bypass` | Reserved via mixed case (`Core-Validation:field`, `Cdc-Evidence:field`) |
-| `adversarial/extension-namespace/namespace-collision` | Two community extensions using the same prefix |
+| `adversarial/extension-namespace/namespace-collision` | Preserve same-prefix fields; owner-approved local nontrust profile (2026-10-24): separate A/B ownership claims cannot recognize unknown mandatory `acme`. Optional claims remain structurally valid with reserved-key warnings; each unknown mandatory declaration independently blocks. Not cross-document conflict detection or authenticated ownership; conflicts remain registry governance. |
 | `adversarial/extension-namespace/invalid-prefix-formats` | Digit-start, space-in-prefix, length-one prefix |
 | `adversarial/extension-namespace/unknown-optional-round-trip` | Extension present, unmodified, non-influencing after round-trip |
 | `adversarial/extension-namespace/mandatory-extension-blocks-acceptance` | Unknown mandatory extension produces blocker |
@@ -1744,9 +1744,9 @@ crates/
       integration/
 ```
 
-**Target public API surface (DTOs, structural Validator/Validate, local and scoped semantic ManifestValidator/ValidateManifest, explicit-context check_fidelity_mapping and verify_artifact_hash delivered within scoped tests; JSON semantic methods, completeness and full mandatory blocker integration remain unfinished):**
+**Public API surface (DTOs, structural/semantic Validator/Validate, local/scoped semantic ManifestValidator/ValidateManifest, explicit-context check_fidelity_mapping/check_evidence_completeness and verify_artifact_hash delivered within scoped tests; exhaustive conformance and downstream qualification remain unfinished):**
 
-Current Validate exposes only validate_structural; the semantic method below is the remaining target, not a success/default/panic stub. Opaque root reference projection is conservatively unsupported; exact-version validation still uses the actual catalog-backed compiler. Whole canonical tasks/conformance and acceptance are not implied by this bounded structural API.
+Validate now exposes both methods below with real structural, mandatory-extension, core-reference and verification-rule consumers. Opaque root reference projection is conservatively unsupported; exact-version validation still uses the actual catalog-backed compiler. JSON semantic calendar/UTC checks use real format assertions, including a fixed core date-time rule so a relaxed explicit schema cannot bypass them. Whole canonical tasks/conformance, independent review and acceptance are not implied by the bounded API.
 
 ```rust
 // clouddialect-contracts public API
@@ -1960,7 +1960,14 @@ No network access is required. The public key in the repository is the sole trus
 
 ### License Screening
 
-**Tooling:** `cargo-deny` with a deny list.
+**Tooling:** `cargo-deny` 0.16.0 or later with an explicit allow-only policy.
+
+**Owner-approved migration (2026-10-28):** Current cargo-deny removed the legacy
+`deny` and `copyleft` fields. Preserve the original seven allowed expressions;
+all other licenses are denied by default. This includes `GPL-2.0`, `GPL-3.0`,
+`AGPL-1.0`, `AGPL-3.0`, `SSPL-1.0`, `LGPL-2.0`, `LGPL-2.1`, `LGPL-3.0`
+and other unlisted copyleft licenses. Unlicensed crates are also errors. No
+license exceptions, private-crate exclusions or dependency changes are implied.
 
 `cargo-deny` analyzes `Cargo.lock` and checks each dependency's declared license against a policy. The policy is expressed in `deny.toml` at the repository root.
 
@@ -1977,19 +1984,6 @@ allow = [
     "ISC",
     "Unicode-DFS-2016",
 ]
-
-deny = [
-    "GPL-2.0",
-    "GPL-3.0",
-    "AGPL-1.0",
-    "AGPL-3.0",
-    "SSPL-1.0",
-    "LGPL-2.0",
-    "LGPL-2.1",
-    "LGPL-3.0",
-]
-
-copyleft = "deny"
 ```
 
 **Pre-release check:**
@@ -1998,9 +1992,24 @@ copyleft = "deny"
 cargo deny check licenses
 ```
 
-If any dependency carries a license in the deny list, `cargo-deny` exits non-zero and outputs a named incompatibility report identifying the dependency name, version, and license. This output is the "named incompatibility report" required by Requirement 12.3.
+For the standalone crate and root policy (cargo-deny 0.20.2 CLI):
 
-The check runs in CI and as a manual pre-release gate documented in `MAINTAINER-CHECKLIST.md`. No release artifact is published until `cargo deny check licenses` exits zero. Traceability: Requirement 12.3.
+```sh
+rtk proxy cargo deny --manifest-path crates/clouddialect-contracts/Cargo.toml \
+  --config deny.toml check licenses
+```
+
+If a dependency's SPDX expression cannot be satisfied using allowed licenses,
+`cargo-deny` exits non-zero and outputs a named incompatibility report identifying
+the dependency name, version, and license. An allowed `OR` alternative may satisfy
+the expression; every required `AND` term must be allowed. This output is the
+"named incompatibility report" required by Requirement 12.3. Missing tools or
+configuration errors never count as a successful scan.
+
+The manual pre-release gate is documented in `release/README.md`. CI enforcement
+requires separate implementation and is not claimed by task 26. No release
+artifact is published until `cargo deny check licenses` exits zero. Traceability:
+Requirement 12.3.
 
 ### Traceability Artifacts
 

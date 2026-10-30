@@ -1,0 +1,34 @@
+{
+  "baseline_files": 182,
+  "unchanged_baseline_files": 176,
+  "approved_changed_baseline_paths": [
+    ".kiro/specs/contracts-evidence-foundation/design.md",
+    ".kiro/specs/contracts-evidence-foundation/requirements.md",
+    ".kiro/specs/contracts-evidence-foundation/tasks.md",
+    ".kiro/specs/execution-isolation/tasks.md",
+    "crates/clouddialect-contracts/tests/conformance_controls.rs",
+    "crates/clouddialect-contracts/tests/support/fixtures.rs"
+  ],
+  "exact_new_files": [
+    "crates/clouddialect-contracts/fixtures/integration/verification-consistency/duplicate-test-ids/input.json",
+    "crates/clouddialect-contracts/fixtures/integration/verification-consistency/duplicate-test-ids/expected.json",
+    "crates/clouddialect-contracts/fixtures/integration/verification-consistency/unmapped-obligations/input.json",
+    "crates/clouddialect-contracts/fixtures/integration/verification-consistency/unmapped-obligations/expected.json",
+    "crates/clouddialect-contracts/fixtures/integration/verification-consistency/invalid-hash-length/input.json",
+    "crates/clouddialect-contracts/fixtures/integration/verification-consistency/invalid-hash-length/expected.json",
+    "crates/clouddialect-contracts/fixtures/integration/verification-consistency/approval-result-id-mismatch/input.json",
+    "crates/clouddialect-contracts/fixtures/integration/verification-consistency/approval-result-id-mismatch/expected.json",
+    "crates/clouddialect-contracts/fixtures/integration/verification-consistency/approval-result-version-mismatch/input.json",
+    "crates/clouddialect-contracts/fixtures/integration/verification-consistency/approval-result-version-mismatch/expected.json"
+  ],
+  "new_file_count": 10,
+  "production_schema_api_dependency_changes": false,
+  "unrelated_research_preserved": true,
+  "spec2_numbered_tasks": 21,
+  "spec2_all_numbered_unchecked": true,
+  "spec1_tasks20_21_22_unchecked": true,
+  "execution_crate_absent": true,
+  "canonical_count": 47,
+  "tracked_scope_valid": true,
+  "updated_at": "2026-10-24T10:48:42.980180+00:00"
+}

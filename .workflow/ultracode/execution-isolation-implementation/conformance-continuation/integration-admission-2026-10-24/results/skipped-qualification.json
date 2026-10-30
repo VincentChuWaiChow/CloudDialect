@@ -1,0 +1,8 @@
+{
+  "coverage": "SKIPPED: matching llvm-tools absent in installed component list; no newtools authorized; no freshcoverageclaim",
+  "rust_1_88_msrv": "SKIPPED: only stable1.99.1 installed; no toolchaininstall authorized",
+  "native_provider_backend_authentication_acceptance_consumer": "NOT RUN; three qualification/setupcases and UD/BGstayopen",
+  "legacy_spec_checker": "Actuallyrerun8pass/1pre-existingerror: unchanged blanket no-checkmarkrule rejects existing supporting marks, not fixed/waived",
+  "release_deployment": "NOT AUTHORIZED; Gitbranchpushseparatelyexplicitlyauthorized",
+  "permission_exception": "Initial ls-remoteapprovalreviewtimedoutbeforeprocesscreation; singlepermittedretry executedexit0withbranchabsent"
+}

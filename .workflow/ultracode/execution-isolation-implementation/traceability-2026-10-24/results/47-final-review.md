@@ -1,0 +1,19 @@
+# Result47 — independent semantic review (pre-repair)
+## Summary
+OneP2;initial202-rowGREENwasnotcompleteTask25. No otheractionableP1/P2.
+## Finding
+P0-AfiveBehavioralResultfieldsandthreeBlockingGapfields,plusP0-Dfiveconstructors/digest/schema_bytes/loaderloadportswerenotexplicitlymapped. Initialselected14-keyAPIappendixandhard-codedexpectedsetpassedtheiromissionbydefinition. Source:tasks617,P0amendments23–45/115,actualdocuments/verification107–140. Repairrequiredexplicitrowsandconsumerexpectationexpansion;TestResult/FailureDescriptionmaycross-refexistingverification-schema mappings.
+## Evidence
+Independentlyranexisting3-testbinaryandverifiedallpassBEFORErepair. IndependentPythonconditional/localref/containsenumeration148JSONpathsandnestedmanifest40match. All5canonicalgateIDs/requirementsets/fieldreferencesandotherrequirementassignments/safetyboundariesreviewed. No otheractionablefindingormandatorysimplificationbeyondparentlintfix.
+## Handoff
+ParentreproducedP2in138e88fwithcompiledexecuted1pass/2fail,thenadded16source-backedrowsandfixedlint. RepairGREEN8fa1886:3tests,positivebaselineguardsandnewmissingprojection/constructornegativecontrols. Current218rowsandfullchecksparent-verified;NOindependentpostrepairsignoffclaimed.
+## Files changed
+Nonebyreviewer.
+## Decisions
+Parentacceptedsource-backedP2andperformedoneconsolidatedrepair,notreducedrequirements.
+## Risks
+Docs/localconformancenotnative/consumer/owneracceptance/publication. SelectedfixedAPIlistmustnotdefinecompleteness;projectionsnowderivefromactualsource.
+## Verification run
+Pre-repairbinary,independentsource/schema/TOML/gate/semanticaudits. No writes/Git/Cargo/build/network/probes/delegation.
+## Open questions
+ActualBG/native/consumer/releasequalificationremainsopen.

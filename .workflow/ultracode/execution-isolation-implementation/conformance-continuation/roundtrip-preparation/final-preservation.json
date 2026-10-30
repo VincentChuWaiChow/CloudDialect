@@ -1,0 +1,37 @@
+{
+  "captured_at": "2026-10-24T03:25:08.507766+00:00",
+  "verified_draft_counts": {
+    "positive-preparation": {
+      "cases": 12,
+      "checks": 19
+    },
+    "negative-preparation": {
+      "cases": 23,
+      "checks": 41
+    },
+    "roundtrip-preparation": {
+      "cases": 3,
+      "checks": 10
+    }
+  },
+  "canonical_cases": 1,
+  "source_schema_manifest_lock_unchanged_since": "d8e5ebe",
+  "spec2_numbered_complete": 0,
+  "spec2_numbered_total": 21,
+  "python_command": [
+    "rtk",
+    "proxy",
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "python_exit": 0,
+  "python_output": "test_every_entrypoint_is_a_relative_symlink_to_the_same_rule (test_ai_rules.AiRulesTests.test_every_entrypoint_is_a_relative_symlink_to_the_same_rule) ... ok\ntest_one_canonical_rule_defines_domain_ownership_and_safety (test_ai_rules.AiRulesTests.test_one_canonical_rule_defines_domain_ownership_and_safety) ... ok\ntest_previous_rule_copy_is_absent (test_ai_rules.AiRulesTests.test_previous_rule_copy_is_absent) ... ok\ntest_conformance_integration_target_exists (test_contracts_scaffold.ContractsScaffoldTests.test_conformance_integration_target_exists) ... ok\ntest_lockfile_resolves_direct_dependencies_with_checksums (test_contracts_scaffold.ContractsScaffoldTests.test_lockfile_resolves_direct_dependencies_with_checksums) ... ok\ntest_package_is_a_standalone_library (test_contracts_scaffold.ContractsScaffoldTests.test_package_is_a_standalone_library) ... ok\ntest_package_retains_repository_license (test_contracts_scaffold.ContractsScaffoldTests.test_package_retains_repository_license) ... ok\ntest_public_module_tree_exists (test_contracts_scaffold.ContractsScaffoldTests.test_public_module_tree_exists) ... ok\ntest_required_dependencies_are_exactly_pinned (test_contracts_scaffold.ContractsScaffoldTests.test_required_dependencies_are_exactly_pinned) ... ok\ntest_required_dependency_features_are_enabled (test_contracts_scaffold.ContractsScaffoldTests.test_required_dependency_features_are_enabled) ... ok\ntest_document_families_have_cohesive_owned_files (test_domain_layout.DomainLayoutTests.test_document_families_have_cohesive_owned_files) ... ok\ntest_validator_has_no_shadow_document_model_implementations (test_domain_layout.DomainLayoutTests.test_validator_has_no_shadow_document_model_implementations) ... ok\ntest_canonical_scripts_are_regular_files_grouped_by_domain (test_script_layout.ScriptLayoutTests.test_canonical_scripts_are_regular_files_grouped_by_domain) ... ok\ntest_previous_command_paths_are_relative_compatibility_links (test_script_layout.ScriptLayoutTests.test_previous_command_paths_are_relative_compatibility_links) ... ok\ntest_python_tools_keep_repo_root_and_recorded_data_locations (test_script_layout.ScriptLayoutTests.test_python_tools_keep_repo_root_and_recorded_data_locations) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.014s\n\nOK\n",
+  "new_agents": 0,
+  "push": false,
+  "native_probes": false
+}

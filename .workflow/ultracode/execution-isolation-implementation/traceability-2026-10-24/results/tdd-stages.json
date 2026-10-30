@@ -1,0 +1,82 @@
+{
+  "red": {
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--test",
+      "traceability"
+    ],
+    "exit": 101,
+    "compiled_executed": true,
+    "passed": 0,
+    "failed": 3,
+    "intended_failure": "Both required Task25 documents physically absent; source-derived consumer tests execute and fail at document read.",
+    "log": "results/red.log",
+    "test_consumer_packaging": "Column-parser quote handling corrected before RED checkpoint; docs remain absent, same intended executed3fail. No expectation weakening."
+  },
+  "green": {
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--test",
+      "traceability"
+    ],
+    "same_target_as_red": true,
+    "exit": 0,
+    "compiled_executed": true,
+    "passed": 3,
+    "failed": 0,
+    "coverage": "148JSONfields+40TOMLpaths+14APIrows,5gatesand8negativein-memorycontrolassertions",
+    "log": "results/green.log",
+    "test_consumer_note": "Mutationtargetsareexacttable-rows,notpossiblyearlierprose;validatorsnotweakened."
+  },
+  "review_repair_red": {
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--test",
+      "traceability"
+    ],
+    "exit": 101,
+    "compiled_executed": true,
+    "passed": 1,
+    "failed": 2,
+    "intended_failure": "Review47P2: sixteen missing explicitP0-A/P0-D mappings. ProjectionfieldsexpectedfromactualRustdeclarations;selected14-keyappendixnolongerdefinescompleteness.",
+    "log": "results/review-repair-red.log"
+  },
+  "review_repair_green": {
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--test",
+      "traceability"
+    ],
+    "same_target": true,
+    "exit": 0,
+    "compiled_executed": true,
+    "passed": 3,
+    "failed": 0,
+    "scope": "218complete mappings inclsource-derivedP0projectionfields and explicitcatalogports;10negativecontrolswithpositivebaselineguards",
+    "log": "results/review-repair-green.log"
+  }
+}

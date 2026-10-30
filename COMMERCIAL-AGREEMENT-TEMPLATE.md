@@ -18,13 +18,43 @@ On execution by both parties and satisfaction of the agreed initial payment cond
 
 ## Fees and royalty accounting
 
-The executed agreement **must select and complete at least one applicable fee arrangement**. No placeholder constitutes an agreed amount:
+### Standard nonexclusive resale proposal — complete before execution
 
-- Annual flat fee: [AMOUNT, CURRENCY, DUE_DATE]
-- Per-product / per-tenant fee: [DEFINITION AND RATE]
-- Revenue share: [PERCENTAGE] of precisely defined [GROSS_RECEIPTS / NET_REVENUE], including refunds, discounts, affiliate transfers, marketplace fees, withholding, exchange rates and exclusions.
-- Minimums, caps, reporting cadence and invoicing: [TERMS]
-- Taxes, late payments, currency, and permitted audit process: [TERMS]
+For new **nonexclusive resale** agreements, the owner-selected standard proposal
+is a **10% royalty on Covered Receipts**, reported and paid monthly, within
+**30 calendar days after month-end**. Identify the covered resale offerings and
+permitted collecting entities expressly: [COVERED_RESALE_OFFERINGS_AND_ENTITIES].
+
+**Covered Receipts** means payments actually collected from customers for those
+named resale offerings, less only actual refunds of those payments and
+separately collected VAT/sales taxes payable to the tax authority. It measures
+revenue, not profit, and excludes unrelated company revenue. Salaries, marketing,
+overhead and other operating costs are not royalty deductions.
+
+Complete the following in the signed agreement before execution:
+
+- Allocation rules for bundles and collection through affiliates:
+  [ALLOCATION_METHOD_AND_COLLECTION_SCOPE]; do not simply assign the CloudDialect
+  portion zero.
+- Currency, exchange rates, refund adjustments and any withholding treatment:
+  [TERMS].
+- Monthly statement contents, payment instructions, records retention and
+  proportionate audit process: [TERMS].
+- Any minimum, cap or late-payment terms: [TERMS]; none is supplied by default.
+- Separately priced hosting, support and maintenance obligations, if any:
+  [SCOPE_AND_FEES]; the royalty does not promise unlimited services.
+
+For example, 10,000 in Covered Receipts produces a royalty of 1,000 in the agreed
+currency; this is not equity or a share of unrelated future revenue.
+
+Other commercial uses require their own completed fee schedule, such as a flat
+fee, per-product fee or other agreed royalty. An alternative resale arrangement
+requires the Licensor's express agreement in the signed agreement; a placeholder
+or selection of an unrelated fee does not replace the resale proposal.
+
+Obtain qualified legal review before execution. Existing agreements are not
+amended by this proposal; changes to existing agreements require a separately
+agreed amendment. No placeholder constitutes an agreed amount.
 
 **No fee formula applies until the parties have expressly agreed to it.** A percentage without a carefully defined revenue base is a predictable source of disputes.
 

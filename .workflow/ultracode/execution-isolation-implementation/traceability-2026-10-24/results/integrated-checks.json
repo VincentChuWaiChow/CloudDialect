@@ -1,0 +1,35 @@
+[
+  {
+    "name": "full",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen"
+    ],
+    "exit": 0,
+    "status": "pass",
+    "log": "results/full.log",
+    "rust_tests": 291,
+    "fixtures": 101
+  },
+  {
+    "name": "check",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "check",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--all-targets"
+    ],
+    "exit": 0,
+    "status": "pass",
+    "log": "results/check.log"
+  }
+]

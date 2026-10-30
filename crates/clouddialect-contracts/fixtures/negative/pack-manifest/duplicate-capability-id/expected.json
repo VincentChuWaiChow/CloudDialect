@@ -1,0 +1,14 @@
+{
+  "phase": "structural",
+  "document_kind": "manifest",
+  "outcome": "fail",
+  "errors": [
+    {
+      "category": "semantic",
+      "field_path": "capabilities.requirements[1].id",
+      "description_contains": "Capability requirement identifier must be unique"
+    }
+  ],
+  "warnings": [],
+  "blockers": []
+}

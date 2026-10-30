@@ -1,0 +1,32 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.41s
+     Running tests/compatibility_policy.rs (/tmp/clouddialect-runtime-target/debug/deps/compatibility_policy-b636f15af6dafe42)
+
+running 3 tests
+test source_tested_matrix_has_real_version_constraints_and_does_not_certify_pack_runtime ... ok
+test documented_document_profile_matches_the_actual_structural_entrypoint ... FAILED
+test legacy_security_fields_do_not_gain_compatibility_through_extensions ... FAILED
+
+failures:
+
+---- documented_document_profile_matches_the_actual_structural_entrypoint stdout ----
+
+thread 'documented_document_profile_matches_the_actual_structural_entrypoint' (132) panicked at tests/compatibility_policy.rs:117:5:
+assertion `left == right` failed
+  left: Warn
+ right: Fail
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- legacy_security_fields_do_not_gain_compatibility_through_extensions stdout ----
+
+thread 'legacy_security_fields_do_not_gain_compatibility_through_extensions' (133) panicked at tests/compatibility_policy.rs:154:10:
+index not found
+
+
+failures:
+    documented_document_profile_matches_the_actual_structural_entrypoint
+    legacy_security_fields_do_not_gain_compatibility_through_extensions
+
+test result: FAILED. 1 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+
+error: test failed, to rerun pass `--test compatibility_policy`

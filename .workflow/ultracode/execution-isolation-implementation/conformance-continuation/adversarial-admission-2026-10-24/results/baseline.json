@@ -1,0 +1,22 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "cargo",
+    "test",
+    "--manifest-path",
+    "crates/clouddialect-contracts/Cargo.toml",
+    "--frozen",
+    "--test",
+    "conformance",
+    "--test",
+    "conformance_controls"
+  ],
+  "exit": 0,
+  "fixtures": 75,
+  "controls": 11,
+  "cache_restored_public_only": true,
+  "network_fetch": false,
+  "behavior_changes": false,
+  "tdd_red": "Notapplicable:data-onlyexactcopies"
+}

@@ -1,0 +1,26 @@
+{
+  "scope": "No-paid-cloud planning-only revision, not runner/native qualification",
+  "date": "2026-10-29",
+  "command": "rtk proxy python3 inline assertions; wrapped git diff --check",
+  "criteria": {
+    "no_paid_cloud": "PASS",
+    "laptop_protected": "PASS",
+    "no_runner_action_or_visibility_authority": "PASS",
+    "unknown_eligibility_kvm": "PASS",
+    "no_workflow_file": "PASS",
+    "no_native_runtime_authority": "PASS",
+    "finite_proposed_metadata_bounds": "PASS",
+    "21_unchecked_numbered_tasks": "PASS",
+    "six_open_gates": "PASS",
+    "no_execution_crate": "PASS",
+    "protected_hashes_unchanged": "PASS",
+    "local_links_resolve": "PASS",
+    "diff_check": "PASS",
+    "public_disclosure_and_collector_only_output_cap": "PASS"
+  },
+  "protected_files": 290,
+  "external_account_or_native_calls": false,
+  "rust_retest": "SKIPPED: protected source unchanged; documentation/state-only change",
+  "actual_free_runner_kvm_eligibility": "UNVERIFIED",
+  "independent_post_correction_reread": false
+}

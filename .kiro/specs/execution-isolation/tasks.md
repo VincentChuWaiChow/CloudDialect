@@ -2,11 +2,64 @@
 
 ## Overview
 
-**Conditional, decision-gated plan; no implementation is authorized or performed by this documentation run.** Strategy: risk-first decisions and upstream compatibility, then foundation-first independent modules, then integrated qualification. All checkboxes remain unchecked. UD-1 through UD-5 and BG-01 must close with owner-approved evidence before implementation task 1.7 or any runtime work starts.
+**Conditional, decision-gated plan.** Strategy: risk-first decisions and upstream compatibility, then foundation-first independent modules, then integrated qualification. Checked supporting deliverables below record completed preparation or separately authorized Spec 1 work, not completion of their numbered task or approval of a gate. UD-1 through UD-5 and BG-01 must close with owner-approved evidence before implementation task 1.7 or any runtime work starts.
 
 Proposed implementation home: `crates/clouddialect-execution/` (abbreviated `EXEC/` below); it is not present today and this plan does not create it. Spec 1 owns `clouddialect-contracts`; its corrections are upstream prerequisites under separate approval, not permission to implement Spec 1 in these tasks. Paths and module interfaces are conditional on approved decision records; re-gate affected design/tasks if they change.
 
 Estimates are 2–4 engineering hours per leaf after prerequisites are available, not elapsed approval time or a delivery commitment. The sandbox/credential/persistence feasibility spikes are timeboxed investigations: unresolved results leave gates open and require a scoped follow-up plan, never an unreviewed default or an arbitrarily enlarged task. Platform/backend implementation must be re-estimated after selection; split any leaf exceeding four hours before dispatch.
+
+## Offline preparation delivered — 2026-10-30
+
+The user authorized four offline preparation workstreams, not decision closure:
+exact draft IPC schema/errors/state cases (1.2), concrete synthetic credential
+operation/resource cases (1.3), nine proposed retention policies and recovery
+scenarios (1.4), and immutable upstream identities/compile compatibility (1.6).
+These add **four checked supporting deliverables**, bringing the total to **15**.
+All **21 numbered tasks and six gates remain open**. No runtime crate, Docker/KVM
+or host preflight, provider calls, real credentials, image/build operations,
+dependency/license changes, commit or deployment were authorized by this packet.
+
+Schema/example checks establish draft consistency only. Credential and restore
+cases remain unexecuted plans. Upstream evidence is a compile-only probe plus
+44 selected in-memory tests, not a complete consumer/conformance run. See the
+[bounded report and exact evidence](../../../.workflow/ultracode/execution-isolation-goal-2026-10-30/offline-preparation/final-report.md).
+
+## Historical progress reconciled — 2026-10-29
+
+Fresh audit at immutable source revision `5b3dfa6954805cfbeba3e9724803dac064ba48e6`:
+all **21 numbered tasks remain open**. No `crates/clouddialect-execution/` exists;
+UD-1–UD-5 and BG-01 still lack the required owner approvals/qualification.
+Completed decision preparation and separately authorized upstream Spec 1 work
+remain checked only as supporting deliverables, not completed runtime tasks.
+
+Subsequent delivery at `1446fe89d16c44e2f1408685895d5cc746cc61e2` is now checked
+under 1.1: the manual metadata preflight workflow and its **24 passing synthetic
+offline tests**. There are **11 completed supporting deliverables**. The workflow
+has not been dispatched, and no native qualification, numbered-task completion
+or gate closure is implied by this delivery.
+
+The parent re-ran the existing contracts crate: **291 passing Rust test cases
+(including 7 doctests), plus 101 conformance fixtures**; build, formatting and
+warning-denying Clippy pass. Completeness has 10 focused tests. The runner-control
+target reports 11 passing cases: **10 substantive controls and one subprocess
+helper**, not 11 independent security controls. Local direct-child timeout/reaping
+does not qualify whole-domain descendant cleanup or native isolation.
+
+The real seven-license-policy scan still exits **4** on 20 dependency findings
+and the scanner-unknown custom root license. The owner retained that policy on
+2026-10-29; no exception, license review clearance or release readiness is implied.
+Native observation, budgets, actual backend/credential/restore behavior, fresh
+coverage and the accepted Spec 2 consumer/owner handoff remain unverified.
+See the [per-task audit and exact command evidence](../../../.workflow/ultracode/execution-isolation-status-audit-2026-10-29/final-report.md).
+
+## Historical progress snapshot — 2026-10-24
+
+The following paragraph records that earlier snapshot only; its counts and
+readiness descriptions are superseded by the current audit above.
+
+Decision recommendations and qualification plans have been drafted. Spec 1 contract prerequisites have been partially implemented and reviewed; they are tracked in the [upstream delivery plan](../contracts-evidence-foundation/implementation-plan.md), not counted as execution-runtime implementation here. No `crates/clouddialect-execution/` crate exists. All 21 numbered tasks remain open because their approval, compatibility, implementation or qualification obligations are not fully satisfied.
+
+The checked supporting items under 1.1–1.6 identify what is actually delivered. UD-1–UD-5 and BG-01 remain **OPEN**; native qualification is **NOT RUN**, and budgets remain unmeasured. The original BG-01 missing-export probe describes an old stub revision, not the current contracts crate. The semantic continuation adds actual JSON/TOML reference validation and verification consistency. The completeness diagnostic omission found by independent review was reproduced and repaired under explicit 2026-10-24 approval; Spec 1 task 14 is checked again after its 10 focused tests and full integrated checks pass. The bounded runner now has 11 controls and 101 admitted canonical fixtures: default Cargo tests pass 291 Rust tests plus 101 fixture oracles. The approved harness assertion checks decoded core verification preservation separately from exact extension bytes and structural results. Spec1 positive/negative tasks18/19 are complete within their stated scope; the current104-case corpus is not exhaustive delivery yet, with3native/backend/trusted-setup cases still gated. The delivered P0 consistency/store/digest/UTC/version and unknown-schema cases are only supporting subsets of task21; the local-profile adversarial corpus and Spec1task20are now delivered, but they do not establish authenticated ownership or native control enforcement. Spec1Task25/unit3.5traceabilitytablesandregressionchecksarenowdeliveredwith218field/APIrowsand5canonicalgates;thisisnotowneracceptanceorBG-01closure. Fresh coverage and complete consumer/conformance/native handoff remain unfinished. See the [current bounded report](../../../.workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-admission-2026-10-24/final-report.md). Current upstream progress does not replace owner approvals or complete any numbered runtime task.
 
 ## Tasks
 
@@ -15,10 +68,13 @@ Estimates are 2–4 engineering hours per leaf after prerequisites are available
     - Compare security boundary, Linux/macOS/CI portability, maintenance, descendant control and independent observation options. Produce a supported-profile proposal, T-01/T-04 probes and explicit residual risks. Do not select technology on behalf of owners.
     - Files: `decisions/UD-1-isolation.md`, `qualification/isolation-plan.md` under this spec directory.
     - Tests: review escape/startup/forged-runner probes and observer positive controls; any actual feasibility execution needs a separately approved disposable environment.
-    - Done criteria: security/operations owners approve a mechanism/profile with cited evidence, or record UD-1 still unresolved and stop dependent implementation. A written comparison alone does not close the gate.
+    - Done criteria: security/operations owners approve a mechanism/profile with cited evidence. Otherwise record UD-1 still unresolved, keep TASK-001 unchecked and stop dependent implementation; that is a blocked packet outcome, not task completion. A written comparison alone does not close the gate.
     - Estimate: 4h timebox. Dependencies: none; no prerequisite on other decision packets.
     - Design: DES-001, DES-002, DES-008.
     - _Requirements: REQ-001, REQ-002, REQ-005, REQ-008_
+    - Completed supporting deliverables:
+      - [x] Drafted the [isolation/verifier-observation comparison and residual risks](decisions/UD-1-isolation.md) and [qualification plan](qualification/isolation-plan.md). Checkpoint A's candidate direction is approved; supported-profile approval and native evidence remain outstanding.
+      - [x] Delivered the [manual-only hosted metadata preflight workflow](../../../.github/workflows/isolation-preflight.yml) and [synthetic offline contract tests](../../../scripts/verification/execution-isolation/test_hosted_preflight.py), committed in `1446fe8`; all 24 tests pass. The collector reads only allowlisted metadata without opening KVM. No GitHub workflow run, usable-KVM evidence or isolation qualification exists; TASK-001 and UD-1 remain open.
   - [ ] 1.2 TASK-002 Prepare versioned IPC decision evidence
     - Define proposed negotiation, framing, messages, bounded parsing/backpressure, correlation and cancellation only during this future decision task. Compare the JSON-RPC-over-stdio recommendation with requirements; do not treat JSON-RPC as transport authorization.
     - Files: `decisions/UD-2-ipc.md`, `qualification/ipc-cases.md` under this spec directory.
@@ -27,6 +83,9 @@ Estimates are 2–4 engineering hours per leaf after prerequisites are available
     - Estimate: 3h. Dependencies: none.
     - Design: DES-001, DES-006, DES-010.
     - _Requirements: REQ-001, REQ-003, REQ-006, REQ-010_
+    - Completed supporting deliverable:
+      - [x] Drafted the [IPC profile recommendation](decisions/UD-2-ipc.md) and [protocol qualification cases](qualification/ipc-cases.md). Owner approval of exact wire/schema/error contracts, reconciled bounds and interoperability evidence remain outstanding.
+      - [x] Added exact proposed closed message schemas, numeric errors, version/direction/state rules and 36 schema vectors on 2026-10-30. Offline schema checks pass; byte/state/authorization/cleanup qualification is NOT RUN. This is reviewed preparation, not UD-2 approval or task 1.2 completion.
   - [ ] 1.3 TASK-003 Prepare scoped credential delivery decision evidence
     - Compare delivery options, actual authority, lifetime/revocation and authorized-recipient exfiltration risk. Identify test-resource and operation scoping; no real secret is needed in this packet.
     - Files: `decisions/UD-3-credentials.md`, `qualification/credential-cases.md` under this spec directory.
@@ -35,6 +94,9 @@ Estimates are 2–4 engineering hours per leaf after prerequisites are available
     - Estimate: 3h. Dependencies: none.
     - Design: DES-005, DES-006, DES-010.
     - _Requirements: REQ-004, REQ-005, REQ-006, REQ-010_
+    - Completed supporting deliverable:
+      - [x] Drafted the [credential-delivery comparison and lifecycle proposal](decisions/UD-3-credentials.md) and [synthetic-canary qualification cases](qualification/credential-cases.md). Mechanism/provider selection, measured guarantees and owner approval remain outstanding.
+      - [x] Added exact provider-neutral synthetic operation/resource scopes, fixture bytes, lifetime/fence/retry rules and 20 concrete vector rows with expected dispatch counts on 2026-10-30. Internal consistency was checked; no broker, provider permission, leakage or lifecycle enforcement was tested. UD-3/task 1.3 remain open.
   - [ ] 1.4 TASK-004 Prepare persistence, retention and restore decision evidence
     - Compare audit/project persistence, integrity, authoritative commit ordering, access control, outage handling and offline behavior. Define every data-class retention/deletion rule, backup limitations and restore policy before claiming durability.
     - Files: `decisions/UD-4-persistence.md`, `qualification/restore-cases.md` under this spec directory.
@@ -43,6 +105,9 @@ Estimates are 2–4 engineering hours per leaf after prerequisites are available
     - Estimate: 4h. Dependencies: none.
     - Design: DES-007, DES-009, DES-010.
     - _Requirements: REQ-007, REQ-009, REQ-010_
+    - Completed supporting deliverable:
+      - [x] Drafted the [persistence options, ordering and retention decision table](decisions/UD-4-persistence.md) and [restore qualification cases](qualification/restore-cases.md). Backend/retention decisions, tested restore evidence and owner approval remain outstanding.
+      - [x] Expanded all nine data classes into concrete unapproved retention/deletion proposals, atomic ordering rules and twelve restore cases plus concrete timelines on 2026-10-30. No backend/durability/restore/retention enforcement was exercised; UD-4/task 1.4 remain open.
   - [ ] 1.5 TASK-005 Measure a reference workload and propose finite budgets
     - Define a reproducible reference workload and approved measurement environment; record CPU, aggregate memory, elapsed wall, process, output/storage, attempts, cleanup, and enabled external-use consumption with explicit units. Account for enforcement lag and cumulative retries.
     - Files: `decisions/UD-5-budgets.md`, `qualification/budget-measurements.json` under this spec directory.
@@ -51,6 +116,8 @@ Estimates are 2–4 engineering hours per leaf after prerequisites are available
     - Estimate: 4h timebox. Dependencies: none for reference planning; selected-profile qualification is reconciled at 1.7 and tested at 12.3.
     - Design: DES-003, DES-001, DES-010.
     - _Requirements: REQ-001, REQ-003, REQ-010_
+    - Completed supporting deliverable:
+      - [x] Drafted the [accounting/reference-workload measurement proposal](decisions/UD-5-budgets.md) and [explicit missing-measurement record](qualification/budget-measurements.json). No benchmark was executed or finite budget approved; task 1.5 remains incomplete.
   - [ ] 1.6 TASK-006 Reconcile and verify the Spec 1 dependency contract
     - Inventory delivered types/API versions; obtain upstream resolution of BehavioralResult fields/outcomes, manifest capability representation, verification configuration/structured failures and trusted catalog override. Optional extensions cannot become security grants. Do not add an invented accepted/pass variant or modify Spec 1 locally.
     - Files: `decisions/BG-01-upstream.md`, `qualification/upstream-compatibility.md` under this spec directory.
@@ -59,6 +126,13 @@ Estimates are 2–4 engineering hours per leaf after prerequisites are available
     - Estimate: 3h excluding upstream implementation. Dependencies: none.
     - Design: DES-004, DES-008.
     - _Requirements: REQ-001, REQ-004, REQ-008_
+    - Completed supporting deliverables:
+      - [x] Prepared the [initial upstream gap inventory](decisions/BG-01-upstream.md), [compatibility qualification plan](qualification/upstream-compatibility.md) and [separate Spec 1 prerequisite plan](decisions/BG-01-prerequisite-plan.md). Their stub-absence observations are historical, not current API-readiness evidence.
+      - [x] Delivered scoped upstream DTO/schema/catalog/structural/manifest/hash/reference/fidelity prerequisites and review fixes under separate Spec 1 authorization: [implementation handoff](../../../.workflow/ultracode/execution-isolation-implementation/reference-fidelity-report.md), [review corrections](../../../.workflow/ultracode/pr-3-fixes/final-report.md) and [catalog-entry correction](../../../.workflow/ultracode/pr-3-catalog-entry-fix/final-report.md). At that earlier handoff JSON semantics/evidence completeness were unfinished; the subsequent supporting deliverable supersedes those absence claims. Full conformance and the Spec 2 consumer/owner handoff remain incomplete; BG-01 is not closed.
+      - [x] Subsequently implemented scoped JSON semantic validation, all-five-kind mandatory blockers, verification-link consistency and transitive TOML/fidelity evidence checks; reconciled the [current upstream inventory](decisions/BG-01-upstream.md). [Semantic evidence](../../../.workflow/ultracode/execution-isolation-implementation/semantic-continuation/final-report.md) includes bounded independent semantic review and supersedes the earlier JSON-absence statement, not the still-open full conformance, native or owner-acceptance requirements. Completeness now has 10 passing focused tests, explicit invalid/empty Deferred dispositions and the approved direct-assumption diagnostic repair. That historical runner snapshot had 9 reported controls and 42 admitted fixtures; the fresh verification item below supersedes those counts. Full required/native corpus and fresh coverage remain incomplete. Two independent bounded fixture-content reviews found no actionable issues; Rust execution and source integration remain separately evidenced in the current admission report. Compatibility/extension policies are upstream artifacts, not runtime qualification. No execution runtime task is complete.
+      - [x] Delivered local field/gate traceability under separate Spec1Task25/unit3.5: [tables](../../../docs/traceability/field-to-requirement.md), [gate matrix](../../../docs/traceability/gate-to-requirement.md) and [RED/GREEN/review evidence](../../../.workflow/ultracode/execution-isolation-implementation/traceability-2026-10-24/final-report.md). All actual owner/consumer/native obligations of TASK-006 remain open.
+      - [x] Reverified the current upstream source at `5b3dfa6` on 2026-10-29: 291 Rust cases (including 7 doctests), 101 admitted fixture oracles, build/fmt/Clippy and local documentation checks pass. The runner's 11 test results include one subprocess helper; only 10 are substantive controls. [Current evidence](../../../.workflow/ultracode/execution-isolation-status-audit-2026-10-29/final-report.md) also records the failed license scan. This completes a bounded upstream verification/supporting handoff record, not accepted Spec 2 consumer integration, BG-01 closure or native qualification.
+      - [x] Bound current upstream revision `8ba032e` to exact API/schema/catalog hashes on 2026-10-30; the compile-only signature probe passes, three forbidden conversions/variants fail compilation as expected, and 44 selected in-memory Rust tests pass offline. No upstream source/dependency changes, complete conformance rerun, actual Spec 2 runtime consumer or owner acceptance; BG-01/task 1.6 remain open.
   - [ ] 1.7 TASK-007 Re-gate the approved design and establish the minimal compile/test foundation
     - Parent integration owner reconciles all six packets against requirements/design; no unresolved mechanism becomes a default. After separate implementation authorization, establish the standalone execution library and shared internal typed ports/identities from the approved design, with a path dependency on the delivered contracts crate.
     - Files: `EXEC/Cargo.toml`, `EXEC/Cargo.lock`, `EXEC/src/lib.rs`, `EXEC/src/model.rs`, `EXEC/tests/contracts.rs` (five-file implementation scope; affected spec amendments reviewed before this task starts).

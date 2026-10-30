@@ -1,0 +1,14 @@
+{
+  "phase": "structural",
+  "document_kind": "evidence-record",
+  "outcome": "fail",
+  "errors": [
+    {
+      "category": "version",
+      "field_path": "format_version",
+      "description_contains": "not valid SemVer 2.0.0"
+    }
+  ],
+  "warnings": [],
+  "blockers": []
+}

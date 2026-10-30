@@ -1,0 +1,52 @@
+{
+  "batch": "3.2.33",
+  "status": "pass",
+  "case_paths": [
+    "adversarial/p0-authority/prohibited-worker-action-requests",
+    "adversarial/p0-authority/forged-approver-claim"
+  ],
+  "exact_files": [
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/prohibited-worker-action-requests/input.toml",
+      "sha256": "b4517c6415516080919de1c7583c6619c0c269af3f961fa9557fdbb9b7a51244"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/prohibited-worker-action-requests/expected.json",
+      "sha256": "553ce3d5557b4f7139810a256e80d4474aae8af8e9bcc9c30608a874362237ee"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/forged-approver-claim/input.json",
+      "sha256": "0375abaecd163ac7273b2838ad7f6a99df3df79e665eb242a0fbb15b36316337"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/p0-authority/forged-approver-claim/expected.json",
+      "sha256": "8effeff3202f28e001fdfacca54cc1f3c8ae20036511c6a5a8eef9d72acfbe3b"
+    }
+  ],
+  "frozen_copies": true,
+  "full_test_command": [
+    "rtk",
+    "proxy",
+    "cargo",
+    "test",
+    "--manifest-path",
+    "crates/clouddialect-contracts/Cargo.toml",
+    "--frozen"
+  ],
+  "exit": 0,
+  "rust_tests_including_doctests": 288,
+  "canonical_fixture_count": 98,
+  "exact_prefix_checks": [
+    {
+      "path": "adversarial/p0-authority/prohibited-worker-action-requests",
+      "exit": 0,
+      "count": 1
+    },
+    {
+      "path": "adversarial/p0-authority/forged-approver-claim",
+      "exit": 0,
+      "count": 1
+    }
+  ],
+  "completed_at": "2026-10-24T17:21:38.182945+00:00"
+}

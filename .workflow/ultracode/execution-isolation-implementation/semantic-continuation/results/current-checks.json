@@ -1,0 +1,103 @@
+[
+  {
+    "name": "current-full",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen"
+    ],
+    "exit_code": 0,
+    "status": "pass",
+    "completed_at": "2026-10-23T15:37:38.077050+00:00",
+    "evidence": "results/current-full.txt"
+  },
+  {
+    "name": "current-check",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "check",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--all-targets"
+    ],
+    "exit_code": 0,
+    "status": "pass",
+    "completed_at": "2026-10-23T15:37:38.201572+00:00",
+    "evidence": "results/current-check.txt"
+  },
+  {
+    "name": "current-fmt",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "fmt",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--check"
+    ],
+    "exit_code": 0,
+    "status": "pass",
+    "completed_at": "2026-10-23T15:37:38.312130+00:00",
+    "evidence": "results/current-fmt.txt"
+  },
+  {
+    "name": "current-clippy",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "clippy",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--all-targets",
+      "--",
+      "-D",
+      "warnings"
+    ],
+    "exit_code": 0,
+    "status": "pass",
+    "completed_at": "2026-10-23T15:37:38.486274+00:00",
+    "evidence": "results/current-clippy.txt"
+  },
+  {
+    "name": "current-python",
+    "command": [
+      "rtk",
+      "proxy",
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "status": "pass",
+    "completed_at": "2026-10-23T15:37:38.539660+00:00",
+    "evidence": "results/current-python.txt"
+  },
+  {
+    "name": "current-whitespace",
+    "command": [
+      "rtk",
+      "proxy",
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "status": "pass",
+    "completed_at": "2026-10-23T15:37:38.552060+00:00",
+    "evidence": "results/current-whitespace.txt"
+  }
+]

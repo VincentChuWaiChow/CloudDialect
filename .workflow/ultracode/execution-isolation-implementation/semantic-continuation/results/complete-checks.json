@@ -1,0 +1,121 @@
+[
+  {
+    "name": "complete-focused",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--test",
+      "evidence_completeness"
+    ],
+    "exit_code": 0,
+    "status": "pass",
+    "completed_at": "2026-10-23T15:47:50.544782+00:00",
+    "evidence": "results/complete-focused.txt"
+  },
+  {
+    "name": "complete-full",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen"
+    ],
+    "exit_code": 0,
+    "status": "pass",
+    "completed_at": "2026-10-23T15:47:58.808776+00:00",
+    "evidence": "results/complete-full.txt"
+  },
+  {
+    "name": "complete-check",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "check",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--all-targets"
+    ],
+    "exit_code": 0,
+    "status": "pass",
+    "completed_at": "2026-10-23T15:47:59.412392+00:00",
+    "evidence": "results/complete-check.txt"
+  },
+  {
+    "name": "complete-fmt",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "fmt",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--check"
+    ],
+    "exit_code": 0,
+    "status": "pass",
+    "completed_at": "2026-10-23T15:47:59.538102+00:00",
+    "evidence": "results/complete-fmt.txt"
+  },
+  {
+    "name": "complete-clippy",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "clippy",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--all-targets",
+      "--",
+      "-D",
+      "warnings"
+    ],
+    "exit_code": 0,
+    "status": "pass",
+    "completed_at": "2026-10-23T15:48:00.216186+00:00",
+    "evidence": "results/complete-clippy.txt"
+  },
+  {
+    "name": "complete-python",
+    "command": [
+      "rtk",
+      "proxy",
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "status": "pass",
+    "completed_at": "2026-10-23T15:48:00.268859+00:00",
+    "evidence": "results/complete-python.txt"
+  },
+  {
+    "name": "complete-whitespace",
+    "command": [
+      "rtk",
+      "proxy",
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "status": "pass",
+    "completed_at": "2026-10-23T15:48:00.281694+00:00",
+    "evidence": "results/complete-whitespace.txt"
+  }
+]

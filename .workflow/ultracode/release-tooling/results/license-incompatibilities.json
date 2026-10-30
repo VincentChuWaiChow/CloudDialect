@@ -1,0 +1,126 @@
+{
+  "tool": "cargo-deny 0.20.2",
+  "exit_code": 4,
+  "policy": "exact seven-license allow-only policy, no exclusions or exceptions",
+  "command": "rtk proxy env CARGO_HOME=/tmp/clouddialect-release-tooling-verification/cargo-home /tmp/clouddialect-release-tooling-verification/bin/cargo-deny --frozen --manifest-path crates/clouddialect-contracts/Cargo.toml --config deny.toml check licenses",
+  "cargo_lock_sha256": "f2534f3d967742bea48605978d2c3408d2eb3842430b0441a09cf28766c9cf3f",
+  "deny_toml_sha256": "9e25ab85c8f637690a706d3cdd922428ed085aa81442f464764d8e55f3ffc0b5",
+  "tool_archive_sha256": "9f12ed4c49936e09b48bf862b595cde2fe64fcbd9d74dfacac6131ca824c8d5f",
+  "raw_report_sha256": "ac691331096e0c69439679dd302b182de47ad840eae4c02ddb30b93dc9963f02",
+  "rejected_dependencies": [
+    {
+      "name": "borrow-or-share",
+      "version": "0.2.4",
+      "license": "MIT-0"
+    },
+    {
+      "name": "icu_collections",
+      "version": "2.3.0",
+      "license": "Unicode-3.0"
+    },
+    {
+      "name": "icu_locale_core",
+      "version": "2.3.0",
+      "license": "Unicode-3.0"
+    },
+    {
+      "name": "icu_normalizer",
+      "version": "2.3.0",
+      "license": "Unicode-3.0"
+    },
+    {
+      "name": "icu_normalizer_data",
+      "version": "2.3.0",
+      "license": "Unicode-3.0"
+    },
+    {
+      "name": "icu_properties",
+      "version": "2.3.0",
+      "license": "Unicode-3.0"
+    },
+    {
+      "name": "icu_properties_data",
+      "version": "2.3.0",
+      "license": "Unicode-3.0"
+    },
+    {
+      "name": "icu_provider",
+      "version": "2.3.1",
+      "license": "Unicode-3.0"
+    },
+    {
+      "name": "litemap",
+      "version": "0.8.3",
+      "license": "Unicode-3.0"
+    },
+    {
+      "name": "potential_utf",
+      "version": "0.1.6",
+      "license": "Unicode-3.0"
+    },
+    {
+      "name": "tinystr",
+      "version": "0.8.4",
+      "license": "Unicode-3.0"
+    },
+    {
+      "name": "unicode-ident",
+      "version": "1.0.27",
+      "license": "(MIT OR Apache-2.0) AND Unicode-3.0"
+    },
+    {
+      "name": "writeable",
+      "version": "0.6.4",
+      "license": "Unicode-3.0"
+    },
+    {
+      "name": "yoke",
+      "version": "0.8.3",
+      "license": "Unicode-3.0"
+    },
+    {
+      "name": "yoke-derive",
+      "version": "0.8.4",
+      "license": "Unicode-3.0"
+    },
+    {
+      "name": "zerofrom",
+      "version": "0.1.8",
+      "license": "Unicode-3.0"
+    },
+    {
+      "name": "zerofrom-derive",
+      "version": "0.1.8",
+      "license": "Unicode-3.0"
+    },
+    {
+      "name": "zerotrie",
+      "version": "0.2.5",
+      "license": "Unicode-3.0"
+    },
+    {
+      "name": "zerovec",
+      "version": "0.11.8",
+      "license": "Unicode-3.0"
+    },
+    {
+      "name": "zerovec-derive",
+      "version": "0.11.6",
+      "license": "Unicode-3.0"
+    }
+  ],
+  "root_diagnostic": {
+    "name": "clouddialect-contracts",
+    "version": "0.1.0",
+    "code": "unlicensed",
+    "meaning": "Scanner could not confidently identify existing custom LICENSE.md; not a claim that the repository has no license."
+  },
+  "interpretation": "Policy mismatch requiring owner review, not legal clearance or a legal incompatibility conclusion.",
+  "published_report_sha256": "59f626741af3d1a285de974f8121de96037c2f54a2128b4b36231b1266c54465",
+  "report_path_redaction": {
+    "replacement": "<REPOSITORY>",
+    "scope": "Absolute local repository prefix replaced and trailing horizontal whitespace removed; license findings and scanner values unchanged.",
+    "original_retention": "Unredacted original retained locally under /tmp; not included in this commit.",
+    "raw_report_sha256": "Digest of the original unredacted scanner output; published_report_sha256 covers the committed redacted copy."
+  }
+}

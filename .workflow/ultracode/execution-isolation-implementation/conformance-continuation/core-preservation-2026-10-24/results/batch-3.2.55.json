@@ -1,0 +1,35 @@
+{
+  "batch": "3.2.55",
+  "status": "pass",
+  "cases": [
+    {
+      "path": "integration/verification-consistency/invalid-hash-length",
+      "files": {
+        "crates/clouddialect-contracts/fixtures/integration/verification-consistency/invalid-hash-length/input.json": "6e568830ca8f90f37b5e7ffb89aad7b09f624ada761187cc613fea80c96481d3",
+        "crates/clouddialect-contracts/fixtures/integration/verification-consistency/invalid-hash-length/expected.json": "c4f3cf0edeff8de0a992f3acb852be11a31c1f7047c1241bb6293ce64ab5f621"
+      }
+    },
+    {
+      "path": "integration/verification-consistency/approval-result-id-mismatch",
+      "files": {
+        "crates/clouddialect-contracts/fixtures/integration/verification-consistency/approval-result-id-mismatch/input.json": "158a38687269d7e214207abc2ddd2172126607284a25a8619b61a51d473dc793",
+        "crates/clouddialect-contracts/fixtures/integration/verification-consistency/approval-result-id-mismatch/expected.json": "5072bb30800a72e542b2f3bc567f15d02ca4cee2e0b8f0ec66dc9c309d9afd15"
+      }
+    }
+  ],
+  "exact_frozen_copies": true,
+  "command": [
+    "rtk",
+    "proxy",
+    "cargo",
+    "test",
+    "--manifest-path",
+    "crates/clouddialect-contracts/Cargo.toml",
+    "--frozen"
+  ],
+  "exit": 0,
+  "rust_tests_including_doctests": 288,
+  "canonical_fixtures": 46,
+  "log": "results/batch-3.2.55.log",
+  "completed_at": "2026-10-24T10:43:04.992404+00:00"
+}

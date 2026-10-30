@@ -1,0 +1,14 @@
+{
+  "phase": "structural",
+  "document_kind": "manifest",
+  "outcome": "fail",
+  "errors": [
+    {
+      "category": "semantic",
+      "field_path": "x.capabilities",
+      "description_contains": "Extension field must not shadow a core top-level key"
+    }
+  ],
+  "warnings": [],
+  "blockers": []
+}

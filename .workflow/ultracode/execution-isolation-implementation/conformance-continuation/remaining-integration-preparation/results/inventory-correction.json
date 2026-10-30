@@ -1,0 +1,18 @@
+{
+  "old_unapproved_draft_paths": [
+    "integration/digest-vectors/sha3-224/empty",
+    "integration/digest-vectors/sha3-224/abc"
+  ],
+  "corrected_paths": [
+    "integration/digest-vectors/sha3-512/empty",
+    "integration/digest-vectors/sha3-512/abc"
+  ],
+  "evidence": [
+    "catalog/schemas/verification-result/1.0/schema.json content_hash.algorithm enum",
+    "src/validator/artifact_hash.rs five match arms",
+    "tests/artifact_hash.rs five literal independent vector tuples"
+  ],
+  "source_changes": false,
+  "case_count_preserved": 104,
+  "not_a_supported_algorithm_addition": true
+}

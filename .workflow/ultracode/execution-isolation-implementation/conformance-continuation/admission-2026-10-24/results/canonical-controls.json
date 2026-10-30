@@ -1,0 +1,123 @@
+{
+  "captured_at": "2026-10-24T09:25:48.344826+00:00",
+  "checks": 12,
+  "matched": 12,
+  "results": [
+    {
+      "name": "canonical-prefix-None",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613"
+      ],
+      "exit_code": 0,
+      "expected_count": 42,
+      "matched": true,
+      "output": "PASS integration/artifact-hash-mismatch/tampered-candidate\nPASS integration/blocking-gap/unknown-evidence-mandatory-obligation\nPASS integration/semantic-resolution-failure/manifest-bad-contract-ref\nPASS negative/behavioral-contract/invalid-behavioral-fidelity\nPASS negative/behavioral-contract/missing-id\nPASS negative/behavioral-contract/obligation-no-evidence-no-assumption\nPASS negative/evidence-record/inferred-empty-reasoning-chain\nPASS negative/evidence-record/missing-classification\nPASS negative/evidence-record/unknown-empty-assumptions\nPASS negative/pack-manifest/capability-unknown-field\nPASS negative/pack-manifest/duplicate-capability-id\nPASS negative/pack-manifest/inline-contract-body\nPASS negative/pack-manifest/invalid-behavioral-fidelity\nPASS negative/pack-manifest/missing-capabilities\nPASS negative/pack-manifest/missing-toolchain-for-full-operation\nPASS negative/pack-manifest/unknown-capability-version\nPASS negative/verification-result/acceptance-missing-approver\nPASS negative/verification-result/empty-tests-array\nPASS negative/verification-result/missing-binding\nPASS negative/verification-result/missing-configuration\nPASS negative/verification-result/missing-test-obligation\nPASS negative/verification-result/nonpass-string-failure-description\nPASS negative/verification-result/nonpass-without-failure-description\nPASS negative/verification-result/unknown-hash-algorithm\nPASS negative/version/unsupported-major\nPASS negative/version/unsupported-minor-newer\nPASS positive/behavioral-contract/minimal-valid\nPASS positive/behavioral-contract/with-behavioral-notes\nPASS positive/behavioral-contract/with-extension-field\nPASS positive/behavioral-contract/with-known-behavior\nPASS positive/behavioral-contract/with-unresolved-assumption-on-dependency\nPASS positive/evidence-record/inferred\nPASS positive/evidence-record/observed\nPASS positive/evidence-record/unknown\nPASS positive/pack-manifest/full-coverage\nPASS positive/pack-manifest/with-extension-section\nPASS positive/pack-manifest/with-unsupported-operation\nPASS positive/verification-result/minimal\nPASS positive/verification-result/with-acceptance\nPASS round-trip/extension-field-preservation/behavioral-contract\nPASS round-trip/extension-field-preservation/evidence-record\nPASS round-trip/extension-field-preservation/verification-result\n42 conformance fixtures passed\n"
+    },
+    {
+      "name": "canonical-prefix-positive",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "positive"
+      ],
+      "exit_code": 0,
+      "expected_count": 13,
+      "matched": true,
+      "output": "PASS positive/behavioral-contract/minimal-valid\nPASS positive/behavioral-contract/with-behavioral-notes\nPASS positive/behavioral-contract/with-extension-field\nPASS positive/behavioral-contract/with-known-behavior\nPASS positive/behavioral-contract/with-unresolved-assumption-on-dependency\nPASS positive/evidence-record/inferred\nPASS positive/evidence-record/observed\nPASS positive/evidence-record/unknown\nPASS positive/pack-manifest/full-coverage\nPASS positive/pack-manifest/with-extension-section\nPASS positive/pack-manifest/with-unsupported-operation\nPASS positive/verification-result/minimal\nPASS positive/verification-result/with-acceptance\n13 conformance fixtures passed\n"
+    },
+    {
+      "name": "canonical-prefix-negative",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "negative"
+      ],
+      "exit_code": 0,
+      "expected_count": 23,
+      "matched": true,
+      "output": "PASS negative/behavioral-contract/invalid-behavioral-fidelity\nPASS negative/behavioral-contract/missing-id\nPASS negative/behavioral-contract/obligation-no-evidence-no-assumption\nPASS negative/evidence-record/inferred-empty-reasoning-chain\nPASS negative/evidence-record/missing-classification\nPASS negative/evidence-record/unknown-empty-assumptions\nPASS negative/pack-manifest/capability-unknown-field\nPASS negative/pack-manifest/duplicate-capability-id\nPASS negative/pack-manifest/inline-contract-body\nPASS negative/pack-manifest/invalid-behavioral-fidelity\nPASS negative/pack-manifest/missing-capabilities\nPASS negative/pack-manifest/missing-toolchain-for-full-operation\nPASS negative/pack-manifest/unknown-capability-version\nPASS negative/verification-result/acceptance-missing-approver\nPASS negative/verification-result/empty-tests-array\nPASS negative/verification-result/missing-binding\nPASS negative/verification-result/missing-configuration\nPASS negative/verification-result/missing-test-obligation\nPASS negative/verification-result/nonpass-string-failure-description\nPASS negative/verification-result/nonpass-without-failure-description\nPASS negative/verification-result/unknown-hash-algorithm\nPASS negative/version/unsupported-major\nPASS negative/version/unsupported-minor-newer\n23 conformance fixtures passed\n"
+    },
+    {
+      "name": "canonical-prefix-round-trip",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "round-trip"
+      ],
+      "exit_code": 0,
+      "expected_count": 3,
+      "matched": true,
+      "output": "PASS round-trip/extension-field-preservation/behavioral-contract\nPASS round-trip/extension-field-preservation/evidence-record\nPASS round-trip/extension-field-preservation/verification-result\n3 conformance fixtures passed\n"
+    },
+    {
+      "name": "canonical-prefix-integration",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "integration"
+      ],
+      "exit_code": 0,
+      "expected_count": 3,
+      "matched": true,
+      "output": "PASS integration/artifact-hash-mismatch/tampered-candidate\nPASS integration/blocking-gap/unknown-evidence-mandatory-obligation\nPASS integration/semantic-resolution-failure/manifest-bad-contract-ref\n3 conformance fixtures passed\n"
+    },
+    {
+      "name": "canonical-prefix-__no_admitted_fixture__",
+      "command": [
+        "rtk",
+        "proxy",
+        "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+        "__no_admitted_fixture__"
+      ],
+      "exit_code": 1,
+      "expected_count": null,
+      "matched": true,
+      "output": "no fixtures selected by directory prefix\n"
+    },
+    {
+      "name": "wrong-oracle-positive/behavioral-contract/minimal-valid",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-admitted-wrong-oracle-uuvhvcdx/positive/behavioral-contract/minimal-valid: fixture validator exit status: 1: /tmp/clouddialect-admitted-wrong-oracle-uuvhvcdx/positive/behavioral-contract/minimal-valid: outcome: expected \"fail\", actual \"pass\"\n\n"
+    },
+    {
+      "name": "wrong-oracle-negative/behavioral-contract/missing-id",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-admitted-wrong-oracle-l9qpv3hu/negative/behavioral-contract/missing-id: fixture validator exit status: 1: /tmp/clouddialect-admitted-wrong-oracle-l9qpv3hu/negative/behavioral-contract/missing-id: outcome: expected \"pass\", actual \"fail\"\n\n"
+    },
+    {
+      "name": "wrong-oracle-negative/version/unsupported-minor-newer",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-admitted-wrong-oracle-2p5q4bu3/negative/version/unsupported-minor-newer: fixture validator exit status: 1: /tmp/clouddialect-admitted-wrong-oracle-2p5q4bu3/negative/version/unsupported-minor-newer: outcome: expected \"fail\", actual \"warn\"\n\n"
+    },
+    {
+      "name": "wrong-oracle-integration/semantic-resolution-failure/manifest-bad-contract-ref",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-admitted-wrong-oracle-4p3rrsry/integration/semantic-resolution-failure/manifest-bad-contract-ref: fixture validator exit status: 1: /tmp/clouddialect-admitted-wrong-oracle-4p3rrsry/integration/semantic-resolution-failure/manifest-bad-contract-ref: outcome: expected \"pass\", actual \"fail\"\n\n"
+    },
+    {
+      "name": "wrong-oracle-integration/blocking-gap/unknown-evidence-mandatory-obligation",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-admitted-wrong-oracle-7_ndg4oo/integration/blocking-gap/unknown-evidence-mandatory-obligation: fixture validator exit status: 1: /tmp/clouddialect-admitted-wrong-oracle-7_ndg4oo/integration/blocking-gap/unknown-evidence-mandatory-obligation: outcome: expected \"evidence-complete\", actual \"blocked\"\n\n"
+    },
+    {
+      "name": "wrong-oracle-integration/artifact-hash-mismatch/tampered-candidate",
+      "exit_code": 1,
+      "matched": true,
+      "output": "/tmp/clouddialect-admitted-wrong-oracle-f1g9yhf7/integration/artifact-hash-mismatch/tampered-candidate: fixture validator exit status: 1: /tmp/clouddialect-admitted-wrong-oracle-f1g9yhf7/integration/artifact-hash-mismatch/tampered-candidate: expected_match: expected true, actual false\n\n"
+    }
+  ],
+  "all82_exact_copies": true,
+  "protected_baseline_files_unchanged": 90,
+  "bounded_batches_full_suite_verified": 25
+}

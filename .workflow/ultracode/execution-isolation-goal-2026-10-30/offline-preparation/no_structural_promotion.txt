@@ -1,0 +1,11 @@
+error[E0277]: the trait bound `BehavioralResult: From<StructuralResult>` is not satisfied
+ --> /home/vchu@maureva.com/Documents/vscode/CloudDialect/.workflow/ultracode/execution-isolation-goal-2026-10-30/offline-preparation/no_structural_promotion.rs:2:61
+  |
+2 | pub fn promote(x: StructuralResult) -> BehavioralResult { x.into() }
+  |                                                             ^^^^ the trait `From<StructuralResult>` is not implemented for `BehavioralResult`
+  |
+  = note: required for `StructuralResult` to implement `Into<BehavioralResult>`
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0277`.

@@ -1,6 +1,6 @@
 # Implementation Plan: CloudDialect Contracts & Evidence Foundation
 
-**Later publication action approval:** the user explicitly requested git commit and git push for this work. Those actions are now authorized; the earlier no-commit/no-push implementation limit is historical. Native probes, deployment and releases remain unauthorized.
+**Publication authority:** earlier commit/push approvals apply to their historical actions. The current 2026-10-24 approval covers exactly 26 frozen adversarial pairs, related proof-backed checklist/status updates and local milestone commits. The prior branch push is complete; this admission proposal does not authorize another push. No production-library/harness/API/dependency changes, native/provider probes, deployments, releases or runtime-gate closure follow from this tranche.
 
 
 ## Current physical domain layout
@@ -12,7 +12,7 @@ This plan builds the `clouddialect-contracts` Rust crate, its bundled JSON Schem
 
 **Current continuation status (2026-10-22):** user approved P0-A–F for implementation planning, then separately authorized the remaining Spec 1 prerequisite units in [implementation-plan.md](implementation-plan.md), TDD and no commits/probes/pushes/releases. User attests this is a new project and approves document/catalog **1.0.0** and crate API **0.1.0** as the initial MVP versions. This is not an independent external-publication audit or security-gate approval. Exact encoded extension JSON value bytes are required; raw_value on the existing pinned serde_json is separately approved.
 
-**Delivery is partial.** DTOs, schemas, catalog inventory, frozen snapshot/loading, structural JSON validation, local TOML rules and candidate hash equality have bounded verification. JSON semantic/completeness validation, full mandatory-blocker integration, exhaustive conformance and delivered downstream compatibility remain unfinished; scoped fidelity/TOML semantic delivery is recorded in the current report. See the [current run report](../../../.workflow/ultracode/execution-isolation-implementation/final-report.md) for actual evidence and outstanding work. Canonical task checkmarks are conservative; BG-01 and Spec 2 UD-1–UD-5 remain OPEN.
+**Delivery is partial.** DTOs, schemas, catalog inventory, frozen snapshot/loading, structural JSON validation, local TOML rules and candidate hash equality have bounded verification. JSON/TOML semantics and mandatory blockers have bounded independent review; completeness has 10 focused tests after the approved direct-assumption repair; the bounded runner has 11 controls and 101 admitted canonical fixtures. The harness now compares decoded core verification data as well as exact extension value bytes and structural results. Current execution has parent Rust checks and independently executed bounded runner/control checks, not native or acceptance qualification. Exhaustive conformance and downstream compatibility remain unfinished. See the [current run report](../../../.workflow/ultracode/execution-isolation-implementation/final-report.md) for actual evidence and outstanding work. Canonical task checkmarks are conservative; BG-01 and Spec 2 UD-1–UD-5 remain OPEN.
 
 `BehavioralResult` full implementation, the Rust CLI binary, worker isolation, and Python transformation logic are explicitly out of scope.
 
@@ -305,7 +305,8 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - Property 6: a mandatory unknown extension produces a blocker; document cannot be marked accepted (Req 10.4).
   - An extension field attempting to override a core verification result field does not affect the core outcome (Req 10.5).
 
-- [ ] 13. Implement `validate_semantic()`
+- [x] 13. Implement `validate_semantic()`
+  - Verified implementation (2026-10-23): JSON/TOML entrypoints, transitive contract evidence, verification consistency and mandatory blockers pass integrated tests. Reviewer28found no new actionable defect in this scope and independently passed36targeted tests; parent full implemented-tree checks passed. See [2.9V/S/T evidence](../../../.workflow/ultracode/execution-isolation-implementation/semantic-continuation/final-report.md). Complete conformance and real scoped-store/native handoff remain separate obligations; this does not implement completeness or close BG-01.
   - Create `crates/clouddialect-contracts/src/validator/semantic.rs`.
   - Implement:
     ```rust
@@ -328,9 +329,12 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - `SemanticResult` has no field implying behavioral correctness (Req 8.2).
   - Property 4: `validate_structural` pass and `validate_semantic` fail can coexist on the same document without contradiction.
 
-- [ ] 14. Implement blocking-gap report and artifact hash staleness detection
+- [x] 14. Implement blocking-gap report and artifact hash staleness detection
+  - Repaired 2026-10-24 under explicit bounded approval: actual regression RED `03738e4` reported 2 gaps instead of 4; minimal branch move/GREEN `0396883` preserves direct assumptions, root blockers, zero store calls and the non-accepting projection. All 10 completeness tests, 6 artifact-hash tests and the full implemented suite pass. Reviewer 30 statically reviewed the proposed patch before application; current execution/integration is parent-verified, not independently re-reviewed. Full corpus, fresh coverage, consumer/native qualification and BG-01 remain separate and incomplete.
+  - Delivered2026-10-23: explicit-context completeness helper with9focused tests and prior all-five-algorithm artifact helper with6tests; full integrated checks pass. Completeness has parent-only audit after reviewer28/allocation exhaustion, not independent review. EvidenceComplete is never behavioral verification or acceptance; full conformance/consumer/native handoff remain separate.
   - Create `crates/clouddialect-contracts/src/validator/behavioral.rs`.
   - Implement `check_evidence_completeness(contract: &BehavioralContract, candidate_id: &str, store: &dyn DocumentStore, validator: &Validator) -> BehavioralResult` using P0-E scoped validated evidence records:
+    - Owner-approved2026-10-23: validate the supplied source first; an unvalidatable contract or structurally valid zero-obligation scope returns non-accepting Deferred without fabricated IDs or store access. Empty-scope mandatory blockers remain in separate semantic results. Each resource assumption blocks every declared obligation; no resource-to-obligation mapping is inferred.
     - Iterate over all obligations in the contract.
     - For obligations with `evidence_refs`: for each referenced evidence record, check if the classification is `unknown`. If yes, append a `BlockingGap { candidate_id, obligation_id, assumption_text }` to the result.
     - For obligations with `unresolved_assumption`: always append a `BlockingGap`.
@@ -341,9 +345,10 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
     - Compute the hash of `candidate_bytes` using the specified algorithm.
     - Return `true` if the computed hash matches the recorded value, `false` otherwise.
     - When `false`, the acceptance result is invalid and must not be used for any downstream decision (Req 4.6).
-  - Note: BehavioralOutcome::Deferred means not evaluated; this task implements Blocked/EvidenceComplete completeness checks only. No outcome accepts, and Spec 2 may populate a test projection only from the same immutable validated verification document with independent observation checks.
+  - Note: BehavioralOutcome::Deferred means not evaluated, including an unvalidatable supplied source under the owner-approved initial profile. Blocked/EvidenceComplete describe evaluated obligation support, not acceptance. Every completeness outcome leaves verification_result absent and test_results empty; Spec 2 may populate a projection only from the same immutable validated verification document with independent observation checks.
   - Write unit tests:
-    - Test: a contract where all obligations have `observed` or `inferred` evidence → `outcome: EvidenceComplete`.
+    - Test: a valid contract where all obligations have `observed` or `inferred` evidence without unresolved assumptions, and no resource assumption remains → `outcome: EvidenceComplete`.
+    - Test: observed/inferred evidence with residual assumptions blocks its obligations; every resource assumption blocks every declared obligation. Unvalidatable source returns Deferred without fabricated gaps or store access.
     - Test: a contract where a mandatory obligation has `unknown` evidence → `outcome: Blocked` with a `BlockingGap` containing `obligation_id` and `assumption_text` (Req 3.6, 11.4).
     - Test: modified candidate bytes → `verify_artifact_hash` returns `false` (Req 4.6).
     - Test: Property 6 — mandatory unknown evidence produces a blocking-gap preventing acceptance.
@@ -427,9 +432,10 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - Manifest `full` + contract obligation `adaptation-required` produces `SemanticResult { outcome: Fail }`.
   - Manifest `partial` + contract obligation `architectural-change-required` produces `SemanticResult { outcome: Fail }`.
   - Manifest `full` + all obligations `equivalent-within-contract` produces `SemanticResult { outcome: Pass }`.
-  - Scoped initial-MVP delivery: actual fidelity matrix and ManifestValidator/ValidateManifest semantic method use the owner's explicitly supplied active catalog and scoped store. Stored identity/version/bytes/hash/schema/mandatory semantics are checked before use. JSON semantic/verification-linkage portions of task13 and completeness of task14 remain unfinished; no result accepts a transformation.
+  - Scoped initial-MVP delivery: actual fidelity matrix and ManifestValidator/ValidateManifest semantic method use the owner's explicitly supplied active catalog and scoped store. Stored identity/version/bytes/hash/schema/mandatory semantics are checked before use. Later semantic/completeness delivery is recorded under tasks13/14; this earlier scoped snapshot alone did not deliver those portions. No result accepts a transformation.
 
-- [ ] 18. Write positive conformance fixtures
+- [x] 18. Write positive conformance fixtures
+  - Delivered 2026-10-24: all 13 canonical positives are admitted with exact frozen bytes and pass the actual structural/local runner. Batches 3.2.2–3.2.8 each passed owned-root/prefix checks and the complete 286-test Rust suite. Independent packet31 verified task/P0 content, three required-pair fidelity values, all resource dimensions, P0-C bindings and empty/nonempty P0-B declarations. Synthetic provider/origin/approver/capability fields remain declarations, not observed behavior or authority. See the [admission report](../../../.workflow/ultracode/execution-isolation-implementation/conformance-continuation/admission-2026-10-24/final-report.md).
   - Every verification fixture includes P0-C configuration/binding/digests/test-obligation links; every manifest fixture includes an explicit valid P0-B capabilities table, with both empty and nonempty positive declarations. A minimal pass is structural only, never acceptance.
   - Create the following fixture directories under `crates/clouddialect-contracts/fixtures/positive/`. Each fixture directory contains `input.json` (valid document) and `expected.json` (`{ "outcome": "pass", "phase": "structural", "errors": [], "warnings": [] }`).
   - Fixtures to create (one sub-directory each):
@@ -454,7 +460,8 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - Each `expected.json` specifies `"outcome": "pass"`.
   - Property 4 (fidelity enum exhaustiveness): the `behavioral-contract/minimal-valid` and `behavioral-contract/with-behavioral-notes` fixtures cover at least three distinct `behavioral_fidelity` values collectively.
 
-- [ ] 19. Write negative conformance fixtures
+- [x] 19. Write negative conformance fixtures
+  - Delivered 2026-10-24: all baseline15 plus eight P0 cases are admitted; 22 expected Fail and the required newer-MINOR Warn match exact category/path/description multisets. All 13 bounded batches passed prefix/owned-root and complete Rust checks. Packet32 independently traced the two-diagnostic inferred-reasoning case through schema/pinned engine/adapter, not blind output copying. Typed TOML shape errors retain the actual Unparseable/null-path profile; these fixtures do not prove full error-actionability or native/authentication requirements.
   - Add P0 cases: verification missing-binding, missing-configuration, nonpass-string-failure-description, missing-test-obligation; manifest missing-capabilities, unknown-capability-version, duplicate-capability-id and capability-unknown-field. Record exact structural/local-semantic phase and field paths.
   - Create the following fixture directories under `crates/clouddialect-contracts/fixtures/negative/`. Each contains `input.json` (invalid document) and `expected.json` specifying `"outcome": "fail"` with at least one error entry identifying the `category` and a `description_contains` substring.
   - Fixtures to create:
@@ -481,14 +488,15 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - Each `expected.json` error entry specifies a `category` that matches the actual error category returned.
   - Property 4 (fidelity enum exhaustiveness): `invalid-behavioral-fidelity` fixture confirms an out-of-enum value is rejected.
 
-- [ ] 20. Write adversarial conformance fixtures
+- [x] 20. Write adversarial conformance fixtures
+  - Delivered locally2026-10-24: all26approved exact pairs in batches3.2.22–3.2.35 are admitted and verified through the actual runner/full frozen suites. All8namespace classes have local Pass/Fail cases, all6reserved spellings preserve verbatim warnings, exact lexical extension values and decoded core verification outcomes are checked. The seven P0profiles are explicitly5localPass/2Fail—not effective authority, authentication, collision detection or native control enforcement. See the [current admission report](../../../.workflow/ultracode/execution-isolation-implementation/conformance-continuation/adversarial-admission-2026-10-24/final-report.md).
   - Add P0 declaration-versus-grant and verification-claim cases: `[x]` authority injection, prohibited worker actions, forged approver/origin strings and incomplete/replayed bindings. Distinguish manifest/schema rejection from Spec 2 admission/authentication tests; document-only or mocked fixtures cannot prove native control enforcement.
   - Create the following fixture directories under `crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/`. Each directory contains `input.json` and `expected.json`.
   - Requirement 10.7 mandates exactly 8 fixture classes; each class must include at least one case where the validator handles it correctly ("correctly handled") and at least one where it correctly rejects ("correctly rejected"):
-    1. `reserved-exact-match/` — document with `core:field`; expected: `outcome: pass`, one warning with `field_name_verbatim: "core:field"`.
+    1. `reserved-exact-match/` — document with `core:field`; expected: `outcome: pass`, one warning per reserved field with its verbatim name; the approved pair includes both `core:field` and `cdc:field` (two warnings total).
     2. `reserved-uppercase-bypass/` — documents with `CORE:field` and `CDC:field`; expected: each produces a warning; `outcome: pass` (Req 10.3).
     3. `reserved-mixed-case-bypass/` — documents with `Core-Validation:field` and `Cdc-Evidence:field`; expected: each produces a warning; `outcome: pass`.
-    4. `namespace-collision/` — two community extension fields using the same prefix `acme:field-a` and `acme:field-b` in one document; both extensions are preserved (no error, since collision is a registry concern, not a structural one). Provide a "correctly rejected" case where a reserved prefix is used by two documents claiming the same community prefix — demonstrate the validator does not grant trust based on prefix alone.
+    4. `namespace-collision/` — two community extension fields using the same prefix `acme:field-a` and `acme:field-b` in one document; both extensions are preserved (no error, since collision is a registry concern, not a structural one). Owner-approved local nontrust profile (2026-10-24): provide two separately validated documents with distinct author/owner claims for the same `acme` prefix, including reserved-qualified ownership claims. Optional claims remain structurally valid; reserved qualified keys produce verbatim warnings. With `required_extensions: ["acme"]`, each independently produces a semantic `blocking-gap` at `required_extensions[0]`. This demonstrates absent trusted implemented semantics—not cross-document conflict detection or authenticated ownership. Prefix conflicts remain registry-governance work.
     5. `invalid-prefix-formats/` — three sub-cases: prefix starting with digit `1bad:field`, prefix containing space `bad field:val`, prefix of length one `a:field`; each must fail structural validation (Req 10.7).
     6. `unknown-optional-round-trip/` — document with valid community extension `acme:meta` present; expected: `outcome: pass`, extension field present and unmodified in round-trip (Req 10.2, Property 5).
     7. `mandatory-extension-blocks-acceptance/` — document with `required_extensions: ["unknown-ns"]`; expected: `outcome: pass` structurally but blocker emitted preventing acceptance (Req 10.4, Property 6).
@@ -502,9 +510,18 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - Invalid-prefix-format fixtures fail structural validation (Req 10.7).
   - Mandatory unknown extension fixture produces a blocker (Req 10.4).
   - Core-field override attempt: core verification outcome is unchanged (Req 10.5).
-  - Property 8 test passes for all five reserved prefix variants.
+  - Property 8 test passes for all six named reserved prefix spellings.
 
 - [ ] 21. Write round-trip and integration fixtures
+  - Verified supporting delivery (2026-10-24); full task remains open:
+    - [x] All three named typed-document round-trip pairs preserve exact encoded extension value bytes through the actual runner; batches3.2.36–3.2.37 admitted unchanged.
+    - [x] Unknown-evidence blocking, absent manifest reference and tampered candidate integration pairs are admitted in batches3.2.38–3.2.40 with distinct Blocked/semantic Fail/boolean-false oracles. Synthetic stores are not real backend authorization.
+    - [x] Five frozen P0 verification-consistency pairs are admitted in batches3.2.53,3.2.55,3.2.56: duplicate test IDs, unmapped obligations, invalid hash length and approval-result ID/version mismatch. Exact semantic failure diagnostics are verified by the actual runner; consistency does not authenticate claims.
+    - [x] Eight synthetic scoped-store cases are admitted in batches3.2.42–3.2.45: exact version, missing, ambiguous, wrong type, hash mismatch, outage and wrong returned version/identity. These validate caller-supplied consistency, not real project authorization or backend behavior.
+    - [x] Ten empty/abc digest pairs cover the five approved algorithms (SHA-256/384/512 and SHA3-256/512) in batches3.2.48–3.2.52. Matching proves candidate byte integrity only, never acceptance or origin.
+    - [x] Invalid-calendar/non-Z timestamps are admitted in batch3.2.54 with exact structural diagnostics through the semantic entrypoint. Seven approved version-profile cases are admitted in batches3.2.57–3.2.60, including root-only newer-MINOR fallback and closed nested additions.
+    - [x] The unresolvable-schema-URI half of batch3.2.41 is admitted; its network-disabled sibling is absent and the batch remains incomplete.
+    - Actual network-disabled qualification, real same-tenant cross-project backend denial and trusted snapshot-environment setup remain gated. No complete task21/native/consumer claim follows.
   - Add P0 scoped-store exact-version/missing/ambiguous/wrong-type/hash-mismatch/outage cases, same-tenant cross-project lookup denial, snapshot environment immunity and digest vectors; verification duplicate test IDs/unmapped obligations/invalid UTC/hash lengths/mismatched approval-result ref. Native project isolation and external observation/authentication remain Spec 2 qualification, not implied by these fixtures.
   - **Round-trip fixtures** — create under `crates/clouddialect-contracts/fixtures/round-trip/extension-field-preservation/`:
     - `behavioral-contract/` — `input.json` has a community extension key `acme:meta`; `expected.json` specifies `outcome: pass` and that the extension field is present byte-for-byte after round-trip. (Property 2, Req 3.5, 10.2)
@@ -527,6 +544,7 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - Offline resolution fixture with unresolvable `$schema`: error description contains the exact URI (Req 1.3).
 
 - [ ] 22. Implement conformance fixture runner
+  - Current bounded delivery (2026-10-24): the default runner executes all101 admitted fixtures; exact category/path/boolean controls, prefix counts and zero-selection rejection pass. Complete104-case inventory and actual native/consumer qualification remain unfinished; the local-profile adversarial corpus is delivered, so this canonical full-suite task stays open despite the delivered bounded runner unit3.1.
   - Planning elaboration: register the conformance integration target with `harness = false` and a test-only main/prefix parser as specified in implementation-plan unit 3.1. Cargo's default Rust-test name filter is not a fixture-directory filter; zero selected fixtures must fail. Parent owns Cargo.toml registration; no production binary/CLI is introduced.
   - Dispatch JSON vs TOML semantic phases through the exact P0-E entrypoints; supply explicit synthetic project-scoped store fixtures, never an ambient schema-catalog document search or live backend.
   - Create `crates/clouddialect-contracts/tests/conformance.rs` as an integration test binary.
@@ -556,7 +574,8 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - Filtering by directory prefix works: `cargo test --test conformance -- adversarial` runs only adversarial fixtures.
   - Per-fixture 5-second timeout prevents a recursive schema from blocking the suite.
 
-- [ ] 23. Write compatibility policy document
+- [x] 23. Write compatibility policy document
+  - Delivered locally2026-10-23: [policy](../../../docs/compatibility-policy.md),3source-profile/public-API tests, bounded independent review and full parent checks. Initial-MVP history is owner-attested; no release/distribution audit, invented publication date or deployed pack qualification is claimed.
   - Record P0 publication-history review and approved target format/API/catalog versions. New required capability/binding/configuration fields and structured failure objects cannot mutate a previously published format in MINOR/PATCH; require MAJOR/migration fixtures where applicable. Legacy structural warnings do not grant unsupported security semantics.
   - Create `docs/compatibility-policy.md`.
   - Document must include all of the following (Req 7.1):
@@ -575,7 +594,8 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - The three version spaces are named with their respective field names (Req 6.1).
   - EOL process references updating `status` in `index.json`.
 
-- [ ] 24. Write extension convention document
+- [x] 24. Write extension convention document
+  - Delivered locally2026-10-23: [convention](../../../docs/extension-convention.md),4public-phase/encoded-value/TOML tests and full parent checks. Parent-only audit after the28agent allocation was consumed; no independent review of this new document is claimed. Full adversarial conformance and release-registry packaging remain separate tasks.
   - Create `docs/extension-convention.md`.
   - Document must include all six elements from Req 10.1:
     1. **Namespace prefix grammar**: ASCII letter followed by zero or more ASCII alphanumeric characters or hyphens, minimum total length two characters, colon separator when used in a qualified key (e.g., `acme:field-name`).
@@ -593,7 +613,8 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - Case-insensitivity of reserved-prefix matching is stated explicitly.
   - The document links to `catalog/extension-registry.json`.
 
-- [ ] 25. Write traceability tables
+- [x] 25. Write traceability tables
+  - Delivered locally2026-10-24: both source-bound tables cover148JSONinstance paths,40nestedmanifest paths and30P0RustAPI/fieldkeys,plusall5canonicalgates. Three regressiontests and negativecontrols pass; review47P2missingP0mappingswere reproduced in138e88fandrepaired/GREENin8fa1886. Full291Rust+101fixture/check/lint/15Pythonchecks pass; no independentpost-repairsignoff or freshcoverage/MSRVclaim. This closes the local traceability artifacts, not the conditional BG-01owner/realconsumer/release obligations below. [Evidence](../../../.workflow/ultracode/execution-isolation-implementation/traceability-2026-10-24/final-report.md).
   - Include P0-A–F fields/APIs and new Req 4.8/5.8/8.6/8.7/9.5; attach owner approval and real consumer/conformance report at the delivered immutable revision before claiming BG-01 compatibility.
   - Create `docs/traceability/field-to-requirement.md` (NFR-2.1):
     - A Markdown table with columns: `Schema`, `Field path`, `Requirement`, `Notes`.
@@ -611,7 +632,9 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - All requirement references match requirement IDs from the requirements document.
 
 - [ ] 26. Add release tooling configuration and documentation
-  - Create `deny.toml` at the repository root with a `[licenses]` section allowing `MIT`, `Apache-2.0`, `Apache-2.0 WITH LLVM-exception`, `BSD-2-Clause`, `BSD-3-Clause`, `ISC`, `Unicode-DFS-2016` and denying `GPL-2.0`, `GPL-3.0`, `AGPL-1.0`, `AGPL-3.0`, `SSPL-1.0`, `LGPL-2.0`, `LGPL-2.1`, `LGPL-3.0` with `copyleft = "deny"` (Req 12.3).
+  - Owner decision 2026-10-29: keep the seven-license policy unchanged; leave release blocked pending license review. No `MIT-0`/`Unicode-3.0` additions, custom-license clarification or exclusions are approved. Task 26 remains unchecked.
+  - Local files delivered 2026-10-28: [policy](../../../deny.toml), [release procedures](../../../release/README.md), and comment-only [public-key placeholder](../../../release/minisign.pub). The owner approved current cargo-deny allow-only migration and matching spec edits on 2026-10-28. Seven structural checks and 101 conformance fixtures pass. Real cargo-deny 0.20.2 scanning exits 4 with [named findings](../../../.workflow/ultracode/release-tooling/results/license-incompatibilities.json): `MIT-0`, `Unicode-3.0`, and scanner-unknown custom root license. The checkbox stays open pending owner license-policy review and a zero-exit scan; no dependency/lockfile changes, release, SBOM, signature or actual key is claimed. [Evidence](../../../.workflow/ultracode/release-tooling/migration-report.md).
+  - Create `deny.toml` at the repository root with a supported cargo-deny 0.16.0+ `[licenses]` allow-only section allowing `MIT`, `Apache-2.0`, `Apache-2.0 WITH LLVM-exception`, `BSD-2-Clause`, `BSD-3-Clause`, `ISC`, `Unicode-DFS-2016`; all other licenses are denied by default, including `GPL-2.0`, `GPL-3.0`, `AGPL-1.0`, `AGPL-3.0`, `SSPL-1.0`, `LGPL-2.0`, `LGPL-2.1`, `LGPL-3.0` and other unlisted copyleft licenses. Do not use the removed `deny` or `copyleft` fields or add implicit exceptions (Req 12.3).
   - Create `release/README.md` documenting:
     - **SBOM generation**: command `cargo cyclonedx --format json --output-file release/sbom.cdx.json` and what it produces (Req 12.1).
     - **Artifact signing**: commands for signing (`minisign -S ...`) and verifying (`minisign -V -p release/minisign.pub ...`) with explanation that verification requires no network access (Req 12.2).
@@ -622,10 +645,10 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
   - _Requirements: Req 12.1, Req 12.2, Req 12.3_
 
   **Acceptance criteria:**
-  - `deny.toml` is present at repository root and contains both the allow and deny license lists (Req 12.3).
+  - `deny.toml` is present at repository root with the exact seven-expression allow-only policy, no removed `deny`/`copyleft` fields and no license exceptions; all other licenses are denied by default (Req 12.3).
   - `release/README.md` documents all three release tooling procedures (SBOM, signing, license screening).
   - `release/minisign.pub` is present in the repository (Req 12.2).
-  - `cargo deny check licenses` exits zero on the initial crate scaffold (no deny-listed licenses in bootstrap dependencies).
+  - `cargo deny check licenses` using the explicit standalone manifest and root policy exits zero on the current locked crate; license diagnostics are not bypassed through dependency, license-label or exception changes.
 
 ---
 
@@ -634,7 +657,7 @@ All five JSON instance schemas permit optional nonempty `$schema`, but trusted D
 
 - Tasks marked with `*` are optional and can be skipped for faster MVP iteration.
 - Every task references specific requirements for traceability.
-- `BehavioralResult` full implementation (running independently controlled tests) is Spec 2 scope; Tasks 14 and 22 implement the evidence-completeness check only (`Blocked` / `EvidenceComplete` outcomes).
+- `BehavioralResult` full implementation (running independently controlled tests) is Spec2scope; Tasks14/22 implement only non-accepting completeness (`Blocked` / `EvidenceComplete`, or owner-approved `Deferred` for an invalid source or valid empty scope). Empty-scope mandatory blockers remain separate semantic diagnostics; no outcome asserts behavioral correctness or acceptance.
 - The conformance fixture runner (Task 22) must be implemented before the release tooling gate (Task 26) since `cargo test --test conformance` is part of the pre-release gate sequence.
 - All JSON Schema documents use `unevaluatedProperties: false` combined with `patternProperties` for extension fields per DDR-06.
 - UUID v4 (hyphenated lowercase) is the required identifier format for all CloudDialect JSON document `id` fields per DDR-07.

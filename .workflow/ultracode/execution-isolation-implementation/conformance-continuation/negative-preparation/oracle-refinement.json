@@ -1,0 +1,22 @@
+{
+  "created_at": "2026-10-24T03:16:16.170058+00:00",
+  "case": "negative/evidence-record/inferred-empty-reasoning-chain",
+  "initial_mismatch": "Initial oracle expected one diagnostic, actual count two; retained in initial-verification.json",
+  "independent_source_basis": [
+    "catalog/schemas/evidence-record/1.0/schema.json: inferred conditional then imposes reasoning_chain minItems1; reasoning_chain is absent from root properties; root unevaluatedProperties=false.",
+    "Pinned boon0.6.1 validator.rs:736-743 selects if/then/else; 817-836 merges evaluated-property annotations only on a successful child result; 761-770 applies unevaluatedProperties to the remaining property.",
+    "src/validator/structural.rs:357-419 recursively maps the minItems leaf to the generic structural constraint diagnostic and false schema to the not-permitted diagnostic, both at reasoning_chain."
+  ],
+  "classification": "Draft-oracle refinement after schema/pinned-source analysis, not a production fix or a waived test. Both independent constraints are preserved in the exact multiset.",
+  "previous_expected_sha256": "1ae9815acd836e188573bac107ba468eb2224d10ecb090db4f1ad41a1a8e7e4b",
+  "revised_expected_sha256": "c4d05482b8d122044335060517e05beddfacf1f9b3e38a68632291ea36a982a4",
+  "pinned_source": "/tmp/clouddialect-runtime-cargo/registry/src/index.crates.io-1949cf8c6b5b557f/boon-0.6.1/src/validator.rs",
+  "pinned_source_sha256": "f406499be88a2dd54ebe06e1a747a8ee6195a689d40269b5ae3eb50b8a3eff34",
+  "source_repair_performed": false,
+  "additional_strengthening": {
+    "case": "negative/version/unsupported-major",
+    "reason": "Assert the required compatibility-document reference as well as declared unsupported version; not an actual-output normalization",
+    "original_sha256": "5204e40bb01398f5e5bd45876ee8fa678c95bbcad239b63ef1f96bbf258c4214",
+    "final_sha256": "ad6ede655dd184613e018345fa4904ad0e1df2f45f57abad08304eb4460cddbc"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-29",
+  "scope": "One owner-approved outside-sandbox read-only Docker context and explicitly bound local Unix-socket version/platform inspection",
+  "timeout_seconds_per_command": 10,
+  "commands": [
+    {
+      "label": "docker context show",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "label": "docker context inspect current endpoint",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "label": "docker version server platform",
+      "exit_code": 0,
+      "timed_out": false
+    }
+  ],
+  "outside_restricted_sandbox_requested": true,
+  "local_unix_endpoint_confirmed": true,
+  "daemon_query_attempted": true,
+  "daemon_response_received": true,
+  "qualified_profile": false,
+  "disposable_environment_admitted": false,
+  "native_action_authorized": false,
+  "further_actions_performed": false,
+  "ambient_endpoint_override_present": false,
+  "endpoint_transport": "unix",
+  "server": {
+    "version": "29.8.1",
+    "os": "linux",
+    "architecture": "amd64"
+  },
+  "stop_reason": "Approved read-only inspection complete; no further action taken",
+  "evidence_source": "Parent tool output cf6571; explicitly owner-approved one-time outside-sandbox invocation via rtk proxy python3",
+  "command_binding": "Context captured from context show, endpoint captured from context inspect, parsed as local Unix URI, then explicitly bound with --host; private context/socket identifiers not exported",
+  "not_performed": [
+    "KVM device opening/ioctl",
+    "image pull/build",
+    "container or VM launch",
+    "sudo",
+    "daemon startup",
+    "permission or daemon configuration changes",
+    "native isolation or provider probes"
+  ],
+  "inspection_authorization_consumed": true
+}

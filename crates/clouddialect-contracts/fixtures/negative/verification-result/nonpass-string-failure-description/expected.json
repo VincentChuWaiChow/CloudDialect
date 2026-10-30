@@ -1,0 +1,14 @@
+{
+  "phase": "structural",
+  "document_kind": "verification-result",
+  "outcome": "fail",
+  "errors": [
+    {
+      "category": "structural",
+      "field_path": "tests[0].failure_description",
+      "description_contains": "Field does not satisfy the selected schema constraint"
+    }
+  ],
+  "warnings": [],
+  "blockers": []
+}

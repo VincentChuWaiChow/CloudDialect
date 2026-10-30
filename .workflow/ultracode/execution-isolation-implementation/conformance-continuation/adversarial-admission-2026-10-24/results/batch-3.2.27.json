@@ -1,0 +1,52 @@
+{
+  "batch": "3.2.27",
+  "status": "pass",
+  "case_paths": [
+    "adversarial/extension-namespace/invalid-prefix-formats/digit-start",
+    "adversarial/extension-namespace/invalid-prefix-formats/space"
+  ],
+  "exact_files": [
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/invalid-prefix-formats/digit-start/input.json",
+      "sha256": "8e02cbab0d2a66614be5f728a9bc676f8cf8a4e0fa247b64502cfea720808701"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/invalid-prefix-formats/digit-start/expected.json",
+      "sha256": "455c163b1f280ca656896710967bd76f1e342f3d4e8c0006dbcfba7daf7de5d0"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/invalid-prefix-formats/space/input.json",
+      "sha256": "7290782686bcf8d48b3c34e0105ab30773600173e7ed03b2ac0fa7434ab31116"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/invalid-prefix-formats/space/expected.json",
+      "sha256": "7f641825f11f5128b868a92cb699757625bdbf6efd223eb4c6105a8be3dae116"
+    }
+  ],
+  "frozen_copies": true,
+  "full_test_command": [
+    "rtk",
+    "proxy",
+    "cargo",
+    "test",
+    "--manifest-path",
+    "crates/clouddialect-contracts/Cargo.toml",
+    "--frozen"
+  ],
+  "exit": 0,
+  "rust_tests_including_doctests": 288,
+  "canonical_fixture_count": 87,
+  "exact_prefix_checks": [
+    {
+      "path": "adversarial/extension-namespace/invalid-prefix-formats/digit-start",
+      "exit": 0,
+      "count": 1
+    },
+    {
+      "path": "adversarial/extension-namespace/invalid-prefix-formats/space",
+      "exit": 0,
+      "count": 1
+    }
+  ],
+  "completed_at": "2026-10-24T17:19:46.656108+00:00"
+}

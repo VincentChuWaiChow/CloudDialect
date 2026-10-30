@@ -1,0 +1,10 @@
+{
+  "freeze_files": 180,
+  "after_hash_mismatches": [],
+  "approved_exact_source_copies": 82,
+  "canonical_new_diff_files": 82,
+  "protected_unchanged": 90,
+  "research_unchanged": true,
+  "freeze_manifest_sha256": "4d4e1e4bcb80c0b1c6aa43b09a671c9b4b377d8df8d9b33c06b5868d479ae805",
+  "contract_sha256": "aceb43810a241897c4ffed53cecf91f673efeed0d0684dc750bbcac614319e0d"
+}

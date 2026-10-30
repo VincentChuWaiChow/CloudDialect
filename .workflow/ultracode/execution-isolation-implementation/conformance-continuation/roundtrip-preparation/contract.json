@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-10-24T03:22:11.911647+00:00",
+  "status": "Fixed exact raw-value oracles before execution; no canonical admission",
+  "cases": [
+    {
+      "path": "round-trip/extension-field-preservation/behavioral-contract",
+      "batch": "3.2.36",
+      "document_kind": "behavioral-contract",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "behavioral-contract",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": [],
+        "round_trip": true
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/roundtrip-preparation/drafts/round-trip/extension-field-preservation/behavioral-contract/input.json": "5928b42b9494e41a8a2cba7b9e79706181998eeefa57a02ceeceda5940d2edd5",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/roundtrip-preparation/drafts/round-trip/extension-field-preservation/behavioral-contract/expected.json": "45e725ee95012454db30cfea2b2062612d35f1c7a03a24dc9f080c0d4231eb73"
+      },
+      "positive_baseline": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/behavioral-contract/minimal-valid/input.json",
+      "positive_baseline_sha256": "f4ac5fa2e8cae39cd87eb8af404bd95f724157515abf4abcd4b7e9a89738558c",
+      "encoded_extension_value": "{ \"number\":1e+04, \"text\":\"\\u0061\", \"nested\":[ 2, {\"n\":-0.0, \"accepted\":true} ] }",
+      "encoded_value_sha256": "c6c4dbeae538397f5732a5cf8f7ba0fcbd5e3c97edf9028e8e4c35f6c70cbac7",
+      "status": "draft-not-admitted"
+    },
+    {
+      "path": "round-trip/extension-field-preservation/evidence-record",
+      "batch": "3.2.36",
+      "document_kind": "evidence-record",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "evidence-record",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": [],
+        "round_trip": true
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/roundtrip-preparation/drafts/round-trip/extension-field-preservation/evidence-record/input.json": "4f36ffb3b9caf3cb3c0544f9839357daeaead3af6dbb2439d030c6a94e58bb85",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/roundtrip-preparation/drafts/round-trip/extension-field-preservation/evidence-record/expected.json": "b13ff786fccf1cd540f53ae532bacf3b66a1fe3cfadf2ecc03e1673692e28f51"
+      },
+      "positive_baseline": "crates/clouddialect-contracts/fixtures/positive/evidence-record/inferred/input.json",
+      "positive_baseline_sha256": "09ed9d3a83f0f2662c4fa62ab78d757083c4fc9ac5a3b816ef90994f6a6cb0ca",
+      "encoded_extension_value": "{ \"number\":1e+04, \"text\":\"\\u0061\", \"nested\":[ 2, {\"n\":-0.0, \"accepted\":true} ] }",
+      "encoded_value_sha256": "c6c4dbeae538397f5732a5cf8f7ba0fcbd5e3c97edf9028e8e4c35f6c70cbac7",
+      "status": "draft-not-admitted"
+    },
+    {
+      "path": "round-trip/extension-field-preservation/verification-result",
+      "batch": "3.2.37",
+      "document_kind": "verification-result",
+      "oracle": {
+        "phase": "structural",
+        "document_kind": "verification-result",
+        "outcome": "pass",
+        "errors": [],
+        "warnings": [],
+        "blockers": [],
+        "round_trip": true
+      },
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/roundtrip-preparation/drafts/round-trip/extension-field-preservation/verification-result/input.json": "3a9214e5cc88ba2a62e1dcf21c25fa5fc63d356c1e8915039b74f643c983d428",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/roundtrip-preparation/drafts/round-trip/extension-field-preservation/verification-result/expected.json": "58cd4b96216f9f037235211706a7b8cebcf27235c61ac9b89bfc85e8d88c0fb7"
+      },
+      "positive_baseline": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/positive-preparation/drafts/positive/verification-result/minimal/input.json",
+      "positive_baseline_sha256": "752ac38d6bab7cd2294608debc5a9411ce453541febd02a49023694306b5dc99",
+      "encoded_extension_value": "{ \"number\":1e+04, \"text\":\"\\u0061\", \"nested\":[ 2, {\"n\":-0.0, \"accepted\":true} ] }",
+      "encoded_value_sha256": "c6c4dbeae538397f5732a5cf8f7ba0fcbd5e3c97edf9028e8e4c35f6c70cbac7",
+      "status": "draft-not-admitted"
+    }
+  ],
+  "claims": "Exact encoded extension JSON VALUE bytes, including numeric lexical form, whitespace, Unicode escape, order, array/object nesting and negative zero; not full-document byte equality or acceptance.",
+  "runner_source": "crates/clouddialect-contracts/tests/support/fixtures.rs",
+  "runner_source_sha256": "018cd496ee84166caac4e2d1d8ffb40784f9e9202b6c6333352f71d0445181e8"
+}

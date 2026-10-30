@@ -1,0 +1,13 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.36s
+     Running tests/verification_semantics.rs (/tmp/clouddialect-runtime-target/debug/deps/verification_semantics-0c903117f772d5c3)
+
+running 6 tests
+test acceptance_self_reference_requires_exact_identity_and_version_without_store_lookup ... ok
+test duplicate_test_ids_and_unmapped_obligations_are_reported_at_exact_indices ... ok
+test utc_z_is_required_in_addition_to_the_callers_structural_calendar_validation ... ok
+test valid_nonpassing_test_records_and_untrusted_authority_claims_do_not_change_integrity_rules ... ok
+test malformed_digest_encodings_and_unknown_algorithms_never_match_by_length_alone ... ok
+test all_declared_hash_algorithms_have_exact_canonical_lengths_in_every_binding ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s

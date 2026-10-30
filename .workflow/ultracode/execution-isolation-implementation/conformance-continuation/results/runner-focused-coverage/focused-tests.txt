@@ -1,0 +1,43 @@
+
+running 9 tests
+test fixture_worker ... ok
+test discovery_rejects_incomplete_ambiguous_and_symlinked_pairs ... ok
+test discovery_filters_components_and_rejects_empty_or_escaping_selection ... ok
+test artifact_hash_uses_boolean_only_and_roundtrip_checks_actual_encoded_values ... ok
+test manifest_dispatch_compares_both_local_error_channels_and_real_semantic_results ... ok
+test semantic_and_completeness_phases_use_explicit_synthetic_scoped_store_bytes ... ok
+test wrong_oracles_missing_extra_diagnostics_and_invalid_unions_fail_with_context ... ok
+test structural_outcomes_and_verbatim_warnings_use_real_public_validation ... ok
+test bounded_child_reports_mismatches_and_kills_and_reaps_a_stuck_validator ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.25s
+
+
+running 20 tests
+test malformed_json_reports_bounded_approximate_offsets_and_scalars_fail_structurally ... ok
+test missing_or_non_string_versions_never_guess_a_schema ... ok
+test build_metadata_does_not_create_a_new_schema_uri_or_change_reported_version ... ok
+test missing_external_schema_resource_fails_closed_with_safe_diagnostics ... ok
+test newer_minor_does_not_bypass_declared_root_wildcard_constraints ... ok
+test duplicate_core_members_cannot_change_version_or_required_extensions ... ok
+test actual_production_dispatch_enforces_every_version_disposition ... ok
+test explicit_catalog_selection_not_an_embedded_or_same_minor_patch_default ... ok
+test changed_root_reference_scope_never_causes_guessed_property_removal ... ok
+test projection_never_strips_nested_closed_fields_or_embedded_schema_content ... ok
+test projection_preserves_root_dependent_required_names ... ok
+test unresolvable_instance_schema_identifies_only_the_escaped_uri_not_other_payloads ... ok
+test required_errors_have_child_paths_context_and_no_private_input_values ... ok
+test schema_formats_are_assertions_not_only_annotations ... ok
+test all_five_trusted_kinds_pass_and_round_trip_without_other_phase_claims ... ok
+test newer_minor_still_checks_known_conditional_fields_and_required_children ... ok
+test newer_minor_projects_only_root_additions_and_warns_with_unambiguous_paths ... ok
+test instance_schema_is_optional_but_must_equal_the_selected_admitted_uri ... ok
+test root_composition_and_local_reference_fields_remain_checked ... ok
+test global_root_predicates_are_not_bypassed_by_discarding_members ... ok
+
+test result: ok. 20 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.58s
+
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.91s
+     Running tests/conformance_controls.rs (/tmp/clouddialect-runtime-coverage-target/debug/deps/conformance_controls-48dd8c9ee48be0cb)
+     Running tests/structural_validation.rs (/tmp/clouddialect-runtime-coverage-target/debug/deps/structural_validation-fa2fa01b8566d94b)

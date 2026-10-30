@@ -1,3 +1,120 @@
+# Current traceability/checklist delivery —2026-10-24
+
+[Current report](traceability-2026-10-24/final-report.md): **Task25/unit3.5[x]**:
+218field/APIrowsand5canonicalgates,source-derivedtestsandnegativecontrols.
+ActualRED/GREENretained;47reviewP2missing16P0mappingswasreproducedandparent-
+repairedwithanotherRED/GREEN;no independentpostrepairsignoff. Final291Rust+
+101fixtures/check/Clippy/fmt/15Pythonpass. 355protectedhashesmatch;no production/
+harness/schema/dependency/corpuschange. Task20already[x],Task24already[x].
+Threequalification/setupcases,all21Spec2runtime/UD/BGandrealconsumer/release
+workremainopen. Legacychecker8pass/1pre-existingerror;nonewpush.
+
+# Current adversarial admission/checklist delivery —2026-10-24
+
+[Current report](conformance-continuation/adversarial-admission-2026-10-24/final-report.md):
+**101canonicalfixtures**,288Rusttests/11controls/check/Clippy/fmt/15Pythonpass.
+All26approvedpairsadmittedin14full-testedlocalcheckpoints;Task20isnow[x].
+Previousmissingcompletedbatchsupportrowsarealsoreconciled;Task24nearoldline600
+wasalreadycorrectly[x].43/44independentchecklist/content/executionreviewsfound
+noactionableissues;44ran82commands.3qualificationcasesandall21Spec2runtime/
+UD/BGgatesremainopen;Task25traceabilityisnexteligiblework,notdone. Nonewpush.
+
+# Published integration payload —2026-10-24
+
+[Current report](conformance-continuation/integration-admission-2026-10-24/final-report.md):
+**75canonicalfixtures** and288Rusttests verified; user-requestednonforcepush
+published payloadSHA `a721914a6260eb1599add5d63c25ecb48b3f5dbb`, independentlymatchedbylive
+gitls-remote, local/upstream0/0. Publicationreceiptisarchivedwiththedataevidence;
+itsownfinalcheckpointSHAwillbeverifiedintheassistantresponse. No merge/release/
+deployment/CI/runtimequalificationclaim. **26adversarialpairadmissionstillpending**;
+3qualification/setupcasesandallSpec2runtime/UD/BGgatesremainopen.
+
+# Current approved integration admission —2026-10-24
+
+[Current report](conformance-continuation/integration-admission-2026-10-24/final-report.md):
+28approvedpairs are now admittedunchanged: **75canonicalfixtures**,288Rusttests
+including7doctests,and11controls pass. Every15boundedgroup hadcompletefrozen
+tests andlocalcheckpoint. Check/Clippy/fmt/15Python pass; independent42executes
+75fixtures/11controls pluswrongoracle/prefix/decoychecks, no actionablefindings.
+43fullbatches+onlyunresolvable-refhalf3.2.41delivered. **26adversarialpairsremain
+unapproved**,3qualification/setupcasesabsent,all21Spec2tasks/UD/BGopen.
+CurrentGitpushisexplicitlyauthorized andwillbeindependentlySHA-verified after
+thispayloadcheckpoint; no source/harness/dependency/native/releasechanges.
+Legacychecker8pass/1pre-existingerror; freshcoverage/MSRV/nativeunverified.
+
+# Current remaining integration readiness —2026-10-24
+
+[Latest draft report](conformance-continuation/remaining-integration-preparation/final-report.md):
+28moreexactpairs are frozen/verified, **not admitted**. All28original+86parent
+controls pass; reviewer40independently executes82controls and recomputes10vectors.
+DraftinventorySHA3-224typo is corrected to approvedSHA3-512withoutsourcechange.
+**Canonical remains47**;54totalpreparedpairs await exactadmissionapproval;
+3native/backend/trusted-setupcasesremainabsent/gated. Temporarycombined101is
+notcanonicaldelivery. Oneparentdrivercorrection, nofrozenoracle/sourcechanges.
+All21Spec2numberedtasks,UD/BGandfullSpec1consumer/qualificationremainopen.
+
+# Current adversarial draft readiness —2026-10-24
+
+[Draft-readiness report](conformance-continuation/adversarial-preparation/final-report.md):
+26 exact adversarial pairs across14batches are frozen and verified, **not admitted**.
+All26 source-derived original oracles and65parent controls match; reviewer38
+independently executes65controls, with no actionable findings.105content/schema/
+hash assertions pass;192protected hashes unchanged, **canonical remains47**.
+All8namespace classes and7P0claim profiles retain explicit nontrust boundaries.
+Exact52-file admission is proposed separately; no source/spec/native changes or
+push. Full goal, task20, remaining57canonical corpus cases and allSpec2gates stay
+open. Earlier delivery reports below remain historical with their stated scope.
+
+# Current bounded harness and five-pair delivery — 2026-10-24
+
+[Current bounded report](conformance-continuation/core-preservation-2026-10-24/final-report.md):
+executed runtime RED then GREEN adds decoded core verification preservation while
+retaining exact extension bytes and structural checks. Five frozen P0 semantic
+pairs are admitted unchanged: **47 canonical fixtures**, **288 Rust tests**
+including seven doctests, and **11 runner controls** pass. Check/Clippy/fmt and
+15 repository Python tests pass. Reviewers35/36 found no actionable P1/P2;
+36 independently ran11 controls/47 fixtures and five wrong-oracle rejections.
+Owner-approved namespace local nontrust is explicit, not conflict detection or
+authenticated ownership. Current scope audit preserves176 baseline files and
+permits only six harness/spec-status changes plus10 exact new fixture files;
+192 final hashes are frozen. Legacy checker remains8 pass/1 pre-existing error;
+fresh coverage/MSRV and native/consumer qualification remain unverified.
+Remaining57 inventory cases, all21 Spec2 numbered tasks and UD/BG gates stay
+open. Local checkpoints only; no push, production changes or native probes.
+
+## Earlier snapshots below are historical
+
+# Current frozen fixture admission — 2026-10-24
+
+[Admission evidence](conformance-continuation/admission-2026-10-24/final-report.md): all41 approved drafts are now canonical,42total.
+Tasks18/19 are checked;42fixture oracles/286Rust tests, check/fmt/Clippy and
+15repository Python checks pass.25bounded batches each passed a complete Rust
+suite. Allthree independent bounded reviews found no actionable issue; final33also
+independently passed286Rust+42oracles and verified180protected hashes. Additional legacy checker retains8pass/1error; fresh coverage/
+Rust1.88MSRV unavailable. Remaining62inventory cases, all21Spec2tasks and actual
+native/owner/consumer gates remain open. No source fixes, new deps, probes or push.
+
+## Earlier snapshots below are historical
+
+# Current bounded renewal — 2026-10-24
+
+[Repair/seed report](conformance-continuation/renewal-report.md): approved
+completeness diagnostic repair `03738e4`/`0396883` and exact seed `408af0d` are
+verified locally. Full default Cargo tests pass 286 Rust tests plus 1 fixture;
+check/fmt/Clippy and 15 Python checks pass. Fresh coverage, remaining full corpus,
+traceability/consumer/native handoff and all 21 Spec 2 tasks/gates remain open.
+Additional spec-only checker: 8 pass/1 pre-existing error; fresh coverage/MSRV
+remain unverified. No pushes, releases or native probes. Earlier snapshots below
+are historical.
+
+# Current tranche integration
+
+See [current partial handoff](conformance-continuation/integration.md). Current default
+conformance is not green; seed/repair approvals remain pending. Conventional
+278 Rust + 7 doctests / 15 Python checks pass. All runtime gates stay open.
+
+## Earlier snapshots below
+
 # Integration
 
 ## Current scoped reference/fidelity integration

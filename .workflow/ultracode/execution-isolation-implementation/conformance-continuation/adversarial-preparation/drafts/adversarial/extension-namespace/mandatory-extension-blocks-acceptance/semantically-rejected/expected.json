@@ -1,0 +1,14 @@
+{
+  "phase": "semantic",
+  "document_kind": "evidence-record",
+  "outcome": "fail",
+  "errors": [
+    {
+      "category": "blocking-gap",
+      "field_path": "required_extensions[0]",
+      "description_contains": "Unrecognized mandatory extension namespace \"unknown-ns\"; acceptance is blocked"
+    }
+  ],
+  "warnings": [],
+  "blockers": []
+}

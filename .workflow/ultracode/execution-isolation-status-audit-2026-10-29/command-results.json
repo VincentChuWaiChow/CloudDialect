@@ -1,0 +1,528 @@
+[
+  {
+    "name": "python-tests",
+    "command": [
+      "rtk",
+      "proxy",
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "environment": {
+      "CARGO_HOME": "/tmp/clouddialect-release-tooling-verification/cargo-home",
+      "CARGO_TARGET_DIR": "/tmp/clouddialect-release-tooling-verification/target"
+    },
+    "exit_code": 0,
+    "status": "PASS",
+    "elapsed_seconds": 0.09,
+    "output": "results/python-tests.txt",
+    "executed_argv": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "capture_wrapper": "rtk proxy python3 -u - (stdlib subprocess); command gives the direct reproduction spelling"
+  },
+  {
+    "name": "release-file-checks",
+    "command": [
+      "rtk",
+      "proxy",
+      "python3",
+      "scripts/verification/contracts-evidence-foundation/test_release_tooling.py",
+      "-v"
+    ],
+    "environment": {
+      "CARGO_HOME": "/tmp/clouddialect-release-tooling-verification/cargo-home",
+      "CARGO_TARGET_DIR": "/tmp/clouddialect-release-tooling-verification/target"
+    },
+    "exit_code": 0,
+    "status": "PASS",
+    "elapsed_seconds": 0.05,
+    "output": "results/release-file-checks.txt",
+    "executed_argv": [
+      "python3",
+      "scripts/verification/contracts-evidence-foundation/test_release_tooling.py",
+      "-v"
+    ],
+    "capture_wrapper": "rtk proxy python3 -u - (stdlib subprocess); command gives the direct reproduction spelling"
+  },
+  {
+    "name": "contracts-tests",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--offline"
+    ],
+    "environment": {
+      "CARGO_HOME": "/tmp/clouddialect-release-tooling-verification/cargo-home",
+      "CARGO_TARGET_DIR": "/tmp/clouddialect-release-tooling-verification/target"
+    },
+    "exit_code": 0,
+    "status": "PASS",
+    "elapsed_seconds": 28.85,
+    "output": "results/contracts-tests.txt",
+    "rust_test_summaries": [
+      [
+        "2",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "6",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "15",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "8",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "8",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "17",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "8",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "8",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "3",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "11",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "8",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "10",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "8",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "4",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "7",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "8",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "5",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "3",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "8",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "13",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "12",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "3",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "8",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "7",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "4",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "4",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "4",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "8",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "8",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "12",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "20",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "3",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "8",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "8",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "6",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "7",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "7",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "conformance_fixtures_passed": [
+      "101"
+    ],
+    "executed_argv": [
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--offline"
+    ],
+    "capture_wrapper": "rtk proxy python3 -u - (stdlib subprocess); command gives the direct reproduction spelling",
+    "publication_eof_normalization": {
+      "operation": "Removed exactly one extra terminal newline; test output content unchanged",
+      "before_sha256": "416251fe73d9cacc30c8ba0106c84384cdbd671d25fe8f207a25e375758377c8",
+      "published_sha256": "f76c42bbfb544c4b84879c545bb200251a06e3cf3ba1e95d3bd02b8c73051f6f",
+      "original_safe_log_archive": "/tmp/clouddialect-publication-eof-6ahrdtoa/contracts-tests.before-eof-normalization.txt"
+    }
+  },
+  {
+    "name": "contracts-check",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "check",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--all-targets",
+      "--frozen",
+      "--offline"
+    ],
+    "environment": {
+      "CARGO_HOME": "/tmp/clouddialect-release-tooling-verification/cargo-home",
+      "CARGO_TARGET_DIR": "/tmp/clouddialect-release-tooling-verification/target"
+    },
+    "exit_code": 0,
+    "status": "PASS",
+    "elapsed_seconds": 57.16,
+    "output": "results/contracts-check.txt",
+    "executed_argv": [
+      "cargo",
+      "check",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--all-targets",
+      "--frozen",
+      "--offline"
+    ],
+    "capture_wrapper": "rtk proxy python3 -u - (stdlib subprocess); command gives the direct reproduction spelling"
+  },
+  {
+    "name": "contracts-fmt",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "fmt",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--",
+      "--check"
+    ],
+    "environment": {
+      "CARGO_HOME": "/tmp/clouddialect-release-tooling-verification/cargo-home",
+      "CARGO_TARGET_DIR": "/tmp/clouddialect-release-tooling-verification/target"
+    },
+    "exit_code": 0,
+    "status": "PASS",
+    "elapsed_seconds": 0.29,
+    "output": "results/contracts-fmt.txt",
+    "executed_argv": [
+      "cargo",
+      "fmt",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--",
+      "--check"
+    ],
+    "capture_wrapper": "rtk proxy python3 -u - (stdlib subprocess); command gives the direct reproduction spelling"
+  },
+  {
+    "name": "contracts-clippy",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "clippy",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--all-targets",
+      "--frozen",
+      "--offline",
+      "--",
+      "-D",
+      "warnings"
+    ],
+    "environment": {
+      "CARGO_HOME": "/tmp/clouddialect-release-tooling-verification/cargo-home",
+      "CARGO_TARGET_DIR": "/tmp/clouddialect-release-tooling-verification/target"
+    },
+    "exit_code": 0,
+    "status": "PASS",
+    "elapsed_seconds": 2.69,
+    "output": "results/contracts-clippy.txt",
+    "executed_argv": [
+      "cargo",
+      "clippy",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--all-targets",
+      "--frozen",
+      "--offline",
+      "--",
+      "-D",
+      "warnings"
+    ],
+    "capture_wrapper": "rtk proxy python3 -u - (stdlib subprocess); command gives the direct reproduction spelling"
+  },
+  {
+    "name": "historical-spec-grader",
+    "command": [
+      "rtk",
+      "proxy",
+      "python3",
+      "scripts/verification/execution-isolation/check_spec.py"
+    ],
+    "environment": {
+      "CARGO_HOME": "/tmp/clouddialect-release-tooling-verification/cargo-home",
+      "CARGO_TARGET_DIR": "/tmp/clouddialect-release-tooling-verification/target"
+    },
+    "exit_code": 1,
+    "status": "HISTORICAL_CONTRACT_MISMATCH",
+    "elapsed_seconds": 0.25,
+    "output": "results/historical-spec-grader.txt",
+    "executed_argv": [
+      "python3",
+      "scripts/verification/execution-isolation/check_spec.py"
+    ],
+    "capture_wrapper": "rtk proxy python3 -u - (stdlib subprocess); command gives the direct reproduction spelling"
+  },
+  {
+    "name": "license-scan",
+    "command": [
+      "rtk",
+      "proxy",
+      "/tmp/clouddialect-release-tooling-verification/bin/cargo-deny",
+      "--frozen",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--config",
+      "deny.toml",
+      "check",
+      "licenses"
+    ],
+    "environment": {
+      "CARGO_HOME": "/tmp/clouddialect-release-tooling-verification/cargo-home",
+      "CARGO_TARGET_DIR": "/tmp/clouddialect-release-tooling-verification/target"
+    },
+    "exit_code": 4,
+    "status": "MISS",
+    "elapsed_seconds": 0.5,
+    "output": "results/license-scan.txt",
+    "executed_argv": [
+      "/tmp/clouddialect-release-tooling-verification/bin/cargo-deny",
+      "--frozen",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--config",
+      "deny.toml",
+      "check",
+      "licenses"
+    ],
+    "capture_wrapper": "rtk proxy python3 -u - (stdlib subprocess); command gives the direct reproduction spelling"
+  }
+]

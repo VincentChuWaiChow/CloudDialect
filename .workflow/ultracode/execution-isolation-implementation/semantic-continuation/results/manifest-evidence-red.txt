@@ -1,0 +1,40 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.36s
+     Running tests/manifest_evidence.rs (/tmp/clouddialect-runtime-target/debug/deps/manifest_evidence-1539fd957c5a3860)
+
+running 3 tests
+test every_manifest_binding_checks_evidence_without_refetching_the_contract ... FAILED
+test corrupt_or_mandatory_evidence_blocks_but_unknown_classification_is_not_a_reference_failure ... FAILED
+test fidelity_helper_and_manifest_consume_the_same_validated_contract_evidence_boundary ... FAILED
+
+failures:
+
+---- every_manifest_binding_checks_evidence_without_refetching_the_contract stdout ----
+
+thread 'every_manifest_binding_checks_evidence_without_refetching_the_contract' (116) panicked at tests/manifest_evidence.rs:86:9:
+assertion `left == right` failed: full: SemanticResult { document_id: Some("io.clouddialect.python.oss-to-s3"), outcome: Pass, errors: [] }
+  left: Pass
+ right: Fail
+
+---- corrupt_or_mandatory_evidence_blocks_but_unknown_classification_is_not_a_reference_failure stdout ----
+
+thread 'corrupt_or_mandatory_evidence_blocks_but_unknown_classification_is_not_a_reference_failure' (115) panicked at tests/manifest_evidence.rs:131:13:
+assertion `left == right` failed: full/hash: SemanticResult { document_id: Some("io.clouddialect.python.oss-to-s3"), outcome: Pass, errors: [] }
+  left: Pass
+ right: Fail
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- fidelity_helper_and_manifest_consume_the_same_validated_contract_evidence_boundary stdout ----
+
+thread 'fidelity_helper_and_manifest_consume_the_same_validated_contract_evidence_boundary' (117) panicked at tests/manifest_evidence.rs:107:5:
+assertion failed: !check_fidelity_mapping(&parsed, &store, &validator).is_empty()
+
+
+failures:
+    corrupt_or_mandatory_evidence_blocks_but_unknown_classification_is_not_a_reference_failure
+    every_manifest_binding_checks_evidence_without_refetching_the_contract
+    fidelity_helper_and_manifest_consume_the_same_validated_contract_evidence_boundary
+
+test result: FAILED. 0 passed; 3 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+error: test failed, to rerun pass `--test manifest_evidence`

@@ -1,0 +1,14 @@
+{
+  "phase": "structural",
+  "document_kind": "verification-result",
+  "outcome": "fail",
+  "errors": [
+    {
+      "category": "structural",
+      "field_path": "tests[0].failure_description",
+      "description_contains": "Required field is missing"
+    }
+  ],
+  "warnings": [],
+  "blockers": []
+}

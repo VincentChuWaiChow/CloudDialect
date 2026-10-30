@@ -1,3 +1,34 @@
+# Current frozen fixture admission — 2026-10-24
+
+[Admission evidence](conformance-continuation/admission-2026-10-24/final-report.md): all41 approved drafts are now canonical,42total.
+Tasks18/19 are checked;42fixture oracles/286Rust tests, check/fmt/Clippy and
+15repository Python checks pass.25bounded batches each passed a complete Rust
+suite. Allthree independent bounded reviews found no actionable issue; final33also
+independently passed286Rust+42oracles and verified180protected hashes. Additional legacy checker retains8pass/1error; fresh coverage/
+Rust1.88MSRV unavailable. Remaining62inventory cases, all21Spec2tasks and actual
+native/owner/consumer gates remain open. No source fixes, new deps, probes or push.
+
+## Earlier snapshots below are historical
+
+# Current bounded renewal — 2026-10-24
+
+[Repair/seed report](conformance-continuation/renewal-report.md): approved
+completeness diagnostic repair `03738e4`/`0396883` and exact seed `408af0d` are
+verified locally. Full default Cargo tests pass 286 Rust tests plus 1 fixture;
+check/fmt/Clippy and 15 Python checks pass. Fresh coverage, remaining full corpus,
+traceability/consumer/native handoff and all 21 Spec 2 tasks/gates remain open.
+Additional spec-only checker: 8 pass/1 pre-existing error; fresh coverage/MSRV
+remain unverified. No pushes, releases or native probes. Earlier snapshots below
+are historical.
+
+# Current tranche audit
+
+See [current partial handoff](conformance-continuation/final-audit.md). Current default
+conformance is not green; seed/repair approvals remain pending. Conventional
+278 Rust + 7 doctests / 15 Python checks pass. All runtime gates stay open.
+
+## Earlier snapshots below
+
 # Final audit — preparation tranche only
 
 ## Contract reread

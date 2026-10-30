@@ -1,0 +1,9 @@
+{
+  "source": "crates/clouddialect-contracts/tests/evidence_completeness.rs",
+  "destination": ".workflow/ultracode/execution-isolation-implementation/semantic-continuation/pending/evidence_completeness.rs",
+  "sha256": "d2b6a0bbf3970123aed0a7fac7a5d72eeb4edf5b6efc4068153b3c2c3aa1a718",
+  "reason": "Preserve unimplemented missing-API RED draft outside Cargo discovery while owner disposition is pending. No production behavior or completed test was disabled.",
+  "reviewed_path_count": 68,
+  "pre_relocation_mismatches": [],
+  "completeness_implemented": false
+}

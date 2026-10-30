@@ -1,0 +1,19 @@
+{
+  "phase": "structural",
+  "document_kind": "behavioral-contract",
+  "outcome": "fail",
+  "errors": [
+    {
+      "category": "structural",
+      "field_path": "obligations[0].evidence_refs",
+      "description_contains": "Required field is missing"
+    },
+    {
+      "category": "structural",
+      "field_path": "obligations[0].unresolved_assumption",
+      "description_contains": "Required field is missing"
+    }
+  ],
+  "warnings": [],
+  "blockers": []
+}

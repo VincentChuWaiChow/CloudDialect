@@ -1,0 +1,14 @@
+{
+  "phase": "structural",
+  "document_kind": "manifest",
+  "outcome": "fail",
+  "errors": [
+    {
+      "category": "unsupported-version",
+      "field_path": "capabilities.format_version",
+      "description_contains": "Capability declaration version is not supported"
+    }
+  ],
+  "warnings": [],
+  "blockers": []
+}

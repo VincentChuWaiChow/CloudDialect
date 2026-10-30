@@ -1,0 +1,19 @@
+{
+  "phase": "structural",
+  "document_kind": "verification-result",
+  "outcome": "fail",
+  "errors": [
+    {
+      "category": "structural",
+      "field_path": "tests[0].future_field",
+      "description_contains": "Field is not permitted by the selected schema"
+    }
+  ],
+  "warnings": [
+    {
+      "field_name_verbatim": "format_version",
+      "description_contains": "Newer MINOR \"1.1.0\""
+    }
+  ],
+  "blockers": []
+}

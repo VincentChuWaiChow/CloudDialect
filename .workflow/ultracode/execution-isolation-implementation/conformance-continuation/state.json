@@ -1,0 +1,265 @@
+{
+  "title": "Conformance prerequisite continuation",
+  "slug": "conformance-continuation",
+  "created_at": "2026-10-23T18:44:04+00:00",
+  "updated_at": "2026-10-24T09:39:15.594027+00:00",
+  "status": "waiting_for_approval",
+  "mode": "delegated",
+  "baseline_ref": "5dc25f3f31ce500d17aa2322793d3a970f9b73d9",
+  "risk_level": "high",
+  "eval_contract": {
+    "level": "full",
+    "path": "eval-contract.md",
+    "status": "checked"
+  },
+  "approval": {
+    "required": true,
+    "granted": true,
+    "notes": "User approve all go go accepts proposed bounded tranche; later git commit frequently authorizes local thematic/TDD checkpoints, not push/native/release."
+  },
+  "delegation": {
+    "native_agent_available": true,
+    "native_agent_planned": true,
+    "native_agent_used": true,
+    "agent_count": 2,
+    "wave_count": 1,
+    "no_delegation_reason": "",
+    "prior_dispatches": 28,
+    "cumulative_ceiling": 30,
+    "additional_limit": 2,
+    "notes": "29and30complete;30cumulative consumed, zero recursion/follow-ups. Review30actual URI/runner no new defect; proposed patch/seed reviewed separately, not applied."
+  },
+  "packets": [
+    {
+      "id": "29-completeness-review",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/29-completeness-review.md"
+    },
+    {
+      "id": "30-integration-review",
+      "status": "complete",
+      "owner": "read-only-agent",
+      "write_scope": [],
+      "result_path": "results/30-integration-review.md"
+    }
+  ],
+  "verification": {
+    "status": "current implemented default suite green; full corpus/coverage/native/consumer remain incomplete",
+    "checks": [
+      {
+        "name": "full-tests",
+        "command": [
+          "rtk",
+          "proxy",
+          "cargo",
+          "test",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen"
+        ],
+        "exit_code": 0,
+        "log": "full-tests.txt",
+        "rust_tests_passed": 286,
+        "fixture_counts": [
+          1
+        ]
+      },
+      {
+        "name": "check",
+        "command": [
+          "rtk",
+          "proxy",
+          "cargo",
+          "check",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen",
+          "--all-targets"
+        ],
+        "exit_code": 0,
+        "log": "check.txt",
+        "rust_tests_passed": 0,
+        "fixture_counts": []
+      },
+      {
+        "name": "clippy",
+        "command": [
+          "rtk",
+          "proxy",
+          "cargo",
+          "clippy",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--frozen",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "exit_code": 0,
+        "log": "clippy.txt",
+        "rust_tests_passed": 0,
+        "fixture_counts": []
+      },
+      {
+        "name": "fmt",
+        "command": [
+          "rtk",
+          "proxy",
+          "cargo",
+          "fmt",
+          "--manifest-path",
+          "crates/clouddialect-contracts/Cargo.toml",
+          "--check"
+        ],
+        "exit_code": 0,
+        "log": "fmt.txt",
+        "rust_tests_passed": 0,
+        "fixture_counts": []
+      },
+      {
+        "name": "python",
+        "command": [
+          "rtk",
+          "proxy",
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "exit_code": 0,
+        "log": "python.txt",
+        "rust_tests_passed": 0,
+        "fixture_counts": []
+      }
+    ],
+    "additional_controls": "results/renewal-2026-10-24/seed-checks.json",
+    "coverage": "results/renewal-2026-10-24/coverage-availability.json",
+    "additional_documentation_checks": "results/renewal-2026-10-24/documentation-checks.json"
+  },
+  "deadline": "2026-10-23T20:14:04Z",
+  "commits_authorized": true,
+  "pushes_authorized": false,
+  "commits": [
+    {
+      "sha": "494ddc3fc59be47cdb931f46162140589b0177fd",
+      "stage": "feat(contracts): validate semantics and non-accepting evidence completeness"
+    },
+    {
+      "sha": "36db1424273d2869b2613fd5799e54b9b5c8a3c9",
+      "stage": "test(contracts): reproduce missing schema URI diagnostic"
+    },
+    {
+      "sha": "cb36beb0a08f9cb28b1139298403da44cf7cbb7a",
+      "stage": "fix(contracts): identify unresolvable instance schema URI"
+    },
+    {
+      "sha": "e24248c027724d7f9330987abe1979a828dd8116",
+      "stage": "test(conformance): define phase and process-bound runner controls"
+    },
+    {
+      "sha": "899fd46a9f0db3fcb0775a718c69097e36caad33",
+      "stage": "test(conformance): expose dropped manifest diagnostics in runner iteration"
+    },
+    {
+      "sha": "42be2c78d4ee038cb8f66461a6f7273c5e195ad0",
+      "stage": "fix(conformance): compare both manifest diagnostic channels"
+    },
+    {
+      "sha": "fc0b79d5d3f95bc386276262cf6f68764c5a89a5",
+      "stage": "docs: checkpoint scoped prerequisite evidence and conformance plan"
+    },
+    {
+      "sha": "ce2babae580c3be32b7f0de8d4536e3734142afa",
+      "stage": "refactor(conformance): simplify timeout cleanup after green controls"
+    },
+    {
+      "sha": "b7c744028d5ea7b00d0920cdfadd4b097b3b243a",
+      "stage": "docs(conformance): checkpoint review and scoped verification evidence"
+    }
+  ],
+  "pending_approvals": [],
+  "full_goal_complete": false,
+  "current_full_tree_green": false,
+  "no_processes_running": true,
+  "current_safe_runner_verification": "Approved repair/seed and integrated checks complete. Remaining fixture scheduling container needs expanded/approved batches; native/consumer/coverage gates open.",
+  "renewal": {
+    "approval": "explicit user approve, consolidated repair+seed 45-minute question",
+    "start": "2026-10-24T02:47:02+00:00",
+    "deadline": "2026-10-24T03:32:02+00:00",
+    "additional_agents": 0,
+    "cumulative_dispatches": 30,
+    "known_repair_limit": 1,
+    "known_repairs_applied": 1,
+    "pushes_authorized": false,
+    "status": "bounded_items_verified_full_goal_unfinished",
+    "plan": "renewal-plan.md",
+    "checks": "results/renewal-2026-10-24/integrated-checks.json",
+    "report": "renewal-report.md",
+    "fresh_coverage": "skipped: matching LLVM tools unavailable",
+    "new_independent_review": false,
+    "commits": [
+      {
+        "sha": "03738e46780c58bae7053743a5083f84590b8968",
+        "stage": "test(contracts): reproduce omitted direct-assumption blocking gaps"
+      },
+      {
+        "sha": "039688301b23b1b351c94e87fb4410ee6bfc1134",
+        "stage": "fix(contracts): retain direct assumptions beside mandatory blockers"
+      },
+      {
+        "sha": "408af0d79e4e7210da930126d247426676cf7342",
+        "stage": "test(conformance): admit approved inferred-evidence seed"
+      }
+    ],
+    "extra_checker": "pre-existing failure: 8 pass/1 error; same 8 supporting checkmarks at baseline/current; checker unchanged",
+    "failclosed_cli_matched": 67,
+    "postreview_hash_disposition": "11 unchanged, 2 deliberately changed by approved repair; no fresh independent signoff"
+  },
+  "current_cargo_suite_green": true,
+  "current_full_tree_green_reason": "Default Cargo/check/fmt/Clippy and repository Python pass; additional pre-existing spec-only checker fails and fresh coverage/MSRV remain unverified.",
+  "positive_preparation": {
+    "status": "19 actual temporary-root checks matched; 12 drafts ready, not admitted",
+    "proposal": "positive-preparation/admission-proposal.md",
+    "checks": "positive-preparation/verification.json",
+    "canonical_count": 1,
+    "new_agents": 0
+  },
+  "negative_preparation": {
+    "status": "23 cases frozen and 41 actual controls matched; not admitted",
+    "initial_oracle_match": "22/23; one source-justified draft correction retained",
+    "proposal": "negative-preparation/admission-proposal.md",
+    "checks": "negative-preparation/verification.json",
+    "no_new_approval_question": "Positive admission question still pending; negative proposal does not expand it",
+    "canonical_count": 1,
+    "new_agents": 0
+  },
+  "roundtrip_preparation": {
+    "status": "three raw-value drafts; 10 actual controls matched; not admitted",
+    "proposal": "roundtrip-preparation/admission-proposal.md",
+    "checks": "roundtrip-preparation/verification.json",
+    "temporary_composite_count": 39,
+    "canonical_count": 1,
+    "new_agents": 0
+  },
+  "integration_preparation": {
+    "status": "three non-native drafts; 11 actual checks matched; not admitted",
+    "proposal": "integration-preparation/admission-proposal.md",
+    "checks": "integration-preparation/verification.json",
+    "temporary_composite_count": 42,
+    "canonical_count": 1,
+    "new_agents": 0,
+    "native_batch_3.2.41": "unprepared; actual approved environment remains required"
+  },
+  "current_admission": "admission-2026-10-24/state.json",
+  "current_owner_scope": "Explicit approving all:41prepared cases, plus as-needed agents. No source/native/external/gate approval inferred.",
+  "current_canonical_fixture_count": 42,
+  "current_admission_scope": "All41 frozen drafts approved/admitted; only25bounded batches plus prior seed complete. Source/native/external actions excluded.",
+  "current_admission_status": "41-case admission verified,42canonical total; no pending approval for these cases",
+  "remaining_required_decisions": "Remaining62case contracts/native/tooling/traceability/consumer and allUD/BG evidence; no broader scope inferred."
+}

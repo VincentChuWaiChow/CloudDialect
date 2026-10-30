@@ -1,0 +1,23 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440014",
+  "format_version": "1.0.0",
+  "operation_identity": {
+    "call_site": "synthetic.fixture.upload"
+  },
+  "inputs": {},
+  "outputs": {},
+  "side_effects": [],
+  "resource_dependencies": [],
+  "obligations": [
+    {
+      "obligation_id": "upload-object",
+      "behavioral_fidelity": "equivalent-within-contract",
+      "evidence_refs": [
+        "550e8400-e29b-41d4-a716-446655440001"
+      ]
+    }
+  ],
+  "acme:custom-field": {
+    "fixture_note": "Optional synthetic data, not policy or acceptance authority."
+  }
+}

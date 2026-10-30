@@ -1,0 +1,14 @@
+{
+  "phase": "semantic",
+  "document_kind": "verification-result",
+  "outcome": "fail",
+  "errors": [
+    {
+      "category": "semantic",
+      "field_path": "tests[1].test_id",
+      "description_contains": "Test identity is duplicated in this verification result"
+    }
+  ],
+  "warnings": [],
+  "blockers": []
+}

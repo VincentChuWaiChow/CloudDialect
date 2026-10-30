@@ -1,0 +1,9 @@
+{
+  "failed_control": "old-fail-oracle-rejects-repair:integration/scoped-store/missing",
+  "expected_exit": 1,
+  "actual_exit": 0,
+  "cause": "Restoring the entire original expected DTO also restored its missing-store SETUP. Runner correctly accepted that unchanged original negative scenario.",
+  "correction": "Retain repaired store/store_error setup and restore only outcome/errors/warnings/blockers expectations, then rerun all controls.",
+  "source_or_frozen_oracle_changes": false,
+  "driver_corrections": 1
+}

@@ -58,36 +58,45 @@ impl ManifestValidator {
             {
                 continue;
             }
-            if let Err(diagnostics) = crate::validator::document_resolution::resolve_document(
+            let record = match crate::validator::document_resolution::resolve_document(
                 &validator,
                 store,
                 &reference.id,
                 Some(&reference.format_version),
                 DocumentKind::BehavioralContract,
             ) {
-                let path = property_path("contracts", key);
-                errors.extend(diagnostics.into_iter().map(|mut error| {
-                    // Preserve the referenced document's original location.
-                    // Only locationless store failures belong at the binding.
-                    if error.field_path.is_none() {
-                        error.description = format!(
-                            "{} (referenced document {:?}, format version {:?})",
-                            error.description, reference.id, reference.format_version
-                        );
-                        error.document_id = Some(manifest.pack.id.clone());
-                        error.format_version = None;
-                        error.field_path = Some(format!("{path}.id"));
-                    } else {
+                Ok(record) => record,
+                Err(diagnostics) => {
+                    let path = property_path("contracts", key);
+                    errors.extend(diagnostics.into_iter().map(|mut error| {
+                        // Preserve the referenced document's original location.
+                        // Only locationless store failures belong at the binding.
+                        if error.field_path.is_none() {
+                            error.description = format!(
+                                "{} (referenced document {:?}, format version {:?})",
+                                error.description, reference.id, reference.format_version
+                            );
+                            error.document_id = Some(manifest.pack.id.clone());
+                            error.format_version = None;
+                            error.field_path = Some(format!("{path}.id"));
+                        } else {
+                            error
+                                .document_id
+                                .get_or_insert_with(|| reference.id.clone());
+                            error
+                                .format_version
+                                .get_or_insert_with(|| reference.format_version.clone());
+                        }
                         error
-                            .document_id
-                            .get_or_insert_with(|| reference.id.clone());
-                        error
-                            .format_version
-                            .get_or_insert_with(|| reference.format_version.clone());
-                    }
-                    error
-                }));
-            }
+                    }));
+                    continue;
+                }
+            };
+            errors.extend(
+                validator
+                    .validate_semantic(DocumentKind::BehavioralContract, &record.bytes, store)
+                    .errors,
+            );
         }
         errors
             .sort_by(|a, b| (&a.field_path, &a.description).cmp(&(&b.field_path, &b.description)));

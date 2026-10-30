@@ -1,0 +1,26 @@
+{
+  "source": "https://static.rust-lang.org/dist/2026-10-15/llvm-tools-1.99.1-x86_64-unknown-linux-gnu.tar.xz",
+  "archive_sha256": "8429c5117debfb45c22cf2f97712ef00e0e94976c96cf92f661974a458ca7e84",
+  "installed_manifest_match": true,
+  "global_install": false,
+  "selected": [
+    {
+      "member": "llvm-tools-1.99.1-x86_64-unknown-linux-gnu/llvm-tools-preview/lib/rustlib/x86_64-unknown-linux-gnu/bin/llvm-profdata",
+      "path": "/tmp/clouddialect-runtime-llvm-tools/llvm-profdata",
+      "size": 630576,
+      "sha256": "a5a595c1a396827579c7e15ae74feddd22cabad6d0392b2ef44d8797e61efbb9"
+    },
+    {
+      "member": "llvm-tools-1.99.1-x86_64-unknown-linux-gnu/llvm-tools-preview/lib/rustlib/x86_64-unknown-linux-gnu/lib/libLLVM.so.23.1-rust-1.99.1-stable",
+      "path": "/tmp/clouddialect-runtime-llvm-tools/libLLVM.so.23.1-rust-1.99.1-stable",
+      "size": 208167760,
+      "sha256": "1cfbe1392a767227b88b33ab6187283e281c63f80f9b1ca9010d9cee5fdf9131"
+    },
+    {
+      "member": "llvm-tools-1.99.1-x86_64-unknown-linux-gnu/llvm-tools-preview/lib/rustlib/x86_64-unknown-linux-gnu/bin/llvm-cov",
+      "path": "/tmp/clouddialect-runtime-llvm-tools/llvm-cov",
+      "size": 619712,
+      "sha256": "ef43fb4517e5210ce5550eed061dd1364e6d7da477b6413bd6f6fd3b57c7570b"
+    }
+  ]
+}

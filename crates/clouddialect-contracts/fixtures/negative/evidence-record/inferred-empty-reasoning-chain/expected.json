@@ -1,0 +1,19 @@
+{
+  "phase": "structural",
+  "document_kind": "evidence-record",
+  "outcome": "fail",
+  "errors": [
+    {
+      "category": "structural",
+      "field_path": "reasoning_chain",
+      "description_contains": "Field does not satisfy the selected schema constraint"
+    },
+    {
+      "category": "structural",
+      "field_path": "reasoning_chain",
+      "description_contains": "Field is not permitted by the selected schema"
+    }
+  ],
+  "warnings": [],
+  "blockers": []
+}

@@ -105,7 +105,12 @@ impl Validator {
                 result,
                 ErrorCategory::UnresolvableReference,
                 "$schema",
-                "Instance $schema must exactly match the selected admitted kind/version URI",
+                &match uri.as_str() {
+                    Some(uri) => format!(
+                        "Instance $schema URI {uri:?} must exactly match the selected admitted kind/version URI"
+                    ),
+                    None => "Instance $schema must be a string matching the selected admitted kind/version URI".to_owned(),
+                },
             );
         }
         let mut compiler = Compiler::new();

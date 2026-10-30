@@ -1,0 +1,128 @@
+{
+  "created_at": "2026-10-24T09:47:06.873006+00:00",
+  "status": "Exact source-derived semantic draft oracles frozen before execution; no admission approval inferred",
+  "cases": [
+    {
+      "path": "integration/verification-consistency/duplicate-test-ids",
+      "oracle": {
+        "phase": "semantic",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "semantic",
+            "field_path": "tests[1].test_id",
+            "description_contains": "Test identity is duplicated in this verification result"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "positive_baseline": "positive/verification-result/minimal/input.json",
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-readiness-2026-10-24/verification-semantic-drafts/integration/verification-consistency/duplicate-test-ids/input.json": "41ff5bd79569a594a6001d09f37113f4ca6e18902e31753e80aaed302b15ab79",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-readiness-2026-10-24/verification-semantic-drafts/integration/verification-consistency/duplicate-test-ids/expected.json": "f9e13cc21e62be450415629e332901dcfd7c640e604a75993694baf1b36d0814"
+      },
+      "batch": "3.2.53"
+    },
+    {
+      "path": "integration/verification-consistency/unmapped-obligations",
+      "oracle": {
+        "phase": "semantic",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "semantic",
+            "field_path": "tests[0].obligation_ids[0]",
+            "description_contains": "Test obligation is absent from the declared binding"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "positive_baseline": "positive/verification-result/minimal/input.json",
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-readiness-2026-10-24/verification-semantic-drafts/integration/verification-consistency/unmapped-obligations/input.json": "504becc049fdcb1b957d20967d505e9af7bc4275bc85b4fa1398ee5639a0b7f2",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-readiness-2026-10-24/verification-semantic-drafts/integration/verification-consistency/unmapped-obligations/expected.json": "a19df99b809c3d49844d9718f1dd7856d67f03c5fea9b08741c86b0f8abcb71b"
+      },
+      "batch": "3.2.53"
+    },
+    {
+      "path": "integration/verification-consistency/invalid-hash-length",
+      "oracle": {
+        "phase": "semantic",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "semantic",
+            "field_path": "candidate.content_hash.value",
+            "description_contains": "Content hash must be lowercase hexadecimal of the algorithm's exact length"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "positive_baseline": "positive/verification-result/minimal/input.json",
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-readiness-2026-10-24/verification-semantic-drafts/integration/verification-consistency/invalid-hash-length/input.json": "6e568830ca8f90f37b5e7ffb89aad7b09f624ada761187cc613fea80c96481d3",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-readiness-2026-10-24/verification-semantic-drafts/integration/verification-consistency/invalid-hash-length/expected.json": "c4f3cf0edeff8de0a992f3acb852be11a31c1f7047c1241bb6293ce64ab5f621"
+      },
+      "batch": "3.2.55"
+    },
+    {
+      "path": "integration/verification-consistency/approval-result-id-mismatch",
+      "oracle": {
+        "phase": "semantic",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "semantic",
+            "field_path": "acceptance.verification_result.id",
+            "description_contains": "Approval reference must identify this exact verification document"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "positive_baseline": "positive/verification-result/with-acceptance/input.json",
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-readiness-2026-10-24/verification-semantic-drafts/integration/verification-consistency/approval-result-id-mismatch/input.json": "158a38687269d7e214207abc2ddd2172126607284a25a8619b61a51d473dc793",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-readiness-2026-10-24/verification-semantic-drafts/integration/verification-consistency/approval-result-id-mismatch/expected.json": "5072bb30800a72e542b2f3bc567f15d02ca4cee2e0b8f0ec66dc9c309d9afd15"
+      },
+      "batch": "3.2.55"
+    },
+    {
+      "path": "integration/verification-consistency/approval-result-version-mismatch",
+      "oracle": {
+        "phase": "semantic",
+        "document_kind": "verification-result",
+        "outcome": "fail",
+        "errors": [
+          {
+            "category": "semantic",
+            "field_path": "acceptance.verification_result.format_version",
+            "description_contains": "Approval reference must match this exact document-format version"
+          }
+        ],
+        "warnings": [],
+        "blockers": []
+      },
+      "positive_baseline": "positive/verification-result/with-acceptance/input.json",
+      "files": {
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-readiness-2026-10-24/verification-semantic-drafts/integration/verification-consistency/approval-result-version-mismatch/input.json": "9c88f26eb8df9a5ed9278469fc92e3ac5a465577241020951d58db2f4c1e6e54",
+        ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/remaining-readiness-2026-10-24/verification-semantic-drafts/integration/verification-consistency/approval-result-version-mismatch/expected.json": "3cf87cac5944074b4f60d030c8fc6118101ebe4063f40d6a4ada797806e2e77b"
+      },
+      "batch": "3.2.56"
+    }
+  ],
+  "sources": {
+    "crates/clouddialect-contracts/src/validator/verification_semantics.rs": "e5ff3e871ae242c9737c9850411198fbc8ac5d96babae7f80182555c9f728ca5",
+    "crates/clouddialect-contracts/src/validator/semantic.rs": "06097648e746166fee8f4070529ee9c04f9aed35782fc9a16b2a8220781f6b96",
+    "catalog/schemas/verification-result/1.0/schema.json": "c6246397e248f89fecae1639ae838153a88946b9cdfa15dde15de1b3e6b06ba9",
+    ".kiro/specs/contracts-evidence-foundation/tasks.md": "4c9127fc2708dfcaaa30dc1a5541b7ef14215d09e14b975ebeb803d87d6d7731"
+  },
+  "scope": "P0-C consistency only; no authenticated approval/origin/protected expected context or replay detection proof"
+}

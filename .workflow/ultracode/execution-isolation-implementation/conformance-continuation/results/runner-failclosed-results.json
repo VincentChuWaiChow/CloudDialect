@@ -1,0 +1,571 @@
+{
+  "created_at": "2026-10-23T19:37:36.980124+00:00",
+  "case_definitions": "runner-failclosed-cases.json",
+  "total": 67,
+  "matched": 67,
+  "unexpected": 0,
+  "seconds": 18.2546,
+  "results": [
+    {
+      "name": "baseline-valid",
+      "exit_code": 0,
+      "expected_success": true,
+      "matched": true,
+      "seconds": 0.5176,
+      "output": "PASS positive/case\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "metadata-missing-phase",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0688,
+      "output": "/tmp/clouddialect-failclosed-tk458_ll/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-tk458_ll/positive/case: invalid expected.json: missing field `phase` at line 1 column 55\n\n"
+    },
+    {
+      "name": "metadata-missing-document_kind",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0695,
+      "output": "/tmp/clouddialect-failclosed-x49dvsju/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-x49dvsju/positive/case: invalid expected.json: missing field `document_kind` at line 1 column 42\n\n"
+    },
+    {
+      "name": "metadata-unknown-field",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0794,
+      "output": "/tmp/clouddialect-failclosed-b45rdfml/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-b45rdfml/positive/case: invalid expected.json: unknown field `typo`, expected one of `phase`, `document_kind`, `outcome`, `expected_match`, `candidate_id`, `candidate_bytes`, `errors`, `warnings`, `blockers`, `store`, `store_error`, `round_trip` at line 1 column 85\n\n"
+    },
+    {
+      "name": "metadata-unknown-kind",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0727,
+      "output": "/tmp/clouddialect-failclosed-f7wja195/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-f7wja195/positive/case: invalid document_kind: unknown variant `unknown`, expected one of `behavioral-contract`, `evidence-record`, `verification-result`, `catalog-index`, `extension-registry`\n\n"
+    },
+    {
+      "name": "metadata-invalid-json",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0806,
+      "output": "/tmp/clouddialect-failclosed-vdmko2kf/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-vdmko2kf/positive/case: invalid expected.json: EOF while parsing an object at line 1 column 1\n\n"
+    },
+    {
+      "name": "metadata-array-not-object",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.074,
+      "output": "/tmp/clouddialect-failclosed-r9h8ytm8/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-r9h8ytm8/positive/case: invalid expected.json: invalid length 0, expected struct Expected with 12 elements at line 1 column 2\n\n"
+    },
+    {
+      "name": "invalid-union-unknown-evidence-record-pass",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0725,
+      "output": "/tmp/clouddialect-failclosed-h49sblps/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-h49sblps/positive/case: unsupported phase/document_kind combination\n\n"
+    },
+    {
+      "name": "invalid-union-behavioral-evidence-record-deferred",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0699,
+      "output": "/tmp/clouddialect-failclosed-8bq8yi74/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-8bq8yi74/positive/case: unsupported phase/document_kind combination\n\n"
+    },
+    {
+      "name": "invalid-union-artifact-hash-evidence-record-pass",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0775,
+      "output": "/tmp/clouddialect-failclosed-0ndfk_ci/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-0ndfk_ci/positive/case: unsupported phase/document_kind combination\n\n"
+    },
+    {
+      "name": "invalid-union-structural-manifest-warn",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0696,
+      "output": "/tmp/clouddialect-failclosed-z114dgkn/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-z114dgkn/positive/case: unsupported phase-specific outcome or hash fields\n\n"
+    },
+    {
+      "name": "invalid-union-semantic-evidence-record-warn",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0588,
+      "output": "/tmp/clouddialect-failclosed-5yfxj1wz/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-5yfxj1wz/positive/case: unsupported phase-specific outcome or hash fields\n\n"
+    },
+    {
+      "name": "invalid-union-structural-evidence-record-blocked",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0679,
+      "output": "/tmp/clouddialect-failclosed-m9ysjgpn/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-m9ysjgpn/positive/case: unsupported phase-specific outcome or hash fields\n\n"
+    },
+    {
+      "name": "hash-field-in-structural-expected_match-None",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0737,
+      "output": "/tmp/clouddialect-failclosed-nbngiwfz/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-nbngiwfz/positive/case: unsupported phase-specific outcome or hash fields\n\n"
+    },
+    {
+      "name": "hash-field-in-structural-expected_match-False",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0685,
+      "output": "/tmp/clouddialect-failclosed-04hgf6qs/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-04hgf6qs/positive/case: unsupported phase-specific outcome or hash fields\n\n"
+    },
+    {
+      "name": "hash-field-in-structural-candidate_bytes-None",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0715,
+      "output": "/tmp/clouddialect-failclosed-2p0bs9yr/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-2p0bs9yr/positive/case: unsupported phase-specific outcome or hash fields\n\n"
+    },
+    {
+      "name": "hash-field-in-structural-candidate_bytes-[]",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0681,
+      "output": "/tmp/clouddialect-failclosed-d5zeoni8/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-d5zeoni8/positive/case: unsupported phase-specific outcome or hash fields\n\n"
+    },
+    {
+      "name": "hash-missing-expected_match",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0664,
+      "output": "/tmp/clouddialect-failclosed-b00jhb7u/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-b00jhb7u/positive/case: artifact-hash requires expected_match/candidate_bytes and no outcome\n\n"
+    },
+    {
+      "name": "hash-missing-candidate_bytes",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0711,
+      "output": "/tmp/clouddialect-failclosed-69kew_8x/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-69kew_8x/positive/case: artifact-hash requires expected_match/candidate_bytes and no outcome\n\n"
+    },
+    {
+      "name": "hash-outcome-null-presence",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0677,
+      "output": "/tmp/clouddialect-failclosed-_v6xrm2c/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-_v6xrm2c/positive/case: artifact-hash requires expected_match/candidate_bytes and no outcome\n\n"
+    },
+    {
+      "name": "behavioral-missing-candidate",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0579,
+      "output": "/tmp/clouddialect-failclosed-p_b4q08u/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-p_b4q08u/positive/case: candidate_id is required only for behavioral completeness\n\n"
+    },
+    {
+      "name": "structural-extraneous-candidate",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0655,
+      "output": "/tmp/clouddialect-failclosed-b8dapqt0/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-b8dapqt0/positive/case: candidate_id is required only for behavioral completeness\n\n"
+    },
+    {
+      "name": "structural-extraneous-store",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0683,
+      "output": "/tmp/clouddialect-failclosed-scq_qwtn/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-scq_qwtn/positive/case: store context is supported only for semantic/completeness fixtures\n\n"
+    },
+    {
+      "name": "roundtrip-no-extension",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.5174,
+      "output": "/tmp/clouddialect-failclosed-7umae4z4/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-7umae4z4/positive/case: round-trip extension value bytes missing or changed\n\n"
+    },
+    {
+      "name": "roundtrip-wrong-phase",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0682,
+      "output": "/tmp/clouddialect-failclosed-gpzeo3l1/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-gpzeo3l1/positive/case: round_trip requires structural JSON document DTO validation\n\n"
+    },
+    {
+      "name": "roundtrip-wrong-kind",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0689,
+      "output": "/tmp/clouddialect-failclosed-o4nd72_0/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-o4nd72_0/positive/case: round_trip requires structural JSON document DTO validation\n\n"
+    },
+    {
+      "name": "roundtrip-positive",
+      "exit_code": 0,
+      "expected_success": true,
+      "matched": true,
+      "seconds": 0.626,
+      "output": "PASS positive/case\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "error-positive",
+      "exit_code": 0,
+      "expected_success": true,
+      "matched": true,
+      "seconds": 0.4931,
+      "output": "PASS positive/case\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "error-missing-category",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.4645,
+      "output": "/tmp/clouddialect-failclosed-a2r3cu_5/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-a2r3cu_5/positive/case: invalid errors expectation fields\n\n"
+    },
+    {
+      "name": "error-unknown-category",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.5322,
+      "output": "/tmp/clouddialect-failclosed-pys30ttv/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-pys30ttv/positive/case: unknown variant `invalid-category`, expected one of `structural`, `semantic`, `version`, `unresolvable-reference`, `unparseable`, `unsupported-version`, `unsupported-major-version`, `unsupported`, `blocking-gap`\n\n"
+    },
+    {
+      "name": "error-unknown-field",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.5145,
+      "output": "/tmp/clouddialect-failclosed-qbv4f7j3/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-qbv4f7j3/positive/case: invalid errors expectation fields\n\n"
+    },
+    {
+      "name": "error-invalid-description",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.515,
+      "output": "/tmp/clouddialect-failclosed-s404hwsm/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-s404hwsm/positive/case: invalid errors expectation fields\n\n"
+    },
+    {
+      "name": "error-invalid-path",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.5326,
+      "output": "/tmp/clouddialect-failclosed-48md760i/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-48md760i/positive/case: invalid errors expectation fields\n\n"
+    },
+    {
+      "name": "error-wrong-category",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.5107,
+      "output": "/tmp/clouddialect-failclosed-w7bhwhf6/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-w7bhwhf6/positive/case: errors: expected [Object {\"category\": String(\"structural\"), \"description_contains\": String(\"unknown-schema\"), \"field_path\": String(\"$schema\")}], actual [Object {\"byte_offset\": Null, \"category\": String(\"unresolvable-reference\"), \"description\": String(\"Instance $schema URI \\\"https://example.com/unknown-schema\\\" must exactly match the selected admitted kind/version URI\"), \"document_id\": String(\"550e8400-e29b-41d4-a716-446655440000\"), \"field_path\": String(\"$schema\"), \"format_version\": String(\"1.0.0\")}]\n\n"
+    },
+    {
+      "name": "error-null-path-mismatch",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.511,
+      "output": "/tmp/clouddialect-failclosed-3et0t3cu/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-3et0t3cu/positive/case: errors: expected [Object {\"category\": String(\"unresolvable-reference\"), \"description_contains\": String(\"unknown-schema\"), \"field_path\": Null}], actual [Object {\"byte_offset\": Null, \"category\": String(\"unresolvable-reference\"), \"description\": String(\"Instance $schema URI \\\"https://example.com/unknown-schema\\\" must exactly match the selected admitted kind/version URI\"), \"document_id\": String(\"550e8400-e29b-41d4-a716-446655440000\"), \"field_path\": String(\"$schema\"), \"format_version\": String(\"1.0.0\")}]\n\n"
+    },
+    {
+      "name": "error-wrong-path",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.4717,
+      "output": "/tmp/clouddialect-failclosed-ss29kstc/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-ss29kstc/positive/case: errors: expected [Object {\"category\": String(\"unresolvable-reference\"), \"description_contains\": String(\"unknown-schema\"), \"field_path\": String(\"wrong\")}], actual [Object {\"byte_offset\": Null, \"category\": String(\"unresolvable-reference\"), \"description\": String(\"Instance $schema URI \\\"https://example.com/unknown-schema\\\" must exactly match the selected admitted kind/version URI\"), \"document_id\": String(\"550e8400-e29b-41d4-a716-446655440000\"), \"field_path\": String(\"$schema\"), \"format_version\": String(\"1.0.0\")}]\n\n"
+    },
+    {
+      "name": "error-wrong-description",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.4821,
+      "output": "/tmp/clouddialect-failclosed-ztcdnzcr/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-ztcdnzcr/positive/case: errors: expected [Object {\"category\": String(\"unresolvable-reference\"), \"description_contains\": String(\"absent-text\"), \"field_path\": String(\"$schema\")}], actual [Object {\"byte_offset\": Null, \"category\": String(\"unresolvable-reference\"), \"description\": String(\"Instance $schema URI \\\"https://example.com/unknown-schema\\\" must exactly match the selected admitted kind/version URI\"), \"document_id\": String(\"550e8400-e29b-41d4-a716-446655440000\"), \"field_path\": String(\"$schema\"), \"format_version\": String(\"1.0.0\")}]\n\n"
+    },
+    {
+      "name": "error-scalar",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.505,
+      "output": "/tmp/clouddialect-failclosed-6voeseag/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-6voeseag/positive/case: errors expectation must be an object\n\n"
+    },
+    {
+      "name": "error-missing",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.532,
+      "output": "/tmp/clouddialect-failclosed-yx216q_8/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-yx216q_8/positive/case: errors: expected 0 entries, actual 1\n\n"
+    },
+    {
+      "name": "error-extra",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.5807,
+      "output": "/tmp/clouddialect-failclosed-qrdyyj9y/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-qrdyyj9y/positive/case: errors: expected 2 entries, actual 1\n\n"
+    },
+    {
+      "name": "warning-positive",
+      "exit_code": 0,
+      "expected_success": true,
+      "matched": true,
+      "seconds": 0.534,
+      "output": "PASS positive/case\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "warning-missing-key",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.5945,
+      "output": "/tmp/clouddialect-failclosed-comzf9nh/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-comzf9nh/positive/case: invalid warnings expectation fields\n\n"
+    },
+    {
+      "name": "warning-wrong-key",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.5284,
+      "output": "/tmp/clouddialect-failclosed-hsv0xuiq/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-hsv0xuiq/positive/case: warnings: expected [Object {\"description_contains\": String(\"reserved for core use\"), \"field_name_verbatim\": String(\"core:field\")}], actual [Object {\"description\": String(\"prefix 'CORE' is reserved for core use\"), \"field_name_verbatim\": String(\"CORE:field\")}]\n\n"
+    },
+    {
+      "name": "warning-unknown-field",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.5389,
+      "output": "/tmp/clouddialect-failclosed-53oargb1/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-53oargb1/positive/case: invalid warnings expectation fields\n\n"
+    },
+    {
+      "name": "warning-invalid-description",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.517,
+      "output": "/tmp/clouddialect-failclosed-efww7wc8/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-efww7wc8/positive/case: invalid warnings expectation fields\n\n"
+    },
+    {
+      "name": "warning-scalar",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.5299,
+      "output": "/tmp/clouddialect-failclosed-ij8n6pjc/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-ij8n6pjc/positive/case: warnings expectation must be an object\n\n"
+    },
+    {
+      "name": "blocker-positive",
+      "exit_code": 0,
+      "expected_success": true,
+      "matched": true,
+      "seconds": 0.5754,
+      "output": "PASS positive/case\n1 conformance fixtures passed\n"
+    },
+    {
+      "name": "blocker-missing-id",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.5274,
+      "output": "/tmp/clouddialect-failclosed-uey6rpm5/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-uey6rpm5/positive/case: invalid blockers expectation fields\n\n"
+    },
+    {
+      "name": "blocker-wrong-id",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.5565,
+      "output": "/tmp/clouddialect-failclosed-ezmko5wo/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-ezmko5wo/positive/case: blockers: expected [Object {\"assumption_text_contains\": String(\"unknown\"), \"obligation_id\": String(\"wrong\")}], actual [Object {\"assumption_text\": String(\"unknown\"), \"candidate_id\": String(\"candidate\"), \"obligation_id\": String(\"o1\")}]\n\n"
+    },
+    {
+      "name": "blocker-unknown-field",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.6,
+      "output": "/tmp/clouddialect-failclosed-h6j1umho/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-h6j1umho/positive/case: invalid blockers expectation fields\n\n"
+    },
+    {
+      "name": "blocker-invalid-description",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.5262,
+      "output": "/tmp/clouddialect-failclosed-v7e6ilud/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-v7e6ilud/positive/case: invalid blockers expectation fields\n\n"
+    },
+    {
+      "name": "blocker-scalar",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.6266,
+      "output": "/tmp/clouddialect-failclosed-hjokuk07/positive/case: fixture validator exit status: 1: /tmp/clouddialect-failclosed-hjokuk07/positive/case: blockers expectation must be an object\n\n"
+    },
+    {
+      "name": "discovery-input-only",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0487,
+      "output": "incomplete, ambiguous or non-leaf fixture: /tmp/clouddialect-failclosed-lez_qvof/positive/case\n"
+    },
+    {
+      "name": "discovery-oracle-only",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0413,
+      "output": "incomplete, ambiguous or non-leaf fixture: /tmp/clouddialect-failclosed-baoivyct/positive/case\n"
+    },
+    {
+      "name": "discovery-dual-input",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0421,
+      "output": "incomplete, ambiguous or non-leaf fixture: /tmp/clouddialect-failclosed-jc2aa9_k/positive/case\n"
+    },
+    {
+      "name": "discovery-non-leaf",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.042,
+      "output": "incomplete, ambiguous or non-leaf fixture: /tmp/clouddialect-failclosed-_y6vhj5n/positive/case\n"
+    },
+    {
+      "name": "discovery-symlink-file",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0421,
+      "output": "symlink in fixture tree: /tmp/clouddialect-failclosed-rr8szvae/positive/case/link\n"
+    },
+    {
+      "name": "discovery-symlink-directory",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0439,
+      "output": "symlink in fixture tree: /tmp/clouddialect-failclosed-iitr7n8_/linked\n"
+    },
+    {
+      "name": "discovery-fifo-entry",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0424,
+      "output": "non-regular fixture entry: /tmp/clouddialect-failclosed-ycgvgo5z/positive/case/pipe\n"
+    },
+    {
+      "name": "invalid-prefix-''",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0465,
+      "output": "invalid fixture directory prefix \"\"\n"
+    },
+    {
+      "name": "invalid-prefix-'..'",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0458,
+      "output": "invalid fixture directory prefix \"..\"\n"
+    },
+    {
+      "name": "invalid-prefix-'positive/../case'",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0437,
+      "output": "invalid fixture directory prefix \"positive/../case\"\n"
+    },
+    {
+      "name": "invalid-prefix-'positive//case'",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0423,
+      "output": "invalid fixture directory prefix \"positive//case\"\n"
+    },
+    {
+      "name": "invalid-prefix-'/positive'",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0418,
+      "output": "invalid fixture directory prefix \"/positive\"\n"
+    },
+    {
+      "name": "invalid-prefix-'positive\\\\case'",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0424,
+      "output": "invalid fixture directory prefix \"positive\\\\case\"\n"
+    },
+    {
+      "name": "invalid-prefix-'positive/./case'",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0426,
+      "output": "invalid fixture directory prefix \"positive/./case\"\n"
+    },
+    {
+      "name": "empty-tree",
+      "exit_code": 1,
+      "expected_success": false,
+      "matched": true,
+      "seconds": 0.0419,
+      "output": "no fixtures discovered under /tmp/clouddialect-failclosed-vyy9j5y5\n"
+    }
+  ],
+  "invocation_template": [
+    "rtk",
+    "proxy",
+    "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+    "--fixture-root",
+    "<fresh-temporary-root>",
+    "<optional-prefix>"
+  ],
+  "positive_controls": 5,
+  "negative_controls": 62,
+  "postcheck_reviewed_hashes": {
+    "crates/clouddialect-contracts/src/validator/structural.rs": true,
+    "crates/clouddialect-contracts/tests/structural_validation.rs": true,
+    "crates/clouddialect-contracts/Cargo.toml": true,
+    "crates/clouddialect-contracts/Cargo.lock": true,
+    "crates/clouddialect-contracts/tests/conformance.rs": true,
+    "crates/clouddialect-contracts/tests/conformance_controls.rs": true,
+    "crates/clouddialect-contracts/tests/support/fixtures.rs": true,
+    "crates/clouddialect-contracts/src/validator/behavioral.rs": true,
+    "crates/clouddialect-contracts/tests/evidence_completeness.rs": true,
+    ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/runner-contract.md": true,
+    ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/pending/completeness-diagnostic-repair.patch": true,
+    ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/pending/seed/positive/evidence-record/inferred/input.json": true,
+    ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/pending/seed/positive/evidence-record/inferred/expected.json": true
+  }
+}

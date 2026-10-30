@@ -1,0 +1,73 @@
+[
+  {
+    "prefix": "positive",
+    "exit": 0,
+    "count": 13,
+    "all_inside_exact_prefix": true
+  },
+  {
+    "prefix": "negative",
+    "exit": 0,
+    "count": 23,
+    "all_inside_exact_prefix": true
+  },
+  {
+    "prefix": "round-trip",
+    "exit": 0,
+    "count": 3,
+    "all_inside_exact_prefix": true
+  },
+  {
+    "prefix": "integration",
+    "exit": 0,
+    "count": 3,
+    "all_inside_exact_prefix": true
+  },
+  {
+    "prefix": "guaranteed-zero",
+    "exit": 1,
+    "stderr": "no fixtures selected by directory prefix"
+  },
+  {
+    "wrong_case": "positive/behavioral-contract/minimal-valid",
+    "wrong_key": "outcome",
+    "wrong_value": "fail",
+    "exit": 1,
+    "stderr": "/tmp/clouddialect-review33-control-2pj1istp/positive/behavioral-contract/minimal-valid: fixture validator exit status: 1: /tmp/clouddialect-review33-control-2pj1istp/positive/behavioral-contract/minimal-valid: outcome: expected \"fail\", actual \"pass\""
+  },
+  {
+    "wrong_case": "negative/verification-result/unknown-hash-algorithm",
+    "wrong_key": "outcome",
+    "wrong_value": "pass",
+    "exit": 1,
+    "stderr": "/tmp/clouddialect-review33-control-lyb776ne/negative/verification-result/unknown-hash-algorithm: fixture validator exit status: 1: /tmp/clouddialect-review33-control-lyb776ne/negative/verification-result/unknown-hash-algorithm: outcome: expected \"pass\", actual \"fail\""
+  },
+  {
+    "wrong_case": "integration/blocking-gap/unknown-evidence-mandatory-obligation",
+    "wrong_key": "outcome",
+    "wrong_value": "evidence-complete",
+    "exit": 1,
+    "stderr": "/tmp/clouddialect-review33-control-w8bbds2e/integration/blocking-gap/unknown-evidence-mandatory-obligation: fixture validator exit status: 1: /tmp/clouddialect-review33-control-w8bbds2e/integration/blocking-gap/unknown-evidence-mandatory-obligation: outcome: expected \"evidence-complete\", actual \"blocked\""
+  },
+  {
+    "wrong_case": "integration/semantic-resolution-failure/manifest-bad-contract-ref",
+    "wrong_key": "outcome",
+    "wrong_value": "pass",
+    "exit": 1,
+    "stderr": "/tmp/clouddialect-review33-control-766xd3t3/integration/semantic-resolution-failure/manifest-bad-contract-ref: fixture validator exit status: 1: /tmp/clouddialect-review33-control-766xd3t3/integration/semantic-resolution-failure/manifest-bad-contract-ref: outcome: expected \"pass\", actual \"fail\""
+  },
+  {
+    "wrong_case": "integration/artifact-hash-mismatch/tampered-candidate",
+    "wrong_key": "expected_match",
+    "wrong_value": true,
+    "exit": 1,
+    "stderr": "/tmp/clouddialect-review33-control-rc2011_n/integration/artifact-hash-mismatch/tampered-candidate: fixture validator exit status: 1: /tmp/clouddialect-review33-control-rc2011_n/integration/artifact-hash-mismatch/tampered-candidate: expected_match: expected true, actual false"
+  },
+  {
+    "wrong_case": "integration/artifact-hash-mismatch/tampered-candidate",
+    "wrong_key": "outcome",
+    "wrong_value": "pass",
+    "exit": 1,
+    "stderr": "/tmp/clouddialect-review33-control-_5jtuqub/integration/artifact-hash-mismatch/tampered-candidate: fixture validator exit status: 1: /tmp/clouddialect-review33-control-_5jtuqub/integration/artifact-hash-mismatch/tampered-candidate: artifact-hash requires expected_match/candidate_bytes and no outcome"
+  }
+]

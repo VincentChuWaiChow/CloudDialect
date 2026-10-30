@@ -1,0 +1,52 @@
+{
+  "batch": "3.2.22",
+  "status": "pass",
+  "case_paths": [
+    "adversarial/extension-namespace/reserved-exact-match/correctly-handled",
+    "adversarial/extension-namespace/reserved-exact-match/correctly-rejected"
+  ],
+  "exact_files": [
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/reserved-exact-match/correctly-handled/input.json",
+      "sha256": "d292a376416912545c4ced7eb001e940431bfcb058102e155fe47fe62133ae85"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/reserved-exact-match/correctly-handled/expected.json",
+      "sha256": "ec9bb0075a9179ed7a8116bd241171035c8397ebae80f4b576b8c1ce3eb49b67"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/reserved-exact-match/correctly-rejected/input.json",
+      "sha256": "5527971538da4b0969d4fdd97a3c6f1f8af182031f1e76987c8e23d305211c64"
+    },
+    {
+      "path": "crates/clouddialect-contracts/fixtures/adversarial/extension-namespace/reserved-exact-match/correctly-rejected/expected.json",
+      "sha256": "a53f97df8df16e1c6362a4909529b1ae739d66456a9d95de8eabc643bbf6c0ad"
+    }
+  ],
+  "frozen_copies": true,
+  "full_test_command": [
+    "rtk",
+    "proxy",
+    "cargo",
+    "test",
+    "--manifest-path",
+    "crates/clouddialect-contracts/Cargo.toml",
+    "--frozen"
+  ],
+  "exit": 0,
+  "rust_tests_including_doctests": 288,
+  "canonical_fixture_count": 77,
+  "exact_prefix_checks": [
+    {
+      "path": "adversarial/extension-namespace/reserved-exact-match/correctly-handled",
+      "exit": 0,
+      "count": 1
+    },
+    {
+      "path": "adversarial/extension-namespace/reserved-exact-match/correctly-rejected",
+      "exit": 0,
+      "count": 1
+    }
+  ],
+  "completed_at": "2026-10-24T17:18:12.577497+00:00"
+}

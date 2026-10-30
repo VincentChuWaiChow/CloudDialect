@@ -1,0 +1,74 @@
+[
+  {
+    "name": "seed-default",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--test",
+      "conformance"
+    ],
+    "exit_code": 0,
+    "expected_success": true,
+    "log": "seed-default.txt"
+  },
+  {
+    "name": "seed-positive",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--test",
+      "conformance",
+      "--",
+      "positive"
+    ],
+    "exit_code": 0,
+    "expected_success": true,
+    "log": "seed-positive.txt"
+  },
+  {
+    "name": "seed-zero-selection",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--test",
+      "conformance",
+      "--",
+      "__guaranteed_empty_renewal__"
+    ],
+    "exit_code": 1,
+    "expected_success": false,
+    "log": "seed-zero-selection.txt"
+  },
+  {
+    "name": "runner-controls",
+    "command": [
+      "rtk",
+      "proxy",
+      "cargo",
+      "test",
+      "--manifest-path",
+      "crates/clouddialect-contracts/Cargo.toml",
+      "--frozen",
+      "--test",
+      "conformance_controls"
+    ],
+    "exit_code": 0,
+    "expected_success": true,
+    "log": "runner-controls.txt"
+  }
+]

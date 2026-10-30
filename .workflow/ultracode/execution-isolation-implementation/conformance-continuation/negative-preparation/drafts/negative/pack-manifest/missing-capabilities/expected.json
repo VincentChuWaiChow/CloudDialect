@@ -1,0 +1,14 @@
+{
+  "phase": "structural",
+  "document_kind": "manifest",
+  "outcome": "fail",
+  "errors": [
+    {
+      "category": "unparseable",
+      "field_path": null,
+      "description_contains": "Manifest could not decode as the required TOML structure"
+    }
+  ],
+  "warnings": [],
+  "blockers": []
+}

@@ -1,0 +1,16 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "cargo",
+    "test",
+    "--manifest-path",
+    "crates/clouddialect-contracts/Cargo.toml",
+    "--frozen",
+    "--test",
+    "evidence_completeness"
+  ],
+  "exit_code": 101,
+  "production_unchanged": true,
+  "log": "completeness-red.txt"
+}

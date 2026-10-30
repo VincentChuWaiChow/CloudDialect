@@ -1,0 +1,14 @@
+{
+  "phase": "semantic",
+  "document_kind": "verification-result",
+  "outcome": "fail",
+  "errors": [
+    {
+      "category": "semantic",
+      "field_path": "acceptance.verification_result.id",
+      "description_contains": "Approval reference must identify this exact verification document"
+    }
+  ],
+  "warnings": [],
+  "blockers": []
+}

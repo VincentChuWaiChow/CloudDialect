@@ -1,0 +1,11 @@
+{
+  "canonical_source": "/home/raishin/projects/CloudDialect/scripts/verification/contracts-evidence-foundation/measure-domain-coverage.py",
+  "source_sha256": "356fc1e7196df129cdf5ec61566e4d9035b5e0e3cf51fdce8a5b08665def5741",
+  "adapter_changes": {
+    "RESULTS = ROOT / \".workflow/ultracode/execution-isolation-implementation/results\"": "RESULTS = ROOT / \".workflow/ultracode/execution-isolation-implementation/semantic-continuation/results/current-coverage\"",
+    "/tmp/clouddialect-phase-llvm-tools": "/tmp/clouddialect-runtime-llvm-tools",
+    "/tmp/clouddialect-phase-cargo": "/tmp/clouddialect-runtime-cargo",
+    "/tmp/clouddialect-phase-coverage-target": "/tmp/clouddialect-runtime-coverage-target"
+  },
+  "logic_changes": false
+}

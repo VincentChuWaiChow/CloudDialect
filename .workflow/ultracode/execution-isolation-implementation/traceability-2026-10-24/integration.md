@@ -1,0 +1,15 @@
+# Integration
+## Accepted
+45/46disjointdocdeliveriesandactualREDeb230b3/GREEN67d0e6d.47source-backedP2acceptedratherthanrubber-stampingselected202keys;reproduced138e88fandoneconsolidatedsource/docrepairGREEN8fa1886. Final218mappings(148JSON/40TOML/30API),5gates,3tests/10negativecontrolsandfull291Rust+101fixtures/check/Clippy/fmt/15Pythonpass.
+## Rejected
+No declaringinitial202rowscomplete;no linecoverageclaimfromfieldcoverage;no BG/native/consumer/releaseclaimfromdocs. No runtimecheckboxchecked.
+## Conflicts
+P2missing16P0-A/P0-DrowsandnewtestClippycollapsible-iffixedinoneconsolidatedrepair. Scope-auditinitiallooseTASK-tokenregexcountedcheckednon-numberedsupportingreferenceasruntime;correctedephemeralaudittoanchornumberedTASKlines(21allunchecked),noactualruntimecheckboxchanged. No secondsource/docrepair.
+## Decisions
+Task25/unit3.5andNFR2localdeclaredscopeverified;conditionalowner/realconsumerBG-01obligationremainsopen. Parentonlymarksactualartifactcompletion. Localcheckpoints,no push.
+## Final changes
+Twonewtraceabilitydocs,onenewintegrationtest,4relatedstatusdocs/workflow.348of352oldprotectedpathsunchanged;355finalhashesmatch. No production/existingconformanceharness/schema/manifest/API/dependency/corpuschanges;researchpreserved.
+## Verification still needed
+Threegatedqualification/setupcases,actualnative/backend/consumer/ownerhandoff,completecorpus/release/freshcoverage/MSRV. Legacycheckererrorremainsunresolvedhere.
+## Remaining risks
+No independentpostrepairsignoff;parentverifiedallrepaircriteriaandnegativecontrols. Goalunachieved;Task21/22/26,parents3/3.2/3.6andall21Spec2numberedleavesremainopen.

@@ -2,7 +2,7 @@ use serde_json::Value;
 
 use crate::{ErrorCategory, ValidatorError};
 
-/// Called only after structural success by the pending semantic consumer.
+/// Called only after structural success by semantic/reference consumers.
 /// The current MVP implements no trusted extension semantics. Catalog/registry
 /// membership and input payloads therefore cannot remove these blockers.
 pub(super) fn check_mandatory_extensions(document: &Value) -> Vec<ValidatorError> {

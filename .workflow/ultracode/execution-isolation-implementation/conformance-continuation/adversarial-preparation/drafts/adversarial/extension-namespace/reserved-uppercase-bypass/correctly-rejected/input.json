@@ -1,0 +1,25 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440001",
+  "format_version": "1.0.0",
+  "claim": "Synthetic declared observation only; structural validity does not authenticate it.",
+  "classification": "observed",
+  "provenance": {
+    "source_artifact_identity": "unverified-fixture-source",
+    "analysis_tool_identity": "unverified-fixture-analysis-tool"
+  },
+  "CORE:field": {
+    "namespace_prefix": "acme",
+    "owner": "unverified-owner-claim",
+    "recognized": true,
+    "accepted": true
+  },
+  "CDC:field": {
+    "namespace_prefix": "acme",
+    "owner": "unverified-owner-claim",
+    "recognized": true,
+    "accepted": true
+  },
+  "required_extensions": [
+    "acme"
+  ]
+}

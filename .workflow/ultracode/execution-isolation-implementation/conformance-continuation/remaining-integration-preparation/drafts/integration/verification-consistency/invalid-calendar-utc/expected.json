@@ -1,0 +1,14 @@
+{
+  "phase": "semantic",
+  "document_kind": "verification-result",
+  "outcome": "fail",
+  "errors": [
+    {
+      "category": "structural",
+      "field_path": "acceptance.timestamp",
+      "description_contains": "Field does not satisfy its declared format"
+    }
+  ],
+  "warnings": [],
+  "blockers": []
+}

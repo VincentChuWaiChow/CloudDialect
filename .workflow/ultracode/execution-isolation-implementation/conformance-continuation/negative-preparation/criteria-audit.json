@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-10-24T03:19:25.471505+00:00",
+  "checks": {
+    "canonical_baseline15_and_p0eight_count": true,
+    "exact_fail_count22_warn_count1": true,
+    "newer_minor_remains_warn": true,
+    "every_fail_oracle_has_located_typed_diagnostics": true,
+    "decoder_shape_errors_explicit_null_path_not_fabricated_location": true,
+    "missing_id_and_classification_exact_paths": true,
+    "unsupported_major_checks_version_and_compatibility_doc": true,
+    "two_reasoning_constraints_retained": true,
+    "all_bounded_batches_max_two_directories": true,
+    "all_case_file_hashes_still_frozen": true,
+    "all_contract_source_hashes_preserved": true,
+    "all23_valid_counterexamples_reject_negative_oracle": true,
+    "category_path_and_warn_controls_detect_mismatch": true,
+    "canonical_corpus_unchanged_one_seed": true,
+    "no_production_or_schema_changes": true
+  },
+  "limits": "Exact runner metadata matches category/path/description, not byte_offset or authentication. Typed manifest decoder errors retain null paths; no native/project/backend or full Req11.1 proof is inferred."
+}

@@ -1,0 +1,20 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "cargo",
+    "test",
+    "--manifest-path",
+    "crates/clouddialect-contracts/Cargo.toml",
+    "--frozen",
+    "--test",
+    "conformance",
+    "--test",
+    "conformance_controls"
+  ],
+  "exit": 0,
+  "fixtures": 47,
+  "controls": 11,
+  "source_changes": false,
+  "tdd_red": "Not applicable: exact approved data copies, no behavior/source changes"
+}

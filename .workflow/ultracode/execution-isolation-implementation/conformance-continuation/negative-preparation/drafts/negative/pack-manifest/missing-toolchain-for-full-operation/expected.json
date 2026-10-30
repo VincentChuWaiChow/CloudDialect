@@ -1,0 +1,14 @@
+{
+  "phase": "structural",
+  "document_kind": "manifest",
+  "outcome": "fail",
+  "errors": [
+    {
+      "category": "semantic",
+      "field_path": "toolchain",
+      "description_contains": "Full or partial operations require a nonempty toolchain"
+    }
+  ],
+  "warnings": [],
+  "blockers": []
+}

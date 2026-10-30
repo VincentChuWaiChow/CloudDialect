@@ -1,0 +1,14 @@
+[
+  {
+    "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/pending/seed/positive/evidence-record/inferred/input.json",
+    "destination": "crates/clouddialect-contracts/fixtures/positive/evidence-record/inferred/input.json",
+    "sha256": "09ed9d3a83f0f2662c4fa62ab78d757083c4fc9ac5a3b816ef90994f6a6cb0ca",
+    "exact_copy": true
+  },
+  {
+    "source": ".workflow/ultracode/execution-isolation-implementation/conformance-continuation/pending/seed/positive/evidence-record/inferred/expected.json",
+    "destination": "crates/clouddialect-contracts/fixtures/positive/evidence-record/inferred/expected.json",
+    "sha256": "cad10a80850a610f6bfe6c8e5e87aa135d5b9ba902b02ef2f7090dbb31e22f8e",
+    "exact_copy": true
+  }
+]

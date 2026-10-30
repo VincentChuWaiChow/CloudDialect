@@ -1,0 +1,10 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.31s
+     Running tests/compatibility_policy.rs (/tmp/clouddialect-runtime-target/debug/deps/compatibility_policy-b636f15af6dafe42)
+
+running 3 tests
+test source_tested_matrix_has_real_version_constraints_and_does_not_certify_pack_runtime ... ok
+test documented_document_profile_matches_the_actual_structural_entrypoint ... ok
+test legacy_security_fields_do_not_gain_compatibility_through_extensions ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s

@@ -1,0 +1,17 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "cargo",
+    "test",
+    "--manifest-path",
+    "crates/clouddialect-contracts/Cargo.toml",
+    "--frozen",
+    "--test",
+    "conformance",
+    "--no-run",
+    "--message-format=json"
+  ],
+  "executable": "/tmp/clouddialect-runtime-target/debug/deps/conformance-c1b0ae3424309613",
+  "compiler_exit_code": 0
+}

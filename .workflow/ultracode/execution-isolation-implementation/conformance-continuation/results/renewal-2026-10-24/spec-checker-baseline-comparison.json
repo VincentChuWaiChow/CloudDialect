@@ -1,0 +1,13 @@
+{
+  "suite": "scripts/verification/execution-isolation/test_check_spec.py",
+  "observed": "9 tests: 8 pass, 1 error from checker main on repository supporting checkboxes",
+  "baseline": "88661158dbee284e84f4e01073f93609d7f124f8",
+  "checker_source_unchanged": true,
+  "baseline_checked_supporting_marks": 8,
+  "current_checked_supporting_marks": 8,
+  "baseline_numbered_runtime_completed": 0,
+  "current_numbered_runtime_completed": 0,
+  "same_failure_predicate_at_baseline": true,
+  "current_failure_predicate": true,
+  "disposition": "Pre-existing spec-only grader mismatch, not repaired or waived; not a Rust/default fixture regression. Additional code repair outside bounded approval."
+}

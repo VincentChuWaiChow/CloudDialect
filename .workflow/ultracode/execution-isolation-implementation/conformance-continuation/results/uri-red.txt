@@ -1,0 +1,22 @@
+   Compiling clouddialect-contracts v0.1.0 (/home/raishin/projects/CloudDialect/crates/clouddialect-contracts)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.68s
+     Running tests/structural_validation.rs (/tmp/clouddialect-runtime-target/debug/deps/structural_validation-4d653714f63d3c4a)
+
+running 1 test
+test unresolvable_instance_schema_identifies_only_the_escaped_uri_not_other_payloads ... FAILED
+
+failures:
+
+---- unresolvable_instance_schema_identifies_only_the_escaped_uri_not_other_payloads stdout ----
+
+thread 'unresolvable_instance_schema_identifies_only_the_escaped_uri_not_other_payloads' (130) panicked at tests/structural_validation.rs:165:13:
+assertion failed: error.description.contains(&format!("{uri:?}"))
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    unresolvable_instance_schema_identifies_only_the_escaped_uri_not_other_payloads
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 19 filtered out; finished in 0.05s
+
+error: test failed, to rerun pass `--test structural_validation`

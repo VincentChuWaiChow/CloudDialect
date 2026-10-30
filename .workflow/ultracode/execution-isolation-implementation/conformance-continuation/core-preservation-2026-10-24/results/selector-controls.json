@@ -1,0 +1,44 @@
+[
+  {
+    "prefix": "positive",
+    "expected_count": 13,
+    "exit": 0,
+    "status": "pass",
+    "output": "PASS positive/behavioral-contract/minimal-valid\nPASS positive/behavioral-contract/with-behavioral-notes\nPASS positive/behavioral-contract/with-extension-field\nPASS positive/behavioral-contract/with-known-behavior\nPASS positive/behavioral-contract/with-unresolved-assumption-on-dependency\nPASS positive/evidence-record/inferred\nPASS positive/evidence-record/observed\nPASS positive/evidence-record/unknown\nPASS positive/pack-manifest/full-coverage\nPASS positive/pack-manifest/with-extension-section\nPASS positive/pack-manifest/with-unsupported-operation\nPASS positive/verification-result/minimal\nPASS positive/verification-result/with-acceptance\n13 conformance fixtures passed\n"
+  },
+  {
+    "prefix": "negative",
+    "expected_count": 23,
+    "exit": 0,
+    "status": "pass",
+    "output": "PASS negative/behavioral-contract/invalid-behavioral-fidelity\nPASS negative/behavioral-contract/missing-id\nPASS negative/behavioral-contract/obligation-no-evidence-no-assumption\nPASS negative/evidence-record/inferred-empty-reasoning-chain\nPASS negative/evidence-record/missing-classification\nPASS negative/evidence-record/unknown-empty-assumptions\nPASS negative/pack-manifest/capability-unknown-field\nPASS negative/pack-manifest/duplicate-capability-id\nPASS negative/pack-manifest/inline-contract-body\nPASS negative/pack-manifest/invalid-behavioral-fidelity\nPASS negative/pack-manifest/missing-capabilities\nPASS negative/pack-manifest/missing-toolchain-for-full-operation\nPASS negative/pack-manifest/unknown-capability-version\nPASS negative/verification-result/acceptance-missing-approver\nPASS negative/verification-result/empty-tests-array\nPASS negative/verification-result/missing-binding\nPASS negative/verification-result/missing-configuration\nPASS negative/verification-result/missing-test-obligation\nPASS negative/verification-result/nonpass-string-failure-description\nPASS negative/verification-result/nonpass-without-failure-description\nPASS negative/verification-result/unknown-hash-algorithm\nPASS negative/version/unsupported-major\nPASS negative/version/unsupported-minor-newer\n23 conformance fixtures passed\n"
+  },
+  {
+    "prefix": "round-trip",
+    "expected_count": 3,
+    "exit": 0,
+    "status": "pass",
+    "output": "PASS round-trip/extension-field-preservation/behavioral-contract\nPASS round-trip/extension-field-preservation/evidence-record\nPASS round-trip/extension-field-preservation/verification-result\n3 conformance fixtures passed\n"
+  },
+  {
+    "prefix": "integration",
+    "expected_count": 8,
+    "exit": 0,
+    "status": "pass",
+    "output": "PASS integration/artifact-hash-mismatch/tampered-candidate\nPASS integration/blocking-gap/unknown-evidence-mandatory-obligation\nPASS integration/semantic-resolution-failure/manifest-bad-contract-ref\nPASS integration/verification-consistency/approval-result-id-mismatch\nPASS integration/verification-consistency/approval-result-version-mismatch\nPASS integration/verification-consistency/duplicate-test-ids\nPASS integration/verification-consistency/invalid-hash-length\nPASS integration/verification-consistency/unmapped-obligations\n8 conformance fixtures passed\n"
+  },
+  {
+    "prefix": "integration/verification-consistency",
+    "expected_count": 5,
+    "exit": 0,
+    "status": "pass",
+    "output": "PASS integration/verification-consistency/approval-result-id-mismatch\nPASS integration/verification-consistency/approval-result-version-mismatch\nPASS integration/verification-consistency/duplicate-test-ids\nPASS integration/verification-consistency/invalid-hash-length\nPASS integration/verification-consistency/unmapped-obligations\n5 conformance fixtures passed\n"
+  },
+  {
+    "prefix": "guaranteed-zero-selection-20261024-core-preservation",
+    "expected_count": 0,
+    "exit": 1,
+    "status": "pass",
+    "output": "no fixtures selected by directory prefix\n"
+  }
+]

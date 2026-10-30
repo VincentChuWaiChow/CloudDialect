@@ -1,0 +1,15 @@
+# Integration
+## Accepted
+26exactpairs/52filesin14tested/committedgroups,eachfullfrozen288Rust+growingcanonicalcountandnewprefixchecks. Final101fixtures/11controls/check/Clippy/fmt/15Pythonpass.43checklistauditand44independent82actualcommandsaccepted,nofindings.
+## Rejected
+No masscheckoff:onlyTask20newlycomplete;Task24alreadycomplete. 3/3.2containers,Task21/22,Task25traceabilityandall21Spec2numberedleavesremainopen. Localclaimsnotnative/auth/acceptance.
+## Conflicts
+Checklistdriftrepaired:missingpreviousverifiedbatchsupportrows,currentcounts,per-fieldwarningcountsandsixspellings. No frozenoracle/sourcechange. Temporarycachewasgone;publiccachedpackagesrestoredofflinewithoutconfig/authreadorfetch.
+## Decisions
+Currentuserapproves26pairadmissionandaskscontinuation/checkmarks. Localcommitsonly;priorpushcompleteandnotreused. Task25isnexteligibleordinaryprerequisitewithmissingdocs/test.
+## Final changes
+52canonicalfiles,fourrelatedstatusdocs,workflowevidence.296oldbaselinepathsunchanged;352finalhashesfrozen;researchpreserved.
+## Verification still needed
+Task25field/gatetraceability;threequalification/setupcases;freshcoverage/MSRV;realconsumer/UD/BG/nativehandoff. No source/harnessworkwasincludedinthisdata-onlyphase.
+## Remaining risks
+Legacychecker8pass1pre-existingerror,notwaived. No fullgoal/native/securityacceptanceclaim.
