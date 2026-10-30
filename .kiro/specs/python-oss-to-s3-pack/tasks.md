@@ -2,13 +2,33 @@
 
 ## Overview
 
-Conditional, risk-first plan: close decisions/upstream contracts → implement bounded modules with paired tests → integrate, qualify and independently reproduce. **No implementation task is executed or completed by this documentation run.** All five UDs and three BGs remain open. This is not authority to create fixtures, obtain credentials, call services, commit or publish.
+Conditional, risk-first plan: close decisions/upstream contracts → implement bounded modules with paired tests → integrate, qualify and independently reproduce. **No leaf task is complete as of the 2026-10-30 implementation-admission review.** All five UDs and three BGs remain open. Completing this plan requires their actual closure evidence; a broad implementation request does not supply workload identities, independent oracle assets or service authorization.
 
 The user approved explicit six-level leaf dependencies inside three parent scheduling waves for Spec 3. Waves are sequential containers, NOT claims that their children run simultaneously. Leaf prerequisites and arrows are authoritative. No dependency is removed to satisfy the skill's usual three-level heuristic.
 
 Estimates are planning timeboxes, not promises. Stop an unsuccessful decision spike and report its blocker; do not invent closure. Workload-dependent corpus/contract/recipe entries are **bounded templates**: after UD-1/2/3, replace them with named per-operation/per-case slices of 2–4 hours, ≤5 files and ordinarily ≤10 tests. Preserve incoming/outgoing dependencies and revalidate the expanded graph. Their unknown number is not hidden inside one four-hour estimate.
 
 Proposed future roots (not created here): `packs/python-oss-to-s3/` (P), `tests/packs/python-oss-to-s3/` (T), evaluator-owned `qualification/python-oss-to-s3/` (Q). Confirm placement before implementation. Q is a logical protected surface: repository permissions alone are not enforcement; Spec 2 excludes its answer assets from patch-worker/model snapshots.
+
+## Supporting progress — 2026-10-30
+
+- [x] Re-inspect actual Spec 1 catalog/validation/result interfaces; correct the
+  stale stub description and schema inventory in requirements/design.
+- [x] Independently review admission and preserve all 17 leaf prerequisites;
+  the initial review found no workload/pins/corpus/environment approval or qualifying oracle.
+- [x] After explicit user authorization, build the purpose-built
+  [document-store candidate](../../../examples/python-oss-document-store/README.md)
+  with three OSS call sites, local demo and TDD tests; obtain a bounded Python
+  correctness/inventory review. [Evidence](../../../.workflow/ultracode/python-oss-to-s3-pack/results/reference-workload-2026-10-30.md).
+
+These support TASK-001/002, **not either task's completion**. The
+[admission report](../../../.workflow/ultracode/python-oss-to-s3-pack/results/admission-2026-10-30.md)
+records the earlier checks and source evidence. Next inputs: final candidate
+admission, owner-approved immutable revision and SDK constraints (1.1); upstream-owned applicability and authenticated runtime
+handoff (1.2); designated synthetic service profile and owner approval (1.4).
+Selection then enables the independent corpus review (1.3) and AI decision (1.5).
+AI remains unavailable, which is not an approved no-AI closure. No 2.x module can
+start under the unchanged graph before its prerequisites close.
 
 ## Tasks
 

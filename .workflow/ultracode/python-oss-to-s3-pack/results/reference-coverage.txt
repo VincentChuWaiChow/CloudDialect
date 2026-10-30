@@ -1,0 +1,9 @@
+.................
+----------------------------------------------------------------------
+Ran 17 tests in 0.010s
+
+OK
+lines   cov%   module   (path)
+   95   98.9%   document_store   (/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py)
+   59   96.6%   local_demo   (/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/local_demo.py)
+  222   99.5%   test_document_store   (/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py)

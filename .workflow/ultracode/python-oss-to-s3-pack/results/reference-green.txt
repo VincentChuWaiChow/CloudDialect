@@ -1,0 +1,21 @@
+test_advertised_oversize_and_truncated_download_are_rejected (test_document_store.DocumentStoreTests.test_advertised_oversize_and_truncated_download_are_rejected) ... ok
+test_bad_or_missing_metadata_is_not_silently_defaulted (test_document_store.DocumentStoreTests.test_bad_or_missing_metadata_is_not_silently_defaulted) ... ok
+test_corrupt_body_is_rejected_even_if_etag_looks_plausible (test_document_store.DocumentStoreTests.test_corrupt_body_is_rejected_even_if_etag_looks_plausible) ... ok
+test_delete_is_scoped_and_repeatable_for_the_local_contract (test_document_store.DocumentStoreTests.test_delete_is_scoped_and_repeatable_for_the_local_contract) ... ok
+test_demo_runs_without_network_and_labels_local_evidence (test_document_store.DocumentStoreTests.test_demo_runs_without_network_and_labels_local_evidence) ... ok
+test_download_preserves_unicode_metadata_and_binary_body_on_short_reads (test_document_store.DocumentStoreTests.test_download_preserves_unicode_metadata_and_binary_body_on_short_reads) ... ok
+test_empty_body_and_exact_size_limit_are_supported (test_document_store.DocumentStoreTests.test_empty_body_and_exact_size_limit_are_supported) ... ok
+test_invalid_configuration_fails_before_io (test_document_store.DocumentStoreTests.test_invalid_configuration_fails_before_io) ... ok
+test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) ... ok
+test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) ... ok
+test_missing_length_is_allowed_but_read_limit_is_enforced (test_document_store.DocumentStoreTests.test_missing_length_is_allowed_but_read_limit_is_enforced) ... ok
+test_provider_exceptions_propagate_without_retry (test_document_store.DocumentStoreTests.test_provider_exceptions_propagate_without_retry) ... ok
+test_read_failure_closes_stream_and_is_not_retried (test_document_store.DocumentStoreTests.test_read_failure_closes_stream_and_is_not_retried) ... ok
+test_replace_updates_body_and_metadata (test_document_store.DocumentStoreTests.test_replace_updates_body_and_metadata) ... ok
+test_unexpected_sdk_status_is_not_success (test_document_store.DocumentStoreTests.test_unexpected_sdk_status_is_not_success) ... ok
+test_upload_has_stable_key_bytes_and_explicit_metadata (test_document_store.DocumentStoreTests.test_upload_has_stable_key_bytes_and_explicit_metadata) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.002s
+
+OK

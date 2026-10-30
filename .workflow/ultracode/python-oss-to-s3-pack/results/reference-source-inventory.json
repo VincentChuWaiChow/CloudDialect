@@ -1,0 +1,30 @@
+{
+  "scope": "workload candidate source bytes; publication authorized, not qualified",
+  "files_sha256": {
+    "examples/python-oss-document-store/README.md": "e9b86ac345d6d2d02e47db42aa26b342763f36d9f77298d89799632de019b1fe",
+    "examples/python-oss-document-store/document_store.py": "7b10ab6dd07dda9dbab60274507ba336405ae5ec18da7a45fa1498765f535259",
+    "examples/python-oss-document-store/local_demo.py": "59cf1cad11ea92ed4c0bc060d35a23b9f8293e3dd71efea9ce05c7b282d20c15",
+    "examples/python-oss-document-store/requirements-oss.txt": "34598ed80348d7a0431e3844996d0955a4b1f8e9478d2d1dda6dda934b05f811",
+    "examples/python-oss-document-store/test_document_store.py": "15fc34d81da0af9bca08e2f2035b1373dc0064cabc86a61ae8bc6faf271b7f82"
+  },
+  "file_list_sha256": "acde17acb35e1da07a7e516a086adeef6073e7b59df7a018de573692c6dad814",
+  "operations": [
+    {
+      "operation": "put_object",
+      "line": 70,
+      "path": "examples/python-oss-document-store/document_store.py"
+    },
+    {
+      "operation": "get_object",
+      "line": 81,
+      "path": "examples/python-oss-document-store/document_store.py"
+    },
+    {
+      "operation": "delete_object",
+      "line": 121,
+      "path": "examples/python-oss-document-store/document_store.py"
+    }
+  ],
+  "source_sdk_candidate": "oss2==2.18.3",
+  "sdk_runtime_tested": false
+}

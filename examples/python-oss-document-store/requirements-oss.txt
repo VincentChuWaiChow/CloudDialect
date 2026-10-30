@@ -1,0 +1,4 @@
+# Candidate source SDK, inspected at its matching release tag.
+# Optional: the local demo/tests need only Python's standard library.
+# Not a resolved dependency lock or an approved cloud execution environment.
+oss2==2.18.3

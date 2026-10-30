@@ -1,0 +1,20 @@
+{
+  "evidence": "local-only; not OSS/S3 qualification",
+  "operations": [
+    "put_object",
+    "get_object",
+    "delete_object"
+  ],
+  "document": {
+    "id": "invoice-001",
+    "filename": "facture-é.txt",
+    "content_type": "text/plain",
+    "bytes": 27,
+    "sha256": "438ad54ebd0e18cbe404c6113da0dbddc3163a8e497112c617b3f0d74f5782a2"
+  },
+  "checks": {
+    "round_trip": true,
+    "corruption_rejected": true,
+    "deleted": true
+  }
+}

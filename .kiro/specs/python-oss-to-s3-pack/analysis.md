@@ -2,6 +2,17 @@
 
 ## Method and Gate
 
+**Historical review: 2026-10-22.** The findings and source lines below describe
+that snapshot. The [2026-10-30 admission refresh](../../../.workflow/ultracode/python-oss-to-s3-pack/results/admission-2026-10-30.md)
+supersedes its upstream-absence findings, not its qualification safeguards:
+Spec 1 validators and result/binding declarations now exist. In particular,
+F-02's stub diagnosis and F-04's absent `test_results` representation are no
+longer current. Inventory-aware applicability, authenticated Spec 2 execution,
+owner handoff and the five pack decisions remain unresolved. The actual fifth
+catalog schema is extension registry, not the separately validated TOML pack
+manifest. Requirements/design now reflect this delivered boundary. No pack
+criterion, UD/BG or leaf task is closed by the refresh.
+
 Manual adversarial analysis following `analyze-requirements`, preceded by the requirements-engineering structural validator. Two bounded read-only native agents reviewed upstream/evaluation boundaries and requirement counterexamples; the parent verified and integrated findings. Native Kiro Analyze Requirements and SMT were **not run**. No claim of formal consistency/completeness is made.
 
 Pre-analysis: canonical headings, ten numbered groups, user stories, glossary, named outcomes, NEVER clauses, 67 atomic-SHALL criteria, verification/evidence lines and five explicit open decisions. The structural validator passes 67 criteria with zero warnings. Manual readiness dimensions pass for structure, role/scope, quantified boundaries, named failure paths, evidence provenance, measurement definitions, traceability and source attribution. Implementability and runtime evidence do not pass: UD/BG prerequisites are unresolved. This is sufficient for **conditional documentation only**, not the ordinary implementation-readiness gate.
@@ -30,7 +41,7 @@ Pre-analysis: canonical headings, ten numbered groups, user stories, glossary, n
 
 Final integrated review was one read-only pass followed by one consolidated parent repair and deterministic revalidation. Environment approval is an independent outer envelope, not a worker grant; verifier admission intersects it with actual frozen test needs and blocks incompatible scope. This preserves truthful parallelism without adding authority or closing UD-5.
 
-## Upstream Evidence Reviewed
+## Historical Upstream Evidence Reviewed — 2026-10-22
 
 | Source | Evidence / implication |
 |---|---|

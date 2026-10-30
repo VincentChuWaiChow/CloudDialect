@@ -4,7 +4,13 @@
 
 This conditional design follows the resolved manual findings in `analysis.md`. It specifies a small Python migration pack behind the trusted core's Spec 1 validation and Spec 2 execution/verification controls. The pack proposes changes; it does not award itself acceptance.
 
-**NOT IMPLEMENTATION-READY.** UD-1 through UD-5 and BG-01 through BG-03 remain open. Interfaces and records below are **logical proposals**, not shipped APIs, Python bindings for Rust, new catalog schemas, an IPC format or a chosen sandbox. No SDK/toolchain version, reference application, corpus, cloud environment or AI provider is selected. All runtime/qualification evidence is MISSING.
+**NOT IMPLEMENTATION-READY.** UD-1 through UD-5 and BG-01 through BG-03 remain open. Interfaces and records below are **logical proposals**, not shipped APIs, Python bindings for Rust, new catalog schemas, an IPC format or a chosen sandbox. No source/target compatibility profile, final workload admission, corpus, cloud environment or AI provider is approved. All pack runtime/qualification evidence is MISSING.
+
+2026-10-30 preparation: a separately authorized [document-store reference
+candidate](../../../examples/python-oss-document-store/README.md) now supplies
+three OSS call sites and a local-only demo/test suite. Its candidate `oss2`
+source version is not an approved source/target compatibility profile. This is
+workload preparation, not implementation of the pack components below.
 
 The mandatory deterministic path must demonstrate the complete bounded reference migration. AI is optional and unavailable until its own approval/evidence gates close. A valid negative-control suite alone is not sufficient: qualification also needs a valid positive control and a successful deterministic reference candidate.
 
@@ -50,8 +56,8 @@ flowchart LR
 |---|---|
 | Real, bounded, licensed reference application; ≥3 OSS operation types; inventory review <60 minutes | UD-1 record is an admission prerequisite; purpose-built fallback requires later authorization and independent non-toy review. |
 | Exact SDK behavior unknown until workload inspection | UD-2 pins constrain recipes and tests; latest docs are investigative evidence, not compatibility proof. |
-| Shared schemas and execution model not delivered | Contract adapters stay logical; actual mapping and native conformance gate all integration. |
-| Current manifest design cannot express all required applicability context | BG-02 owns inventory input and version/pattern representation; do not smuggle acceptance-critical fields into ignored `[x]` extensions. |
+| Spec 1 schemas/local validators delivered; Spec 2 runtime and accepted handoff missing | Contract adapters stay logical; actual pack mapping, upstream/core approval and native conformance gate integration. See requirements' dated BG-01/03 status. |
+| Current manifest APIs cannot consume all required applicability context | BG-02 owns inventory input, resolved SDK-role/version/pattern mapping and unsupported results; generic toolchain constraints do not establish applicability. Do not smuggle acceptance-critical fields into ignored `[x]` extensions. |
 | No measured resource profile, service budget or performance SLA | Use finite approved Spec 2 profiles; no invented timeouts, throughput promises or cloud spend limits. Missing values block execution. |
 | Model holdout unknown | Repository lineage audit is separate from model training exclusion; model-free path remains usable without a model claim. |
 | Source-available licensing | Preserve Community License 1.0 and separately executed commercial-license condition; dependency/fixture permissions reviewed before admission. |
@@ -145,7 +151,7 @@ Dependencies: trusted source artifacts/audit references, not worker filesystem p
 
 Responsibilities (3): invoke upstream structural/semantic checks; request scope-aware manifest applicability; reject missing/incompatible mappings. Interface: `validate(manifest: Ref, documents: List<Ref>, inventory: Inventory, scope: ApprovedScope) -> Result<ValidationReceipt, GateError>`.
 
-This is a logical core-side adapter, **not** the signature of `ManifestValidator::validate_manifest()`. BG-01/02 require agreement on how the existing API receives inventory/version/pattern data and represents unsupported results. No replacement JSON Schema validator in Python, new pack-owned schema catalog or undeclared public overload. Catalog resolution remains offline. Contract reference checks, version constraints, extension rules and applicability are separate checks; none imply acceptance.
+This is a logical core-side adapter, **not** the signature of `ManifestValidator::validate_manifest()`. The delivered local method takes TOML bytes; `validate_manifest_semantic()` additionally takes a `DocumentStore`. Neither consumes analyzed inventory, resolved SDK versions or call patterns. BG-01/02 require an upstream-owned mapping and interface before integration, including explicit unsupported applicability results. No replacement JSON Schema validator in Python, new pack-owned schema catalog or undeclared public overload. Catalog resolution remains offline. Contract reference checks, version constraints, extension rules and applicability are separate checks; none imply acceptance.
 
 ### Component: QualificationReporter
 
@@ -302,7 +308,7 @@ Per dependency: catalog/validation is offline and has no network fallback; local
 ### ADR-002: Consume upstream authority rather than duplicate it
 
 **Status:** Proposed; BG-01/02/03 required before implementation binding.
-**Context:** Existing APIs are scaffolds or inconsistent proposals; the pack needs applicability and richer verification bindings.
+**Context:** Spec 1 now delivers catalog, document/manifest validators and richer verification declarations. The pack still lacks inventory-aware applicability and an owner-approved authenticated execution/audit mapping; Spec 2 runtime is not delivered. The logical interfaces above are not implementations or Python bindings.
 **Decision:** Define the minimum logical adapter and require owner-approved upstream mappings. Alternatives of parallel Python validators, new IPC or authoritative unknown extension fields are rejected.
 **Consequences:** Prevents divergent trust decisions, at the cost of upstream blocking work. This spec does not amend Specs 1/2 silently.
 
