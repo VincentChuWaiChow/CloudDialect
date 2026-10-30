@@ -1,0 +1,1034 @@
+test_advertised_oversize_and_truncated_download_are_rejected (test_document_store.DocumentStoreTests.test_advertised_oversize_and_truncated_download_are_rejected) ... ERROR
+test_bad_or_missing_metadata_is_not_silently_defaulted (test_document_store.DocumentStoreTests.test_bad_or_missing_metadata_is_not_silently_defaulted) ... ERROR
+test_corrupt_body_is_rejected_even_if_etag_looks_plausible (test_document_store.DocumentStoreTests.test_corrupt_body_is_rejected_even_if_etag_looks_plausible) ... ERROR
+test_delete_is_scoped_and_repeatable_for_the_local_contract (test_document_store.DocumentStoreTests.test_delete_is_scoped_and_repeatable_for_the_local_contract) ... ERROR
+test_demo_runs_without_network_and_labels_local_evidence (test_document_store.DocumentStoreTests.test_demo_runs_without_network_and_labels_local_evidence) ... ERROR
+test_download_preserves_unicode_metadata_and_binary_body_on_short_reads (test_document_store.DocumentStoreTests.test_download_preserves_unicode_metadata_and_binary_body_on_short_reads) ... ERROR
+test_empty_body_and_exact_size_limit_are_supported (test_document_store.DocumentStoreTests.test_empty_body_and_exact_size_limit_are_supported) ...
+  test_empty_body_and_exact_size_limit_are_supported (test_document_store.DocumentStoreTests.test_empty_body_and_exact_size_limit_are_supported) (body=b'') ... ERROR
+  test_empty_body_and_exact_size_limit_are_supported (test_document_store.DocumentStoreTests.test_empty_body_and_exact_size_limit_are_supported) (body=b'aaaaaaaaaaaaaaaa') ... ERROR
+test_invalid_configuration_fails_before_io (test_document_store.DocumentStoreTests.test_invalid_configuration_fails_before_io) ...
+  test_invalid_configuration_fails_before_io (test_document_store.DocumentStoreTests.test_invalid_configuration_fails_before_io) (collection='') ... FAIL
+  test_invalid_configuration_fails_before_io (test_document_store.DocumentStoreTests.test_invalid_configuration_fails_before_io) (collection='../x') ... FAIL
+  test_invalid_configuration_fails_before_io (test_document_store.DocumentStoreTests.test_invalid_configuration_fails_before_io) (collection='a/b') ... FAIL
+  test_invalid_configuration_fails_before_io (test_document_store.DocumentStoreTests.test_invalid_configuration_fails_before_io) (collection=None) ... FAIL
+  test_invalid_configuration_fails_before_io (test_document_store.DocumentStoreTests.test_invalid_configuration_fails_before_io) (limit=0) ... FAIL
+  test_invalid_configuration_fails_before_io (test_document_store.DocumentStoreTests.test_invalid_configuration_fails_before_io) (limit=-1) ... FAIL
+  test_invalid_configuration_fails_before_io (test_document_store.DocumentStoreTests.test_invalid_configuration_fails_before_io) (limit=True) ... FAIL
+  test_invalid_configuration_fails_before_io (test_document_store.DocumentStoreTests.test_invalid_configuration_fails_before_io) (limit=1.5) ... FAIL
+  test_invalid_configuration_fails_before_io (test_document_store.DocumentStoreTests.test_invalid_configuration_fails_before_io) (limit='16') ... FAIL
+test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) ...
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='') ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='') ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='') ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='.') ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='.') ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='.') ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='..') ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='..') ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='..') ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='../x') ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='../x') ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='../x') ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='a/b') ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='a/b') ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='a/b') ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='a\\b') ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='a\\b') ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='a\\b') ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='a\n') ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='a\n') ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='a\n') ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='é') ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='é') ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='é') ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx') ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx') ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx') ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad=None) ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad=None) ... ERROR
+  test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad=None) ... ERROR
+test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) ...
+  test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (body='text') ... ERROR
+  test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (body=bytearray(b'x')) ... ERROR
+  test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (body=b'xxxxxxxxxxxxxxxxx') ... ERROR
+  test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (body=None) ... ERROR
+  test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (filename='') ... ERROR
+  test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (filename='.') ... ERROR
+  test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (filename='..') ... ERROR
+  test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (filename='../x') ... ERROR
+  test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (filename='a/b') ... ERROR
+  test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (filename='a\\b') ... ERROR
+  test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (filename='x\r\n') ... ERROR
+  test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (filename='\x00') ... ERROR
+  test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (filename='éééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééé') ... ERROR
+  test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (filename=None) ... ERROR
+  test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (content_type='') ... ERROR
+  test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (content_type='text') ... ERROR
+  test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (content_type='text/plain\r\nInjected: yes') ... ERROR
+  test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (content_type='text/plain; charset=utf-8') ... ERROR
+  test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (content_type=None) ... ERROR
+test_missing_length_is_allowed_but_read_limit_is_enforced (test_document_store.DocumentStoreTests.test_missing_length_is_allowed_but_read_limit_is_enforced) ... ERROR
+test_provider_exceptions_propagate_without_retry (test_document_store.DocumentStoreTests.test_provider_exceptions_propagate_without_retry) ...
+  test_provider_exceptions_propagate_without_retry (test_document_store.DocumentStoreTests.test_provider_exceptions_propagate_without_retry) (operation='put') ... ERROR
+test_provider_exceptions_propagate_without_retry (test_document_store.DocumentStoreTests.test_provider_exceptions_propagate_without_retry) ... ERROR
+test_read_failure_closes_stream_and_is_not_retried (test_document_store.DocumentStoreTests.test_read_failure_closes_stream_and_is_not_retried) ... ERROR
+test_replace_updates_body_and_metadata (test_document_store.DocumentStoreTests.test_replace_updates_body_and_metadata) ... ERROR
+test_unexpected_sdk_status_is_not_success (test_document_store.DocumentStoreTests.test_unexpected_sdk_status_is_not_success) ... ERROR
+test_upload_has_stable_key_bytes_and_explicit_metadata (test_document_store.DocumentStoreTests.test_upload_has_stable_key_bytes_and_explicit_metadata) ... ERROR
+
+======================================================================
+ERROR: test_advertised_oversize_and_truncated_download_are_rejected (test_document_store.DocumentStoreTests.test_advertised_oversize_and_truncated_download_are_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 178, in test_advertised_oversize_and_truncated_download_are_rejected
+    self.save()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 82, in save
+    return self.store.save("doc-01", body, filename="facture-é.pdf",
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           content_type="application/pdf", **kwargs)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_bad_or_missing_metadata_is_not_silently_defaulted (test_document_store.DocumentStoreTests.test_bad_or_missing_metadata_is_not_silently_defaulted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 163, in test_bad_or_missing_metadata_is_not_silently_defaulted
+    self.save()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 82, in save
+    return self.store.save("doc-01", body, filename="facture-é.pdf",
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           content_type="application/pdf", **kwargs)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_corrupt_body_is_rejected_even_if_etag_looks_plausible (test_document_store.DocumentStoreTests.test_corrupt_body_is_rejected_even_if_etag_looks_plausible)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 155, in test_corrupt_body_is_rejected_even_if_etag_looks_plausible
+    self.save()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 82, in save
+    return self.store.save("doc-01", body, filename="facture-é.pdf",
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           content_type="application/pdf", **kwargs)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_delete_is_scoped_and_repeatable_for_the_local_contract (test_document_store.DocumentStoreTests.test_delete_is_scoped_and_repeatable_for_the_local_contract)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 111, in test_delete_is_scoped_and_repeatable_for_the_local_contract
+    self.save()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 82, in save
+    return self.store.save("doc-01", body, filename="facture-é.pdf",
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           content_type="application/pdf", **kwargs)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_demo_runs_without_network_and_labels_local_evidence (test_document_store.DocumentStoreTests.test_demo_runs_without_network_and_labels_local_evidence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 239, in test_demo_runs_without_network_and_labels_local_evidence
+    local_demo.main()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/local_demo.py", line 5, in main
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_download_preserves_unicode_metadata_and_binary_body_on_short_reads (test_document_store.DocumentStoreTests.test_download_preserves_unicode_metadata_and_binary_body_on_short_reads)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 99, in test_download_preserves_unicode_metadata_and_binary_body_on_short_reads
+    expected = self.save()
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 82, in save
+    return self.store.save("doc-01", body, filename="facture-é.pdf",
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           content_type="application/pdf", **kwargs)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_empty_body_and_exact_size_limit_are_supported (test_document_store.DocumentStoreTests.test_empty_body_and_exact_size_limit_are_supported) (body=b'')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 123, in test_empty_body_and_exact_size_limit_are_supported
+    self.save(body)
+    ~~~~~~~~~^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 82, in save
+    return self.store.save("doc-01", body, filename="facture-é.pdf",
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           content_type="application/pdf", **kwargs)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_empty_body_and_exact_size_limit_are_supported (test_document_store.DocumentStoreTests.test_empty_body_and_exact_size_limit_are_supported) (body=b'aaaaaaaaaaaaaaaa')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 123, in test_empty_body_and_exact_size_limit_are_supported
+    self.save(body)
+    ~~~~~~~~~^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 82, in save
+    return self.store.save("doc-01", body, filename="facture-é.pdf",
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           content_type="application/pdf", **kwargs)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 128, in <lambda>
+    for operation in (lambda: self.store.save(bad, b"x", filename="x"),
+                              ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 129, in <lambda>
+    lambda: self.store.load(bad), lambda: self.store.delete(bad)):
+            ~~~~~~~~~~~~~~~^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 16, in load
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 129, in <lambda>
+    lambda: self.store.load(bad), lambda: self.store.delete(bad)):
+                                          ~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 19, in delete
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 128, in <lambda>
+    for operation in (lambda: self.store.save(bad, b"x", filename="x"),
+                              ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 129, in <lambda>
+    lambda: self.store.load(bad), lambda: self.store.delete(bad)):
+            ~~~~~~~~~~~~~~~^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 16, in load
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 129, in <lambda>
+    lambda: self.store.load(bad), lambda: self.store.delete(bad)):
+                                          ~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 19, in delete
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='..')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 128, in <lambda>
+    for operation in (lambda: self.store.save(bad, b"x", filename="x"),
+                              ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='..')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 129, in <lambda>
+    lambda: self.store.load(bad), lambda: self.store.delete(bad)):
+            ~~~~~~~~~~~~~~~^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 16, in load
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='..')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 129, in <lambda>
+    lambda: self.store.load(bad), lambda: self.store.delete(bad)):
+                                          ~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 19, in delete
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='../x')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 128, in <lambda>
+    for operation in (lambda: self.store.save(bad, b"x", filename="x"),
+                              ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='../x')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 129, in <lambda>
+    lambda: self.store.load(bad), lambda: self.store.delete(bad)):
+            ~~~~~~~~~~~~~~~^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 16, in load
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='../x')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 129, in <lambda>
+    lambda: self.store.load(bad), lambda: self.store.delete(bad)):
+                                          ~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 19, in delete
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='a/b')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 128, in <lambda>
+    for operation in (lambda: self.store.save(bad, b"x", filename="x"),
+                              ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='a/b')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 129, in <lambda>
+    lambda: self.store.load(bad), lambda: self.store.delete(bad)):
+            ~~~~~~~~~~~~~~~^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 16, in load
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='a/b')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 129, in <lambda>
+    lambda: self.store.load(bad), lambda: self.store.delete(bad)):
+                                          ~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 19, in delete
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='a\\b')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 128, in <lambda>
+    for operation in (lambda: self.store.save(bad, b"x", filename="x"),
+                              ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='a\\b')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 129, in <lambda>
+    lambda: self.store.load(bad), lambda: self.store.delete(bad)):
+            ~~~~~~~~~~~~~~~^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 16, in load
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='a\\b')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 129, in <lambda>
+    lambda: self.store.load(bad), lambda: self.store.delete(bad)):
+                                          ~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 19, in delete
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='a\n')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 128, in <lambda>
+    for operation in (lambda: self.store.save(bad, b"x", filename="x"),
+                              ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='a\n')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 129, in <lambda>
+    lambda: self.store.load(bad), lambda: self.store.delete(bad)):
+            ~~~~~~~~~~~~~~~^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 16, in load
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='a\n')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 129, in <lambda>
+    lambda: self.store.load(bad), lambda: self.store.delete(bad)):
+                                          ~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 19, in delete
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='é')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 128, in <lambda>
+    for operation in (lambda: self.store.save(bad, b"x", filename="x"),
+                              ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='é')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 129, in <lambda>
+    lambda: self.store.load(bad), lambda: self.store.delete(bad)):
+            ~~~~~~~~~~~~~~~^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 16, in load
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='é')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 129, in <lambda>
+    lambda: self.store.load(bad), lambda: self.store.delete(bad)):
+                                          ~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 19, in delete
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 128, in <lambda>
+    for operation in (lambda: self.store.save(bad, b"x", filename="x"),
+                              ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 129, in <lambda>
+    lambda: self.store.load(bad), lambda: self.store.delete(bad)):
+            ~~~~~~~~~~~~~~~^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 16, in load
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 129, in <lambda>
+    lambda: self.store.load(bad), lambda: self.store.delete(bad)):
+                                          ~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 19, in delete
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 128, in <lambda>
+    for operation in (lambda: self.store.save(bad, b"x", filename="x"),
+                              ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 129, in <lambda>
+    lambda: self.store.load(bad), lambda: self.store.delete(bad)):
+            ~~~~~~~~~~~~~~~^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 16, in load
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_ids_do_not_reach_any_bucket_operation (test_document_store.DocumentStoreTests.test_invalid_ids_do_not_reach_any_bucket_operation) (bad=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 131, in test_invalid_ids_do_not_reach_any_bucket_operation
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 129, in <lambda>
+    lambda: self.store.load(bad), lambda: self.store.delete(bad)):
+                                          ~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 19, in delete
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (body='text')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 145, in test_invalid_upload_data_or_metadata_never_calls_the_sdk
+    self.save(body)
+    ~~~~~~~~~^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 82, in save
+    return self.store.save("doc-01", body, filename="facture-é.pdf",
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           content_type="application/pdf", **kwargs)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (body=bytearray(b'x'))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 145, in test_invalid_upload_data_or_metadata_never_calls_the_sdk
+    self.save(body)
+    ~~~~~~~~~^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 82, in save
+    return self.store.save("doc-01", body, filename="facture-é.pdf",
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           content_type="application/pdf", **kwargs)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (body=b'xxxxxxxxxxxxxxxxx')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 145, in test_invalid_upload_data_or_metadata_never_calls_the_sdk
+    self.save(body)
+    ~~~~~~~~~^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 82, in save
+    return self.store.save("doc-01", body, filename="facture-é.pdf",
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           content_type="application/pdf", **kwargs)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (body=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 145, in test_invalid_upload_data_or_metadata_never_calls_the_sdk
+    self.save(body)
+    ~~~~~~~~~^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 82, in save
+    return self.store.save("doc-01", body, filename="facture-é.pdf",
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           content_type="application/pdf", **kwargs)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (filename='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 148, in test_invalid_upload_data_or_metadata_never_calls_the_sdk
+    self.store.save("doc", b"x", filename=filename)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (filename='.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 148, in test_invalid_upload_data_or_metadata_never_calls_the_sdk
+    self.store.save("doc", b"x", filename=filename)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (filename='..')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 148, in test_invalid_upload_data_or_metadata_never_calls_the_sdk
+    self.store.save("doc", b"x", filename=filename)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (filename='../x')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 148, in test_invalid_upload_data_or_metadata_never_calls_the_sdk
+    self.store.save("doc", b"x", filename=filename)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (filename='a/b')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 148, in test_invalid_upload_data_or_metadata_never_calls_the_sdk
+    self.store.save("doc", b"x", filename=filename)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (filename='a\\b')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 148, in test_invalid_upload_data_or_metadata_never_calls_the_sdk
+    self.store.save("doc", b"x", filename=filename)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (filename='x\r\n')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 148, in test_invalid_upload_data_or_metadata_never_calls_the_sdk
+    self.store.save("doc", b"x", filename=filename)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (filename='\x00')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 148, in test_invalid_upload_data_or_metadata_never_calls_the_sdk
+    self.store.save("doc", b"x", filename=filename)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (filename='éééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééé')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 148, in test_invalid_upload_data_or_metadata_never_calls_the_sdk
+    self.store.save("doc", b"x", filename=filename)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (filename=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 148, in test_invalid_upload_data_or_metadata_never_calls_the_sdk
+    self.store.save("doc", b"x", filename=filename)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (content_type='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 151, in test_invalid_upload_data_or_metadata_never_calls_the_sdk
+    self.store.save("doc", b"x", filename="x", content_type=content_type)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (content_type='text')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 151, in test_invalid_upload_data_or_metadata_never_calls_the_sdk
+    self.store.save("doc", b"x", filename="x", content_type=content_type)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (content_type='text/plain\r\nInjected: yes')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 151, in test_invalid_upload_data_or_metadata_never_calls_the_sdk
+    self.store.save("doc", b"x", filename="x", content_type=content_type)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (content_type='text/plain; charset=utf-8')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 151, in test_invalid_upload_data_or_metadata_never_calls_the_sdk
+    self.store.save("doc", b"x", filename="x", content_type=content_type)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid_upload_data_or_metadata_never_calls_the_sdk (test_document_store.DocumentStoreTests.test_invalid_upload_data_or_metadata_never_calls_the_sdk) (content_type=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 151, in test_invalid_upload_data_or_metadata_never_calls_the_sdk
+    self.store.save("doc", b"x", filename="x", content_type=content_type)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_missing_length_is_allowed_but_read_limit_is_enforced (test_document_store.DocumentStoreTests.test_missing_length_is_allowed_but_read_limit_is_enforced)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 187, in test_missing_length_is_allowed_but_read_limit_is_enforced
+    self.save()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 82, in save
+    return self.store.save("doc-01", body, filename="facture-é.pdf",
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           content_type="application/pdf", **kwargs)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_provider_exceptions_propagate_without_retry (test_document_store.DocumentStoreTests.test_provider_exceptions_propagate_without_retry) (operation='put')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 217, in test_provider_exceptions_propagate_without_retry
+    operation()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 82, in save
+    return self.store.save("doc-01", body, filename="facture-é.pdf",
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           content_type="application/pdf", **kwargs)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_provider_exceptions_propagate_without_retry (test_document_store.DocumentStoreTests.test_provider_exceptions_propagate_without_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 218, in test_provider_exceptions_propagate_without_retry
+    self.assertIs(raised.exception, error)
+                  ^^^^^^^^^^^^^^^^
+AttributeError: '_AssertRaisesContext' object has no attribute 'exception'
+
+======================================================================
+ERROR: test_read_failure_closes_stream_and_is_not_retried (test_document_store.DocumentStoreTests.test_read_failure_closes_stream_and_is_not_retried)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 200, in test_read_failure_closes_stream_and_is_not_retried
+    self.save()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 82, in save
+    return self.store.save("doc-01", body, filename="facture-é.pdf",
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           content_type="application/pdf", **kwargs)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_replace_updates_body_and_metadata (test_document_store.DocumentStoreTests.test_replace_updates_body_and_metadata)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 105, in test_replace_updates_body_and_metadata
+    self.save()
+    ~~~~~~~~~^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 82, in save
+    return self.store.save("doc-01", body, filename="facture-é.pdf",
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           content_type="application/pdf", **kwargs)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_unexpected_sdk_status_is_not_success (test_document_store.DocumentStoreTests.test_unexpected_sdk_status_is_not_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 231, in test_unexpected_sdk_status_is_not_success
+    self.store.load("doc-01")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 16, in load
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_upload_has_stable_key_bytes_and_explicit_metadata (test_document_store.DocumentStoreTests.test_upload_has_stable_key_bytes_and_explicit_metadata)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 86, in test_upload_has_stable_key_bytes_and_explicit_metadata
+    document = self.save()
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 82, in save
+    return self.store.save("doc-01", body, filename="facture-é.pdf",
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           content_type="application/pdf", **kwargs)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/document_store.py", line 13, in save
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+FAIL: test_invalid_configuration_fails_before_io (test_document_store.DocumentStoreTests.test_invalid_configuration_fails_before_io) (collection='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 136, in test_invalid_configuration_fails_before_io
+    with self.subTest(collection=collection), self.assertRaises(ValueError):
+                                              ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_configuration_fails_before_io (test_document_store.DocumentStoreTests.test_invalid_configuration_fails_before_io) (collection='../x')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 136, in test_invalid_configuration_fails_before_io
+    with self.subTest(collection=collection), self.assertRaises(ValueError):
+                                              ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_configuration_fails_before_io (test_document_store.DocumentStoreTests.test_invalid_configuration_fails_before_io) (collection='a/b')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 136, in test_invalid_configuration_fails_before_io
+    with self.subTest(collection=collection), self.assertRaises(ValueError):
+                                              ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_configuration_fails_before_io (test_document_store.DocumentStoreTests.test_invalid_configuration_fails_before_io) (collection=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 136, in test_invalid_configuration_fails_before_io
+    with self.subTest(collection=collection), self.assertRaises(ValueError):
+                                              ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_configuration_fails_before_io (test_document_store.DocumentStoreTests.test_invalid_configuration_fails_before_io) (limit=0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 139, in test_invalid_configuration_fails_before_io
+    with self.subTest(limit=limit), self.assertRaises(ValueError):
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_configuration_fails_before_io (test_document_store.DocumentStoreTests.test_invalid_configuration_fails_before_io) (limit=-1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 139, in test_invalid_configuration_fails_before_io
+    with self.subTest(limit=limit), self.assertRaises(ValueError):
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_configuration_fails_before_io (test_document_store.DocumentStoreTests.test_invalid_configuration_fails_before_io) (limit=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 139, in test_invalid_configuration_fails_before_io
+    with self.subTest(limit=limit), self.assertRaises(ValueError):
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_configuration_fails_before_io (test_document_store.DocumentStoreTests.test_invalid_configuration_fails_before_io) (limit=1.5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 139, in test_invalid_configuration_fails_before_io
+    with self.subTest(limit=limit), self.assertRaises(ValueError):
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_configuration_fails_before_io (test_document_store.DocumentStoreTests.test_invalid_configuration_fails_before_io) (limit='16')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 139, in test_invalid_configuration_fails_before_io
+    with self.subTest(limit=limit), self.assertRaises(ValueError):
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.017s
+
+FAILED (failures=9, errors=64)

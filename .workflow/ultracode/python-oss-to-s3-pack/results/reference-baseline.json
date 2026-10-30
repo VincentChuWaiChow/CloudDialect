@@ -1,0 +1,12 @@
+{
+  "head": "56300de5dd7ab778909b41b02411ea8d087a28ad",
+  "preserved_modified": {
+    ".kiro/specs/python-oss-to-s3-pack/analysis.md": "a22b1ac069fb7d4110624d9db09695c5a07d52608ede015ff7803307eb24097f",
+    ".kiro/specs/python-oss-to-s3-pack/design.md": "456316a80da7c003b25a8fb9bd99a7d01a5288f219f43627c151836977acaef9",
+    ".kiro/specs/python-oss-to-s3-pack/requirements.md": "5e16d6af458092d508fe1a9ac64569e35374284c4feb8b7220a59ffff13d1e8b",
+    ".kiro/specs/python-oss-to-s3-pack/tasks.md": "ee428c25608ae878260ab69dfbac9370787b2f26dd9224a6fdfcc929c2f499d3",
+    ".workflow/ultracode/python-oss-to-s3-pack/final-report.md": "c62da3d705307cc8666c1e2419390e1a69902dad8664f87e6e4b61c6613365a7",
+    ".workflow/ultracode/python-oss-to-s3-pack/plan.md": "ddb2314ef8f6085a4b0d8adf250d53686e5cadcac5599421b1e942a9c70a7628",
+    ".workflow/ultracode/python-oss-to-s3-pack/state.json": "5ddb758f838e5f7fe2da0573d8afef9387264cf4d6ef5e6bc988882f5ffd88b2"
+  }
+}

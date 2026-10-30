@@ -1,5 +1,54 @@
 # Python OSS-to-S3 pack specification
 
+## Authorized workload construction — 2026-10-30
+
+After the admission review, the user authorized a purpose-built Python
+document-storage application in this repository, local code/tests only.
+[Reference-workload eval contract](reference-workload-eval.md) defines this
+continuation before implementation and supersedes the admission-only write
+scope for the named new application. No cloud/commit/qualification authority
+is added. Parent remains sole writer; two additional bounded worker turns
+(public SDK lookup, independent Python review), no recursive delegation.
+
+## Implementation admission continuation — 2026-10-30
+
+The earlier sections below describe the 2026-10-22 documentation run, not the
+current checkout. Current baseline: `56300de5dd7ab778909b41b02411ea8d087a28ad`,
+branch `feat/execution-isolation-runtime`, initially clean tracked working tree.
+The user now requests task implementation. Admission must honor the task graph;
+missing workload/owner decisions and upstream contracts cannot be invented.
+
+- Objective: verify the presently executable scope, correct stale upstream
+  readiness statements and record exact remaining task prerequisites.
+- Sole writer/integrator: parent. Owned paths: the four existing Spec 3 Markdown
+  documents and this existing workflow root. No new competing run root.
+- Forbidden: changes to Specs 1/2, runtime/code/schema/manifest/dependency/license
+  files, credentials, qualification answers, fixtures, service/native/model
+  requests, user agent infrastructure, commits, pushes or publication.
+- Assumption to verify: missing approved workload/SDK/corpus/environment inputs
+  continue to block dependent implementation. No optional AI profile is admitted.
+- Team: `upstream_interfaces` (`rust_reviewer`) inspects actual Rust interfaces;
+  `pack_admission` (`python_reviewer`) inspects decision artifacts/dependencies.
+  Both are read-only packets, no recursive delegation. Role files and live
+  catalog specify `gpt-6.1-sol/high`, read-only defaults; actual model execution
+  and effective sandbox enforcement are not independently attested.
+- Limits: two dispatches total, ten minutes per packet, one parent integration
+  pass, at most one bounded repair; no further implementation/review wave.
+- Risk: local documentation; no public API change. Stop downstream work if
+  required approvals, interfaces or qualifying evidence are absent.
+- Evals defined before edits: independently rerun selected offline catalog,
+  schema, manifest and result tests (exit 0); run the existing `check(doc)`
+  structural/dependency grader and its five negative controls (zero errors,
+  each mutation detected); retain 67 MISSING criteria, five unresolved UDs,
+  three open BGs, all 17 unchecked leaf tasks and the six-level/37-edge graph;
+  inspect diff/HEAD/scope (only owned files, no whitespace errors).
+- Historical `check_docs.py` entrypoint has obsolete snapshot-file/branch
+  assertions. Do not edit that historical baseline or claim it passes; isolate
+  its existing document-check function for the current document-only check.
+- Evidence: append a dated admission report and state continuation. No TDD RED,
+  coverage percentage, native conformance or owner gate closure is claimed for
+  documentation-only changes. No checkpoint commits are authorized.
+
 ## Goal
 Keep the specs-only branch appropriately named and produce Spec 3 requirements, adversarial analysis, conditional design and gated tasks under `.kiro/specs/python-oss-to-s3-pack/`.
 

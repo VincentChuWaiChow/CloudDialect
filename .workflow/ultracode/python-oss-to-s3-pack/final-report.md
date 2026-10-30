@@ -1,5 +1,45 @@
 # Final report: python-oss-to-s3-pack
 
+## Subsequent publication authorization — 2026-10-30
+
+The user separately authorized a new branch and Git push after the previous
+branch merged. Publication targets `feat/python-oss-document-store`, based on
+`origin/master` merge `44e92a8`. This supersedes earlier no-commit/no-push scope
+statements for this work only; those reports retain their pre-publication
+evidence. Git history identifies the published source revision. Publication is
+not final workload admission or UD/BG closure. README-only wording was updated
+and its source-inventory hash refreshed; application/test bytes are unchanged.
+Five trailing spaces emitted by unittest were trimmed from the saved runtime
+RED log for Git whitespace validation; test outcomes and tracebacks are unchanged.
+
+## Authorized workload delivered — 2026-10-30
+
+**READY FOR REVIEW locally; pack qualification still BLOCKED.** Following the
+user's explicit creation approval, added the five-file
+[`examples/python-oss-document-store/`](../../../examples/python-oss-document-store/README.md)
+application, local demo and tests. [TDD/workload report](results/reference-workload-2026-10-30.md)
+records runtime RED → GREEN, final 17 passing tests, 98.9% application line
+coverage, deterministic local demo and independent Python review. Three concrete
+OSS call sites now exist. No SDK install, cloud calls, commits or qualification.
+TASK-001/002 remain open; supporting workload preparation is checked off.
+
+## Earlier admission continuation — 2026-10-30
+
+**BLOCKED for implementation/qualification; supporting admission review done.**
+The [current admission report](results/admission-2026-10-30.md) supersedes the
+historical upstream-absence/branch statements below. Corrected the four Spec 3
+documents against actual source, retained all 17 unchecked leaves and open
+UD/BG gates, and marked only two supporting reviews complete. Parent verified
+107 selected offline Rust tests plus the document graph and five negative
+controls. The old snapshot checker still fails on relocated `research.md`;
+its pure document checks pass separately. No runtime code or service calls.
+
+Next: supply the reference application/revision or request public candidate
+search; upstream applicability/runtime handoff and independent evaluation/
+environment approvals also remain required. No task-completion claim is made.
+
+## Historical documentation handoff — 2026-10-22
+
 ## Outcome
 
 **Documentation complete; implementation/qualification NOT READY.** Created requirements.md, analysis.md, design.md and tasks.md under `.kiro/specs/python-oss-to-s3-pack/`. The branch was already appropriately named `spec/framework-specs`; it was kept unchanged. New files are untracked/uncommitted. No runtime implementation, fixture application, dependency installation, cloud access, credential handling, commit, push or publication occurred.

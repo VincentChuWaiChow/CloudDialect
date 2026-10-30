@@ -1,0 +1,21 @@
+test_document_store (unittest.loader._FailedTest.test_document_store) ... ERROR
+
+======================================================================
+ERROR: test_document_store (unittest.loader._FailedTest.test_document_store)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_document_store
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/unittest/loader.py", line 426, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/lib/python3.14/unittest/loader.py", line 367, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "/home/vchu@maureva.com/Documents/vscode/CloudDialect/examples/python-oss-document-store/test_document_store.py", line 13, in <module>
+    from document_store import DocumentStore, IntegrityError
+ModuleNotFoundError: No module named 'document_store'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
